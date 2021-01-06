@@ -10,15 +10,14 @@ namespace SoG_SGreader
     {
         public FrmMain()
         {
-            InitializeComponent();
-            InitElements();
+            InitializeComponent();    //Initializing elements from the Designer
+            InitElements(); //Initializing elements from this file
 
         }
-
+        //TODO: When a file is beeing opened, we need to reset als variables
         private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             txtConsole.Text = "";
-
             OpenFileDialog openFileDialog1 = new OpenFileDialog
             {
                 InitialDirectory = Environment.ExpandEnvironmentVariables(@"%APPDATA%\Secrets of Grindea\Characters"),
@@ -45,8 +44,11 @@ namespace SoG_SGreader
             InitFields();
             PopulateFileds();
         }
+
         private readonly ComboBox[] cbQuickslot = new ComboBox[10];
         private readonly ComboBox[] cbQuickslotType = new ComboBox[10];
+
+        //TODO: Check out if there is a way to show the items in the designer 
         private void InitElements() //  Designer Items
         {
             int iQuickslotYpos = 262;
@@ -74,7 +76,7 @@ namespace SoG_SGreader
         }
         private void InitFields()
         {
-         
+            /// TODO: Get only items that fit in the category hat/facegear/weapon etc.
             cbHat.DataSource = Enum.GetValues(typeof(Sog_Items));
             cbFacegear.DataSource = Enum.GetValues(typeof(Sog_Items));
             cbWeapon.DataSource = Enum.GetValues(typeof(Sog_Items));
@@ -88,7 +90,8 @@ namespace SoG_SGreader
             cbStyleFacegear.DataSource = Enum.GetValues(typeof(Sog_Items));
             cbStyleWeapon.DataSource = Enum.GetValues(typeof(Sog_Items));
             cbStyleShield.DataSource = Enum.GetValues(typeof(Sog_Items));
-                   
+
+            /// TODO: I need to check if the quickslotsType field changes to fill out the fields with new items
             for (int i = 0; i!=9; i++)
             { 
                 if (pPlayer.quickslots[i].GetType() == typeof(Sog_Items))
@@ -207,8 +210,7 @@ namespace SoG_SGreader
 
         private void ReadData(string fileName)
         {
-            long scrapSize = new System.IO.FileInfo(fileName).Length;
-
+            long scrapSize = new FileInfo(fileName).Length;
             using (FileStream fileStream = new FileStream(fileName, FileMode.Open))
             {
                 BinaryReader readBinary = new BinaryReader(fileStream);
