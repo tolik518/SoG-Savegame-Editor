@@ -1,4 +1,4 @@
-# SoG Savegame Reader/Editor ![alt text](https://returnnull.de/images/64.png)
+# SoG Savegame Reader/Editor ![Icon](https://returnnull.de/images/_64.png)
 
 This is a work in progress tool that reads the savegame from [Secrets of Grindea](https://store.steampowered.com/app/269770/Secrets_of_Grindea/).
 Some key features like changing the nickname or equipment already do work and you can edit your equipment style.
@@ -13,4 +13,9 @@ e.x
 * Documentation of the functionality and of the research process
 * And tons of other stuff
 
-![SoG_SGreader](https://returnnull.de/images/SoG_SGreader.png)
+![SoG_SGreader](https://returnnull.de/images/_SoG_SGreader.png)
+
+
+
+
+Keywords: Secrets of Grindea, Secrets of Grindea Savegame, Editor, Cheat, Hack
