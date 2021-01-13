@@ -12,9 +12,10 @@ namespace SoG_SGreader
         {
             InitializeComponent();    //Initializing elements from the Designer
             InitElements(); //Initializing elements from this file
+            
 
         }
-        //TODO: When a file is beeing opened, we need to reset als variables
+        //TODO: When a file is beeing opened, we need to reset als variablesrk 
         private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             txtConsole.Text = "";
@@ -107,7 +108,7 @@ namespace SoG_SGreader
         }
         private void PopulateFileds()
         {
-            txtNickname.Text += pPlayer.Nickname;
+            txtNickname.Text = pPlayer.Nickname;
 
             cbHat.Text = ((Sog_Items)pPlayer.equip.Hat).ToString();
             cbFacegear.Text = ((Sog_Items)pPlayer.equip.Facegear).ToString();
@@ -138,18 +139,68 @@ namespace SoG_SGreader
 
             for (int i = 0; i != pPlayer.InventorySize; i++)
             {
-                txtConsole.Text += "\r\n" + pPlayer.inventory[i].ItemID + " x" + pPlayer.inventory[i].ItemCount + " on: " + pPlayer.inventory[i].ItemPos;
                 lstInventory.Items.Add(pPlayer.inventory[i].ItemID.ToString());
             }
+        }
+
+        private void InitVariables()    //TODO: we need to clean all our variables before we load a new file 
+        {
+
+        }
+
+        private void getDataFromFields()
+        {
+            pPlayer.equip.Hat = (int)Enum.Parse(typeof(Sog_Items), cbHat.Text);
+            pPlayer.equip.Facegear = (int)Enum.Parse(typeof(Sog_Items), cbFacegear.Text);
+            pPlayer.equip.Weapon = (int)Enum.Parse(typeof(Sog_Items), cbWeapon.Text);
+            pPlayer.equip.Shield = (int)Enum.Parse(typeof(Sog_Items), cbShield.Text);
+            pPlayer.equip.Armor = (int)Enum.Parse(typeof(Sog_Items), cbArmor.Text);
+            pPlayer.equip.Shoes = (int)Enum.Parse(typeof(Sog_Items), cbShoes.Text);
+
+            pPlayer.equip.Accessory1 = (int)Enum.Parse(typeof(Sog_Items), cbAccessory1.Text);
+            pPlayer.equip.Accessory2 = (int)Enum.Parse(typeof(Sog_Items), cbAccessory2.Text);
+
+            pPlayer.style.Hat = (int)Enum.Parse(typeof(Sog_Items), cbStyleHat.Text);
+            pPlayer.style.Facegear = (int)Enum.Parse(typeof(Sog_Items), cbStyleFacegear.Text);
+            pPlayer.style.Weapon = (int)Enum.Parse(typeof(Sog_Items), cbStyleWeapon.Text);
+            pPlayer.style.Shield = (int)Enum.Parse(typeof(Sog_Items), cbStyleShield.Text);
+
+            for (int i = 0; i < 10; i++)
+            {
+
+                 if (cbQuickslotType[i].Text == typeof(Sog_Items).Name.ToString())         
+                 {
+                     pPlayer.quickslots[i] = Enum.Parse(typeof(Sog_Items), cbQuickslot[i].Text);
+                 }
+                 else if (cbQuickslotType[i].Text == typeof(Sog_Spells).Name.ToString())
+                 {
+                     pPlayer.quickslots[i] = Enum.Parse(typeof(Sog_Spells), cbQuickslot[i].Text);
+                 } 
+                else
+                 {
+                     pPlayer.quickslots[i] = (int)0;
+                 }  
+            }
+
+            // btnHairColor.BackColor = ColorTranslator.FromHtml("#" + ((Sog_Colors)pPlayer.style.HairColor).ToString().TrimStart('_'));
+            // btnSkinColor.BackColor = ColorTranslator.FromHtml("#" + ((SoG_Colors)iHairColor).ToString().TrimStart('_'));
+            // btnPonchoColor.BackColor = ColorTranslator.FromHtml("#" + ((Sog_Colors)pPlayer.style.PonchoColor).ToString().TrimStart('_'));
+            // btnShirtColor.BackColor = ColorTranslator.FromHtml("#" + ((Sog_Colors)pPlayer.style.ShirtColor).ToString().TrimStart('_'));
+            // btnPantsColor.BackColor = ColorTranslator.FromHtml("#" + ((Sog_Colors)pPlayer.style.PantsColor).ToString().TrimStart('_'));
+
+            /* for (int i = 0; i != pPlayer.InventorySize; i++)
+             {
+                 txtConsole.Text += "\r\n" + pPlayer.inventory[i].ItemID + " x" + pPlayer.inventory[i].ItemCount + " on: " + pPlayer.inventory[i].ItemPos;
+                 lstInventory.Items.Add(pPlayer.inventory[i].ItemID.ToString());
+             }*/
         }
 
         private readonly Sog_Player pPlayer = new Sog_Player();
         
         private void WriteData(string fileName)
         {
-
             BinaryWriter writeBinary = new BinaryWriter(File.Open(fileName, FileMode.Create));
-
+            getDataFromFields();
             writeBinary.Write(pPlayer.magicByte);
             writeBinary.Write(pPlayer.equip.Hat);
             writeBinary.Write(pPlayer.equip.Facegear);
@@ -182,7 +233,7 @@ namespace SoG_SGreader
                     writeBinary.Write((byte)2);
                     writeBinary.Write((UInt16)quickslot);
                 }     
-                else if (quickslot.GetType() == typeof(System.Int32))
+                else
                 {
                     writeBinary.Write((byte)0);
                 }
@@ -195,7 +246,7 @@ namespace SoG_SGreader
              writeBinary.Write((byte)pPlayer.style.PantsColor);
              writeBinary.Write((byte)pPlayer.style.Sex);
              //writeBinary.Write((byte)pPlayer.nicknameLength);
-             writeBinary.Write(txtNickname.Text);
+             writeBinary.Write(pPlayer.Nickname);
              writeBinary.Write(pPlayer.InventorySize);
             for (int i = 0; i != pPlayer.InventorySize; i++)
             {
@@ -203,13 +254,14 @@ namespace SoG_SGreader
                 writeBinary.Write((Int32)pPlayer.inventory[i].ItemCount);
                 writeBinary.Write((Int32)pPlayer.inventory[i].ItemPos);
             }
-             writeBinary.Write(pPlayer.scrap);
 
+             writeBinary.Write(pPlayer.scrap);
              writeBinary.Close();
         }
 
         private void ReadData(string fileName)
         {
+            InitVariables();
             long scrapSize = new FileInfo(fileName).Length;
             using (FileStream fileStream = new FileStream(fileName, FileMode.Open))
             {
@@ -217,48 +269,29 @@ namespace SoG_SGreader
                 
                 txtConsole.Text += "\r\nFilesize: " + scrapSize;
 
-                pPlayer.magicByte = readBinary.ReadInt32();    //I dont know yet what the first bytes stand for tbh
-                scrapSize -= 4;
-                pPlayer.equip.Hat = readBinary.ReadInt32();
-                scrapSize -= 4;
-                pPlayer.equip.Facegear = readBinary.ReadInt32();
-                scrapSize -= 4;
-                pPlayer.style.Bodytype = readBinary.ReadChar();   //seems like always B ?
-                scrapSize -= 1;
-                pPlayer.style.Hair = readBinary.ReadInt32();
-                scrapSize -= 4;
-                pPlayer.equip.Weapon = readBinary.ReadInt32();
-                scrapSize -= 4;
-                pPlayer.equip.Shield = readBinary.ReadInt32();
-                scrapSize -= 4;
-                pPlayer.equip.Armor = readBinary.ReadInt32();
-                scrapSize -= 4;
-                pPlayer.equip.Shoes = readBinary.ReadInt32();
-                scrapSize -= 4;
-                pPlayer.equip.Accessory1 = readBinary.ReadInt32();
-                scrapSize -= 4;
-                pPlayer.equip.Accessory2 = readBinary.ReadInt32();
-                scrapSize -= 4;
-                pPlayer.style.Hat = readBinary.ReadInt32();
-                scrapSize -= 4;
-                pPlayer.style.Facegear = readBinary.ReadInt32();
-                scrapSize -= 4;
-                pPlayer.style.Weapon = readBinary.ReadInt32();
-                scrapSize -= 4;
-                pPlayer.style.Shield = readBinary.ReadInt32();
-                scrapSize -= 4;
+                pPlayer.magicByte = readBinary.ReadInt32(); //I dont know yet what the first bytes stand for tbh    //4
+                pPlayer.equip.Hat = readBinary.ReadInt32();         //4
+                pPlayer.equip.Facegear = readBinary.ReadInt32();    //4
+                pPlayer.style.Bodytype = readBinary.ReadChar(); //seems like always B ?    //1
+                pPlayer.style.Hair = readBinary.ReadInt32();        //4
+                pPlayer.equip.Weapon = readBinary.ReadInt32();      //4
+                pPlayer.equip.Shield = readBinary.ReadInt32();      //4
+                pPlayer.equip.Armor = readBinary.ReadInt32();       //4
+                pPlayer.equip.Shoes = readBinary.ReadInt32();       //4
+                pPlayer.equip.Accessory1 = readBinary.ReadInt32();  //4
+                pPlayer.equip.Accessory2 = readBinary.ReadInt32();  //4
+                pPlayer.style.Hat = readBinary.ReadInt32();         //4
+                pPlayer.style.Facegear = readBinary.ReadInt32();    //4
+                pPlayer.style.Weapon = readBinary.ReadInt32();      //4
+                pPlayer.style.Shield = readBinary.ReadInt32();      //4
 
-                pPlayer.style.HatHidden = readBinary.ReadBoolean();
-                scrapSize -= 1;
-                pPlayer.style.FacegearHidden = readBinary.ReadBoolean();
-                scrapSize -= 1;
+                pPlayer.style.HatHidden = readBinary.ReadBoolean();       //1
+                pPlayer.style.FacegearHidden = readBinary.ReadBoolean();  //1
 
-                pPlayer.LastTwoHander = readBinary.ReadInt32();  //last onehander?
-                scrapSize -= 4;
-                pPlayer.LastOneHander = readBinary.ReadInt32(); //last twohander?
-                scrapSize -= 4;
-                pPlayer.LastBow = readBinary.ReadInt32(); //last bow?
-                scrapSize -= 4;
+                pPlayer.LastTwoHander = readBinary.ReadInt32();  //last onehander?  //4
+                pPlayer.LastOneHander = readBinary.ReadInt32(); //last twohander?   //4
+                pPlayer.LastBow = readBinary.ReadInt32(); //last bow?               //4
+                scrapSize -= 71;
 
                 for (int i = 0; i < 10; i++)
                 {
@@ -280,27 +313,21 @@ namespace SoG_SGreader
                     }
                 }
 
-                pPlayer.style.HairColor = readBinary.ReadByte();
-                scrapSize -= 1;
-                pPlayer.style.SkinColor = readBinary.ReadByte();
-                scrapSize -= 1;
-                pPlayer.style.PonchoColor = readBinary.ReadByte();
-                scrapSize -= 1;
-                pPlayer.style.ShirtColor = readBinary.ReadByte();
-                scrapSize -= 1;
-                pPlayer.style.PantsColor = readBinary.ReadByte();
-                scrapSize -= 1;
+                pPlayer.style.HairColor = readBinary.ReadByte();    //1
+                pPlayer.style.SkinColor = readBinary.ReadByte();    //1
+                pPlayer.style.PonchoColor = readBinary.ReadByte();  //1
+                pPlayer.style.ShirtColor = readBinary.ReadByte();   //1
+                pPlayer.style.PantsColor = readBinary.ReadByte();   //1
 
-                pPlayer.style.Sex = readBinary.ReadByte();
-                scrapSize -= 1;
+                pPlayer.style.Sex = readBinary.ReadByte();          //1
 
-                pPlayer.NicknameLength = readBinary.ReadByte();
-                scrapSize -= 1;
+                pPlayer.NicknameLength = readBinary.ReadByte();    //1
+                scrapSize -= 7;
                 pPlayer.Nickname = new string(readBinary.ReadChars(pPlayer.NicknameLength));
                 scrapSize -= pPlayer.NicknameLength;
+
                 pPlayer.InventorySize = readBinary.ReadInt32();
                 scrapSize -= 4;
-
                 pPlayer.inventory = new Sog_Player.Inventory[pPlayer.InventorySize];
 
                 for (int i = 0; i != pPlayer.InventorySize; i++)
@@ -314,9 +341,10 @@ namespace SoG_SGreader
                     scrapSize -= 12;
                 }
                 scrapSize -= 4;
+
                 pPlayer.scrap = new byte[(int)scrapSize];
                 pPlayer.scrap = readBinary.ReadBytes((int)scrapSize);
-                
+                txtConsole.Text += "\r\nScrapsize: " + scrapSize;
                 readBinary.Close();
             }
         }
