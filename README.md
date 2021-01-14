@@ -4,6 +4,10 @@ This is a work in progress tool that reads the savegame from [Secrets of Grindea
 Some key features like changing the nickname or equipment already do work and you can edit your equipment style.
 You can find the structure of the save game on the [wiki page](https://github.com/tolik518/SoG_SGreader/wiki/Savegame-File-Structure).  
 There is still a lot to do.
+
+For safety reasons the savegame is ALWAYS saved as "8.cha" in the same directory as the executable. If you wan't to play with the  
+modified savegame you'll have to copy the "8.cha" file to "%APPDATA%\Secrets of Grindea\Characters" by hand
+
 e.x
 * Filter the suggested items after by slot
 * Add a feature to select colors for clothing etc, we already have an enum for that with the colors
