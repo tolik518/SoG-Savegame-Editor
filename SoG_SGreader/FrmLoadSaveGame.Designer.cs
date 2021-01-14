@@ -33,11 +33,14 @@ namespace SoG_SGreader
             this.btnLoadSaveGame = new System.Windows.Forms.Button();
             this.lstSaveGames = new System.Windows.Forms.ListBox();
             this.btnChooseFolder = new System.Windows.Forms.Button();
+            this.btnStartWithoitLoading = new System.Windows.Forms.Button();
+            this.lblFilePath = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnLoadSaveGame
             // 
-            this.btnLoadSaveGame.Location = new System.Drawing.Point(134, 178);
+            this.btnLoadSaveGame.Enabled = false;
+            this.btnLoadSaveGame.Location = new System.Drawing.Point(134, 196);
             this.btnLoadSaveGame.Name = "btnLoadSaveGame";
             this.btnLoadSaveGame.Size = new System.Drawing.Size(75, 23);
             this.btnLoadSaveGame.TabIndex = 0;
@@ -52,22 +55,45 @@ namespace SoG_SGreader
             this.lstSaveGames.Name = "lstSaveGames";
             this.lstSaveGames.Size = new System.Drawing.Size(319, 160);
             this.lstSaveGames.TabIndex = 1;
+            this.lstSaveGames.SelectedIndexChanged += new System.EventHandler(this.LstSaveGames_SelectedIndexChanged);
             // 
             // btnChooseFolder
             // 
             this.btnChooseFolder.Image = ((System.Drawing.Image)(resources.GetObject("btnChooseFolder.Image")));
-            this.btnChooseFolder.Location = new System.Drawing.Point(12, 174);
+            this.btnChooseFolder.Location = new System.Drawing.Point(12, 192);
             this.btnChooseFolder.Name = "btnChooseFolder";
             this.btnChooseFolder.Size = new System.Drawing.Size(30, 30);
             this.btnChooseFolder.TabIndex = 2;
             this.btnChooseFolder.UseVisualStyleBackColor = true;
             this.btnChooseFolder.Click += new System.EventHandler(this.BtnChooseFolder_Click);
             // 
+            // btnStartWithoitLoading
+            // 
+            this.btnStartWithoitLoading.Location = new System.Drawing.Point(215, 196);
+            this.btnStartWithoitLoading.Name = "btnStartWithoitLoading";
+            this.btnStartWithoitLoading.Size = new System.Drawing.Size(116, 23);
+            this.btnStartWithoitLoading.TabIndex = 3;
+            this.btnStartWithoitLoading.Text = "Start without Loading";
+            this.btnStartWithoitLoading.UseVisualStyleBackColor = true;
+            this.btnStartWithoitLoading.Click += new System.EventHandler(this.BtnStartWithoitLoading_Click);
+            // 
+            // lblFilePath
+            // 
+            this.lblFilePath.AutoSize = true;
+            this.lblFilePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFilePath.Location = new System.Drawing.Point(12, 175);
+            this.lblFilePath.Name = "lblFilePath";
+            this.lblFilePath.Size = new System.Drawing.Size(54, 12);
+            this.lblFilePath.TabIndex = 4;
+            this.lblFilePath.Text = "[lblFilePath]";
+            // 
             // FrmLoadSaveGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(343, 209);
+            this.ClientSize = new System.Drawing.Size(343, 225);
+            this.Controls.Add(this.lblFilePath);
+            this.Controls.Add(this.btnStartWithoitLoading);
             this.Controls.Add(this.btnChooseFolder);
             this.Controls.Add(this.lstSaveGames);
             this.Controls.Add(this.btnLoadSaveGame);
@@ -75,6 +101,7 @@ namespace SoG_SGreader
             this.Name = "FrmLoadSaveGame";
             this.Text = "SoG: Savegame Reader v0.1 by TOLIK518";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -83,5 +110,7 @@ namespace SoG_SGreader
         private System.Windows.Forms.Button btnLoadSaveGame;
         private System.Windows.Forms.ListBox lstSaveGames;
         private System.Windows.Forms.Button btnChooseFolder;
+        private System.Windows.Forms.Button btnStartWithoitLoading;
+        private System.Windows.Forms.Label lblFilePath;
     }
 }

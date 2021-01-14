@@ -16,6 +16,7 @@ namespace SoG_SGreader
             {
                 LoadSaveGame(sFilePath);
             }
+            txtConsole.Text = sFilePath;
 
 
         }

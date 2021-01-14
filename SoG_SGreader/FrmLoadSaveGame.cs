@@ -10,14 +10,15 @@ namespace SoG_SGreader
         public FrmLoadSaveGame()
         {
             InitializeComponent();
-            GetSaveGameFiles(GetGamePath());
+            string sSaveGamePath = GetSaveGamePath();
+            GetSaveGameFiles(sSaveGamePath);
+            UpdateFilePathLabel();
         }
-         //proabbly better to have 2 buttons. One that loads the savegame and one that starts the tool without loading
         private void BtnLoadSaveGame_Click(object sender, EventArgs e)
         {
             if(lstSaveGames.SelectedIndex != -1)
             {
-                sFilePath = sFilePath + lstSaveGames.SelectedItem.ToString();
+                sFilePath = sFilePath + "\\" + lstSaveGames.SelectedItem.ToString();
             }
             FrmMain frmMain = new FrmMain(sFilePath);
             this.Hide();
@@ -30,16 +31,16 @@ namespace SoG_SGreader
             lstSaveGames.Items.Clear();
             for(int i = 0; i != 10; i++)
             { 
-                if (File.Exists(sFilePath + i +".cha")) 
+                if (File.Exists(sFilePath + "\\" + i +".cha")) 
                 {
                     lstSaveGames.Items.Add(i + ".cha");
                 }
             }
         }
 
-        private string GetGamePath()
+        private string GetSaveGamePath()
         {
-            return sFilePath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"/Secrets of Grindea/Characters/";
+            return sFilePath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"/Secrets of Grindea/Characters";
         }
 
         private void BtnChooseFolder_Click(object sender, EventArgs e)
@@ -51,7 +52,37 @@ namespace SoG_SGreader
                 {
                     sFilePath = chooseFolder.SelectedPath;
                     GetSaveGameFiles(chooseFolder.SelectedPath);
+                    UpdateFilePathLabel();
                 }
+            }
+        }
+
+        private void BtnStartWithoitLoading_Click(object sender, EventArgs e)
+        {
+            FrmMain frmMain = new FrmMain("");
+            this.Hide();
+            frmMain.ShowDialog();
+            this.Close();
+        }
+
+        private void LstSaveGames_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstSaveGames.SelectedIndex != -1)
+            {
+                btnLoadSaveGame.Enabled = true;
+            }
+            UpdateFilePathLabel();
+        }
+
+        private void UpdateFilePathLabel()
+        {
+            if (lstSaveGames.SelectedIndex != -1)
+            {
+                lblFilePath.Text = sFilePath + "\\" + lstSaveGames.SelectedItem.ToString();
+            }
+            else
+            {
+                lblFilePath.Text = sFilePath;
             }
         }
     }
