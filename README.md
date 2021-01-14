@@ -25,4 +25,4 @@ e.x
 
 
 
-Keywords: Secrets of Grindea, Secrets of Grindea Savegame, Editor, Cheat, Hack
+Keywords: "Secrets of Grindea", "Secrets of Grindea Savegame", "Editor", "Cheat", "Hack", "save game", "save file", "Character File"
