@@ -17,8 +17,6 @@ namespace SoG_SGreader
                 LoadSaveGame(sFilePath);
             }
             txtConsole.Text = sFilePath;
-
-
         }
         //TODO: When a file is beeing opened, we need to reset als variablesrk 
         private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -89,26 +87,26 @@ namespace SoG_SGreader
         private void InitFields()
         {
             /// TODO: Get only items that fit in the category hat/facegear/weapon etc.
-            cbHat.DataSource = Enum.GetValues(typeof(Sog_Items));
-            cbFacegear.DataSource = Enum.GetValues(typeof(Sog_Items));
-            cbWeapon.DataSource = Enum.GetValues(typeof(Sog_Items));
-            cbShield.DataSource = Enum.GetValues(typeof(Sog_Items));
-            cbArmor.DataSource = Enum.GetValues(typeof(Sog_Items));
-            cbShoes.DataSource = Enum.GetValues(typeof(Sog_Items));
-            cbAccessory1.DataSource = Enum.GetValues(typeof(Sog_Items));
-            cbAccessory2.DataSource = Enum.GetValues(typeof(Sog_Items));
+            cbHat.DataSource = Enum.GetValues(typeof(_Sog_Items.Hat));
+            cbFacegear.DataSource = Enum.GetValues(typeof(_Sog_Items.Facegear));
+            cbWeapon.DataSource = Enum.GetValues(typeof(_Sog_Items.Weapon));
+            cbShield.DataSource = Enum.GetValues(typeof(_Sog_Items.Shield));
+            cbArmor.DataSource = Enum.GetValues(typeof(_Sog_Items.Armor));
+            cbShoes.DataSource = Enum.GetValues(typeof(_Sog_Items.Shoes));
+            cbAccessory1.DataSource = Enum.GetValues(typeof(_Sog_Items.Accessory));
+            cbAccessory2.DataSource = Enum.GetValues(typeof(_Sog_Items.Accessory));
          	
-            cbStyleHat.DataSource = Enum.GetValues(typeof(Sog_Items));
-            cbStyleFacegear.DataSource = Enum.GetValues(typeof(Sog_Items));
-            cbStyleWeapon.DataSource = Enum.GetValues(typeof(Sog_Items));
-            cbStyleShield.DataSource = Enum.GetValues(typeof(Sog_Items));
+            cbStyleHat.DataSource = Enum.GetValues(typeof(_Sog_Items.Hat));
+            cbStyleFacegear.DataSource = Enum.GetValues(typeof(_Sog_Items.Facegear));
+            cbStyleWeapon.DataSource = Enum.GetValues(typeof(_Sog_Items.Weapon));
+            cbStyleShield.DataSource = Enum.GetValues(typeof(_Sog_Items.Shield));
 
             /// TODO: I need to check if the quickslotsType field changes to fill out the fields with new items
             for (int i = 0; i!=9; i++)
             { 
                 if (pPlayer.quickslots[i].GetType() == typeof(Sog_Items))
                 {
-                    cbQuickslot[i].DataSource = Enum.GetValues(typeof(Sog_Items));
+                    cbQuickslot[i].DataSource = Enum.GetValues(typeof(_Sog_Items.Other));
                 }
                 else if (pPlayer.quickslots[i].GetType() == typeof(Sog_Spells))
                 {
@@ -375,6 +373,18 @@ namespace SoG_SGreader
         private void FrmMain_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.MessageLoop)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                Environment.Exit(1);
+            }
         }
     }
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;                 
 
@@ -14,6 +15,7 @@ namespace SoG_SGreader
             GetSaveGameFiles(sSaveGamePath);
             UpdateFilePathLabel();
         }
+
         private void BtnLoadSaveGame_Click(object sender, EventArgs e)
         {
             if(lstSaveGames.SelectedIndex != -1)
@@ -36,11 +38,21 @@ namespace SoG_SGreader
                     lstSaveGames.Items.Add(i + ".cha");
                 }
             }
+            if (lstSaveGames.Items.Count != 0)
+            {
+                lblSaveGameCount.ForeColor = Color.Black;
+                lblSaveGameCount.Text = lstSaveGames.Items.Count + " Savegames found.";
+            } 
+            else
+            {
+                lblSaveGameCount.ForeColor = Color.Red;
+                lblSaveGameCount.Text = "No Savegames found!";
+            }
         }
 
         private string GetSaveGamePath()
         {
-            return sFilePath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"/Secrets of Grindea/Characters";
+            return sFilePath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Secrets of Grindea\Characters";
         }
 
         private void BtnChooseFolder_Click(object sender, EventArgs e)

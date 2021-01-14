@@ -101,6 +101,7 @@ namespace SoG_SGreader
             this.thereToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtConsole = new System.Windows.Forms.TextBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
+            this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabContainer.SuspendLayout();
             this.tabEquip.SuspendLayout();
             this.gbColors.SuspendLayout();
@@ -704,6 +705,7 @@ namespace SoG_SGreader
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openToolStripMenuItem,
             this.saveToolStripMenuItem,
+            this.importToolStripMenuItem,
             this.exportAsToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
@@ -713,7 +715,7 @@ namespace SoG_SGreader
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
@@ -721,7 +723,7 @@ namespace SoG_SGreader
             // 
             this.saveToolStripMenuItem.Enabled = false;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
@@ -732,7 +734,7 @@ namespace SoG_SGreader
             this.xMLToolStripMenuItem});
             this.exportAsToolStripMenuItem.Enabled = false;
             this.exportAsToolStripMenuItem.Name = "exportAsToolStripMenuItem";
-            this.exportAsToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.exportAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exportAsToolStripMenuItem.Text = "Export as...";
             // 
             // jSONToolStripMenuItem
@@ -750,8 +752,9 @@ namespace SoG_SGreader
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -792,6 +795,12 @@ namespace SoG_SGreader
             this.splitter1.Size = new System.Drawing.Size(744, 10);
             this.splitter1.TabIndex = 29;
             this.splitter1.TabStop = false;
+            // 
+            // importToolStripMenuItem
+            // 
+            this.importToolStripMenuItem.Name = "importToolStripMenuItem";
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.importToolStripMenuItem.Text = "Import";
             // 
             // FrmMain
             // 
@@ -905,6 +914,7 @@ namespace SoG_SGreader
         private System.Windows.Forms.Button btnSkinColor;
         private System.Windows.Forms.Button btnHairColor;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
     }
 }
 
