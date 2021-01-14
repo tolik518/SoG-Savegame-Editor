@@ -97,5 +97,10 @@ namespace SoG_SGreader
                 lblFilePath.Text = sFilePath;
             }
         }
+
+        private void FrmLoadSaveGame_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -77,8 +77,8 @@ namespace SoG_SGreader
                     FormattingEnabled = true,
                     Location = new Point(94, iQuickslotYpos),
                     Name = "cbQuickslotType[i]",
-                    Size = new Size(79, 21),
-                };
+                    Size = new Size(79, 21)
+            };
                 groupBox3.Controls.Add(cbQuickslotType[i]);
                 groupBox3.Controls.Add(cbQuickslot[i]);
                 iQuickslotYpos -= 27;
@@ -103,7 +103,7 @@ namespace SoG_SGreader
 
             /// TODO: I need to check if the quickslotsType field changes to fill out the fields with new items
             for (int i = 0; i!=9; i++)
-            { 
+            {
                 if (pPlayer.quickslots[i].GetType() == typeof(Sog_Items))
                 {
                     cbQuickslot[i].DataSource = Enum.GetValues(typeof(_Sog_Items.Other));
@@ -112,6 +112,7 @@ namespace SoG_SGreader
                 {
                     cbQuickslot[i].DataSource = Enum.GetValues(typeof(Sog_Spells));
                 }
+                cbQuickslotType[i].DataSource = new string[] { "Sog_Items", "Sog_Spells", "Int32"};
             }
 
         }
@@ -386,6 +387,12 @@ namespace SoG_SGreader
                 Environment.Exit(1);
             }
         }
+        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAbout frmAbout = new FrmAbout();
+            frmAbout.ShowDialog();
+        }
+          
     }
 
     public class Sog_Player

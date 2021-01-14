@@ -117,6 +117,7 @@ namespace SoG_SGreader
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmLoadSaveGame";
             this.Text = "SoG: Savegame Reader v0.1 by TOLIK518";
+            this.Load += new System.EventHandler(this.FrmLoadSaveGame_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
