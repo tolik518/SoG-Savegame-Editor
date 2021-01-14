@@ -81,9 +81,31 @@ namespace SoG_SGreader
             };
                 groupBox3.Controls.Add(cbQuickslotType[i]);
                 groupBox3.Controls.Add(cbQuickslot[i]);
+                cbQuickslotType[i].SelectedIndexChanged += new System.EventHandler(Quickslot_SelectedIndexChanged);
+
                 iQuickslotYpos -= 27;
             }
         }
+        private void Quickslot_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i != 10; i++)
+            {
+                if (cbQuickslotType[i].Text == "Sog_Items")
+                {
+                    cbQuickslot[i].DataSource = Enum.GetValues(typeof(_Sog_Items.Other));
+                }
+                else if (cbQuickslotType[i].Text == "Sog_Spells")
+                {
+                    cbQuickslot[i].DataSource = Enum.GetValues(typeof(Sog_Spells));
+                }
+                else
+                {
+                    cbQuickslot[i].DataSource = null;
+                }
+                cbQuickslot[i].Text = (pPlayer.quickslots[i]).ToString();
+            }
+        }
+
         private void InitFields()
         {
             /// TODO: Get only items that fit in the category hat/facegear/weapon etc.
