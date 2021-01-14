@@ -32,6 +32,19 @@ namespace SoG_SGreader
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.tabContainer = new System.Windows.Forms.TabControl();
             this.tabEquip = new System.Windows.Forms.TabPage();
+            this.label29 = new System.Windows.Forms.Label();
+            this.txtNickname = new System.Windows.Forms.TextBox();
+            this.gbColors = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnPantsColor = new System.Windows.Forms.Button();
+            this.btnShirtColor = new System.Windows.Forms.Button();
+            this.btnPonchoColor = new System.Windows.Forms.Button();
+            this.btnSkinColor = new System.Windows.Forms.Button();
+            this.btnHairColor = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -88,21 +101,9 @@ namespace SoG_SGreader
             this.thereToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtConsole = new System.Windows.Forms.TextBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.label29 = new System.Windows.Forms.Label();
-            this.txtNickname = new System.Windows.Forms.TextBox();
-            this.gbColors = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnPantsColor = new System.Windows.Forms.Button();
-            this.btnShirtColor = new System.Windows.Forms.Button();
-            this.btnPonchoColor = new System.Windows.Forms.Button();
-            this.btnSkinColor = new System.Windows.Forms.Button();
-            this.btnHairColor = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabContainer.SuspendLayout();
             this.tabEquip.SuspendLayout();
+            this.gbColors.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -110,7 +111,6 @@ namespace SoG_SGreader
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numItemCount)).BeginInit();
             this.msMenu.SuspendLayout();
-            this.gbColors.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabContainer
@@ -141,6 +141,132 @@ namespace SoG_SGreader
             this.tabEquip.TabIndex = 1;
             this.tabEquip.Text = "Equip";
             this.tabEquip.UseVisualStyleBackColor = true;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(9, 15);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(58, 13);
+            this.label29.TabIndex = 32;
+            this.label29.Text = "Nickname:";
+            // 
+            // txtNickname
+            // 
+            this.txtNickname.Location = new System.Drawing.Point(9, 32);
+            this.txtNickname.Name = "txtNickname";
+            this.txtNickname.Size = new System.Drawing.Size(101, 20);
+            this.txtNickname.TabIndex = 31;
+            // 
+            // gbColors
+            // 
+            this.gbColors.Controls.Add(this.label5);
+            this.gbColors.Controls.Add(this.label4);
+            this.gbColors.Controls.Add(this.label3);
+            this.gbColors.Controls.Add(this.label2);
+            this.gbColors.Controls.Add(this.btnPantsColor);
+            this.gbColors.Controls.Add(this.btnShirtColor);
+            this.gbColors.Controls.Add(this.btnPonchoColor);
+            this.gbColors.Controls.Add(this.btnSkinColor);
+            this.gbColors.Controls.Add(this.btnHairColor);
+            this.gbColors.Controls.Add(this.label1);
+            this.gbColors.Location = new System.Drawing.Point(9, 59);
+            this.gbColors.Name = "gbColors";
+            this.gbColors.Size = new System.Drawing.Size(101, 149);
+            this.gbColors.TabIndex = 30;
+            this.gbColors.TabStop = false;
+            this.gbColors.Text = "Colors";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 122);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Pants:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 96);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Shirt:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Poncho:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Skin:";
+            // 
+            // btnPantsColor
+            // 
+            this.btnPantsColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPantsColor.Location = new System.Drawing.Point(61, 118);
+            this.btnPantsColor.Name = "btnPantsColor";
+            this.btnPantsColor.Size = new System.Drawing.Size(20, 20);
+            this.btnPantsColor.TabIndex = 9;
+            this.btnPantsColor.UseVisualStyleBackColor = false;
+            // 
+            // btnShirtColor
+            // 
+            this.btnShirtColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShirtColor.Location = new System.Drawing.Point(61, 92);
+            this.btnShirtColor.Name = "btnShirtColor";
+            this.btnShirtColor.Size = new System.Drawing.Size(20, 20);
+            this.btnShirtColor.TabIndex = 8;
+            this.btnShirtColor.UseVisualStyleBackColor = false;
+            // 
+            // btnPonchoColor
+            // 
+            this.btnPonchoColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPonchoColor.Location = new System.Drawing.Point(61, 66);
+            this.btnPonchoColor.Name = "btnPonchoColor";
+            this.btnPonchoColor.Size = new System.Drawing.Size(20, 20);
+            this.btnPonchoColor.TabIndex = 7;
+            this.btnPonchoColor.UseVisualStyleBackColor = false;
+            // 
+            // btnSkinColor
+            // 
+            this.btnSkinColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSkinColor.Location = new System.Drawing.Point(61, 40);
+            this.btnSkinColor.Name = "btnSkinColor";
+            this.btnSkinColor.Size = new System.Drawing.Size(20, 20);
+            this.btnSkinColor.TabIndex = 6;
+            this.btnSkinColor.UseVisualStyleBackColor = false;
+            // 
+            // btnHairColor
+            // 
+            this.btnHairColor.BackColor = System.Drawing.Color.White;
+            this.btnHairColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHairColor.Location = new System.Drawing.Point(61, 14);
+            this.btnHairColor.Name = "btnHairColor";
+            this.btnHairColor.Size = new System.Drawing.Size(20, 20);
+            this.btnHairColor.TabIndex = 5;
+            this.btnHairColor.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Hair:";
             // 
             // groupBox1
             // 
@@ -504,7 +630,7 @@ namespace SoG_SGreader
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(672, 387);
+            this.tabPage1.Size = new System.Drawing.Size(712, 387);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Inventory";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -667,132 +793,6 @@ namespace SoG_SGreader
             this.splitter1.TabIndex = 29;
             this.splitter1.TabStop = false;
             // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(9, 15);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(58, 13);
-            this.label29.TabIndex = 32;
-            this.label29.Text = "Nickname:";
-            // 
-            // txtNickname
-            // 
-            this.txtNickname.Location = new System.Drawing.Point(9, 32);
-            this.txtNickname.Name = "txtNickname";
-            this.txtNickname.Size = new System.Drawing.Size(101, 20);
-            this.txtNickname.TabIndex = 31;
-            // 
-            // gbColors
-            // 
-            this.gbColors.Controls.Add(this.label5);
-            this.gbColors.Controls.Add(this.label4);
-            this.gbColors.Controls.Add(this.label3);
-            this.gbColors.Controls.Add(this.label2);
-            this.gbColors.Controls.Add(this.btnPantsColor);
-            this.gbColors.Controls.Add(this.btnShirtColor);
-            this.gbColors.Controls.Add(this.btnPonchoColor);
-            this.gbColors.Controls.Add(this.btnSkinColor);
-            this.gbColors.Controls.Add(this.btnHairColor);
-            this.gbColors.Controls.Add(this.label1);
-            this.gbColors.Location = new System.Drawing.Point(9, 59);
-            this.gbColors.Name = "gbColors";
-            this.gbColors.Size = new System.Drawing.Size(101, 149);
-            this.gbColors.TabIndex = 30;
-            this.gbColors.TabStop = false;
-            this.gbColors.Text = "Colors";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 122);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Pants:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 96);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Shirt:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 70);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Poncho:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Skin:";
-            // 
-            // btnPantsColor
-            // 
-            this.btnPantsColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPantsColor.Location = new System.Drawing.Point(61, 118);
-            this.btnPantsColor.Name = "btnPantsColor";
-            this.btnPantsColor.Size = new System.Drawing.Size(20, 20);
-            this.btnPantsColor.TabIndex = 9;
-            this.btnPantsColor.UseVisualStyleBackColor = false;
-            // 
-            // btnShirtColor
-            // 
-            this.btnShirtColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShirtColor.Location = new System.Drawing.Point(61, 92);
-            this.btnShirtColor.Name = "btnShirtColor";
-            this.btnShirtColor.Size = new System.Drawing.Size(20, 20);
-            this.btnShirtColor.TabIndex = 8;
-            this.btnShirtColor.UseVisualStyleBackColor = false;
-            // 
-            // btnPonchoColor
-            // 
-            this.btnPonchoColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPonchoColor.Location = new System.Drawing.Point(61, 66);
-            this.btnPonchoColor.Name = "btnPonchoColor";
-            this.btnPonchoColor.Size = new System.Drawing.Size(20, 20);
-            this.btnPonchoColor.TabIndex = 7;
-            this.btnPonchoColor.UseVisualStyleBackColor = false;
-            // 
-            // btnSkinColor
-            // 
-            this.btnSkinColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSkinColor.Location = new System.Drawing.Point(61, 40);
-            this.btnSkinColor.Name = "btnSkinColor";
-            this.btnSkinColor.Size = new System.Drawing.Size(20, 20);
-            this.btnSkinColor.TabIndex = 6;
-            this.btnSkinColor.UseVisualStyleBackColor = false;
-            // 
-            // btnHairColor
-            // 
-            this.btnHairColor.BackColor = System.Drawing.Color.White;
-            this.btnHairColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHairColor.Location = new System.Drawing.Point(61, 14);
-            this.btnHairColor.Name = "btnHairColor";
-            this.btnHairColor.Size = new System.Drawing.Size(20, 20);
-            this.btnHairColor.TabIndex = 5;
-            this.btnHairColor.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Hair:";
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -806,9 +806,12 @@ namespace SoG_SGreader
             this.MainMenuStrip = this.msMenu;
             this.Name = "FrmMain";
             this.Text = "SoG: Savegame Reader v0.1 by TOLIK518";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.tabContainer.ResumeLayout(false);
             this.tabEquip.ResumeLayout(false);
             this.tabEquip.PerformLayout();
+            this.gbColors.ResumeLayout(false);
+            this.gbColors.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -821,8 +824,6 @@ namespace SoG_SGreader
             ((System.ComponentModel.ISupportInitialize)(this.numItemCount)).EndInit();
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
-            this.gbColors.ResumeLayout(false);
-            this.gbColors.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

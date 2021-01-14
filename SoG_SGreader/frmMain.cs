@@ -8,11 +8,15 @@ namespace SoG_SGreader
 {
     public partial class FrmMain : Form
     {
-        public FrmMain()
+        public FrmMain(string sFilePath)
         {
             InitializeComponent();    //Initializing elements from the Designer
             InitElements(); //Initializing elements from this file
-            
+            if (File.Exists(sFilePath))
+            {
+                LoadSaveGame(sFilePath);
+            }
+
 
         }
         //TODO: When a file is beeing opened, we need to reset als variablesrk 
@@ -29,19 +33,25 @@ namespace SoG_SGreader
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                try
-                {
-                    txtConsole.Text += openFileDialog1.FileName;
-                    ReadData(openFileDialog1.FileName);
-                    saveToolStripMenuItem.Enabled = true;
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
-                }
+                LoadSaveGame(openFileDialog1.FileName);
             }
             
+
+        }
+
+        internal void LoadSaveGame(string sFilePath)
+        {
+            try
+            {
+                txtConsole.Text += sFilePath;
+                ReadData(sFilePath);
+                saveToolStripMenuItem.Enabled = true;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+            }
             InitFields();
             PopulateFileds();
         }
@@ -148,7 +158,7 @@ namespace SoG_SGreader
 
         }
 
-        private void getDataFromFields()
+        private void GetDataFromFields()
         {
             pPlayer.equip.Hat = (int)Enum.Parse(typeof(Sog_Items), cbHat.Text);
             pPlayer.equip.Facegear = (int)Enum.Parse(typeof(Sog_Items), cbFacegear.Text);
@@ -200,7 +210,7 @@ namespace SoG_SGreader
         private void WriteData(string fileName)
         {
             BinaryWriter writeBinary = new BinaryWriter(File.Open(fileName, FileMode.Create));
-            getDataFromFields();
+            GetDataFromFields();
             writeBinary.Write(pPlayer.magicByte);
             writeBinary.Write(pPlayer.equip.Hat);
             writeBinary.Write(pPlayer.equip.Facegear);
@@ -358,6 +368,12 @@ namespace SoG_SGreader
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WriteData("8.cha");
+        }
+        //I'm not sure yet if the Savegame folder is always the same
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 
