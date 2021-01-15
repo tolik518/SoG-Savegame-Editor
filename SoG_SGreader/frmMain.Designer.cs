@@ -84,11 +84,14 @@ namespace SoG_SGreader
             this.label27 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnAddItem = new System.Windows.Forms.Button();
             this.label28 = new System.Windows.Forms.Label();
             this.numItemCount = new System.Windows.Forms.NumericUpDown();
             this.cbSelectedItem = new System.Windows.Forms.ComboBox();
             this.lstInventory = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Item = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Count = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Position = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.msMenu = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -638,15 +641,26 @@ namespace SoG_SGreader
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.btnAddItem);
             this.groupBox4.Controls.Add(this.label28);
             this.groupBox4.Controls.Add(this.numItemCount);
             this.groupBox4.Controls.Add(this.cbSelectedItem);
             this.groupBox4.Location = new System.Drawing.Point(6, 302);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(263, 79);
+            this.groupBox4.Size = new System.Drawing.Size(309, 79);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Item";
+            // 
+            // btnAddItem
+            // 
+            this.btnAddItem.Location = new System.Drawing.Point(263, 17);
+            this.btnAddItem.Name = "btnAddItem";
+            this.btnAddItem.Size = new System.Drawing.Size(39, 23);
+            this.btnAddItem.TabIndex = 2;
+            this.btnAddItem.Text = "Add";
+            this.btnAddItem.UseVisualStyleBackColor = true;
+            this.btnAddItem.Click += new System.EventHandler(this.BtnAddItem_Click);
             // 
             // label28
             // 
@@ -661,13 +675,14 @@ namespace SoG_SGreader
             // 
             this.numItemCount.Location = new System.Drawing.Point(176, 46);
             this.numItemCount.Maximum = new decimal(new int[] {
-            1000,
+            9999,
             0,
             0,
             0});
             this.numItemCount.Name = "numItemCount";
             this.numItemCount.Size = new System.Drawing.Size(81, 20);
             this.numItemCount.TabIndex = 1;
+            this.numItemCount.ValueChanged += new System.EventHandler(this.NumItemCount_ValueChanged);
             // 
             // cbSelectedItem
             // 
@@ -680,17 +695,38 @@ namespace SoG_SGreader
             // lstInventory
             // 
             this.lstInventory.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1});
+            this.Item,
+            this.Count,
+            this.Position});
             this.lstInventory.HideSelection = false;
-            this.lstInventory.Location = new System.Drawing.Point(6, 11);
+            this.lstInventory.LabelWrap = false;
+            this.lstInventory.Location = new System.Drawing.Point(12, 11);
+            this.lstInventory.MultiSelect = false;
             this.lstInventory.Name = "lstInventory";
-            this.lstInventory.Size = new System.Drawing.Size(643, 285);
+            this.lstInventory.Size = new System.Drawing.Size(480, 285);
             this.lstInventory.TabIndex = 0;
             this.lstInventory.UseCompatibleStateImageBehavior = false;
+            this.lstInventory.View = System.Windows.Forms.View.Details;
             this.lstInventory.SelectedIndexChanged += new System.EventHandler(this.LstInventory_SelectedIndexChanged);
+            // 
+            // Item
+            // 
+            this.Item.Text = "Item";
+            this.Item.Width = 321;
+            // 
+            // Count
+            // 
+            this.Count.Text = "Count";
+            this.Count.Width = 54;
+            // 
+            // Position
+            // 
+            this.Position.Text = "Position";
+            this.Position.Width = 71;
             // 
             // msMenu
             // 
+            this.msMenu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.msMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.helpToolStripMenuItem});
@@ -900,7 +936,7 @@ namespace SoG_SGreader
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.NumericUpDown numItemCount;
         private System.Windows.Forms.ComboBox cbSelectedItem;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader Item;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox txtNickname;
         private System.Windows.Forms.GroupBox gbColors;
@@ -916,6 +952,9 @@ namespace SoG_SGreader
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ColumnHeader Count;
+        private System.Windows.Forms.ColumnHeader Position;
+        private System.Windows.Forms.Button btnAddItem;
     }
 }
 

@@ -16,7 +16,9 @@ namespace SoG_SGreader
             {
                 LoadSaveGame(sFilePath);
             }
-            txtConsole.Text = sFilePath;
+            txtConsole.Text += "\r\nlstInventory.Items.Count: " + lstInventory.Items.Count;
+            txtConsole.Text += "\r\npPlayer.InventorySize: " + pPlayer.InventorySize;
+            txtConsole.Text += "\r\npPlayer.inventory.Length: " + pPlayer._inventory.Count;
         }
         //TODO: When a file is beeing opened, we need to reset als variablesrk 
         private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -136,7 +138,7 @@ namespace SoG_SGreader
                 }
                 cbQuickslotType[i].DataSource = new string[] { "Sog_Items", "Sog_Spells", "Int32" };
             }
-
+            cbSelectedItem.DataSource = Enum.GetValues(typeof(Sog_Items));
         }
         private void PopulateFileds()
         {
@@ -171,8 +173,10 @@ namespace SoG_SGreader
 
             for (int i = 0; i != pPlayer.InventorySize; i++)
             {
-                lstInventory.Items.Add(pPlayer.inventory[i].ItemID.ToString());
+                var vItem = new ListViewItem(new[] { pPlayer._inventory[i].ItemID.ToString(), pPlayer._inventory[i].ItemCount.ToString(), pPlayer._inventory[i].ItemPos.ToString() });
+                lstInventory.Items.Add(vItem);
             }
+
         }
 
         private void InitVariables()    //TODO: we need to clean all our variables before we load a new file 
@@ -182,20 +186,20 @@ namespace SoG_SGreader
 
         private void GetDataFromFields()
         {
-            pPlayer.equip.Hat = (int)Enum.Parse(typeof(Sog_Items), cbHat.Text);
-            pPlayer.equip.Facegear = (int)Enum.Parse(typeof(Sog_Items), cbFacegear.Text);
-            pPlayer.equip.Weapon = (int)Enum.Parse(typeof(Sog_Items), cbWeapon.Text);
-            pPlayer.equip.Shield = (int)Enum.Parse(typeof(Sog_Items), cbShield.Text);
-            pPlayer.equip.Armor = (int)Enum.Parse(typeof(Sog_Items), cbArmor.Text);
-            pPlayer.equip.Shoes = (int)Enum.Parse(typeof(Sog_Items), cbShoes.Text);
+            pPlayer.equip.Hat = (int)Enum.Parse(typeof(_Sog_Items.Hat), cbHat.Text);
+            pPlayer.equip.Facegear = (int)Enum.Parse(typeof(_Sog_Items.Facegear), cbFacegear.Text);
+            pPlayer.equip.Weapon = (int)Enum.Parse(typeof(_Sog_Items.Weapon), cbWeapon.Text);
+            pPlayer.equip.Shield = (int)Enum.Parse(typeof(_Sog_Items.Shield), cbShield.Text);
+            pPlayer.equip.Armor = (int)Enum.Parse(typeof(_Sog_Items.Armor), cbArmor.Text);
+            pPlayer.equip.Shoes = (int)Enum.Parse(typeof(_Sog_Items.Shoes), cbShoes.Text);
 
-            pPlayer.equip.Accessory1 = (int)Enum.Parse(typeof(Sog_Items), cbAccessory1.Text);
-            pPlayer.equip.Accessory2 = (int)Enum.Parse(typeof(Sog_Items), cbAccessory2.Text);
+            pPlayer.equip.Accessory1 = (int)Enum.Parse(typeof(_Sog_Items.Accessory), cbAccessory1.Text);
+            pPlayer.equip.Accessory2 = (int)Enum.Parse(typeof(_Sog_Items.Accessory), cbAccessory2.Text);
 
-            pPlayer.style.Hat = (int)Enum.Parse(typeof(Sog_Items), cbStyleHat.Text);
-            pPlayer.style.Facegear = (int)Enum.Parse(typeof(Sog_Items), cbStyleFacegear.Text);
-            pPlayer.style.Weapon = (int)Enum.Parse(typeof(Sog_Items), cbStyleWeapon.Text);
-            pPlayer.style.Shield = (int)Enum.Parse(typeof(Sog_Items), cbStyleShield.Text);
+            pPlayer.style.Hat = (int)Enum.Parse(typeof(_Sog_Items.Hat), cbStyleHat.Text);
+            pPlayer.style.Facegear = (int)Enum.Parse(typeof(_Sog_Items.Facegear), cbStyleFacegear.Text);
+            pPlayer.style.Weapon = (int)Enum.Parse(typeof(_Sog_Items.Weapon), cbStyleWeapon.Text);
+            pPlayer.style.Shield = (int)Enum.Parse(typeof(_Sog_Items.Shield), cbStyleShield.Text);
 
             for (int i = 0; i < 10; i++)
             {
@@ -219,12 +223,18 @@ namespace SoG_SGreader
             // btnPonchoColor.BackColor = ColorTranslator.FromHtml("#" + ((Sog_Colors)pPlayer.style.PonchoColor).ToString().TrimStart('_'));
             // btnShirtColor.BackColor = ColorTranslator.FromHtml("#" + ((Sog_Colors)pPlayer.style.ShirtColor).ToString().TrimStart('_'));
             // btnPantsColor.BackColor = ColorTranslator.FromHtml("#" + ((Sog_Colors)pPlayer.style.PantsColor).ToString().TrimStart('_'));
+            pPlayer.InventorySize = lstInventory.Items.Count;
 
-            /* for (int i = 0; i != pPlayer.InventorySize; i++)
-             {
-                 txtConsole.Text += "\r\n" + pPlayer.inventory[i].ItemID + " x" + pPlayer.inventory[i].ItemCount + " on: " + pPlayer.inventory[i].ItemPos;
-                 lstInventory.Items.Add(pPlayer.inventory[i].ItemID.ToString());
-             }*/
+            
+            
+            for (int i = 0; i != lstInventory.Items.Count; i++)
+            {
+                Sog_Player.Inventory iitem = new Sog_Player.Inventory((Sog_Items)Enum.Parse(typeof(Sog_Items), lstInventory.Items[i].SubItems[0].Text),
+                                                                                Int32.Parse(lstInventory.Items[i].SubItems[1].Text), 
+                                                                               UInt32.Parse(lstInventory.Items[i].SubItems[2].Text));
+                pPlayer._inventory.Add(iitem);
+
+            }
         }
 
         private readonly Sog_Player pPlayer = new Sog_Player();
@@ -283,9 +293,9 @@ namespace SoG_SGreader
             writeBinary.Write(pPlayer.InventorySize);
             for (int i = 0; i != pPlayer.InventorySize; i++)
             {
-                writeBinary.Write((Int32)pPlayer.inventory[i].ItemID);
-                writeBinary.Write((Int32)pPlayer.inventory[i].ItemCount);
-                writeBinary.Write((Int32)pPlayer.inventory[i].ItemPos);
+                writeBinary.Write((Int32)pPlayer._inventory[i].ItemID);
+                writeBinary.Write((Int32)pPlayer._inventory[i].ItemCount);
+                writeBinary.Write((Int32)pPlayer._inventory[i].ItemPos);
             }
 
             writeBinary.Write(pPlayer.scrap);
@@ -302,29 +312,29 @@ namespace SoG_SGreader
 
                 txtConsole.Text += "\r\nFilesize: " + scrapSize;
 
-                pPlayer.magicByte = readBinary.ReadInt32(); //I dont know yet what the first bytes stand for tbh    //4
-                pPlayer.equip.Hat = readBinary.ReadInt32();         //4
-                pPlayer.equip.Facegear = readBinary.ReadInt32();    //4
-                pPlayer.style.Bodytype = readBinary.ReadChar(); //seems like always B ?    //1
-                pPlayer.style.Hair = readBinary.ReadInt32();        //4
-                pPlayer.equip.Weapon = readBinary.ReadInt32();      //4
-                pPlayer.equip.Shield = readBinary.ReadInt32();      //4
-                pPlayer.equip.Armor = readBinary.ReadInt32();       //4
-                pPlayer.equip.Shoes = readBinary.ReadInt32();       //4
-                pPlayer.equip.Accessory1 = readBinary.ReadInt32();  //4
-                pPlayer.equip.Accessory2 = readBinary.ReadInt32();  //4
-                pPlayer.style.Hat = readBinary.ReadInt32();         //4
-                pPlayer.style.Facegear = readBinary.ReadInt32();    //4
-                pPlayer.style.Weapon = readBinary.ReadInt32();      //4
-                pPlayer.style.Shield = readBinary.ReadInt32();      //4
+                pPlayer.magicByte = readBinary.ReadInt32(); //I dont know yet what the first bytes stand for tbh    
+                pPlayer.equip.Hat = readBinary.ReadInt32();
+                pPlayer.equip.Facegear = readBinary.ReadInt32();
+                pPlayer.style.Bodytype = readBinary.ReadChar(); //seems like always B ?    
+                pPlayer.style.Hair = readBinary.ReadInt32();
+                pPlayer.equip.Weapon = readBinary.ReadInt32();
+                pPlayer.equip.Shield = readBinary.ReadInt32();
+                pPlayer.equip.Armor = readBinary.ReadInt32();
+                pPlayer.equip.Shoes = readBinary.ReadInt32();
+                pPlayer.equip.Accessory1 = readBinary.ReadInt32();
+                pPlayer.equip.Accessory2 = readBinary.ReadInt32();
+                pPlayer.style.Hat = readBinary.ReadInt32();
+                pPlayer.style.Facegear = readBinary.ReadInt32();
+                pPlayer.style.Weapon = readBinary.ReadInt32();
+                pPlayer.style.Shield = readBinary.ReadInt32();
 
-                pPlayer.style.HatHidden = readBinary.ReadBoolean();       //1
-                pPlayer.style.FacegearHidden = readBinary.ReadBoolean();  //1
+                pPlayer.style.HatHidden = readBinary.ReadBoolean();
+                pPlayer.style.FacegearHidden = readBinary.ReadBoolean();
 
-                pPlayer.LastTwoHander = readBinary.ReadInt32();  //last onehander?  //4
-                pPlayer.LastOneHander = readBinary.ReadInt32(); //last twohander?   //4
-                pPlayer.LastBow = readBinary.ReadInt32(); //last bow?               //4
-                scrapSize -= 71;
+                pPlayer.LastTwoHander = readBinary.ReadInt32();  //last onehander? 
+                pPlayer.LastOneHander = readBinary.ReadInt32(); //last twohander?   
+                pPlayer.LastBow = readBinary.ReadInt32(); //last bow?              
+                scrapSize -= 71; //count of bytes that were read already
 
                 for (int i = 0; i < 10; i++)
                 {
@@ -361,16 +371,13 @@ namespace SoG_SGreader
 
                 pPlayer.InventorySize = readBinary.ReadInt32();
                 scrapSize -= 4;
-                pPlayer.inventory = new Sog_Player.Inventory[pPlayer.InventorySize];
+                pPlayer._inventory = new List<Sog_Player.Inventory>(pPlayer.InventorySize);
 
                 for (int i = 0; i != pPlayer.InventorySize; i++)
                 {
-                    pPlayer.inventory[i] = new Sog_Player.Inventory
-                    {
-                        ItemID = (Sog_Items)readBinary.ReadInt32(),
-                        ItemCount = (int)readBinary.ReadInt32(),
-                        ItemPos = readBinary.ReadUInt32()
-                    };
+                    Sog_Player.Inventory iitem = new Sog_Player.Inventory((Sog_Items)readBinary.ReadInt32(), (int)readBinary.ReadInt32(), readBinary.ReadUInt32());
+                    pPlayer._inventory.Add(iitem);
+                   
                     scrapSize -= 12;
                 }
                 scrapSize -= 4;
@@ -384,8 +391,12 @@ namespace SoG_SGreader
 
         private void LstInventory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cbSelectedItem.Text = pPlayer.inventory[lstInventory.FocusedItem.Index].ItemID.ToString();
-            numItemCount.Value = pPlayer.inventory[lstInventory.FocusedItem.Index].ItemCount;
+            if (lstInventory.FocusedItem == null)
+            {
+                return;
+            }
+            cbSelectedItem.Text = pPlayer._inventory[lstInventory.FocusedItem.Index].ItemID.ToString();
+            numItemCount.Value = pPlayer._inventory[lstInventory.FocusedItem.Index].ItemCount;
         }
 
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -416,6 +427,35 @@ namespace SoG_SGreader
             frmAbout.ShowDialog();
         }
 
+        private void NumItemCount_ValueChanged(object sender, EventArgs e)
+        {
+            if (lstInventory.FocusedItem != null)
+            {
+                pPlayer._inventory[lstInventory.FocusedItem.Index].ItemCount = (int)numItemCount.Value;
+                lstInventory.Items[lstInventory.FocusedItem.Index].SubItems[1].Text = numItemCount.Value.ToString();
+            }
+        }
+
+        //TODO: check for the position
+        private void BtnAddItem_Click(object sender, EventArgs e)
+        {
+            if (lstInventory.FindItemWithText(cbSelectedItem.Text) == null) //look if the item already exists; 
+            {
+                var vItem = new ListViewItem(new[] { cbSelectedItem.Text, numItemCount.Value.ToString(), "99999" });
+                lstInventory.Items.Add(vItem);
+                Sog_Player.Inventory iitem = new Sog_Player.Inventory((Sog_Items)Enum.Parse(typeof(Sog_Items), lstInventory.Items[lstInventory.Items.Count - 1].SubItems[0].Text),
+                                                                                 Int32.Parse(lstInventory.Items[lstInventory.Items.Count - 1].SubItems[1].Text),
+                                                                                 UInt32.Parse(lstInventory.Items[lstInventory.Items.Count - 1].SubItems[2].Text));
+                pPlayer._inventory.Add(iitem);
+            }
+            else     //jump to the item you wanted to add, select it, and write the number in the field
+            {        //acts weird, jumpts to the item before sometimes; TODO: fix it
+                lstInventory.EnsureVisible(lstInventory.FindItemWithText(cbSelectedItem.Text).Index);
+                lstInventory.Items[lstInventory.FindItemWithText(cbSelectedItem.Text).Index].Selected = true;
+                //lstInventory.Select();
+                numItemCount.Value = pPlayer._inventory[lstInventory.FindItemWithText(cbSelectedItem.Text).Index].ItemCount;
+            }
+        }
     }
 
     public class Sog_Player
@@ -423,6 +463,7 @@ namespace SoG_SGreader
         public Equip equip = new Equip();
         public Style style = new Style();
         public Inventory[] inventory;
+        public List<Inventory> _inventory;
 
         public int magicByte;
         public class Equip
@@ -462,7 +503,11 @@ namespace SoG_SGreader
         public int InventorySize { get; set; }
         public class Inventory
         {
-            public Inventory() { }
+            public Inventory(Sog_Items _ItemID, int _ItemCount, UInt32 _ItemPos) {
+                this.ItemID = _ItemID;
+                this.ItemCount = _ItemCount;
+                this.ItemPos = _ItemPos;
+            }
             public Sog_Items ItemID { get; set; }
             public int ItemCount { get; set; }
             public UInt32 ItemPos { get; set; }
