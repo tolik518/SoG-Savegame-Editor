@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
-using System.Windows.Forms;                 
+using System.Windows.Forms;
 
 namespace SoG_SGreader
 {
@@ -18,7 +18,7 @@ namespace SoG_SGreader
 
         private void BtnLoadSaveGame_Click(object sender, EventArgs e)
         {
-            if(lstSaveGames.SelectedIndex != -1)
+            if (lstSaveGames.SelectedIndex != -1)
             {
                 sFilePath = sFilePath + "\\" + lstSaveGames.SelectedItem.ToString();
             }
@@ -31,9 +31,9 @@ namespace SoG_SGreader
         private void GetSaveGameFiles(string sFilePath)
         {
             lstSaveGames.Items.Clear();
-            for(int i = 0; i != 10; i++)
-            { 
-                if (File.Exists(sFilePath + "\\" + i +".cha")) 
+            for (int i = 0; i != 10; i++)
+            {
+                if (File.Exists(sFilePath + "\\" + i + ".cha"))
                 {
                     lstSaveGames.Items.Add(i + ".cha");
                 }
@@ -42,7 +42,7 @@ namespace SoG_SGreader
             {
                 lblSaveGameCount.ForeColor = Color.Black;
                 lblSaveGameCount.Text = lstSaveGames.Items.Count + " Savegames found.";
-            } 
+            }
             else
             {
                 lblSaveGameCount.ForeColor = Color.Red;

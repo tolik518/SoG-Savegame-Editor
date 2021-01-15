@@ -1,7 +1,7 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace SoG_SGreader
@@ -34,8 +34,6 @@ namespace SoG_SGreader
             {
                 LoadSaveGame(openFileDialog1.FileName);
             }
-            
-
         }
 
         internal void LoadSaveGame(string sFilePath)
@@ -78,15 +76,18 @@ namespace SoG_SGreader
                     Location = new Point(94, iQuickslotYpos),
                     Name = "cbQuickslotType[i]",
                     Size = new Size(79, 21)
-            };
+                };
                 groupBox3.Controls.Add(cbQuickslotType[i]);
                 groupBox3.Controls.Add(cbQuickslot[i]);
-                cbQuickslotType[i].SelectedIndexChanged += new System.EventHandler(Quickslot_SelectedIndexChanged);
+                cbQuickslotType[i].SelectedIndexChanged += new System.EventHandler(QuickslotType_SelectedIndexChanged);
 
                 iQuickslotYpos -= 27;
             }
         }
-        private void Quickslot_SelectedIndexChanged(object sender, EventArgs e)
+
+        //this method is responsible to update the content of the Quckslot combobox depending on what
+        //was selected in the Type combobox
+        private void QuickslotType_SelectedIndexChanged(object sender, EventArgs e)
         {
             for (int i = 0; i != 10; i++)
             {
@@ -108,7 +109,6 @@ namespace SoG_SGreader
 
         private void InitFields()
         {
-            /// TODO: Get only items that fit in the category hat/facegear/weapon etc.
             cbHat.DataSource = Enum.GetValues(typeof(_Sog_Items.Hat));
             cbFacegear.DataSource = Enum.GetValues(typeof(_Sog_Items.Facegear));
             cbWeapon.DataSource = Enum.GetValues(typeof(_Sog_Items.Weapon));
@@ -117,14 +117,14 @@ namespace SoG_SGreader
             cbShoes.DataSource = Enum.GetValues(typeof(_Sog_Items.Shoes));
             cbAccessory1.DataSource = Enum.GetValues(typeof(_Sog_Items.Accessory));
             cbAccessory2.DataSource = Enum.GetValues(typeof(_Sog_Items.Accessory));
-         	
+
             cbStyleHat.DataSource = Enum.GetValues(typeof(_Sog_Items.Hat));
             cbStyleFacegear.DataSource = Enum.GetValues(typeof(_Sog_Items.Facegear));
             cbStyleWeapon.DataSource = Enum.GetValues(typeof(_Sog_Items.Weapon));
             cbStyleShield.DataSource = Enum.GetValues(typeof(_Sog_Items.Shield));
 
             /// TODO: I need to check if the quickslotsType field changes to fill out the fields with new items
-            for (int i = 0; i!=9; i++)
+            for (int i = 0; i != 10; i++)
             {
                 if (pPlayer.quickslots[i].GetType() == typeof(Sog_Items))
                 {
@@ -134,7 +134,7 @@ namespace SoG_SGreader
                 {
                     cbQuickslot[i].DataSource = Enum.GetValues(typeof(Sog_Spells));
                 }
-                cbQuickslotType[i].DataSource = new string[] { "Sog_Items", "Sog_Spells", "Int32"};
+                cbQuickslotType[i].DataSource = new string[] { "Sog_Items", "Sog_Spells", "Int32" };
             }
 
         }
@@ -142,20 +142,20 @@ namespace SoG_SGreader
         {
             txtNickname.Text = pPlayer.Nickname;
 
-            cbHat.Text = ((Sog_Items)pPlayer.equip.Hat).ToString();
-            cbFacegear.Text = ((Sog_Items)pPlayer.equip.Facegear).ToString();
-            cbWeapon.Text = ((Sog_Items)pPlayer.equip.Weapon).ToString();
-            cbShield.Text = ((Sog_Items)pPlayer.equip.Shield).ToString();
-            cbArmor.Text = ((Sog_Items)pPlayer.equip.Armor).ToString();
-            cbShoes.Text = ((Sog_Items)pPlayer.equip.Shoes).ToString();
+            cbHat.Text = ((_Sog_Items.Hat)pPlayer.equip.Hat).ToString();
+            cbFacegear.Text = ((_Sog_Items.Facegear)pPlayer.equip.Facegear).ToString();
+            cbWeapon.Text = ((_Sog_Items.Weapon)pPlayer.equip.Weapon).ToString();
+            cbShield.Text = ((_Sog_Items.Shield)pPlayer.equip.Shield).ToString();
+            cbArmor.Text = ((_Sog_Items.Armor)pPlayer.equip.Armor).ToString();
+            cbShoes.Text = ((_Sog_Items.Shoes)pPlayer.equip.Shoes).ToString();
 
-            cbAccessory1.Text = ((Sog_Items)pPlayer.equip.Accessory1).ToString();
-            cbAccessory2.Text = ((Sog_Items)pPlayer.equip.Accessory2).ToString();
+            cbAccessory1.Text = ((_Sog_Items.Accessory)pPlayer.equip.Accessory1).ToString();
+            cbAccessory2.Text = ((_Sog_Items.Accessory)pPlayer.equip.Accessory2).ToString();
 
-            cbStyleHat.Text = ((Sog_Items)pPlayer.style.Hat).ToString();
-            cbStyleFacegear.Text = ((Sog_Items)pPlayer.style.Facegear).ToString();
-            cbStyleWeapon.Text = ((Sog_Items)pPlayer.style.Weapon).ToString();
-            cbStyleShield.Text = ((Sog_Items)pPlayer.style.Shield).ToString();
+            cbStyleHat.Text = ((_Sog_Items.Hat)pPlayer.style.Hat).ToString();
+            cbStyleFacegear.Text = ((_Sog_Items.Facegear)pPlayer.style.Facegear).ToString();
+            cbStyleWeapon.Text = ((_Sog_Items.Weapon)pPlayer.style.Weapon).ToString();
+            cbStyleShield.Text = ((_Sog_Items.Shield)pPlayer.style.Shield).ToString();
 
             for (int i = 0; i < 10; i++)
             {
@@ -164,7 +164,7 @@ namespace SoG_SGreader
             }
 
             btnHairColor.BackColor = ColorTranslator.FromHtml("#" + ((Sog_Colors)pPlayer.style.HairColor).ToString().TrimStart('_'));
-         // btnSkinColor.BackColor = ColorTranslator.FromHtml("#" + ((SoG_Colors)iHairColor).ToString().TrimStart('_'));
+            // btnSkinColor.BackColor = ColorTranslator.FromHtml("#" + ((SoG_Colors)iHairColor).ToString().TrimStart('_'));
             btnPonchoColor.BackColor = ColorTranslator.FromHtml("#" + ((Sog_Colors)pPlayer.style.PonchoColor).ToString().TrimStart('_'));
             btnShirtColor.BackColor = ColorTranslator.FromHtml("#" + ((Sog_Colors)pPlayer.style.ShirtColor).ToString().TrimStart('_'));
             btnPantsColor.BackColor = ColorTranslator.FromHtml("#" + ((Sog_Colors)pPlayer.style.PantsColor).ToString().TrimStart('_'));
@@ -200,18 +200,18 @@ namespace SoG_SGreader
             for (int i = 0; i < 10; i++)
             {
 
-                 if (cbQuickslotType[i].Text == typeof(Sog_Items).Name.ToString())         
-                 {
-                     pPlayer.quickslots[i] = Enum.Parse(typeof(Sog_Items), cbQuickslot[i].Text);
-                 }
-                 else if (cbQuickslotType[i].Text == typeof(Sog_Spells).Name.ToString())
-                 {
-                     pPlayer.quickslots[i] = Enum.Parse(typeof(Sog_Spells), cbQuickslot[i].Text);
-                 } 
+                if (cbQuickslotType[i].Text == typeof(Sog_Items).Name.ToString())
+                {
+                    pPlayer.quickslots[i] = Enum.Parse(typeof(Sog_Items), cbQuickslot[i].Text);
+                }
+                else if (cbQuickslotType[i].Text == typeof(Sog_Spells).Name.ToString())
+                {
+                    pPlayer.quickslots[i] = Enum.Parse(typeof(Sog_Spells), cbQuickslot[i].Text);
+                }
                 else
-                 {
-                     pPlayer.quickslots[i] = (int)0;
-                 }  
+                {
+                    pPlayer.quickslots[i] = (int)0;
+                }
             }
 
             // btnHairColor.BackColor = ColorTranslator.FromHtml("#" + ((Sog_Colors)pPlayer.style.HairColor).ToString().TrimStart('_'));
@@ -228,7 +228,7 @@ namespace SoG_SGreader
         }
 
         private readonly Sog_Player pPlayer = new Sog_Player();
-        
+
         private void WriteData(string fileName)
         {
             BinaryWriter writeBinary = new BinaryWriter(File.Open(fileName, FileMode.Create));
@@ -254,32 +254,33 @@ namespace SoG_SGreader
             writeBinary.Write(pPlayer.LastOneHander);
             writeBinary.Write(pPlayer.LastBow);
 
-            foreach (object quickslot in pPlayer.quickslots){
+            foreach (object quickslot in pPlayer.quickslots)
+            {
                 if (quickslot.GetType() == typeof(SoG_SGreader.Sog_Items))
                 {
                     writeBinary.Write((byte)1);
                     writeBinary.Write((Int32)quickslot);
-                } 
+                }
                 else if (quickslot.GetType() == typeof(SoG_SGreader.Sog_Spells))
                 {
                     writeBinary.Write((byte)2);
                     writeBinary.Write((UInt16)quickslot);
-                }     
+                }
                 else
                 {
                     writeBinary.Write((byte)0);
                 }
             }
 
-             writeBinary.Write((byte)pPlayer.style.HairColor);
-             writeBinary.Write((byte)pPlayer.style.SkinColor);
-             writeBinary.Write((byte)pPlayer.style.PonchoColor);
-             writeBinary.Write((byte)pPlayer.style.ShirtColor);
-             writeBinary.Write((byte)pPlayer.style.PantsColor);
-             writeBinary.Write((byte)pPlayer.style.Sex);
-             //writeBinary.Write((byte)pPlayer.nicknameLength);
-             writeBinary.Write(pPlayer.Nickname);
-             writeBinary.Write(pPlayer.InventorySize);
+            writeBinary.Write((byte)pPlayer.style.HairColor);
+            writeBinary.Write((byte)pPlayer.style.SkinColor);
+            writeBinary.Write((byte)pPlayer.style.PonchoColor);
+            writeBinary.Write((byte)pPlayer.style.ShirtColor);
+            writeBinary.Write((byte)pPlayer.style.PantsColor);
+            writeBinary.Write((byte)pPlayer.style.Sex);
+            //writeBinary.Write((byte)pPlayer.nicknameLength);
+            writeBinary.Write(pPlayer.Nickname);
+            writeBinary.Write(pPlayer.InventorySize);
             for (int i = 0; i != pPlayer.InventorySize; i++)
             {
                 writeBinary.Write((Int32)pPlayer.inventory[i].ItemID);
@@ -287,8 +288,8 @@ namespace SoG_SGreader
                 writeBinary.Write((Int32)pPlayer.inventory[i].ItemPos);
             }
 
-             writeBinary.Write(pPlayer.scrap);
-             writeBinary.Close();
+            writeBinary.Write(pPlayer.scrap);
+            writeBinary.Close();
         }
 
         private void ReadData(string fileName)
@@ -298,7 +299,7 @@ namespace SoG_SGreader
             using (FileStream fileStream = new FileStream(fileName, FileMode.Open))
             {
                 BinaryReader readBinary = new BinaryReader(fileStream);
-                
+
                 txtConsole.Text += "\r\nFilesize: " + scrapSize;
 
                 pPlayer.magicByte = readBinary.ReadInt32(); //I dont know yet what the first bytes stand for tbh    //4
@@ -414,7 +415,7 @@ namespace SoG_SGreader
             FrmAbout frmAbout = new FrmAbout();
             frmAbout.ShowDialog();
         }
-          
+
     }
 
     public class Sog_Player
@@ -469,14 +470,14 @@ namespace SoG_SGreader
         public byte[] scrap;
 
     }
-    public enum Sog_Colors  : ushort
+    public enum Sog_Colors : ushort
     {
         _c1d1d,
         _2e2226,
-	    _574753,
-	    _959595,	    
+        _574753,
+        _959595,
         _cacaca,
-	    _e4e4e4,
+        _e4e4e4,
         _931317,
         _cd2627,
         _da4e3d,
@@ -500,7 +501,7 @@ namespace SoG_SGreader
         _pc267f2,
         _912174,
         _e320bd,
-        _ec7bd9   
+        _ec7bd9
     }
     public enum Sog_Items
     {
