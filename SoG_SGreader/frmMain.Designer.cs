@@ -852,7 +852,6 @@ namespace SoG_SGreader
             this.MainMenuStrip = this.msMenu;
             this.Name = "FrmMain";
             this.Text = "SoG: Savegame Reader v0.2 by TOLIK518";
-            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.tabContainer.ResumeLayout(false);
             this.tabEquip.ResumeLayout(false);
             this.tabEquip.PerformLayout();

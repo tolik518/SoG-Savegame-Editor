@@ -16,9 +16,9 @@ namespace SoG_SGreader
             {
                 LoadSaveGame(sFilePath);
             }
-            txtConsole.Text += "\r\nlstInventory.Items.Count: " + lstInventory.Items.Count;
-            txtConsole.Text += "\r\npPlayer.InventorySize: " + pPlayer.InventorySize;
-            txtConsole.Text += "\r\npPlayer.inventory.Length: " + pPlayer._inventory.Count;
+            txtConsole.AppendText("\r\nlstInventory.Items.Count: " + lstInventory.Items.Count);
+            txtConsole.AppendText("\r\npPlayer.InventorySize: " + pPlayer.InventorySize);
+            txtConsole.AppendText("\r\npPlayer.inventory.Length: " + pPlayer._inventory.Count);
         }
         //TODO: When a file is beeing opened, we need to reset als variablesrk 
         private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace SoG_SGreader
         {
             try
             {
-                txtConsole.Text += sFilePath;
+                txtConsole.AppendText(sFilePath);                
                 ReadData(sFilePath);
                 saveToolStripMenuItem.Enabled = true;
 
@@ -310,7 +310,7 @@ namespace SoG_SGreader
             {
                 BinaryReader readBinary = new BinaryReader(fileStream);
 
-                txtConsole.Text += "\r\nFilesize: " + scrapSize;
+                txtConsole.AppendText("\r\nFilesize: " + scrapSize);
 
                 pPlayer.magicByte = readBinary.ReadInt32(); //I dont know yet what the first bytes stand for tbh    
                 pPlayer.equip.Hat = readBinary.ReadInt32();
@@ -382,10 +382,17 @@ namespace SoG_SGreader
                 }
                 scrapSize -= 4;
 
+
+
+                txtConsole.AppendText("\r\nNext ReadUInt16: " + readBinary.ReadUInt16());
+                scrapSize -= 2;
+
+
                 pPlayer.scrap = new byte[(int)scrapSize];
                 pPlayer.scrap = readBinary.ReadBytes((int)scrapSize);
-                txtConsole.Text += "\r\nScrapsize: " + scrapSize;
+                txtConsole.AppendText("\r\nScrapsize: " + scrapSize);
                 readBinary.Close();
+                fileStream.Close();
             }
         }
 
@@ -402,14 +409,29 @@ namespace SoG_SGreader
 
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WriteData("8.cha");
+            string sFilename = "";
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Title = "Save character";
+            saveFileDialog1.DefaultExt = ".cha";
+            saveFileDialog1.Filter = "Character files (*.cha)|*.cha|All files (*.*)|*.*";
+            saveFileDialog1.RestoreDirectory = true;
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                sFilename = saveFileDialog1.FileName.ToString();  
+                if(!File.Exists(sFilename))        
+                { 
+                    FileStream fileStream = File.Create(sFilename);      //there should be a better way to do this lol
+                    fileStream.Close();
+                }
+                
+                WriteData(sFilename);
+            }
+            txtConsole.AppendText("\r\n\r\nFile was saved successfully under: ");
+            txtConsole.AppendText("\r\n" + sFilename);
         }
         //I'm not sure yet if the Savegame folder is always the same
 
-        private void FrmMain_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
