@@ -397,6 +397,7 @@ namespace SoG_SGreader
             }
             cbSelectedItem.Text = pPlayer._inventory[lstInventory.FocusedItem.Index].ItemID.ToString();
             numItemCount.Value = pPlayer._inventory[lstInventory.FocusedItem.Index].ItemCount;
+        
         }
 
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -439,6 +440,7 @@ namespace SoG_SGreader
         //TODO: check for the position
         private void BtnAddItem_Click(object sender, EventArgs e)
         {
+            string sSelectedItem = cbSelectedItem.Text;
             if (lstInventory.FindItemWithText(cbSelectedItem.Text) == null) //look if the item already exists; 
             {
                 var vItem = new ListViewItem(new[] { cbSelectedItem.Text, numItemCount.Value.ToString(), "99999" });
@@ -448,13 +450,11 @@ namespace SoG_SGreader
                                                                                  UInt32.Parse(lstInventory.Items[lstInventory.Items.Count - 1].SubItems[2].Text));
                 pPlayer._inventory.Add(iitem);
             }
-            else     //jump to the item you wanted to add, select it, and write the number in the field
-            {        //acts weird, jumpts to the item before sometimes; TODO: fix it
-                lstInventory.EnsureVisible(lstInventory.FindItemWithText(cbSelectedItem.Text).Index);
-                lstInventory.Items[lstInventory.FindItemWithText(cbSelectedItem.Text).Index].Selected = true;
-                //lstInventory.Select();
-                numItemCount.Value = pPlayer._inventory[lstInventory.FindItemWithText(cbSelectedItem.Text).Index].ItemCount;
-            }
+            lstInventory.EnsureVisible(lstInventory.FindItemWithText(cbSelectedItem.Text).Index);
+            lstInventory.Items[lstInventory.FindItemWithText(cbSelectedItem.Text).Index].Selected = true;
+            lstInventory.Select();
+
+            cbSelectedItem.Text = sSelectedItem;
         }
     }
 
