@@ -81,7 +81,8 @@
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>SoG_SGreader_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -99,22 +100,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmAbout.cs">
+    <Compile Include="Forms\FrmColorSelect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAbout.Designer.cs">
+    <Compile Include="Forms\FrmColorSelect.Designer.cs">
+      <DependentUpon>FrmColorSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAbout.Designer.cs">
       <DependentUpon>FrmAbout.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmLoadSaveGame.cs">
+    <Compile Include="Forms\FrmLoadSaveGame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmLoadSaveGame.Designer.cs">
+    <Compile Include="Forms\FrmLoadSaveGame.Designer.cs">
       <DependentUpon>FrmLoadSaveGame.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMain.cs">
+    <Compile Include="Forms\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMain.Designer.cs">
+    <Compile Include="Forms\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -126,13 +133,16 @@
       <DependentUpon>VersionInc.tt</DependentUpon>
     </Compile>
     <Compile Include="_Sog_Items.cs" />
-    <EmbeddedResource Include="FrmAbout.resx">
+    <EmbeddedResource Include="Forms\FrmColorSelect.resx">
+      <DependentUpon>FrmColorSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAbout.resx">
       <DependentUpon>FrmAbout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLoadSaveGame.resx">
+    <EmbeddedResource Include="Forms\FrmLoadSaveGame.resx">
       <DependentUpon>FrmLoadSaveGame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMain.resx">
+    <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -155,7 +165,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="SoG_SGreader_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

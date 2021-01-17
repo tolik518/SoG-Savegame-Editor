@@ -383,11 +383,6 @@ namespace SoG_SGreader
                 scrapSize -= 4;
 
 
-
-                txtConsole.AppendText("\r\nNext ReadUInt16: " + readBinary.ReadUInt16());
-                scrapSize -= 2;
-
-
                 pPlayer.scrap = new byte[(int)scrapSize];
                 pPlayer.scrap = readBinary.ReadBytes((int)scrapSize);
                 txtConsole.AppendText("\r\nScrapsize: " + scrapSize);
@@ -478,6 +473,41 @@ namespace SoG_SGreader
 
             cbSelectedItem.Text = sSelectedItem;
         }
+
+        private void ClothingColor_Click(object sender, EventArgs e)
+        {
+            using (var form = new FrmColorSelect())
+            {
+                form.ShowDialog();
+
+                string sColor = form.sColor;
+                ((Control)sender).BackColor = ColorTranslator.FromHtml(sColor);
+                sColor = "_" + form.sColor.TrimStart('#');
+
+                if (((Control)sender) == btnHairColor) 
+                { 
+                    pPlayer.style.HairColor = (byte)(Sog_Colors)Enum.Parse(typeof(Sog_Colors), sColor);
+                }     
+                else if (((Control)sender) == btnPonchoColor)
+                {
+                    pPlayer.style.PonchoColor = (byte)(Sog_Colors)Enum.Parse(typeof(Sog_Colors), sColor);
+                }
+                else if (((Control)sender) == btnShirtColor)
+                {
+                    pPlayer.style.ShirtColor = (byte)(Sog_Colors)Enum.Parse(typeof(Sog_Colors), sColor);
+                }
+                else if (((Control)sender) == btnPantsColor)
+                {
+                    pPlayer.style.PantsColor = (byte)(Sog_Colors)Enum.Parse(typeof(Sog_Colors), sColor);
+                }
+            }
+            ActiveControl = label1; //workarround so the button won't be highlighted anymore
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
     public class Sog_Player
@@ -539,36 +569,36 @@ namespace SoG_SGreader
     }
     public enum Sog_Colors : ushort
     {
-        _c1d1d,
-        _2e2226,
+        _2C1D1D,
+        _2E2226,
         _574753,
         _959595,
-        _cacaca,
-        _e4e4e4,
+        _CACACA,
+        _E4E4E4,
         _931317,
-        _cd2627,
-        _da4e3d,
-        _8c3612,
-        _b0521c,
-        _cb6c17,
-        _de930d,
-        _ddb818,
-        _efdc40,
-        _3b971a,
-        _6fb620,
-        _9dd016,
-        _255c7a,
-        _42b8d3,
-        _a2d2dc,
-        _252c7a,
-        _656ccf,
-        _7d8bf4,
-        _6c2191,
-        _a630d4,
-        _pc267f2,
+        _CD2627,
+        _DA4E3D,
+        _8C3612,
+        _B0521C,
+        _CB6C17,
+        _DE930D,
+        _DDB818,
+        _EFDC40,
+        _3B971A,
+        _6FB620,
+        _9DD016,
+        _255C7A,
+        _42B8D3,
+        _A2D2DC,
+        _252C7A,
+        _656CCF,
+        _7D8BF4,
+        _6C2191,
+        _A630D4,
+        _PC267F2,
         _912174,
-        _e320bd,
-        _ec7bd9
+        _E320BD,
+        _EC7BD9
     }
     public enum Sog_Items
     {

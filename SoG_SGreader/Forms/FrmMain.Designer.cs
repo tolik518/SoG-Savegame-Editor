@@ -224,6 +224,7 @@ namespace SoG_SGreader
             this.btnPantsColor.Name = "btnPantsColor";
             this.btnPantsColor.Size = new System.Drawing.Size(20, 20);
             this.btnPantsColor.TabIndex = 9;
+            this.btnPantsColor.TabStop = false;
             this.btnPantsColor.UseVisualStyleBackColor = false;
             // 
             // btnShirtColor
@@ -233,6 +234,7 @@ namespace SoG_SGreader
             this.btnShirtColor.Name = "btnShirtColor";
             this.btnShirtColor.Size = new System.Drawing.Size(20, 20);
             this.btnShirtColor.TabIndex = 8;
+            this.btnShirtColor.TabStop = false;
             this.btnShirtColor.UseVisualStyleBackColor = false;
             // 
             // btnPonchoColor
@@ -242,6 +244,7 @@ namespace SoG_SGreader
             this.btnPonchoColor.Name = "btnPonchoColor";
             this.btnPonchoColor.Size = new System.Drawing.Size(20, 20);
             this.btnPonchoColor.TabIndex = 7;
+            this.btnPonchoColor.TabStop = false;
             this.btnPonchoColor.UseVisualStyleBackColor = false;
             // 
             // btnSkinColor
@@ -251,6 +254,7 @@ namespace SoG_SGreader
             this.btnSkinColor.Name = "btnSkinColor";
             this.btnSkinColor.Size = new System.Drawing.Size(20, 20);
             this.btnSkinColor.TabIndex = 6;
+            this.btnSkinColor.TabStop = false;
             this.btnSkinColor.UseVisualStyleBackColor = false;
             // 
             // btnHairColor
@@ -261,7 +265,13 @@ namespace SoG_SGreader
             this.btnHairColor.Name = "btnHairColor";
             this.btnHairColor.Size = new System.Drawing.Size(20, 20);
             this.btnHairColor.TabIndex = 5;
+            this.btnHairColor.TabStop = false;
             this.btnHairColor.UseVisualStyleBackColor = false;
+            this.btnHairColor.Click += new System.EventHandler(this.ClothingColor_Click);
+            this.btnPonchoColor.Click += new System.EventHandler(this.ClothingColor_Click);
+            this.btnShirtColor.Click += new System.EventHandler(this.ClothingColor_Click);
+            this.btnPantsColor.Click += new System.EventHandler(this.ClothingColor_Click);
+
             // 
             // label1
             // 
@@ -843,6 +853,7 @@ namespace SoG_SGreader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(744, 525);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.txtConsole);
@@ -852,6 +863,7 @@ namespace SoG_SGreader
             this.MainMenuStrip = this.msMenu;
             this.Name = "FrmMain";
             this.Text = "SoG: Savegame Reader v0.2 by TOLIK518";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.tabContainer.ResumeLayout(false);
             this.tabEquip.ResumeLayout(false);
             this.tabEquip.PerformLayout();
