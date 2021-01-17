@@ -382,7 +382,6 @@ namespace SoG_SGreader
                 }
                 scrapSize -= 4;
 
-
                 pPlayer.scrap = new byte[(int)scrapSize];
                 pPlayer.scrap = readBinary.ReadBytes((int)scrapSize);
                 txtConsole.AppendText("\r\nScrapsize: " + scrapSize);
@@ -479,26 +478,29 @@ namespace SoG_SGreader
             using (var form = new FrmColorSelect())
             {
                 form.ShowDialog();
-
                 string sColor = form.sColor;
-                ((Control)sender).BackColor = ColorTranslator.FromHtml(sColor);
-                sColor = "_" + form.sColor.TrimStart('#');
 
-                if (((Control)sender) == btnHairColor) 
-                { 
-                    pPlayer.style.HairColor = (byte)(Sog_Colors)Enum.Parse(typeof(Sog_Colors), sColor);
-                }     
-                else if (((Control)sender) == btnPonchoColor)
-                {
-                    pPlayer.style.PonchoColor = (byte)(Sog_Colors)Enum.Parse(typeof(Sog_Colors), sColor);
-                }
-                else if (((Control)sender) == btnShirtColor)
-                {
-                    pPlayer.style.ShirtColor = (byte)(Sog_Colors)Enum.Parse(typeof(Sog_Colors), sColor);
-                }
-                else if (((Control)sender) == btnPantsColor)
-                {
-                    pPlayer.style.PantsColor = (byte)(Sog_Colors)Enum.Parse(typeof(Sog_Colors), sColor);
+                if (!string.IsNullOrEmpty(sColor))
+                    { 
+                    ((Control)sender).BackColor = ColorTranslator.FromHtml(sColor);
+                    sColor = "_" + form.sColor.TrimStart('#');
+
+                    if (((Control)sender) == btnHairColor) 
+                    { 
+                        pPlayer.style.HairColor = (byte)(Sog_Colors)Enum.Parse(typeof(Sog_Colors), sColor);
+                    }     
+                    else if (((Control)sender) == btnPonchoColor)
+                    {
+                        pPlayer.style.PonchoColor = (byte)(Sog_Colors)Enum.Parse(typeof(Sog_Colors), sColor);
+                    }
+                    else if (((Control)sender) == btnShirtColor)
+                    {
+                        pPlayer.style.ShirtColor = (byte)(Sog_Colors)Enum.Parse(typeof(Sog_Colors), sColor);
+                    }
+                    else if (((Control)sender) == btnPantsColor)
+                    {
+                        pPlayer.style.PantsColor = (byte)(Sog_Colors)Enum.Parse(typeof(Sog_Colors), sColor);
+                    }
                 }
             }
             ActiveControl = label1; //workarround so the button won't be highlighted anymore
@@ -595,7 +597,7 @@ namespace SoG_SGreader
         _7D8BF4,
         _6C2191,
         _A630D4,
-        _PC267F2,
+        _C267F2,
         _912174,
         _E320BD,
         _EC7BD9

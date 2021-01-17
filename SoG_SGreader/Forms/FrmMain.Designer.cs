@@ -226,6 +226,7 @@ namespace SoG_SGreader
             this.btnPantsColor.TabIndex = 9;
             this.btnPantsColor.TabStop = false;
             this.btnPantsColor.UseVisualStyleBackColor = false;
+            this.btnPantsColor.Click += new System.EventHandler(this.ClothingColor_Click);
             // 
             // btnShirtColor
             // 
@@ -236,6 +237,7 @@ namespace SoG_SGreader
             this.btnShirtColor.TabIndex = 8;
             this.btnShirtColor.TabStop = false;
             this.btnShirtColor.UseVisualStyleBackColor = false;
+            this.btnShirtColor.Click += new System.EventHandler(this.ClothingColor_Click);
             // 
             // btnPonchoColor
             // 
@@ -246,6 +248,7 @@ namespace SoG_SGreader
             this.btnPonchoColor.TabIndex = 7;
             this.btnPonchoColor.TabStop = false;
             this.btnPonchoColor.UseVisualStyleBackColor = false;
+            this.btnPonchoColor.Click += new System.EventHandler(this.ClothingColor_Click);
             // 
             // btnSkinColor
             // 
@@ -268,10 +271,6 @@ namespace SoG_SGreader
             this.btnHairColor.TabStop = false;
             this.btnHairColor.UseVisualStyleBackColor = false;
             this.btnHairColor.Click += new System.EventHandler(this.ClothingColor_Click);
-            this.btnPonchoColor.Click += new System.EventHandler(this.ClothingColor_Click);
-            this.btnShirtColor.Click += new System.EventHandler(this.ClothingColor_Click);
-            this.btnPantsColor.Click += new System.EventHandler(this.ClothingColor_Click);
-
             // 
             // label1
             // 
@@ -862,7 +861,7 @@ namespace SoG_SGreader
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenu;
             this.Name = "FrmMain";
-            this.Text = "SoG: Savegame Reader v0.2 by TOLIK518";
+            this.Text = "SoG: Savegame Reader v0.2.5 by TOLIK518";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.tabContainer.ResumeLayout(false);
             this.tabEquip.ResumeLayout(false);
