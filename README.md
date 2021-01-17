@@ -8,8 +8,7 @@ You can find the structure of the save game on the [wiki page](https://github.co
   
 ![SoG_SGreader](https://returnnull.de/images/_SoG_SGreader2.png)  
   
-For safety reasons the savegame is ALWAYS saved as "8.cha" in the same directory as the executable. If you wan't to play with the  
-modified savegame you'll have to copy the "8.cha" file to "%APPDATA%\Secrets of Grindea\Characters" by hand  
+If you want your savegame to work you need to save it over to "%APPDATA%\Secrets of Grindea\Characters" and name it 0.cha to 8.cha
   
 There is still a lot to do.
 e.x
@@ -18,8 +17,6 @@ e.x
 - Option to let the user decide if the population of the combobox should be filtered or not
 - Do we really need to be able to edit Quickslots?
 - If an Item that was equipped is not in the inventory, add to the inventory
-- Color selection form
-- Inventory edition functionality
 - Better visualization of the inventory
 - Research: e.x How pets are stored and what other stuff is left in savegame
 - Research: why we cant change the equipped weapon, shied and shoes? <- something to do with inventory?
