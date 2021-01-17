@@ -29,8 +29,5 @@ e.x
 ![SoG_SGreader](https://returnnull.de/images/_SoG_SGreader.png)
 
   
-  
-
-  
 
 Keywords: "Secrets of Grindea", "Secrets of Grindea Savegame", "Editor", "Cheat", "Hack", "save game", "save file", "Character File"
