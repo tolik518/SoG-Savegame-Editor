@@ -331,9 +331,9 @@ namespace SoG_SGreader
                 pPlayer.style.HatHidden = readBinary.ReadBoolean();
                 pPlayer.style.FacegearHidden = readBinary.ReadBoolean();
 
-                pPlayer.LastTwoHander = readBinary.ReadInt32();  //last onehander? 
-                pPlayer.LastOneHander = readBinary.ReadInt32(); //last twohander?   
-                pPlayer.LastBow = readBinary.ReadInt32(); //last bow?              
+                pPlayer.LastTwoHander = readBinary.ReadInt32();  //last equipped onehander? 
+                pPlayer.LastOneHander = readBinary.ReadInt32(); //last equipped twohander?   
+                pPlayer.LastBow = readBinary.ReadInt32(); //last equipped bow?              
                 scrapSize -= 71; //count of bytes that were read already
 
                 for (int i = 0; i < 10; i++)
@@ -356,23 +356,24 @@ namespace SoG_SGreader
                     }
                 }
 
-                pPlayer.style.HairColor = readBinary.ReadByte();    //1
-                pPlayer.style.SkinColor = readBinary.ReadByte();    //1
-                pPlayer.style.PonchoColor = readBinary.ReadByte();  //1
-                pPlayer.style.ShirtColor = readBinary.ReadByte();   //1
-                pPlayer.style.PantsColor = readBinary.ReadByte();   //1
+                pPlayer.style.HairColor = readBinary.ReadByte();    
+                pPlayer.style.SkinColor = readBinary.ReadByte();   
+                pPlayer.style.PonchoColor = readBinary.ReadByte(); 
+                pPlayer.style.ShirtColor = readBinary.ReadByte();   
+                pPlayer.style.PantsColor = readBinary.ReadByte();   
 
-                pPlayer.style.Sex = readBinary.ReadByte();          //1
+                pPlayer.style.Sex = readBinary.ReadByte();         
 
-                pPlayer.NicknameLength = readBinary.ReadByte();    //1
+                pPlayer.NicknameLength = readBinary.ReadByte();   
                 scrapSize -= 7;
+
                 pPlayer.Nickname = new string(readBinary.ReadChars(pPlayer.NicknameLength));
                 scrapSize -= pPlayer.NicknameLength;
 
                 pPlayer.InventorySize = readBinary.ReadInt32();
                 scrapSize -= 4;
-                pPlayer._inventory = new List<Sog_Player.Inventory>(pPlayer.InventorySize);
 
+                pPlayer._inventory = new List<Sog_Player.Inventory>(pPlayer.InventorySize);
                 for (int i = 0; i != pPlayer.InventorySize; i++)
                 {
                     Sog_Player.Inventory iitem = new Sog_Player.Inventory((Sog_Items)readBinary.ReadInt32(), (int)readBinary.ReadInt32(), readBinary.ReadUInt32());
@@ -382,9 +383,84 @@ namespace SoG_SGreader
                 }
                 scrapSize -= 4;
 
+
+
+                //TODO: ADD SERIALIZATION COUNTERPART
+                /*
+                readBinary.ReadInt32();   //idk
+                scrapSize -= 4;
+
+                int iItemCountMerchant = 0;
+                iItemCountMerchant = readBinary.ReadInt32();     //itemscount by shady merchant
+                scrapSize -= 4;
+                for (int i = 0; i != iItemCountMerchant; i++)
+                {
+                    readBinary.ReadInt32();    //Item ID
+                    readBinary.ReadInt32();     //Item Count
+                    scrapSize -= 8;
+                }
+                txtConsole.AppendText("\r\niItemCountMerchant: " + iItemCountMerchant);
+
+                int iCardsCount = 0;
+                iCardsCount = readBinary.ReadInt32();     //How many cards do we need to count
+                scrapSize -= 4;
+                for (int i = 0; i != iCardsCount; i++)
+                {
+                    readBinary.ReadInt32();    //Card ID
+                    scrapSize -= 4;
+                }
+                txtConsole.AppendText("\r\niCardsCount: " + iCardsCount);
+
+                int iTreasureMapCount = 0;
+                iTreasureMapCount = readBinary.ReadInt32();     //How many Treasure Maps do we need to count
+                scrapSize -= 4;
+                for (int i = 0; i != iTreasureMapCount; i++)
+                {
+                    readBinary.ReadInt16();    //Treasure Map ID
+                    scrapSize -= 2;
+                }
+                txtConsole.AppendText("\r\niTreasureMapCount: " + iTreasureMapCount);
+
+                int iUnknownCount = 0;
+                iUnknownCount = readBinary.ReadInt32();     //How many Unknown Int16 do we need to count
+                for (int i = 0; i != iUnknownCount; i++)
+                {
+                    readBinary.ReadInt16();    //Unknown
+                    scrapSize -= 2;
+                }
+                txtConsole.AppendText("\r\niUnknownCount: " + iUnknownCount);
+
+                int iSkillCount = 0;
+                iSkillCount = readBinary.ReadInt32();     //How many Unknown Int16 do we need to count
+                for (int i = 0; i != iUnknownCount; i++)
+                {
+                    readBinary.ReadInt16();    //Skill ID
+                    readBinary.ReadByte();    //Skill Level
+                    scrapSize -= 3;
+                }
+                txtConsole.AppendText("\r\niSkillCount: " + iSkillCount);
+
+                readBinary.ReadByte();         //Level
+                scrapSize -= 1;
+
+
+                readBinary.ReadInt32();     //currentexp
+                readBinary.ReadInt32();     //something exp
+                readBinary.ReadInt32();     //something exp
+                scrapSize -= 12;
+                readBinary.ReadInt16();    //Talent Points
+                readBinary.ReadInt16();    //Silver Skill Points
+                readBinary.ReadInt16();    //Gold Skill Points
+                readBinary.ReadInt32();   //cash
+                scrapSize -= 10;
+                */
+
+
+
                 pPlayer.scrap = new byte[(int)scrapSize];
                 pPlayer.scrap = readBinary.ReadBytes((int)scrapSize);
                 txtConsole.AppendText("\r\nScrapsize: " + scrapSize);
+
                 readBinary.Close();
                 fileStream.Close();
             }
@@ -403,7 +479,7 @@ namespace SoG_SGreader
 
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string sFilename = "";
+            string sFilename;
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.Title = "Save character";
             saveFileDialog1.DefaultExt = ".cha";
@@ -420,12 +496,15 @@ namespace SoG_SGreader
                 }
                 
                 WriteData(sFilename);
+                txtConsole.AppendText("\r\n\r\nFile was saved successfully under: ");
+                txtConsole.AppendText("\r\n" + sFilename);
             }
-            txtConsole.AppendText("\r\n\r\nFile was saved successfully under: ");
-            txtConsole.AppendText("\r\n" + sFilename);
-        }
-        //I'm not sure yet if the Savegame folder is always the same
+            else
+            {
+                txtConsole.AppendText("\r\n\r\nFile was NOT saved.");
+            }
 
+        }
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -512,63 +591,8 @@ namespace SoG_SGreader
         }
     }
 
-    public class Sog_Player
-    {
-        public Equip equip = new Equip();
-        public Style style = new Style();
-        public Inventory[] inventory;
-        public List<Inventory> _inventory;
 
-        public int magicByte;
-        public class Equip
-        {
-            public int Hat { get; set; }
-            public int Facegear { get; set; }
-            public int Weapon { get; set; }
-            public int Shield { get; set; }
-            public int Armor { get; set; }
-            public int Shoes { get; set; }
-            public int Accessory1 { get; set; }
-            public int Accessory2 { get; set; }
-        }
-        public class Style
-        {
-            public char Bodytype { get; set; }
-            public int Hair { get; set; }
-            public int Hat { get; set; }
-            public int Facegear { get; set; }
-            public int Weapon { get; set; }
-            public int Shield { get; set; }
-            public bool HatHidden { get; set; }
-            public bool FacegearHidden { get; set; }
-            public int HairColor { get; set; }
-            public int SkinColor { get; set; }
-            public int PonchoColor { get; set; }
-            public int ShirtColor { get; set; }
-            public int PantsColor { get; set; }
-            public int Sex { get; set; }
-        }
-        public int LastTwoHander { get; set; }
-        public int LastOneHander { get; set; }
-        public int LastBow { get; set; }
-        public List<object> quickslots = new List<object>();
-        public int NicknameLength { get; set; }
-        public string Nickname { get; set; }
-        public int InventorySize { get; set; }
-        public class Inventory
-        {
-            public Inventory(Sog_Items _ItemID, int _ItemCount, UInt32 _ItemPos) {
-                this.ItemID = _ItemID;
-                this.ItemCount = _ItemCount;
-                this.ItemPos = _ItemPos;
-            }
-            public Sog_Items ItemID { get; set; }
-            public int ItemCount { get; set; }
-            public UInt32 ItemPos { get; set; }
-        }
-        public byte[] scrap;
 
-    }
     public enum Sog_Colors : ushort
     {
         _2C1D1D,
