@@ -8,8 +8,7 @@ You can find the structure of the save game on the [wiki page](https://github.co
   
 ![SoG_SGreader](https://returnnull.de/images/_SoG_SGreader2.png)  
   
-For safety reasons the savegame is ALWAYS saved as "8.cha" in the same directory as the executable. If you wan't to play with the  
-modified savegame you'll have to copy the "8.cha" file to "%APPDATA%\Secrets of Grindea\Characters" by hand  
+If you want your savegame to work you need to save it over to "%APPDATA%\Secrets of Grindea\Characters" and name it 0.cha to 8.cha
   
 There is still a lot to do.
 e.x
