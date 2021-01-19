@@ -586,17 +586,24 @@ namespace SoG_SGreader
         private void BtnAddItem_Click(object sender, EventArgs e)
         {
             string sSelectedItem = cbSelectedItem.Text;
-
-            //int max = pPlayer.inventory[i].ItemPos;
+            uint maxPos = 0;
+            for(int i = 0; i != pPlayer.InventorySize; i++)
+            {
+                if (pPlayer.inventory[i].ItemPos > maxPos)
+                { 
+                    maxPos = pPlayer.inventory[i].ItemPos;
+                }
+            }
 
             if (lstInventory.FindItemWithText(cbSelectedItem.Text) == null) //look if the item already exists; 
             {
-                var vItem = new ListViewItem(new[] { cbSelectedItem.Text, numItemCount.Value.ToString(), "99999" });
+                var vItem = new ListViewItem(new[] { cbSelectedItem.Text, numItemCount.Value.ToString(), (++maxPos).ToString() });
                 lstInventory.Items.Add(vItem);
                 Sog_Player.Item iitem = new Sog_Player.Item((Sog_Items)Enum.Parse(typeof(Sog_Items), lstInventory.Items[lstInventory.Items.Count - 1].SubItems[0].Text),
                                                                                  Int32.Parse(lstInventory.Items[lstInventory.Items.Count - 1].SubItems[1].Text),
                                                                                  UInt32.Parse(lstInventory.Items[lstInventory.Items.Count - 1].SubItems[2].Text));
                 pPlayer.inventory.Add(iitem);
+                pPlayer.InventorySize++;
             }
             lstInventory.EnsureVisible(lstInventory.FindItemWithText(cbSelectedItem.Text).Index);
             lstInventory.Items[lstInventory.FindItemWithText(cbSelectedItem.Text).Index].Selected = true;

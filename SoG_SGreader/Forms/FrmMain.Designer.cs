@@ -829,6 +829,7 @@ namespace SoG_SGreader
             this.btnAddItem.Size = new System.Drawing.Size(39, 23);
             this.btnAddItem.TabIndex = 2;
             this.btnAddItem.Text = "Add";
+            this.Tooltips.SetToolTip(this.btnAddItem, "Some Items COULD potentially break your game");
             this.btnAddItem.UseVisualStyleBackColor = true;
             this.btnAddItem.Click += new System.EventHandler(this.BtnAddItem_Click);
             // 
