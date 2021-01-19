@@ -3,8 +3,9 @@
 ![SoG_SGreader](https://returnnull.de/images/_SoG_SGreader3.png)  
 
 This is a work in progress tool that reads the savegame from [Secrets of Grindea](https://store.steampowered.com/app/269770/Secrets_of_Grindea/).
-Some key features like changing the nickname or equipment already do work and you can edit your equipment style.
-You can find the structure of the save game on the [wiki page](https://github.com/tolik518/SoG_SGreader/wiki/Savegame-File-Structure).  
+Some key features like changing the nickname or equipment already do work, you can edit your equipment style and   
+even your inventory contents. If you are interested how the save game file is build, you can find the structure   
+of the save game on the [wiki page](https://github.com/tolik518/SoG_SGreader/wiki/Savegame-File-Structure).    
   
 ![SoG_SGreader](https://returnnull.de/images/_SoG_SGreader2.png)  
   
@@ -18,6 +19,7 @@ e.x
 - Do we really need to be able to edit Quickslots?
 - If an Item that was equipped is not in the inventory, add to the inventory
 - Better visualization of the inventory
+- Import/Export as JSON or XML 
 - Research: e.x How pets are stored and what other stuff is left in savegame
 - Research: why we cant change the equipped weapon, shied and shoes? <- something to do with inventory?
 - Documentation of the functionality and of the research process
