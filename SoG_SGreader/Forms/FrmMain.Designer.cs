@@ -163,9 +163,6 @@ namespace SoG_SGreader
             // 
             // tabContainer
             // 
-            this.tabContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabContainer.Controls.Add(this.tabChar);
             this.tabContainer.Controls.Add(this.tabInventory);
             this.tabContainer.Controls.Add(this.tabQuickslots);
@@ -176,7 +173,7 @@ namespace SoG_SGreader
             this.tabContainer.Location = new System.Drawing.Point(12, 27);
             this.tabContainer.Name = "tabContainer";
             this.tabContainer.SelectedIndex = 0;
-            this.tabContainer.Size = new System.Drawing.Size(608, 413);
+            this.tabContainer.Size = new System.Drawing.Size(543, 416);
             this.tabContainer.TabIndex = 0;
             // 
             // tabChar
@@ -193,7 +190,7 @@ namespace SoG_SGreader
             this.tabChar.Location = new System.Drawing.Point(4, 22);
             this.tabChar.Name = "tabChar";
             this.tabChar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabChar.Size = new System.Drawing.Size(600, 387);
+            this.tabChar.Size = new System.Drawing.Size(535, 390);
             this.tabChar.TabIndex = 3;
             this.tabChar.Text = "Character / Equip";
             this.tabChar.UseVisualStyleBackColor = true;
@@ -804,18 +801,19 @@ namespace SoG_SGreader
             this.tabInventory.Location = new System.Drawing.Point(4, 22);
             this.tabInventory.Name = "tabInventory";
             this.tabInventory.Padding = new System.Windows.Forms.Padding(3);
-            this.tabInventory.Size = new System.Drawing.Size(600, 387);
+            this.tabInventory.Size = new System.Drawing.Size(535, 390);
             this.tabInventory.TabIndex = 2;
             this.tabInventory.Text = "Inventory";
             this.tabInventory.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox4.Controls.Add(this.btnAddItem);
             this.groupBox4.Controls.Add(this.label28);
             this.groupBox4.Controls.Add(this.numItemCount);
             this.groupBox4.Controls.Add(this.cbSelectedItem);
-            this.groupBox4.Location = new System.Drawing.Point(6, 302);
+            this.groupBox4.Location = new System.Drawing.Point(6, 305);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(309, 79);
             this.groupBox4.TabIndex = 1;
@@ -865,16 +863,19 @@ namespace SoG_SGreader
             // 
             // lstInventory
             // 
+            this.lstInventory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lstInventory.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Item,
             this.Count,
             this.Position});
             this.lstInventory.HideSelection = false;
             this.lstInventory.LabelWrap = false;
-            this.lstInventory.Location = new System.Drawing.Point(12, 11);
+            this.lstInventory.Location = new System.Drawing.Point(6, 6);
             this.lstInventory.MultiSelect = false;
             this.lstInventory.Name = "lstInventory";
-            this.lstInventory.Size = new System.Drawing.Size(480, 285);
+            this.lstInventory.Size = new System.Drawing.Size(523, 293);
             this.lstInventory.TabIndex = 0;
             this.lstInventory.UseCompatibleStateImageBehavior = false;
             this.lstInventory.View = System.Windows.Forms.View.Details;
@@ -901,7 +902,7 @@ namespace SoG_SGreader
             this.tabQuickslots.Location = new System.Drawing.Point(4, 22);
             this.tabQuickslots.Name = "tabQuickslots";
             this.tabQuickslots.Padding = new System.Windows.Forms.Padding(3);
-            this.tabQuickslots.Size = new System.Drawing.Size(600, 387);
+            this.tabQuickslots.Size = new System.Drawing.Size(535, 390);
             this.tabQuickslots.TabIndex = 1;
             this.tabQuickslots.Text = "Quickslots";
             this.tabQuickslots.UseVisualStyleBackColor = true;
@@ -1022,7 +1023,7 @@ namespace SoG_SGreader
             this.tabSkills.Location = new System.Drawing.Point(4, 22);
             this.tabSkills.Name = "tabSkills";
             this.tabSkills.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSkills.Size = new System.Drawing.Size(600, 387);
+            this.tabSkills.Size = new System.Drawing.Size(535, 390);
             this.tabSkills.TabIndex = 7;
             this.tabSkills.Text = "*Skills";
             this.tabSkills.UseVisualStyleBackColor = true;
@@ -1044,7 +1045,7 @@ namespace SoG_SGreader
             this.tabMerchant.Location = new System.Drawing.Point(4, 22);
             this.tabMerchant.Name = "tabMerchant";
             this.tabMerchant.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMerchant.Size = new System.Drawing.Size(600, 387);
+            this.tabMerchant.Size = new System.Drawing.Size(535, 390);
             this.tabMerchant.TabIndex = 4;
             this.tabMerchant.Text = "*Merchant";
             this.tabMerchant.UseVisualStyleBackColor = true;
@@ -1066,7 +1067,7 @@ namespace SoG_SGreader
             this.tabCards.Location = new System.Drawing.Point(4, 22);
             this.tabCards.Name = "tabCards";
             this.tabCards.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCards.Size = new System.Drawing.Size(600, 387);
+            this.tabCards.Size = new System.Drawing.Size(535, 390);
             this.tabCards.TabIndex = 5;
             this.tabCards.Text = "*Cards";
             this.tabCards.UseVisualStyleBackColor = true;
@@ -1088,7 +1089,7 @@ namespace SoG_SGreader
             this.tabTreasureMaps.Location = new System.Drawing.Point(4, 22);
             this.tabTreasureMaps.Name = "tabTreasureMaps";
             this.tabTreasureMaps.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTreasureMaps.Size = new System.Drawing.Size(600, 387);
+            this.tabTreasureMaps.Size = new System.Drawing.Size(535, 390);
             this.tabTreasureMaps.TabIndex = 6;
             this.tabTreasureMaps.Text = "*Treasure Maps";
             this.tabTreasureMaps.UseVisualStyleBackColor = true;
@@ -1112,7 +1113,7 @@ namespace SoG_SGreader
             this.helpToolStripMenuItem});
             this.msMenu.Location = new System.Drawing.Point(0, 0);
             this.msMenu.Name = "msMenu";
-            this.msMenu.Size = new System.Drawing.Size(632, 24);
+            this.msMenu.Size = new System.Drawing.Size(567, 24);
             this.msMenu.TabIndex = 1;
             this.msMenu.Text = "msMenu";
             // 
@@ -1131,7 +1132,7 @@ namespace SoG_SGreader
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
@@ -1139,7 +1140,7 @@ namespace SoG_SGreader
             // 
             this.saveToolStripMenuItem.Enabled = false;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
@@ -1147,7 +1148,7 @@ namespace SoG_SGreader
             // 
             this.importToolStripMenuItem.Enabled = false;
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.importToolStripMenuItem.Text = "Import";
             // 
             // exportAsToolStripMenuItem
@@ -1157,7 +1158,7 @@ namespace SoG_SGreader
             this.xMLToolStripMenuItem});
             this.exportAsToolStripMenuItem.Enabled = false;
             this.exportAsToolStripMenuItem.Name = "exportAsToolStripMenuItem";
-            this.exportAsToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.exportAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exportAsToolStripMenuItem.Text = "Export as...";
             // 
             // jSONToolStripMenuItem
@@ -1175,7 +1176,7 @@ namespace SoG_SGreader
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -1190,7 +1191,7 @@ namespace SoG_SGreader
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
@@ -1200,12 +1201,12 @@ namespace SoG_SGreader
             this.txtConsole.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtConsole.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtConsole.ForeColor = System.Drawing.Color.LimeGreen;
-            this.txtConsole.Location = new System.Drawing.Point(0, 451);
+            this.txtConsole.Location = new System.Drawing.Point(0, 454);
             this.txtConsole.Multiline = true;
             this.txtConsole.Name = "txtConsole";
             this.txtConsole.ReadOnly = true;
             this.txtConsole.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtConsole.Size = new System.Drawing.Size(632, 74);
+            this.txtConsole.Size = new System.Drawing.Size(567, 74);
             this.txtConsole.TabIndex = 28;
             this.txtConsole.TabStop = false;
             // 
@@ -1213,9 +1214,9 @@ namespace SoG_SGreader
             // 
             this.splitter1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitter1.Location = new System.Drawing.Point(0, 441);
+            this.splitter1.Location = new System.Drawing.Point(0, 444);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(632, 10);
+            this.splitter1.Size = new System.Drawing.Size(567, 10);
             this.splitter1.TabIndex = 29;
             this.splitter1.TabStop = false;
             // 
@@ -1224,7 +1225,7 @@ namespace SoG_SGreader
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(632, 525);
+            this.ClientSize = new System.Drawing.Size(567, 528);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.txtConsole);
             this.Controls.Add(this.tabContainer);
