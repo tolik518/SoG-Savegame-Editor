@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace SoG_SGreader
@@ -131,6 +132,9 @@ namespace SoG_SGreader
                 cbQuickslotType[i].DataSource = new string[] { "Sog_Items", "Sog_Spells", "Int32" };
             }
             cbSelectedItem.DataSource = Enum.GetValues(typeof(Sog_Items));
+
+
+
         }
         private void PopulateFileds()
         {
@@ -168,6 +172,18 @@ namespace SoG_SGreader
                 var vItem = new ListViewItem(new[] { pPlayer.inventory[i].ItemID.ToString(), pPlayer.inventory[i].ItemCount.ToString(), pPlayer.inventory[i].ItemPos.ToString() });
                 lstInventory.Items.Add(vItem);
             }
+
+            numGold.Value = pPlayer.Cash;
+
+            numLevel.Value = pPlayer.Level;
+            numEXPcurrent.Value = pPlayer.EXPCurrent;
+            numEXPUnknown0.Value = pPlayer.EXPUnknown0;
+            numEXPUnknown1.Value = pPlayer.EXPUnknown1;
+
+            numSkillTalentPoints.Value = pPlayer.SkillTalentPoints;
+            numSkillSilverPoints.Value = pPlayer.SkillSilverPoints;
+            numSkillGoldPoints.Value = pPlayer.SkillGoldPoints;
+
 
         }
 
@@ -210,23 +226,26 @@ namespace SoG_SGreader
                 }
             }
 
-            // btnHairColor.BackColor = ColorTranslator.FromHtml("#" + ((Sog_Colors)pPlayer.style.HairColor).ToString().TrimStart('_'));
-            // btnSkinColor.BackColor = ColorTranslator.FromHtml("#" + ((SoG_Colors)iHairColor).ToString().TrimStart('_'));
-            // btnPonchoColor.BackColor = ColorTranslator.FromHtml("#" + ((Sog_Colors)pPlayer.style.PonchoColor).ToString().TrimStart('_'));
-            // btnShirtColor.BackColor = ColorTranslator.FromHtml("#" + ((Sog_Colors)pPlayer.style.ShirtColor).ToString().TrimStart('_'));
-            // btnPantsColor.BackColor = ColorTranslator.FromHtml("#" + ((Sog_Colors)pPlayer.style.PantsColor).ToString().TrimStart('_'));
             pPlayer.InventorySize = lstInventory.Items.Count;
 
-            
-            
             for (int i = 0; i != lstInventory.Items.Count; i++)
             {
-                Sog_Player.Inventory iitem = new Sog_Player.Inventory((Sog_Items)Enum.Parse(typeof(Sog_Items), lstInventory.Items[i].SubItems[0].Text),
+                Sog_Player.Item iitem = new Sog_Player.Item((Sog_Items)Enum.Parse(typeof(Sog_Items), lstInventory.Items[i].SubItems[0].Text),
                                                                                 Int32.Parse(lstInventory.Items[i].SubItems[1].Text), 
                                                                                UInt32.Parse(lstInventory.Items[i].SubItems[2].Text));
                 pPlayer.inventory.Add(iitem);
 
             }
+
+            pPlayer.Level = (Int16)numLevel.Value;
+            pPlayer.Cash = (int)numGold.Value;
+            pPlayer.EXPCurrent = (int)numEXPcurrent.Value;
+            pPlayer.EXPUnknown0 = (int)numEXPUnknown0.Value;
+            pPlayer.EXPUnknown1 = (int)numEXPUnknown1.Value;
+
+            pPlayer.SkillTalentPoints = (Int16)numSkillTalentPoints.Value;
+            pPlayer.SkillSilverPoints = (Int16)numSkillSilverPoints.Value;
+            pPlayer.SkillGoldPoints = (Int16)numSkillGoldPoints.Value;
         }
 
         private readonly Sog_Player pPlayer = new Sog_Player();
@@ -407,10 +426,10 @@ namespace SoG_SGreader
                 pPlayer.InventorySize = readBinary.ReadInt32();
                 scrapSize -= 4;
 
-                pPlayer.inventory = new List<Sog_Player.Inventory>(pPlayer.InventorySize);
+                pPlayer.inventory = new List<Sog_Player.Item>(pPlayer.InventorySize);
                 for (int i = 0; i != pPlayer.InventorySize; i++)
                 {
-                    Sog_Player.Inventory iItem = new Sog_Player.Inventory((Sog_Items)readBinary.ReadInt32(), (int)readBinary.ReadInt32(), readBinary.ReadUInt32());
+                    Sog_Player.Item iItem = new Sog_Player.Item((Sog_Items)readBinary.ReadInt32(), (int)readBinary.ReadInt32(), readBinary.ReadUInt32());
                     pPlayer.inventory.Add(iItem);
                    
                     scrapSize -= 12;
@@ -567,11 +586,14 @@ namespace SoG_SGreader
         private void BtnAddItem_Click(object sender, EventArgs e)
         {
             string sSelectedItem = cbSelectedItem.Text;
+
+            //int max = pPlayer.inventory[i].ItemPos;
+
             if (lstInventory.FindItemWithText(cbSelectedItem.Text) == null) //look if the item already exists; 
             {
                 var vItem = new ListViewItem(new[] { cbSelectedItem.Text, numItemCount.Value.ToString(), "99999" });
                 lstInventory.Items.Add(vItem);
-                Sog_Player.Inventory iitem = new Sog_Player.Inventory((Sog_Items)Enum.Parse(typeof(Sog_Items), lstInventory.Items[lstInventory.Items.Count - 1].SubItems[0].Text),
+                Sog_Player.Item iitem = new Sog_Player.Item((Sog_Items)Enum.Parse(typeof(Sog_Items), lstInventory.Items[lstInventory.Items.Count - 1].SubItems[0].Text),
                                                                                  Int32.Parse(lstInventory.Items[lstInventory.Items.Count - 1].SubItems[1].Text),
                                                                                  UInt32.Parse(lstInventory.Items[lstInventory.Items.Count - 1].SubItems[2].Text));
                 pPlayer.inventory.Add(iitem);
@@ -614,11 +636,6 @@ namespace SoG_SGreader
                 }
             }
             ActiveControl = label1; //workarround so the button won't be highlighted anymore
-        }
-
-        private void FrmMain_Load(object sender, EventArgs e)
-        {
-
         }
     }
 

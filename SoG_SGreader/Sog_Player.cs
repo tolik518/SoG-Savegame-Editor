@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Web.UI.WebControls;
 
 namespace SoG_SGreader
 {
@@ -7,7 +9,9 @@ namespace SoG_SGreader
     {
         public Equip equip = new Equip();
         public Style style = new Style();
-        public List<Inventory> inventory;
+
+        public List<Item> inventory;
+
         public List<MerchantItems> merchantItems;
         public List<Card> cards;
         public List<TreasureMap> TreasureMaps;
@@ -51,9 +55,9 @@ namespace SoG_SGreader
         public int NicknameLength { get; set; }
         public string Nickname { get; set; }
         public int InventorySize { get; set; }
-        public class Inventory
+        public class Item
         {
-            public Inventory(Sog_Items _ItemID, int _ItemCount, UInt32 _ItemPos)
+            public Item(Sog_Items _ItemID, int _ItemCount, UInt32 _ItemPos)
             {
                 this.ItemID = _ItemID;
                 this.ItemCount = _ItemCount;
@@ -62,6 +66,7 @@ namespace SoG_SGreader
             public Sog_Items ItemID { get; set; }
             public int ItemCount { get; set; }
             public UInt32 ItemPos { get; set; }
+
         }
 
         public int UnknownVariable0 { get; set; }
