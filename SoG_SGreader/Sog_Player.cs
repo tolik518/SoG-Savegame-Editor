@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SoG_SGreader
 {
@@ -10,8 +7,13 @@ namespace SoG_SGreader
     {
         public Equip equip = new Equip();
         public Style style = new Style();
-        public Inventory[] inventory;
-        public List<Inventory> _inventory;
+        public List<Inventory> inventory;
+        public List<MerchantItems> merchantItems;
+        public List<Card> cards;
+        public List<TreasureMap> TreasureMaps;
+        public List<UnknownVariable01> UnknownVariables01;
+        public List<Skill> Skills;
+
 
         public int magicByte;
         public class Equip
@@ -61,6 +63,72 @@ namespace SoG_SGreader
             public int ItemCount { get; set; }
             public UInt32 ItemPos { get; set; }
         }
-        public byte[] scrap;
+
+        public int UnknownVariable0 { get; set; }
+        public int MerchantItemsCount { get; set; }
+        public class MerchantItems
+        {
+            public MerchantItems(Sog_Items _ItemID, int _ItemCount)
+            {
+                this.ItemID = _ItemID;
+                this.ItemCount = _ItemCount;
+            }
+            public Sog_Items ItemID { get; set; }
+            public int ItemCount { get; set; }
+        }
+
+        public int CardsCount { get; set; }
+        public class Card
+        {
+            public Card(int _CardId)
+            {
+                this.CardID = _CardId;
+            }
+            public int CardID { get; set; }
+        }
+
+        public int TreasureMapsCount { get; set; }
+        public class TreasureMap
+        {
+            public TreasureMap(Int16 _TreasureMapID)
+            {
+                this.TreasureMapID = _TreasureMapID;
+            }
+            public Int16 TreasureMapID { get; set; }
+        }
+
+        public int UnknownVariable01Count { get; set; }
+        public class UnknownVariable01
+        {
+            public UnknownVariable01(Int16 _UnknownVariable01ID)
+            {
+                this.UnknownVariable01ID = _UnknownVariable01ID;
+            }
+            public Int16 UnknownVariable01ID { get; set; }
+        }
+
+        public int SkillsCount { get; set; }
+        public class Skill
+        {
+            public Skill(Sog_Spells _SkillID, byte _SkillLevel)
+            {
+                this.SkillID = _SkillID;
+                this.SkillLevel = _SkillLevel;
+            }
+            public Sog_Spells SkillID { get; set; }
+            public byte SkillLevel { get; set; }
+        }
+
+        public Int16 Level { get; set; }
+        public int EXPCurrent { get; set; }
+        public int EXPUnknown0 { get; set; }
+        public int EXPUnknown1 { get; set; }
+
+        public Int16 SkillTalentPoints { get; set; }
+        public Int16 SkillSilverPoints { get; set; }
+        public Int16 SkillGoldPoints { get; set; }
+        public int Cash { get; set; }
+
+public byte[] scrap;
     }
 }
