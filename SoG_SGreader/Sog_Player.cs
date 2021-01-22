@@ -17,6 +17,7 @@ namespace SoG_SGreader
         public List<TreasureMap> TreasureMaps;
         public List<UnknownVariable01> UnknownVariables01;
         public List<Skill> Skills;
+        public List<Pet> Pets;
 
 
         public int magicByte;
@@ -134,6 +135,43 @@ namespace SoG_SGreader
         public Int16 SkillGoldPoints { get; set; }
         public int Cash { get; set; }
 
-public byte[] scrap;
+        public byte PetsCount { get; set; }
+        public class Pet
+        {
+        
+            public int Type1 { get; set; }
+            public int Type2 { get; set; }
+            public string Nickname { get; set; }
+            public byte Level { get; set; }
+            public byte Skin { get; set; }
+
+            public UInt16 StatHealth { get; set; }
+            public UInt16 StatEnergy { get; set; }
+            public UInt16 StatDamage { get; set; }
+            public UInt16 StatCrit { get; set; }
+            public UInt16 StatSpeed { get; set; }
+
+            public UInt16 StatProgressHealth { get; set; }
+            public UInt16 StatProgressEnergy { get; set; }
+            public UInt16 StatProgressDamage { get; set; }
+            public UInt16 StatProgressCrit { get; set; }
+            public UInt16 StatProgressSpeed { get; set; }
+
+        }
+        public int PetsSelected { get; set; }
+        public byte PetHidden { get; set; }
+
+        public UInt16 UnknownVariable02Count { get; set; }
+        public class UnknownVariable02
+        {
+            public UnknownVariable02(Int16 _UnknownVariable02ID)
+            {
+                this.UnknownVariable02ID = _UnknownVariable02ID;
+            }
+            public Int16 UnknownVariable02ID { get; set; }
+        }
+
+
+        public byte[] scrap;
     }
 }

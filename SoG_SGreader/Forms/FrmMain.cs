@@ -351,6 +351,31 @@ namespace SoG_SGreader
             writeBinary.Write((Int16)pPlayer.SkillGoldPoints);
             writeBinary.Write((int)pPlayer.Cash);
 
+            writeBinary.Write((byte)pPlayer.PetsCount);
+            for (int i = 0; i != pPlayer.PetsCount; i++)
+            {
+                writeBinary.Write((int)pPlayer.Pets[i].Type1);
+                writeBinary.Write((int)pPlayer.Pets[i].Type2);
+                writeBinary.Write((string)pPlayer.Pets[i].Nickname);
+                writeBinary.Write((byte)pPlayer.Pets[i].Level);
+                writeBinary.Write((byte)pPlayer.Pets[i].Skin);
+
+                writeBinary.Write((UInt16)pPlayer.Pets[i].StatHealth);
+                writeBinary.Write((UInt16)pPlayer.Pets[i].StatEnergy);
+                writeBinary.Write((UInt16)pPlayer.Pets[i].StatDamage);
+                writeBinary.Write((UInt16)pPlayer.Pets[i].StatCrit);
+                writeBinary.Write((UInt16)pPlayer.Pets[i].StatDamage);
+
+                writeBinary.Write((UInt16)pPlayer.Pets[i].StatProgressHealth);
+                writeBinary.Write((UInt16)pPlayer.Pets[i].StatProgressEnergy);
+                writeBinary.Write((UInt16)pPlayer.Pets[i].StatProgressDamage);
+                writeBinary.Write((UInt16)pPlayer.Pets[i].StatProgressCrit);
+                writeBinary.Write((UInt16)pPlayer.Pets[i].StatProgressDamage);
+            }
+
+            writeBinary.Write((int)pPlayer.PetsSelected);
+            writeBinary.Write((byte)pPlayer.PetHidden);
+
             writeBinary.Write(pPlayer.scrap);
             writeBinary.Close();
         }
@@ -508,6 +533,39 @@ namespace SoG_SGreader
                 pPlayer.SkillGoldPoints = readBinary.ReadInt16();    //Gold Skill Points
                 pPlayer.Cash = readBinary.ReadInt32();   //cash
                 scrapSize -= 10;
+
+                pPlayer.PetsCount = readBinary.ReadByte();
+                scrapSize -= 1;
+                pPlayer.Pets = new List<Sog_Player.Pet>(pPlayer.PetsCount);
+                for (int i = 0; i != pPlayer.PetsCount; i++)
+                { 
+                    pPlayer.Pets.Add(new Sog_Player.Pet
+                    {
+                        Type1 = readBinary.ReadInt32(),
+                        Type2 = readBinary.ReadInt32(),
+                        Nickname = readBinary.ReadString(),
+                        Level = readBinary.ReadByte(),
+                        Skin = readBinary.ReadByte(),
+
+                        StatHealth = readBinary.ReadUInt16(),
+                        StatEnergy = readBinary.ReadUInt16(),
+                        StatDamage = readBinary.ReadUInt16(),
+                        StatCrit = readBinary.ReadUInt16(),
+                        StatSpeed = readBinary.ReadUInt16(),
+
+                        StatProgressHealth = readBinary.ReadUInt16(),
+                        StatProgressEnergy = readBinary.ReadUInt16(),
+                        StatProgressDamage = readBinary.ReadUInt16(),
+                        StatProgressCrit = readBinary.ReadUInt16(),
+                        StatProgressSpeed = readBinary.ReadUInt16()
+                    });
+                    scrapSize -= 30 - pPlayer.Pets[i].Nickname.Length;
+                    txtConsole.AppendText(i +" Petname: " + pPlayer.Pets[i].Nickname);
+                }
+
+                pPlayer.PetsSelected = readBinary.ReadInt32();
+                pPlayer.PetHidden = readBinary.ReadByte();
+                scrapSize -= 5;
 
                 pPlayer.scrap = new byte[(int)scrapSize];
                 pPlayer.scrap = readBinary.ReadBytes((int)scrapSize);
