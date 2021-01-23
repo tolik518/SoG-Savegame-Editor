@@ -134,6 +134,32 @@ namespace SoG_SGreader
             this.txtConsole = new System.Windows.Forms.TextBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.Tooltips = new System.Windows.Forms.ToolTip(this.components);
+            this.tabPets = new System.Windows.Forms.TabPage();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.lstPets = new System.Windows.Forms.ListView();
+            this.Level = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Nickname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.HP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Dmg = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Crit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Speed = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnSavePet = new System.Windows.Forms.Button();
+            this.txtPetNickname = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.numPetHP = new System.Windows.Forms.NumericUpDown();
+            this.numPetEnergy = new System.Windows.Forms.NumericUpDown();
+            this.numPetDamage = new System.Windows.Forms.NumericUpDown();
+            this.numPetCrit = new System.Windows.Forms.NumericUpDown();
+            this.numPetSpeed = new System.Windows.Forms.NumericUpDown();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.numPetLevel = new System.Windows.Forms.NumericUpDown();
+            this.btnDeleteSelectedItem = new System.Windows.Forms.Button();
             this.tabContainer.SuspendLayout();
             this.tabChar.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -159,12 +185,21 @@ namespace SoG_SGreader
             this.tabCards.SuspendLayout();
             this.tabTreasureMaps.SuspendLayout();
             this.msMenu.SuspendLayout();
+            this.tabPets.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPetHP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPetEnergy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPetDamage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPetCrit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPetSpeed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPetLevel)).BeginInit();
             this.SuspendLayout();
             // 
             // tabContainer
             // 
             this.tabContainer.Controls.Add(this.tabChar);
             this.tabContainer.Controls.Add(this.tabInventory);
+            this.tabContainer.Controls.Add(this.tabPets);
             this.tabContainer.Controls.Add(this.tabQuickslots);
             this.tabContainer.Controls.Add(this.tabSkills);
             this.tabContainer.Controls.Add(this.tabMerchant);
@@ -495,9 +530,9 @@ namespace SoG_SGreader
             this.label36.AutoSize = true;
             this.label36.Location = new System.Drawing.Point(10, 74);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(78, 13);
+            this.label36.Size = new System.Drawing.Size(81, 13);
             this.label36.TabIndex = 2;
-            this.label36.Text = "Gold Skill Point";
+            this.label36.Text = "Gold Skill Point:";
             // 
             // numSkillSilverPoints
             // 
@@ -528,18 +563,18 @@ namespace SoG_SGreader
             this.label35.AutoSize = true;
             this.label35.Location = new System.Drawing.Point(10, 48);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(82, 13);
+            this.label35.Size = new System.Drawing.Size(85, 13);
             this.label35.TabIndex = 1;
-            this.label35.Text = "Silver Skill Point";
+            this.label35.Text = "Silver Skill Point:";
             // 
             // label34
             // 
             this.label34.AutoSize = true;
             this.label34.Location = new System.Drawing.Point(10, 22);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(69, 13);
+            this.label34.Size = new System.Drawing.Size(72, 13);
             this.label34.TabIndex = 0;
-            this.label34.Text = "Talent Points";
+            this.label34.Text = "Talent Points:";
             // 
             // groupBox5
             // 
@@ -564,36 +599,36 @@ namespace SoG_SGreader
             this.label33.Location = new System.Drawing.Point(6, 99);
             this.label33.Name = "label33";
             this.label33.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label33.Size = new System.Drawing.Size(86, 13);
+            this.label33.Size = new System.Drawing.Size(89, 13);
             this.label33.TabIndex = 7;
-            this.label33.Text = "[EXPUnknown1]";
+            this.label33.Text = "[EXPUnknown1]:";
             // 
             // label32
             // 
             this.label32.AutoSize = true;
             this.label32.Location = new System.Drawing.Point(6, 73);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(86, 13);
+            this.label32.Size = new System.Drawing.Size(89, 13);
             this.label32.TabIndex = 6;
-            this.label32.Text = "[EXPUnknown0]";
+            this.label32.Text = "[EXPUnknown0]:";
             // 
             // label31
             // 
             this.label31.AutoSize = true;
             this.label31.Location = new System.Drawing.Point(6, 47);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(65, 13);
+            this.label31.Size = new System.Drawing.Size(68, 13);
             this.label31.TabIndex = 5;
-            this.label31.Text = "Current EXP";
+            this.label31.Text = "Current EXP:";
             // 
             // label30
             // 
             this.label30.AutoSize = true;
             this.label30.Location = new System.Drawing.Point(6, 21);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(33, 13);
+            this.label30.Size = new System.Drawing.Size(36, 13);
             this.label30.TabIndex = 4;
-            this.label30.Text = "Level";
+            this.label30.Text = "Level:";
             // 
             // numEXPUnknown1
             // 
@@ -809,22 +844,23 @@ namespace SoG_SGreader
             // groupBox4
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox4.Controls.Add(this.btnDeleteSelectedItem);
             this.groupBox4.Controls.Add(this.btnAddItem);
             this.groupBox4.Controls.Add(this.label28);
             this.groupBox4.Controls.Add(this.numItemCount);
             this.groupBox4.Controls.Add(this.cbSelectedItem);
             this.groupBox4.Location = new System.Drawing.Point(6, 305);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(309, 79);
+            this.groupBox4.Size = new System.Drawing.Size(319, 79);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Item";
             // 
             // btnAddItem
             // 
-            this.btnAddItem.Location = new System.Drawing.Point(263, 17);
+            this.btnAddItem.Location = new System.Drawing.Point(253, 17);
             this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(39, 23);
+            this.btnAddItem.Size = new System.Drawing.Size(60, 23);
             this.btnAddItem.TabIndex = 2;
             this.btnAddItem.Text = "Add";
             this.Tooltips.SetToolTip(this.btnAddItem, "Some Items COULD potentially break your game");
@@ -834,7 +870,7 @@ namespace SoG_SGreader
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(6, 48);
+            this.label28.Location = new System.Drawing.Point(132, 48);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(38, 13);
             this.label28.TabIndex = 2;
@@ -849,7 +885,7 @@ namespace SoG_SGreader
             0,
             0});
             this.numItemCount.Name = "numItemCount";
-            this.numItemCount.Size = new System.Drawing.Size(81, 20);
+            this.numItemCount.Size = new System.Drawing.Size(71, 20);
             this.numItemCount.TabIndex = 1;
             this.numItemCount.ValueChanged += new System.EventHandler(this.NumItemCount_ValueChanged);
             // 
@@ -858,7 +894,7 @@ namespace SoG_SGreader
             this.cbSelectedItem.FormattingEnabled = true;
             this.cbSelectedItem.Location = new System.Drawing.Point(6, 19);
             this.cbSelectedItem.Name = "cbSelectedItem";
-            this.cbSelectedItem.Size = new System.Drawing.Size(251, 21);
+            this.cbSelectedItem.Size = new System.Drawing.Size(241, 21);
             this.cbSelectedItem.TabIndex = 0;
             // 
             // lstInventory
@@ -1220,6 +1256,226 @@ namespace SoG_SGreader
             this.splitter1.TabIndex = 29;
             this.splitter1.TabStop = false;
             // 
+            // tabPets
+            // 
+            this.tabPets.Controls.Add(this.lstPets);
+            this.tabPets.Controls.Add(this.groupBox7);
+            this.tabPets.Location = new System.Drawing.Point(4, 22);
+            this.tabPets.Name = "tabPets";
+            this.tabPets.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPets.Size = new System.Drawing.Size(535, 390);
+            this.tabPets.TabIndex = 8;
+            this.tabPets.Text = "Pets";
+            this.tabPets.UseVisualStyleBackColor = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.numPetLevel);
+            this.groupBox7.Controls.Add(this.label48);
+            this.groupBox7.Controls.Add(this.label47);
+            this.groupBox7.Controls.Add(this.label46);
+            this.groupBox7.Controls.Add(this.label45);
+            this.groupBox7.Controls.Add(this.label44);
+            this.groupBox7.Controls.Add(this.label43);
+            this.groupBox7.Controls.Add(this.numPetSpeed);
+            this.groupBox7.Controls.Add(this.numPetCrit);
+            this.groupBox7.Controls.Add(this.btnSavePet);
+            this.groupBox7.Controls.Add(this.numPetDamage);
+            this.groupBox7.Controls.Add(this.txtPetNickname);
+            this.groupBox7.Controls.Add(this.numPetEnergy);
+            this.groupBox7.Controls.Add(this.label42);
+            this.groupBox7.Controls.Add(this.numPetHP);
+            this.groupBox7.Location = new System.Drawing.Point(6, 213);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(297, 162);
+            this.groupBox7.TabIndex = 0;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Pet";
+            // 
+            // lstPets
+            // 
+            this.lstPets.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Level,
+            this.Nickname,
+            this.HP,
+            this.SP,
+            this.Dmg,
+            this.Crit,
+            this.Speed});
+            this.lstPets.HideSelection = false;
+            this.lstPets.Location = new System.Drawing.Point(6, 7);
+            this.lstPets.Name = "lstPets";
+            this.lstPets.Size = new System.Drawing.Size(297, 200);
+            this.lstPets.TabIndex = 1;
+            this.lstPets.UseCompatibleStateImageBehavior = false;
+            this.lstPets.View = System.Windows.Forms.View.Details;
+            this.lstPets.SelectedIndexChanged += new System.EventHandler(this.lstPets_SelectedIndexChanged);
+            // 
+            // Level
+            // 
+            this.Level.Text = "Level";
+            this.Level.Width = 42;
+            // 
+            // Nickname
+            // 
+            this.Nickname.Text = "Nickname";
+            // 
+            // HP
+            // 
+            this.HP.Text = "HP";
+            this.HP.Width = 34;
+            // 
+            // SP
+            // 
+            this.SP.Text = "SP";
+            this.SP.Width = 28;
+            // 
+            // Dmg
+            // 
+            this.Dmg.Text = "Dmg";
+            this.Dmg.Width = 40;
+            // 
+            // Crit
+            // 
+            this.Crit.Text = "Crit";
+            this.Crit.Width = 33;
+            // 
+            // Speed
+            // 
+            this.Speed.Text = "Speed";
+            this.Speed.Width = 44;
+            // 
+            // btnSavePet
+            // 
+            this.btnSavePet.Location = new System.Drawing.Point(216, 125);
+            this.btnSavePet.Name = "btnSavePet";
+            this.btnSavePet.Size = new System.Drawing.Size(75, 23);
+            this.btnSavePet.TabIndex = 0;
+            this.btnSavePet.Text = "Save";
+            this.btnSavePet.UseVisualStyleBackColor = true;
+            // 
+            // txtPetNickname
+            // 
+            this.txtPetNickname.Location = new System.Drawing.Point(162, 47);
+            this.txtPetNickname.Name = "txtPetNickname";
+            this.txtPetNickname.Size = new System.Drawing.Size(129, 20);
+            this.txtPetNickname.TabIndex = 1;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(159, 23);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(58, 13);
+            this.label42.TabIndex = 2;
+            this.label42.Text = "Nickname:";
+            // 
+            // numPetHP
+            // 
+            this.numPetHP.Location = new System.Drawing.Point(88, 21);
+            this.numPetHP.Name = "numPetHP";
+            this.numPetHP.Size = new System.Drawing.Size(55, 20);
+            this.numPetHP.TabIndex = 3;
+            // 
+            // numPetEnergy
+            // 
+            this.numPetEnergy.Location = new System.Drawing.Point(88, 47);
+            this.numPetEnergy.Name = "numPetEnergy";
+            this.numPetEnergy.Size = new System.Drawing.Size(55, 20);
+            this.numPetEnergy.TabIndex = 4;
+            // 
+            // numPetDamage
+            // 
+            this.numPetDamage.Location = new System.Drawing.Point(88, 73);
+            this.numPetDamage.Name = "numPetDamage";
+            this.numPetDamage.Size = new System.Drawing.Size(55, 20);
+            this.numPetDamage.TabIndex = 5;
+            // 
+            // numPetCrit
+            // 
+            this.numPetCrit.Location = new System.Drawing.Point(88, 99);
+            this.numPetCrit.Name = "numPetCrit";
+            this.numPetCrit.Size = new System.Drawing.Size(55, 20);
+            this.numPetCrit.TabIndex = 6;
+            // 
+            // numPetSpeed
+            // 
+            this.numPetSpeed.Location = new System.Drawing.Point(88, 125);
+            this.numPetSpeed.Name = "numPetSpeed";
+            this.numPetSpeed.Size = new System.Drawing.Size(55, 20);
+            this.numPetSpeed.TabIndex = 7;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(6, 23);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(66, 13);
+            this.label43.TabIndex = 8;
+            this.label43.Text = "Health level:";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(6, 49);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(68, 13);
+            this.label44.TabIndex = 9;
+            this.label44.Text = "Energy level:";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(6, 75);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(75, 13);
+            this.label45.TabIndex = 10;
+            this.label45.Text = "Damage level:";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(6, 101);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(50, 13);
+            this.label46.TabIndex = 11;
+            this.label46.Text = "Crit level:";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(6, 127);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(66, 13);
+            this.label47.TabIndex = 12;
+            this.label47.Text = "Speed level:";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(159, 75);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(51, 13);
+            this.label48.TabIndex = 13;
+            this.label48.Text = "Pet level:";
+            // 
+            // numPetLevel
+            // 
+            this.numPetLevel.Location = new System.Drawing.Point(216, 73);
+            this.numPetLevel.Name = "numPetLevel";
+            this.numPetLevel.Size = new System.Drawing.Size(75, 20);
+            this.numPetLevel.TabIndex = 14;
+            // 
+            // btnDeleteSelectedItem
+            // 
+            this.btnDeleteSelectedItem.Location = new System.Drawing.Point(253, 43);
+            this.btnDeleteSelectedItem.Name = "btnDeleteSelectedItem";
+            this.btnDeleteSelectedItem.Size = new System.Drawing.Size(60, 23);
+            this.btnDeleteSelectedItem.TabIndex = 2;
+            this.btnDeleteSelectedItem.Text = "Remove";
+            this.btnDeleteSelectedItem.UseVisualStyleBackColor = true;
+            this.btnDeleteSelectedItem.Click += new System.EventHandler(this.btnDeleteSelectedItem_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1272,6 +1528,15 @@ namespace SoG_SGreader
             this.tabTreasureMaps.PerformLayout();
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
+            this.tabPets.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPetHP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPetEnergy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPetDamage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPetCrit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPetSpeed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPetLevel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1385,6 +1650,32 @@ namespace SoG_SGreader
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.TabPage tabPets;
+        private System.Windows.Forms.ListView lstPets;
+        private System.Windows.Forms.ColumnHeader Level;
+        private System.Windows.Forms.ColumnHeader Nickname;
+        private System.Windows.Forms.ColumnHeader HP;
+        private System.Windows.Forms.ColumnHeader SP;
+        private System.Windows.Forms.ColumnHeader Dmg;
+        private System.Windows.Forms.ColumnHeader Crit;
+        private System.Windows.Forms.ColumnHeader Speed;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.NumericUpDown numPetSpeed;
+        private System.Windows.Forms.NumericUpDown numPetCrit;
+        private System.Windows.Forms.Button btnSavePet;
+        private System.Windows.Forms.NumericUpDown numPetDamage;
+        private System.Windows.Forms.TextBox txtPetNickname;
+        private System.Windows.Forms.NumericUpDown numPetEnergy;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.NumericUpDown numPetHP;
+        private System.Windows.Forms.NumericUpDown numPetLevel;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Button btnDeleteSelectedItem;
     }
 }
 

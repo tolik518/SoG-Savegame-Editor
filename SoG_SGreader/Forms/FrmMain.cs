@@ -39,8 +39,8 @@ namespace SoG_SGreader
 
         internal void LoadSaveGame(string sFilePath)
         {
-            
-            txtConsole.AppendText(sFilePath);                
+
+            txtConsole.AppendText(sFilePath);
             ReadData(sFilePath);
             saveToolStripMenuItem.Enabled = true;
 
@@ -185,6 +185,21 @@ namespace SoG_SGreader
             numSkillGoldPoints.Value = pPlayer.SkillGoldPoints;
 
 
+            for (int i = 0; i != pPlayer.PetsCount; i++)
+            {
+                var pPet = new ListViewItem(new[] { pPlayer.Pets[i].Level.ToString(),
+                                                    pPlayer.Pets[i].Nickname.ToString(),
+                                                    pPlayer.Pets[i].StatHealth.ToString(),
+                                                    pPlayer.Pets[i].StatEnergy.ToString(),
+                                                    pPlayer.Pets[i].StatDamage.ToString(),
+                                                    pPlayer.Pets[i].StatCrit.ToString(),
+                                                    pPlayer.Pets[i].StatSpeed.ToString()
+
+
+                });
+                lstPets.Items.Add(pPet);
+            }
+
         }
 
         private void InitVariables()    //TODO: we need to clean all our variables before we load a new file 
@@ -194,6 +209,7 @@ namespace SoG_SGreader
 
         private void GetDataFromFields()
         {
+            pPlayer.Nickname = txtNickname.Text;
             pPlayer.equip.Hat = (int)Enum.Parse(typeof(_Sog_Items.Hat), cbHat.Text);
             pPlayer.equip.Facegear = (int)Enum.Parse(typeof(_Sog_Items.Facegear), cbFacegear.Text);
             pPlayer.equip.Weapon = (int)Enum.Parse(typeof(_Sog_Items.Weapon), cbWeapon.Text);
@@ -227,14 +243,14 @@ namespace SoG_SGreader
             }
 
             pPlayer.InventorySize = lstInventory.Items.Count;
+            pPlayer.inventory.Clear();
 
             for (int i = 0; i != lstInventory.Items.Count; i++)
             {
                 Sog_Player.Item iitem = new Sog_Player.Item((Sog_Items)Enum.Parse(typeof(Sog_Items), lstInventory.Items[i].SubItems[0].Text),
-                                                                                Int32.Parse(lstInventory.Items[i].SubItems[1].Text), 
-                                                                               UInt32.Parse(lstInventory.Items[i].SubItems[2].Text));
+                                                                                         Int32.Parse(lstInventory.Items[i].SubItems[1].Text),
+                                                                                        UInt32.Parse(lstInventory.Items[i].SubItems[2].Text));
                 pPlayer.inventory.Add(iitem);
-
             }
 
             pPlayer.Level = (Int16)numLevel.Value;
@@ -301,6 +317,7 @@ namespace SoG_SGreader
             writeBinary.Write((byte)pPlayer.style.Sex);
             //writeBinary.Write((byte)pPlayer.nicknameLength);
             writeBinary.Write(pPlayer.Nickname);
+
             writeBinary.Write(pPlayer.InventorySize);
             for (int i = 0; i != pPlayer.InventorySize; i++)
             {
@@ -434,15 +451,15 @@ namespace SoG_SGreader
                     }
                 }
 
-                pPlayer.style.HairColor = readBinary.ReadByte();    
-                pPlayer.style.SkinColor = readBinary.ReadByte();   
-                pPlayer.style.PonchoColor = readBinary.ReadByte(); 
-                pPlayer.style.ShirtColor = readBinary.ReadByte();   
-                pPlayer.style.PantsColor = readBinary.ReadByte();   
+                pPlayer.style.HairColor = readBinary.ReadByte();
+                pPlayer.style.SkinColor = readBinary.ReadByte();
+                pPlayer.style.PonchoColor = readBinary.ReadByte();
+                pPlayer.style.ShirtColor = readBinary.ReadByte();
+                pPlayer.style.PantsColor = readBinary.ReadByte();
 
-                pPlayer.style.Sex = readBinary.ReadByte();         
+                pPlayer.style.Sex = readBinary.ReadByte();
 
-                pPlayer.NicknameLength = readBinary.ReadByte();   
+                pPlayer.NicknameLength = readBinary.ReadByte();
                 scrapSize -= 7;
 
                 pPlayer.Nickname = new string(readBinary.ReadChars(pPlayer.NicknameLength));
@@ -456,10 +473,11 @@ namespace SoG_SGreader
                 {
                     Sog_Player.Item iItem = new Sog_Player.Item((Sog_Items)readBinary.ReadInt32(), (int)readBinary.ReadInt32(), readBinary.ReadUInt32());
                     pPlayer.inventory.Add(iItem);
-                   
+
                     scrapSize -= 12;
                 }
                 scrapSize -= 4;
+                txtConsole.AppendText("\r\nInventorysize: " + pPlayer.InventorySize);
 
                 pPlayer.UnknownVariable0 = readBinary.ReadInt32();   //idk what I am reading here
                 scrapSize -= 4;
@@ -504,7 +522,7 @@ namespace SoG_SGreader
                 for (int i = 0; i != pPlayer.UnknownVariable01Count; i++)
                 {
                     Sog_Player.UnknownVariable01 unknownVariables01 = new Sog_Player.UnknownVariable01(readBinary.ReadInt16());    //Unknown
-                    pPlayer.UnknownVariables01.Add(unknownVariables01);    
+                    pPlayer.UnknownVariables01.Add(unknownVariables01);
                     scrapSize -= 2;
                 }
                 txtConsole.AppendText("\r\niUnknownCount: " + pPlayer.UnknownVariable01Count);
@@ -538,7 +556,7 @@ namespace SoG_SGreader
                 scrapSize -= 1;
                 pPlayer.Pets = new List<Sog_Player.Pet>(pPlayer.PetsCount);
                 for (int i = 0; i != pPlayer.PetsCount; i++)
-                { 
+                {
                     pPlayer.Pets.Add(new Sog_Player.Pet
                     {
                         Type1 = readBinary.ReadInt32(),
@@ -560,7 +578,7 @@ namespace SoG_SGreader
                         StatProgressSpeed = readBinary.ReadUInt16()
                     });
                     scrapSize -= 30 - pPlayer.Pets[i].Nickname.Length;
-                    txtConsole.AppendText(i +" Petname: " + pPlayer.Pets[i].Nickname);
+                    txtConsole.AppendText("\r\n" + i + " Petname: " + pPlayer.Pets[i].Nickname);
                 }
 
                 pPlayer.PetsSelected = readBinary.ReadInt32();
@@ -578,12 +596,12 @@ namespace SoG_SGreader
 
         private void LstInventory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lstInventory.FocusedItem == null)
+            if (lstInventory.FocusedItem == null || lstInventory.FocusedItem.Index == -1)
             {
                 return;
             }
-            cbSelectedItem.Text = pPlayer.inventory[lstInventory.FocusedItem.Index].ItemID.ToString();
-            numItemCount.Value = pPlayer.inventory[lstInventory.FocusedItem.Index].ItemCount;
+            cbSelectedItem.Text = lstInventory.Items[lstInventory.FocusedItem.Index].SubItems[0].Text;
+            numItemCount.Value = Int32.Parse(lstInventory.Items[lstInventory.FocusedItem.Index].SubItems[1].Text);
         }
 
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -597,13 +615,13 @@ namespace SoG_SGreader
 
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                sFilename = saveFileDialog1.FileName.ToString();  
-                if(!File.Exists(sFilename))        
-                { 
+                sFilename = saveFileDialog1.FileName.ToString();
+                if (!File.Exists(sFilename))
+                {
                     FileStream fileStream = File.Create(sFilename);      //there should be a better way to do this lol
                     fileStream.Close();
                 }
-                
+
                 WriteData(sFilename);
                 txtConsole.AppendText("\r\n\r\nFile was saved successfully under: ");
                 txtConsole.AppendText("\r\n" + sFilename);
@@ -636,7 +654,7 @@ namespace SoG_SGreader
         {
             if (lstInventory.FocusedItem != null)
             {
-                pPlayer.inventory[lstInventory.FocusedItem.Index].ItemCount = (int)numItemCount.Value;
+                //pPlayer.inventory[lstInventory.FocusedItem.Index].ItemCount = (int)numItemCount.Value;
                 lstInventory.Items[lstInventory.FocusedItem.Index].SubItems[1].Text = numItemCount.Value.ToString();
             }
         }
@@ -645,11 +663,11 @@ namespace SoG_SGreader
         {
             string sSelectedItem = cbSelectedItem.Text;
             uint maxPos = 0;
-            for(int i = 0; i != pPlayer.InventorySize; i++)
+            for (int i = 0; i != lstInventory.Items.Count; i++)
             {
-                if (pPlayer.inventory[i].ItemPos > maxPos)
-                { 
-                    maxPos = pPlayer.inventory[i].ItemPos;
+                if (UInt32.Parse(lstInventory.Items[i].SubItems[2].Text) > maxPos)
+                {
+                    maxPos = UInt32.Parse(lstInventory.Items[i].SubItems[2].Text);
                 }
             }
 
@@ -657,11 +675,11 @@ namespace SoG_SGreader
             {
                 var vItem = new ListViewItem(new[] { cbSelectedItem.Text, numItemCount.Value.ToString(), (++maxPos).ToString() });
                 lstInventory.Items.Add(vItem);
-                Sog_Player.Item iitem = new Sog_Player.Item((Sog_Items)Enum.Parse(typeof(Sog_Items), lstInventory.Items[lstInventory.Items.Count - 1].SubItems[0].Text),
-                                                                                 Int32.Parse(lstInventory.Items[lstInventory.Items.Count - 1].SubItems[1].Text),
-                                                                                 UInt32.Parse(lstInventory.Items[lstInventory.Items.Count - 1].SubItems[2].Text));
-                pPlayer.inventory.Add(iitem);
-                pPlayer.InventorySize++;
+                //Sog_Player.Item iitem = new Sog_Player.Item((Sog_Items)Enum.Parse(typeof(Sog_Items), lstInventory.Items[lstInventory.Items.Count - 1].SubItems[0].Text),
+                //                                                                 Int32.Parse(lstInventory.Items[lstInventory.Items.Count - 1].SubItems[1].Text),
+                //                                                                  UInt32.Parse(lstInventory.Items[lstInventory.Items.Count - 1].SubItems[2].Text));
+                //pPlayer.inventory.Add(iitem);
+                //pPlayer.InventorySize++;
             }
             lstInventory.EnsureVisible(lstInventory.FindItemWithText(cbSelectedItem.Text).Index);
             lstInventory.Items[lstInventory.FindItemWithText(cbSelectedItem.Text).Index].Selected = true;
@@ -678,14 +696,14 @@ namespace SoG_SGreader
                 string sColor = form.sColor;
 
                 if (!string.IsNullOrEmpty(sColor))
-                    { 
+                {
                     ((Control)sender).BackColor = ColorTranslator.FromHtml(sColor);
                     sColor = "_" + form.sColor.TrimStart('#');
 
-                    if (((Control)sender) == btnHairColor) 
-                    { 
+                    if (((Control)sender) == btnHairColor)
+                    {
                         pPlayer.style.HairColor = (byte)(Sog_Colors)Enum.Parse(typeof(Sog_Colors), sColor);
-                    }     
+                    }
                     else if (((Control)sender) == btnPonchoColor)
                     {
                         pPlayer.style.PonchoColor = (byte)(Sog_Colors)Enum.Parse(typeof(Sog_Colors), sColor);
@@ -701,6 +719,29 @@ namespace SoG_SGreader
                 }
             }
             ActiveControl = label1; //workarround so the button won't be highlighted anymore
+        }
+
+        private void lstPets_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstPets.FocusedItem == null)
+            {
+                return;
+            }
+            numPetHP.Value = pPlayer.Pets[lstPets.FocusedItem.Index].StatHealth;
+            numPetEnergy.Value = pPlayer.Pets[lstPets.FocusedItem.Index].StatEnergy;
+            numPetDamage.Value = pPlayer.Pets[lstPets.FocusedItem.Index].StatDamage;
+            numPetCrit.Value = pPlayer.Pets[lstPets.FocusedItem.Index].StatCrit;
+            numPetSpeed.Value = pPlayer.Pets[lstPets.FocusedItem.Index].StatSpeed;
+
+            numPetLevel.Value = pPlayer.Pets[lstPets.FocusedItem.Index].Level;
+
+            txtPetNickname.Text = pPlayer.Pets[lstPets.FocusedItem.Index].Nickname;
+        }
+
+        private void btnDeleteSelectedItem_Click(object sender, EventArgs e)
+        {
+            int i = lstInventory.FocusedItem.Index;
+            lstInventory.Items.RemoveAt(i);
         }
     }
 
