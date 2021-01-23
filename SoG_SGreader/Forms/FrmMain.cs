@@ -262,6 +262,33 @@ namespace SoG_SGreader
             pPlayer.SkillTalentPoints = (Int16)numSkillTalentPoints.Value;
             pPlayer.SkillSilverPoints = (Int16)numSkillSilverPoints.Value;
             pPlayer.SkillGoldPoints = (Int16)numSkillGoldPoints.Value;
+
+            pPlayer.PetsCount = (byte)lstPets.Items.Count;
+
+            for (byte i = 0; i != pPlayer.PetsCount; i++)
+            {
+                pPlayer.Pets.Add(new Sog_Player.Pet
+                {
+                    Type1 = pPlayer.Pets[i].Type1,
+                    Type2 = pPlayer.Pets[i].Type2,
+                    Nickname = lstPets.Items[i].SubItems[1].Text,
+                    Level = Byte.Parse(lstPets.Items[i].SubItems[0].Text),
+                    Skin = pPlayer.Pets[i].Skin,
+
+                    StatHealth = UInt16.Parse(lstPets.Items[i].SubItems[2].Text),
+                    StatEnergy = UInt16.Parse(lstPets.Items[i].SubItems[3].Text),
+                    StatDamage = UInt16.Parse(lstPets.Items[i].SubItems[4].Text),
+                    StatCrit =  UInt16.Parse(lstPets.Items[i].SubItems[5].Text),
+                    StatSpeed = UInt16.Parse(lstPets.Items[i].SubItems[6].Text),
+
+                    StatProgressHealth = pPlayer.Pets[i].StatProgressHealth,
+                    StatProgressEnergy = pPlayer.Pets[i].StatProgressEnergy,
+                    StatProgressDamage = pPlayer.Pets[i].StatProgressDamage,
+                    StatProgressCrit = pPlayer.Pets[i].StatProgressCrit,
+                    StatProgressSpeed = pPlayer.Pets[i].StatProgressSpeed
+                });
+                pPlayer.Pets.RemoveAt(0);
+            }
         }
 
         private readonly Sog_Player pPlayer = new Sog_Player();
@@ -654,7 +681,6 @@ namespace SoG_SGreader
         {
             if (lstInventory.FocusedItem != null)
             {
-                //pPlayer.inventory[lstInventory.FocusedItem.Index].ItemCount = (int)numItemCount.Value;
                 lstInventory.Items[lstInventory.FocusedItem.Index].SubItems[1].Text = numItemCount.Value.ToString();
             }
         }
@@ -727,21 +753,60 @@ namespace SoG_SGreader
             {
                 return;
             }
-            numPetHP.Value = pPlayer.Pets[lstPets.FocusedItem.Index].StatHealth;
-            numPetEnergy.Value = pPlayer.Pets[lstPets.FocusedItem.Index].StatEnergy;
-            numPetDamage.Value = pPlayer.Pets[lstPets.FocusedItem.Index].StatDamage;
-            numPetCrit.Value = pPlayer.Pets[lstPets.FocusedItem.Index].StatCrit;
-            numPetSpeed.Value = pPlayer.Pets[lstPets.FocusedItem.Index].StatSpeed;
+            numPetHP.Value = Int32.Parse(lstPets.Items[lstPets.FocusedItem.Index].SubItems[2].Text);
+            numPetEnergy.Value = Int32.Parse(lstPets.Items[lstPets.FocusedItem.Index].SubItems[3].Text);
+            numPetDamage.Value = Int32.Parse(lstPets.Items[lstPets.FocusedItem.Index].SubItems[4].Text);
+            numPetCrit.Value = Int32.Parse(lstPets.Items[lstPets.FocusedItem.Index].SubItems[5].Text);
+            numPetSpeed.Value = Int32.Parse(lstPets.Items[lstPets.FocusedItem.Index].SubItems[6].Text);
 
-            numPetLevel.Value = pPlayer.Pets[lstPets.FocusedItem.Index].Level;
+            numPetLevel.Value = Int32.Parse(lstPets.Items[lstPets.FocusedItem.Index].SubItems[0].Text);
 
-            txtPetNickname.Text = pPlayer.Pets[lstPets.FocusedItem.Index].Nickname;
+            txtPetNickname.Text = lstPets.Items[lstPets.FocusedItem.Index].SubItems[1].Text;
+
         }
 
         private void btnDeleteSelectedItem_Click(object sender, EventArgs e)
         {
             int i = lstInventory.FocusedItem.Index;
             lstInventory.Items.RemoveAt(i);
+        }
+
+        private void numPetStat_ValueChanged(object sender, EventArgs e)
+        {
+            if (lstPets.FocusedItem != null)
+            {
+                lstPets.Items[lstPets.FocusedItem.Index].SubItems[2].Text = numPetHP.Value.ToString();
+
+                if (((Control)sender) == numPetHP)
+                {
+                    lstPets.Items[lstPets.FocusedItem.Index].SubItems[2].Text = numPetHP.Value.ToString();
+                }
+                else if (((Control)sender) == numPetEnergy)
+                {
+                    lstPets.Items[lstPets.FocusedItem.Index].SubItems[3].Text = numPetEnergy.Value.ToString();
+                }
+                else if (((Control)sender) == numPetDamage)
+                {
+                    lstPets.Items[lstPets.FocusedItem.Index].SubItems[4].Text = numPetDamage.Value.ToString();
+                }
+                else if (((Control)sender) == numPetCrit)
+                {
+                    lstPets.Items[lstPets.FocusedItem.Index].SubItems[5].Text = numPetCrit.Value.ToString();
+                }
+                else if (((Control)sender) == numPetSpeed)
+                {
+                    lstPets.Items[lstPets.FocusedItem.Index].SubItems[6].Text = numPetSpeed.Value.ToString();
+                }
+                else if (((Control)sender) == numPetLevel)
+                {
+                    lstPets.Items[lstPets.FocusedItem.Index].SubItems[0].Text = numPetLevel.Value.ToString();
+                }
+            }
+        }
+
+        private void txtPetNickname_TextChanged(object sender, EventArgs e)
+        {
+            lstPets.Items[lstPets.FocusedItem.Index].SubItems[1].Text = txtPetNickname.Text;
         }
     }
 
