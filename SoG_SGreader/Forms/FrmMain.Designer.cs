@@ -117,13 +117,13 @@ namespace SoG_SGreader
             this.label46 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.txtPetNickname = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
             this.numPetSpeed = new System.Windows.Forms.NumericUpDown();
             this.numPetCrit = new System.Windows.Forms.NumericUpDown();
             this.numPetDamage = new System.Windows.Forms.NumericUpDown();
-            this.txtPetNickname = new System.Windows.Forms.TextBox();
             this.numPetEnergy = new System.Windows.Forms.NumericUpDown();
-            this.label42 = new System.Windows.Forms.Label();
             this.numPetHP = new System.Windows.Forms.NumericUpDown();
             this.tabQuickslots = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -159,6 +159,7 @@ namespace SoG_SGreader
             this.txtConsole = new System.Windows.Forms.TextBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.Tooltips = new System.Windows.Forms.ToolTip(this.components);
+            this.label49 = new System.Windows.Forms.Label();
             this.tabContainer.SuspendLayout();
             this.tabChar.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -212,6 +213,7 @@ namespace SoG_SGreader
             // 
             // tabChar
             // 
+            this.tabChar.Controls.Add(this.label49);
             this.tabChar.Controls.Add(this.groupBox1);
             this.tabChar.Controls.Add(this.groupBox2);
             this.tabChar.Controls.Add(this.label37);
@@ -1093,6 +1095,23 @@ namespace SoG_SGreader
             this.label44.TabIndex = 9;
             this.label44.Text = "Energy level:";
             // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(6, 24);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(58, 13);
+            this.label42.TabIndex = 2;
+            this.label42.Text = "Nickname:";
+            // 
+            // txtPetNickname
+            // 
+            this.txtPetNickname.Location = new System.Drawing.Point(73, 21);
+            this.txtPetNickname.Name = "txtPetNickname";
+            this.txtPetNickname.Size = new System.Drawing.Size(93, 20);
+            this.txtPetNickname.TabIndex = 1;
+            this.txtPetNickname.TextChanged += new System.EventHandler(this.txtPetNickname_TextChanged);
+            // 
             // label43
             // 
             this.label43.AutoSize = true;
@@ -1141,14 +1160,6 @@ namespace SoG_SGreader
             this.numPetDamage.TabIndex = 5;
             this.numPetDamage.ValueChanged += new System.EventHandler(this.numPetStat_ValueChanged);
             // 
-            // txtPetNickname
-            // 
-            this.txtPetNickname.Location = new System.Drawing.Point(73, 21);
-            this.txtPetNickname.Name = "txtPetNickname";
-            this.txtPetNickname.Size = new System.Drawing.Size(93, 20);
-            this.txtPetNickname.TabIndex = 1;
-            this.txtPetNickname.TextChanged += new System.EventHandler(this.txtPetNickname_TextChanged);
-            // 
             // numPetEnergy
             // 
             this.numPetEnergy.Location = new System.Drawing.Point(111, 96);
@@ -1161,15 +1172,6 @@ namespace SoG_SGreader
             this.numPetEnergy.Size = new System.Drawing.Size(55, 20);
             this.numPetEnergy.TabIndex = 4;
             this.numPetEnergy.ValueChanged += new System.EventHandler(this.numPetStat_ValueChanged);
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(6, 24);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(58, 13);
-            this.label42.TabIndex = 2;
-            this.label42.Text = "Nickname:";
             // 
             // numPetHP
             // 
@@ -1479,7 +1481,7 @@ namespace SoG_SGreader
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
@@ -1508,6 +1510,15 @@ namespace SoG_SGreader
             this.splitter1.TabIndex = 29;
             this.splitter1.TabStop = false;
             // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(6, 373);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(116, 13);
+            this.label49.TabIndex = 42;
+            this.label49.Text = "↑ ↑ ↓ ↓ ← → ← → B A";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1521,7 +1532,8 @@ namespace SoG_SGreader
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenu;
             this.Name = "FrmMain";
-            this.Text = "SoG: Savegame Reader v0.3 by TOLIK518";
+            this.Text = "SoG: Savegame Reader v0.3.2 by TOLIK518";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.tabContainer.ResumeLayout(false);
             this.tabChar.ResumeLayout(false);
             this.tabChar.PerformLayout();
@@ -1707,6 +1719,7 @@ namespace SoG_SGreader
         private System.Windows.Forms.NumericUpDown numPetLevel;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Button btnDeleteSelectedItem;
+        private System.Windows.Forms.Label label49;
     }
 }
 

@@ -36,6 +36,7 @@ namespace SoG_SGreader
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lblBuild = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,9 +45,9 @@ namespace SoG_SGreader
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(101, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 13);
+            this.label1.Size = new System.Drawing.Size(156, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "SoG: Savegame Reader v0.3";
+            this.label1.Text = "SoG: Savegame Reader v0.3.2";
             // 
             // label2
             // 
@@ -96,11 +97,21 @@ namespace SoG_SGreader
             this.lblBuild.TabIndex = 5;
             this.lblBuild.Text = "Build:  0.0.000.000";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(243, 96);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "( ͡° ͜ʖ ͡°)";
+            // 
             // FrmAbout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(277, 110);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lblBuild);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
@@ -109,6 +120,7 @@ namespace SoG_SGreader
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmAbout";
+            this.Text = "About";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -123,5 +135,6 @@ namespace SoG_SGreader
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblBuild;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -808,6 +808,11 @@ namespace SoG_SGreader
         {
             lstPets.Items[lstPets.FocusedItem.Index].SubItems[1].Text = txtPetNickname.Text;
         }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web.UI.WebControls;
 
 namespace SoG_SGreader
 {
@@ -138,7 +137,7 @@ namespace SoG_SGreader
         public byte PetsCount { get; set; }
         public class Pet
         {
-        
+
             public int Type1 { get; set; }
             public int Type2 { get; set; }
             public string Nickname { get; set; }
@@ -159,16 +158,156 @@ namespace SoG_SGreader
 
         }
         public int PetsSelected { get; set; }
+
         public byte PetHidden { get; set; }
 
-        public UInt16 UnknownVariable02Count { get; set; }
+        //                             //
+        //                             //
+        //     Not implemented yet     //
+        //                             //
+        //                             //
+        //                             //
+
+        /// <summary>
+        /// Probably Quest, not known exactly
+        /// </summary>
+        public UInt16 QuestsCount { get; set; }
+        public class Quest
+        {
+            public Quest(Int16 _QuestID)
+            {
+                this.QuestID = _QuestID;
+            }
+            public Int16 QuestID { get; set; }
+        }
+
+        public UInt16 EnemiesMetCount { get; set; }
+        public class Enemy
+        {
+            public Enemy(Int16 _EnemyID)
+            {
+                this.EnemyID = _EnemyID;
+            }
+            public int EnemyID { get; set; }
+        }
+
+        public UInt16 UnknownVariable02Count { get; set; }     //something to do with challenges?
         public class UnknownVariable02
         {
-            public UnknownVariable02(Int16 _UnknownVariable02ID)
+            public UnknownVariable02(byte[] _UnknownBytearray)
             {
-                this.UnknownVariable02ID = _UnknownVariable02ID;
+                this.UnknownBytearray = _UnknownBytearray;
             }
-            public Int16 UnknownVariable02ID { get; set; }
+            public byte[] UnknownBytearray { get; set; }
+        }
+
+        public int RobinBowHighscore { get; set; }
+
+        public UInt16 UnknownVariable03Count { get; set; }    //trophies?
+        public class UnknownVariable03
+        {
+            public UnknownVariable03(ushort _UnknownVariable)
+            {
+                this.UnknownVariable = _UnknownVariable;
+            }
+            public ushort UnknownVariable { get; set; }
+        }
+
+        public UInt16 ItemsMetCount { get; set; }
+        public class ItemMet
+        {
+            public ItemMet(Sog_Player.Item _ItemID)
+            {
+                this.ItemID = _ItemID;
+            }
+            public Sog_Player.Item ItemID { get; set; }
+        }
+
+        public UInt16 CraftedItemsCount { get; set; }
+        public class CraftedItem
+        {
+            public CraftedItem(Sog_Player.Item _ItemID)
+            {
+                this.ItemID = _ItemID;
+            }
+            public Sog_Player.Item ItemID { get; set; }
+        }
+
+        public UInt16 FishCaughtCount { get; set; }
+        public class FishCaught
+        {
+            public FishCaught(Sog_Player.Item _FishID)
+            {
+                this.FishID = _FishID;
+            }
+            public Sog_Player.Item FishID { get; set; }
+        }
+
+        public UInt16 EnemiesSlaughteredCount { get; set; }
+        public class EnemieSlaughtered
+        {
+            public EnemieSlaughtered(int _EnemyID)
+            {
+                this.EnemyID = _EnemyID;
+            }
+            public int EnemyID { get; set; }
+            public int KillCount { get; set; }
+        }
+
+        public byte PotionsMax { get; set; }
+        public byte PotionsEquipped { get; set; }
+        public class Potion
+        {
+            public Potion(int _PotionID)
+            {
+                this.PotionID = _PotionID;
+            }
+            public int PotionID { get; set; }
+        }
+
+        public int BirthdayMonth { get; set; }
+        public int BirthdayDay { get; set; }
+        public int UniquePlayerID { get; set; }
+        public int UnknownVariable04 { get; set; } // saving mechanism related
+        public int UnknownVariable05 { get; set; } // saving mechanism related
+        public int PlayTimeTotal { get; set; } // saved in frames
+        public byte UnknownVariable06 { get; set; } //??
+
+        public Int16 UnknownVariable07length { get; set; }
+        public class UnknownVariable07
+        {
+            public UnknownVariable07(string _UnknownString, float _UnknownFloat)
+            {
+                this.UnknownString = _UnknownString;
+                this.UnknownFloat = _UnknownFloat;
+            }
+            public string UnknownString { get; set; }
+            public float UnknownFloat { get; set; }
+        }
+
+        public Int16 FlagsCount { get; set; }
+        public class Flag
+        {
+            public Flag(UInt16 _FlagID) 
+            {
+                this.FlagID = _FlagID;
+            }
+            public UInt16 FlagID { get; set; }
+        }
+
+        public byte HouseStylesCount { get; set; }
+        public byte HouseStlesUNKNOWN { get; set; }
+        public class HouseStyle
+        {
+            public HouseStyle(byte _HouseStyleNumber, int _HouseStyleLength, byte[] _HouseStyleBytes)
+            {
+                this.HouseStyleNumber = _HouseStyleNumber;
+                this.HouseStyleLength = _HouseStyleLength;
+                this.HouseStyleBytes = _HouseStyleBytes;
+            }
+            public byte HouseStyleNumber { get; set; } //style 0, 1, 2 etc 
+            public int HouseStyleLength { get; set; }
+            public byte[] HouseStyleBytes { get; set; }
         }
 
 
