@@ -610,10 +610,123 @@ namespace Sog_SGreader
 
                 pPlayer.PetsSelected = readBinary.ReadInt32();
                 pPlayer.PetHidden = readBinary.ReadByte();
-
-
-
                 scrapSize -= 5;
+                
+                //              |            // 
+                //              |            // 
+                //          new stuff        // 
+                //      we're not writing    // 
+                //             yet           // 
+
+                pPlayer.QuestsCount = readBinary.ReadUInt16();
+                scrapSize -= 2;
+                pPlayer.Quests = new List<Sog_Player.Quest>(pPlayer.QuestsCount);
+                for (int i = 0; i != pPlayer.QuestsCount; i++)
+                {
+                    Sog_Player.Quest quest = new Sog_Player.Quest(readBinary.ReadInt16());    //Unknown
+                    pPlayer.Quests.Add(quest);
+                    scrapSize -= 2;
+                }
+                txtConsole.AppendText("\r\n" + " QuestsCount: " + pPlayer.QuestsCount);
+
+                pPlayer.EnemiesMetCount = readBinary.ReadUInt16();
+                scrapSize -= 2;
+                pPlayer.Enemies = new List<Sog_Player.Enemy>(pPlayer.EnemiesMetCount);
+                for (int i = 0; i != pPlayer.EnemiesMetCount; i++)
+                {
+                    Sog_Player.Enemy enemy = new Sog_Player.Enemy(readBinary.ReadInt32());    
+                    pPlayer.Enemies.Add(enemy);
+                    scrapSize -= 2;
+                }
+                txtConsole.AppendText("\r\n" + " EnemiesMetCount: " + pPlayer.EnemiesMetCount);
+
+                pPlayer.UnknownVariable02Count = (UInt16)(readBinary.ReadUInt16() * 16);  // there are X sequences, each 10 bytes long
+                scrapSize -= 2;
+                pPlayer.UnknownVariables02 = new List<Sog_Player.UnknownVariable02>(pPlayer.UnknownVariable02Count);
+                for (int i = 0; i != pPlayer.UnknownVariable02Count; i++)
+                {
+                    Sog_Player.UnknownVariable02 unknownVariable02 = new Sog_Player.UnknownVariable02(readBinary.ReadByte());    
+                    pPlayer.UnknownVariables02.Add(unknownVariable02);
+                    scrapSize -= 1;
+                }
+                txtConsole.AppendText("\r\n" + " UnknownVariable02Count: " + pPlayer.UnknownVariable02Count);
+
+                pPlayer.RobinBowHighscore = readBinary.ReadInt32();
+                txtConsole.AppendText("\r\n" + " RobinBowHighscore: " + pPlayer.RobinBowHighscore);
+
+                pPlayer.UnknownVariable03Count = (UInt16)(readBinary.ReadUInt16()); 
+                scrapSize -= 2;
+                pPlayer.UnknownVariables03 = new List<Sog_Player.UnknownVariable03>(pPlayer.UnknownVariable03Count);
+                for (int i = 0; i != pPlayer.UnknownVariable03Count; i++)
+                {
+                    Sog_Player.UnknownVariable03 unknownVariable03 = new Sog_Player.UnknownVariable03(readBinary.ReadUInt16());    
+                    pPlayer.UnknownVariables03.Add(unknownVariable03);
+                    scrapSize -= 2;
+                }
+                txtConsole.AppendText("\r\n" + " UnknownVariable03Count: " + pPlayer.UnknownVariable03Count);
+
+                pPlayer.ItemsMetCount = (UInt16)(readBinary.ReadUInt16());
+                scrapSize -= 2;
+                pPlayer.ItemsMet = new List<Sog_Player.ItemMet>(pPlayer.ItemsMetCount);
+                for (int i = 0; i != pPlayer.ItemsMetCount; i++)
+                {
+                    Sog_Player.ItemMet itemsMet = new Sog_Player.ItemMet((Sog_Items)readBinary.ReadInt32());    
+                    pPlayer.ItemsMet.Add(itemsMet);
+                    scrapSize -= 4;
+                }
+                txtConsole.AppendText("\r\n" + " ItemsMetCount: " + pPlayer.ItemsMetCount);
+
+                pPlayer.ItemsCraftedCount = (UInt16)(readBinary.ReadUInt16());
+                scrapSize -= 2;
+                pPlayer.ItemsCrafted = new List<Sog_Player.ItemCrafted>(pPlayer.ItemsCraftedCount);
+                for (int i = 0; i != pPlayer.ItemsCraftedCount; i++)
+                {
+                    Sog_Player.ItemCrafted itemsMet = new Sog_Player.ItemCrafted((Sog_Items)readBinary.ReadInt32());
+                    pPlayer.ItemsCrafted.Add(itemsMet);
+                    scrapSize -= 4;
+                }
+                txtConsole.AppendText("\r\n" + " ItemsCraftedCount: " + pPlayer.ItemsCraftedCount);
+
+                pPlayer.FishiesCaughtCount = (UInt16)(readBinary.ReadUInt16());
+                scrapSize -= 2;
+                pPlayer.FishiesCaught = new List<Sog_Player.FishCaught>(pPlayer.FishiesCaughtCount);
+                for (int i = 0; i != pPlayer.FishiesCaughtCount; i++)
+                {
+                    Sog_Player.FishCaught fish = new Sog_Player.FishCaught((Sog_Items)readBinary.ReadInt32());
+                    pPlayer.FishiesCaught.Add(fish);
+                    scrapSize -= 4;
+                }
+                txtConsole.AppendText("\r\n" + " FishiesCaughtCount: " + pPlayer.FishiesCaughtCount);
+
+                pPlayer.EnemiesSlaughteredCount = (UInt16)(readBinary.ReadUInt16());
+                scrapSize -= 2;
+                pPlayer.EnemiesSlaughtered = new List<Sog_Player.EnemySlaughtered>(pPlayer.EnemiesSlaughteredCount);
+                for (int i = 0; i != pPlayer.EnemiesSlaughteredCount; i++)
+                {
+                    Sog_Player.EnemySlaughtered enemy = new Sog_Player.EnemySlaughtered(readBinary.ReadInt32(), readBinary.ReadInt32());
+                    pPlayer.EnemiesSlaughtered.Add(enemy);
+                    scrapSize -= 8;
+                }
+                txtConsole.AppendText("\r\n" + " EnemiesSlaughteredCount: " + pPlayer.EnemiesSlaughteredCount);
+
+                pPlayer.PotionsMax = readBinary.ReadByte();
+                txtConsole.AppendText("\r\n" + " PotionsMax: " + pPlayer.PotionsMax);
+                pPlayer.PotionsEquipped = readBinary.ReadByte();
+                txtConsole.AppendText("\r\n" + " PotionsEquipped: " + pPlayer.PotionsEquipped);
+                scrapSize -= 2;
+
+                pPlayer.Potions = new List<Sog_Player.Potion>(pPlayer.PotionsEquipped);
+                for (int i = 0; i != pPlayer.PotionsEquipped; i++)
+                {
+                    Sog_Player.Potion potion = new Sog_Player.Potion(readBinary.ReadInt32());
+                    pPlayer.Potions.Add(potion);
+                    scrapSize -= 4;
+                }
+
+                pPlayer.BirthdayMonth = readBinary.ReadInt32();
+                pPlayer.BirthdayDay = readBinary.ReadInt32();
+                txtConsole.AppendText("\r\n" + " Birthday: " + pPlayer.BirthdayDay + "." +pPlayer.BirthdayMonth);
+
 
                 pPlayer.scrap = new byte[(int)scrapSize];
                 pPlayer.scrap = readBinary.ReadBytes((int)scrapSize);

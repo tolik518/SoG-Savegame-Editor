@@ -195,7 +195,7 @@ namespace Sog_SGreader
         public UInt16 EnemiesMetCount { get; set; }
         public class Enemy
         {
-            public Enemy(Int16 _EnemyID)
+            public Enemy(int _EnemyID)
             {
                 this.EnemyID = _EnemyID;
             }
@@ -205,11 +205,11 @@ namespace Sog_SGreader
         public UInt16 UnknownVariable02Count { get; set; }     //something to do with challenges?
         public class UnknownVariable02
         {
-            public UnknownVariable02(byte[] _UnknownBytearray)
+            public UnknownVariable02(byte _UnknownByte)
             {
-                this.UnknownBytearray = _UnknownBytearray;
+                this.UnknownByte = _UnknownByte;
             }
-            public byte[] UnknownBytearray { get; set; }
+            public byte UnknownByte { get; set; }
         }
 
         public int RobinBowHighscore { get; set; }
@@ -217,41 +217,41 @@ namespace Sog_SGreader
         public UInt16 UnknownVariable03Count { get; set; }    //trophies?
         public class UnknownVariable03
         {
-            public UnknownVariable03(ushort _UnknownVariable)
+            public UnknownVariable03(UInt16 _UnknownVariable)
             {
                 this.UnknownVariable = _UnknownVariable;
             }
-            public ushort UnknownVariable { get; set; }
+            public UInt16 UnknownVariable { get; set; }
         }
 
         public UInt16 ItemsMetCount { get; set; }
         public class ItemMet
         {
-            public ItemMet(Sog_Player.Item _ItemID)
+            public ItemMet(Sog_Items _ItemID)
             {
                 this.ItemID = _ItemID;
             }
-            public Sog_Player.Item ItemID { get; set; }
+            public Sog_Items ItemID { get; set; }
         }
 
         public UInt16 ItemsCraftedCount { get; set; }
         public class ItemCrafted
         {
-            public ItemCrafted(Sog_Player.Item _ItemID)
+            public ItemCrafted(Sog_Items _ItemID)
             {
                 this.ItemID = _ItemID;
             }
-            public Sog_Player.Item ItemID { get; set; }
+            public Sog_Items ItemID { get; set; }
         }
 
-        public UInt16 FishCaughtCount { get; set; }
+        public UInt16 FishiesCaughtCount { get; set; }
         public class FishCaught
         {
-            public FishCaught(Sog_Player.Item _FishID)
+            public FishCaught(Sog_Items _FishID)
             {
                 this.FishID = _FishID;
             }
-            public Sog_Player.Item FishID { get; set; }
+            public Sog_Items FishID { get; set; }
         }
 
         public UInt16 EnemiesSlaughteredCount { get; set; }
