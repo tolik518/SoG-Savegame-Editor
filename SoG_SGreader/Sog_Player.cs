@@ -2,22 +2,32 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SoG_SGreader
+namespace Sog_SGreader
 {
     public class Sog_Player
     {
         public Equip equip = new Equip();
         public Style style = new Style();
 
-        public List<Item> inventory;
-
-        public List<MerchantItems> merchantItems;
-        public List<Card> cards;
+        public List<Item> Inventory;
+        public List<MerchantItem> MerchantItems;
+        public List<Card> Cards;
         public List<TreasureMap> TreasureMaps;
         public List<UnknownVariable01> UnknownVariables01;
         public List<Skill> Skills;
         public List<Pet> Pets;
-
+        public List<Quest> Quests;
+        public List<Enemy> Enemies;
+        public List<UnknownVariable02> UnknownVariables02;
+        public List<UnknownVariable03> UnknownVariables03;
+        public List<ItemMet> ItemsMet;
+        public List<ItemCrafted> ItemsCrafted;
+        public List<FishCaught> FishiesCaught;
+        public List<EnemySlaughtered> EnemiesSlaughtered;
+        public List<Potion> Potions;
+        public List<UnknownVariable07> UnknownVariables07;
+        public List<Flag> Flags;
+        public List<HouseStyle> Houses;
 
         public int magicByte;
         public class Equip
@@ -54,7 +64,7 @@ namespace SoG_SGreader
         public List<object> quickslots = new List<object>();
         public int NicknameLength { get; set; }
         public string Nickname { get; set; }
-        public int InventorySize { get; set; }
+        public int ItemsCount { get; set; }
         public class Item
         {
             public Item(Sog_Items _ItemID, int _ItemCount, UInt32 _ItemPos)
@@ -71,9 +81,9 @@ namespace SoG_SGreader
 
         public int UnknownVariable0 { get; set; }
         public int MerchantItemsCount { get; set; }
-        public class MerchantItems
+        public class MerchantItem
         {
-            public MerchantItems(Sog_Items _ItemID, int _ItemCount)
+            public MerchantItem(Sog_Items _ItemID, int _ItemCount)
             {
                 this.ItemID = _ItemID;
                 this.ItemCount = _ItemCount;
@@ -180,6 +190,7 @@ namespace SoG_SGreader
             }
             public Int16 QuestID { get; set; }
         }
+        
 
         public UInt16 EnemiesMetCount { get; set; }
         public class Enemy
@@ -223,10 +234,10 @@ namespace SoG_SGreader
             public Sog_Player.Item ItemID { get; set; }
         }
 
-        public UInt16 CraftedItemsCount { get; set; }
-        public class CraftedItem
+        public UInt16 ItemsCraftedCount { get; set; }
+        public class ItemCrafted
         {
-            public CraftedItem(Sog_Player.Item _ItemID)
+            public ItemCrafted(Sog_Player.Item _ItemID)
             {
                 this.ItemID = _ItemID;
             }
@@ -244,11 +255,12 @@ namespace SoG_SGreader
         }
 
         public UInt16 EnemiesSlaughteredCount { get; set; }
-        public class EnemieSlaughtered
+        public class EnemySlaughtered
         {
-            public EnemieSlaughtered(int _EnemyID)
+            public EnemySlaughtered(int _EnemyID, int _KillCount)
             {
                 this.EnemyID = _EnemyID;
+                this.KillCount = _KillCount;
             }
             public int EnemyID { get; set; }
             public int KillCount { get; set; }
@@ -273,7 +285,7 @@ namespace SoG_SGreader
         public int PlayTimeTotal { get; set; } // saved in frames
         public byte UnknownVariable06 { get; set; } //??
 
-        public Int16 UnknownVariable07length { get; set; }
+        public Int16 UnknownVariable07Count { get; set; }
         public class UnknownVariable07
         {
             public UnknownVariable07(string _UnknownString, float _UnknownFloat)
@@ -309,8 +321,6 @@ namespace SoG_SGreader
             public int HouseStyleLength { get; set; }
             public byte[] HouseStyleBytes { get; set; }
         }
-
-
         public byte[] scrap;
     }
 }

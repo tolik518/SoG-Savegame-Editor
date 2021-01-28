@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace SoG_SGreader
+namespace Sog_SGreader
 {
     public partial class FrmAbout : Form
     {

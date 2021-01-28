@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace SoG_SGreader
+namespace Sog_SGreader
 {
     static class Program
     {

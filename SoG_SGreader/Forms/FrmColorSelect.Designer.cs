@@ -1,5 +1,5 @@
 ﻿
-namespace SoG_SGreader
+namespace Sog_SGreader
 {
     partial class FrmColorSelect
     {

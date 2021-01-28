@@ -1,4 +1,4 @@
-﻿namespace SoG_SGreader
+﻿namespace Sog_SGreader
 {
     public static class _Sog_Items
     {

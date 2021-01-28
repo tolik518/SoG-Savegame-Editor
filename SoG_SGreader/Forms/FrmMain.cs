@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace SoG_SGreader
+namespace Sog_SGreader
 {
     public partial class FrmMain : Form
     {
@@ -167,9 +167,9 @@ namespace SoG_SGreader
             btnShirtColor.BackColor = ColorTranslator.FromHtml("#" + ((Sog_Colors)pPlayer.style.ShirtColor).ToString().TrimStart('_'));
             btnPantsColor.BackColor = ColorTranslator.FromHtml("#" + ((Sog_Colors)pPlayer.style.PantsColor).ToString().TrimStart('_'));
 
-            for (int i = 0; i != pPlayer.InventorySize; i++)
+            for (int i = 0; i != pPlayer.ItemsCount; i++)
             {
-                var vItem = new ListViewItem(new[] { pPlayer.inventory[i].ItemID.ToString(), pPlayer.inventory[i].ItemCount.ToString(), pPlayer.inventory[i].ItemPos.ToString() });
+                var vItem = new ListViewItem(new[] { pPlayer.Inventory[i].ItemID.ToString(), pPlayer.Inventory[i].ItemCount.ToString(), pPlayer.Inventory[i].ItemPos.ToString() });
                 lstInventory.Items.Add(vItem);
             }
 
@@ -242,15 +242,15 @@ namespace SoG_SGreader
                 }
             }
 
-            pPlayer.InventorySize = lstInventory.Items.Count;
-            pPlayer.inventory.Clear();
+            pPlayer.ItemsCount = lstInventory.Items.Count;
+            pPlayer.Inventory.Clear();
 
             for (int i = 0; i != lstInventory.Items.Count; i++)
             {
                 Sog_Player.Item iitem = new Sog_Player.Item((Sog_Items)Enum.Parse(typeof(Sog_Items), lstInventory.Items[i].SubItems[0].Text),
                                                                                          Int32.Parse(lstInventory.Items[i].SubItems[1].Text),
                                                                                         UInt32.Parse(lstInventory.Items[i].SubItems[2].Text));
-                pPlayer.inventory.Add(iitem);
+                pPlayer.Inventory.Add(iitem);
             }
 
             pPlayer.Level = (Int16)numLevel.Value;
@@ -345,26 +345,26 @@ namespace SoG_SGreader
             //writeBinary.Write((byte)pPlayer.nicknameLength);
             writeBinary.Write(pPlayer.Nickname);
 
-            writeBinary.Write(pPlayer.InventorySize);
-            for (int i = 0; i != pPlayer.InventorySize; i++)
+            writeBinary.Write(pPlayer.ItemsCount);
+            for (int i = 0; i != pPlayer.ItemsCount; i++)
             {
-                writeBinary.Write((Int32)pPlayer.inventory[i].ItemID);
-                writeBinary.Write((Int32)pPlayer.inventory[i].ItemCount);
-                writeBinary.Write((Int32)pPlayer.inventory[i].ItemPos);
+                writeBinary.Write((Int32)pPlayer.Inventory[i].ItemID);
+                writeBinary.Write((Int32)pPlayer.Inventory[i].ItemCount);
+                writeBinary.Write((Int32)pPlayer.Inventory[i].ItemPos);
             }
 
             writeBinary.Write((int)pPlayer.UnknownVariable0);
             writeBinary.Write((int)pPlayer.MerchantItemsCount);
             for (int i = 0; i != pPlayer.MerchantItemsCount; i++)
             {
-                writeBinary.Write((int)pPlayer.merchantItems[i].ItemID);
-                writeBinary.Write((int)pPlayer.merchantItems[i].ItemCount);
+                writeBinary.Write((int)pPlayer.MerchantItems[i].ItemID);
+                writeBinary.Write((int)pPlayer.MerchantItems[i].ItemCount);
             }
 
             writeBinary.Write((int)pPlayer.CardsCount);
             for (int i = 0; i != pPlayer.CardsCount; i++)
             {
-                writeBinary.Write((int)pPlayer.cards[i].CardID);
+                writeBinary.Write((int)pPlayer.Cards[i].CardID);
             }
 
             writeBinary.Write((int)pPlayer.TreasureMapsCount);
@@ -492,30 +492,30 @@ namespace SoG_SGreader
                 pPlayer.Nickname = new string(readBinary.ReadChars(pPlayer.NicknameLength));
                 scrapSize -= pPlayer.NicknameLength;
 
-                pPlayer.InventorySize = readBinary.ReadInt32();
+                pPlayer.ItemsCount = readBinary.ReadInt32();
                 scrapSize -= 4;
 
-                pPlayer.inventory = new List<Sog_Player.Item>(pPlayer.InventorySize);
-                for (int i = 0; i != pPlayer.InventorySize; i++)
+                pPlayer.Inventory = new List<Sog_Player.Item>(pPlayer.ItemsCount);
+                for (int i = 0; i != pPlayer.ItemsCount; i++)
                 {
                     Sog_Player.Item iItem = new Sog_Player.Item((Sog_Items)readBinary.ReadInt32(), (int)readBinary.ReadInt32(), readBinary.ReadUInt32());
-                    pPlayer.inventory.Add(iItem);
+                    pPlayer.Inventory.Add(iItem);
 
                     scrapSize -= 12;
                 }
                 scrapSize -= 4;
-                txtConsole.AppendText("\r\nInventorysize: " + pPlayer.InventorySize);
+                txtConsole.AppendText("\r\nInventorysize: " + pPlayer.ItemsCount);
 
                 pPlayer.UnknownVariable0 = readBinary.ReadInt32();   //idk what I am reading here
                 scrapSize -= 4;
 
                 pPlayer.MerchantItemsCount = readBinary.ReadInt32();     //itemscount by shady merchant
                 scrapSize -= 4;
-                pPlayer.merchantItems = new List<Sog_Player.MerchantItems>(pPlayer.MerchantItemsCount);
+                pPlayer.MerchantItems = new List<Sog_Player.MerchantItem>(pPlayer.MerchantItemsCount);
                 for (int i = 0; i != pPlayer.MerchantItemsCount; i++)
                 {
-                    Sog_Player.MerchantItems mItem = new Sog_Player.MerchantItems((Sog_Items)readBinary.ReadInt32(), (int)readBinary.ReadInt32());
-                    pPlayer.merchantItems.Add(mItem);
+                    Sog_Player.MerchantItem mItem = new Sog_Player.MerchantItem((Sog_Items)readBinary.ReadInt32(), (int)readBinary.ReadInt32());
+                    pPlayer.MerchantItems.Add(mItem);
                     scrapSize -= 8;
                 }
                 txtConsole.AppendText("\r\niItemCountMerchant: " + pPlayer.MerchantItemsCount);
@@ -523,11 +523,11 @@ namespace SoG_SGreader
 
                 pPlayer.CardsCount = readBinary.ReadInt32();     //How many cards do we need to count
                 scrapSize -= 4;
-                pPlayer.cards = new List<Sog_Player.Card>(pPlayer.CardsCount);
+                pPlayer.Cards = new List<Sog_Player.Card>(pPlayer.CardsCount);
                 for (int i = 0; i != pPlayer.CardsCount; i++)
                 {
                     Sog_Player.Card cCard = new Sog_Player.Card(readBinary.ReadInt32());
-                    pPlayer.cards.Add(cCard);
+                    pPlayer.Cards.Add(cCard);
                     scrapSize -= 4;
                 }
                 txtConsole.AppendText("\r\niCardsCount: " + pPlayer.CardsCount);
@@ -610,6 +610,9 @@ namespace SoG_SGreader
 
                 pPlayer.PetsSelected = readBinary.ReadInt32();
                 pPlayer.PetHidden = readBinary.ReadByte();
+
+
+
                 scrapSize -= 5;
 
                 pPlayer.scrap = new byte[(int)scrapSize];

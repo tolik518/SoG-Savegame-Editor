@@ -1,4 +1,4 @@
-﻿namespace SoG_SGreader.Properties
+﻿namespace Sog_SGreader.Properties
 {
 
 

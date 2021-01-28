@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SoG_SGreader.Properties {
+namespace Sog_SGreader.Properties {
     using System;
     
     
