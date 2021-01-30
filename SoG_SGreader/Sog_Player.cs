@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Runtime.Serialization;
 
 namespace Sog_SGreader
 {
     public class Sog_Player
     {
+        
         public Equip equip = new Equip();
         public Style style = new Style();
-
         public List<Item> Inventory;
         public List<MerchantItem> MerchantItems;
         public List<Card> Cards;
@@ -29,7 +29,7 @@ namespace Sog_SGreader
         public List<Flag> Flags;
         public List<HouseStyle> Houses;
 
-        public int magicByte;
+        public int magicByte { get; set; }
         public class Equip
         {
             public int Hat { get; set; }
@@ -61,6 +61,7 @@ namespace Sog_SGreader
         public int LastTwoHander { get; set; }
         public int LastOneHander { get; set; }
         public int LastBow { get; set; }
+        
         public List<object> quickslots = new List<object>();
         public int NicknameLength { get; set; }
         public string Nickname { get; set; }
@@ -171,24 +172,14 @@ namespace Sog_SGreader
 
         public byte PetHidden { get; set; }
 
-        //                             //
-        //                             //
-        //     Not implemented yet     //
-        //                             //
-        //                             //
-        //                             //
-
-        /// <summary>
-        /// Probably Quest, not known exactly
-        /// </summary>
         public UInt16 QuestsCount { get; set; }
         public class Quest
         {
-            public Quest(Int16 _QuestID)
+            public Quest(UInt16 _QuestID)
             {
                 this.QuestID = _QuestID;
             }
-            public Int16 QuestID { get; set; }
+            public UInt16 QuestID { get; set; }
         }
         
 
@@ -286,7 +277,7 @@ namespace Sog_SGreader
         public byte UnknownVariable06 { get; set; } //??
 
         public Int16 UnknownVariable07Count { get; set; }
-        public class UnknownVariable07
+        public class UnknownVariable07    //.archie.....lmb...C
         {
             public UnknownVariable07(string _UnknownString, float _UnknownFloat)
             {
@@ -308,7 +299,6 @@ namespace Sog_SGreader
         }
 
         public byte HouseStylesCount { get; set; }
-        public byte HouseStlesUNKNOWN { get; set; }
         public class HouseStyle
         {
             public HouseStyle(byte _HouseStyleNumber, int _HouseStyleLength, byte[] _HouseStyleBytes)
@@ -321,6 +311,6 @@ namespace Sog_SGreader
             public int HouseStyleLength { get; set; }
             public byte[] HouseStyleBytes { get; set; }
         }
-        public byte[] scrap;
+        //public byte[] scrap;
     }
 }
