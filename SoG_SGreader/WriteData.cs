@@ -13,7 +13,7 @@ namespace Sog_SGreader
             using (BinaryWriter writeBinary = new BinaryWriter(File.Open(fileName, FileMode.Create)))
             {
                 GetDataFromFields();
-                writeBinary.Write((int)pPlayer.magicByte);
+                writeBinary.Write((int)pPlayer.MagicByte);
                 writeBinary.Write((int)pPlayer.equip.Hat);
                 writeBinary.Write((int)pPlayer.equip.Facegear);
                 writeBinary.Write((char)pPlayer.style.Bodytype);
@@ -221,7 +221,7 @@ namespace Sog_SGreader
                 {
                     writeBinary.Write((byte)pPlayer.Houses[i].HouseStyleNumber);
                     writeBinary.Write((int)pPlayer.Houses[i].HouseStyleLength);
-                    writeBinary.Write((byte[])pPlayer.Houses[i].HouseStyleBytes);                       
+                    writeBinary.Write((byte[])pPlayer.Houses[i].HouseStyleBytes);
                 }
                 writeBinary.Close();
             }

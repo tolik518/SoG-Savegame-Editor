@@ -418,7 +418,7 @@ namespace Sog_SGreader
             ActiveControl = label1; //workarround so the button won't be highlighted anymore
         }
 
-        private void lstPets_SelectedIndexChanged(object sender, EventArgs e)
+        private void LstPets_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lstPets.FocusedItem == null)
             {
@@ -436,13 +436,13 @@ namespace Sog_SGreader
 
         }
 
-        private void btnDeleteSelectedItem_Click(object sender, EventArgs e)
+        private void BtnDeleteSelectedItem_Click(object sender, EventArgs e)
         {
             int i = lstInventory.FocusedItem.Index;
             lstInventory.Items.RemoveAt(i);
         }
 
-        private void numPetStat_ValueChanged(object sender, EventArgs e)
+        private void NumPetStat_ValueChanged(object sender, EventArgs e)
         {
             if (lstPets.FocusedItem != null)
             {
@@ -475,7 +475,7 @@ namespace Sog_SGreader
             }
         }
 
-        private void txtPetNickname_TextChanged(object sender, EventArgs e)
+        private void TxtPetNickname_TextChanged(object sender, EventArgs e)
         {
             lstPets.Items[lstPets.FocusedItem.Index].SubItems[1].Text = txtPetNickname.Text;
         }

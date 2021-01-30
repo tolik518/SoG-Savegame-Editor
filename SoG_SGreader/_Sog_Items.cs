@@ -4,6 +4,7 @@
     {
         public enum Shield
         {
+            Null = -1,
             _Shield_WoodenShield = 0x4e20,
             _Shield_TestShield = 0x4e21,
             _Shield_Barrel = 0x4e22,
@@ -25,6 +26,7 @@
         }
         public enum Hat
         {
+            Null = -1,
             _Hat_Strawboater = 0x7530,
             _Hat_BabyDevilHorns = 0x7531,
             _Hat_Halo = 0x7532,
@@ -123,6 +125,7 @@
         }
         public enum Facegear
         {
+            Null = -1,
             _Facegear_Blindfold = 0x9c40,
             _Facegear_Glasses = 0x9c41,
             _Facegear_Beard = 0x9c42,
@@ -145,6 +148,7 @@
         }
         public enum Weapon
         {
+            Null = -1,
             _OneHanded_WoodenSword = 0xc350,
             _OneHanded_CarrotSword = 0xc351,
             _OneHanded_Morningstar = 0xc352,
@@ -196,6 +200,7 @@
         }
         public enum Accessory
         {
+            Null = -1,
             _Accessory_RabbitsFoot = 0x1_3880,
             _Accessory_Scarf = 0x1_3881,
             _Accessory_VoodooDoll = 0x1_3882,
@@ -231,6 +236,7 @@
         }
         public enum Armor
         {
+            Null = -1,
             _Armor_Shawl = 0x1_5f90,
             _Armor_AdventureShirt = 0x1_5f91,
             _Armor_Vest = 0x1_5f92,
@@ -259,6 +265,7 @@
         }
         public enum Shoes
         {
+            Null = -1,
             _Shoes_MountainBoots = 0x1_86a0,
             _Shoes_Sandals = 0x1_86a1,
             _Shoes_BirdFeet = 0x1_86a2,
@@ -276,6 +283,7 @@
         }
         public enum Hairdo
         {
+            Null = -1,
             _Hairdo_Gay = 0x2_7100,
             _Hairdo_Ron = 0x2_7101,
             _Hairdo_Random = 0x2_7102,

@@ -15,7 +15,7 @@ namespace Sog_SGreader
 
                 txtConsole.AppendText("\r\nFilesize: " + new FileInfo(fileName).Length);
 
-                pPlayer.magicByte = readBinary.ReadInt32(); //I dont know yet what the first bytes stand for tbh    
+                pPlayer.MagicByte = readBinary.ReadInt32(); //I dont know yet what the first bytes stand for tbh    
                 pPlayer.equip.Hat = readBinary.ReadInt32();
                 pPlayer.equip.Facegear = readBinary.ReadInt32();
                 pPlayer.style.Bodytype = readBinary.ReadChar(); //seems like always B ?    

@@ -29,7 +29,7 @@ namespace Sog_SGreader
         public List<Flag> Flags;
         public List<HouseStyle> Houses;
 
-        public int magicByte { get; set; }
+        public int MagicByte { get; set; }
         public class Equip
         {
             public int Hat { get; set; }

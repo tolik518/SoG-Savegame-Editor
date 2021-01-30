@@ -865,7 +865,7 @@ namespace Sog_SGreader
             this.btnDeleteSelectedItem.TabIndex = 2;
             this.btnDeleteSelectedItem.Text = "Remove";
             this.btnDeleteSelectedItem.UseVisualStyleBackColor = true;
-            this.btnDeleteSelectedItem.Click += new System.EventHandler(this.btnDeleteSelectedItem_Click);
+            this.btnDeleteSelectedItem.Click += new System.EventHandler(this.BtnDeleteSelectedItem_Click);
             // 
             // btnAddItem
             // 
@@ -977,7 +977,7 @@ namespace Sog_SGreader
             this.lstPets.TabIndex = 1;
             this.lstPets.UseCompatibleStateImageBehavior = false;
             this.lstPets.View = System.Windows.Forms.View.Details;
-            this.lstPets.SelectedIndexChanged += new System.EventHandler(this.lstPets_SelectedIndexChanged);
+            this.lstPets.SelectedIndexChanged += new System.EventHandler(this.LstPets_SelectedIndexChanged);
             // 
             // Level
             // 
@@ -1048,7 +1048,7 @@ namespace Sog_SGreader
             this.numPetLevel.Name = "numPetLevel";
             this.numPetLevel.Size = new System.Drawing.Size(55, 20);
             this.numPetLevel.TabIndex = 14;
-            this.numPetLevel.ValueChanged += new System.EventHandler(this.numPetStat_ValueChanged);
+            this.numPetLevel.ValueChanged += new System.EventHandler(this.NumPetStat_ValueChanged);
             // 
             // label48
             // 
@@ -1110,7 +1110,7 @@ namespace Sog_SGreader
             this.txtPetNickname.Name = "txtPetNickname";
             this.txtPetNickname.Size = new System.Drawing.Size(93, 20);
             this.txtPetNickname.TabIndex = 1;
-            this.txtPetNickname.TextChanged += new System.EventHandler(this.txtPetNickname_TextChanged);
+            this.txtPetNickname.TextChanged += new System.EventHandler(this.TxtPetNickname_TextChanged);
             // 
             // label43
             // 
@@ -1132,7 +1132,7 @@ namespace Sog_SGreader
             this.numPetSpeed.Name = "numPetSpeed";
             this.numPetSpeed.Size = new System.Drawing.Size(55, 20);
             this.numPetSpeed.TabIndex = 7;
-            this.numPetSpeed.ValueChanged += new System.EventHandler(this.numPetStat_ValueChanged);
+            this.numPetSpeed.ValueChanged += new System.EventHandler(this.NumPetStat_ValueChanged);
             // 
             // numPetCrit
             // 
@@ -1145,7 +1145,7 @@ namespace Sog_SGreader
             this.numPetCrit.Name = "numPetCrit";
             this.numPetCrit.Size = new System.Drawing.Size(55, 20);
             this.numPetCrit.TabIndex = 6;
-            this.numPetCrit.ValueChanged += new System.EventHandler(this.numPetStat_ValueChanged);
+            this.numPetCrit.ValueChanged += new System.EventHandler(this.NumPetStat_ValueChanged);
             // 
             // numPetDamage
             // 
@@ -1158,7 +1158,7 @@ namespace Sog_SGreader
             this.numPetDamage.Name = "numPetDamage";
             this.numPetDamage.Size = new System.Drawing.Size(55, 20);
             this.numPetDamage.TabIndex = 5;
-            this.numPetDamage.ValueChanged += new System.EventHandler(this.numPetStat_ValueChanged);
+            this.numPetDamage.ValueChanged += new System.EventHandler(this.NumPetStat_ValueChanged);
             // 
             // numPetEnergy
             // 
@@ -1171,7 +1171,7 @@ namespace Sog_SGreader
             this.numPetEnergy.Name = "numPetEnergy";
             this.numPetEnergy.Size = new System.Drawing.Size(55, 20);
             this.numPetEnergy.TabIndex = 4;
-            this.numPetEnergy.ValueChanged += new System.EventHandler(this.numPetStat_ValueChanged);
+            this.numPetEnergy.ValueChanged += new System.EventHandler(this.NumPetStat_ValueChanged);
             // 
             // numPetHP
             // 
@@ -1184,7 +1184,7 @@ namespace Sog_SGreader
             this.numPetHP.Name = "numPetHP";
             this.numPetHP.Size = new System.Drawing.Size(55, 20);
             this.numPetHP.TabIndex = 3;
-            this.numPetHP.ValueChanged += new System.EventHandler(this.numPetStat_ValueChanged);
+            this.numPetHP.ValueChanged += new System.EventHandler(this.NumPetStat_ValueChanged);
             // 
             // tabQuickslots
             // 
