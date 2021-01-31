@@ -190,6 +190,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon_final_alt.ico" />
+    <None Include="Resources\dogecoins.png" />
     <Content Include="VersionInc.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>VersionInc.cs</LastGenOutput>

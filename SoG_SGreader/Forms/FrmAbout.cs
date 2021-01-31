@@ -14,5 +14,10 @@ namespace Sog_SGreader
         {
             System.Diagnostics.Process.Start("https://github.com/tolik518/SoG_SGreader");
         }
+
+        private void Label6_Click(object sender, System.EventArgs e)
+        {
+            Clipboard.SetData(DataFormats.Text, "DUEm64pPyZi4V9XF7mFE6v2YahGhcURk1F");
+        }
     }
 }

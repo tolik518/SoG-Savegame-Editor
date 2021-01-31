@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Sog_SGreader.Properties {
+namespace SoG_SGreader.Properties {
     using System;
     
     
@@ -57,6 +57,16 @@ namespace Sog_SGreader.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dogecoins {
+            get {
+                object obj = ResourceManager.GetObject("dogecoins", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
