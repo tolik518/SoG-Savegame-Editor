@@ -33,6 +33,7 @@ namespace Sog_SGreader
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.tabContainer = new System.Windows.Forms.TabControl();
             this.tabChar = new System.Windows.Forms.TabPage();
+            this.label49 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -159,7 +160,6 @@ namespace Sog_SGreader
             this.txtConsole = new System.Windows.Forms.TextBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.Tooltips = new System.Windows.Forms.ToolTip(this.components);
-            this.label49 = new System.Windows.Forms.Label();
             this.tabContainer.SuspendLayout();
             this.tabChar.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -230,6 +230,15 @@ namespace Sog_SGreader
             this.tabChar.TabIndex = 3;
             this.tabChar.Text = "Character / Equip";
             this.tabChar.UseVisualStyleBackColor = true;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(6, 373);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(116, 13);
+            this.label49.TabIndex = 42;
+            this.label49.Text = "↑ ↑ ↓ ↓ ← → ← → B A";
             // 
             // groupBox1
             // 
@@ -1481,7 +1490,7 @@ namespace Sog_SGreader
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
@@ -1510,15 +1519,6 @@ namespace Sog_SGreader
             this.splitter1.TabIndex = 29;
             this.splitter1.TabStop = false;
             // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(6, 373);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(116, 13);
-            this.label49.TabIndex = 42;
-            this.label49.Text = "↑ ↑ ↓ ↓ ← → ← → B A";
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1532,7 +1532,7 @@ namespace Sog_SGreader
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenu;
             this.Name = "FrmMain";
-            this.Text = "SoG: Savegame Reader v0.3.2 by TOLIK518";
+            this.Text = "SoG: Savegame Reader v0.3.5 by TOLIK518";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.tabContainer.ResumeLayout(false);
             this.tabChar.ResumeLayout(false);
