@@ -5,7 +5,6 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
-
 namespace Sog_SGreader
 {
     public partial class FrmMain : Form
@@ -89,7 +88,7 @@ namespace Sog_SGreader
             {
                 if (cbQuickslotType[i].Text == "Sog_Items")
                 {
-                    cbQuickslot[i].DataSource = Enum.GetValues(typeof(_Sog_Items.Other));
+                    cbQuickslot[i].DataSource = Enum.GetValues(typeof(Sog_Items));
                 }
                 else if (cbQuickslotType[i].Text == "Sog_Spells")
                 {
@@ -105,26 +104,34 @@ namespace Sog_SGreader
 
         private void InitFields()
         {
-            cbHat.DataSource = Enum.GetValues(typeof(_Sog_Items.Hat));
-            cbFacegear.DataSource = Enum.GetValues(typeof(_Sog_Items.Facegear));
-            cbWeapon.DataSource = Enum.GetValues(typeof(_Sog_Items.Weapon));
-            cbShield.DataSource = Enum.GetValues(typeof(_Sog_Items.Shield));
-            cbArmor.DataSource = Enum.GetValues(typeof(_Sog_Items.Armor));
-            cbShoes.DataSource = Enum.GetValues(typeof(_Sog_Items.Shoes));
-            cbAccessory1.DataSource = Enum.GetValues(typeof(_Sog_Items.Accessory));
-            cbAccessory2.DataSource = Enum.GetValues(typeof(_Sog_Items.Accessory));
+			var items = Enum.GetNames(typeof(Sog_Items));
 
-            cbStyleHat.DataSource = Enum.GetValues(typeof(_Sog_Items.Hat));
-            cbStyleFacegear.DataSource = Enum.GetValues(typeof(_Sog_Items.Facegear));
-            cbStyleWeapon.DataSource = Enum.GetValues(typeof(_Sog_Items.Weapon));
-            cbStyleShield.DataSource = Enum.GetValues(typeof(_Sog_Items.Shield));
+			//Enum.GetValues(typeof((Enum)Enum.GetNames(typeof(Sog_Items)).Where(item => item.StartsWith("_Hat_"))));
+			cbHat.DataSource = items.Where(item => item.StartsWith("_Hat_") || item == "Null").ToArray();   //TODO
+			cbFacegear.DataSource = items.Where(item => item.StartsWith("_Facegear_") || item == "Null").ToArray();
+			cbWeapon.DataSource = items.Where(item => item.StartsWith("_OneHanded_") ||
+													  item.StartsWith("_TwoHanded_") ||
+													  item.StartsWith("_Bow_") || item == "Null").ToArray();
 
-            /// TODO: I need to check if the quickslotsType field changes to fill out the fields with new items
-            for (int i = 0; i != 10; i++)
+			cbShield.DataSource = items.Where(item => item.StartsWith("_Shield_") || item == "Null").ToArray();
+			cbArmor.DataSource = items.Where(item => item.StartsWith("_Armor_") || item == "Null").ToArray();
+			cbShoes.DataSource = items.Where(item => item.StartsWith("_Shoes_") || item == "Null").ToArray();
+			cbAccessory1.DataSource = items.Where(item => item.StartsWith("_Accessory_") || item == "Null").ToArray();
+			cbAccessory2.DataSource = items.Where(item => item.StartsWith("_Accessory_") || item == "Null").ToArray();
+
+			cbStyleHat.DataSource = items.Where(item => item.StartsWith("_Hat_") || item == "Null").ToArray();
+			cbStyleFacegear.DataSource = items.Where(item => item.StartsWith("_Facegear_") || item == "Null").ToArray();
+			cbStyleWeapon.DataSource = items.Where(item => item.StartsWith("_OneHanded_") ||
+														   item.StartsWith("_TwoHanded_") ||
+														   item.StartsWith("_Bow_") || item == "Null").ToArray();
+			cbStyleShield.DataSource = items.Where(item => item.StartsWith("_Shield_") || item == "Null").ToArray();
+
+			/// TODO: I need to check if the quickslotsType field changes to fill out the fields with new items
+			for (int i = 0; i != 10; i++)
             {
                 if (pPlayer.quickslots[i].GetType() == typeof(Sog_Items))
                 {
-                    cbQuickslot[i].DataSource = Enum.GetValues(typeof(_Sog_Items.Other));
+                    cbQuickslot[i].DataSource = items;
                 }
                 else if (pPlayer.quickslots[i].GetType() == typeof(Sog_Spells))
                 {
@@ -132,29 +139,27 @@ namespace Sog_SGreader
                 }
                 cbQuickslotType[i].DataSource = new string[] { "Sog_Items", "Sog_Spells", "Int32" };
             }
-            cbSelectedItem.DataSource = Enum.GetValues(typeof(Sog_Items));
-
-
-
+            cbSelectedItem.DataSource = items;
         }
+
         private void PopulateFileds()
         {
             txtNickname.Text = pPlayer.Nickname;
 
-            cbHat.Text = ((_Sog_Items.Hat)pPlayer.equip.Hat).ToString();
-            cbFacegear.Text = ((_Sog_Items.Facegear)pPlayer.equip.Facegear).ToString();
-            cbWeapon.Text = ((_Sog_Items.Weapon)pPlayer.equip.Weapon).ToString();
-            cbShield.Text = ((_Sog_Items.Shield)pPlayer.equip.Shield).ToString();
-            cbArmor.Text = ((_Sog_Items.Armor)pPlayer.equip.Armor).ToString();
-            cbShoes.Text = ((_Sog_Items.Shoes)pPlayer.equip.Shoes).ToString();
+            cbHat.Text = ((Sog_Items)pPlayer.equip.Hat).ToString();
+            cbFacegear.Text = ((Sog_Items)pPlayer.equip.Facegear).ToString();
+            cbWeapon.Text = ((Sog_Items)pPlayer.equip.Weapon).ToString();
+            cbShield.Text = ((Sog_Items)pPlayer.equip.Shield).ToString();
+            cbArmor.Text = ((Sog_Items)pPlayer.equip.Armor).ToString();
+            cbShoes.Text = ((Sog_Items)pPlayer.equip.Shoes).ToString();
 
-            cbAccessory1.Text = ((_Sog_Items.Accessory)pPlayer.equip.Accessory1).ToString();
-            cbAccessory2.Text = ((_Sog_Items.Accessory)pPlayer.equip.Accessory2).ToString();
+            cbAccessory1.Text = ((Sog_Items)pPlayer.equip.Accessory1).ToString();
+            cbAccessory2.Text = ((Sog_Items)pPlayer.equip.Accessory2).ToString();
 
-            cbStyleHat.Text = ((_Sog_Items.Hat)pPlayer.style.Hat).ToString();
-            cbStyleFacegear.Text = ((_Sog_Items.Facegear)pPlayer.style.Facegear).ToString();
-            cbStyleWeapon.Text = ((_Sog_Items.Weapon)pPlayer.style.Weapon).ToString();
-            cbStyleShield.Text = ((_Sog_Items.Shield)pPlayer.style.Shield).ToString();
+            cbStyleHat.Text = ((Sog_Items)pPlayer.style.Hat).ToString();
+            cbStyleFacegear.Text = ((Sog_Items)pPlayer.style.Facegear).ToString();
+            cbStyleWeapon.Text = ((Sog_Items)pPlayer.style.Weapon).ToString();
+            cbStyleShield.Text = ((Sog_Items)pPlayer.style.Shield).ToString();
 
             for (int i = 0; i < 10; i++)
             {
@@ -209,20 +214,20 @@ namespace Sog_SGreader
         private void GetDataFromFields()
         {
             pPlayer.Nickname = txtNickname.Text;
-            pPlayer.equip.Hat = (int)Enum.Parse(typeof(_Sog_Items.Hat), cbHat.Text);
-            pPlayer.equip.Facegear = (int)Enum.Parse(typeof(_Sog_Items.Facegear), cbFacegear.Text);
-            pPlayer.equip.Weapon = (int)Enum.Parse(typeof(_Sog_Items.Weapon), cbWeapon.Text);
-            pPlayer.equip.Shield = (int)Enum.Parse(typeof(_Sog_Items.Shield), cbShield.Text);
-            pPlayer.equip.Armor = (int)Enum.Parse(typeof(_Sog_Items.Armor), cbArmor.Text);
-            pPlayer.equip.Shoes = (int)Enum.Parse(typeof(_Sog_Items.Shoes), cbShoes.Text);
+            pPlayer.equip.Hat = (int)Enum.Parse(typeof(Sog_Items), cbHat.Text);
+            pPlayer.equip.Facegear = (int)Enum.Parse(typeof(Sog_Items), cbFacegear.Text);
+            pPlayer.equip.Weapon = (int)Enum.Parse(typeof(Sog_Items), cbWeapon.Text);
+            pPlayer.equip.Shield = (int)Enum.Parse(typeof(Sog_Items), cbShield.Text);
+            pPlayer.equip.Armor = (int)Enum.Parse(typeof(Sog_Items), cbArmor.Text);
+            pPlayer.equip.Shoes = (int)Enum.Parse(typeof(Sog_Items), cbShoes.Text);
 
-            pPlayer.equip.Accessory1 = (int)Enum.Parse(typeof(_Sog_Items.Accessory), cbAccessory1.Text);
-            pPlayer.equip.Accessory2 = (int)Enum.Parse(typeof(_Sog_Items.Accessory), cbAccessory2.Text);
+            pPlayer.equip.Accessory1 = (int)Enum.Parse(typeof(Sog_Items), cbAccessory1.Text);
+            pPlayer.equip.Accessory2 = (int)Enum.Parse(typeof(Sog_Items), cbAccessory2.Text);
 
-            pPlayer.style.Hat = (int)Enum.Parse(typeof(_Sog_Items.Hat), cbStyleHat.Text);
-            pPlayer.style.Facegear = (int)Enum.Parse(typeof(_Sog_Items.Facegear), cbStyleFacegear.Text);
-            pPlayer.style.Weapon = (int)Enum.Parse(typeof(_Sog_Items.Weapon), cbStyleWeapon.Text);
-            pPlayer.style.Shield = (int)Enum.Parse(typeof(_Sog_Items.Shield), cbStyleShield.Text);
+            pPlayer.style.Hat = (int)Enum.Parse(typeof(Sog_Items), cbStyleHat.Text);
+            pPlayer.style.Facegear = (int)Enum.Parse(typeof(Sog_Items), cbStyleFacegear.Text);
+            pPlayer.style.Weapon = (int)Enum.Parse(typeof(Sog_Items), cbStyleWeapon.Text);
+            pPlayer.style.Shield = (int)Enum.Parse(typeof(Sog_Items), cbStyleShield.Text);
 
             for (int i = 0; i < 10; i++)
             {

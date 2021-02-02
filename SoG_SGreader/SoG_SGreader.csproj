@@ -139,7 +139,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VersionInc.tt</DependentUpon>
     </Compile>
-    <Compile Include="_Sog_Items.cs" />
     <EmbeddedResource Include="Forms\FrmColorSelect.resx">
       <DependentUpon>FrmColorSelect.cs</DependentUpon>
     </EmbeddedResource>

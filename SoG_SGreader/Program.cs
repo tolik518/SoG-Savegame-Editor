@@ -17,12 +17,10 @@ namespace Sog_SGreader
                 Application.SetCompatibleTextRenderingDefault(false);
                 FrmMain frmMain = new FrmMain(args[0]);
                 Application.Run(frmMain);
-                //frmMain.ShowDialog();
 
             }
             else
             {
-                //Start normally
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new FrmLoadSaveGame());
