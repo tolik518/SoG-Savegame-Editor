@@ -4,6 +4,7 @@ using System.Runtime.Serialization;
 
 namespace Sog_SGreader
 {
+    [Serializable]
     public class Sog_Player
     {
         
@@ -312,5 +313,10 @@ namespace Sog_SGreader
             public byte[] HouseStyleBytes { get; set; }
         }
         //public byte[] scrap;
+    }
+
+    public class Sog_PlayerDTO
+    {
+
     }
 }

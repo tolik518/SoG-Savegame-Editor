@@ -100,6 +100,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enum\Sog_Colors.cs" />
+    <Compile Include="Enum\Sog_Items.cs" />
+    <Compile Include="Enum\Sog_Magic.cs" />
+    <Compile Include="Enum\Sog_Pets.cs" />
     <Compile Include="WriteData.cs">
       <SubType>Form</SubType>
     </Compile>

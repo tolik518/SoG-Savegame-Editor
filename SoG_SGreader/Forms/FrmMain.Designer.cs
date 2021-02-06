@@ -33,6 +33,7 @@ namespace Sog_SGreader
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.tabContainer = new System.Windows.Forms.TabControl();
             this.tabChar = new System.Windows.Forms.TabPage();
+            this.label51 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -112,6 +113,8 @@ namespace Sog_SGreader
             this.Crit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Speed = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.cbPetType = new System.Windows.Forms.ComboBox();
+            this.label52 = new System.Windows.Forms.Label();
             this.numPetLevel = new System.Windows.Forms.NumericUpDown();
             this.label48 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
@@ -146,6 +149,8 @@ namespace Sog_SGreader
             this.label40 = new System.Windows.Forms.Label();
             this.tabTreasureMaps = new System.Windows.Forms.TabPage();
             this.label41 = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label50 = new System.Windows.Forms.Label();
             this.msMenu = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -160,6 +165,7 @@ namespace Sog_SGreader
             this.txtConsole = new System.Windows.Forms.TextBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.Tooltips = new System.Windows.Forms.ToolTip(this.components);
+            this.txtTimePlayed = new System.Windows.Forms.TextBox();
             this.tabContainer.SuspendLayout();
             this.tabChar.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -192,6 +198,7 @@ namespace Sog_SGreader
             this.tabMerchant.SuspendLayout();
             this.tabCards.SuspendLayout();
             this.tabTreasureMaps.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.msMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -205,14 +212,18 @@ namespace Sog_SGreader
             this.tabContainer.Controls.Add(this.tabMerchant);
             this.tabContainer.Controls.Add(this.tabCards);
             this.tabContainer.Controls.Add(this.tabTreasureMaps);
-            this.tabContainer.Location = new System.Drawing.Point(12, 27);
+            this.tabContainer.Controls.Add(this.tabPage1);
+            this.tabContainer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tabContainer.Location = new System.Drawing.Point(0, 24);
             this.tabContainer.Name = "tabContainer";
             this.tabContainer.SelectedIndex = 0;
-            this.tabContainer.Size = new System.Drawing.Size(543, 416);
+            this.tabContainer.Size = new System.Drawing.Size(567, 416);
             this.tabContainer.TabIndex = 0;
             // 
             // tabChar
             // 
+            this.tabChar.Controls.Add(this.txtTimePlayed);
+            this.tabChar.Controls.Add(this.label51);
             this.tabChar.Controls.Add(this.label49);
             this.tabChar.Controls.Add(this.groupBox1);
             this.tabChar.Controls.Add(this.groupBox2);
@@ -226,10 +237,19 @@ namespace Sog_SGreader
             this.tabChar.Location = new System.Drawing.Point(4, 22);
             this.tabChar.Name = "tabChar";
             this.tabChar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabChar.Size = new System.Drawing.Size(535, 390);
+            this.tabChar.Size = new System.Drawing.Size(559, 390);
             this.tabChar.TabIndex = 3;
             this.tabChar.Text = "Character / Equip";
             this.tabChar.UseVisualStyleBackColor = true;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(8, 62);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(96, 13);
+            this.label51.TabIndex = 44;
+            this.label51.Text = "Time played (total):";
             // 
             // label49
             // 
@@ -489,7 +509,7 @@ namespace Sog_SGreader
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(6, 54);
+            this.label37.Location = new System.Drawing.Point(8, 38);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(32, 13);
             this.label37.TabIndex = 39;
@@ -497,7 +517,7 @@ namespace Sog_SGreader
             // 
             // numGold
             // 
-            this.numGold.Location = new System.Drawing.Point(9, 70);
+            this.numGold.Location = new System.Drawing.Point(64, 36);
             this.numGold.Maximum = new decimal(new int[] {
             2147483647,
             0,
@@ -516,7 +536,7 @@ namespace Sog_SGreader
             this.groupBox6.Controls.Add(this.numSkillGoldPoints);
             this.groupBox6.Controls.Add(this.label35);
             this.groupBox6.Controls.Add(this.label34);
-            this.groupBox6.Location = new System.Drawing.Point(119, 145);
+            this.groupBox6.Location = new System.Drawing.Point(8, 257);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(155, 107);
             this.groupBox6.TabIndex = 37;
@@ -596,7 +616,7 @@ namespace Sog_SGreader
             this.groupBox5.Controls.Add(this.numEXPUnknown0);
             this.groupBox5.Controls.Add(this.numEXPcurrent);
             this.groupBox5.Controls.Add(this.numLevel);
-            this.groupBox5.Location = new System.Drawing.Point(118, 13);
+            this.groupBox5.Location = new System.Drawing.Point(6, 126);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(156, 126);
             this.groupBox5.TabIndex = 36;
@@ -713,7 +733,7 @@ namespace Sog_SGreader
             // 
             // txtNickname
             // 
-            this.txtNickname.Location = new System.Drawing.Point(9, 31);
+            this.txtNickname.Location = new System.Drawing.Point(64, 10);
             this.txtNickname.Name = "txtNickname";
             this.txtNickname.Size = new System.Drawing.Size(101, 20);
             this.txtNickname.TabIndex = 34;
@@ -731,7 +751,7 @@ namespace Sog_SGreader
             this.gbColors.Controls.Add(this.btnSkinColor);
             this.gbColors.Controls.Add(this.btnHairColor);
             this.gbColors.Controls.Add(this.label1);
-            this.gbColors.Location = new System.Drawing.Point(9, 96);
+            this.gbColors.Location = new System.Drawing.Point(168, 208);
             this.gbColors.Name = "gbColors";
             this.gbColors.Size = new System.Drawing.Size(101, 156);
             this.gbColors.TabIndex = 33;
@@ -846,7 +866,7 @@ namespace Sog_SGreader
             this.tabInventory.Location = new System.Drawing.Point(4, 22);
             this.tabInventory.Name = "tabInventory";
             this.tabInventory.Padding = new System.Windows.Forms.Padding(3);
-            this.tabInventory.Size = new System.Drawing.Size(535, 390);
+            this.tabInventory.Size = new System.Drawing.Size(559, 390);
             this.tabInventory.TabIndex = 2;
             this.tabInventory.Text = "Inventory";
             this.tabInventory.UseVisualStyleBackColor = true;
@@ -933,7 +953,7 @@ namespace Sog_SGreader
             this.lstInventory.Location = new System.Drawing.Point(6, 6);
             this.lstInventory.MultiSelect = false;
             this.lstInventory.Name = "lstInventory";
-            this.lstInventory.Size = new System.Drawing.Size(523, 293);
+            this.lstInventory.Size = new System.Drawing.Size(547, 293);
             this.lstInventory.TabIndex = 0;
             this.lstInventory.UseCompatibleStateImageBehavior = false;
             this.lstInventory.View = System.Windows.Forms.View.Details;
@@ -961,7 +981,7 @@ namespace Sog_SGreader
             this.tabPets.Location = new System.Drawing.Point(4, 22);
             this.tabPets.Name = "tabPets";
             this.tabPets.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPets.Size = new System.Drawing.Size(535, 390);
+            this.tabPets.Size = new System.Drawing.Size(559, 390);
             this.tabPets.TabIndex = 8;
             this.tabPets.Text = "Pets";
             this.tabPets.UseVisualStyleBackColor = true;
@@ -1025,6 +1045,8 @@ namespace Sog_SGreader
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.cbPetType);
+            this.groupBox7.Controls.Add(this.label52);
             this.groupBox7.Controls.Add(this.numPetLevel);
             this.groupBox7.Controls.Add(this.label48);
             this.groupBox7.Controls.Add(this.label47);
@@ -1041,14 +1063,32 @@ namespace Sog_SGreader
             this.groupBox7.Controls.Add(this.numPetHP);
             this.groupBox7.Location = new System.Drawing.Point(358, 7);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(171, 198);
+            this.groupBox7.Size = new System.Drawing.Size(171, 227);
             this.groupBox7.TabIndex = 0;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Pet";
             // 
+            // cbPetType
+            // 
+            this.cbPetType.Enabled = false;
+            this.cbPetType.FormattingEnabled = true;
+            this.cbPetType.Location = new System.Drawing.Point(73, 46);
+            this.cbPetType.Name = "cbPetType";
+            this.cbPetType.Size = new System.Drawing.Size(93, 21);
+            this.cbPetType.TabIndex = 2;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(6, 49);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(26, 13);
+            this.label52.TabIndex = 15;
+            this.label52.Text = "Pet:";
+            // 
             // numPetLevel
             // 
-            this.numPetLevel.Location = new System.Drawing.Point(111, 46);
+            this.numPetLevel.Location = new System.Drawing.Point(111, 72);
             this.numPetLevel.Maximum = new decimal(new int[] {
             255,
             0,
@@ -1062,7 +1102,7 @@ namespace Sog_SGreader
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(6, 48);
+            this.label48.Location = new System.Drawing.Point(6, 74);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(51, 13);
             this.label48.TabIndex = 13;
@@ -1071,7 +1111,7 @@ namespace Sog_SGreader
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(6, 173);
+            this.label47.Location = new System.Drawing.Point(6, 199);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(66, 13);
             this.label47.TabIndex = 12;
@@ -1080,7 +1120,7 @@ namespace Sog_SGreader
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(6, 148);
+            this.label46.Location = new System.Drawing.Point(6, 174);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(50, 13);
             this.label46.TabIndex = 11;
@@ -1089,7 +1129,7 @@ namespace Sog_SGreader
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(6, 123);
+            this.label45.Location = new System.Drawing.Point(6, 149);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(75, 13);
             this.label45.TabIndex = 10;
@@ -1098,7 +1138,7 @@ namespace Sog_SGreader
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(6, 98);
+            this.label44.Location = new System.Drawing.Point(6, 124);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(68, 13);
             this.label44.TabIndex = 9;
@@ -1124,7 +1164,7 @@ namespace Sog_SGreader
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(6, 73);
+            this.label43.Location = new System.Drawing.Point(6, 99);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(66, 13);
             this.label43.TabIndex = 8;
@@ -1132,7 +1172,7 @@ namespace Sog_SGreader
             // 
             // numPetSpeed
             // 
-            this.numPetSpeed.Location = new System.Drawing.Point(111, 171);
+            this.numPetSpeed.Location = new System.Drawing.Point(111, 197);
             this.numPetSpeed.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -1145,7 +1185,7 @@ namespace Sog_SGreader
             // 
             // numPetCrit
             // 
-            this.numPetCrit.Location = new System.Drawing.Point(111, 146);
+            this.numPetCrit.Location = new System.Drawing.Point(111, 172);
             this.numPetCrit.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -1158,7 +1198,7 @@ namespace Sog_SGreader
             // 
             // numPetDamage
             // 
-            this.numPetDamage.Location = new System.Drawing.Point(111, 121);
+            this.numPetDamage.Location = new System.Drawing.Point(111, 147);
             this.numPetDamage.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -1171,7 +1211,7 @@ namespace Sog_SGreader
             // 
             // numPetEnergy
             // 
-            this.numPetEnergy.Location = new System.Drawing.Point(111, 96);
+            this.numPetEnergy.Location = new System.Drawing.Point(111, 122);
             this.numPetEnergy.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -1184,7 +1224,7 @@ namespace Sog_SGreader
             // 
             // numPetHP
             // 
-            this.numPetHP.Location = new System.Drawing.Point(111, 71);
+            this.numPetHP.Location = new System.Drawing.Point(111, 97);
             this.numPetHP.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -1201,7 +1241,7 @@ namespace Sog_SGreader
             this.tabQuickslots.Location = new System.Drawing.Point(4, 22);
             this.tabQuickslots.Name = "tabQuickslots";
             this.tabQuickslots.Padding = new System.Windows.Forms.Padding(3);
-            this.tabQuickslots.Size = new System.Drawing.Size(535, 390);
+            this.tabQuickslots.Size = new System.Drawing.Size(559, 390);
             this.tabQuickslots.TabIndex = 1;
             this.tabQuickslots.Text = "Quickslots";
             this.tabQuickslots.UseVisualStyleBackColor = true;
@@ -1322,7 +1362,7 @@ namespace Sog_SGreader
             this.tabSkills.Location = new System.Drawing.Point(4, 22);
             this.tabSkills.Name = "tabSkills";
             this.tabSkills.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSkills.Size = new System.Drawing.Size(535, 390);
+            this.tabSkills.Size = new System.Drawing.Size(559, 390);
             this.tabSkills.TabIndex = 7;
             this.tabSkills.Text = "*Skills";
             this.tabSkills.UseVisualStyleBackColor = true;
@@ -1344,7 +1384,7 @@ namespace Sog_SGreader
             this.tabMerchant.Location = new System.Drawing.Point(4, 22);
             this.tabMerchant.Name = "tabMerchant";
             this.tabMerchant.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMerchant.Size = new System.Drawing.Size(535, 390);
+            this.tabMerchant.Size = new System.Drawing.Size(559, 390);
             this.tabMerchant.TabIndex = 4;
             this.tabMerchant.Text = "*Merchant";
             this.tabMerchant.UseVisualStyleBackColor = true;
@@ -1366,7 +1406,7 @@ namespace Sog_SGreader
             this.tabCards.Location = new System.Drawing.Point(4, 22);
             this.tabCards.Name = "tabCards";
             this.tabCards.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCards.Size = new System.Drawing.Size(535, 390);
+            this.tabCards.Size = new System.Drawing.Size(559, 390);
             this.tabCards.TabIndex = 5;
             this.tabCards.Text = "*Cards";
             this.tabCards.UseVisualStyleBackColor = true;
@@ -1388,7 +1428,7 @@ namespace Sog_SGreader
             this.tabTreasureMaps.Location = new System.Drawing.Point(4, 22);
             this.tabTreasureMaps.Name = "tabTreasureMaps";
             this.tabTreasureMaps.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTreasureMaps.Size = new System.Drawing.Size(535, 390);
+            this.tabTreasureMaps.Size = new System.Drawing.Size(559, 390);
             this.tabTreasureMaps.TabIndex = 6;
             this.tabTreasureMaps.Text = "*Treasure Maps";
             this.tabTreasureMaps.UseVisualStyleBackColor = true;
@@ -1403,6 +1443,28 @@ namespace Sog_SGreader
             this.label41.Size = new System.Drawing.Size(117, 13);
             this.label41.TabIndex = 31;
             this.label41.Text = "* = not yet implemented";
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.label50);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(559, 390);
+            this.tabPage1.TabIndex = 9;
+            this.tabPage1.Text = "*Quests";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.BackColor = System.Drawing.Color.Transparent;
+            this.label50.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label50.Location = new System.Drawing.Point(6, 3);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(117, 13);
+            this.label50.TabIndex = 32;
+            this.label50.Text = "* = not yet implemented";
             // 
             // msMenu
             // 
@@ -1455,7 +1517,6 @@ namespace Sog_SGreader
             this.exportAsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.jSONToolStripMenuItem,
             this.xMLToolStripMenuItem});
-            this.exportAsToolStripMenuItem.Enabled = false;
             this.exportAsToolStripMenuItem.Name = "exportAsToolStripMenuItem";
             this.exportAsToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.exportAsToolStripMenuItem.Text = "Export as...";
@@ -1465,6 +1526,7 @@ namespace Sog_SGreader
             this.jSONToolStripMenuItem.Name = "jSONToolStripMenuItem";
             this.jSONToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
             this.jSONToolStripMenuItem.Text = "JSON";
+            this.jSONToolStripMenuItem.Click += new System.EventHandler(this.JSONToolStripMenuItem_Click);
             // 
             // xMLToolStripMenuItem
             // 
@@ -1518,6 +1580,13 @@ namespace Sog_SGreader
             this.splitter1.Size = new System.Drawing.Size(567, 10);
             this.splitter1.TabIndex = 29;
             this.splitter1.TabStop = false;
+            // 
+            // txtTimePlayed
+            // 
+            this.txtTimePlayed.Location = new System.Drawing.Point(110, 59);
+            this.txtTimePlayed.Name = "txtTimePlayed";
+            this.txtTimePlayed.Size = new System.Drawing.Size(55, 20);
+            this.txtTimePlayed.TabIndex = 45;
             // 
             // FrmMain
             // 
@@ -1579,6 +1648,8 @@ namespace Sog_SGreader
             this.tabCards.PerformLayout();
             this.tabTreasureMaps.ResumeLayout(false);
             this.tabTreasureMaps.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
             this.ResumeLayout(false);
@@ -1720,6 +1791,12 @@ namespace Sog_SGreader
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Button btnDeleteSelectedItem;
         private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.ComboBox cbPetType;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.TextBox txtTimePlayed;
     }
 }
 
