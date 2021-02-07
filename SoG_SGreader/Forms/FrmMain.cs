@@ -210,6 +210,9 @@ namespace Sog_SGreader
                 lstPets.Items.Add(pPet);
             }
             txtTimePlayed.Text = TimeSpan.FromSeconds(pPlayer.PlayTimeTotal/60).ToString(@"d\:hh\:mm\:ss");
+            numID.Value = pPlayer.UniquePlayerID;
+            numBirthdayDay.Value = pPlayer.BirthdayDay;
+            numBirtdayMonth.Value = pPlayer.BirthdayMonth;
 
         }
         private void InitVariables()    //TODO: we need to clean all our variables before we load a new file 
@@ -298,6 +301,11 @@ namespace Sog_SGreader
                 });
                 pPlayer.Pets.RemoveAt(0);
             }
+
+            pPlayer.UniquePlayerID = (UInt32)numID.Value;
+            pPlayer.PlayTimeTotal = (int)(TimeSpan.Parse(txtTimePlayed.Text).TotalSeconds)*60;
+            pPlayer.BirthdayDay = (int)numBirthdayDay.Value;
+            pPlayer.BirthdayMonth = (int)numBirtdayMonth.Value;
         }
 
         private readonly Sog_Player pPlayer = new Sog_Player();
@@ -492,16 +500,21 @@ namespace Sog_SGreader
             lstPets.Items[lstPets.FocusedItem.Index].SubItems[1].Text = txtPetNickname.Text;
         }
 
-        private void FrmMain_Load(object sender, EventArgs e)
+        private void JSONToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void JSONToolStripMenuItem_Click(object sender, EventArgs e)
+        //source: https://www.programmersought.com/article/973286506/
+        private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
         {
+            SolidBrush _Brush = new SolidBrush(Color.Black);//monochrome brush
+            RectangleF _TabTextArea = (RectangleF)tabControl1.GetTabRect(e.Index);//Drawing area
+            StringFormat _sf = new StringFormat();//Package text layout format information
+            _sf.LineAlignment = StringAlignment.Center;
+            _sf.Alignment = StringAlignment.Center;
+            e.Graphics.DrawString(tabControl1.Controls[e.Index].Text, SystemInformation.MenuFont, _Brush, _TabTextArea, _sf);
 
-		}
-			
+        }
     }
-
 }

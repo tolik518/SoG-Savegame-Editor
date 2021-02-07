@@ -4,10 +4,8 @@ using System.Runtime.Serialization;
 
 namespace Sog_SGreader
 {
-    [Serializable]
     public class Sog_Player
     {
-        
         public Equip equip = new Equip();
         public Style style = new Style();
         public List<Item> Inventory;
@@ -271,7 +269,7 @@ namespace Sog_SGreader
 
         public int BirthdayMonth { get; set; }
         public int BirthdayDay { get; set; }
-        public int UniquePlayerID { get; set; }
+        public uint UniquePlayerID { get; set; }
         public int UnknownVariable04 { get; set; } // saving mechanism related
         public int UnknownVariable05 { get; set; } // saving mechanism related
         public int PlayTimeTotal { get; set; } // saved in frames

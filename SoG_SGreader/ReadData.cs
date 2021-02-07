@@ -266,7 +266,7 @@ namespace Sog_SGreader
                 pPlayer.BirthdayDay = readBinary.ReadInt32();
                 txtConsole.AppendText("\r\n" + " Birthday: " + pPlayer.BirthdayDay + "." + pPlayer.BirthdayMonth + "." + "1081");
 
-                pPlayer.UniquePlayerID = readBinary.ReadInt32();
+                pPlayer.UniquePlayerID = readBinary.ReadUInt32();
                 pPlayer.UnknownVariable04 = readBinary.ReadInt32();
                 pPlayer.UnknownVariable05 = readBinary.ReadInt32();
                 pPlayer.PlayTimeTotal = readBinary.ReadInt32();

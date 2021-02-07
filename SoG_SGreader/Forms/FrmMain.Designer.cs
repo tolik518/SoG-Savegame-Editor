@@ -33,7 +33,18 @@ namespace Sog_SGreader
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.tabContainer = new System.Windows.Forms.TabControl();
             this.tabChar = new System.Windows.Forms.TabPage();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.numID = new System.Windows.Forms.NumericUpDown();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.label51 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.txtNickname = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.numBirtdayMonth = new System.Windows.Forms.NumericUpDown();
+            this.numBirthdayDay = new System.Windows.Forms.NumericUpDown();
+            this.txtTimePlayed = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -61,8 +72,6 @@ namespace Sog_SGreader
             this.cbStyleFacegear = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.cbStyleWeapon = new System.Windows.Forms.ComboBox();
-            this.label37 = new System.Windows.Forms.Label();
-            this.numGold = new System.Windows.Forms.NumericUpDown();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.numSkillTalentPoints = new System.Windows.Forms.NumericUpDown();
             this.label36 = new System.Windows.Forms.Label();
@@ -79,8 +88,6 @@ namespace Sog_SGreader
             this.numEXPUnknown0 = new System.Windows.Forms.NumericUpDown();
             this.numEXPcurrent = new System.Windows.Forms.NumericUpDown();
             this.numLevel = new System.Windows.Forms.NumericUpDown();
-            this.label29 = new System.Windows.Forms.Label();
-            this.txtNickname = new System.Windows.Forms.TextBox();
             this.gbColors = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -93,6 +100,8 @@ namespace Sog_SGreader
             this.btnHairColor = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tabInventory = new System.Windows.Forms.TabPage();
+            this.numGold = new System.Windows.Forms.NumericUpDown();
+            this.label37 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnDeleteSelectedItem = new System.Windows.Forms.Button();
             this.btnAddItem = new System.Windows.Forms.Button();
@@ -142,7 +151,9 @@ namespace Sog_SGreader
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.tabSkills = new System.Windows.Forms.TabPage();
-            this.label38 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabSkillsMelee = new System.Windows.Forms.TabPage();
+            this.tabSkillsMagic = new System.Windows.Forms.TabPage();
             this.tabMerchant = new System.Windows.Forms.TabPage();
             this.label39 = new System.Windows.Forms.Label();
             this.tabCards = new System.Windows.Forms.TabPage();
@@ -165,12 +176,19 @@ namespace Sog_SGreader
             this.txtConsole = new System.Windows.Forms.TextBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.Tooltips = new System.Windows.Forms.ToolTip(this.components);
-            this.txtTimePlayed = new System.Windows.Forms.TextBox();
+            this.tabSkillsUtility = new System.Windows.Forms.TabPage();
+            this.tabTalentsGeneral = new System.Windows.Forms.TabPage();
+            this.tabTalentsMelee = new System.Windows.Forms.TabPage();
+            this.tabTalentsMagic = new System.Windows.Forms.TabPage();
             this.tabContainer.SuspendLayout();
             this.tabChar.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numID)).BeginInit();
+            this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numBirtdayMonth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numBirthdayDay)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numGold)).BeginInit();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillTalentPoints)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillSilverPoints)).BeginInit();
@@ -182,6 +200,7 @@ namespace Sog_SGreader
             ((System.ComponentModel.ISupportInitialize)(this.numLevel)).BeginInit();
             this.gbColors.SuspendLayout();
             this.tabInventory.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numGold)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numItemCount)).BeginInit();
             this.tabPets.SuspendLayout();
@@ -195,6 +214,7 @@ namespace Sog_SGreader
             this.tabQuickslots.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabSkills.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.tabMerchant.SuspendLayout();
             this.tabCards.SuspendLayout();
             this.tabTreasureMaps.SuspendLayout();
@@ -222,17 +242,14 @@ namespace Sog_SGreader
             // 
             // tabChar
             // 
-            this.tabChar.Controls.Add(this.txtTimePlayed);
-            this.tabChar.Controls.Add(this.label51);
+            this.tabChar.Controls.Add(this.groupBox9);
+            this.tabChar.Controls.Add(this.numID);
+            this.tabChar.Controls.Add(this.groupBox8);
             this.tabChar.Controls.Add(this.label49);
             this.tabChar.Controls.Add(this.groupBox1);
             this.tabChar.Controls.Add(this.groupBox2);
-            this.tabChar.Controls.Add(this.label37);
-            this.tabChar.Controls.Add(this.numGold);
             this.tabChar.Controls.Add(this.groupBox6);
             this.tabChar.Controls.Add(this.groupBox5);
-            this.tabChar.Controls.Add(this.label29);
-            this.tabChar.Controls.Add(this.txtNickname);
             this.tabChar.Controls.Add(this.gbColors);
             this.tabChar.Location = new System.Drawing.Point(4, 22);
             this.tabChar.Name = "tabChar";
@@ -242,14 +259,152 @@ namespace Sog_SGreader
             this.tabChar.Text = "Character / Equip";
             this.tabChar.UseVisualStyleBackColor = true;
             // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.label55);
+            this.groupBox9.Location = new System.Drawing.Point(170, 158);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(101, 220);
+            this.groupBox9.TabIndex = 54;
+            this.groupBox9.TabStop = false;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(26, 100);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(48, 13);
+            this.label55.TabIndex = 0;
+            this.label55.Text = "[nothing]";
+            // 
+            // numID
+            // 
+            this.numID.Location = new System.Drawing.Point(73, 49);
+            this.numID.Maximum = new decimal(new int[] {
+            -2,
+            0,
+            0,
+            0});
+            this.numID.Name = "numID";
+            this.numID.Size = new System.Drawing.Size(81, 20);
+            this.numID.TabIndex = 53;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.label51);
+            this.groupBox8.Controls.Add(this.label54);
+            this.groupBox8.Controls.Add(this.txtNickname);
+            this.groupBox8.Controls.Add(this.label29);
+            this.groupBox8.Controls.Add(this.label53);
+            this.groupBox8.Controls.Add(this.numBirtdayMonth);
+            this.groupBox8.Controls.Add(this.numBirthdayDay);
+            this.groupBox8.Controls.Add(this.txtTimePlayed);
+            this.groupBox8.Location = new System.Drawing.Point(6, 4);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(157, 122);
+            this.groupBox8.TabIndex = 52;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "General";
+            // 
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(8, 62);
+            this.label51.Location = new System.Drawing.Point(5, 75);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(96, 13);
+            this.label51.Size = new System.Drawing.Size(67, 13);
             this.label51.TabIndex = 44;
-            this.label51.Text = "Time played (total):";
+            this.label51.Text = "Time played:";
+            this.Tooltips.SetToolTip(this.label51, "D:HH:MM:SS");
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(5, 48);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(65, 13);
+            this.label54.TabIndex = 51;
+            this.label54.Text = "Collector ID:";
+            // 
+            // txtNickname
+            // 
+            this.txtNickname.Location = new System.Drawing.Point(47, 19);
+            this.txtNickname.Name = "txtNickname";
+            this.txtNickname.Size = new System.Drawing.Size(101, 20);
+            this.txtNickname.TabIndex = 34;
+            this.txtNickname.Text = "Tolik518_NoScope";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(3, 22);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(38, 13);
+            this.label29.TabIndex = 35;
+            this.label29.Text = "Name:";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(5, 100);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(42, 13);
+            this.label53.TabIndex = 49;
+            this.label53.Text = "Birtday:";
+            this.Tooltips.SetToolTip(this.label53, "Day / Month");
+            // 
+            // numBirtdayMonth
+            // 
+            this.numBirtdayMonth.Location = new System.Drawing.Point(116, 98);
+            this.numBirtdayMonth.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.numBirtdayMonth.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numBirtdayMonth.Name = "numBirtdayMonth";
+            this.numBirtdayMonth.Size = new System.Drawing.Size(32, 20);
+            this.numBirtdayMonth.TabIndex = 48;
+            this.Tooltips.SetToolTip(this.numBirtdayMonth, "Month\tStarsign\r\n____________________\r\n1-2\tThe Slime\r\n3-4\tThe Rabby\r\n5-6\tThe Bee\r\n" +
+        "7-8\tThe Boar\r\n9-10\tThe Bloomo\r\n11-12\tThe Yeti");
+            this.numBirtdayMonth.Value = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            // 
+            // numBirthdayDay
+            // 
+            this.numBirthdayDay.Location = new System.Drawing.Point(81, 98);
+            this.numBirthdayDay.Maximum = new decimal(new int[] {
+            31,
+            0,
+            0,
+            0});
+            this.numBirthdayDay.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numBirthdayDay.Name = "numBirthdayDay";
+            this.numBirthdayDay.Size = new System.Drawing.Size(32, 20);
+            this.numBirthdayDay.TabIndex = 46;
+            this.numBirthdayDay.Value = new decimal(new int[] {
+            31,
+            0,
+            0,
+            0});
+            // 
+            // txtTimePlayed
+            // 
+            this.txtTimePlayed.Location = new System.Drawing.Point(73, 72);
+            this.txtTimePlayed.Name = "txtTimePlayed";
+            this.txtTimePlayed.Size = new System.Drawing.Size(75, 20);
+            this.txtTimePlayed.TabIndex = 45;
+            this.Tooltips.SetToolTip(this.txtTimePlayed, "D:HH:MM:SS");
             // 
             // label49
             // 
@@ -278,7 +433,7 @@ namespace Sog_SGreader
             this.groupBox1.Controls.Add(this.cbWeapon);
             this.groupBox1.Controls.Add(this.cbFacegear);
             this.groupBox1.Controls.Add(this.cbHat);
-            this.groupBox1.Location = new System.Drawing.Point(280, 13);
+            this.groupBox1.Location = new System.Drawing.Point(280, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(241, 239);
             this.groupBox1.TabIndex = 40;
@@ -431,7 +586,7 @@ namespace Sog_SGreader
             this.groupBox2.Controls.Add(this.cbStyleFacegear);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.cbStyleWeapon);
-            this.groupBox2.Location = new System.Drawing.Point(280, 257);
+            this.groupBox2.Location = new System.Drawing.Point(280, 249);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(241, 129);
             this.groupBox2.TabIndex = 41;
@@ -506,28 +661,6 @@ namespace Sog_SGreader
             this.cbStyleWeapon.Size = new System.Drawing.Size(152, 21);
             this.cbStyleWeapon.TabIndex = 25;
             // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(8, 38);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(32, 13);
-            this.label37.TabIndex = 39;
-            this.label37.Text = "Gold:";
-            // 
-            // numGold
-            // 
-            this.numGold.Location = new System.Drawing.Point(64, 36);
-            this.numGold.Maximum = new decimal(new int[] {
-            2147483647,
-            0,
-            0,
-            0});
-            this.numGold.Name = "numGold";
-            this.numGold.Size = new System.Drawing.Size(101, 20);
-            this.numGold.TabIndex = 38;
-            this.Tooltips.SetToolTip(this.numGold, "Money/Papes/Cheddar/Mulla/Dollar/Coins/Green Faces/Loochies/Bread/Dosh");
-            // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.numSkillTalentPoints);
@@ -536,9 +669,9 @@ namespace Sog_SGreader
             this.groupBox6.Controls.Add(this.numSkillGoldPoints);
             this.groupBox6.Controls.Add(this.label35);
             this.groupBox6.Controls.Add(this.label34);
-            this.groupBox6.Location = new System.Drawing.Point(8, 257);
+            this.groupBox6.Location = new System.Drawing.Point(8, 270);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(155, 107);
+            this.groupBox6.Size = new System.Drawing.Size(155, 100);
             this.groupBox6.TabIndex = 37;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Skill Points";
@@ -616,7 +749,7 @@ namespace Sog_SGreader
             this.groupBox5.Controls.Add(this.numEXPUnknown0);
             this.groupBox5.Controls.Add(this.numEXPcurrent);
             this.groupBox5.Controls.Add(this.numLevel);
-            this.groupBox5.Location = new System.Drawing.Point(6, 126);
+            this.groupBox5.Location = new System.Drawing.Point(6, 136);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(156, 126);
             this.groupBox5.TabIndex = 36;
@@ -722,23 +855,6 @@ namespace Sog_SGreader
             0,
             0});
             // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(6, 13);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(58, 13);
-            this.label29.TabIndex = 35;
-            this.label29.Text = "Nickname:";
-            // 
-            // txtNickname
-            // 
-            this.txtNickname.Location = new System.Drawing.Point(64, 10);
-            this.txtNickname.Name = "txtNickname";
-            this.txtNickname.Size = new System.Drawing.Size(101, 20);
-            this.txtNickname.TabIndex = 34;
-            this.txtNickname.Text = "Tolik518_NoScope";
-            // 
             // gbColors
             // 
             this.gbColors.Controls.Add(this.label5);
@@ -751,9 +867,9 @@ namespace Sog_SGreader
             this.gbColors.Controls.Add(this.btnSkinColor);
             this.gbColors.Controls.Add(this.btnHairColor);
             this.gbColors.Controls.Add(this.label1);
-            this.gbColors.Location = new System.Drawing.Point(168, 208);
+            this.gbColors.Location = new System.Drawing.Point(170, 4);
             this.gbColors.Name = "gbColors";
-            this.gbColors.Size = new System.Drawing.Size(101, 156);
+            this.gbColors.Size = new System.Drawing.Size(101, 150);
             this.gbColors.TabIndex = 33;
             this.gbColors.TabStop = false;
             this.gbColors.Text = "Colors";
@@ -861,6 +977,8 @@ namespace Sog_SGreader
             // 
             // tabInventory
             // 
+            this.tabInventory.Controls.Add(this.numGold);
+            this.tabInventory.Controls.Add(this.label37);
             this.tabInventory.Controls.Add(this.groupBox4);
             this.tabInventory.Controls.Add(this.lstInventory);
             this.tabInventory.Location = new System.Drawing.Point(4, 22);
@@ -870,6 +988,28 @@ namespace Sog_SGreader
             this.tabInventory.TabIndex = 2;
             this.tabInventory.Text = "Inventory";
             this.tabInventory.UseVisualStyleBackColor = true;
+            // 
+            // numGold
+            // 
+            this.numGold.Location = new System.Drawing.Point(452, 351);
+            this.numGold.Maximum = new decimal(new int[] {
+            2147483647,
+            0,
+            0,
+            0});
+            this.numGold.Name = "numGold";
+            this.numGold.Size = new System.Drawing.Size(101, 20);
+            this.numGold.TabIndex = 40;
+            this.Tooltips.SetToolTip(this.numGold, "Money/Papes/Cheddar/Mulla/Dollar/Coins/Green Faces/Loochies/Bread/Dosh");
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(449, 335);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(32, 13);
+            this.label37.TabIndex = 41;
+            this.label37.Text = "Gold:";
             // 
             // groupBox4
             // 
@@ -1358,7 +1498,7 @@ namespace Sog_SGreader
             // tabSkills
             // 
             this.tabSkills.BackColor = System.Drawing.Color.Transparent;
-            this.tabSkills.Controls.Add(this.label38);
+            this.tabSkills.Controls.Add(this.tabControl1);
             this.tabSkills.Location = new System.Drawing.Point(4, 22);
             this.tabSkills.Name = "tabSkills";
             this.tabSkills.Padding = new System.Windows.Forms.Padding(3);
@@ -1367,16 +1507,45 @@ namespace Sog_SGreader
             this.tabSkills.Text = "*Skills";
             this.tabSkills.UseVisualStyleBackColor = true;
             // 
-            // label38
+            // tabControl1
             // 
-            this.label38.AutoSize = true;
-            this.label38.BackColor = System.Drawing.Color.Transparent;
-            this.label38.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label38.Location = new System.Drawing.Point(6, 3);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(117, 13);
-            this.label38.TabIndex = 31;
-            this.label38.Text = "* = not yet implemented";
+            this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tabControl1.Controls.Add(this.tabSkillsMelee);
+            this.tabControl1.Controls.Add(this.tabSkillsMagic);
+            this.tabControl1.Controls.Add(this.tabSkillsUtility);
+            this.tabControl1.Controls.Add(this.tabTalentsGeneral);
+            this.tabControl1.Controls.Add(this.tabTalentsMelee);
+            this.tabControl1.Controls.Add(this.tabTalentsMagic);
+            this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.tabControl1.ItemSize = new System.Drawing.Size(60, 100);
+            this.tabControl1.Location = new System.Drawing.Point(8, 6);
+            this.tabControl1.Multiline = true;
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(545, 384);
+            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControl1.TabIndex = 32;
+            this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
+            // 
+            // tabSkillsMelee
+            // 
+            this.tabSkillsMelee.Location = new System.Drawing.Point(104, 4);
+            this.tabSkillsMelee.Name = "tabSkillsMelee";
+            this.tabSkillsMelee.Padding = new System.Windows.Forms.Padding(3);
+            this.tabSkillsMelee.Size = new System.Drawing.Size(437, 376);
+            this.tabSkillsMelee.TabIndex = 0;
+            this.tabSkillsMelee.Text = "Skills: Melee";
+            this.tabSkillsMelee.UseVisualStyleBackColor = true;
+            // 
+            // tabSkillsMagic
+            // 
+            this.tabSkillsMagic.Location = new System.Drawing.Point(104, 4);
+            this.tabSkillsMagic.Name = "tabSkillsMagic";
+            this.tabSkillsMagic.Padding = new System.Windows.Forms.Padding(3);
+            this.tabSkillsMagic.Size = new System.Drawing.Size(437, 376);
+            this.tabSkillsMagic.TabIndex = 1;
+            this.tabSkillsMagic.Text = "Skills: Magic";
+            this.tabSkillsMagic.UseVisualStyleBackColor = true;
             // 
             // tabMerchant
             // 
@@ -1581,12 +1750,42 @@ namespace Sog_SGreader
             this.splitter1.TabIndex = 29;
             this.splitter1.TabStop = false;
             // 
-            // txtTimePlayed
+            // tabSkillsUtility
             // 
-            this.txtTimePlayed.Location = new System.Drawing.Point(110, 59);
-            this.txtTimePlayed.Name = "txtTimePlayed";
-            this.txtTimePlayed.Size = new System.Drawing.Size(55, 20);
-            this.txtTimePlayed.TabIndex = 45;
+            this.tabSkillsUtility.Location = new System.Drawing.Point(104, 4);
+            this.tabSkillsUtility.Name = "tabSkillsUtility";
+            this.tabSkillsUtility.Padding = new System.Windows.Forms.Padding(3);
+            this.tabSkillsUtility.Size = new System.Drawing.Size(437, 376);
+            this.tabSkillsUtility.TabIndex = 2;
+            this.tabSkillsUtility.Text = "Skills: Utility";
+            this.tabSkillsUtility.UseVisualStyleBackColor = true;
+            // 
+            // tabTalentsGeneral
+            // 
+            this.tabTalentsGeneral.Location = new System.Drawing.Point(104, 4);
+            this.tabTalentsGeneral.Name = "tabTalentsGeneral";
+            this.tabTalentsGeneral.Size = new System.Drawing.Size(437, 376);
+            this.tabTalentsGeneral.TabIndex = 3;
+            this.tabTalentsGeneral.Text = "Talents: General";
+            this.tabTalentsGeneral.UseVisualStyleBackColor = true;
+            // 
+            // tabTalentsMelee
+            // 
+            this.tabTalentsMelee.Location = new System.Drawing.Point(104, 4);
+            this.tabTalentsMelee.Name = "tabTalentsMelee";
+            this.tabTalentsMelee.Size = new System.Drawing.Size(437, 376);
+            this.tabTalentsMelee.TabIndex = 4;
+            this.tabTalentsMelee.Text = "Talents: Melee";
+            this.tabTalentsMelee.UseVisualStyleBackColor = true;
+            // 
+            // tabTalentsMagic
+            // 
+            this.tabTalentsMagic.Location = new System.Drawing.Point(104, 4);
+            this.tabTalentsMagic.Name = "tabTalentsMagic";
+            this.tabTalentsMagic.Size = new System.Drawing.Size(437, 376);
+            this.tabTalentsMagic.TabIndex = 5;
+            this.tabTalentsMagic.Text = "Talents: Magic";
+            this.tabTalentsMagic.UseVisualStyleBackColor = true;
             // 
             // FrmMain
             // 
@@ -1602,15 +1801,20 @@ namespace Sog_SGreader
             this.MainMenuStrip = this.msMenu;
             this.Name = "FrmMain";
             this.Text = "SoG: Savegame Reader v0.3.5 by TOLIK518";
-            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.tabContainer.ResumeLayout(false);
             this.tabChar.ResumeLayout(false);
             this.tabChar.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numID)).EndInit();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numBirtdayMonth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numBirthdayDay)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numGold)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillTalentPoints)).EndInit();
@@ -1625,6 +1829,8 @@ namespace Sog_SGreader
             this.gbColors.ResumeLayout(false);
             this.gbColors.PerformLayout();
             this.tabInventory.ResumeLayout(false);
+            this.tabInventory.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numGold)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numItemCount)).EndInit();
@@ -1641,7 +1847,7 @@ namespace Sog_SGreader
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.tabSkills.ResumeLayout(false);
-            this.tabSkills.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
             this.tabMerchant.ResumeLayout(false);
             this.tabMerchant.PerformLayout();
             this.tabCards.ResumeLayout(false);
@@ -1729,8 +1935,6 @@ namespace Sog_SGreader
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.NumericUpDown numGold;
         private System.Windows.Forms.NumericUpDown numSkillTalentPoints;
         private System.Windows.Forms.NumericUpDown numSkillSilverPoints;
         private System.Windows.Forms.NumericUpDown numSkillGoldPoints;
@@ -1761,7 +1965,6 @@ namespace Sog_SGreader
         private System.Windows.Forms.ComboBox cbStyleFacegear;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox cbStyleWeapon;
-        private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
@@ -1797,6 +2000,23 @@ namespace Sog_SGreader
         private System.Windows.Forms.ComboBox cbPetType;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.TextBox txtTimePlayed;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.NumericUpDown numBirtdayMonth;
+        private System.Windows.Forms.NumericUpDown numBirthdayDay;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.NumericUpDown numID;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.NumericUpDown numGold;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabSkillsMelee;
+        private System.Windows.Forms.TabPage tabSkillsMagic;
+        private System.Windows.Forms.TabPage tabSkillsUtility;
+        private System.Windows.Forms.TabPage tabTalentsGeneral;
+        private System.Windows.Forms.TabPage tabTalentsMelee;
+        private System.Windows.Forms.TabPage tabTalentsMagic;
     }
 }
 
