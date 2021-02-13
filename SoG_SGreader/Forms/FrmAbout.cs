@@ -17,7 +17,7 @@ namespace Sog_SGreader
 
         private void Label6_Click(object sender, System.EventArgs e)
         {
-            Clipboard.SetData(DataFormats.Text, "DUEm64pPyZi4V9XF7mFE6v2YahGhcURk1F");
+            Clipboard.SetData(DataFormats.Text, "addr1q8lscf0hrrf883q3ztdlpafge8vp8g6n2mjexhwg5m2nylk48l93aamzj4h9kw6yxpwca2dnkgmf2whqlaw0cym7mzwsrn5hch");
         }
     }
 }

@@ -153,7 +153,12 @@ namespace Sog_SGreader
             this.tabSkills = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabSkillsMelee = new System.Windows.Forms.TabPage();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.tabSkillsMagic = new System.Windows.Forms.TabPage();
+            this.tabSkillsUtility = new System.Windows.Forms.TabPage();
+            this.tabTalentsGeneral = new System.Windows.Forms.TabPage();
+            this.tabTalentsMelee = new System.Windows.Forms.TabPage();
+            this.tabTalentsMagic = new System.Windows.Forms.TabPage();
             this.tabMerchant = new System.Windows.Forms.TabPage();
             this.label39 = new System.Windows.Forms.Label();
             this.tabCards = new System.Windows.Forms.TabPage();
@@ -176,10 +181,8 @@ namespace Sog_SGreader
             this.txtConsole = new System.Windows.Forms.TextBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.Tooltips = new System.Windows.Forms.ToolTip(this.components);
-            this.tabSkillsUtility = new System.Windows.Forms.TabPage();
-            this.tabTalentsGeneral = new System.Windows.Forms.TabPage();
-            this.tabTalentsMelee = new System.Windows.Forms.TabPage();
-            this.tabTalentsMagic = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabContainer.SuspendLayout();
             this.tabChar.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -215,11 +218,15 @@ namespace Sog_SGreader
             this.groupBox3.SuspendLayout();
             this.tabSkills.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabSkillsMelee.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.tabMerchant.SuspendLayout();
             this.tabCards.SuspendLayout();
             this.tabTreasureMaps.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.msMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // tabContainer
@@ -360,11 +367,6 @@ namespace Sog_SGreader
             0,
             0,
             0});
-            this.numBirtdayMonth.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.numBirtdayMonth.Name = "numBirtdayMonth";
             this.numBirtdayMonth.Size = new System.Drawing.Size(32, 20);
             this.numBirtdayMonth.TabIndex = 48;
@@ -381,11 +383,6 @@ namespace Sog_SGreader
             this.numBirthdayDay.Location = new System.Drawing.Point(81, 98);
             this.numBirthdayDay.Maximum = new decimal(new int[] {
             31,
-            0,
-            0,
-            0});
-            this.numBirthdayDay.Minimum = new decimal(new int[] {
-            1,
             0,
             0,
             0});
@@ -1529,6 +1526,8 @@ namespace Sog_SGreader
             // 
             // tabSkillsMelee
             // 
+            this.tabSkillsMelee.Controls.Add(this.pictureBox1);
+            this.tabSkillsMelee.Controls.Add(this.trackBar1);
             this.tabSkillsMelee.Location = new System.Drawing.Point(104, 4);
             this.tabSkillsMelee.Name = "tabSkillsMelee";
             this.tabSkillsMelee.Padding = new System.Windows.Forms.Padding(3);
@@ -1536,6 +1535,16 @@ namespace Sog_SGreader
             this.tabSkillsMelee.TabIndex = 0;
             this.tabSkillsMelee.Text = "Skills: Melee";
             this.tabSkillsMelee.UseVisualStyleBackColor = true;
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar1.Location = new System.Drawing.Point(66, 118);
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(79, 45);
+            this.trackBar1.TabIndex = 0;
+            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar1.Value = 10;
             // 
             // tabSkillsMagic
             // 
@@ -1546,6 +1555,43 @@ namespace Sog_SGreader
             this.tabSkillsMagic.TabIndex = 1;
             this.tabSkillsMagic.Text = "Skills: Magic";
             this.tabSkillsMagic.UseVisualStyleBackColor = true;
+            // 
+            // tabSkillsUtility
+            // 
+            this.tabSkillsUtility.Location = new System.Drawing.Point(104, 4);
+            this.tabSkillsUtility.Name = "tabSkillsUtility";
+            this.tabSkillsUtility.Padding = new System.Windows.Forms.Padding(3);
+            this.tabSkillsUtility.Size = new System.Drawing.Size(437, 376);
+            this.tabSkillsUtility.TabIndex = 2;
+            this.tabSkillsUtility.Text = "Skills: Utility";
+            this.tabSkillsUtility.UseVisualStyleBackColor = true;
+            // 
+            // tabTalentsGeneral
+            // 
+            this.tabTalentsGeneral.Location = new System.Drawing.Point(104, 4);
+            this.tabTalentsGeneral.Name = "tabTalentsGeneral";
+            this.tabTalentsGeneral.Size = new System.Drawing.Size(437, 376);
+            this.tabTalentsGeneral.TabIndex = 3;
+            this.tabTalentsGeneral.Text = "Talents: General";
+            this.tabTalentsGeneral.UseVisualStyleBackColor = true;
+            // 
+            // tabTalentsMelee
+            // 
+            this.tabTalentsMelee.Location = new System.Drawing.Point(104, 4);
+            this.tabTalentsMelee.Name = "tabTalentsMelee";
+            this.tabTalentsMelee.Size = new System.Drawing.Size(437, 376);
+            this.tabTalentsMelee.TabIndex = 4;
+            this.tabTalentsMelee.Text = "Talents: Melee";
+            this.tabTalentsMelee.UseVisualStyleBackColor = true;
+            // 
+            // tabTalentsMagic
+            // 
+            this.tabTalentsMagic.Location = new System.Drawing.Point(104, 4);
+            this.tabTalentsMagic.Name = "tabTalentsMagic";
+            this.tabTalentsMagic.Size = new System.Drawing.Size(437, 376);
+            this.tabTalentsMagic.TabIndex = 5;
+            this.tabTalentsMagic.Text = "Talents: Magic";
+            this.tabTalentsMagic.UseVisualStyleBackColor = true;
             // 
             // tabMerchant
             // 
@@ -1721,7 +1767,7 @@ namespace Sog_SGreader
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
@@ -1750,42 +1796,24 @@ namespace Sog_SGreader
             this.splitter1.TabIndex = 29;
             this.splitter1.TabStop = false;
             // 
-            // tabSkillsUtility
+            // pictureBox1
             // 
-            this.tabSkillsUtility.Location = new System.Drawing.Point(104, 4);
-            this.tabSkillsUtility.Name = "tabSkillsUtility";
-            this.tabSkillsUtility.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSkillsUtility.Size = new System.Drawing.Size(437, 376);
-            this.tabSkillsUtility.TabIndex = 2;
-            this.tabSkillsUtility.Text = "Skills: Utility";
-            this.tabSkillsUtility.UseVisualStyleBackColor = true;
+            this.pictureBox1.Location = new System.Drawing.Point(237, 161);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
-            // tabTalentsGeneral
+            // pictureBox3
             // 
-            this.tabTalentsGeneral.Location = new System.Drawing.Point(104, 4);
-            this.tabTalentsGeneral.Name = "tabTalentsGeneral";
-            this.tabTalentsGeneral.Size = new System.Drawing.Size(437, 376);
-            this.tabTalentsGeneral.TabIndex = 3;
-            this.tabTalentsGeneral.Text = "Talents: General";
-            this.tabTalentsGeneral.UseVisualStyleBackColor = true;
-            // 
-            // tabTalentsMelee
-            // 
-            this.tabTalentsMelee.Location = new System.Drawing.Point(104, 4);
-            this.tabTalentsMelee.Name = "tabTalentsMelee";
-            this.tabTalentsMelee.Size = new System.Drawing.Size(437, 376);
-            this.tabTalentsMelee.TabIndex = 4;
-            this.tabTalentsMelee.Text = "Talents: Melee";
-            this.tabTalentsMelee.UseVisualStyleBackColor = true;
-            // 
-            // tabTalentsMagic
-            // 
-            this.tabTalentsMagic.Location = new System.Drawing.Point(104, 4);
-            this.tabTalentsMagic.Name = "tabTalentsMagic";
-            this.tabTalentsMagic.Size = new System.Drawing.Size(437, 376);
-            this.tabTalentsMagic.TabIndex = 5;
-            this.tabTalentsMagic.Text = "Talents: Magic";
-            this.tabTalentsMagic.UseVisualStyleBackColor = true;
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::SoG_SGreader.Properties.Resources.ada2;
+            this.pictureBox3.Location = new System.Drawing.Point(547, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(17, 17);
+            this.pictureBox3.TabIndex = 30;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // FrmMain
             // 
@@ -1793,6 +1821,7 @@ namespace Sog_SGreader
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(567, 528);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.txtConsole);
             this.Controls.Add(this.tabContainer);
@@ -1800,7 +1829,7 @@ namespace Sog_SGreader
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenu;
             this.Name = "FrmMain";
-            this.Text = "SoG: Savegame Reader v0.3.5 by TOLIK518";
+            this.Text = "SoG: Savegame Reader v0.3.7 by TOLIK518";
             this.tabContainer.ResumeLayout(false);
             this.tabChar.ResumeLayout(false);
             this.tabChar.PerformLayout();
@@ -1848,6 +1877,9 @@ namespace Sog_SGreader
             this.groupBox3.PerformLayout();
             this.tabSkills.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
+            this.tabSkillsMelee.ResumeLayout(false);
+            this.tabSkillsMelee.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.tabMerchant.ResumeLayout(false);
             this.tabMerchant.PerformLayout();
             this.tabCards.ResumeLayout(false);
@@ -1858,6 +1890,8 @@ namespace Sog_SGreader
             this.tabPage1.PerformLayout();
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2017,6 +2051,9 @@ namespace Sog_SGreader
         private System.Windows.Forms.TabPage tabTalentsGeneral;
         private System.Windows.Forms.TabPage tabTalentsMelee;
         private System.Windows.Forms.TabPage tabTalentsMagic;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 

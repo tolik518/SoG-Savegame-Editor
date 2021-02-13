@@ -18,9 +18,9 @@ namespace Sog_SGreader
 
         private void BtnLoadSaveGame_Click(object sender, EventArgs e)
         {
-            if (lstSaveGames.SelectedIndex != -1)
+            if (lstvSaveGames.SelectedItems.Count != 0)
             {
-                sFilePath = sFilePath + "\\" + lstSaveGames.SelectedItem.ToString();
+                sFilePath = sFilePath + "\\" + lstvSaveGames.SelectedItems[0].Text;
             }
             FrmMain frmMain = new FrmMain(sFilePath);
             this.Hide();
@@ -28,20 +28,78 @@ namespace Sog_SGreader
             this.Close();
         }
 
+        private void ReadHeaderData(string fileName)
+        {
+            using (FileStream fileStream = new FileStream(fileName, FileMode.Open))
+            {
+                BinaryReader readBinary = new BinaryReader(fileStream);
+
+                readBinary.ReadInt32(); //I dont know yet what the first bytes stand for tbh    
+                readBinary.ReadInt32(); //pPlayer.equip.Hat =
+                readBinary.ReadInt32(); //pPlayer.equip.Facegear =
+                readBinary.ReadChar(); // pPlayer.style.Bodytype = 
+                readBinary.ReadInt32(); //pPlayer.style.Hair = 
+                readBinary.ReadInt32(); //pPlayer.equip.Weapon = 
+                readBinary.ReadInt32(); //pPlayer.equip.Shield = 
+                readBinary.ReadInt32(); //pPlayer.equip.Armor =
+                readBinary.ReadInt32(); //pPlayer.equip.Shoes = 
+                readBinary.ReadInt32(); //pPlayer.equip.Accessory1 = 
+                readBinary.ReadInt32(); //pPlayer.equip.Accessory2 = 
+                readBinary.ReadInt32(); //pPlayer.style.Hat = 
+                readBinary.ReadInt32(); //pPlayer.style.Facegear = 
+                readBinary.ReadInt32(); //pPlayer.style.Weapon = 
+                readBinary.ReadInt32(); //pPlayer.style.Shield = 
+
+                readBinary.ReadBoolean(); //pPlayer.style.HatHidden = 
+                readBinary.ReadBoolean(); //pPlayer.style.FacegearHidden = 
+
+                readBinary.ReadInt32(); //pPlayer.LastTwoHander =  
+                readBinary.ReadInt32(); //pPlayer.LastOneHander =  
+                readBinary.ReadInt32(); //pPlayer.LastBow =     
+
+                for (int i = 0; i < 10; i++)
+                {
+                    int iQs_ID = readBinary.ReadByte();
+                    if (iQs_ID == 1)
+                    {
+                        readBinary.ReadInt32(); //pPlayer.quickslots.Add((Sog_Items)
+                }
+                    else if (iQs_ID == 2)
+                    {
+                        readBinary.ReadUInt16();    //pPlayer.quickslots.Add((Sog_Spells)
+                }
+                    else
+                    {
+                        
+                    }
+                }
+
+                readBinary.ReadByte();      //pPlayer.style.HairColor = 
+                readBinary.ReadByte();      //pPlayer.style.SkinColor = 
+                readBinary.ReadByte();      //pPlayer.style.PonchoColor = 
+                readBinary.ReadByte();      // pPlayer.style.ShirtColor = 
+                readBinary.ReadByte();      //pPlayer.style.PantsColor = 
+
+                readBinary.ReadByte();   //pPlayer.style.Sex = 
+
+                label1.Text = readBinary.ReadString();
+            }
+        }
+
         private void GetSaveGameFiles(string sFilePath)
         {
-            lstSaveGames.Items.Clear();
+            lstvSaveGames.Items.Clear();
             for (int i = 0; i != 10; i++)
             {
                 if (File.Exists(sFilePath + "\\" + i + ".cha"))
                 {
-                    lstSaveGames.Items.Add(i + ".cha");
+                    lstvSaveGames.Items.Add(i + ".cha", 0);
                 }
             }
-            if (lstSaveGames.Items.Count != 0)
+            if (lstvSaveGames.Items.Count != 0)
             {
                 lblSaveGameCount.ForeColor = Color.Black;
-                lblSaveGameCount.Text = lstSaveGames.Items.Count + " Savegames found.";
+                lblSaveGameCount.Text = lstvSaveGames.Items.Count + " Savegames found.";
             }
             else
             {
@@ -77,20 +135,12 @@ namespace Sog_SGreader
             this.Close();
         }
 
-        private void LstSaveGames_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (lstSaveGames.SelectedIndex != -1)
-            {
-                btnLoadSaveGame.Enabled = true;
-            }
-            UpdateFilePathLabel();
-        }
-
         private void UpdateFilePathLabel()
         {
-            if (lstSaveGames.SelectedIndex != -1)
+            if (lstvSaveGames.SelectedItems.Count != 0)
             {
-                lblFilePath.Text = sFilePath + "\\" + lstSaveGames.SelectedItem.ToString();
+                lblFilePath.Text = sFilePath + "\\" + lstvSaveGames.SelectedItems[0].Text;
+                ReadHeaderData(lblFilePath.Text);
             }
             else
             {
@@ -98,9 +148,15 @@ namespace Sog_SGreader
             }
         }
 
-        private void FrmLoadSaveGame_Load(object sender, EventArgs e)
+        private void lstvSaveGames_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (lstvSaveGames.SelectedItems.Count != 0)
+            {
+                btnLoadSaveGame.Enabled = true;
+            }
+            UpdateFilePathLabel();
 
         }
+
     }
 }

@@ -104,6 +104,11 @@
     <Compile Include="Enum\Sog_Items.cs" />
     <Compile Include="Enum\Sog_Magic.cs" />
     <Compile Include="Enum\Sog_Pets.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="WriteData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,14 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -193,7 +193,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon_final_alt.ico" />
-    <None Include="Resources\dogecoins.png" />
+    <None Include="Resources\cardano.png" />
+    <None Include="Resources\ada2.png" />
+    <None Include="Resources\save1.png" />
     <Content Include="VersionInc.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>VersionInc.cs</LastGenOutput>
