@@ -8,6 +8,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing.Drawing2D;
 
 namespace Sog_SGreader
 {
@@ -17,6 +18,10 @@ namespace Sog_SGreader
         {
             InitializeComponent();    //Initializing elements from the Designer
             InitElements(); //Initializing elements from this file
+            txtConsole.AppendText("https://github.com/tolik518/SoG_SGreader \r\n");
+            txtConsole.AppendText("Support me via Cardano: \r\n");
+            txtConsole.AppendText("addr1q8lscf0hrrf883q3ztdlpafge8vp8g6n2mjexhwg5m2nylk48l93aamzj4h9kw6yxpwca2dnkgmf2whqlaw0cym7mzwsrn5hch\r\n");
+            txtConsole.AppendText("________________________________________\r\n");
             if (File.Exists(sFilePath))
             {
                 LoadSaveGame(sFilePath);
@@ -43,7 +48,7 @@ namespace Sog_SGreader
 
         internal void LoadSaveGame(string sFilePath)
         {
-
+           
             txtConsole.AppendText(sFilePath);
             ReadData(sFilePath);
             saveToolStripMenuItem.Enabled = true;
@@ -521,6 +526,21 @@ namespace Sog_SGreader
         {
             FrmAbout frmAbout = new FrmAbout();
             frmAbout.ShowDialog();
+        }
+
+
+        /// <summary>
+        /// Inherits from PictureBox; adds Interpolation Mode Setting
+        /// </summary>
+        public class PictureBoxWithInterpolationMode : PictureBox
+        {
+            public InterpolationMode InterpolationMode { get; set; }
+
+            protected override void OnPaint(PaintEventArgs paintEventArgs)
+            {
+                paintEventArgs.Graphics.InterpolationMode = InterpolationMode;
+                base.OnPaint(paintEventArgs);
+            }
         }
     }
 }

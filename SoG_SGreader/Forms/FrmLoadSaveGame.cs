@@ -28,7 +28,7 @@ namespace Sog_SGreader
             this.Close();
         }
 
-        private void ReadHeaderData(string fileName)
+        private string GetCharName(string fileName)
         {
             using (FileStream fileStream = new FileStream(fileName, FileMode.Open))
             {
@@ -81,19 +81,22 @@ namespace Sog_SGreader
                 readBinary.ReadByte();      //pPlayer.style.PantsColor = 
 
                 readBinary.ReadByte();   //pPlayer.style.Sex = 
+                string nickname = readBinary.ReadString();               
+                readBinary.Dispose();
 
-                label1.Text = readBinary.ReadString();
+                return nickname;
             }
         }
 
         private void GetSaveGameFiles(string sFilePath)
         {
             lstvSaveGames.Items.Clear();
-            for (int i = 0; i != 10; i++)
+            for (int i = 0; i != 9; i++)
             {
                 if (File.Exists(sFilePath + "\\" + i + ".cha"))
                 {
-                    lstvSaveGames.Items.Add(i + ".cha", 0);
+                    string[] item = new string[] { i + ".cha", GetCharName(sFilePath + "\\" + i + ".cha")};
+                    lstvSaveGames.Items.Add(new ListViewItem(item, 0));
                 }
             }
             if (lstvSaveGames.Items.Count != 0)
@@ -140,7 +143,6 @@ namespace Sog_SGreader
             if (lstvSaveGames.SelectedItems.Count != 0)
             {
                 lblFilePath.Text = sFilePath + "\\" + lstvSaveGames.SelectedItems[0].Text;
-                ReadHeaderData(lblFilePath.Text);
             }
             else
             {
@@ -158,5 +160,10 @@ namespace Sog_SGreader
 
         }
 
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            FrmAbout frmAbout = new FrmAbout();
+            frmAbout.ShowDialog();
+        }
     }
 }

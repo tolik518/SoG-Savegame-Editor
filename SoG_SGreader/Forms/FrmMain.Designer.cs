@@ -153,6 +153,25 @@ namespace Sog_SGreader
             this.tabSkills = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabSkillsMelee = new System.Windows.Forms.TabPage();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.trackBar6 = new System.Windows.Forms.TrackBar();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.trackBar7 = new System.Windows.Forms.TrackBar();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.trackBar8 = new System.Windows.Forms.TrackBar();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.trackBar9 = new System.Windows.Forms.TrackBar();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.trackBar10 = new System.Windows.Forms.TrackBar();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.trackBar5 = new System.Windows.Forms.TrackBar();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.trackBar4 = new System.Windows.Forms.TrackBar();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.trackBar3 = new System.Windows.Forms.TrackBar();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.trackBar2 = new System.Windows.Forms.TrackBar();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.tabSkillsMagic = new System.Windows.Forms.TabPage();
             this.tabSkillsUtility = new System.Windows.Forms.TabPage();
@@ -181,8 +200,58 @@ namespace Sog_SGreader
             this.txtConsole = new System.Windows.Forms.TextBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.Tooltips = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.trackBar11 = new System.Windows.Forms.TrackBar();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.trackBar12 = new System.Windows.Forms.TrackBar();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.trackBar13 = new System.Windows.Forms.TrackBar();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.trackBar14 = new System.Windows.Forms.TrackBar();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.trackBar15 = new System.Windows.Forms.TrackBar();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.trackBar16 = new System.Windows.Forms.TrackBar();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.trackBar17 = new System.Windows.Forms.TrackBar();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.trackBar18 = new System.Windows.Forms.TrackBar();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.trackBar19 = new System.Windows.Forms.TrackBar();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.trackBar20 = new System.Windows.Forms.TrackBar();
+            this.pictureBox21 = new System.Windows.Forms.PictureBox();
+            this.trackBar21 = new System.Windows.Forms.TrackBar();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.trackBar22 = new System.Windows.Forms.TrackBar();
+            this.pictureBox23 = new System.Windows.Forms.PictureBox();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.trackBar23 = new System.Windows.Forms.TrackBar();
+            this.pictureBox24 = new System.Windows.Forms.PictureBox();
+            this.trackBar24 = new System.Windows.Forms.TrackBar();
+            this.pictureBox25 = new System.Windows.Forms.PictureBox();
+            this.trackBar25 = new System.Windows.Forms.TrackBar();
+            this.pictureBox26 = new System.Windows.Forms.PictureBox();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.trackBar26 = new System.Windows.Forms.TrackBar();
+            this.pictureBox27 = new System.Windows.Forms.PictureBox();
+            this.trackBar27 = new System.Windows.Forms.TrackBar();
+            this.pictureBox28 = new System.Windows.Forms.PictureBox();
+            this.trackBar28 = new System.Windows.Forms.TrackBar();
+            this.pictureBox29 = new System.Windows.Forms.PictureBox();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.trackBar29 = new System.Windows.Forms.TrackBar();
+            this.pictureBox30 = new System.Windows.Forms.PictureBox();
+            this.trackBar30 = new System.Windows.Forms.TrackBar();
+            this.pictureBox31 = new System.Windows.Forms.PictureBox();
+            this.trackBar31 = new System.Windows.Forms.TrackBar();
+            this.pictureBox32 = new System.Windows.Forms.PictureBox();
             this.tabContainer.SuspendLayout();
             this.tabChar.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -219,14 +288,85 @@ namespace Sog_SGreader
             this.tabSkills.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabSkillsMelee.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.tabSkillsMagic.SuspendLayout();
+            this.tabSkillsUtility.SuspendLayout();
             this.tabMerchant.SuspendLayout();
             this.tabCards.SuspendLayout();
             this.tabTreasureMaps.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.msMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.groupBox10.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            this.groupBox13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            this.groupBox14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
+            this.groupBox15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
+            this.groupBox16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
+            this.groupBox17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar26)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
+            this.groupBox18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar29)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
             this.SuspendLayout();
             // 
             // tabContainer
@@ -398,6 +538,7 @@ namespace Sog_SGreader
             // txtTimePlayed
             // 
             this.txtTimePlayed.Location = new System.Drawing.Point(73, 72);
+            this.txtTimePlayed.MaxLength = 13;
             this.txtTimePlayed.Name = "txtTimePlayed";
             this.txtTimePlayed.Size = new System.Drawing.Size(75, 20);
             this.txtTimePlayed.TabIndex = 45;
@@ -1526,8 +1667,8 @@ namespace Sog_SGreader
             // 
             // tabSkillsMelee
             // 
-            this.tabSkillsMelee.Controls.Add(this.pictureBox1);
-            this.tabSkillsMelee.Controls.Add(this.trackBar1);
+            this.tabSkillsMelee.Controls.Add(this.groupBox11);
+            this.tabSkillsMelee.Controls.Add(this.groupBox10);
             this.tabSkillsMelee.Location = new System.Drawing.Point(104, 4);
             this.tabSkillsMelee.Name = "tabSkillsMelee";
             this.tabSkillsMelee.Padding = new System.Windows.Forms.Padding(3);
@@ -1536,10 +1677,200 @@ namespace Sog_SGreader
             this.tabSkillsMelee.Text = "Skills: Melee";
             this.tabSkillsMelee.UseVisualStyleBackColor = true;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::SoG_SGreader.Properties.Resources.icon_berserk;
+            this.pictureBox7.Location = new System.Drawing.Point(355, 34);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 19;
+            this.pictureBox7.TabStop = false;
+            // 
+            // trackBar6
+            // 
+            this.trackBar6.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar6.Location = new System.Drawing.Point(338, 86);
+            this.trackBar6.Name = "trackBar6";
+            this.trackBar6.Size = new System.Drawing.Size(79, 45);
+            this.trackBar6.TabIndex = 18;
+            this.trackBar6.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar6.Value = 10;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::SoG_SGreader.Properties.Resources.icon_2hsmash;
+            this.pictureBox8.Location = new System.Drawing.Point(270, 34);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 17;
+            this.pictureBox8.TabStop = false;
+            // 
+            // trackBar7
+            // 
+            this.trackBar7.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar7.Location = new System.Drawing.Point(253, 86);
+            this.trackBar7.Name = "trackBar7";
+            this.trackBar7.Size = new System.Drawing.Size(79, 45);
+            this.trackBar7.TabIndex = 16;
+            this.trackBar7.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar7.Value = 10;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::SoG_SGreader.Properties.Resources.icon_2hthrow;
+            this.pictureBox9.Location = new System.Drawing.Point(191, 34);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 15;
+            this.pictureBox9.TabStop = false;
+            // 
+            // trackBar8
+            // 
+            this.trackBar8.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar8.Location = new System.Drawing.Point(174, 86);
+            this.trackBar8.Name = "trackBar8";
+            this.trackBar8.Size = new System.Drawing.Size(79, 45);
+            this.trackBar8.TabIndex = 14;
+            this.trackBar8.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar8.Value = 10;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::SoG_SGreader.Properties.Resources.icon_swirl_clover;
+            this.pictureBox10.Location = new System.Drawing.Point(112, 34);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 13;
+            this.pictureBox10.TabStop = false;
+            // 
+            // trackBar9
+            // 
+            this.trackBar9.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar9.Location = new System.Drawing.Point(95, 86);
+            this.trackBar9.Name = "trackBar9";
+            this.trackBar9.Size = new System.Drawing.Size(79, 45);
+            this.trackBar9.TabIndex = 12;
+            this.trackBar9.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar9.Value = 10;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::SoG_SGreader.Properties.Resources.icon_overhead;
+            this.pictureBox11.Location = new System.Drawing.Point(27, 34);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 11;
+            this.pictureBox11.TabStop = false;
+            // 
+            // trackBar10
+            // 
+            this.trackBar10.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar10.Location = new System.Drawing.Point(10, 86);
+            this.trackBar10.Name = "trackBar10";
+            this.trackBar10.Size = new System.Drawing.Size(79, 45);
+            this.trackBar10.TabIndex = 10;
+            this.trackBar10.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar10.Value = 10;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::SoG_SGreader.Properties.Resources.icon_dodgingstrike;
+            this.pictureBox6.Location = new System.Drawing.Point(355, 36);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 9;
+            this.pictureBox6.TabStop = false;
+            // 
+            // trackBar5
+            // 
+            this.trackBar5.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar5.Location = new System.Drawing.Point(338, 88);
+            this.trackBar5.Name = "trackBar5";
+            this.trackBar5.Size = new System.Drawing.Size(79, 45);
+            this.trackBar5.TabIndex = 8;
+            this.trackBar5.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar5.Value = 10;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::SoG_SGreader.Properties.Resources.icon_shadowclone;
+            this.pictureBox5.Location = new System.Drawing.Point(270, 36);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 7;
+            this.pictureBox5.TabStop = false;
+            // 
+            // trackBar4
+            // 
+            this.trackBar4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar4.Location = new System.Drawing.Point(253, 88);
+            this.trackBar4.Name = "trackBar4";
+            this.trackBar4.Size = new System.Drawing.Size(79, 45);
+            this.trackBar4.TabIndex = 6;
+            this.trackBar4.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar4.Value = 10;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::SoG_SGreader.Properties.Resources.icon_soulstrike;
+            this.pictureBox4.Location = new System.Drawing.Point(191, 36);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 5;
+            this.pictureBox4.TabStop = false;
+            // 
+            // trackBar3
+            // 
+            this.trackBar3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar3.Location = new System.Drawing.Point(174, 88);
+            this.trackBar3.Name = "trackBar3";
+            this.trackBar3.Size = new System.Drawing.Size(79, 45);
+            this.trackBar3.TabIndex = 4;
+            this.trackBar3.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar3.Value = 10;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::SoG_SGreader.Properties.Resources.icon_millionstabs;
+            this.pictureBox2.Location = new System.Drawing.Point(112, 36);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // trackBar2
+            // 
+            this.trackBar2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar2.Location = new System.Drawing.Point(95, 88);
+            this.trackBar2.Name = "trackBar2";
+            this.trackBar2.Size = new System.Drawing.Size(79, 45);
+            this.trackBar2.TabIndex = 2;
+            this.trackBar2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar2.Value = 10;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SoG_SGreader.Properties.Resources.icon_stinger_clover;
+            this.pictureBox1.Location = new System.Drawing.Point(27, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // trackBar1
             // 
             this.trackBar1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.trackBar1.Location = new System.Drawing.Point(66, 118);
+            this.trackBar1.Location = new System.Drawing.Point(10, 88);
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(79, 45);
             this.trackBar1.TabIndex = 0;
@@ -1548,6 +1879,10 @@ namespace Sog_SGreader
             // 
             // tabSkillsMagic
             // 
+            this.tabSkillsMagic.Controls.Add(this.groupBox15);
+            this.tabSkillsMagic.Controls.Add(this.groupBox14);
+            this.tabSkillsMagic.Controls.Add(this.groupBox13);
+            this.tabSkillsMagic.Controls.Add(this.groupBox12);
             this.tabSkillsMagic.Location = new System.Drawing.Point(104, 4);
             this.tabSkillsMagic.Name = "tabSkillsMagic";
             this.tabSkillsMagic.Padding = new System.Windows.Forms.Padding(3);
@@ -1558,6 +1893,9 @@ namespace Sog_SGreader
             // 
             // tabSkillsUtility
             // 
+            this.tabSkillsUtility.Controls.Add(this.groupBox18);
+            this.tabSkillsUtility.Controls.Add(this.groupBox17);
+            this.tabSkillsUtility.Controls.Add(this.groupBox16);
             this.tabSkillsUtility.Location = new System.Drawing.Point(104, 4);
             this.tabSkillsUtility.Name = "tabSkillsUtility";
             this.tabSkillsUtility.Padding = new System.Windows.Forms.Padding(3);
@@ -1767,7 +2105,7 @@ namespace Sog_SGreader
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
@@ -1777,12 +2115,12 @@ namespace Sog_SGreader
             this.txtConsole.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtConsole.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtConsole.ForeColor = System.Drawing.Color.LimeGreen;
-            this.txtConsole.Location = new System.Drawing.Point(0, 454);
+            this.txtConsole.Location = new System.Drawing.Point(0, 446);
             this.txtConsole.Multiline = true;
             this.txtConsole.Name = "txtConsole";
             this.txtConsole.ReadOnly = true;
             this.txtConsole.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtConsole.Size = new System.Drawing.Size(567, 74);
+            this.txtConsole.Size = new System.Drawing.Size(567, 104);
             this.txtConsole.TabIndex = 28;
             this.txtConsole.TabStop = false;
             // 
@@ -1790,24 +2128,16 @@ namespace Sog_SGreader
             // 
             this.splitter1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitter1.Location = new System.Drawing.Point(0, 444);
+            this.splitter1.Location = new System.Drawing.Point(0, 436);
             this.splitter1.Name = "splitter1";
             this.splitter1.Size = new System.Drawing.Size(567, 10);
             this.splitter1.TabIndex = 29;
             this.splitter1.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(237, 161);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::SoG_SGreader.Properties.Resources.ada2;
+            this.pictureBox3.Image = global::SoG_SGreader.Properties.Resources.ada21;
             this.pictureBox3.Location = new System.Drawing.Point(547, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(17, 17);
@@ -1815,12 +2145,583 @@ namespace Sog_SGreader
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.trackBar1);
+            this.groupBox10.Controls.Add(this.pictureBox1);
+            this.groupBox10.Controls.Add(this.trackBar2);
+            this.groupBox10.Controls.Add(this.pictureBox2);
+            this.groupBox10.Controls.Add(this.trackBar3);
+            this.groupBox10.Controls.Add(this.pictureBox4);
+            this.groupBox10.Controls.Add(this.trackBar4);
+            this.groupBox10.Controls.Add(this.pictureBox5);
+            this.groupBox10.Controls.Add(this.trackBar5);
+            this.groupBox10.Controls.Add(this.pictureBox6);
+            this.groupBox10.Location = new System.Drawing.Point(6, 6);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(425, 158);
+            this.groupBox10.TabIndex = 20;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "One Handed";
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.trackBar6);
+            this.groupBox11.Controls.Add(this.trackBar10);
+            this.groupBox11.Controls.Add(this.pictureBox7);
+            this.groupBox11.Controls.Add(this.pictureBox11);
+            this.groupBox11.Controls.Add(this.trackBar9);
+            this.groupBox11.Controls.Add(this.pictureBox8);
+            this.groupBox11.Controls.Add(this.pictureBox10);
+            this.groupBox11.Controls.Add(this.trackBar7);
+            this.groupBox11.Controls.Add(this.trackBar8);
+            this.groupBox11.Controls.Add(this.pictureBox9);
+            this.groupBox11.Location = new System.Drawing.Point(6, 170);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(425, 136);
+            this.groupBox11.TabIndex = 21;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Two Handed";
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.trackBar13);
+            this.groupBox12.Controls.Add(this.pictureBox14);
+            this.groupBox12.Controls.Add(this.trackBar12);
+            this.groupBox12.Controls.Add(this.pictureBox13);
+            this.groupBox12.Controls.Add(this.trackBar11);
+            this.groupBox12.Controls.Add(this.pictureBox12);
+            this.groupBox12.Location = new System.Drawing.Point(6, 6);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(209, 158);
+            this.groupBox12.TabIndex = 21;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Fire Magic";
+            // 
+            // trackBar11
+            // 
+            this.trackBar11.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar11.Location = new System.Drawing.Point(9, 88);
+            this.trackBar11.Name = "trackBar11";
+            this.trackBar11.Size = new System.Drawing.Size(67, 45);
+            this.trackBar11.TabIndex = 6;
+            this.trackBar11.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar11.Value = 10;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::SoG_SGreader.Properties.Resources.icon_fireball;
+            this.pictureBox12.Location = new System.Drawing.Point(19, 36);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 7;
+            this.pictureBox12.TabStop = false;
+            // 
+            // trackBar12
+            // 
+            this.trackBar12.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar12.Location = new System.Drawing.Point(73, 88);
+            this.trackBar12.Name = "trackBar12";
+            this.trackBar12.Size = new System.Drawing.Size(67, 45);
+            this.trackBar12.TabIndex = 8;
+            this.trackBar12.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar12.Value = 10;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = global::SoG_SGreader.Properties.Resources.icon_meteor;
+            this.pictureBox13.Location = new System.Drawing.Point(83, 36);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 9;
+            this.pictureBox13.TabStop = false;
+            // 
+            // trackBar13
+            // 
+            this.trackBar13.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar13.Location = new System.Drawing.Point(136, 88);
+            this.trackBar13.Name = "trackBar13";
+            this.trackBar13.Size = new System.Drawing.Size(67, 45);
+            this.trackBar13.TabIndex = 10;
+            this.trackBar13.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar13.Value = 10;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = global::SoG_SGreader.Properties.Resources.icon_flamethrower;
+            this.pictureBox14.Location = new System.Drawing.Point(146, 36);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox14.TabIndex = 11;
+            this.pictureBox14.TabStop = false;
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.trackBar14);
+            this.groupBox13.Controls.Add(this.pictureBox15);
+            this.groupBox13.Controls.Add(this.trackBar15);
+            this.groupBox13.Controls.Add(this.pictureBox16);
+            this.groupBox13.Controls.Add(this.trackBar16);
+            this.groupBox13.Controls.Add(this.pictureBox17);
+            this.groupBox13.Location = new System.Drawing.Point(221, 6);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(209, 158);
+            this.groupBox13.TabIndex = 22;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Ice Magic";
+            // 
+            // trackBar14
+            // 
+            this.trackBar14.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar14.Location = new System.Drawing.Point(136, 88);
+            this.trackBar14.Name = "trackBar14";
+            this.trackBar14.Size = new System.Drawing.Size(67, 45);
+            this.trackBar14.TabIndex = 10;
+            this.trackBar14.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar14.Value = 10;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Image = global::SoG_SGreader.Properties.Resources.icon_frosty;
+            this.pictureBox15.Location = new System.Drawing.Point(146, 36);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox15.TabIndex = 11;
+            this.pictureBox15.TabStop = false;
+            // 
+            // trackBar15
+            // 
+            this.trackBar15.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar15.Location = new System.Drawing.Point(73, 88);
+            this.trackBar15.Name = "trackBar15";
+            this.trackBar15.Size = new System.Drawing.Size(67, 45);
+            this.trackBar15.TabIndex = 8;
+            this.trackBar15.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar15.Value = 10;
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.Image = global::SoG_SGreader.Properties.Resources.icon_frostnova_clover;
+            this.pictureBox16.Location = new System.Drawing.Point(83, 36);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.TabIndex = 9;
+            this.pictureBox16.TabStop = false;
+            // 
+            // trackBar16
+            // 
+            this.trackBar16.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar16.Location = new System.Drawing.Point(9, 88);
+            this.trackBar16.Name = "trackBar16";
+            this.trackBar16.Size = new System.Drawing.Size(67, 45);
+            this.trackBar16.TabIndex = 6;
+            this.trackBar16.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar16.Value = 10;
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = global::SoG_SGreader.Properties.Resources.icon_icespikes;
+            this.pictureBox17.Location = new System.Drawing.Point(19, 36);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 7;
+            this.pictureBox17.TabStop = false;
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.trackBar17);
+            this.groupBox14.Controls.Add(this.pictureBox18);
+            this.groupBox14.Controls.Add(this.trackBar18);
+            this.groupBox14.Controls.Add(this.pictureBox19);
+            this.groupBox14.Controls.Add(this.trackBar19);
+            this.groupBox14.Controls.Add(this.pictureBox20);
+            this.groupBox14.Location = new System.Drawing.Point(6, 170);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(209, 158);
+            this.groupBox14.TabIndex = 22;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Earth Magic";
+            // 
+            // trackBar17
+            // 
+            this.trackBar17.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar17.Location = new System.Drawing.Point(136, 88);
+            this.trackBar17.Name = "trackBar17";
+            this.trackBar17.Size = new System.Drawing.Size(67, 45);
+            this.trackBar17.TabIndex = 10;
+            this.trackBar17.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar17.Value = 10;
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Image = global::SoG_SGreader.Properties.Resources.icon_swarm;
+            this.pictureBox18.Location = new System.Drawing.Point(146, 36);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.TabIndex = 11;
+            this.pictureBox18.TabStop = false;
+            // 
+            // trackBar18
+            // 
+            this.trackBar18.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar18.Location = new System.Drawing.Point(73, 88);
+            this.trackBar18.Name = "trackBar18";
+            this.trackBar18.Size = new System.Drawing.Size(67, 45);
+            this.trackBar18.TabIndex = 8;
+            this.trackBar18.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar18.Value = 10;
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.Image = global::SoG_SGreader.Properties.Resources.icon_plantsummon;
+            this.pictureBox19.Location = new System.Drawing.Point(83, 36);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox19.TabIndex = 9;
+            this.pictureBox19.TabStop = false;
+            // 
+            // trackBar19
+            // 
+            this.trackBar19.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar19.Location = new System.Drawing.Point(9, 88);
+            this.trackBar19.Name = "trackBar19";
+            this.trackBar19.Size = new System.Drawing.Size(67, 45);
+            this.trackBar19.TabIndex = 6;
+            this.trackBar19.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar19.Value = 10;
+            // 
+            // pictureBox20
+            // 
+            this.pictureBox20.Image = global::SoG_SGreader.Properties.Resources.icon_earthspike;
+            this.pictureBox20.Location = new System.Drawing.Point(19, 36);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox20.TabIndex = 7;
+            this.pictureBox20.TabStop = false;
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.trackBar20);
+            this.groupBox15.Controls.Add(this.pictureBox21);
+            this.groupBox15.Controls.Add(this.trackBar21);
+            this.groupBox15.Controls.Add(this.pictureBox22);
+            this.groupBox15.Controls.Add(this.trackBar22);
+            this.groupBox15.Controls.Add(this.pictureBox23);
+            this.groupBox15.Location = new System.Drawing.Point(221, 170);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(209, 158);
+            this.groupBox15.TabIndex = 22;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Air Magic";
+            // 
+            // trackBar20
+            // 
+            this.trackBar20.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar20.Location = new System.Drawing.Point(136, 88);
+            this.trackBar20.Name = "trackBar20";
+            this.trackBar20.Size = new System.Drawing.Size(67, 45);
+            this.trackBar20.TabIndex = 10;
+            this.trackBar20.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar20.Value = 10;
+            // 
+            // pictureBox21
+            // 
+            this.pictureBox21.Image = global::SoG_SGreader.Properties.Resources.icon_statictouch;
+            this.pictureBox21.Location = new System.Drawing.Point(146, 36);
+            this.pictureBox21.Name = "pictureBox21";
+            this.pictureBox21.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox21.TabIndex = 11;
+            this.pictureBox21.TabStop = false;
+            // 
+            // trackBar21
+            // 
+            this.trackBar21.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar21.Location = new System.Drawing.Point(73, 88);
+            this.trackBar21.Name = "trackBar21";
+            this.trackBar21.Size = new System.Drawing.Size(67, 45);
+            this.trackBar21.TabIndex = 8;
+            this.trackBar21.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar21.Value = 10;
+            // 
+            // pictureBox22
+            // 
+            this.pictureBox22.Image = global::SoG_SGreader.Properties.Resources.icon_summoncloud;
+            this.pictureBox22.Location = new System.Drawing.Point(83, 36);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox22.TabIndex = 9;
+            this.pictureBox22.TabStop = false;
+            // 
+            // trackBar22
+            // 
+            this.trackBar22.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar22.Location = new System.Drawing.Point(9, 88);
+            this.trackBar22.Name = "trackBar22";
+            this.trackBar22.Size = new System.Drawing.Size(67, 45);
+            this.trackBar22.TabIndex = 6;
+            this.trackBar22.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar22.Value = 10;
+            // 
+            // pictureBox23
+            // 
+            this.pictureBox23.Image = global::SoG_SGreader.Properties.Resources.icon_chainlightning;
+            this.pictureBox23.Location = new System.Drawing.Point(19, 36);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox23.TabIndex = 7;
+            this.pictureBox23.TabStop = false;
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.trackBar23);
+            this.groupBox16.Controls.Add(this.pictureBox24);
+            this.groupBox16.Controls.Add(this.trackBar24);
+            this.groupBox16.Controls.Add(this.pictureBox25);
+            this.groupBox16.Controls.Add(this.trackBar25);
+            this.groupBox16.Controls.Add(this.pictureBox26);
+            this.groupBox16.Location = new System.Drawing.Point(6, 6);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(425, 121);
+            this.groupBox16.TabIndex = 21;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "Offensive";
+            // 
+            // trackBar23
+            // 
+            this.trackBar23.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar23.Location = new System.Drawing.Point(90, 68);
+            this.trackBar23.Maximum = 3;
+            this.trackBar23.Name = "trackBar23";
+            this.trackBar23.Size = new System.Drawing.Size(79, 45);
+            this.trackBar23.TabIndex = 0;
+            this.trackBar23.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            // 
+            // pictureBox24
+            // 
+            this.pictureBox24.Image = global::SoG_SGreader.Properties.Resources.icon_utility_deathmark;
+            this.pictureBox24.Location = new System.Drawing.Point(107, 19);
+            this.pictureBox24.Name = "pictureBox24";
+            this.pictureBox24.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox24.TabIndex = 1;
+            this.pictureBox24.TabStop = false;
+            // 
+            // trackBar24
+            // 
+            this.trackBar24.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar24.Location = new System.Drawing.Point(175, 68);
+            this.trackBar24.Maximum = 3;
+            this.trackBar24.Name = "trackBar24";
+            this.trackBar24.Size = new System.Drawing.Size(79, 45);
+            this.trackBar24.TabIndex = 2;
+            this.trackBar24.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar24.Value = 3;
+            // 
+            // pictureBox25
+            // 
+            this.pictureBox25.Image = global::SoG_SGreader.Properties.Resources.icon_utility_sleep;
+            this.pictureBox25.Location = new System.Drawing.Point(192, 19);
+            this.pictureBox25.Name = "pictureBox25";
+            this.pictureBox25.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox25.TabIndex = 3;
+            this.pictureBox25.TabStop = false;
+            // 
+            // trackBar25
+            // 
+            this.trackBar25.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar25.Location = new System.Drawing.Point(254, 68);
+            this.trackBar25.Maximum = 3;
+            this.trackBar25.Name = "trackBar25";
+            this.trackBar25.Size = new System.Drawing.Size(79, 45);
+            this.trackBar25.TabIndex = 4;
+            this.trackBar25.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar25.Value = 3;
+            // 
+            // pictureBox26
+            // 
+            this.pictureBox26.Image = global::SoG_SGreader.Properties.Resources.icon_utility_taunt;
+            this.pictureBox26.Location = new System.Drawing.Point(271, 19);
+            this.pictureBox26.Name = "pictureBox26";
+            this.pictureBox26.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox26.TabIndex = 5;
+            this.pictureBox26.TabStop = false;
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.trackBar26);
+            this.groupBox17.Controls.Add(this.pictureBox27);
+            this.groupBox17.Controls.Add(this.trackBar27);
+            this.groupBox17.Controls.Add(this.pictureBox28);
+            this.groupBox17.Controls.Add(this.trackBar28);
+            this.groupBox17.Controls.Add(this.pictureBox29);
+            this.groupBox17.Location = new System.Drawing.Point(6, 127);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(425, 121);
+            this.groupBox17.TabIndex = 22;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "Defensive";
+            // 
+            // trackBar26
+            // 
+            this.trackBar26.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar26.Location = new System.Drawing.Point(90, 68);
+            this.trackBar26.Maximum = 3;
+            this.trackBar26.Name = "trackBar26";
+            this.trackBar26.Size = new System.Drawing.Size(79, 45);
+            this.trackBar26.TabIndex = 0;
+            this.trackBar26.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar26.Value = 3;
+            // 
+            // pictureBox27
+            // 
+            this.pictureBox27.Image = global::SoG_SGreader.Properties.Resources.icon_utility_blink;
+            this.pictureBox27.Location = new System.Drawing.Point(107, 19);
+            this.pictureBox27.Name = "pictureBox27";
+            this.pictureBox27.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox27.TabIndex = 1;
+            this.pictureBox27.TabStop = false;
+            // 
+            // trackBar27
+            // 
+            this.trackBar27.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar27.Location = new System.Drawing.Point(175, 68);
+            this.trackBar27.Maximum = 3;
+            this.trackBar27.Name = "trackBar27";
+            this.trackBar27.Size = new System.Drawing.Size(79, 45);
+            this.trackBar27.TabIndex = 2;
+            this.trackBar27.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar27.Value = 3;
+            // 
+            // pictureBox28
+            // 
+            this.pictureBox28.Image = global::SoG_SGreader.Properties.Resources.icon_utility_focus;
+            this.pictureBox28.Location = new System.Drawing.Point(192, 19);
+            this.pictureBox28.Name = "pictureBox28";
+            this.pictureBox28.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox28.TabIndex = 3;
+            this.pictureBox28.TabStop = false;
+            // 
+            // trackBar28
+            // 
+            this.trackBar28.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar28.Location = new System.Drawing.Point(254, 68);
+            this.trackBar28.Maximum = 3;
+            this.trackBar28.Name = "trackBar28";
+            this.trackBar28.Size = new System.Drawing.Size(79, 45);
+            this.trackBar28.TabIndex = 4;
+            this.trackBar28.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar28.Value = 3;
+            // 
+            // pictureBox29
+            // 
+            this.pictureBox29.Image = global::SoG_SGreader.Properties.Resources.icon_utility_barrier;
+            this.pictureBox29.Location = new System.Drawing.Point(271, 19);
+            this.pictureBox29.Name = "pictureBox29";
+            this.pictureBox29.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox29.TabIndex = 5;
+            this.pictureBox29.TabStop = false;
+            // 
+            // groupBox18
+            // 
+            this.groupBox18.Controls.Add(this.trackBar29);
+            this.groupBox18.Controls.Add(this.pictureBox30);
+            this.groupBox18.Controls.Add(this.trackBar30);
+            this.groupBox18.Controls.Add(this.pictureBox31);
+            this.groupBox18.Controls.Add(this.trackBar31);
+            this.groupBox18.Controls.Add(this.pictureBox32);
+            this.groupBox18.Location = new System.Drawing.Point(6, 253);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Size = new System.Drawing.Size(425, 121);
+            this.groupBox18.TabIndex = 22;
+            this.groupBox18.TabStop = false;
+            this.groupBox18.Text = "Enhancing";
+            // 
+            // trackBar29
+            // 
+            this.trackBar29.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar29.Location = new System.Drawing.Point(90, 68);
+            this.trackBar29.Maximum = 3;
+            this.trackBar29.Name = "trackBar29";
+            this.trackBar29.Size = new System.Drawing.Size(79, 45);
+            this.trackBar29.TabIndex = 0;
+            this.trackBar29.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar29.Value = 3;
+            // 
+            // pictureBox30
+            // 
+            this.pictureBox30.Image = global::SoG_SGreader.Properties.Resources.icon_dmgup;
+            this.pictureBox30.Location = new System.Drawing.Point(107, 19);
+            this.pictureBox30.Name = "pictureBox30";
+            this.pictureBox30.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox30.TabIndex = 1;
+            this.pictureBox30.TabStop = false;
+            // 
+            // trackBar30
+            // 
+            this.trackBar30.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar30.Location = new System.Drawing.Point(175, 68);
+            this.trackBar30.Maximum = 3;
+            this.trackBar30.Name = "trackBar30";
+            this.trackBar30.Size = new System.Drawing.Size(79, 45);
+            this.trackBar30.TabIndex = 2;
+            this.trackBar30.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar30.Value = 3;
+            // 
+            // pictureBox31
+            // 
+            this.pictureBox31.Image = global::SoG_SGreader.Properties.Resources.icon_speedup;
+            this.pictureBox31.Location = new System.Drawing.Point(192, 19);
+            this.pictureBox31.Name = "pictureBox31";
+            this.pictureBox31.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox31.TabIndex = 3;
+            this.pictureBox31.TabStop = false;
+            // 
+            // trackBar31
+            // 
+            this.trackBar31.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.trackBar31.Location = new System.Drawing.Point(254, 68);
+            this.trackBar31.Maximum = 3;
+            this.trackBar31.Name = "trackBar31";
+            this.trackBar31.Size = new System.Drawing.Size(79, 45);
+            this.trackBar31.TabIndex = 4;
+            this.trackBar31.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
+            this.trackBar31.Value = 3;
+            // 
+            // pictureBox32
+            // 
+            this.pictureBox32.Image = global::SoG_SGreader.Properties.Resources.icon_protect_clover;
+            this.pictureBox32.Location = new System.Drawing.Point(271, 19);
+            this.pictureBox32.Name = "pictureBox32";
+            this.pictureBox32.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox32.TabIndex = 5;
+            this.pictureBox32.TabStop = false;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(567, 528);
+            this.ClientSize = new System.Drawing.Size(567, 550);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.txtConsole);
@@ -1878,8 +2779,28 @@ namespace Sog_SGreader
             this.tabSkills.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabSkillsMelee.ResumeLayout(false);
-            this.tabSkillsMelee.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            this.tabSkillsMagic.ResumeLayout(false);
+            this.tabSkillsUtility.ResumeLayout(false);
             this.tabMerchant.ResumeLayout(false);
             this.tabMerchant.PerformLayout();
             this.tabCards.ResumeLayout(false);
@@ -1890,8 +2811,67 @@ namespace Sog_SGreader
             this.tabPage1.PerformLayout();
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
+            this.groupBox17.ResumeLayout(false);
+            this.groupBox17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar26)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
+            this.groupBox18.ResumeLayout(false);
+            this.groupBox18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar29)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2054,6 +3034,75 @@ namespace Sog_SGreader
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.TrackBar trackBar6;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.TrackBar trackBar7;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.TrackBar trackBar8;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.TrackBar trackBar9;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.TrackBar trackBar10;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.TrackBar trackBar5;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.TrackBar trackBar4;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.TrackBar trackBar3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TrackBar trackBar2;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.TrackBar trackBar20;
+        private System.Windows.Forms.PictureBox pictureBox21;
+        private System.Windows.Forms.TrackBar trackBar21;
+        private System.Windows.Forms.PictureBox pictureBox22;
+        private System.Windows.Forms.TrackBar trackBar22;
+        private System.Windows.Forms.PictureBox pictureBox23;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.TrackBar trackBar17;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.TrackBar trackBar18;
+        private System.Windows.Forms.PictureBox pictureBox19;
+        private System.Windows.Forms.TrackBar trackBar19;
+        private System.Windows.Forms.PictureBox pictureBox20;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.TrackBar trackBar14;
+        private System.Windows.Forms.PictureBox pictureBox15;
+        private System.Windows.Forms.TrackBar trackBar15;
+        private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.TrackBar trackBar16;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.TrackBar trackBar13;
+        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.TrackBar trackBar12;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.TrackBar trackBar11;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.GroupBox groupBox18;
+        private System.Windows.Forms.TrackBar trackBar29;
+        private System.Windows.Forms.PictureBox pictureBox30;
+        private System.Windows.Forms.TrackBar trackBar30;
+        private System.Windows.Forms.PictureBox pictureBox31;
+        private System.Windows.Forms.TrackBar trackBar31;
+        private System.Windows.Forms.PictureBox pictureBox32;
+        private System.Windows.Forms.GroupBox groupBox17;
+        private System.Windows.Forms.TrackBar trackBar26;
+        private System.Windows.Forms.PictureBox pictureBox27;
+        private System.Windows.Forms.TrackBar trackBar27;
+        private System.Windows.Forms.PictureBox pictureBox28;
+        private System.Windows.Forms.TrackBar trackBar28;
+        private System.Windows.Forms.PictureBox pictureBox29;
+        private System.Windows.Forms.GroupBox groupBox16;
+        private System.Windows.Forms.TrackBar trackBar23;
+        private System.Windows.Forms.PictureBox pictureBox24;
+        private System.Windows.Forms.TrackBar trackBar24;
+        private System.Windows.Forms.PictureBox pictureBox25;
+        private System.Windows.Forms.TrackBar trackBar25;
+        private System.Windows.Forms.PictureBox pictureBox26;
     }
 }
 
