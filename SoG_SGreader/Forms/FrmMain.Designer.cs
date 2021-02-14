@@ -165,6 +165,7 @@ namespace Sog_SGreader
             this.sliderSkillMelee2h2 = new System.Windows.Forms.TrackBar();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.label38 = new System.Windows.Forms.Label();
             this.sliderSkillMelee1h0 = new System.Windows.Forms.TrackBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sliderSkillMelee1h1 = new System.Windows.Forms.TrackBar();
@@ -252,7 +253,7 @@ namespace Sog_SGreader
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.Tooltips = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label38 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
             this.tabContainer.SuspendLayout();
             this.tabChar.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -495,9 +496,9 @@ namespace Sog_SGreader
             this.label53.AutoSize = true;
             this.label53.Location = new System.Drawing.Point(5, 100);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(42, 13);
+            this.label53.Size = new System.Drawing.Size(48, 13);
             this.label53.TabIndex = 49;
-            this.label53.Text = "Birtday:";
+            this.label53.Text = "Birthday:";
             this.Tooltips.SetToolTip(this.label53, "Day / Month");
             // 
             // numBirtdayMonth
@@ -1799,6 +1800,7 @@ namespace Sog_SGreader
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.label56);
             this.groupBox10.Controls.Add(this.label38);
             this.groupBox10.Controls.Add(this.sliderSkillMelee1h0);
             this.groupBox10.Controls.Add(this.pictureBox1);
@@ -1816,6 +1818,15 @@ namespace Sog_SGreader
             this.groupBox10.TabIndex = 20;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "One Handed";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(24, 120);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(45, 13);
+            this.label38.TabIndex = 10;
+            this.label38.Text = "Level: 0";
             // 
             // sliderSkillMelee1h0
             // 
@@ -2620,7 +2631,7 @@ namespace Sog_SGreader
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
@@ -2628,7 +2639,7 @@ namespace Sog_SGreader
             // 
             this.saveToolStripMenuItem.Enabled = false;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
@@ -2636,7 +2647,7 @@ namespace Sog_SGreader
             // 
             this.importToolStripMenuItem.Enabled = false;
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.importToolStripMenuItem.Text = "Import";
             // 
             // exportAsToolStripMenuItem
@@ -2645,7 +2656,7 @@ namespace Sog_SGreader
             this.jSONToolStripMenuItem,
             this.xMLToolStripMenuItem});
             this.exportAsToolStripMenuItem.Name = "exportAsToolStripMenuItem";
-            this.exportAsToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.exportAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exportAsToolStripMenuItem.Text = "Export as...";
             // 
             // jSONToolStripMenuItem
@@ -2664,7 +2675,7 @@ namespace Sog_SGreader
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -2719,14 +2730,14 @@ namespace Sog_SGreader
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // label38
+            // label56
             // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(24, 120);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(45, 13);
-            this.label38.TabIndex = 10;
-            this.label38.Text = "Level: 0";
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(24, 20);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(160, 13);
+            this.label56.TabIndex = 11;
+            this.label56.Text = "*These values will not be saved.";
             // 
             // FrmMain
             // 
@@ -3116,6 +3127,7 @@ namespace Sog_SGreader
         private System.Windows.Forms.TrackBar sliderUtilityO2;
         private System.Windows.Forms.PictureBox pictureBox26;
         private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label56;
     }
 }
 

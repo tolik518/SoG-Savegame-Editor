@@ -159,11 +159,5 @@ namespace Sog_SGreader
             UpdateFilePathLabel();
 
         }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            FrmAbout frmAbout = new FrmAbout();
-            frmAbout.ShowDialog();
-        }
     }
 }

@@ -40,20 +40,18 @@ namespace Sog_SGreader
             this.columnCharName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnChooseFolder = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLoadSaveGame
             // 
             this.btnLoadSaveGame.Enabled = false;
-            this.btnLoadSaveGame.Location = new System.Drawing.Point(236, 131);
+            this.btnLoadSaveGame.Location = new System.Drawing.Point(236, 134);
             this.btnLoadSaveGame.Name = "btnLoadSaveGame";
-            this.btnLoadSaveGame.Size = new System.Drawing.Size(75, 23);
+            this.btnLoadSaveGame.Size = new System.Drawing.Size(85, 23);
             this.btnLoadSaveGame.TabIndex = 0;
-            this.btnLoadSaveGame.Text = "Load...";
+            this.btnLoadSaveGame.Text = "Load";
             this.btnLoadSaveGame.UseVisualStyleBackColor = true;
             this.btnLoadSaveGame.Click += new System.EventHandler(this.BtnLoadSaveGame_Click);
             // 
@@ -69,19 +67,18 @@ namespace Sog_SGreader
             // 
             // lblFilePath
             // 
-            this.lblFilePath.AutoSize = true;
             this.lblFilePath.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblFilePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFilePath.Location = new System.Drawing.Point(0, 193);
+            this.lblFilePath.Location = new System.Drawing.Point(0, 186);
             this.lblFilePath.Name = "lblFilePath";
-            this.lblFilePath.Size = new System.Drawing.Size(54, 12);
+            this.lblFilePath.Size = new System.Drawing.Size(361, 24);
             this.lblFilePath.TabIndex = 4;
             this.lblFilePath.Text = "[lblFilePath]";
             // 
             // lblSaveGameCount
             // 
             this.lblSaveGameCount.AutoSize = true;
-            this.lblSaveGameCount.Location = new System.Drawing.Point(236, 115);
+            this.lblSaveGameCount.Location = new System.Drawing.Point(236, 118);
             this.lblSaveGameCount.Name = "lblSaveGameCount";
             this.lblSaveGameCount.Size = new System.Drawing.Size(113, 13);
             this.lblSaveGameCount.TabIndex = 5;
@@ -129,30 +126,19 @@ namespace Sog_SGreader
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::SoG_SGreader.Properties.Resources.icon;
-            this.pictureBox1.Location = new System.Drawing.Point(239, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(236, 7);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(110, 91);
+            this.pictureBox1.Size = new System.Drawing.Size(119, 105);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(343, 1);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(17, 17);
-            this.pictureBox3.TabIndex = 31;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // btnChooseFolder
             // 
             this.btnChooseFolder.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnChooseFolder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnChooseFolder.Image = ((System.Drawing.Image)(resources.GetObject("btnChooseFolder.Image")));
-            this.btnChooseFolder.Location = new System.Drawing.Point(327, 131);
+            this.btnChooseFolder.Location = new System.Drawing.Point(327, 134);
             this.btnChooseFolder.Name = "btnChooseFolder";
             this.btnChooseFolder.Size = new System.Drawing.Size(25, 23);
             this.btnChooseFolder.TabIndex = 2;
@@ -164,9 +150,8 @@ namespace Sog_SGreader
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(361, 205);
+            this.ClientSize = new System.Drawing.Size(361, 210);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.lstvSaveGames);
             this.Controls.Add(this.lblSaveGameCount);
             this.Controls.Add(this.lblFilePath);
@@ -178,7 +163,6 @@ namespace Sog_SGreader
             this.Name = "FrmLoadSaveGame";
             this.Text = "SoG: Savegame Reader v0.3.7 by TOLIK518";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,7 +179,6 @@ namespace Sog_SGreader
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ColumnHeader columnSavefile;
         private System.Windows.Forms.ColumnHeader columnCharName;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

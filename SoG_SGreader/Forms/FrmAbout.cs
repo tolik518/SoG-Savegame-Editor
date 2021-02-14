@@ -14,10 +14,25 @@ namespace Sog_SGreader
         {
             System.Diagnostics.Process.Start("https://github.com/tolik518/SoG_SGreader");
         }
-
+ 
         private void Label6_Click(object sender, System.EventArgs e)
         {
             Clipboard.SetData(DataFormats.Text, "addr1q8lscf0hrrf883q3ztdlpafge8vp8g6n2mjexhwg5m2nylk48l93aamzj4h9kw6yxpwca2dnkgmf2whqlaw0cym7mzwsrn5hch");
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://cardano.org/");
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.reddit.com/r/cardano/");
+        }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.reddit.com/r/cardano_ELI5");
         }
     }
 }
