@@ -1,6 +1,6 @@
 ﻿namespace Sog_SGreader
 {
-    public enum Sog_Spells : ushort
+    public enum Sog_Skills : ushort
     {
         NULL = 0,
         _Basic_HealthBoost = 1,

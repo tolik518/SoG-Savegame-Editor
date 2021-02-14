@@ -102,7 +102,7 @@
   <ItemGroup>
     <Compile Include="Enum\Sog_Colors.cs" />
     <Compile Include="Enum\Sog_Items.cs" />
-    <Compile Include="Enum\Sog_Magic.cs" />
+    <Compile Include="Enum\Sog_Skills.cs" />
     <Compile Include="Enum\Sog_Pets.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

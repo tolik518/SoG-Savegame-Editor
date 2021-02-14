@@ -41,7 +41,7 @@ namespace Sog_SGreader
                         writeBinary.Write((byte)1);
                         writeBinary.Write((Int32)quickslot);
                     }
-                    else if (quickslot.GetType() == typeof(Sog_Spells))
+                    else if (quickslot.GetType() == typeof(Sog_Skills))
                     {
                         writeBinary.Write((byte)2);
                         writeBinary.Write((UInt16)quickslot);

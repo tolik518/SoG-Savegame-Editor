@@ -47,7 +47,7 @@ namespace Sog_SGreader
                     }
                     else if (iQs_ID == 2)
                     {
-                        pPlayer.quickslots.Add((Sog_Spells)readBinary.ReadUInt16());
+                        pPlayer.quickslots.Add((Sog_Skills)readBinary.ReadUInt16());
                     }
                     else
                     {
@@ -122,7 +122,7 @@ namespace Sog_SGreader
                 pPlayer.Skills = new List<Sog_Player.Skill>(pPlayer.SkillsCount);
                 for (int i = 0; i != pPlayer.SkillsCount; i++)
                 {
-                    Sog_Player.Skill skill = new Sog_Player.Skill((Sog_Spells)readBinary.ReadInt16(), readBinary.ReadByte());
+                    Sog_Player.Skill skill = new Sog_Player.Skill((Sog_Skills)readBinary.ReadInt16(), readBinary.ReadByte());
                     pPlayer.Skills.Add(skill);
                 }
                 txtConsole.AppendText("\r\niSkillCount: " + pPlayer.SkillsCount);

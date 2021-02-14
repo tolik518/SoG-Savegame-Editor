@@ -101,7 +101,7 @@ namespace Sog_SGreader
                 }
                 else if (cbQuickslotType[i].Text == "Sog_Spells")
                 {
-                    cbQuickslot[i].DataSource = Enum.GetValues(typeof(Sog_Spells));
+                    cbQuickslot[i].DataSource = Enum.GetValues(typeof(Sog_Skills));
                 }
                 else
                 {
@@ -142,9 +142,9 @@ namespace Sog_SGreader
                 {
                     cbQuickslot[i].DataSource = items;
                 }
-                else if (pPlayer.quickslots[i].GetType() == typeof(Sog_Spells))
+                else if (pPlayer.quickslots[i].GetType() == typeof(Sog_Skills))
                 {
-                    cbQuickslot[i].DataSource = Enum.GetValues(typeof(Sog_Spells));
+                    cbQuickslot[i].DataSource = Enum.GetValues(typeof(Sog_Skills));
                 }
                 cbQuickslotType[i].DataSource = new string[] { "Sog_Items", "Sog_Spells", "Int32" };
             }
@@ -219,6 +219,34 @@ namespace Sog_SGreader
             numBirthdayDay.Value = pPlayer.BirthdayDay;
             numBirtdayMonth.Value = pPlayer.BirthdayMonth;
 
+            sliderSkillMelee1h0.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Skill_OneHanded_Stinger) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Skill_OneHanded_Stinger).SkillLevel : 0 ;
+            sliderSkillMelee1h1.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Skill_OneHanded_MillionStabs) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Skill_OneHanded_MillionStabs).SkillLevel : 0;
+            sliderSkillMelee1h2.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Skill_OneHanded_SpiritSlash) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Skill_OneHanded_SpiritSlash).SkillLevel : 0;
+            sliderSkillMelee1h3.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Skill_OneHanded_ShadowClone) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Skill_OneHanded_ShadowClone).SkillLevel : 0;
+            sliderSkillMelee1h4.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Skill_OneHanded_QuickCounter) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Skill_OneHanded_QuickCounter).SkillLevel : 0;
+
+            sliderSkillMelee2h0.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Skill_TwoHanded_Overhead) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Skill_TwoHanded_Overhead).SkillLevel : 0;
+            sliderSkillMelee2h1.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Skill_TwoHanded_Spin) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Skill_TwoHanded_Spin).SkillLevel : 0;
+            sliderSkillMelee2h2.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Skill_TwoHanded_Throw) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Skill_TwoHanded_Throw).SkillLevel : 0;
+            sliderSkillMelee2h3.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Skill_TwoHanded_Smash) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Skill_TwoHanded_Smash).SkillLevel : 0;
+            sliderSkillMelee2h4.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Skill_TwoHanded_BerserkMode) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Skill_TwoHanded_BerserkMode).SkillLevel : 0;
+        
+            sliderSkillMagicF0.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Fire_Fireball) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Fire_Fireball).SkillLevel : 0;
+            sliderSkillMagicF1.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Fire_Meteor) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Fire_Meteor).SkillLevel : 0;
+            sliderSkillMagicF2.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Fire_Flamethrower) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Fire_Flamethrower).SkillLevel : 0;
+
+            sliderSkillMagicI0.Value  = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Ice_IceSpikes) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Ice_IceSpikes).SkillLevel : 0;
+            sliderSkillMagicI1.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Ice_IceNova) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Ice_IceNova).SkillLevel : 0;
+            sliderSkillMagicI2.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Ice_FrostyFriend) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Ice_FrostyFriend).SkillLevel : 0;
+
+            sliderSkillMagicE0.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Earth_EarthSpike) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Earth_EarthSpike).SkillLevel : 0;
+            sliderSkillMagicE1.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Earth_SummonPlant) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Earth_SummonPlant).SkillLevel : 0;
+            sliderSkillMagicE2.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Earth_InsectSwarm) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Earth_InsectSwarm).SkillLevel : 0;
+
+            sliderSkillMagicA0.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Wind_ChainLightning) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Wind_ChainLightning).SkillLevel : 0;
+            sliderSkillMagicA1.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Wind_SummonCloud) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Wind_SummonCloud).SkillLevel : 0;
+            sliderSkillMagicA2.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Wind_StaticTouch) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Wind_StaticTouch).SkillLevel : 0;
+
         }
         private void InitVariables()    //TODO: we need to clean all our variables before we load a new file 
         {
@@ -249,9 +277,9 @@ namespace Sog_SGreader
                 {
                     pPlayer.quickslots[i] = Enum.Parse(typeof(Sog_Items), cbQuickslot[i].Text);
                 }
-                else if (cbQuickslotType[i].Text == typeof(Sog_Spells).Name.ToString())
+                else if (cbQuickslotType[i].Text == typeof(Sog_Skills).Name.ToString())
                 {
-                    pPlayer.quickslots[i] = Enum.Parse(typeof(Sog_Spells), cbQuickslot[i].Text);
+                    pPlayer.quickslots[i] = Enum.Parse(typeof(Sog_Skills), cbQuickslot[i].Text);
                 }
                 else
                 {
@@ -511,7 +539,7 @@ namespace Sog_SGreader
         }
 
         //source: https://www.programmersought.com/article/973286506/
-        private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
+        private void TabControl1_DrawItem(object sender, DrawItemEventArgs e)
         {
             SolidBrush _Brush = new SolidBrush(Color.Black);//monochrome brush
             RectangleF _TabTextArea = (RectangleF)tabControl1.GetTabRect(e.Index);//Drawing area
@@ -526,21 +554,6 @@ namespace Sog_SGreader
         {
             FrmAbout frmAbout = new FrmAbout();
             frmAbout.ShowDialog();
-        }
-
-
-        /// <summary>
-        /// Inherits from PictureBox; adds Interpolation Mode Setting
-        /// </summary>
-        public class PictureBoxWithInterpolationMode : PictureBox
-        {
-            public InterpolationMode InterpolationMode { get; set; }
-
-            protected override void OnPaint(PaintEventArgs paintEventArgs)
-            {
-                paintEventArgs.Graphics.InterpolationMode = InterpolationMode;
-                base.OnPaint(paintEventArgs);
-            }
         }
     }
 }

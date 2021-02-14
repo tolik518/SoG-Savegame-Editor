@@ -125,12 +125,12 @@ namespace Sog_SGreader
         public int SkillsCount { get; set; }
         public class Skill
         {
-            public Skill(Sog_Spells _SkillID, byte _SkillLevel)
+            public Skill(Sog_Skills _SkillID, byte _SkillLevel)
             {
                 this.SkillID = _SkillID;
                 this.SkillLevel = _SkillLevel;
             }
-            public Sog_Spells SkillID { get; set; }
+            public Sog_Skills SkillID { get; set; }
             public byte SkillLevel { get; set; }
         }
 
