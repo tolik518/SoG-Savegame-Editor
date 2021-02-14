@@ -1,7 +1,7 @@
 # SoG Savegame Reader/Editor ![Icon](https://returnnull.de/images/_64.png)
 
-![SoG_SGreader](https://returnnull.de/images/SoG_SGreader5.png)  
-If you want to support me, here is my Dogecoin: DUEm64pPyZi4V9XF7mFE6v2YahGhcURk1F
+![SoG_SGreader](https://returnnull.de/images/SoG_SGreader6.png)  
+If you want to support me, here is my Cardano($ADA) adress: addr1q8lscf0hrrf883q3ztdlpafge8vp8g6n2mjexhwg5m2nylk48l93aamzj4h9kw6yxpwca2dnkgmf2whqlaw0cym7mzwsrn5hch
 
 
 This is a work in progress tool that reads the savegame from [Secrets of Grindea](https://store.steampowered.com/app/269770/Secrets_of_Grindea/).
