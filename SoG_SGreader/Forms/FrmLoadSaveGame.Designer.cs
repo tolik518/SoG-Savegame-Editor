@@ -103,7 +103,7 @@ namespace Sog_SGreader
             this.lstvSaveGames.TabIndex = 6;
             this.lstvSaveGames.UseCompatibleStateImageBehavior = false;
             this.lstvSaveGames.View = System.Windows.Forms.View.Details;
-            this.lstvSaveGames.SelectedIndexChanged += new System.EventHandler(this.lstvSaveGames_SelectedIndexChanged);
+            this.lstvSaveGames.SelectedIndexChanged += new System.EventHandler(this.LstvSaveGames_SelectedIndexChanged);
             // 
             // columnSavefile
             // 

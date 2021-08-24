@@ -145,7 +145,7 @@ namespace Sog_SGreader
             this.linkLabel2.TabIndex = 12;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "https://cardano.org/";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel2_LinkClicked);
             // 
             // linkLabel3
             // 
@@ -156,7 +156,7 @@ namespace Sog_SGreader
             this.linkLabel3.TabIndex = 13;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "https://www.reddit.com/r/cardano/";
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel3_LinkClicked);
             // 
             // label4
             // 
@@ -178,7 +178,7 @@ namespace Sog_SGreader
             this.linkLabel4.TabIndex = 15;
             this.linkLabel4.TabStop = true;
             this.linkLabel4.Text = "https://www.reddit.com/r/cardano_ELI5";
-            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel4_LinkClicked);
             // 
             // FrmAbout
             // 

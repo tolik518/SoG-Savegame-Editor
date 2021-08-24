@@ -539,7 +539,7 @@ namespace Sog_SGreader
         }
 
         //source: https://www.programmersought.com/article/973286506/
-        private void TabControl1_DrawItem(object sender, DrawItemEventArgs e)
+        private void TabControl1_DrawItem(object sender, DrawItemEventArgs e)  //Skills Menu, makes the Tabs go sidewards
         {
             SolidBrush _Brush = new SolidBrush(Color.Black);//monochrome brush
             RectangleF _TabTextArea = (RectangleF)tabControl1.GetTabRect(e.Index);//Drawing area
@@ -550,7 +550,7 @@ namespace Sog_SGreader
 
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void PictureBox3_Click(object sender, EventArgs e) //Cardano Icon in the top corner
         {
             FrmAbout frmAbout = new FrmAbout();
             frmAbout.ShowDialog();

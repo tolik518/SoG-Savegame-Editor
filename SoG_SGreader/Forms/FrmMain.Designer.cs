@@ -165,6 +165,7 @@ namespace Sog_SGreader
             this.sliderSkillMelee2h2 = new System.Windows.Forms.TrackBar();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.label56 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.sliderSkillMelee1h0 = new System.Windows.Forms.TrackBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -250,10 +251,8 @@ namespace Sog_SGreader
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtConsole = new System.Windows.Forms.TextBox();
-            this.splitter1 = new System.Windows.Forms.Splitter();
             this.Tooltips = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label56 = new System.Windows.Forms.Label();
             this.tabContainer.SuspendLayout();
             this.tabChar.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -1662,7 +1661,7 @@ namespace Sog_SGreader
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(545, 384);
+            this.tabControl1.Size = new System.Drawing.Size(545, 365);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 32;
             this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.TabControl1_DrawItem);
@@ -1674,7 +1673,7 @@ namespace Sog_SGreader
             this.tabSkillsMelee.Location = new System.Drawing.Point(104, 4);
             this.tabSkillsMelee.Name = "tabSkillsMelee";
             this.tabSkillsMelee.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSkillsMelee.Size = new System.Drawing.Size(437, 376);
+            this.tabSkillsMelee.Size = new System.Drawing.Size(437, 357);
             this.tabSkillsMelee.TabIndex = 0;
             this.tabSkillsMelee.Text = "Skills: Melee";
             this.tabSkillsMelee.UseVisualStyleBackColor = true;
@@ -1819,6 +1818,15 @@ namespace Sog_SGreader
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "One Handed";
             // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(24, 20);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(160, 13);
+            this.label56.TabIndex = 11;
+            this.label56.Text = "*These values will not be saved.";
+            // 
             // label38
             // 
             this.label38.AutoSize = true;
@@ -1938,7 +1946,7 @@ namespace Sog_SGreader
             this.tabSkillsMagic.Location = new System.Drawing.Point(104, 4);
             this.tabSkillsMagic.Name = "tabSkillsMagic";
             this.tabSkillsMagic.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSkillsMagic.Size = new System.Drawing.Size(437, 376);
+            this.tabSkillsMagic.Size = new System.Drawing.Size(437, 357);
             this.tabSkillsMagic.TabIndex = 1;
             this.tabSkillsMagic.Text = "Skills: Magic";
             this.tabSkillsMagic.UseVisualStyleBackColor = true;
@@ -2251,7 +2259,7 @@ namespace Sog_SGreader
             this.tabSkillsUtility.Location = new System.Drawing.Point(104, 4);
             this.tabSkillsUtility.Name = "tabSkillsUtility";
             this.tabSkillsUtility.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSkillsUtility.Size = new System.Drawing.Size(437, 376);
+            this.tabSkillsUtility.Size = new System.Drawing.Size(437, 357);
             this.tabSkillsUtility.TabIndex = 2;
             this.tabSkillsUtility.Text = "Skills: Utility";
             this.tabSkillsUtility.UseVisualStyleBackColor = true;
@@ -2493,7 +2501,7 @@ namespace Sog_SGreader
             // 
             this.tabTalentsGeneral.Location = new System.Drawing.Point(104, 4);
             this.tabTalentsGeneral.Name = "tabTalentsGeneral";
-            this.tabTalentsGeneral.Size = new System.Drawing.Size(437, 376);
+            this.tabTalentsGeneral.Size = new System.Drawing.Size(437, 357);
             this.tabTalentsGeneral.TabIndex = 3;
             this.tabTalentsGeneral.Text = "Talents: General";
             this.tabTalentsGeneral.UseVisualStyleBackColor = true;
@@ -2502,7 +2510,7 @@ namespace Sog_SGreader
             // 
             this.tabTalentsMelee.Location = new System.Drawing.Point(104, 4);
             this.tabTalentsMelee.Name = "tabTalentsMelee";
-            this.tabTalentsMelee.Size = new System.Drawing.Size(437, 376);
+            this.tabTalentsMelee.Size = new System.Drawing.Size(437, 357);
             this.tabTalentsMelee.TabIndex = 4;
             this.tabTalentsMelee.Text = "Talents: Melee";
             this.tabTalentsMelee.UseVisualStyleBackColor = true;
@@ -2511,7 +2519,7 @@ namespace Sog_SGreader
             // 
             this.tabTalentsMagic.Location = new System.Drawing.Point(104, 4);
             this.tabTalentsMagic.Name = "tabTalentsMagic";
-            this.tabTalentsMagic.Size = new System.Drawing.Size(437, 376);
+            this.tabTalentsMagic.Size = new System.Drawing.Size(437, 357);
             this.tabTalentsMagic.TabIndex = 5;
             this.tabTalentsMagic.Text = "Talents: Magic";
             this.tabTalentsMagic.UseVisualStyleBackColor = true;
@@ -2661,15 +2669,17 @@ namespace Sog_SGreader
             // 
             // jSONToolStripMenuItem
             // 
+            this.jSONToolStripMenuItem.Enabled = false;
             this.jSONToolStripMenuItem.Name = "jSONToolStripMenuItem";
-            this.jSONToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
+            this.jSONToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.jSONToolStripMenuItem.Text = "JSON";
             this.jSONToolStripMenuItem.Click += new System.EventHandler(this.JSONToolStripMenuItem_Click);
             // 
             // xMLToolStripMenuItem
             // 
+            this.xMLToolStripMenuItem.Enabled = false;
             this.xMLToolStripMenuItem.Name = "xMLToolStripMenuItem";
-            this.xMLToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
+            this.xMLToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.xMLToolStripMenuItem.Text = "XML";
             // 
             // exitToolStripMenuItem
@@ -2698,26 +2708,15 @@ namespace Sog_SGreader
             // 
             this.txtConsole.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txtConsole.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtConsole.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtConsole.ForeColor = System.Drawing.Color.LimeGreen;
-            this.txtConsole.Location = new System.Drawing.Point(0, 446);
+            this.txtConsole.Location = new System.Drawing.Point(0, 439);
             this.txtConsole.Multiline = true;
             this.txtConsole.Name = "txtConsole";
             this.txtConsole.ReadOnly = true;
             this.txtConsole.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtConsole.Size = new System.Drawing.Size(567, 104);
+            this.txtConsole.Size = new System.Drawing.Size(567, 111);
             this.txtConsole.TabIndex = 28;
             this.txtConsole.TabStop = false;
-            // 
-            // splitter1
-            // 
-            this.splitter1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.splitter1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitter1.Location = new System.Drawing.Point(0, 436);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(567, 10);
-            this.splitter1.TabIndex = 29;
-            this.splitter1.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -2728,16 +2727,7 @@ namespace Sog_SGreader
             this.pictureBox3.Size = new System.Drawing.Size(17, 17);
             this.pictureBox3.TabIndex = 30;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(24, 20);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(160, 13);
-            this.label56.TabIndex = 11;
-            this.label56.Text = "*These values will not be saved.";
+            this.pictureBox3.Click += new System.EventHandler(this.PictureBox3_Click);
             // 
             // FrmMain
             // 
@@ -2746,7 +2736,6 @@ namespace Sog_SGreader
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(567, 550);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.splitter1);
             this.Controls.Add(this.txtConsole);
             this.Controls.Add(this.tabContainer);
             this.Controls.Add(this.msMenu);
@@ -2928,7 +2917,6 @@ namespace Sog_SGreader
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox txtConsole;
-        private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.TabPage tabInventory;
         private System.Windows.Forms.ListView lstInventory;
         private System.Windows.Forms.GroupBox groupBox4;

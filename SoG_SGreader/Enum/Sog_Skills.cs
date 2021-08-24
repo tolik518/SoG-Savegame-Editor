@@ -1,5 +1,6 @@
 ﻿namespace Sog_SGreader
 {
+    //Items from: 0.920a
     public enum Sog_Skills : ushort
     {
         NULL = 0,
@@ -131,6 +132,7 @@
         _Misc_BadgeFireTrail = 0xbc2,
         _Misc_BadgeCloud = 0xbc3,
         _Misc_BadgeNova = 0xbc4,
+        _Misc_SunShieldSun = 0xbc5,
         _Hidden_MaxHPPenalty1 = 0xfa0,
         _Hidden_MaxHPPenalty10 = 0xfa1,
         _Hidden_Last = 0x1387,
@@ -140,6 +142,7 @@
         _Ridiculon_GhostThingy = 0x7533,
         _Ridiculon_FaeTrinket = 0x7534,
         _Ridiculon_SpiderTrinket = 0x7535,
+        _Ridiculon_ButterflyPheromones = 0x7536,
         _EnemySkill_JackLantern_Flame = 0x9c40,
         _EnemySkill_Halloweed_Root = 0x9c41,
         _EnemySkill_BallSpark_HomingSpark = 0x9c42,
@@ -221,6 +224,11 @@
         _EnemySkill_BulletSpawningOtherBullets = 0x9c8e,
         _EnemySkill_LukeSmashBall = 0x9c8f,
         _EnemySkill_LukeWeaponThrow_Straight = 0x9c90,
-        _EnemySkill_LukeWeaponThrow_Path = 0x9c91
+        _EnemySkill_LukeWeaponThrow_Path = 0x9c91,
+        _EnemySkill_TrollMushroomSpawningSpore = 0x9c92,
+        _EnemySkill_TrollMushroomSpawningSpore_Red = 0x9c93,
+        _EnemySkill_ReplicatingThornSpawningSpore = 0x9c94,
+        _EnemySkill_BishopWeaponThrow_Straight = 0x9c95,
+        _EnemySkill_BishopJavelinToss = 0x9c96
     }
 }

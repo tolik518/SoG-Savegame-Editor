@@ -150,7 +150,7 @@ namespace Sog_SGreader
             }
         }
 
-        private void lstvSaveGames_SelectedIndexChanged(object sender, EventArgs e)
+        private void LstvSaveGames_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lstvSaveGames.SelectedItems.Count != 0)
             {
