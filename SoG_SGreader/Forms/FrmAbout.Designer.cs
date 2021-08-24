@@ -54,7 +54,7 @@ namespace Sog_SGreader
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(156, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "SoG: Savegame Reader v0.3.7";
+            this.label1.Text = "SoG: Savegame Reader v0.3.8";
             // 
             // label2
             // 

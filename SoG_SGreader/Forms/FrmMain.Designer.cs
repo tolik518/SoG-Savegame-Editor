@@ -2742,7 +2742,7 @@ namespace Sog_SGreader
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenu;
             this.Name = "FrmMain";
-            this.Text = "SoG: Savegame Reader v0.3.7 by TOLIK518";
+            this.Text = "SoG: Savegame Reader v0.3.8 by TOLIK518";
             this.tabContainer.ResumeLayout(false);
             this.tabChar.ResumeLayout(false);
             this.tabChar.PerformLayout();
