@@ -2669,7 +2669,6 @@ namespace Sog_SGreader
             // 
             // jSONToolStripMenuItem
             // 
-            this.jSONToolStripMenuItem.Enabled = false;
             this.jSONToolStripMenuItem.Name = "jSONToolStripMenuItem";
             this.jSONToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.jSONToolStripMenuItem.Text = "JSON";
@@ -2743,6 +2742,7 @@ namespace Sog_SGreader
             this.MainMenuStrip = this.msMenu;
             this.Name = "FrmMain";
             this.Text = "SoG: Savegame Reader v0.3.8 by TOLIK518";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.tabContainer.ResumeLayout(false);
             this.tabChar.ResumeLayout(false);
             this.tabChar.PerformLayout();

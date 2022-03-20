@@ -1,6 +1,6 @@
 ﻿namespace Sog_SGreader
 {
-    //Items from: 0.920a
+    //Pets from: 0.949a
     public enum Sog_Pets
     {
         Rabby = 0x2710,

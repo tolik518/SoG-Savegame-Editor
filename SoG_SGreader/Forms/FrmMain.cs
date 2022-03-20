@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing.Drawing2D;
+using Newtonsoft.Json;
 
 namespace Sog_SGreader
 {
@@ -65,21 +60,23 @@ namespace Sog_SGreader
         {
             int iQuickslotYpos = 262;
             for (int i = 9; i >= 0; i--) // We need 10 comboBoxes for the quickslots and for the types
-            {                            // Its nice to have them accesable through an index
+            {                            // Its nice to have them accessible through an index
                 cbQuickslot[i] = new ComboBox
                 {
                     FormattingEnabled = true,
                     Location = new Point(180, iQuickslotYpos),
                     Name = $"cbQuickslot[{i}]",
-                    Size = new Size(152, 21)
+                    Size = new Size(152, 21),
+                    Enabled = false
                 };
 
                 cbQuickslotType[i] = new ComboBox
                 {
                     FormattingEnabled = true,
                     Location = new Point(94, iQuickslotYpos),
-                    Name = "cbQuickslotType[i]",
-                    Size = new Size(79, 21)
+                    Name = $"cbQuickslotType[{i}]",
+                    Size = new Size(79, 21),
+                    Enabled = false
                 };
                 groupBox3.Controls.Add(cbQuickslotType[i]);
                 groupBox3.Controls.Add(cbQuickslot[i]);
@@ -535,7 +532,20 @@ namespace Sog_SGreader
 
         private void JSONToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            JsonSerializer serializer = new JsonSerializer();
+            serializer.NullValueHandling = NullValueHandling.Include;
+            serializer.Formatting = Formatting.Indented;
 
+            string message = "Your savegame was saved on the Tool folder.";
+            string caption = "Save complete";
+            MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+            using (StreamWriter sw = new StreamWriter(Environment.CurrentDirectory + "/" + pPlayer.UniquePlayerID + "_" + pPlayer.Nickname + ".json"))
+            using (JsonWriter writer = new JsonTextWriter(sw))
+            {
+                serializer.Serialize(writer, this.pPlayer);
+                MessageBox.Show(message, caption, buttons);
+            }
         }
 
         //source: https://www.programmersought.com/article/973286506/
@@ -554,6 +564,11 @@ namespace Sog_SGreader
         {
             FrmAbout frmAbout = new FrmAbout();
             frmAbout.ShowDialog();
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
