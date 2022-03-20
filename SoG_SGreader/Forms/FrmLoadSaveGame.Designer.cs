@@ -161,7 +161,7 @@ namespace Sog_SGreader
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmLoadSaveGame";
-            this.Text = "SoG: Savegame Reader v0.3.7 by TOLIK518";
+            this.Text = "SoG: Savegame Reader v0.4.0 by TOLIK518";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

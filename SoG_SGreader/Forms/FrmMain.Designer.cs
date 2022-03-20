@@ -253,6 +253,7 @@ namespace Sog_SGreader
             this.txtConsole = new System.Windows.Forms.TextBox();
             this.Tooltips = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label57 = new System.Windows.Forms.Label();
             this.tabContainer.SuspendLayout();
             this.tabChar.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -372,6 +373,9 @@ namespace Sog_SGreader
             // 
             // tabContainer
             // 
+            this.tabContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabContainer.Controls.Add(this.tabChar);
             this.tabContainer.Controls.Add(this.tabInventory);
             this.tabContainer.Controls.Add(this.tabPets);
@@ -381,7 +385,6 @@ namespace Sog_SGreader
             this.tabContainer.Controls.Add(this.tabCards);
             this.tabContainer.Controls.Add(this.tabTreasureMaps);
             this.tabContainer.Controls.Add(this.tabPage1);
-            this.tabContainer.Dock = System.Windows.Forms.DockStyle.Top;
             this.tabContainer.Location = new System.Drawing.Point(0, 24);
             this.tabContainer.Name = "tabContainer";
             this.tabContainer.SelectedIndex = 0;
@@ -1130,6 +1133,7 @@ namespace Sog_SGreader
             // 
             // numGold
             // 
+            this.numGold.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.numGold.Location = new System.Drawing.Point(452, 351);
             this.numGold.Maximum = new decimal(new int[] {
             2147483647,
@@ -1143,6 +1147,7 @@ namespace Sog_SGreader
             // 
             // label37
             // 
+            this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label37.AutoSize = true;
             this.label37.Location = new System.Drawing.Point(449, 335);
             this.label37.Name = "label37";
@@ -1516,13 +1521,14 @@ namespace Sog_SGreader
             // 
             // tabQuickslots
             // 
+            this.tabQuickslots.Controls.Add(this.label57);
             this.tabQuickslots.Controls.Add(this.groupBox3);
             this.tabQuickslots.Location = new System.Drawing.Point(4, 22);
             this.tabQuickslots.Name = "tabQuickslots";
             this.tabQuickslots.Padding = new System.Windows.Forms.Padding(3);
             this.tabQuickslots.Size = new System.Drawing.Size(559, 390);
             this.tabQuickslots.TabIndex = 1;
-            this.tabQuickslots.Text = "Quickslots";
+            this.tabQuickslots.Text = "*Quickslots";
             this.tabQuickslots.UseVisualStyleBackColor = true;
             // 
             // groupBox3
@@ -2670,7 +2676,7 @@ namespace Sog_SGreader
             // jSONToolStripMenuItem
             // 
             this.jSONToolStripMenuItem.Name = "jSONToolStripMenuItem";
-            this.jSONToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.jSONToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
             this.jSONToolStripMenuItem.Text = "JSON";
             this.jSONToolStripMenuItem.Click += new System.EventHandler(this.JSONToolStripMenuItem_Click);
             // 
@@ -2678,7 +2684,7 @@ namespace Sog_SGreader
             // 
             this.xMLToolStripMenuItem.Enabled = false;
             this.xMLToolStripMenuItem.Name = "xMLToolStripMenuItem";
-            this.xMLToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.xMLToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
             this.xMLToolStripMenuItem.Text = "XML";
             // 
             // exitToolStripMenuItem
@@ -2699,7 +2705,7 @@ namespace Sog_SGreader
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
@@ -2707,6 +2713,7 @@ namespace Sog_SGreader
             // 
             this.txtConsole.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txtConsole.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtConsole.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtConsole.ForeColor = System.Drawing.Color.LimeGreen;
             this.txtConsole.Location = new System.Drawing.Point(0, 439);
             this.txtConsole.Multiline = true;
@@ -2728,6 +2735,18 @@ namespace Sog_SGreader
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.PictureBox3_Click);
             // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.BackColor = System.Drawing.Color.Transparent;
+            this.label57.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label57.Location = new System.Drawing.Point(6, 303);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(389, 13);
+            this.label57.TabIndex = 32;
+            this.label57.Text = "* = support for this function was removed due to the risk of losing your save gam" +
+    "e";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2741,7 +2760,7 @@ namespace Sog_SGreader
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenu;
             this.Name = "FrmMain";
-            this.Text = "SoG: Savegame Reader v0.3.8 by TOLIK518";
+            this.Text = "SoG: Savegame Reader v0.4.0 by TOLIK518";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.tabContainer.ResumeLayout(false);
             this.tabChar.ResumeLayout(false);
@@ -2786,6 +2805,7 @@ namespace Sog_SGreader
             ((System.ComponentModel.ISupportInitialize)(this.numPetEnergy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPetHP)).EndInit();
             this.tabQuickslots.ResumeLayout(false);
+            this.tabQuickslots.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.tabSkills.ResumeLayout(false);
@@ -3116,6 +3136,7 @@ namespace Sog_SGreader
         private System.Windows.Forms.PictureBox pictureBox26;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label57;
     }
 }
 

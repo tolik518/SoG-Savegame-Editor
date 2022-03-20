@@ -312,9 +312,4 @@ namespace Sog_SGreader
         }
         //public byte[] scrap;
     }
-
-    public class Sog_PlayerDTO
-    {
-
-    }
 }
