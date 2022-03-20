@@ -159,6 +159,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmLoadSaveGame.resx">
       <DependentUpon>FrmLoadSaveGame.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -197,7 +198,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon_final_alt.ico" />
-    <None Include="Resources\cardano.png" />
     <None Include="Resources\ada2.png" />
     <None Include="Resources\save1.png" />
     <None Include="Resources\icon.png" />

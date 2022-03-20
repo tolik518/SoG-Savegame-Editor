@@ -83,16 +83,6 @@ namespace SoG_SGreader.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cardano {
-            get {
-                object obj = ResourceManager.GetObject("cardano", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap frame_1h {
             get {
                 object obj = ResourceManager.GetObject("frame_1h", resourceCulture);

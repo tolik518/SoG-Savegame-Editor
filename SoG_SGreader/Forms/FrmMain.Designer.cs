@@ -156,78 +156,47 @@ namespace Sog_SGreader
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.sliderSkillMelee2h4 = new System.Windows.Forms.TrackBar();
             this.sliderSkillMelee2h0 = new System.Windows.Forms.TrackBar();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.sliderSkillMelee2h1 = new System.Windows.Forms.TrackBar();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.sliderSkillMelee2h3 = new System.Windows.Forms.TrackBar();
             this.sliderSkillMelee2h2 = new System.Windows.Forms.TrackBar();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.label56 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.sliderSkillMelee1h0 = new System.Windows.Forms.TrackBar();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sliderSkillMelee1h1 = new System.Windows.Forms.TrackBar();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.sliderSkillMelee1h2 = new System.Windows.Forms.TrackBar();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.sliderSkillMelee1h3 = new System.Windows.Forms.TrackBar();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.sliderSkillMelee1h4 = new System.Windows.Forms.TrackBar();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.tabSkillsMagic = new System.Windows.Forms.TabPage();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.sliderSkillMagicA2 = new System.Windows.Forms.TrackBar();
-            this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.sliderSkillMagicA1 = new System.Windows.Forms.TrackBar();
-            this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.sliderSkillMagicA0 = new System.Windows.Forms.TrackBar();
-            this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.sliderSkillMagicE2 = new System.Windows.Forms.TrackBar();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.sliderSkillMagicE1 = new System.Windows.Forms.TrackBar();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.sliderSkillMagicE0 = new System.Windows.Forms.TrackBar();
-            this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.sliderSkillMagicI2 = new System.Windows.Forms.TrackBar();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.sliderSkillMagicI1 = new System.Windows.Forms.TrackBar();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.sliderSkillMagicI0 = new System.Windows.Forms.TrackBar();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.sliderSkillMagicF2 = new System.Windows.Forms.TrackBar();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.sliderSkillMagicF1 = new System.Windows.Forms.TrackBar();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.sliderSkillMagicF0 = new System.Windows.Forms.TrackBar();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.tabSkillsUtility = new System.Windows.Forms.TabPage();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
             this.sliderUtilityE0 = new System.Windows.Forms.TrackBar();
-            this.pictureBox30 = new System.Windows.Forms.PictureBox();
             this.sliderUtilityE1 = new System.Windows.Forms.TrackBar();
-            this.pictureBox31 = new System.Windows.Forms.PictureBox();
             this.sliderUtilityE2 = new System.Windows.Forms.TrackBar();
-            this.pictureBox32 = new System.Windows.Forms.PictureBox();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.sliderUtilityD0 = new System.Windows.Forms.TrackBar();
-            this.pictureBox27 = new System.Windows.Forms.PictureBox();
             this.sliderUtilityD1 = new System.Windows.Forms.TrackBar();
-            this.pictureBox28 = new System.Windows.Forms.PictureBox();
             this.sliderUtilityD2 = new System.Windows.Forms.TrackBar();
-            this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.sliderUtilityO0 = new System.Windows.Forms.TrackBar();
-            this.pictureBox24 = new System.Windows.Forms.PictureBox();
             this.sliderUtilityO1 = new System.Windows.Forms.TrackBar();
-            this.pictureBox25 = new System.Windows.Forms.PictureBox();
             this.sliderUtilityO2 = new System.Windows.Forms.TrackBar();
-            this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.tabTalentsGeneral = new System.Windows.Forms.TabPage();
             this.tabTalentsMelee = new System.Windows.Forms.TabPage();
             this.tabTalentsMagic = new System.Windows.Forms.TabPage();
@@ -252,8 +221,39 @@ namespace Sog_SGreader
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtConsole = new System.Windows.Forms.TextBox();
             this.Tooltips = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label57 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox21 = new System.Windows.Forms.PictureBox();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.pictureBox23 = new System.Windows.Forms.PictureBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox30 = new System.Windows.Forms.PictureBox();
+            this.pictureBox31 = new System.Windows.Forms.PictureBox();
+            this.pictureBox32 = new System.Windows.Forms.PictureBox();
+            this.pictureBox27 = new System.Windows.Forms.PictureBox();
+            this.pictureBox28 = new System.Windows.Forms.PictureBox();
+            this.pictureBox29 = new System.Windows.Forms.PictureBox();
+            this.pictureBox24 = new System.Windows.Forms.PictureBox();
+            this.pictureBox25 = new System.Windows.Forms.PictureBox();
+            this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.tabContainer.SuspendLayout();
             this.tabChar.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -293,82 +293,82 @@ namespace Sog_SGreader
             this.groupBox11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee2h4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee2h0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee2h1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee2h3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee2h2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.groupBox10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee1h0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee1h1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee1h2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee1h3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee1h4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.tabSkillsMagic.SuspendLayout();
             this.groupBox15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicA2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicA1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicA0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             this.groupBox14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicE2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicE1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicE0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             this.groupBox13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicI2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicI1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicI0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.groupBox12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicF2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicF1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicF0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.tabSkillsUtility.SuspendLayout();
             this.groupBox18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityE0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityE1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityE2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
             this.groupBox17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityD0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityD1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityD2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
             this.groupBox16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityO0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityO1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityO2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             this.tabMerchant.SuspendLayout();
             this.tabCards.SuspendLayout();
             this.tabTreasureMaps.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.msMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             this.SuspendLayout();
             // 
             // tabContainer
@@ -412,6 +412,7 @@ namespace Sog_SGreader
             // 
             // groupBox9
             // 
+            this.groupBox9.BackColor = System.Drawing.Color.Transparent;
             this.groupBox9.Controls.Add(this.label55);
             this.groupBox9.Location = new System.Drawing.Point(170, 158);
             this.groupBox9.Name = "groupBox9";
@@ -422,11 +423,11 @@ namespace Sog_SGreader
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(26, 100);
+            this.label55.Location = new System.Drawing.Point(13, 99);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(48, 13);
+            this.label55.Size = new System.Drawing.Size(77, 13);
             this.label55.TabIndex = 0;
-            this.label55.Text = "[nothing]";
+            this.label55.Text = "[Patch 0.949a]";
             // 
             // numID
             // 
@@ -1723,26 +1724,6 @@ namespace Sog_SGreader
             this.sliderSkillMelee2h0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMelee2h0.Value = 10;
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::SoG_SGreader.Properties.Resources.icon_berserk;
-            this.pictureBox7.Location = new System.Drawing.Point(355, 34);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 19;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = global::SoG_SGreader.Properties.Resources.icon_overhead;
-            this.pictureBox11.Location = new System.Drawing.Point(27, 34);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 11;
-            this.pictureBox11.TabStop = false;
-            // 
             // sliderSkillMelee2h1
             // 
             this.sliderSkillMelee2h1.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -1752,26 +1733,6 @@ namespace Sog_SGreader
             this.sliderSkillMelee2h1.TabIndex = 12;
             this.sliderSkillMelee2h1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMelee2h1.Value = 10;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::SoG_SGreader.Properties.Resources.icon_2hsmash;
-            this.pictureBox8.Location = new System.Drawing.Point(270, 34);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 17;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::SoG_SGreader.Properties.Resources.icon_swirl_clover;
-            this.pictureBox10.Location = new System.Drawing.Point(112, 34);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 13;
-            this.pictureBox10.TabStop = false;
             // 
             // sliderSkillMelee2h3
             // 
@@ -1792,16 +1753,6 @@ namespace Sog_SGreader
             this.sliderSkillMelee2h2.TabIndex = 14;
             this.sliderSkillMelee2h2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMelee2h2.Value = 10;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::SoG_SGreader.Properties.Resources.icon_2hthrow;
-            this.pictureBox9.Location = new System.Drawing.Point(191, 34);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 15;
-            this.pictureBox9.TabStop = false;
             // 
             // groupBox10
             // 
@@ -1853,16 +1804,6 @@ namespace Sog_SGreader
             this.Tooltips.SetToolTip(this.sliderSkillMelee1h0, "{sliderSkillMelee1h0.Value}");
             this.sliderSkillMelee1h0.Value = 10;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SoG_SGreader.Properties.Resources.icon_stinger_clover;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // sliderSkillMelee1h1
             // 
             this.sliderSkillMelee1h1.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -1872,16 +1813,6 @@ namespace Sog_SGreader
             this.sliderSkillMelee1h1.TabIndex = 2;
             this.sliderSkillMelee1h1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMelee1h1.Value = 10;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::SoG_SGreader.Properties.Resources.icon_millionstabs;
-            this.pictureBox2.Location = new System.Drawing.Point(112, 36);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
             // 
             // sliderSkillMelee1h2
             // 
@@ -1893,16 +1824,6 @@ namespace Sog_SGreader
             this.sliderSkillMelee1h2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMelee1h2.Value = 10;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::SoG_SGreader.Properties.Resources.icon_soulstrike;
-            this.pictureBox4.Location = new System.Drawing.Point(191, 36);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 5;
-            this.pictureBox4.TabStop = false;
-            // 
             // sliderSkillMelee1h3
             // 
             this.sliderSkillMelee1h3.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -1913,16 +1834,6 @@ namespace Sog_SGreader
             this.sliderSkillMelee1h3.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMelee1h3.Value = 10;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::SoG_SGreader.Properties.Resources.icon_shadowclone;
-            this.pictureBox5.Location = new System.Drawing.Point(270, 36);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 7;
-            this.pictureBox5.TabStop = false;
-            // 
             // sliderSkillMelee1h4
             // 
             this.sliderSkillMelee1h4.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -1932,16 +1843,6 @@ namespace Sog_SGreader
             this.sliderSkillMelee1h4.TabIndex = 8;
             this.sliderSkillMelee1h4.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMelee1h4.Value = 10;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::SoG_SGreader.Properties.Resources.icon_dodgingstrike;
-            this.pictureBox6.Location = new System.Drawing.Point(355, 36);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 9;
-            this.pictureBox6.TabStop = false;
             // 
             // tabSkillsMagic
             // 
@@ -1982,16 +1883,6 @@ namespace Sog_SGreader
             this.sliderSkillMagicA2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMagicA2.Value = 10;
             // 
-            // pictureBox21
-            // 
-            this.pictureBox21.Image = global::SoG_SGreader.Properties.Resources.icon_statictouch;
-            this.pictureBox21.Location = new System.Drawing.Point(146, 36);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox21.TabIndex = 11;
-            this.pictureBox21.TabStop = false;
-            // 
             // sliderSkillMagicA1
             // 
             this.sliderSkillMagicA1.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -2002,16 +1893,6 @@ namespace Sog_SGreader
             this.sliderSkillMagicA1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMagicA1.Value = 10;
             // 
-            // pictureBox22
-            // 
-            this.pictureBox22.Image = global::SoG_SGreader.Properties.Resources.icon_summoncloud;
-            this.pictureBox22.Location = new System.Drawing.Point(83, 36);
-            this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox22.TabIndex = 9;
-            this.pictureBox22.TabStop = false;
-            // 
             // sliderSkillMagicA0
             // 
             this.sliderSkillMagicA0.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -2021,16 +1902,6 @@ namespace Sog_SGreader
             this.sliderSkillMagicA0.TabIndex = 6;
             this.sliderSkillMagicA0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMagicA0.Value = 10;
-            // 
-            // pictureBox23
-            // 
-            this.pictureBox23.Image = global::SoG_SGreader.Properties.Resources.icon_chainlightning;
-            this.pictureBox23.Location = new System.Drawing.Point(19, 36);
-            this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox23.TabIndex = 7;
-            this.pictureBox23.TabStop = false;
             // 
             // groupBox14
             // 
@@ -2057,16 +1928,6 @@ namespace Sog_SGreader
             this.sliderSkillMagicE2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMagicE2.Value = 10;
             // 
-            // pictureBox18
-            // 
-            this.pictureBox18.Image = global::SoG_SGreader.Properties.Resources.icon_swarm;
-            this.pictureBox18.Location = new System.Drawing.Point(146, 36);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox18.TabIndex = 11;
-            this.pictureBox18.TabStop = false;
-            // 
             // sliderSkillMagicE1
             // 
             this.sliderSkillMagicE1.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -2077,16 +1938,6 @@ namespace Sog_SGreader
             this.sliderSkillMagicE1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMagicE1.Value = 10;
             // 
-            // pictureBox19
-            // 
-            this.pictureBox19.Image = global::SoG_SGreader.Properties.Resources.icon_plantsummon;
-            this.pictureBox19.Location = new System.Drawing.Point(83, 36);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox19.TabIndex = 9;
-            this.pictureBox19.TabStop = false;
-            // 
             // sliderSkillMagicE0
             // 
             this.sliderSkillMagicE0.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -2096,16 +1947,6 @@ namespace Sog_SGreader
             this.sliderSkillMagicE0.TabIndex = 6;
             this.sliderSkillMagicE0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMagicE0.Value = 10;
-            // 
-            // pictureBox20
-            // 
-            this.pictureBox20.Image = global::SoG_SGreader.Properties.Resources.icon_earthspike;
-            this.pictureBox20.Location = new System.Drawing.Point(19, 36);
-            this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox20.TabIndex = 7;
-            this.pictureBox20.TabStop = false;
             // 
             // groupBox13
             // 
@@ -2132,16 +1973,6 @@ namespace Sog_SGreader
             this.sliderSkillMagicI2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMagicI2.Value = 10;
             // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Image = global::SoG_SGreader.Properties.Resources.icon_frosty;
-            this.pictureBox15.Location = new System.Drawing.Point(146, 36);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox15.TabIndex = 11;
-            this.pictureBox15.TabStop = false;
-            // 
             // sliderSkillMagicI1
             // 
             this.sliderSkillMagicI1.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -2152,16 +1983,6 @@ namespace Sog_SGreader
             this.sliderSkillMagicI1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMagicI1.Value = 10;
             // 
-            // pictureBox16
-            // 
-            this.pictureBox16.Image = global::SoG_SGreader.Properties.Resources.icon_frostnova_clover;
-            this.pictureBox16.Location = new System.Drawing.Point(83, 36);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox16.TabIndex = 9;
-            this.pictureBox16.TabStop = false;
-            // 
             // sliderSkillMagicI0
             // 
             this.sliderSkillMagicI0.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -2171,16 +1992,6 @@ namespace Sog_SGreader
             this.sliderSkillMagicI0.TabIndex = 6;
             this.sliderSkillMagicI0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMagicI0.Value = 10;
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.Image = global::SoG_SGreader.Properties.Resources.icon_icespikes;
-            this.pictureBox17.Location = new System.Drawing.Point(19, 36);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox17.TabIndex = 7;
-            this.pictureBox17.TabStop = false;
             // 
             // groupBox12
             // 
@@ -2207,16 +2018,6 @@ namespace Sog_SGreader
             this.sliderSkillMagicF2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMagicF2.Value = 10;
             // 
-            // pictureBox14
-            // 
-            this.pictureBox14.Image = global::SoG_SGreader.Properties.Resources.icon_flamethrower;
-            this.pictureBox14.Location = new System.Drawing.Point(146, 36);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox14.TabIndex = 11;
-            this.pictureBox14.TabStop = false;
-            // 
             // sliderSkillMagicF1
             // 
             this.sliderSkillMagicF1.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -2227,16 +2028,6 @@ namespace Sog_SGreader
             this.sliderSkillMagicF1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMagicF1.Value = 10;
             // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = global::SoG_SGreader.Properties.Resources.icon_meteor;
-            this.pictureBox13.Location = new System.Drawing.Point(83, 36);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 9;
-            this.pictureBox13.TabStop = false;
-            // 
             // sliderSkillMagicF0
             // 
             this.sliderSkillMagicF0.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -2246,16 +2037,6 @@ namespace Sog_SGreader
             this.sliderSkillMagicF0.TabIndex = 6;
             this.sliderSkillMagicF0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMagicF0.Value = 10;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = global::SoG_SGreader.Properties.Resources.icon_fireball;
-            this.pictureBox12.Location = new System.Drawing.Point(19, 36);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 7;
-            this.pictureBox12.TabStop = false;
             // 
             // tabSkillsUtility
             // 
@@ -2296,16 +2077,6 @@ namespace Sog_SGreader
             this.sliderUtilityE0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderUtilityE0.Value = 3;
             // 
-            // pictureBox30
-            // 
-            this.pictureBox30.Image = global::SoG_SGreader.Properties.Resources.icon_dmgup;
-            this.pictureBox30.Location = new System.Drawing.Point(107, 19);
-            this.pictureBox30.Name = "pictureBox30";
-            this.pictureBox30.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox30.TabIndex = 1;
-            this.pictureBox30.TabStop = false;
-            // 
             // sliderUtilityE1
             // 
             this.sliderUtilityE1.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -2317,16 +2088,6 @@ namespace Sog_SGreader
             this.sliderUtilityE1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderUtilityE1.Value = 3;
             // 
-            // pictureBox31
-            // 
-            this.pictureBox31.Image = global::SoG_SGreader.Properties.Resources.icon_speedup;
-            this.pictureBox31.Location = new System.Drawing.Point(192, 19);
-            this.pictureBox31.Name = "pictureBox31";
-            this.pictureBox31.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox31.TabIndex = 3;
-            this.pictureBox31.TabStop = false;
-            // 
             // sliderUtilityE2
             // 
             this.sliderUtilityE2.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -2337,16 +2098,6 @@ namespace Sog_SGreader
             this.sliderUtilityE2.TabIndex = 4;
             this.sliderUtilityE2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderUtilityE2.Value = 3;
-            // 
-            // pictureBox32
-            // 
-            this.pictureBox32.Image = global::SoG_SGreader.Properties.Resources.icon_protect_clover;
-            this.pictureBox32.Location = new System.Drawing.Point(271, 19);
-            this.pictureBox32.Name = "pictureBox32";
-            this.pictureBox32.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox32.TabIndex = 5;
-            this.pictureBox32.TabStop = false;
             // 
             // groupBox17
             // 
@@ -2374,16 +2125,6 @@ namespace Sog_SGreader
             this.sliderUtilityD0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderUtilityD0.Value = 3;
             // 
-            // pictureBox27
-            // 
-            this.pictureBox27.Image = global::SoG_SGreader.Properties.Resources.icon_utility_blink;
-            this.pictureBox27.Location = new System.Drawing.Point(107, 19);
-            this.pictureBox27.Name = "pictureBox27";
-            this.pictureBox27.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox27.TabIndex = 1;
-            this.pictureBox27.TabStop = false;
-            // 
             // sliderUtilityD1
             // 
             this.sliderUtilityD1.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -2395,16 +2136,6 @@ namespace Sog_SGreader
             this.sliderUtilityD1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderUtilityD1.Value = 3;
             // 
-            // pictureBox28
-            // 
-            this.pictureBox28.Image = global::SoG_SGreader.Properties.Resources.icon_utility_focus;
-            this.pictureBox28.Location = new System.Drawing.Point(192, 19);
-            this.pictureBox28.Name = "pictureBox28";
-            this.pictureBox28.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox28.TabIndex = 3;
-            this.pictureBox28.TabStop = false;
-            // 
             // sliderUtilityD2
             // 
             this.sliderUtilityD2.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -2415,16 +2146,6 @@ namespace Sog_SGreader
             this.sliderUtilityD2.TabIndex = 4;
             this.sliderUtilityD2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderUtilityD2.Value = 3;
-            // 
-            // pictureBox29
-            // 
-            this.pictureBox29.Image = global::SoG_SGreader.Properties.Resources.icon_utility_barrier;
-            this.pictureBox29.Location = new System.Drawing.Point(271, 19);
-            this.pictureBox29.Name = "pictureBox29";
-            this.pictureBox29.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox29.TabIndex = 5;
-            this.pictureBox29.TabStop = false;
             // 
             // groupBox16
             // 
@@ -2451,16 +2172,6 @@ namespace Sog_SGreader
             this.sliderUtilityO0.TabIndex = 0;
             this.sliderUtilityO0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             // 
-            // pictureBox24
-            // 
-            this.pictureBox24.Image = global::SoG_SGreader.Properties.Resources.icon_utility_deathmark;
-            this.pictureBox24.Location = new System.Drawing.Point(107, 19);
-            this.pictureBox24.Name = "pictureBox24";
-            this.pictureBox24.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox24.TabIndex = 1;
-            this.pictureBox24.TabStop = false;
-            // 
             // sliderUtilityO1
             // 
             this.sliderUtilityO1.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -2472,16 +2183,6 @@ namespace Sog_SGreader
             this.sliderUtilityO1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderUtilityO1.Value = 3;
             // 
-            // pictureBox25
-            // 
-            this.pictureBox25.Image = global::SoG_SGreader.Properties.Resources.icon_utility_sleep;
-            this.pictureBox25.Location = new System.Drawing.Point(192, 19);
-            this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox25.TabIndex = 3;
-            this.pictureBox25.TabStop = false;
-            // 
             // sliderUtilityO2
             // 
             this.sliderUtilityO2.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -2492,16 +2193,6 @@ namespace Sog_SGreader
             this.sliderUtilityO2.TabIndex = 4;
             this.sliderUtilityO2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderUtilityO2.Value = 3;
-            // 
-            // pictureBox26
-            // 
-            this.pictureBox26.Image = global::SoG_SGreader.Properties.Resources.icon_utility_taunt;
-            this.pictureBox26.Location = new System.Drawing.Point(271, 19);
-            this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(46, 46);
-            this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox26.TabIndex = 5;
-            this.pictureBox26.TabStop = false;
             // 
             // tabTalentsGeneral
             // 
@@ -2705,7 +2396,7 @@ namespace Sog_SGreader
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
@@ -2724,17 +2415,6 @@ namespace Sog_SGreader
             this.txtConsole.TabIndex = 28;
             this.txtConsole.TabStop = false;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::SoG_SGreader.Properties.Resources.ada21;
-            this.pictureBox3.Location = new System.Drawing.Point(547, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(17, 17);
-            this.pictureBox3.TabIndex = 30;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.PictureBox3_Click);
-            // 
             // label57
             // 
             this.label57.AutoSize = true;
@@ -2746,6 +2426,327 @@ namespace Sog_SGreader
             this.label57.TabIndex = 32;
             this.label57.Text = "* = support for this function was removed due to the risk of losing your save gam" +
     "e";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::SoG_SGreader.Properties.Resources.ada21;
+            this.pictureBox3.Location = new System.Drawing.Point(547, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(17, 17);
+            this.pictureBox3.TabIndex = 30;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.PictureBox3_Click);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::SoG_SGreader.Properties.Resources.icon_berserk;
+            this.pictureBox7.Location = new System.Drawing.Point(355, 34);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 19;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::SoG_SGreader.Properties.Resources.icon_overhead;
+            this.pictureBox11.Location = new System.Drawing.Point(27, 34);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 11;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::SoG_SGreader.Properties.Resources.icon_2hsmash;
+            this.pictureBox8.Location = new System.Drawing.Point(270, 34);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 17;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::SoG_SGreader.Properties.Resources.icon_swirl_clover;
+            this.pictureBox10.Location = new System.Drawing.Point(112, 34);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 13;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::SoG_SGreader.Properties.Resources.icon_2hthrow;
+            this.pictureBox9.Location = new System.Drawing.Point(191, 34);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 15;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SoG_SGreader.Properties.Resources.icon_stinger_clover;
+            this.pictureBox1.Location = new System.Drawing.Point(27, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::SoG_SGreader.Properties.Resources.icon_millionstabs;
+            this.pictureBox2.Location = new System.Drawing.Point(112, 36);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::SoG_SGreader.Properties.Resources.icon_soulstrike;
+            this.pictureBox4.Location = new System.Drawing.Point(191, 36);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 5;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::SoG_SGreader.Properties.Resources.icon_shadowclone;
+            this.pictureBox5.Location = new System.Drawing.Point(270, 36);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 7;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::SoG_SGreader.Properties.Resources.icon_dodgingstrike;
+            this.pictureBox6.Location = new System.Drawing.Point(355, 36);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 9;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox21
+            // 
+            this.pictureBox21.Image = global::SoG_SGreader.Properties.Resources.icon_statictouch;
+            this.pictureBox21.Location = new System.Drawing.Point(146, 36);
+            this.pictureBox21.Name = "pictureBox21";
+            this.pictureBox21.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox21.TabIndex = 11;
+            this.pictureBox21.TabStop = false;
+            // 
+            // pictureBox22
+            // 
+            this.pictureBox22.Image = global::SoG_SGreader.Properties.Resources.icon_summoncloud;
+            this.pictureBox22.Location = new System.Drawing.Point(83, 36);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox22.TabIndex = 9;
+            this.pictureBox22.TabStop = false;
+            // 
+            // pictureBox23
+            // 
+            this.pictureBox23.Image = global::SoG_SGreader.Properties.Resources.icon_chainlightning;
+            this.pictureBox23.Location = new System.Drawing.Point(19, 36);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox23.TabIndex = 7;
+            this.pictureBox23.TabStop = false;
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Image = global::SoG_SGreader.Properties.Resources.icon_swarm;
+            this.pictureBox18.Location = new System.Drawing.Point(146, 36);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.TabIndex = 11;
+            this.pictureBox18.TabStop = false;
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.Image = global::SoG_SGreader.Properties.Resources.icon_plantsummon;
+            this.pictureBox19.Location = new System.Drawing.Point(83, 36);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox19.TabIndex = 9;
+            this.pictureBox19.TabStop = false;
+            // 
+            // pictureBox20
+            // 
+            this.pictureBox20.Image = global::SoG_SGreader.Properties.Resources.icon_earthspike;
+            this.pictureBox20.Location = new System.Drawing.Point(19, 36);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox20.TabIndex = 7;
+            this.pictureBox20.TabStop = false;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Image = global::SoG_SGreader.Properties.Resources.icon_frosty;
+            this.pictureBox15.Location = new System.Drawing.Point(146, 36);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox15.TabIndex = 11;
+            this.pictureBox15.TabStop = false;
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.Image = global::SoG_SGreader.Properties.Resources.icon_frostnova_clover;
+            this.pictureBox16.Location = new System.Drawing.Point(83, 36);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.TabIndex = 9;
+            this.pictureBox16.TabStop = false;
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = global::SoG_SGreader.Properties.Resources.icon_icespikes;
+            this.pictureBox17.Location = new System.Drawing.Point(19, 36);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 7;
+            this.pictureBox17.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = global::SoG_SGreader.Properties.Resources.icon_flamethrower;
+            this.pictureBox14.Location = new System.Drawing.Point(146, 36);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox14.TabIndex = 11;
+            this.pictureBox14.TabStop = false;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = global::SoG_SGreader.Properties.Resources.icon_meteor;
+            this.pictureBox13.Location = new System.Drawing.Point(83, 36);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 9;
+            this.pictureBox13.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::SoG_SGreader.Properties.Resources.icon_fireball;
+            this.pictureBox12.Location = new System.Drawing.Point(19, 36);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 7;
+            this.pictureBox12.TabStop = false;
+            // 
+            // pictureBox30
+            // 
+            this.pictureBox30.Image = global::SoG_SGreader.Properties.Resources.icon_dmgup;
+            this.pictureBox30.Location = new System.Drawing.Point(107, 19);
+            this.pictureBox30.Name = "pictureBox30";
+            this.pictureBox30.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox30.TabIndex = 1;
+            this.pictureBox30.TabStop = false;
+            // 
+            // pictureBox31
+            // 
+            this.pictureBox31.Image = global::SoG_SGreader.Properties.Resources.icon_speedup;
+            this.pictureBox31.Location = new System.Drawing.Point(192, 19);
+            this.pictureBox31.Name = "pictureBox31";
+            this.pictureBox31.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox31.TabIndex = 3;
+            this.pictureBox31.TabStop = false;
+            // 
+            // pictureBox32
+            // 
+            this.pictureBox32.Image = global::SoG_SGreader.Properties.Resources.icon_protect_clover;
+            this.pictureBox32.Location = new System.Drawing.Point(271, 19);
+            this.pictureBox32.Name = "pictureBox32";
+            this.pictureBox32.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox32.TabIndex = 5;
+            this.pictureBox32.TabStop = false;
+            // 
+            // pictureBox27
+            // 
+            this.pictureBox27.Image = global::SoG_SGreader.Properties.Resources.icon_utility_blink;
+            this.pictureBox27.Location = new System.Drawing.Point(107, 19);
+            this.pictureBox27.Name = "pictureBox27";
+            this.pictureBox27.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox27.TabIndex = 1;
+            this.pictureBox27.TabStop = false;
+            // 
+            // pictureBox28
+            // 
+            this.pictureBox28.Image = global::SoG_SGreader.Properties.Resources.icon_utility_focus;
+            this.pictureBox28.Location = new System.Drawing.Point(192, 19);
+            this.pictureBox28.Name = "pictureBox28";
+            this.pictureBox28.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox28.TabIndex = 3;
+            this.pictureBox28.TabStop = false;
+            // 
+            // pictureBox29
+            // 
+            this.pictureBox29.Image = global::SoG_SGreader.Properties.Resources.icon_utility_barrier;
+            this.pictureBox29.Location = new System.Drawing.Point(271, 19);
+            this.pictureBox29.Name = "pictureBox29";
+            this.pictureBox29.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox29.TabIndex = 5;
+            this.pictureBox29.TabStop = false;
+            // 
+            // pictureBox24
+            // 
+            this.pictureBox24.Image = global::SoG_SGreader.Properties.Resources.icon_utility_deathmark;
+            this.pictureBox24.Location = new System.Drawing.Point(107, 19);
+            this.pictureBox24.Name = "pictureBox24";
+            this.pictureBox24.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox24.TabIndex = 1;
+            this.pictureBox24.TabStop = false;
+            // 
+            // pictureBox25
+            // 
+            this.pictureBox25.Image = global::SoG_SGreader.Properties.Resources.icon_utility_sleep;
+            this.pictureBox25.Location = new System.Drawing.Point(192, 19);
+            this.pictureBox25.Name = "pictureBox25";
+            this.pictureBox25.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox25.TabIndex = 3;
+            this.pictureBox25.TabStop = false;
+            // 
+            // pictureBox26
+            // 
+            this.pictureBox26.Image = global::SoG_SGreader.Properties.Resources.icon_utility_taunt;
+            this.pictureBox26.Location = new System.Drawing.Point(271, 19);
+            this.pictureBox26.Name = "pictureBox26";
+            this.pictureBox26.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox26.TabIndex = 5;
+            this.pictureBox26.TabStop = false;
             // 
             // FrmMain
             // 
@@ -2815,84 +2816,53 @@ namespace Sog_SGreader
             this.groupBox11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee2h4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee2h0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee2h1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee2h3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee2h2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee1h0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee1h1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee1h2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee1h3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee1h4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.tabSkillsMagic.ResumeLayout(false);
             this.groupBox15.ResumeLayout(false);
             this.groupBox15.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicA2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicA1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicA0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             this.groupBox14.ResumeLayout(false);
             this.groupBox14.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicE2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicE1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicE0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicI2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicI1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicI0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicF2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicF1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicF0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.tabSkillsUtility.ResumeLayout(false);
             this.groupBox18.ResumeLayout(false);
             this.groupBox18.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityE0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityE1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityE2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
             this.groupBox17.ResumeLayout(false);
             this.groupBox17.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityD0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityD1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityD2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
             this.groupBox16.ResumeLayout(false);
             this.groupBox16.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityO0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityO1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityO2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             this.tabMerchant.ResumeLayout(false);
             this.tabMerchant.PerformLayout();
             this.tabCards.ResumeLayout(false);
@@ -2904,6 +2874,37 @@ namespace Sog_SGreader
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
