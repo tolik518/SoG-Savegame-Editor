@@ -1,5 +1,9 @@
 # SoG Savegame Reader/Editor ![Icon](https://returnnull.de/images/_64.png)
 
+Head over to the releases if you are just here for the [download link](https://github.com/tolik518/SoG_SGreader/releases), then press on `Assets`   
+on the latest version and download the `SoG_SGreader.exe` file
+
+
 ![SoG_SGreader](https://returnnull.de/images/SoG_SGreader6.png)  
 If you want to support me, here is my Cardano($ADA) adress: addr1q8lscf0hrrf883q3ztdlpafge8vp8g6n2mjexhwg5m2nylk48l93aamzj4h9kw6yxpwca2dnkgmf2whqlaw0cym7mzwsrn5hch
 
@@ -13,12 +17,9 @@ of the save game on the [wiki page](https://github.com/tolik518/SoG_SGreader/wik
 ![SoG_SGreader](https://returnnull.de/images/SoG_SGreader8.png)  
   
 If you want your savegame to work you need to save it over to "%APPDATA%\Secrets of Grindea\Characters" and name it 0.cha to 8.cha
-
-Head over to the releases if you are just here for the [download link](https://github.com/tolik518/SoG_SGreader/releases) :)
-
   
 ![SoG_SGreader](https://returnnull.de/images/SoG_SGreader2.png)
 ![SoG_SGreader](https://returnnull.de/images/SoG_SGreader3.png)
   
 
-Keywords: "Secrets of Grindea", "Secrets of Grindea Savegame", "Editor", "Cheat", "Hack", "save game", "save file", "Character File"
+Keywords: "Secrets of Grindea", "Secrets of Grindea Savegame", "save file", "Character File"
