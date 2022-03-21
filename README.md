@@ -1,4 +1,5 @@
 # SoG Savegame Reader/Editor ![Icon](https://returnnull.de/images/_64.png)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/tolik518/SoG_SGreader?label=latest%20version&style=flat-square) ![GitHub all releases](https://img.shields.io/github/downloads/tolik518/SoG_SGreader/total?style=flat-square)
 
 Head over to the releases if you are just here for the [download link](https://github.com/tolik518/SoG_SGreader/releases), then press on `Assets`   
 on the latest version and download the `SoG_SGreader.exe` file
