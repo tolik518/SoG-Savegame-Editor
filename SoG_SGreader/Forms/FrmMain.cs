@@ -43,7 +43,6 @@ namespace Sog_SGreader
 
         internal void LoadSaveGame(string sFilePath)
         {
-           
             txtConsole.AppendText(sFilePath);
             ReadData(sFilePath);
             saveToolStripMenuItem.Enabled = true;
@@ -113,7 +112,7 @@ namespace Sog_SGreader
 			var items = Enum.GetNames(typeof(Sog_Items));
 
 			//Enum.GetValues(typeof((Enum)Enum.GetNames(typeof(Sog_Items)).Where(item => item.StartsWith("_Hat_"))));
-			cbHat.DataSource			= items.Where(item => item.StartsWith("_Hat_") || item == "Null").ToArray();   //TODO
+			cbHat.DataSource			= items.Where(item => item.StartsWith("_Hat_") || item == "Null").ToArray(); //TODO
 			cbFacegear.DataSource		= items.Where(item => item.StartsWith("_Facegear_") || item == "Null").ToArray();
 			cbWeapon.DataSource 		= items.Where(item => item.StartsWith("_OneHanded_") ||
 															  item.StartsWith("_TwoHanded_") ||
@@ -199,18 +198,19 @@ namespace Sog_SGreader
 
             for (int i = 0; i != pPlayer.PetsCount; i++)
             {
-                var pPet = new ListViewItem(new[] { pPlayer.Pets[i].Level.ToString(),
-                                                    pPlayer.Pets[i].Nickname.ToString(),
-                                                    pPlayer.Pets[i].StatHealth.ToString(),
-                                                    pPlayer.Pets[i].StatEnergy.ToString(),
-                                                    pPlayer.Pets[i].StatDamage.ToString(),
-                                                    pPlayer.Pets[i].StatCrit.ToString(),
-                                                    pPlayer.Pets[i].StatSpeed.ToString()
-
-
+                var pPet = new ListViewItem(new[] { 
+                    pPlayer.Pets[i].Level.ToString(),
+                    pPlayer.Pets[i].Nickname.ToString(),
+                    pPlayer.Pets[i].StatHealth.ToString(),
+                    pPlayer.Pets[i].StatEnergy.ToString(),
+                    pPlayer.Pets[i].StatDamage.ToString(),
+                    pPlayer.Pets[i].StatCrit.ToString(),
+                    pPlayer.Pets[i].StatSpeed.ToString()
                 });
-                lstPets.Items.Add(pPet);
+
+                lstPets.Items.Add(pPet); 
             }
+
             txtTimePlayed.Text = TimeSpan.FromSeconds(pPlayer.PlayTimeTotal/60).ToString(@"d\:hh\:mm\:ss");
             numID.Value = pPlayer.UniquePlayerID;
             numBirthdayDay.Value = pPlayer.BirthdayDay;
@@ -245,10 +245,12 @@ namespace Sog_SGreader
             sliderSkillMagicA2.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Wind_StaticTouch) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Wind_StaticTouch).SkillLevel : 0;
 
         }
-        private void InitVariables()    //TODO: we need to clean all our variables before we load a new file 
+
+        private void InitVariables()  //TODO: we need to clean all our variables before we load a new file 
         {
 
         }
+
         private void GetDataFromFields()
         {
             pPlayer.Nickname = txtNickname.Text;
@@ -364,7 +366,7 @@ namespace Sog_SGreader
                 sFilename = saveFileDialog1.FileName.ToString();
                 if (!File.Exists(sFilename))
                 {
-                    FileStream fileStream = File.Create(sFilename);      //there should be a better way to do this lol
+                    FileStream fileStream = File.Create(sFilename); //there should be a better way to do this lol
                     fileStream.Close();
                 }
 
@@ -472,6 +474,7 @@ namespace Sog_SGreader
             {
                 return;
             }
+
             numPetHP.Value = Int32.Parse(lstPets.Items[lstPets.FocusedItem.Index].SubItems[2].Text);
             numPetEnergy.Value = Int32.Parse(lstPets.Items[lstPets.FocusedItem.Index].SubItems[3].Text);
             numPetDamage.Value = Int32.Parse(lstPets.Items[lstPets.FocusedItem.Index].SubItems[4].Text);
@@ -483,7 +486,6 @@ namespace Sog_SGreader
             txtPetNickname.Text = lstPets.Items[lstPets.FocusedItem.Index].SubItems[1].Text;
 
 			cbPetType.Text = (Sog_Pets)pPlayer.Pets[lstPets.FocusedItem.Index].Type1 + "";
-
 		}
 
         private void BtnDeleteSelectedItem_Click(object sender, EventArgs e)
@@ -551,9 +553,9 @@ namespace Sog_SGreader
         //source: https://www.programmersought.com/article/973286506/
         private void TabControl1_DrawItem(object sender, DrawItemEventArgs e)  //Skills Menu, makes the Tabs go sidewards
         {
-            SolidBrush _Brush = new SolidBrush(Color.Black);//monochrome brush
-            RectangleF _TabTextArea = (RectangleF)tabControl1.GetTabRect(e.Index);//Drawing area
-            StringFormat _sf = new StringFormat();//Package text layout format information
+            SolidBrush _Brush = new SolidBrush(Color.Black); //monochrome brush
+            RectangleF _TabTextArea = (RectangleF)tabControl1.GetTabRect(e.Index); //Drawing area
+            StringFormat _sf = new StringFormat(); //Package text layout format information
             _sf.LineAlignment = StringAlignment.Center;
             _sf.Alignment = StringAlignment.Center;
             e.Graphics.DrawString(tabControl1.Controls[e.Index].Text, SystemInformation.MenuFont, _Brush, _TabTextArea, _sf);
