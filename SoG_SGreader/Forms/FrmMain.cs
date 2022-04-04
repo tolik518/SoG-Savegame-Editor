@@ -131,7 +131,7 @@ namespace Sog_SGreader
 															  item.StartsWith("_Bow_") || item == "Null").ToArray();
 			cbStyleShield.DataSource    = items.Where(item => item.StartsWith("_Shield_") || item == "Null").ToArray();
 
-			/// TODO: I need to check if the quickslotsType field changes to fill out the fields with new items
+			//TODO: I need to check if the quickslotsType field changes to fill out the fields with new items
 			for (int i = 0; i != 10; i++)
             {
                 if (pPlayer.quickslots[i].GetType() == typeof(Sog_Items))
@@ -195,7 +195,6 @@ namespace Sog_SGreader
             numSkillSilverPoints.Value = pPlayer.SkillSilverPoints;
             numSkillGoldPoints.Value = pPlayer.SkillGoldPoints;
 
-
             for (int i = 0; i != pPlayer.PetsCount; i++)
             {
                 var pPet = new ListViewItem(new[] { 
@@ -216,7 +215,7 @@ namespace Sog_SGreader
             numBirthdayDay.Value = pPlayer.BirthdayDay;
             numBirtdayMonth.Value = pPlayer.BirthdayMonth;
 
-            sliderSkillMelee1h0.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Skill_OneHanded_Stinger) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Skill_OneHanded_Stinger).SkillLevel : 0 ;
+            sliderSkillMelee1h0.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Skill_OneHanded_Stinger) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Skill_OneHanded_Stinger).SkillLevel : 0;
             sliderSkillMelee1h1.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Skill_OneHanded_MillionStabs) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Skill_OneHanded_MillionStabs).SkillLevel : 0;
             sliderSkillMelee1h2.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Skill_OneHanded_SpiritSlash) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Skill_OneHanded_SpiritSlash).SkillLevel : 0;
             sliderSkillMelee1h3.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Skill_OneHanded_ShadowClone) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Skill_OneHanded_ShadowClone).SkillLevel : 0;
@@ -243,13 +242,10 @@ namespace Sog_SGreader
             sliderSkillMagicA0.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Wind_ChainLightning) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Wind_ChainLightning).SkillLevel : 0;
             sliderSkillMagicA1.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Wind_SummonCloud) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Wind_SummonCloud).SkillLevel : 0;
             sliderSkillMagicA2.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Wind_StaticTouch) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Wind_StaticTouch).SkillLevel : 0;
-
         }
 
-        private void InitVariables()  //TODO: we need to clean all our variables before we load a new file 
-        {
-
-        }
+        //TODO: we need to clean all our variables before we load a new file 
+        private void InitVariables(){}
 
         private void GetDataFromFields()
         {
@@ -271,7 +267,6 @@ namespace Sog_SGreader
 
             for (int i = 0; i < 10; i++)
             {
-
                 if (cbQuickslotType[i].Text == typeof(Sog_Items).Name.ToString())
                 {
                     pPlayer.quickslots[i] = Enum.Parse(typeof(Sog_Items), cbQuickslot[i].Text);
@@ -559,7 +554,6 @@ namespace Sog_SGreader
             _sf.LineAlignment = StringAlignment.Center;
             _sf.Alignment = StringAlignment.Center;
             e.Graphics.DrawString(tabControl1.Controls[e.Index].Text, SystemInformation.MenuFont, _Brush, _TabTextArea, _sf);
-
         }
 
         private void PictureBox3_Click(object sender, EventArgs e) //Cardano Icon in the top corner
@@ -568,9 +562,6 @@ namespace Sog_SGreader
             frmAbout.ShowDialog();
         }
 
-        private void FrmMain_Load(object sender, EventArgs e)
-        {
-
-        }
+        private void FrmMain_Load(object sender, EventArgs e){ }
     }
 }
