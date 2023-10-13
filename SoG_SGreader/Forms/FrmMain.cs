@@ -37,7 +37,7 @@ namespace Sog_SGreader
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-				LoadSaveGame(openFileDialog1.FileName);
+                LoadSaveGame(openFileDialog1.FileName);
             }
         }
 
@@ -109,30 +109,30 @@ namespace Sog_SGreader
 
         private void InitFields()
         {
-			var items = Enum.GetNames(typeof(Sog_Items));
+            var items = Enum.GetNames(typeof(Sog_Items));
 
-			//Enum.GetValues(typeof((Enum)Enum.GetNames(typeof(Sog_Items)).Where(item => item.StartsWith("_Hat_"))));
-			cbHat.DataSource			= items.Where(item => item.StartsWith("_Hat_") || item == "Null").ToArray(); //TODO
-			cbFacegear.DataSource		= items.Where(item => item.StartsWith("_Facegear_") || item == "Null").ToArray();
-			cbWeapon.DataSource 		= items.Where(item => item.StartsWith("_OneHanded_") ||
-															  item.StartsWith("_TwoHanded_") ||
-															  item.StartsWith("_Bow_") || item == "Null").ToArray();
+            //Enum.GetValues(typeof((Enum)Enum.GetNames(typeof(Sog_Items)).Where(item => item.StartsWith("_Hat_"))));
+            cbHat.DataSource = items.Where(item => item.StartsWith("_Hat_") || item == "Null").ToArray(); //TODO
+            cbFacegear.DataSource = items.Where(item => item.StartsWith("_Facegear_") || item == "Null").ToArray();
+            cbWeapon.DataSource = items.Where(item => item.StartsWith("_OneHanded_") ||
+                                                              item.StartsWith("_TwoHanded_") ||
+                                                              item.StartsWith("_Bow_") || item == "Null").ToArray();
 
-			cbShield.DataSource 		= items.Where(item => item.StartsWith("_Shield_") || item == "Null").ToArray();
-			cbArmor.DataSource 		    = items.Where(item => item.StartsWith("_Armor_") || item == "Null").ToArray();
-			cbShoes.DataSource 			= items.Where(item => item.StartsWith("_Shoes_") || item == "Null").ToArray();
-			cbAccessory1.DataSource 	= items.Where(item => item.StartsWith("_Accessory_") || item == "Null").ToArray();
-			cbAccessory2.DataSource 	= items.Where(item => item.StartsWith("_Accessory_") || item == "Null").ToArray();
+            cbShield.DataSource = items.Where(item => item.StartsWith("_Shield_") || item == "Null").ToArray();
+            cbArmor.DataSource = items.Where(item => item.StartsWith("_Armor_") || item == "Null").ToArray();
+            cbShoes.DataSource = items.Where(item => item.StartsWith("_Shoes_") || item == "Null").ToArray();
+            cbAccessory1.DataSource = items.Where(item => item.StartsWith("_Accessory_") || item == "Null").ToArray();
+            cbAccessory2.DataSource = items.Where(item => item.StartsWith("_Accessory_") || item == "Null").ToArray();
 
-			cbStyleHat.DataSource 		= items.Where(item => item.StartsWith("_Hat_") || item == "Null").ToArray();
-			cbStyleFacegear.DataSource  = items.Where(item => item.StartsWith("_Facegear_") || item == "Null").ToArray();
-			cbStyleWeapon.DataSource 	= items.Where(item => item.StartsWith("_OneHanded_") ||
-															  item.StartsWith("_TwoHanded_") ||
-															  item.StartsWith("_Bow_") || item == "Null").ToArray();
-			cbStyleShield.DataSource    = items.Where(item => item.StartsWith("_Shield_") || item == "Null").ToArray();
+            cbStyleHat.DataSource = items.Where(item => item.StartsWith("_Hat_") || item == "Null").ToArray();
+            cbStyleFacegear.DataSource = items.Where(item => item.StartsWith("_Facegear_") || item == "Null").ToArray();
+            cbStyleWeapon.DataSource = items.Where(item => item.StartsWith("_OneHanded_") ||
+                                                              item.StartsWith("_TwoHanded_") ||
+                                                              item.StartsWith("_Bow_") || item == "Null").ToArray();
+            cbStyleShield.DataSource = items.Where(item => item.StartsWith("_Shield_") || item == "Null").ToArray();
 
-			//TODO: I need to check if the quickslotsType field changes to fill out the fields with new items
-			for (int i = 0; i != 10; i++)
+            //TODO: I need to check if the quickslotsType field changes to fill out the fields with new items
+            for (int i = 0; i != 10; i++)
             {
                 if (pPlayer.quickslots[i].GetType() == typeof(Sog_Items))
                 {
@@ -197,7 +197,7 @@ namespace Sog_SGreader
 
             for (int i = 0; i != pPlayer.PetsCount; i++)
             {
-                var pPet = new ListViewItem(new[] { 
+                var pPet = new ListViewItem(new[] {
                     pPlayer.Pets[i].Level.ToString(),
                     pPlayer.Pets[i].Nickname.ToString(),
                     pPlayer.Pets[i].StatHealth.ToString(),
@@ -207,13 +207,16 @@ namespace Sog_SGreader
                     pPlayer.Pets[i].StatSpeed.ToString()
                 });
 
-                lstPets.Items.Add(pPet); 
+                lstPets.Items.Add(pPet);
             }
 
-            txtTimePlayed.Text = TimeSpan.FromSeconds(pPlayer.PlayTimeTotal/60).ToString(@"d\:hh\:mm\:ss");
+            txtTimePlayed.Text = TimeSpan.FromSeconds(pPlayer.PlayTimeTotal / 60).ToString(@"d\:hh\:mm\:ss");
             numID.Value = pPlayer.UniquePlayerID;
             numBirthdayDay.Value = pPlayer.BirthdayDay;
             numBirtdayMonth.Value = pPlayer.BirthdayMonth;
+
+            rbMale.Checked = pPlayer.style.Sex != 0;
+            rbFemale.Checked = pPlayer.style.Sex == 0;
 
             sliderSkillMelee1h0.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Skill_OneHanded_Stinger) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Skill_OneHanded_Stinger).SkillLevel : 0;
             sliderSkillMelee1h1.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Skill_OneHanded_MillionStabs) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Skill_OneHanded_MillionStabs).SkillLevel : 0;
@@ -226,12 +229,12 @@ namespace Sog_SGreader
             sliderSkillMelee2h2.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Skill_TwoHanded_Throw) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Skill_TwoHanded_Throw).SkillLevel : 0;
             sliderSkillMelee2h3.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Skill_TwoHanded_Smash) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Skill_TwoHanded_Smash).SkillLevel : 0;
             sliderSkillMelee2h4.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Skill_TwoHanded_BerserkMode) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Skill_TwoHanded_BerserkMode).SkillLevel : 0;
-        
+
             sliderSkillMagicF0.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Fire_Fireball) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Fire_Fireball).SkillLevel : 0;
             sliderSkillMagicF1.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Fire_Meteor) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Fire_Meteor).SkillLevel : 0;
             sliderSkillMagicF2.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Fire_Flamethrower) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Fire_Flamethrower).SkillLevel : 0;
 
-            sliderSkillMagicI0.Value  = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Ice_IceSpikes) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Ice_IceSpikes).SkillLevel : 0;
+            sliderSkillMagicI0.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Ice_IceSpikes) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Ice_IceSpikes).SkillLevel : 0;
             sliderSkillMagicI1.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Ice_IceNova) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Ice_IceNova).SkillLevel : 0;
             sliderSkillMagicI2.Value = pPlayer.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Ice_FrostyFriend) ? pPlayer.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Ice_FrostyFriend).SkillLevel : 0;
 
@@ -245,7 +248,7 @@ namespace Sog_SGreader
         }
 
         //TODO: we need to clean all our variables before we load a new file 
-        private void InitVariables(){}
+        private void InitVariables() { }
 
         private void GetDataFromFields()
         {
@@ -317,7 +320,7 @@ namespace Sog_SGreader
                     StatHealth = UInt16.Parse(lstPets.Items[i].SubItems[2].Text),
                     StatEnergy = UInt16.Parse(lstPets.Items[i].SubItems[3].Text),
                     StatDamage = UInt16.Parse(lstPets.Items[i].SubItems[4].Text),
-                    StatCrit =  UInt16.Parse(lstPets.Items[i].SubItems[5].Text),
+                    StatCrit = UInt16.Parse(lstPets.Items[i].SubItems[5].Text),
                     StatSpeed = UInt16.Parse(lstPets.Items[i].SubItems[6].Text),
 
                     StatProgressHealth = pPlayer.Pets[0].StatProgressHealth,
@@ -330,9 +333,11 @@ namespace Sog_SGreader
             }
 
             pPlayer.UniquePlayerID = (UInt32)numID.Value;
-            pPlayer.PlayTimeTotal = (int)(TimeSpan.Parse(txtTimePlayed.Text).TotalSeconds)*60;
+            pPlayer.PlayTimeTotal = (int)(TimeSpan.Parse(txtTimePlayed.Text).TotalSeconds) * 60;
             pPlayer.BirthdayDay = (int)numBirthdayDay.Value;
             pPlayer.BirthdayMonth = (int)numBirtdayMonth.Value;
+
+            pPlayer.style.Sex = rbMale.Checked ? 1 : 0;
         }
 
         private readonly Sog_Player pPlayer = new Sog_Player();
@@ -480,8 +485,8 @@ namespace Sog_SGreader
 
             txtPetNickname.Text = lstPets.Items[lstPets.FocusedItem.Index].SubItems[1].Text;
 
-			cbPetType.Text = (Sog_Pets)pPlayer.Pets[lstPets.FocusedItem.Index].Type1 + "";
-		}
+            cbPetType.Text = (Sog_Pets)pPlayer.Pets[lstPets.FocusedItem.Index].Type1 + "";
+        }
 
         private void BtnDeleteSelectedItem_Click(object sender, EventArgs e)
         {
@@ -562,6 +567,6 @@ namespace Sog_SGreader
             frmAbout.ShowDialog();
         }
 
-        private void FrmMain_Load(object sender, EventArgs e){ }
+        private void FrmMain_Load(object sender, EventArgs e) { }
     }
 }

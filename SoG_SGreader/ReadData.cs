@@ -4,7 +4,7 @@ using System.IO;
 
 namespace Sog_SGreader
 {
-    public partial class FrmMain 
+    public partial class FrmMain
     {
         private void ReadData(string fileName)
         {
@@ -61,7 +61,7 @@ namespace Sog_SGreader
                 pPlayer.style.ShirtColor = readBinary.ReadByte();
                 pPlayer.style.PantsColor = readBinary.ReadByte();
 
-                pPlayer.style.Sex = readBinary.ReadByte();
+                pPlayer.style.Sex = readBinary.ReadByte();  // female = 0; male = 1
 
                 pPlayer.NicknameLength = readBinary.ReadByte();
 
@@ -179,7 +179,7 @@ namespace Sog_SGreader
                 pPlayer.Quests = new List<Sog_Player.Quest>(pPlayer.QuestsCount);
                 for (int i = 0; i != pPlayer.QuestsCount; i++)
                 {
-                    Sog_Player.Quest quest = new Sog_Player.Quest(readBinary.ReadUInt16());   
+                    Sog_Player.Quest quest = new Sog_Player.Quest(readBinary.ReadUInt16());
                     pPlayer.Quests.Add(quest);
                 }
                 txtConsole.AppendText("\r\n" + " QuestsCount: " + pPlayer.QuestsCount);
