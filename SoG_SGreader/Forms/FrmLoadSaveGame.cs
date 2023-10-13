@@ -32,6 +32,7 @@ namespace Sog_SGreader
         {
             using (FileStream fileStream = new FileStream(fileName, FileMode.Open))
             {
+
                 BinaryReader readBinary = new BinaryReader(fileStream);
 
                 readBinary.ReadInt32(); //I dont know yet what the first bytes stand for tbh    
@@ -59,15 +60,15 @@ namespace Sog_SGreader
 
                 for (int i = 0; i < 10; i++)
                 {
-                    int iQs_ID = readBinary.ReadByte();
-                    if (iQs_ID == 1)
+                    int quckslotType = readBinary.ReadByte();
+                    if (quckslotType == 1)
                     {
                         readBinary.ReadInt32(); //pPlayer.quickslots.Add((Sog_Items)
-                }
-                    else if (iQs_ID == 2)
+                    }
+                    else if (quckslotType == 2)
                     {
                         readBinary.ReadUInt16();    //pPlayer.quickslots.Add((Sog_Spells)
-                }
+                    }
                     else
                     {
                         
@@ -157,7 +158,6 @@ namespace Sog_SGreader
                 btnLoadSaveGame.Enabled = true;
             }
             UpdateFilePathLabel();
-
         }
     }
 }

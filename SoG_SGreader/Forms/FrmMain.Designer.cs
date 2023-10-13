@@ -3021,7 +3021,7 @@
             this.MainMenuStrip = this.msMenu;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMain";
-            this.Text = "SoG: Savegame Reader v0.4.0 by TOLIK518";
+            this.Text = "SoG: Savegame Reader v0.4.1 by TOLIK518";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.tabContainer.ResumeLayout(false);
             this.tabChar.ResumeLayout(false);
