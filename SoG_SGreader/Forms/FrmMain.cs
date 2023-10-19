@@ -362,8 +362,15 @@ namespace SoG_SGreader
                 playerObject.Pets.RemoveAt(0);
             }
 
-            playerObject.UniquePlayerID = (UInt32)numID.Value;
-            playerObject.PlayTimeTotal = (int)(TimeSpan.Parse(txtTimePlayed.Text).TotalSeconds) * 60;
+            playerObject.UniquePlayerId = (UInt32)numID.Value;
+            
+            // dont change the playtime if its not parseable
+            if (TimeSpan.TryParse(txtTimePlayed.Text, out TimeSpan result)) {
+                playerObject.PlayTimeTotal = Math.Min((int)(result.TotalSeconds * 60), int.MaxValue);
+            } else {
+                txtConsole.AppendText("\r\n\r\nPlaytime is not parseable. Please check the format.");
+            }
+            
             playerObject.BirthdayDay = (int)numBirthdayDay.Value;
             playerObject.BirthdayMonth = (int)numBirtdayMonth.Value;
 
