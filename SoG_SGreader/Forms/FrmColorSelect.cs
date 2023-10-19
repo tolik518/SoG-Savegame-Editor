@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sog_SGreader
+namespace SoG_SGreader
 {
     public partial class FrmColorSelect : Form
     {

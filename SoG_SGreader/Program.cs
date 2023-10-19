@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Sog_SGreader
+namespace SoG_SGreader
 {
     static class Program
     {
@@ -17,7 +17,6 @@ namespace Sog_SGreader
                 Application.SetCompatibleTextRenderingDefault(false);
                 FrmMain frmMain = new FrmMain(args[0]);
                 Application.Run(frmMain);
-
             }
             else
             {

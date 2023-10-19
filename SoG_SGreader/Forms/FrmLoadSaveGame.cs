@@ -3,7 +3,7 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
-namespace Sog_SGreader
+namespace SoG_SGreader
 {
     public partial class FrmLoadSaveGame : Form
     {
