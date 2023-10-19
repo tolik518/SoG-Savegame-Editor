@@ -16,12 +16,11 @@ namespace SoG_SGreader
         {
             InitializeComponent();
         }
-        public string sColor;
+        public string Color;
         private void ColorSelect(object sender, EventArgs e)
         {
-         
-            sColor = ColorTranslator.ToHtml(((Control)sender).BackColor);
-            this.Close();
+            Color = ColorTranslator.ToHtml(((Control)sender).BackColor);
+            Close();
         }
     }
 }

@@ -7,7 +7,7 @@ namespace SoG_SGreader
 {
     public partial class FrmLoadSaveGame : Form
     {
-        public string sFilePath = "";
+        private string filePath = "";
         public FrmLoadSaveGame()
         {
             InitializeComponent();
@@ -20,15 +20,15 @@ namespace SoG_SGreader
         {
             if (lstvSaveGames.SelectedItems.Count != 0)
             {
-                sFilePath = sFilePath + "\\" + lstvSaveGames.SelectedItems[0].Text;
+                filePath = filePath + "\\" + lstvSaveGames.SelectedItems[0].Text;
             }
-            FrmMain frmMain = new FrmMain(sFilePath);
+            FrmMain frmMain = new FrmMain(filePath);
             this.Hide();
             frmMain.ShowDialog();
             this.Close();
         }
 
-        private string GetCharName(string fileName)
+        private string GetCharName(string fileName) // shouldnt be in that class here
         {
             using (FileStream fileStream = new FileStream(fileName, FileMode.Open))
             {
@@ -114,7 +114,7 @@ namespace SoG_SGreader
 
         private string GetSaveGamePath()
         {
-            return sFilePath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Secrets of Grindea\Characters";
+            return filePath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Secrets of Grindea\Characters";
         }
 
         private void BtnChooseFolder_Click(object sender, EventArgs e)
@@ -124,7 +124,7 @@ namespace SoG_SGreader
                 chooseFolder.ShowNewFolderButton = false;
                 if (chooseFolder.ShowDialog() == DialogResult.OK)
                 {
-                    sFilePath = chooseFolder.SelectedPath;
+                    filePath = chooseFolder.SelectedPath;
                     GetSaveGameFiles(chooseFolder.SelectedPath);
                     UpdateFilePathLabel();
                 }
@@ -143,11 +143,11 @@ namespace SoG_SGreader
         {
             if (lstvSaveGames.SelectedItems.Count != 0)
             {
-                lblFilePath.Text = sFilePath + "\\" + lstvSaveGames.SelectedItems[0].Text;
+                lblFilePath.Text = filePath + "\\" + lstvSaveGames.SelectedItems[0].Text;
             }
             else
             {
-                lblFilePath.Text = sFilePath;
+                lblFilePath.Text = filePath;
             }
         }
 

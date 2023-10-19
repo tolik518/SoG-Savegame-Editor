@@ -478,12 +478,12 @@ namespace SoG_SGreader
             using (var form = new FrmColorSelect())
             {
                 form.ShowDialog();
-                string sColor = form.sColor;
+                string sColor = form.Color;
 
                 if (!string.IsNullOrEmpty(sColor))
                 {
                     ((Control)sender).BackColor = ColorTranslator.FromHtml(sColor);
-                    sColor = "_" + form.sColor.TrimStart('#');
+                    sColor = "_" + form.Color.TrimStart('#');
 
                     if (((Control)sender) == btnHairColor)
                     {

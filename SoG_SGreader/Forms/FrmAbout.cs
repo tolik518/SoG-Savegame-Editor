@@ -7,7 +7,7 @@ namespace SoG_SGreader
         public FrmAbout()
         {
             InitializeComponent();
-            lblBuild.Text = "Build: " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            lblBuild.Text = "Build: " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
         }
 
         private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
