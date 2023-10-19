@@ -1,5 +1,5 @@
 ﻿
-namespace Sog_SGreader
+namespace SoG_SGreader
 {
     partial class FrmLoadSaveGame
     {
