@@ -5,11 +5,13 @@ using System.Linq;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 
-namespace Sog_SGreader
+namespace SoG_SGreader
 {
     public partial class FrmMain : Form
     {
-        private readonly Sog_Player playerObject = new Sog_Player();
+        private Player playerObject = new Player();
+        private readonly ComboBox[] cbQuickslot = new ComboBox[10];
+        private readonly ComboBox[] cbQuickslotType = new ComboBox[10];
 
         public FrmMain(string sFilePath)
         {
@@ -48,15 +50,16 @@ namespace Sog_SGreader
         internal void LoadSaveGame(string sFilePath)
         {
             txtConsole.AppendText(sFilePath);
-            ReadData(sFilePath);
+            InitVariables();
+            
+            ReadData readData = new ReadData();
+            playerObject = readData.ReadFromFile(sFilePath, txtConsole);
+            
             saveToolStripMenuItem.Enabled = true;
 
             InitFields();
             PopulateFileds();
         }
-
-        private readonly ComboBox[] cbQuickslot = new ComboBox[10];
-        private readonly ComboBox[] cbQuickslotType = new ComboBox[10];
 
         //TODO: Check out if there is a way to show the items in the designer 
         private void InitElements() //  Designer Items
@@ -97,23 +100,23 @@ namespace Sog_SGreader
             {
                 if (cbQuickslotType[i].Text == "Sog_Items")
                 {
-                    cbQuickslot[i].DataSource = Enum.GetValues(typeof(Sog_Items));
+                    cbQuickslot[i].DataSource = Enum.GetValues(typeof(SogItems));
                 }
                 else if (cbQuickslotType[i].Text == "Sog_Spells")
                 {
-                    cbQuickslot[i].DataSource = Enum.GetValues(typeof(Sog_Skills));
+                    cbQuickslot[i].DataSource = Enum.GetValues(typeof(SogSkills));
                 }
                 else
                 {
                     cbQuickslot[i].DataSource = null;
                 }
-                cbQuickslot[i].Text = (playerObject.quickslots[i]).ToString();
+                cbQuickslot[i].Text = (playerObject.Quickslots[i]).ToString();
             }
         }
 
         private void InitFields()
         {
-            var items = Enum.GetNames(typeof(Sog_Items));
+            var items = Enum.GetNames(typeof(SogItems));
 
             //Enum.GetValues(typeof((Enum)Enum.GetNames(typeof(Sog_Items)).Where(item => item.StartsWith("_Hat_"))));
             cbHat.DataSource = items.Where(item => item.StartsWith("_Hat_") || item == "Null").ToArray(); //TODO
@@ -147,13 +150,13 @@ namespace Sog_SGreader
             //TODO: I need to check if the quickslotsType field changes to fill out the fields with new items
             for (int i = 0; i != 10; i++)
             {
-                if (playerObject.quickslots[i].GetType() == typeof(Sog_Items))
+                if (playerObject.Quickslots[i].GetType() == typeof(SogItems))
                 {
                     cbQuickslot[i].DataSource = items;
                 }
-                else if (playerObject.quickslots[i].GetType() == typeof(Sog_Skills))
+                else if (playerObject.Quickslots[i].GetType() == typeof(SogSkills))
                 {
-                    cbQuickslot[i].DataSource = Enum.GetValues(typeof(Sog_Skills));
+                    cbQuickslot[i].DataSource = Enum.GetValues(typeof(SogSkills));
                 }
                 cbQuickslotType[i].DataSource = new string[] { 
                     "Sog_Items", "Sog_Spells", "Int32" 
@@ -166,32 +169,32 @@ namespace Sog_SGreader
         {
             txtNickname.Text = playerObject.Nickname;
 
-            cbHat.Text = ((Sog_Items)playerObject.equip.Hat).ToString();
-            cbFacegear.Text = ((Sog_Items)playerObject.equip.Facegear).ToString();
-            cbWeapon.Text = ((Sog_Items)playerObject.equip.Weapon).ToString();
-            cbShield.Text = ((Sog_Items)playerObject.equip.Shield).ToString();
-            cbArmor.Text = ((Sog_Items)playerObject.equip.Armor).ToString();
-            cbShoes.Text = ((Sog_Items)playerObject.equip.Shoes).ToString();
+            cbHat.Text = ((SogItems)playerObject.Equip.Hat).ToString();
+            cbFacegear.Text = ((SogItems)playerObject.Equip.Facegear).ToString();
+            cbWeapon.Text = ((SogItems)playerObject.Equip.Weapon).ToString();
+            cbShield.Text = ((SogItems)playerObject.Equip.Shield).ToString();
+            cbArmor.Text = ((SogItems)playerObject.Equip.Armor).ToString();
+            cbShoes.Text = ((SogItems)playerObject.Equip.Shoes).ToString();
 
-            cbAccessory1.Text = ((Sog_Items)playerObject.equip.Accessory1).ToString();
-            cbAccessory2.Text = ((Sog_Items)playerObject.equip.Accessory2).ToString();
+            cbAccessory1.Text = ((SogItems)playerObject.Equip.Accessory1).ToString();
+            cbAccessory2.Text = ((SogItems)playerObject.Equip.Accessory2).ToString();
 
-            cbStyleHat.Text = ((Sog_Items)playerObject.style.Hat).ToString();
-            cbStyleFacegear.Text = ((Sog_Items)playerObject.style.Facegear).ToString();
-            cbStyleWeapon.Text = ((Sog_Items)playerObject.style.Weapon).ToString();
-            cbStyleShield.Text = ((Sog_Items)playerObject.style.Shield).ToString();
+            cbStyleHat.Text = ((SogItems)playerObject.Style.Hat).ToString();
+            cbStyleFacegear.Text = ((SogItems)playerObject.Style.Facegear).ToString();
+            cbStyleWeapon.Text = ((SogItems)playerObject.Style.Weapon).ToString();
+            cbStyleShield.Text = ((SogItems)playerObject.Style.Shield).ToString();
 
             for (int i = 0; i < 10; i++)
             {
-                cbQuickslot[i].Text = playerObject.quickslots[i].ToString();
-                cbQuickslotType[i].Text = (playerObject.quickslots[i].GetType()).Name.ToString();
+                cbQuickslot[i].Text = playerObject.Quickslots[i].ToString();
+                cbQuickslotType[i].Text = (playerObject.Quickslots[i].GetType()).Name.ToString();
             }
 
-            btnHairColor.BackColor = ColorTranslator.FromHtml("#" + ((Sog_Colors)playerObject.style.HairColor).ToString().TrimStart('_'));
+            btnHairColor.BackColor = ColorTranslator.FromHtml("#" + ((SogColors)playerObject.Style.HairColor).ToString().TrimStart('_'));
             // btnSkinColor.BackColor = ColorTranslator.FromHtml("#" + ((SoG_Colors)iHairColor).ToString().TrimStart('_'));
-            btnPonchoColor.BackColor = ColorTranslator.FromHtml("#" + ((Sog_Colors)playerObject.style.PonchoColor).ToString().TrimStart('_'));
-            btnShirtColor.BackColor = ColorTranslator.FromHtml("#" + ((Sog_Colors)playerObject.style.ShirtColor).ToString().TrimStart('_'));
-            btnPantsColor.BackColor = ColorTranslator.FromHtml("#" + ((Sog_Colors)playerObject.style.PantsColor).ToString().TrimStart('_'));
+            btnPonchoColor.BackColor = ColorTranslator.FromHtml("#" + ((SogColors)playerObject.Style.PonchoColor).ToString().TrimStart('_'));
+            btnShirtColor.BackColor = ColorTranslator.FromHtml("#" + ((SogColors)playerObject.Style.ShirtColor).ToString().TrimStart('_'));
+            btnPantsColor.BackColor = ColorTranslator.FromHtml("#" + ((SogColors)playerObject.Style.PantsColor).ToString().TrimStart('_'));
 
             for (int i = 0; i != playerObject.ItemsCount; i++)
             {
@@ -209,9 +212,9 @@ namespace Sog_SGreader
             numGold.Value = playerObject.Cash;
 
             numLevel.Value = playerObject.Level;
-            numEXPcurrent.Value = playerObject.EXPCurrent;
-            numEXPUnknown0.Value = playerObject.EXPUnknown0;
-            numEXPUnknown1.Value = playerObject.EXPUnknown1;
+            numEXPcurrent.Value = playerObject.ExpCurrent;
+            numEXPUnknown0.Value = playerObject.ExpUnknown0;
+            numEXPUnknown1.Value = playerObject.ExpUnknown1;
 
             numSkillTalentPoints.Value = playerObject.SkillTalentPoints;
             numSkillSilverPoints.Value = playerObject.SkillSilverPoints;
@@ -233,40 +236,40 @@ namespace Sog_SGreader
             }
 
             txtTimePlayed.Text = TimeSpan.FromSeconds(playerObject.PlayTimeTotal / 60).ToString(@"d\:hh\:mm\:ss");
-            numID.Value = playerObject.UniquePlayerID;
+            numID.Value = playerObject.UniquePlayerId;
             numBirthdayDay.Value = playerObject.BirthdayDay;
             numBirtdayMonth.Value = playerObject.BirthdayMonth;
 
-            rbMale.Checked = playerObject.style.Sex != 0;
-            rbFemale.Checked = playerObject.style.Sex == 0;
+            rbMale.Checked = playerObject.Style.Sex != 0;
+            rbFemale.Checked = playerObject.Style.Sex == 0;
 
-            sliderSkillMelee1h0.Value = playerObject.Skills.Any(x => x.SkillID == Sog_Skills._Skill_OneHanded_Stinger) ? playerObject.Skills.Find(x => x.SkillID == Sog_Skills._Skill_OneHanded_Stinger).SkillLevel : 0;
-            sliderSkillMelee1h1.Value = playerObject.Skills.Any(x => x.SkillID == Sog_Skills._Skill_OneHanded_MillionStabs) ? playerObject.Skills.Find(x => x.SkillID == Sog_Skills._Skill_OneHanded_MillionStabs).SkillLevel : 0;
-            sliderSkillMelee1h2.Value = playerObject.Skills.Any(x => x.SkillID == Sog_Skills._Skill_OneHanded_SpiritSlash) ? playerObject.Skills.Find(x => x.SkillID == Sog_Skills._Skill_OneHanded_SpiritSlash).SkillLevel : 0;
-            sliderSkillMelee1h3.Value = playerObject.Skills.Any(x => x.SkillID == Sog_Skills._Skill_OneHanded_ShadowClone) ? playerObject.Skills.Find(x => x.SkillID == Sog_Skills._Skill_OneHanded_ShadowClone).SkillLevel : 0;
-            sliderSkillMelee1h4.Value = playerObject.Skills.Any(x => x.SkillID == Sog_Skills._Skill_OneHanded_QuickCounter) ? playerObject.Skills.Find(x => x.SkillID == Sog_Skills._Skill_OneHanded_QuickCounter).SkillLevel : 0;
+            sliderSkillMelee1h0.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Skill_OneHanded_Stinger) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Skill_OneHanded_Stinger).SkillLevel : 0;
+            sliderSkillMelee1h1.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Skill_OneHanded_MillionStabs) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Skill_OneHanded_MillionStabs).SkillLevel : 0;
+            sliderSkillMelee1h2.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Skill_OneHanded_SpiritSlash) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Skill_OneHanded_SpiritSlash).SkillLevel : 0;
+            sliderSkillMelee1h3.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Skill_OneHanded_ShadowClone) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Skill_OneHanded_ShadowClone).SkillLevel : 0;
+            sliderSkillMelee1h4.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Skill_OneHanded_QuickCounter) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Skill_OneHanded_QuickCounter).SkillLevel : 0;
 
-            sliderSkillMelee2h0.Value = playerObject.Skills.Any(x => x.SkillID == Sog_Skills._Skill_TwoHanded_Overhead) ? playerObject.Skills.Find(x => x.SkillID == Sog_Skills._Skill_TwoHanded_Overhead).SkillLevel : 0;
-            sliderSkillMelee2h1.Value = playerObject.Skills.Any(x => x.SkillID == Sog_Skills._Skill_TwoHanded_Spin) ? playerObject.Skills.Find(x => x.SkillID == Sog_Skills._Skill_TwoHanded_Spin).SkillLevel : 0;
-            sliderSkillMelee2h2.Value = playerObject.Skills.Any(x => x.SkillID == Sog_Skills._Skill_TwoHanded_Throw) ? playerObject.Skills.Find(x => x.SkillID == Sog_Skills._Skill_TwoHanded_Throw).SkillLevel : 0;
-            sliderSkillMelee2h3.Value = playerObject.Skills.Any(x => x.SkillID == Sog_Skills._Skill_TwoHanded_Smash) ? playerObject.Skills.Find(x => x.SkillID == Sog_Skills._Skill_TwoHanded_Smash).SkillLevel : 0;
-            sliderSkillMelee2h4.Value = playerObject.Skills.Any(x => x.SkillID == Sog_Skills._Skill_TwoHanded_BerserkMode) ? playerObject.Skills.Find(x => x.SkillID == Sog_Skills._Skill_TwoHanded_BerserkMode).SkillLevel : 0;
+            sliderSkillMelee2h0.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Skill_TwoHanded_Overhead) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Skill_TwoHanded_Overhead).SkillLevel : 0;
+            sliderSkillMelee2h1.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Skill_TwoHanded_Spin) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Skill_TwoHanded_Spin).SkillLevel : 0;
+            sliderSkillMelee2h2.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Skill_TwoHanded_Throw) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Skill_TwoHanded_Throw).SkillLevel : 0;
+            sliderSkillMelee2h3.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Skill_TwoHanded_Smash) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Skill_TwoHanded_Smash).SkillLevel : 0;
+            sliderSkillMelee2h4.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Skill_TwoHanded_BerserkMode) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Skill_TwoHanded_BerserkMode).SkillLevel : 0;
 
-            sliderSkillMagicF0.Value = playerObject.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Fire_Fireball) ? playerObject.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Fire_Fireball).SkillLevel : 0;
-            sliderSkillMagicF1.Value = playerObject.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Fire_Meteor) ? playerObject.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Fire_Meteor).SkillLevel : 0;
-            sliderSkillMagicF2.Value = playerObject.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Fire_Flamethrower) ? playerObject.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Fire_Flamethrower).SkillLevel : 0;
+            sliderSkillMagicF0.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Magic_Fire_Fireball) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Magic_Fire_Fireball).SkillLevel : 0;
+            sliderSkillMagicF1.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Magic_Fire_Meteor) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Magic_Fire_Meteor).SkillLevel : 0;
+            sliderSkillMagicF2.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Magic_Fire_Flamethrower) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Magic_Fire_Flamethrower).SkillLevel : 0;
 
-            sliderSkillMagicI0.Value = playerObject.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Ice_IceSpikes) ? playerObject.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Ice_IceSpikes).SkillLevel : 0;
-            sliderSkillMagicI1.Value = playerObject.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Ice_IceNova) ? playerObject.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Ice_IceNova).SkillLevel : 0;
-            sliderSkillMagicI2.Value = playerObject.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Ice_FrostyFriend) ? playerObject.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Ice_FrostyFriend).SkillLevel : 0;
+            sliderSkillMagicI0.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Magic_Ice_IceSpikes) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Magic_Ice_IceSpikes).SkillLevel : 0;
+            sliderSkillMagicI1.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Magic_Ice_IceNova) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Magic_Ice_IceNova).SkillLevel : 0;
+            sliderSkillMagicI2.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Magic_Ice_FrostyFriend) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Magic_Ice_FrostyFriend).SkillLevel : 0;
 
-            sliderSkillMagicE0.Value = playerObject.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Earth_EarthSpike) ? playerObject.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Earth_EarthSpike).SkillLevel : 0;
-            sliderSkillMagicE1.Value = playerObject.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Earth_SummonPlant) ? playerObject.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Earth_SummonPlant).SkillLevel : 0;
-            sliderSkillMagicE2.Value = playerObject.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Earth_InsectSwarm) ? playerObject.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Earth_InsectSwarm).SkillLevel : 0;
+            sliderSkillMagicE0.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Magic_Earth_EarthSpike) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Magic_Earth_EarthSpike).SkillLevel : 0;
+            sliderSkillMagicE1.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Magic_Earth_SummonPlant) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Magic_Earth_SummonPlant).SkillLevel : 0;
+            sliderSkillMagicE2.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Magic_Earth_InsectSwarm) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Magic_Earth_InsectSwarm).SkillLevel : 0;
 
-            sliderSkillMagicA0.Value = playerObject.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Wind_ChainLightning) ? playerObject.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Wind_ChainLightning).SkillLevel : 0;
-            sliderSkillMagicA1.Value = playerObject.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Wind_SummonCloud) ? playerObject.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Wind_SummonCloud).SkillLevel : 0;
-            sliderSkillMagicA2.Value = playerObject.Skills.Any(x => x.SkillID == Sog_Skills._Magic_Wind_StaticTouch) ? playerObject.Skills.Find(x => x.SkillID == Sog_Skills._Magic_Wind_StaticTouch).SkillLevel : 0;
+            sliderSkillMagicA0.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Magic_Wind_ChainLightning) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Magic_Wind_ChainLightning).SkillLevel : 0;
+            sliderSkillMagicA1.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Magic_Wind_SummonCloud) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Magic_Wind_SummonCloud).SkillLevel : 0;
+            sliderSkillMagicA2.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Magic_Wind_StaticTouch) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Magic_Wind_StaticTouch).SkillLevel : 0;
         }
 
         //TODO: we need to clean all our variables before we load a new file 
@@ -275,36 +278,36 @@ namespace Sog_SGreader
         private void GetDataFromFields()
         {
             playerObject.Nickname = txtNickname.Text;
-            playerObject.equip.Hat = (int)Enum.Parse(typeof(Sog_Items), cbHat.Text);
-            playerObject.equip.Facegear = (int)Enum.Parse(typeof(Sog_Items), cbFacegear.Text);
-            playerObject.equip.Weapon = (int)Enum.Parse(typeof(Sog_Items), cbWeapon.Text);
-            playerObject.equip.Shield = (int)Enum.Parse(typeof(Sog_Items), cbShield.Text);
-            playerObject.equip.Armor = (int)Enum.Parse(typeof(Sog_Items), cbArmor.Text);
-            playerObject.equip.Shoes = (int)Enum.Parse(typeof(Sog_Items), cbShoes.Text);
+            playerObject.Equip.Hat = (int)Enum.Parse(typeof(SogItems), cbHat.Text);
+            playerObject.Equip.Facegear = (int)Enum.Parse(typeof(SogItems), cbFacegear.Text);
+            playerObject.Equip.Weapon = (int)Enum.Parse(typeof(SogItems), cbWeapon.Text);
+            playerObject.Equip.Shield = (int)Enum.Parse(typeof(SogItems), cbShield.Text);
+            playerObject.Equip.Armor = (int)Enum.Parse(typeof(SogItems), cbArmor.Text);
+            playerObject.Equip.Shoes = (int)Enum.Parse(typeof(SogItems), cbShoes.Text);
 
-            playerObject.equip.Accessory1 = (int)Enum.Parse(typeof(Sog_Items), cbAccessory1.Text);
-            playerObject.equip.Accessory2 = (int)Enum.Parse(typeof(Sog_Items), cbAccessory2.Text);
+            playerObject.Equip.Accessory1 = (int)Enum.Parse(typeof(SogItems), cbAccessory1.Text);
+            playerObject.Equip.Accessory2 = (int)Enum.Parse(typeof(SogItems), cbAccessory2.Text);
 
-            playerObject.style.Hat = (int)Enum.Parse(typeof(Sog_Items), cbStyleHat.Text);
-            playerObject.style.Facegear = (int)Enum.Parse(typeof(Sog_Items), cbStyleFacegear.Text);
-            playerObject.style.Weapon = (int)Enum.Parse(typeof(Sog_Items), cbStyleWeapon.Text);
-            playerObject.style.Shield = (int)Enum.Parse(typeof(Sog_Items), cbStyleShield.Text);
+            playerObject.Style.Hat = (int)Enum.Parse(typeof(SogItems), cbStyleHat.Text);
+            playerObject.Style.Facegear = (int)Enum.Parse(typeof(SogItems), cbStyleFacegear.Text);
+            playerObject.Style.Weapon = (int)Enum.Parse(typeof(SogItems), cbStyleWeapon.Text);
+            playerObject.Style.Shield = (int)Enum.Parse(typeof(SogItems), cbStyleShield.Text);
 
             for (int i = 0; i < 10; i++)
             {
-                if (cbQuickslotType[i].Text == typeof(Sog_Items).Name.ToString())
+                if (cbQuickslotType[i].Text == nameof(SogItems))
                 {
                     //playerObject.quickslots[i] = Enum.Parse(typeof(Sog_Items), cbQuickslot[i].Text);
-                    playerObject.quickslots[i] = playerObject.quickslots[i];
+                    playerObject.Quickslots[i] = playerObject.Quickslots[i];
                 }
-                else if (cbQuickslotType[i].Text == typeof(Sog_Skills).Name.ToString())
+                else if (cbQuickslotType[i].Text == nameof(SogSkills))
                 {
                     //playerObject.quickslots[i] = Enum.Parse(typeof(Sog_Skills), cbQuickslot[i].Text);
-                    playerObject.quickslots[i] = playerObject.quickslots[i];
+                    playerObject.Quickslots[i] = playerObject.Quickslots[i];
                 }
                 else
                 {
-                    playerObject.quickslots[i] = (int)0;
+                    playerObject.Quickslots[i] = (int)0;
                 }
             }
 
@@ -313,20 +316,20 @@ namespace Sog_SGreader
 
             for (int i = 0; i != lstInventory.Items.Count; i++)
             {
-                Sog_Player.Item iitem = new Sog_Player.Item(
-                    (Sog_Items)Enum.Parse(typeof(Sog_Items), lstInventory.Items[i].SubItems[0].Text), 
+                Item item = new Item(
+                    (SogItems)Enum.Parse(typeof(SogItems), lstInventory.Items[i].SubItems[0].Text), 
                     Int32.Parse(lstInventory.Items[i].SubItems[1].Text),
                     UInt32.Parse(lstInventory.Items[i].SubItems[2].Text)
                  );
 
-                playerObject.Inventory.Add(iitem);
+                playerObject.Inventory.Add(item);
             }
 
             playerObject.Level = (Int16)numLevel.Value;
             playerObject.Cash = (int)numGold.Value;
-            playerObject.EXPCurrent = (int)numEXPcurrent.Value;
-            playerObject.EXPUnknown0 = (int)numEXPUnknown0.Value;
-            playerObject.EXPUnknown1 = (int)numEXPUnknown1.Value;
+            playerObject.ExpCurrent = (int)numEXPcurrent.Value;
+            playerObject.ExpUnknown0 = (int)numEXPUnknown0.Value;
+            playerObject.ExpUnknown1 = (int)numEXPUnknown1.Value;
 
             playerObject.SkillTalentPoints = (Int16)numSkillTalentPoints.Value;
             playerObject.SkillSilverPoints = (Int16)numSkillSilverPoints.Value;
@@ -336,7 +339,7 @@ namespace Sog_SGreader
 
             for (byte i = 0; i != playerObject.PetsCount; i++)
             {
-                playerObject.Pets.Add(new Sog_Player.Pet
+                playerObject.Pets.Add(new Pet
                 {
                     Type1 = playerObject.Pets[0].Type1,
                     Type2 = playerObject.Pets[0].Type2,
@@ -364,7 +367,7 @@ namespace Sog_SGreader
             playerObject.BirthdayDay = (int)numBirthdayDay.Value;
             playerObject.BirthdayMonth = (int)numBirtdayMonth.Value;
 
-            playerObject.style.Sex = rbMale.Checked ? 1 : 0;
+            playerObject.Style.Sex = rbMale.Checked ? 1 : 0;
         }
 
         private void LstInventory_SelectedIndexChanged(object sender, EventArgs e)
@@ -394,8 +397,11 @@ namespace Sog_SGreader
                     FileStream fileStream = File.Create(sFilename); //there should be a better way to do this lol
                     fileStream.Close();
                 }
-
-                WriteData(sFilename);
+                
+                this.GetDataFromFields();
+                DataWriter dataWriter = new DataWriter(playerObject);
+                dataWriter.WriteToFile(sFilename);
+                
                 txtConsole.AppendText("\r\n\r\nFile was saved successfully under: ");
                 txtConsole.AppendText("\r\n" + sFilename);
             }
@@ -474,19 +480,19 @@ namespace Sog_SGreader
 
                     if (((Control)sender) == btnHairColor)
                     {
-                        playerObject.style.HairColor = (byte)(Sog_Colors)Enum.Parse(typeof(Sog_Colors), sColor);
+                        playerObject.Style.HairColor = (byte)(SogColors)Enum.Parse(typeof(SogColors), sColor);
                     }
                     else if (((Control)sender) == btnPonchoColor)
                     {
-                        playerObject.style.PonchoColor = (byte)(Sog_Colors)Enum.Parse(typeof(Sog_Colors), sColor);
+                        playerObject.Style.PonchoColor = (byte)(SogColors)Enum.Parse(typeof(SogColors), sColor);
                     }
                     else if (((Control)sender) == btnShirtColor)
                     {
-                        playerObject.style.ShirtColor = (byte)(Sog_Colors)Enum.Parse(typeof(Sog_Colors), sColor);
+                        playerObject.Style.ShirtColor = (byte)(SogColors)Enum.Parse(typeof(SogColors), sColor);
                     }
                     else if (((Control)sender) == btnPantsColor)
                     {
-                        playerObject.style.PantsColor = (byte)(Sog_Colors)Enum.Parse(typeof(Sog_Colors), sColor);
+                        playerObject.Style.PantsColor = (byte)(SogColors)Enum.Parse(typeof(SogColors), sColor);
                     }
                 }
             }
@@ -511,7 +517,7 @@ namespace Sog_SGreader
 
             txtPetNickname.Text = lstPets.Items[index].SubItems[1].Text;
 
-            cbPetType.Text = (Sog_Pets)playerObject.Pets[index].Type1 + "";
+            cbPetType.Text = (SogPets)playerObject.Pets[index].Type1 + "";
         }
 
         private void BtnDeleteSelectedItem_Click(object sender, EventArgs e)
@@ -568,7 +574,7 @@ namespace Sog_SGreader
             string caption = "Save complete";
             MessageBoxButtons buttons = MessageBoxButtons.OK;
 
-            using (StreamWriter sw = new StreamWriter(Environment.CurrentDirectory + "/" + playerObject.UniquePlayerID + "_" + playerObject.Nickname + ".json"))
+            using (StreamWriter sw = new StreamWriter(Environment.CurrentDirectory + "/" + playerObject.UniquePlayerId + "_" + playerObject.Nickname + ".json"))
             using (JsonWriter writer = new JsonTextWriter(sw))
             {
                 serializer.Serialize(writer, this.playerObject);
@@ -579,12 +585,18 @@ namespace Sog_SGreader
         //source: https://www.programmersought.com/article/973286506/
         private void TabControl1_DrawItem(object sender, DrawItemEventArgs e)  //Skills Menu, makes the Tabs go sidewards
         {
-            SolidBrush _Brush = new SolidBrush(Color.Black); //monochrome brush
-            RectangleF _TabTextArea = (RectangleF)tabControl1.GetTabRect(e.Index); //Drawing area
-            StringFormat _sf = new StringFormat(); //Package text layout format information
-            _sf.LineAlignment = StringAlignment.Center;
-            _sf.Alignment = StringAlignment.Center;
-            e.Graphics.DrawString(tabControl1.Controls[e.Index].Text, SystemInformation.MenuFont, _Brush, _TabTextArea, _sf);
+            SolidBrush brush = new SolidBrush(Color.Black); //monochrome brush
+            RectangleF tabTextArea = (RectangleF)tabControl1.GetTabRect(e.Index); //Drawing area
+            StringFormat sf = new StringFormat(); //Package text layout format information
+            sf.LineAlignment = StringAlignment.Center;
+            sf.Alignment = StringAlignment.Center;
+            e.Graphics.DrawString(
+                tabControl1.Controls[e.Index].Text,
+                SystemInformation.MenuFont,
+                brush,
+                tabTextArea,
+                sf
+            );
         }
 
         private void PictureBox3_Click(object sender, EventArgs e) //Cardano Icon in the top corner

@@ -1,231 +1,240 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
+﻿using System.IO;
 
-namespace Sog_SGreader
+namespace SoG_SGreader
 {
-    public partial class FrmMain
+    public class DataWriter
     {
-        private void WriteData(string fileName)
+        private readonly Player playerObject;
+
+        public DataWriter(Player playerObject)
         {
+            this.playerObject = playerObject;
+        }
 
-            using (BinaryWriter writeBinary = new BinaryWriter(File.Open(fileName, FileMode.Create)))
+        public void WriteToFile(string fileName)
+        {
+            using (var writeBinary = new BinaryWriter(File.Open(fileName, FileMode.Create)))
             {
-                GetDataFromFields();
-                writeBinary.Write((int)playerObject.MagicByte);
-                writeBinary.Write((int)playerObject.equip.Hat);
-                writeBinary.Write((int)playerObject.equip.Facegear);
-                writeBinary.Write((char)playerObject.style.Bodytype);
-                writeBinary.Write((int)playerObject.style.Hair);
-                writeBinary.Write((int)playerObject.equip.Weapon);
-                writeBinary.Write((int)playerObject.equip.Shield);
-                writeBinary.Write((int)playerObject.equip.Armor);
-                writeBinary.Write((int)playerObject.equip.Shoes);
-                writeBinary.Write((int)playerObject.equip.Accessory1);
-                writeBinary.Write((int)playerObject.equip.Accessory2);
-                writeBinary.Write((int)playerObject.style.Hat);
-                writeBinary.Write((int)playerObject.style.Facegear);
-                writeBinary.Write((int)playerObject.style.Weapon);
-                writeBinary.Write((int)playerObject.style.Shield);
-                writeBinary.Write((bool)playerObject.style.HatHidden);
-                writeBinary.Write((bool)playerObject.style.FacegearHidden);
-                writeBinary.Write((int)playerObject.LastTwoHander);
-                writeBinary.Write((int)playerObject.LastOneHander);
-                writeBinary.Write((int)playerObject.LastBow);
+                Equip equip = playerObject.Equip;
+                Style style = playerObject.Style;
 
-                foreach (object quickslot in playerObject.quickslots)
+                writeBinary.Write(playerObject.MagicByte);
+                writeBinary.Write(equip.Hat);
+                writeBinary.Write(equip.Facegear);
+                writeBinary.Write(style.Bodytype);
+                writeBinary.Write(style.Hair);
+                writeBinary.Write(equip.Weapon);
+                writeBinary.Write(equip.Shield);
+                writeBinary.Write(equip.Armor);
+                writeBinary.Write(equip.Shoes);
+                writeBinary.Write(equip.Accessory1);
+                writeBinary.Write(equip.Accessory2);
+                writeBinary.Write(style.Hat);
+                writeBinary.Write(style.Facegear);
+                writeBinary.Write(style.Weapon);
+                writeBinary.Write(style.Shield);
+                writeBinary.Write(style.HatHidden);
+                writeBinary.Write(style.FacegearHidden);
+                writeBinary.Write(playerObject.LastTwoHander);
+                writeBinary.Write(playerObject.LastOneHander);
+                writeBinary.Write(playerObject.LastBow);
+
+                foreach (var quickslot in playerObject.Quickslots)
                 {
-                    if (quickslot.GetType() == typeof(Sog_Items))
+                    if (quickslot.GetType() == typeof(SogItems))
                     {
-                        writeBinary.Write((byte)1);
-                        writeBinary.Write((Int32)quickslot);
+                        writeBinary.Write((byte) 1);
+                        writeBinary.Write((int) quickslot);
                     }
-                    else if (quickslot.GetType() == typeof(Sog_Skills))
+                    else if (quickslot.GetType() == typeof(SogSkills))
                     {
-                        writeBinary.Write((byte)2);
-                        writeBinary.Write((UInt16)quickslot);
+                        writeBinary.Write((byte) 2);
+                        writeBinary.Write((ushort) quickslot);
                     }
                     else
                     {
-                        writeBinary.Write((byte)0);
+                        writeBinary.Write((byte) 0);
                     }
                 }
 
-                writeBinary.Write((byte)playerObject.style.HairColor);
-                writeBinary.Write((byte)playerObject.style.SkinColor);
-                writeBinary.Write((byte)playerObject.style.PonchoColor);
-                writeBinary.Write((byte)playerObject.style.ShirtColor);
-                writeBinary.Write((byte)playerObject.style.PantsColor);
-                writeBinary.Write((byte)playerObject.style.Sex);
-                writeBinary.Write((string)playerObject.Nickname);
+                writeBinary.Write((byte) style.HairColor);
+                writeBinary.Write((byte) style.SkinColor);
+                writeBinary.Write((byte) style.PonchoColor);
+                writeBinary.Write((byte) style.ShirtColor);
+                writeBinary.Write((byte) style.PantsColor);
+                writeBinary.Write((byte) style.Sex);
+                writeBinary.Write(playerObject.Nickname);
 
-                writeBinary.Write((int)playerObject.ItemsCount);
-                for (int i = 0; i != playerObject.ItemsCount; i++)
+                writeBinary.Write(playerObject.ItemsCount);
+                for (var i = 0; i != playerObject.ItemsCount; i++)
                 {
-                    writeBinary.Write((Int32)playerObject.Inventory[i].ItemID);
-                    writeBinary.Write((Int32)playerObject.Inventory[i].ItemCount);
-                    writeBinary.Write((Int32)playerObject.Inventory[i].ItemPos);
+                    writeBinary.Write((int) playerObject.Inventory[i].ItemID);
+                    writeBinary.Write(playerObject.Inventory[i].ItemCount);
+                    writeBinary.Write((int) playerObject.Inventory[i].ItemPos);
                 }
 
-                writeBinary.Write((int)playerObject.UnknownVariable0);
+                writeBinary.Write(playerObject.UnknownVariable0);
 
-                writeBinary.Write((int)playerObject.MerchantItemsCount);
-                for (int i = 0; i != playerObject.MerchantItemsCount; i++)
+                writeBinary.Write(playerObject.MerchantItemsCount);
+                for (var i = 0; i != playerObject.MerchantItemsCount; i++)
                 {
-                    writeBinary.Write((int)playerObject.MerchantItems[i].ItemID);
-                    writeBinary.Write((int)playerObject.MerchantItems[i].ItemCount);
+                    writeBinary.Write((int) playerObject.MerchantItems[i].ItemID);
+                    writeBinary.Write(playerObject.MerchantItems[i].ItemCount);
                 }
 
-                writeBinary.Write((int)playerObject.CardsCount);
-                for (int i = 0; i != playerObject.CardsCount; i++)
+                writeBinary.Write(playerObject.CardsCount);
+                for (var i = 0; i != playerObject.CardsCount; i++)
                 {
-                    writeBinary.Write((int)playerObject.Cards[i].CardID);
+                    writeBinary.Write(playerObject.Cards[i].CardID);
                 }
 
-                writeBinary.Write((int)playerObject.TreasureMapsCount);
-                for (int i = 0; i != playerObject.TreasureMapsCount; i++)
+                writeBinary.Write(playerObject.TreasureMapsCount);
+                for (var i = 0; i != playerObject.TreasureMapsCount; i++)
                 {
-                    writeBinary.Write((Int16)playerObject.TreasureMaps[i].TreasureMapID);
+                    writeBinary.Write(playerObject.TreasureMaps[i].TreasureMapID);
                 }
 
-                writeBinary.Write((int)playerObject.UnknownVariable01Count);
-                for (int i = 0; i != playerObject.UnknownVariable01Count; i++)
+                writeBinary.Write(playerObject.UnknownVariable01Count);
+                for (var i = 0; i != playerObject.UnknownVariable01Count; i++)
                 {
-                    writeBinary.Write((Int16)playerObject.UnknownVariables01[i].UnknownVariable01ID);
+                    writeBinary.Write(playerObject.UnknownVariables01[i].UnknownVariable01ID);
                 }
 
-                writeBinary.Write((int)playerObject.SkillsCount);
-                for (int i = 0; i != playerObject.SkillsCount; i++)
+                writeBinary.Write(playerObject.SkillsCount);
+                for (var i = 0; i != playerObject.SkillsCount; i++)
                 {
-                    writeBinary.Write((Int16)playerObject.Skills[i].SkillID);
-                    writeBinary.Write((byte)playerObject.Skills[i].SkillLevel);
+                    writeBinary.Write((short) playerObject.Skills[i].SkillID);
+                    writeBinary.Write(playerObject.Skills[i].SkillLevel);
                 }
 
-                writeBinary.Write((Int16)playerObject.Level);
-                writeBinary.Write((int)playerObject.EXPCurrent);
-                writeBinary.Write((int)playerObject.EXPUnknown0);
-                writeBinary.Write((int)playerObject.EXPUnknown1);
-                writeBinary.Write((Int16)playerObject.SkillTalentPoints);
-                writeBinary.Write((Int16)playerObject.SkillSilverPoints);
-                writeBinary.Write((Int16)playerObject.SkillGoldPoints);
-                writeBinary.Write((int)playerObject.Cash);
+                writeBinary.Write(playerObject.Level);
+                writeBinary.Write(playerObject.ExpCurrent);
+                writeBinary.Write(playerObject.ExpUnknown0);
+                writeBinary.Write(playerObject.ExpUnknown1);
+                writeBinary.Write(playerObject.SkillTalentPoints);
+                writeBinary.Write(playerObject.SkillSilverPoints);
+                writeBinary.Write(playerObject.SkillGoldPoints);
+                writeBinary.Write(playerObject.Cash);
 
-                writeBinary.Write((byte)playerObject.PetsCount);
-                for (int i = 0; i != playerObject.PetsCount; i++)
+                writeBinary.Write(playerObject.PetsCount);
+                for (var i = 0; i != playerObject.PetsCount; i++)
                 {
-                    writeBinary.Write((int)playerObject.Pets[i].Type1);
-                    writeBinary.Write((int)playerObject.Pets[i].Type2);
-                    writeBinary.Write((string)playerObject.Pets[i].Nickname);
-                    writeBinary.Write((byte)playerObject.Pets[i].Level);
-                    writeBinary.Write((byte)playerObject.Pets[i].Skin);
+                    var currentPet = playerObject.Pets[i];
 
-                    writeBinary.Write((UInt16)playerObject.Pets[i].StatHealth);
-                    writeBinary.Write((UInt16)playerObject.Pets[i].StatEnergy);
-                    writeBinary.Write((UInt16)playerObject.Pets[i].StatDamage);
-                    writeBinary.Write((UInt16)playerObject.Pets[i].StatCrit);
-                    writeBinary.Write((UInt16)playerObject.Pets[i].StatSpeed);
+                    writeBinary.Write(currentPet.Type1);
+                    writeBinary.Write(currentPet.Type2);
+                    writeBinary.Write(currentPet.Nickname);
+                    writeBinary.Write(currentPet.Level);
+                    writeBinary.Write(currentPet.Skin);
 
-                    writeBinary.Write((UInt16)playerObject.Pets[i].StatProgressHealth);
-                    writeBinary.Write((UInt16)playerObject.Pets[i].StatProgressEnergy);
-                    writeBinary.Write((UInt16)playerObject.Pets[i].StatProgressDamage);
-                    writeBinary.Write((UInt16)playerObject.Pets[i].StatProgressCrit);
-                    writeBinary.Write((UInt16)playerObject.Pets[i].StatProgressSpeed);
+                    writeBinary.Write(currentPet.StatHealth);
+                    writeBinary.Write(currentPet.StatEnergy);
+                    writeBinary.Write(currentPet.StatDamage);
+                    writeBinary.Write(currentPet.StatCrit);
+                    writeBinary.Write(currentPet.StatSpeed);
+
+                    writeBinary.Write(currentPet.StatProgressHealth);
+                    writeBinary.Write(currentPet.StatProgressEnergy);
+                    writeBinary.Write(currentPet.StatProgressDamage);
+                    writeBinary.Write(currentPet.StatProgressCrit);
+                    writeBinary.Write(currentPet.StatProgressSpeed);
                 }
 
-                writeBinary.Write((int)playerObject.PetsSelected);
-                writeBinary.Write((byte)playerObject.PetHidden);
+                writeBinary.Write(playerObject.PetsSelected);
+                writeBinary.Write(playerObject.PetHidden);
 
-                writeBinary.Write((UInt16)playerObject.QuestsCount);
+                writeBinary.Write(playerObject.QuestsCount);
                 for (int i = 0; i != playerObject.QuestsCount; i++)
                 {
-                    writeBinary.Write((UInt16)playerObject.Quests[i].QuestID);
+                    writeBinary.Write(playerObject.Quests[i].QuestID);
                 }
 
-                writeBinary.Write((UInt16)playerObject.EnemiesMetCount);
+                writeBinary.Write(playerObject.EnemiesMetCount);
                 for (int i = 0; i != playerObject.EnemiesMetCount; i++)
                 {
-                    writeBinary.Write((UInt32)playerObject.Enemies[i].EnemyID);
+                    writeBinary.Write((uint) playerObject.Enemies[i].EnemyID);
                 }
 
-                writeBinary.Write((UInt16)(playerObject.UnknownVariable02Count / 16));
+                writeBinary.Write((ushort) (playerObject.UnknownVariable02Count / 16));
                 for (int i = 0; i != playerObject.UnknownVariable02Count; i++)
                 {
-                    writeBinary.Write((byte)playerObject.UnknownVariables02[i].UnknownByte);
+                    writeBinary.Write(playerObject.UnknownVariables02[i].UnknownByte);
                 }
 
-                writeBinary.Write((int)playerObject.RobinBowHighscore);
+                writeBinary.Write(playerObject.RobinBowHighscore);
 
-                writeBinary.Write((UInt16)playerObject.UnknownVariable03Count);
+                writeBinary.Write(playerObject.UnknownVariable03Count);
                 for (int i = 0; i != playerObject.UnknownVariable03Count; i++)
                 {
-                    writeBinary.Write((UInt16)playerObject.UnknownVariables03[i].UnknownVariable);
+                    writeBinary.Write(playerObject.UnknownVariables03[i].UnknownVariable);
                 }
 
-                writeBinary.Write((UInt16)playerObject.ItemsMetCount);
+                writeBinary.Write(playerObject.ItemsMetCount);
                 for (int i = 0; i != playerObject.ItemsMetCount; i++)
                 {
-                    writeBinary.Write((int)playerObject.ItemsMet[i].ItemID);
+                    writeBinary.Write((int) playerObject.ItemsMet[i].ItemID);
                 }
 
-                writeBinary.Write((UInt16)playerObject.ItemsCraftedCount);
+                writeBinary.Write(playerObject.ItemsCraftedCount);
                 for (int i = 0; i != playerObject.ItemsCraftedCount; i++)
                 {
-                    writeBinary.Write((int)playerObject.ItemsCrafted[i].ItemID);
+                    writeBinary.Write((int) playerObject.ItemsCrafted[i].ItemID);
                 }
 
-                writeBinary.Write((UInt16)playerObject.FishiesCaughtCount);
+                writeBinary.Write(playerObject.FishiesCaughtCount);
                 for (int i = 0; i != playerObject.FishiesCaughtCount; i++)
                 {
-                    writeBinary.Write((int)playerObject.FishiesCaught[i].FishID);
+                    writeBinary.Write((int) playerObject.FishiesCaught[i].FishID);
                 }
 
-                writeBinary.Write((UInt16)playerObject.EnemiesSlaughteredCount);
-                for (int i = 0; i != playerObject.EnemiesSlaughteredCount; i++)
+                writeBinary.Write(playerObject.KilledEnemiesCount);
+                for (int i = 0; i != playerObject.KilledEnemiesCount; i++)
                 {
-                    writeBinary.Write((int)playerObject.EnemiesSlaughtered[i].EnemyID);
-                    writeBinary.Write((int)playerObject.EnemiesSlaughtered[i].KillCount);
+                    writeBinary.Write(playerObject.KilledEnemies[i].EnemyID);
+                    writeBinary.Write(playerObject.KilledEnemies[i].KillCount);
                 }
 
-                writeBinary.Write((byte)playerObject.PotionsMax);
-                writeBinary.Write((byte)playerObject.PotionsEquipped);
+                writeBinary.Write(playerObject.PotionsMax);
+                writeBinary.Write(playerObject.PotionsEquipped);
 
                 for (int i = 0; i != playerObject.PotionsEquipped; i++)
                 {
-                    writeBinary.Write((int)playerObject.Potions[i].PotionID);
+                    writeBinary.Write(playerObject.Potions[i].PotionID);
                 }
-                writeBinary.Write((int)playerObject.BirthdayMonth);
-                writeBinary.Write((int)playerObject.BirthdayDay);
-                writeBinary.Write((int)playerObject.UniquePlayerID);
-                writeBinary.Write((int)playerObject.UnknownVariable04);
-                writeBinary.Write((int)playerObject.UnknownVariable05);
-                writeBinary.Write((int)playerObject.PlayTimeTotal);
+
+                writeBinary.Write(playerObject.BirthdayMonth);
+                writeBinary.Write(playerObject.BirthdayDay);
+                writeBinary.Write((int) playerObject.UniquePlayerId);
+                writeBinary.Write(playerObject.UnknownVariable04);
+                writeBinary.Write(playerObject.UnknownVariable05);
+
+                writeBinary.Write(playerObject.PlayTimeTotal); // check for overflow
 
                 writeBinary.Write((byte)playerObject.UnknownVariable06);
 
-                writeBinary.Write((UInt16)playerObject.UnknownVariable07Count);
+                writeBinary.Write((ushort) playerObject.UnknownVariable07Count);
                 for (int i = 0; i != playerObject.UnknownVariable07Count; i++)
                 {
-                    writeBinary.Write((string)playerObject.UnknownVariables07[i].UnknownString);
-                    writeBinary.Write((float)playerObject.UnknownVariables07[i].UnknownFloat);
+                    writeBinary.Write(playerObject.UnknownVariables07[i].UnknownString);
+                    writeBinary.Write(playerObject.UnknownVariables07[i].UnknownFloat);
                 }
 
-                writeBinary.Write((UInt16)playerObject.FlagsCount);
+                writeBinary.Write((ushort) playerObject.FlagsCount);
                 for (int i = 0; i != playerObject.FlagsCount; i++)
                 {
-                    writeBinary.Write((UInt16)playerObject.Flags[i].FlagID);
+                    writeBinary.Write(playerObject.Flags[i].FlagID);
                 }
 
-                writeBinary.Write((byte)playerObject.HouseStylesCount);
+                writeBinary.Write(playerObject.HouseStylesCount);
                 for (int i = 0; i != playerObject.HouseStylesCount; i++)
                 {
-                    writeBinary.Write((byte)playerObject.Houses[i].HouseStyleNumber);
-                    writeBinary.Write((int)playerObject.Houses[i].HouseStyleLength);
-                    writeBinary.Write((byte[])playerObject.Houses[i].HouseStyleBytes);
+                    writeBinary.Write(playerObject.Houses[i].HouseStyleNumber);
+                    writeBinary.Write(playerObject.Houses[i].HouseStyleLength);
+                    writeBinary.Write(playerObject.Houses[i].HouseStyleBytes);
                 }
+
                 writeBinary.Close();
             }
         }
-
     }
 }
