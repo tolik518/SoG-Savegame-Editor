@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace SoG_SGreader
 {
-    public class ReadData
+    public class DataReader
     {
         private readonly Player playerObject = new Player();
 
