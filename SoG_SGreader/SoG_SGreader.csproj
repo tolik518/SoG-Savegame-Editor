@@ -24,7 +24,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>16</ApplicationRevision>
+    <ApplicationRevision>12</ApplicationRevision>
     <ApplicationVersion>0.0.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -55,7 +55,6 @@
     <TransformOnBuild>true</TransformOnBuild>
     <OverwriteReadOnlyOutputFiles>true</OverwriteReadOnlyOutputFiles>
     <TransformOutOfDateOnly>false</TransformOutOfDateOnly>
-    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>852B7B43EADF31898B1CDE7C05759B992F3F8F4A</ManifestCertificateThumbprint>
@@ -64,7 +63,7 @@
     <ManifestKeyFile>SoG_SGreader_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
+    <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
@@ -104,19 +103,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enum\Sog_Colors.cs" />
-    <Compile Include="Enum\Sog_Items.cs" />
-    <Compile Include="Enum\Sog_Skills.cs" />
-    <Compile Include="Enum\Sog_Pets.cs" />
+    <Compile Include="Enum\SogColors.cs" />
+    <Compile Include="Enum\SogItems.cs" />
+    <Compile Include="Enum\SogSkills.cs" />
+    <Compile Include="Enum\SogPets.cs" />
+    <Compile Include="Objects\Card.cs" />
+    <Compile Include="Objects\Enemy.cs" />
+    <Compile Include="Objects\Equip.cs" />
+    <Compile Include="Objects\FishCaught.cs" />
+    <Compile Include="Objects\Flag.cs" />
+    <Compile Include="Objects\HouseStyle.cs" />
+    <Compile Include="Objects\Item.cs" />
+    <Compile Include="Objects\ItemCrafted.cs" />
+    <Compile Include="Objects\KilledEnemy.cs" />
+    <Compile Include="Objects\MerchantItem.cs" />
+    <Compile Include="Objects\Pet.cs" />
+    <Compile Include="Objects\Player.cs" />
+    <Compile Include="Objects\Player.ItemsSeen.cs" />
+    <Compile Include="Objects\Potion.cs" />
+    <Compile Include="Objects\Quest.cs" />
+    <Compile Include="Objects\Skill.cs" />
+    <Compile Include="Objects\Style.cs" />
+    <Compile Include="Objects\TreasureMap.cs" />
+    <Compile Include="Objects\UnknownVariable01.cs" />
+    <Compile Include="Objects\UnknownVariable02.cs" />
+    <Compile Include="Objects\UnknownVariable03.cs" />
+    <Compile Include="Objects\UnknownVariable07.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="WriteData.cs">
+    <Compile Include="Wrapper\ITextBoxWrapper.cs" />
+    <Compile Include="Wrapper\TextBoxWrapper.cs" />
+    <Compile Include="DataWriter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReadData.cs">
+    <Compile Include="DataReader.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmColorSelect.cs">
@@ -146,7 +169,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
-    <Compile Include="Sog_Player.cs" />
     <Compile Include="VersionInc.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -171,7 +193,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <None Include="Properties\app.manifest" />
+    <None Update="app.manifest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>    
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -256,5 +280,5 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v16.0\TextTemplating\Microsoft.TextTemplating.targets" />
+  <!--<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v16.0\TextTemplating\Microsoft.TextTemplating.targets" />-->
 </Project>

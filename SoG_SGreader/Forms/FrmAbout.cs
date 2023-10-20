@@ -1,13 +1,13 @@
 ﻿using System.Windows.Forms;
 
-namespace Sog_SGreader
+namespace SoG_SGreader
 {
     public partial class FrmAbout : Form
     {
         public FrmAbout()
         {
             InitializeComponent();
-            lblBuild.Text = "Build: " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            lblBuild.Text = "Build: " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
         }
 
         private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

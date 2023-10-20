@@ -1,7 +1,7 @@
-﻿namespace Sog_SGreader
+﻿namespace SoG_SGreader
 {
     //Pets from: 0.949a
-    public enum Sog_Pets
+    public enum SogPets
     {
         Rabby = 0x2710,
         Slimy = 0x2711,

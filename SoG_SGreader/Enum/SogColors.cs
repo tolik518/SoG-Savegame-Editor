@@ -1,6 +1,6 @@
-﻿namespace Sog_SGreader
+﻿namespace SoG_SGreader
 {
-    public enum Sog_Colors : ushort
+    public enum SogColors : ushort
     {
         _2C1D1D,
         _2E2226,

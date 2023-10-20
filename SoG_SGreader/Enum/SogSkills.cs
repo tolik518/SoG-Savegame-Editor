@@ -1,7 +1,7 @@
-﻿namespace Sog_SGreader
+﻿namespace SoG_SGreader
 {
     //Skils from: 0.949a
-    public enum Sog_Skills : ushort
+    public enum SogSkills : ushort
     {
         NULL = 0,
         _Basic_HealthBoost = 1,

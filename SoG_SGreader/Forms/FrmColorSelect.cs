@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sog_SGreader
+namespace SoG_SGreader
 {
     public partial class FrmColorSelect : Form
     {
@@ -16,12 +16,11 @@ namespace Sog_SGreader
         {
             InitializeComponent();
         }
-        public string sColor;
+        public string Color;
         private void ColorSelect(object sender, EventArgs e)
         {
-         
-            sColor = ColorTranslator.ToHtml(((Control)sender).BackColor);
-            this.Close();
+            Color = ColorTranslator.ToHtml(((Control)sender).BackColor);
+            Close();
         }
     }
 }

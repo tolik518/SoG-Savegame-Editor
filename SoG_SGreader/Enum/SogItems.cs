@@ -1,7 +1,7 @@
-﻿namespace Sog_SGreader
+﻿namespace SoG_SGreader
 {
 	//Items from: 0.949a
-	public enum Sog_Items
+	public enum SogItems
 	{
 		Null = -1,
 		Apple = 0,
