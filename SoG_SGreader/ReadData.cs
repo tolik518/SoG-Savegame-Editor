@@ -9,7 +9,7 @@ namespace SoG_SGreader
     {
         private readonly Player playerObject = new Player();
 
-        public Player ReadFromFile(string fileName, TextBox txtConsole)
+        public Player ReadFromFile(string fileName, ITextBoxWrapper txtConsole)
         {
             using (FileStream fileStream = new FileStream(fileName, FileMode.Open))
             {

@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using SoG_SGreader.Wrapper;
 
 namespace SoG_SGreader
 {
@@ -47,18 +48,21 @@ namespace SoG_SGreader
             }
         }
 
-        internal void LoadSaveGame(string sFilePath)
+        private void LoadSaveGame(string sFilePath)
         {
             txtConsole.AppendText(sFilePath);
             InitVariables();
             
             ReadData readData = new ReadData();
-            playerObject = readData.ReadFromFile(sFilePath, txtConsole);
+            
+            // TODO: This is a workaround to get the textbox into the wrapper (for easier testing)
+            ITextBoxWrapper txtConsoleWrapped = new TextBoxWrapper(txtConsole);
+            playerObject = readData.ReadFromFile(sFilePath, txtConsoleWrapped);
             
             saveToolStripMenuItem.Enabled = true;
 
             InitFields();
-            PopulateFileds();
+            PopulateFields();
         }
 
         //TODO: Check out if there is a way to show the items in the designer 
@@ -165,7 +169,7 @@ namespace SoG_SGreader
             cbSelectedItem.DataSource = items;
         }
 
-        private void PopulateFileds()
+        private void PopulateFields()
         {
             txtNickname.Text = playerObject.Nickname;
 
