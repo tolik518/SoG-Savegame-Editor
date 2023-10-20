@@ -134,10 +134,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="WriteData.cs">
+    <Compile Include="Wrapper\ITextBoxWrapper.cs" />
+    <Compile Include="Wrapper\TextBoxWrapper.cs" />
+    <Compile Include="DataWriter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReadData.cs">
+    <Compile Include="DataReader.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmColorSelect.cs">

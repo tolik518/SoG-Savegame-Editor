@@ -53,11 +53,11 @@ namespace SoG_SGreader
             txtConsole.AppendText(sFilePath);
             InitVariables();
             
-            ReadData readData = new ReadData();
+            DataReader dataReader = new DataReader();
             
             // TODO: This is a workaround to get the textbox into the wrapper (for easier testing)
             ITextBoxWrapper txtConsoleWrapped = new TextBoxWrapper(txtConsole);
-            playerObject = readData.ReadFromFile(sFilePath, txtConsoleWrapped);
+            playerObject = dataReader.ReadFromFile(sFilePath, txtConsoleWrapped);
             
             saveToolStripMenuItem.Enabled = true;
 
