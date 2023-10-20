@@ -7,7 +7,7 @@ using Moq;
 
 namespace SoG_SGreader.Test
 {
-    public class ReaderTests
+    public class DataReaderTests
     {
         private static List<Player> players = new List<Player>();
 
