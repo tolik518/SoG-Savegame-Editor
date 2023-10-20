@@ -1,0 +1,26 @@
+name: dotnet package
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup dotnet 4.5.2
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: "4.5.2"
+      - name: Display dotnet version
+        run: dotnet --version
+      - name: Install dependencies
+        run: dotnet restore
+      - name: Test with dotnet
+        run: dotnet test --logger trx --results-directory "TestResults"
+      - name: Upload dotnet test results
+        uses: actions/upload-artifact@v3
+        with:
+          name: dotnet-results-4.5.2
+          path: TestResults
+        # Use always() to always run this step to publish test results when there are test failures
+        if: ${{ always() }}
