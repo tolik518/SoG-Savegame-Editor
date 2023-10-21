@@ -24,6 +24,11 @@ jobs:
       - name: Setup VSTest Console
         uses: darenm/Setup-VSTest@v1
 
+      - name: List directory contents
+        run: |
+          dir SoG_SGreader.Test\bin\Release
+          dir SoG_SGreader.Test\SaveGames
+          dir packages
+
       - name: Test
-        run: vstest.console.exe /TestAdapterPath:"packages\xunit.runner.visualstudio.2.1.0\build\_common" bin\Release\SoG_SGreader.Test.dll
-        working-directory: ./SoG_SGreader.Test
+        run: vstest.console.exe /TestAdapterPath:"packages" SoG_SGreader.Test\bin\Release\SoG_SGreader.Test.dll
