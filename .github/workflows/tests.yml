@@ -7,7 +7,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v1.0.2
@@ -21,6 +21,8 @@ jobs:
       - name: Build
         run: msbuild /p:Configuration=Release SoG_SGreader.sln
 
+      - name: Setup VSTest
+        uses: warrenbuckley/Setup-VSTest@v1
+
       - name: Test
-        run: |
-          & "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe" SoG_SGreader.Test\bin\Release\SoG_SGreader.Test.dll
+        run: vstest.console.exe SoG_SGreader.Test\bin\Release\SoG_SGreader.Test.dll
