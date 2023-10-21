@@ -1,4 +1,4 @@
-name: tests
+name: Tests
 
 on: [push, pull_request]
 
@@ -18,11 +18,11 @@ jobs:
       - name: Restore NuGet packages
         run: nuget restore SoG_SGreader.sln
 
-      - name: Build
+      - name: Build with MSBuild
         run: msbuild /p:Configuration=Release SoG_SGreader.sln
 
-      - name: Setup VSTest
-        uses: warrenbuckley/Setup-VSTest@v1
+      - name: Setup VSTest Console
+        uses: darenm/Setup-VSTest@v1
 
-      - name: Test
+      - name: Test with VSTest Console
         run: vstest.console.exe SoG_SGreader.Test\bin\Release\SoG_SGreader.Test.dll
