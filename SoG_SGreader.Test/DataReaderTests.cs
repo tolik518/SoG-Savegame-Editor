@@ -16,8 +16,8 @@ namespace SoG_SGreader.Test
             DataReader dataReader = new DataReader();
             var txtConsoleMock = new Mock<ITextBoxWrapper>().Object;
     
-            string projectDirectory = Environment.GetEnvironmentVariable("GITHUB_WORKSPACE") ?? Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;            
-            string filePath = Path.Combine(projectDirectory, "SaveGames", saveGameNumber + ".cha");
+            string projectDirectory = Environment.GetEnvironmentVariable("GITHUB_WORKSPACE") ?? Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+            string filePath = Path.Combine(projectDirectory, "..", "SoG_SGreader.Test", "SaveGames", saveGameNumber + ".cha");
 
             return dataReader.ReadFromFile(filePath, txtConsoleMock);
         }
