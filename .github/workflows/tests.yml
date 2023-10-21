@@ -24,5 +24,5 @@ jobs:
       - name: Setup VSTest Console
         uses: darenm/Setup-VSTest@v1
 
-      - name: Test with VSTest Console
-        run: vstest.console.exe /UseVsixExtensions:true SoG_SGreader.Test\bin\Release\SoG_SGreader.Test.dll
+      - name: Test
+        run: vstest.console.exe /TestAdapterPath:"packages\xunit.runner.visualstudio.2.1.0\build\_common" SoG_SGreader.Test\bin\Release\SoG_SGreader.Test.dll
