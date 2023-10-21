@@ -19,7 +19,7 @@ jobs:
         run: nuget restore SoG_SGreader.sln
 
       - name: Build with MSBuild
-        run: msbuild /p:Configuration=Release SoG_SGreader.sln
+        run: msbuild /p:Configuration=Release /m /p:BuildInParallel=true /p:BuildIncrementally=true SoG_SGreader.sln
 
       - name: Setup VSTest Console
         uses: darenm/Setup-VSTest@v1
