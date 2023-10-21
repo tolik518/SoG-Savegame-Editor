@@ -26,3 +26,4 @@ jobs:
 
       - name: Test
         run: vstest.console.exe /TestAdapterPath:"packages\xunit.runner.visualstudio.2.1.0\build\_common" SoG_SGreader.Test\bin\Release\SoG_SGreader.Test.dll
+        working-directory: ./SoG_SGreader.Test
