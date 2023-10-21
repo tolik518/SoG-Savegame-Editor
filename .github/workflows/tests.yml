@@ -23,5 +23,4 @@ jobs:
 
       - name: Test
         run: |
-          cd SoG_SGreader.Test
-          dotnet test
+          "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe" SoG_SGreader.Test\bin\Release\SoG_SGreader.Test.dll
