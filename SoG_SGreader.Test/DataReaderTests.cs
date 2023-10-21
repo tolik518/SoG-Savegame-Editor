@@ -19,9 +19,8 @@ namespace SoG_SGreader.Test
             string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName;
 
             // Exception for GitHub Actions Test Runner
-            if (Environment.GetEnvironmentVariable("GITHUB_WORKSPACE") != null)
-            {
-                projectDirectory = Directory.GetParent(Environment.GetEnvironmentVariable("GITHUB_WORKSPACE")).FullName;
+            if (Environment.GetEnvironmentVariable("GITHUB_WORKSPACE") != null) {
+                projectDirectory = Environment.GetEnvironmentVariable("GITHUB_WORKSPACE");
             }
             
             string filePath = Path.Combine(projectDirectory, "SoG_SGreader.Test", "SaveGames", saveGameNumber + ".cha");
