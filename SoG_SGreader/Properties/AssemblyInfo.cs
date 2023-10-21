@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("SoG_SGreader")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("TOLIK518")]
+[assembly: AssemblyCompany("tolik518")]
 [assembly: AssemblyProduct("SoG_SGreader")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]

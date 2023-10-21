@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.Serialization;
 
 namespace SoG_SGreader
@@ -76,5 +77,15 @@ namespace SoG_SGreader
         public List<Flag> Flags;
         public byte HouseStylesCount { get; set; }
         public List<HouseStyle> Houses;
+        
+        public byte GetSkillLevel(SogSkills skillId)
+        {
+            return Skills.FirstOrDefault(skill => skill.SkillID == skillId)?.SkillLevel ?? 0;
+        }
+        
+        public byte GetSkillLevel(Skill skill)
+        {
+            return Skills.FirstOrDefault(s => s.SkillID == skill.SkillID)?.SkillLevel ?? 0;
+        }
     }
 }

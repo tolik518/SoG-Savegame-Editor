@@ -7,10 +7,11 @@ namespace SoG_SGreader
 {
     public class DataReader
     {
-        private readonly Player playerObject = new Player();
 
-        public Player ReadFromFile(string fileName, ITextBoxWrapper txtConsole)
+        public static Player ReadFromFile(string fileName, ITextBoxWrapper txtConsole)
         {
+            Player playerObject = new Player();
+
             using (FileStream fileStream = new FileStream(fileName, FileMode.Open))
             {
                 BinaryReader readBinary = new BinaryReader(fileStream);
@@ -285,7 +286,7 @@ namespace SoG_SGreader
                 txtConsole.AppendText("\r\n" + "KilledEnemiesCount: " + playerObject.KilledEnemiesCount);
 
                 playerObject.PotionsMax = readBinary.ReadByte();
-                txtConsole.AppendText("\r\n" + " PotionsMax: " + playerObject.PotionsMax);
+                txtConsole.AppendText("\r\n" + "PotionsMax: " + playerObject.PotionsMax);
                 playerObject.PotionsEquipped = readBinary.ReadByte();
                 txtConsole.AppendText("\r\n" + "PotionsEquipped: " + playerObject.PotionsEquipped);
 
@@ -361,7 +362,8 @@ namespace SoG_SGreader
                 readBinary.Close();
                 fileStream.Close();
             }
-
+            txtConsole.AppendText("\r\n");
+            
             return playerObject;
         }
     }

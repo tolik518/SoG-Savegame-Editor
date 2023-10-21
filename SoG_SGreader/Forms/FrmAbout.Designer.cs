@@ -75,7 +75,7 @@ namespace SoG_SGreader
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "by Tolik518";
+            this.label3.Text = "by tolik518";
             // 
             // lblBuild
             // 
