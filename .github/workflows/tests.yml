@@ -25,4 +25,4 @@ jobs:
         uses: darenm/Setup-VSTest@v1
 
       - name: Test with VSTest Console
-        run: vstest.console.exe SoG_SGreader.Test\bin\Release\SoG_SGreader.Test.dll
+        run: vstest.console.exe /UseVsixExtensions:true SoG_SGreader.Test\bin\Release\SoG_SGreader.Test.dll
