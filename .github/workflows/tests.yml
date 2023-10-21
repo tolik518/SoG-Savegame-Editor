@@ -22,7 +22,7 @@ jobs:
         run: msbuild /p:Configuration=Release /m /p:BuildInParallel=true /p:BuildIncrementally=true SoG_SGreader.sln
 
       - name: Setup VSTest Console
-        uses: darenm/Setup-VSTest@v1
+        uses: darenm/Setup-VSTest@v1.2
 
       - name: Test
         run: vstest.console.exe /TestAdapterPath:"packages" SoG_SGreader.Test\bin\Release\SoG_SGreader.Test.dll
