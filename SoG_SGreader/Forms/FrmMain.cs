@@ -610,7 +610,7 @@ namespace SoG_SGreader
             );
         }
 
-        private void PictureBox3_Click(object sender, EventArgs e) //Cardano Icon in the top corner
+        private void PictureBox3_Click(object sender, EventArgs e) //:3 Icon in the top corner
         {
             FrmAbout frmAbout = new FrmAbout();
             frmAbout.ShowDialog();
