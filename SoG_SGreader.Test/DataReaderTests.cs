@@ -7,7 +7,7 @@ using Moq;
 
 namespace SoG_SGreader.Test
 {
-    public class ReaderTests
+    public class DataReaderTests
     {
         private static List<Player> players = new List<Player>();
 
@@ -15,9 +15,15 @@ namespace SoG_SGreader.Test
         {
             DataReader dataReader = new DataReader();
             var txtConsoleMock = new Mock<ITextBoxWrapper>().Object;
-    
-            string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
-            string filePath = Path.Combine(projectDirectory, "SaveGames", saveGameNumber + ".cha");
+            
+            string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName;
+
+            // Exception for GitHub Actions Test Runner
+            if (Environment.GetEnvironmentVariable("GITHUB_WORKSPACE") != null) {
+                projectDirectory = Environment.GetEnvironmentVariable("GITHUB_WORKSPACE");
+            }
+            
+            string filePath = Path.Combine(projectDirectory, "SoG_SGreader.Test", "SaveGames", saveGameNumber + ".cha");
 
             return dataReader.ReadFromFile(filePath, txtConsoleMock);
         }
