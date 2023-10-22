@@ -14,9 +14,11 @@ namespace SoG_SGreader.Test
             // Exception for GitHub Actions Test Runner
             if (Environment.GetEnvironmentVariable("GITHUB_WORKSPACE") != null) {
                 projectDirectory = Environment.GetEnvironmentVariable("GITHUB_WORKSPACE");
+                return Path.Combine(projectDirectory, "SoG_SGreader", "bin", "Release", "SoG_SGreader.exe");
             }
             
             return Path.Combine(projectDirectory, "SoG_SGreader", "bin", "Debug", "SoG_SGreader.exe");
+
         }
         
         private static string GetSaveGamePath(string saveGameNumber)
