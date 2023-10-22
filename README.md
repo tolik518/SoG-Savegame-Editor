@@ -27,6 +27,11 @@ SoG_SGreader.exe --json <savegame path> # Print json of the savegame to console
 SoG_SGreader.exe --text <savegame path> # Show a short summary of the savegame
 ```
 
+You could for example use [jq](https://jqlang.github.io/jq/) to get a specific value from the savegame, like the level of the character.
+```
+/home/developer/Projects/CSharp/SoG_SGreader/SoG_SGreader/bin/Debug/SoG_SGreader.exe --json "/home/developer/.config/Secrets of Grindea/Characters/2.cha" | jq .Level
+```
+
 ## Description
 
 
