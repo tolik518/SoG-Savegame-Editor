@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using Xunit;
 using Moq;
+using SoG_SGreader.Wrapper;
 
 namespace SoG_SGreader.Test
 {
@@ -13,8 +14,7 @@ namespace SoG_SGreader.Test
 
         private static Player GetSaveGame(int saveGameNumber)
         {
-            DataReader dataReader = new DataReader();
-            var txtConsoleMock = new Mock<ITextBoxWrapper>().Object;
+            var fakeTextBox = new FakeTextBox();
             
             string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName;
 
@@ -25,7 +25,7 @@ namespace SoG_SGreader.Test
             
             string filePath = Path.Combine(projectDirectory, "SoG_SGreader.Test", "SaveGames", saveGameNumber + ".cha");
 
-            return dataReader.ReadFromFile(filePath, txtConsoleMock);
+            return DataReader.ReadFromFile(filePath, fakeTextBox);
         }
 
         private static IEnumerable<object[]> Nicknames()
@@ -91,15 +91,15 @@ namespace SoG_SGreader.Test
         
         private static IEnumerable<object[]> FirstItem()
         {
-            yield return new object[] { new Item(SogItems._Usable_CardAlbum, 1, 189755), GetSaveGame(0).Inventory };
-            yield return new object[] { new Item(SogItems._KeyItem_DivaMirror, 0, 158319), GetSaveGame(1).Inventory };
-            yield return new object[] { new Item(SogItems._Usable_CardAlbum, 1, 46623), GetSaveGame(2).Inventory };
-            yield return new object[] { new Item(SogItems._Usable_CardAlbum, 1, 16756), GetSaveGame(3).Inventory };
-            yield return new object[] { new Item(SogItems._Usable_CardAlbum, 1, 25026), GetSaveGame(4).Inventory };
-            yield return new object[] { new Item(SogItems._Usable_CardAlbum, 1, 18895), GetSaveGame(5).Inventory };
-            yield return new object[] { new Item(SogItems._Usable_CardAlbum, 1, 16634), GetSaveGame(6).Inventory };
-            yield return new object[] { new Item(SogItems._Usable_CardAlbum, 1, 14455), GetSaveGame(7).Inventory };
-            yield return new object[] { new Item(SogItems._Usable_CardAlbum, 1, 96617), GetSaveGame(8).Inventory };
+            yield return new object[] { new Item(SogItems.Usable_CardAlbum, 1, 189755), GetSaveGame(0).Inventory };
+            yield return new object[] { new Item(SogItems.KeyItem_DivaMirror, 0, 158319), GetSaveGame(1).Inventory };
+            yield return new object[] { new Item(SogItems.Usable_CardAlbum, 1, 46623), GetSaveGame(2).Inventory };
+            yield return new object[] { new Item(SogItems.Usable_CardAlbum, 1, 16756), GetSaveGame(3).Inventory };
+            yield return new object[] { new Item(SogItems.Usable_CardAlbum, 1, 25026), GetSaveGame(4).Inventory };
+            yield return new object[] { new Item(SogItems.Usable_CardAlbum, 1, 18895), GetSaveGame(5).Inventory };
+            yield return new object[] { new Item(SogItems.Usable_CardAlbum, 1, 16634), GetSaveGame(6).Inventory };
+            yield return new object[] { new Item(SogItems.Usable_CardAlbum, 1, 14455), GetSaveGame(7).Inventory };
+            yield return new object[] { new Item(SogItems.Usable_CardAlbum, 1, 96617), GetSaveGame(8).Inventory };
         }
 
         [Theory]
@@ -111,15 +111,15 @@ namespace SoG_SGreader.Test
         
         private static IEnumerable<object[]> LastItem()
         {
-            yield return new object[] { new Item(SogItems._Furniture_Decoration_ArcadeChallengeTrophyF08, 1, 189760), GetSaveGame(0).Inventory };
-            yield return new object[] { new Item(SogItems._KeyItem_CatalystOfPower, 1, 159243), GetSaveGame(1).Inventory };
-            yield return new object[] { new Item(SogItems._KeyItem_CatalystOfPower, 1, 46457), GetSaveGame(2).Inventory };
-            yield return new object[] { new Item(SogItems._Shoes_MushroomSlippers, 1, 16738), GetSaveGame(3).Inventory };
-            yield return new object[] { new Item(SogItems._TwoHanded_BugNet, 0, 25025), GetSaveGame(4).Inventory };
-            yield return new object[] { new Item(SogItems._TwoHanded_BugNet, 0, 18894), GetSaveGame(5).Inventory };
-            yield return new object[] { new Item(SogItems._Furniture_Carpet_MasterHQRed, 0, 16614), GetSaveGame(6).Inventory };
-            yield return new object[] { new Item(SogItems._TwoHanded_BugNet, 0, 14454), GetSaveGame(7).Inventory };
-            yield return new object[] { new Item(SogItems._OneHanded_UgrasScroll, 1, 96375), GetSaveGame(8).Inventory };
+            yield return new object[] { new Item(SogItems.Furniture_Decoration_ArcadeChallengeTrophyF08, 1, 189760), GetSaveGame(0).Inventory };
+            yield return new object[] { new Item(SogItems.KeyItem_CatalystOfPower, 1, 159243), GetSaveGame(1).Inventory };
+            yield return new object[] { new Item(SogItems.KeyItem_CatalystOfPower, 1, 46457), GetSaveGame(2).Inventory };
+            yield return new object[] { new Item(SogItems.Shoes_MushroomSlippers, 1, 16738), GetSaveGame(3).Inventory };
+            yield return new object[] { new Item(SogItems.TwoHanded_BugNet, 0, 25025), GetSaveGame(4).Inventory };
+            yield return new object[] { new Item(SogItems.TwoHanded_BugNet, 0, 18894), GetSaveGame(5).Inventory };
+            yield return new object[] { new Item(SogItems.Furniture_Carpet_MasterHQRed, 0, 16614), GetSaveGame(6).Inventory };
+            yield return new object[] { new Item(SogItems.TwoHanded_BugNet, 0, 14454), GetSaveGame(7).Inventory };
+            yield return new object[] { new Item(SogItems.OneHanded_UgrasScroll, 1, 96375), GetSaveGame(8).Inventory };
         }
 
         [Theory]

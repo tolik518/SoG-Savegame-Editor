@@ -2,12 +2,11 @@ using System.Windows.Forms;
 
 namespace SoG_SGreader.Wrapper
 {
-
-    public class TextBoxWrapper : ITextBoxWrapper
+    public class UITextBox : ITextBoxWrapper
     {
         private TextBox _textBox;
 
-        public TextBoxWrapper(TextBox textBox)
+        public UITextBox(TextBox textBox)
         {
             _textBox = textBox;
         }

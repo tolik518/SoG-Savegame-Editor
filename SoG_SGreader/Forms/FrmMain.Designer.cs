@@ -434,7 +434,7 @@
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(91, 16);
             this.label55.TabIndex = 0;
-            this.label55.Text = "[Patch 0.949a]";
+            this.label55.Text = "[" + FrmMain.CurrentPatch +"]";
             // 
             // numID
             // 
@@ -499,7 +499,7 @@
             this.txtNickname.Name = "txtNickname";
             this.txtNickname.Size = new System.Drawing.Size(133, 22);
             this.txtNickname.TabIndex = 34;
-            this.txtNickname.Text = "Tolik518_NoScope";
+            this.txtNickname.Text = "tolik518";
             // 
             // label29
             // 
@@ -3021,7 +3021,7 @@
             this.MainMenuStrip = this.msMenu;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMain";
-            this.Text = "SoG: Savegame Reader v0.4.1 by TOLIK518";
+            this.Text = "SoG: Savegame Reader v0.4.1 by tolik518";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.tabContainer.ResumeLayout(false);
             this.tabChar.ResumeLayout(false);

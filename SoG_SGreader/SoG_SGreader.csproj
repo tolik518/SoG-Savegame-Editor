@@ -29,6 +29,7 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <LangVersion>8</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -85,6 +86,9 @@
     </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CommandLine, Version=2.9.1.0, Culture=neutral, PublicKeyToken=5a870481e358d379, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommandLineParser.2.9.1\lib\net45\CommandLine.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -103,10 +107,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComandLineOptions.cs" />
     <Compile Include="Enum\SogColors.cs" />
     <Compile Include="Enum\SogItems.cs" />
     <Compile Include="Enum\SogSkills.cs" />
     <Compile Include="Enum\SogPets.cs" />
+    <Compile Include="JsonHandler.cs" />
     <Compile Include="Objects\Card.cs" />
     <Compile Include="Objects\Enemy.cs" />
     <Compile Include="Objects\Equip.cs" />
@@ -134,8 +140,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Wrapper\CommandLineTextBox.cs" />
+    <Compile Include="Wrapper\FakeTextBox.cs" />
     <Compile Include="Wrapper\ITextBoxWrapper.cs" />
-    <Compile Include="Wrapper\TextBoxWrapper.cs" />
+    <Compile Include="Wrapper\UITextBox.cs" />
     <Compile Include="DataWriter.cs">
       <SubType>Form</SubType>
     </Compile>

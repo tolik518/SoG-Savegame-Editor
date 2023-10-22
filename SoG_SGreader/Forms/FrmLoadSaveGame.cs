@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using SoG_SGreader.Wrapper;
 
 namespace SoG_SGreader
 {
@@ -20,7 +21,7 @@ namespace SoG_SGreader
         {
             if (lstvSaveGames.SelectedItems.Count != 0)
             {
-                filePath = filePath + "\\" + lstvSaveGames.SelectedItems[0].Text;
+                filePath = Path.Combine(filePath, lstvSaveGames.SelectedItems[0].Text);
             }
             FrmMain frmMain = new FrmMain(filePath);
             this.Hide();
@@ -94,9 +95,10 @@ namespace SoG_SGreader
             lstvSaveGames.Items.Clear();
             for (int i = 0; i != 9; i++)
             {
-                if (File.Exists(sFilePath + "\\" + i + ".cha"))
+                string savegame = Path.Combine(sFilePath, i + ".cha");
+                if (File.Exists(savegame))
                 {
-                    string[] item = new string[] { i + ".cha", GetCharName(sFilePath + "\\" + i + ".cha")};
+                    string[] item = new string[] { i + ".cha", GetCharName(savegame)};
                     lstvSaveGames.Items.Add(new ListViewItem(item, 0));
                 }
             }
@@ -114,7 +116,7 @@ namespace SoG_SGreader
 
         private string GetSaveGamePath()
         {
-            return filePath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Secrets of Grindea\Characters";
+            return filePath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + Path.DirectorySeparatorChar + Path.Combine("Secrets of Grindea","Characters");
         }
 
         private void BtnChooseFolder_Click(object sender, EventArgs e)
@@ -143,7 +145,7 @@ namespace SoG_SGreader
         {
             if (lstvSaveGames.SelectedItems.Count != 0)
             {
-                lblFilePath.Text = filePath + "\\" + lstvSaveGames.SelectedItems[0].Text;
+                lblFilePath.Text = Path.Combine(filePath, lstvSaveGames.SelectedItems[0].Text);
             }
             else
             {

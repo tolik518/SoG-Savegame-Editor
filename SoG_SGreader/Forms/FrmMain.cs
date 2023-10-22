@@ -4,39 +4,44 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using SoG_SGreader.Wrapper;
 
 namespace SoG_SGreader
 {
     public partial class FrmMain : Form
     {
+        public static readonly string CurrentPatch = "Patch 0.949a";
         private Player playerObject = new Player();
         private readonly ComboBox[] cbQuickslot = new ComboBox[10];
         private readonly ComboBox[] cbQuickslotType = new ComboBox[10];
+        public string OpenedSaveGamePath { get; set; }
 
-        public FrmMain(string sFilePath)
+        public FrmMain(string saveGamePath)
         {
             InitializeComponent();    //Initializing elements from the Designer
             InitElements(); //Initializing elements from this file
             txtConsole.AppendText("Support me by giving the Repository a star on Github \r\n");
             txtConsole.AppendText("https://github.com/tolik518/SoG_SGreader \r\n");
             txtConsole.AppendText("________________________________________\r\n");
-            if (File.Exists(sFilePath))
+            
+            if (File.Exists(saveGamePath))
             {
-                LoadSaveGame(sFilePath);
+                OpenedSaveGamePath = saveGamePath;
+                LoadSaveGame();
             } 
             else
             {
-                txtConsole.AppendText("Savefile with the following path doesnt exist: " + sFilePath + "\r\n");
+                txtConsole.AppendText("Savefile with the following path doesnt exist: " + saveGamePath + "\r\n");
             }
         }
-        //TODO: When a file is beeing opened, we need to reset als variables
+        //TODO: When a file is being opened, we need to reset all variables
         private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             txtConsole.Text = "";
             OpenFileDialog openFileDialog1 = new OpenFileDialog
             {
-                InitialDirectory = Environment.ExpandEnvironmentVariables(@"%APPDATA%\Secrets of Grindea\Characters"),
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + Path.DirectorySeparatorChar + Path.Combine("Secrets of Grindea","Characters"),
                 Filter = "SoG Savegame (*.cha)|*.cha",
                 FilterIndex = 2,
                 RestoreDirectory = true
@@ -44,20 +49,19 @@ namespace SoG_SGreader
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                LoadSaveGame(openFileDialog1.FileName);
+                OpenedSaveGamePath = openFileDialog1.FileName;
+                LoadSaveGame();
             }
         }
 
-        private void LoadSaveGame(string sFilePath)
+        private void LoadSaveGame()
         {
-            txtConsole.AppendText(sFilePath);
+            txtConsole.AppendText(OpenedSaveGamePath);
             InitVariables();
             
-            DataReader dataReader = new DataReader();
-            
             // TODO: This is a workaround to get the textbox into the wrapper (for easier testing)
-            ITextBoxWrapper txtConsoleWrapped = new TextBoxWrapper(txtConsole);
-            playerObject = dataReader.ReadFromFile(sFilePath, txtConsoleWrapped);
+            ITextBoxWrapper txtConsoleWrapped = new UITextBox(txtConsole);
+            playerObject = DataReader.ReadFromFile(OpenedSaveGamePath, txtConsoleWrapped);
             
             saveToolStripMenuItem.Enabled = true;
 
@@ -100,72 +104,70 @@ namespace SoG_SGreader
         //was selected in the Type combobox
         private void QuickslotType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            for (int i = 0; i != 10; i++)
+            var items = Enum.GetNames(typeof(SogItems));
+            var skills = Enum.GetNames(typeof(SogSkills));
+
+            for (int i = 0; i < 10; i++)
             {
-                if (cbQuickslotType[i].Text == "Sog_Items")
+                switch (cbQuickslotType[i].Text)
                 {
-                    cbQuickslot[i].DataSource = Enum.GetValues(typeof(SogItems));
+                    case "SogItems":
+                        cbQuickslot[i].DataSource = items;
+                        break;
+                    case "SogSpells":
+                        cbQuickslot[i].DataSource = skills;
+                        break;
+                    default:
+                        cbQuickslot[i].DataSource = null;
+                        break;
                 }
-                else if (cbQuickslotType[i].Text == "Sog_Spells")
-                {
-                    cbQuickslot[i].DataSource = Enum.GetValues(typeof(SogSkills));
-                }
-                else
-                {
-                    cbQuickslot[i].DataSource = null;
-                }
-                cbQuickslot[i].Text = (playerObject.Quickslots[i]).ToString();
+                cbQuickslot[i].Text = playerObject.Quickslots[i].ToString();
             }
         }
 
+        private string[] FilterItems(string[] items, params string[] prefixes)
+        {
+            return items.Where(item => prefixes.Any(item.StartsWith) || item == "Null").ToArray();
+        }
+        
         private void InitFields()
         {
             var items = Enum.GetNames(typeof(SogItems));
+            var skills = Enum.GetNames(typeof(SogSkills));
 
-            //Enum.GetValues(typeof((Enum)Enum.GetNames(typeof(Sog_Items)).Where(item => item.StartsWith("_Hat_"))));
-            cbHat.DataSource = items.Where(item => item.StartsWith("_Hat_") || item == "Null").ToArray(); //TODO
+            cbHat.DataSource = FilterItems(items, "Hat_");
+            cbFacegear.DataSource = FilterItems(items, "Facegear_");
+            cbWeapon.DataSource = FilterItems(items, "OneHanded_", "TwoHanded_", "Bow_");
+            cbShield.DataSource = FilterItems(items, "Shield_");
+            cbArmor.DataSource = FilterItems(items, "Armor_");
+            cbShoes.DataSource = FilterItems(items, "Shoes_");
+            cbAccessory1.DataSource = FilterItems(items, "Accessory_");
+            cbAccessory2.DataSource = FilterItems(items, "Accessory_");
+            cbStyleHat.DataSource = FilterItems(items, "Hat_");
+            
+            cbStyleFacegear.DataSource = FilterItems(items, "Facegear_");
+            cbStyleWeapon.DataSource = FilterItems(items, "OneHanded_", "TwoHanded_", "Bow_");
+            cbStyleShield.DataSource = FilterItems(items, "Shield_");
 
-            cbFacegear.DataSource = items.Where(item => item.StartsWith("_Facegear_") || item == "Null").ToArray();
-
-            cbWeapon.DataSource = items.Where(item => item.StartsWith("_OneHanded_") ||
-                                                      item.StartsWith("_TwoHanded_") ||
-                                                      item.StartsWith("_Bow_") || item == "Null").ToArray();
-
-            cbShield.DataSource = items.Where(item => item.StartsWith("_Shield_") || item == "Null").ToArray();
-
-            cbArmor.DataSource = items.Where(item => item.StartsWith("_Armor_") || item == "Null").ToArray();
-
-            cbShoes.DataSource = items.Where(item => item.StartsWith("_Shoes_") || item == "Null").ToArray();
-
-            cbAccessory1.DataSource = items.Where(item => item.StartsWith("_Accessory_") || item == "Null").ToArray();
-
-            cbAccessory2.DataSource = items.Where(item => item.StartsWith("_Accessory_") || item == "Null").ToArray();
-
-            cbStyleHat.DataSource = items.Where(item => item.StartsWith("_Hat_") || item == "Null").ToArray();
-
-            cbStyleFacegear.DataSource = items.Where(item => item.StartsWith("_Facegear_") || item == "Null").ToArray();
-
-            cbStyleWeapon.DataSource = items.Where(item => item.StartsWith("_OneHanded_") ||
-                                                           item.StartsWith("_TwoHanded_") ||
-                                                           item.StartsWith("_Bow_") || item == "Null").ToArray();
-
-            cbStyleShield.DataSource = items.Where(item => item.StartsWith("_Shield_") || item == "Null").ToArray();
-
-            //TODO: I need to check if the quickslotsType field changes to fill out the fields with new items
+            var quickslotTypes = new[] { "Sog_Items", "Sog_Spells", "Int32" };
             for (int i = 0; i != 10; i++)
             {
-                if (playerObject.Quickslots[i].GetType() == typeof(SogItems))
+                switch (cbQuickslotType[i].Text)
                 {
-                    cbQuickslot[i].DataSource = items;
+                    case "SogItems":
+                        cbQuickslot[i].DataSource = items;
+                        break;
+                    case "SogSpells":
+                        cbQuickslot[i].DataSource = skills;
+                        break;
+                    default:
+                        cbQuickslot[i].DataSource = null;
+                        break;
                 }
-                else if (playerObject.Quickslots[i].GetType() == typeof(SogSkills))
-                {
-                    cbQuickslot[i].DataSource = Enum.GetValues(typeof(SogSkills));
-                }
-                cbQuickslotType[i].DataSource = new string[] { 
-                    "Sog_Items", "Sog_Spells", "Int32" 
-                };
+
+                cbQuickslotType[i].DataSource = quickslotTypes;
             }
+
             cbSelectedItem.DataSource = items;
         }
 
@@ -247,33 +249,33 @@ namespace SoG_SGreader
             rbMale.Checked = playerObject.Style.Sex != 0;
             rbFemale.Checked = playerObject.Style.Sex == 0;
 
-            sliderSkillMelee1h0.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Skill_OneHanded_Stinger) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Skill_OneHanded_Stinger).SkillLevel : 0;
-            sliderSkillMelee1h1.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Skill_OneHanded_MillionStabs) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Skill_OneHanded_MillionStabs).SkillLevel : 0;
-            sliderSkillMelee1h2.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Skill_OneHanded_SpiritSlash) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Skill_OneHanded_SpiritSlash).SkillLevel : 0;
-            sliderSkillMelee1h3.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Skill_OneHanded_ShadowClone) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Skill_OneHanded_ShadowClone).SkillLevel : 0;
-            sliderSkillMelee1h4.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Skill_OneHanded_QuickCounter) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Skill_OneHanded_QuickCounter).SkillLevel : 0;
+            sliderSkillMelee1h0.Value = playerObject.GetSkillLevel(SogSkills.Skill_OneHanded_Stinger);
+            sliderSkillMelee1h1.Value = playerObject.GetSkillLevel(SogSkills.Skill_OneHanded_MillionStabs);
+            sliderSkillMelee1h2.Value = playerObject.GetSkillLevel(SogSkills.Skill_OneHanded_SpiritSlash);
+            sliderSkillMelee1h3.Value = playerObject.GetSkillLevel(SogSkills.Skill_OneHanded_ShadowClone);
+            sliderSkillMelee1h4.Value = playerObject.GetSkillLevel(SogSkills.Skill_OneHanded_QuickCounter);
 
-            sliderSkillMelee2h0.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Skill_TwoHanded_Overhead) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Skill_TwoHanded_Overhead).SkillLevel : 0;
-            sliderSkillMelee2h1.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Skill_TwoHanded_Spin) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Skill_TwoHanded_Spin).SkillLevel : 0;
-            sliderSkillMelee2h2.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Skill_TwoHanded_Throw) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Skill_TwoHanded_Throw).SkillLevel : 0;
-            sliderSkillMelee2h3.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Skill_TwoHanded_Smash) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Skill_TwoHanded_Smash).SkillLevel : 0;
-            sliderSkillMelee2h4.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Skill_TwoHanded_BerserkMode) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Skill_TwoHanded_BerserkMode).SkillLevel : 0;
+            sliderSkillMelee2h0.Value = playerObject.GetSkillLevel(SogSkills.Skill_TwoHanded_Overhead);
+            sliderSkillMelee2h1.Value = playerObject.GetSkillLevel(SogSkills.Skill_TwoHanded_Spin);
+            sliderSkillMelee2h2.Value = playerObject.GetSkillLevel(SogSkills.Skill_TwoHanded_Throw);
+            sliderSkillMelee2h3.Value = playerObject.GetSkillLevel(SogSkills.Skill_TwoHanded_Smash);
+            sliderSkillMelee2h4.Value = playerObject.GetSkillLevel(SogSkills.Skill_TwoHanded_BerserkMode);
 
-            sliderSkillMagicF0.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Magic_Fire_Fireball) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Magic_Fire_Fireball).SkillLevel : 0;
-            sliderSkillMagicF1.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Magic_Fire_Meteor) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Magic_Fire_Meteor).SkillLevel : 0;
-            sliderSkillMagicF2.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Magic_Fire_Flamethrower) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Magic_Fire_Flamethrower).SkillLevel : 0;
-
-            sliderSkillMagicI0.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Magic_Ice_IceSpikes) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Magic_Ice_IceSpikes).SkillLevel : 0;
-            sliderSkillMagicI1.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Magic_Ice_IceNova) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Magic_Ice_IceNova).SkillLevel : 0;
-            sliderSkillMagicI2.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Magic_Ice_FrostyFriend) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Magic_Ice_FrostyFriend).SkillLevel : 0;
-
-            sliderSkillMagicE0.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Magic_Earth_EarthSpike) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Magic_Earth_EarthSpike).SkillLevel : 0;
-            sliderSkillMagicE1.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Magic_Earth_SummonPlant) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Magic_Earth_SummonPlant).SkillLevel : 0;
-            sliderSkillMagicE2.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Magic_Earth_InsectSwarm) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Magic_Earth_InsectSwarm).SkillLevel : 0;
-
-            sliderSkillMagicA0.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Magic_Wind_ChainLightning) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Magic_Wind_ChainLightning).SkillLevel : 0;
-            sliderSkillMagicA1.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Magic_Wind_SummonCloud) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Magic_Wind_SummonCloud).SkillLevel : 0;
-            sliderSkillMagicA2.Value = playerObject.Skills.Any(x => x.SkillID == SogSkills._Magic_Wind_StaticTouch) ? playerObject.Skills.Find(x => x.SkillID == SogSkills._Magic_Wind_StaticTouch).SkillLevel : 0;
+            sliderSkillMagicF0.Value = playerObject.GetSkillLevel(SogSkills.Magic_Fire_Fireball);
+            sliderSkillMagicF1.Value = playerObject.GetSkillLevel(SogSkills.Magic_Fire_Meteor);
+            sliderSkillMagicF2.Value = playerObject.GetSkillLevel(SogSkills.Magic_Fire_Flamethrower);
+ 
+            sliderSkillMagicI0.Value = playerObject.GetSkillLevel(SogSkills.Magic_Ice_IceSpikes);
+            sliderSkillMagicI1.Value = playerObject.GetSkillLevel(SogSkills.Magic_Ice_IceNova);
+            sliderSkillMagicI2.Value = playerObject.GetSkillLevel(SogSkills.Magic_Ice_FrostyFriend);
+ 
+            sliderSkillMagicE0.Value = playerObject.GetSkillLevel(SogSkills.Magic_Earth_EarthSpike);
+            sliderSkillMagicE1.Value = playerObject.GetSkillLevel(SogSkills.Magic_Earth_SummonPlant);
+            sliderSkillMagicE2.Value = playerObject.GetSkillLevel(SogSkills.Magic_Earth_InsectSwarm);
+ 
+            sliderSkillMagicA0.Value = playerObject.GetSkillLevel(SogSkills.Magic_Wind_ChainLightning);
+            sliderSkillMagicA1.Value = playerObject.GetSkillLevel(SogSkills.Magic_Wind_SummonCloud);
+            sliderSkillMagicA2.Value = playerObject.GetSkillLevel(SogSkills.Magic_Wind_StaticTouch);
         }
 
         //TODO: we need to clean all our variables before we load a new file 
@@ -399,10 +401,11 @@ namespace SoG_SGreader
             saveFileDialog1.DefaultExt = ".cha";
             saveFileDialog1.Filter = "Character files (*.cha)|*.cha|All files (*.*)|*.*";
             saveFileDialog1.RestoreDirectory = true;
+            saveFileDialog1.InitialDirectory = Directory.GetParent(OpenedSaveGamePath).FullName;
 
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                sFilename = saveFileDialog1.FileName.ToString();
+                sFilename = saveFileDialog1.FileName;
                 if (!File.Exists(sFilename))
                 {
                     FileStream fileStream = File.Create(sFilename); //there should be a better way to do this lol
@@ -574,21 +577,28 @@ namespace SoG_SGreader
         {
             lstPets.Items[lstPets.FocusedItem.Index].SubItems[1].Text = txtPetNickname.Text;
         }
-
+        
         private void JSONToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            JsonSerializer serializer = new JsonSerializer();
-            serializer.NullValueHandling = NullValueHandling.Include;
-            serializer.Formatting = Formatting.Indented;
-
-            string message = "Your savegame was saved on the Tool folder.";
+            string message = "File was saved successfully under\r\n";
             string caption = "Save complete";
             MessageBoxButtons buttons = MessageBoxButtons.OK;
-
-            using (StreamWriter sw = new StreamWriter(Environment.CurrentDirectory + "/" + playerObject.UniquePlayerId + "_" + playerObject.Nickname + ".json"))
-            using (JsonWriter writer = new JsonTextWriter(sw))
+            
+            try
             {
-                serializer.Serialize(writer, this.playerObject);
+                string jsonPath = JsonHandler.SaveGameToJson(playerObject, Directory.GetParent(OpenedSaveGamePath).FullName);
+                message += jsonPath;
+                txtConsole.AppendText("\r\n\r\n" + message);
+            }
+            catch (Exception ex)
+            {
+                message = "There was an error while saving the file. Please check the console for more information.";
+                caption = "Error";
+                buttons = MessageBoxButtons.OK;
+                txtConsole.AppendText("\r\n\r\n" + ex.Message);
+            }
+            finally
+            {
                 MessageBox.Show(message, caption, buttons);
             }
         }

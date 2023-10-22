@@ -1,29 +1,85 @@
 ﻿using System;
 using System.Windows.Forms;
+using SoG_SGreader.Wrapper;
+using CommandLine;
 
 namespace SoG_SGreader
 {
-    static class Program
+    public static class Program
     {
-        /// <summary>
-        /// Der Haupteinstiegspunkt für die Anwendung.
-        /// </summary>
         [STAThread]
         static void Main(string[] args)
         {
-            if (args.Length != 0)
+            Parser.Default
+                .ParseArguments<ComandLineOptions>(args)
+                .WithParsed(RunOptions);
+        }
+        
+        static void RunOptions(ComandLineOptions opts)
+        {
+            if (opts.ShowText)
             {
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
-                FrmMain frmMain = new FrmMain(args[0]);
-                Application.Run(frmMain);
+                DisplayTextSummary(opts.SavegamePath);
+            }
+            else if (opts.ShowJson)
+            {
+                DisplayJson(opts.SavegamePath);
+            }
+            else if (opts.ShowPatch)
+            {
+                Console.WriteLine(FrmMain.CurrentPatch);
             }
             else
             {
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new FrmLoadSaveGame());
+                RunApp();
             }
+        }
+
+        public static void DisplayTextSummary(string savegamePath)
+        {
+            if (string.IsNullOrEmpty(savegamePath)) 
+            {
+                Console.WriteLine("Invalid savegame path.");
+                return;
+            }
+            
+            CommandLineTextBox commandLineTextBox = new CommandLineTextBox();
+            try
+            {
+                DataReader.ReadFromFile(savegamePath, commandLineTextBox);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
+        public static void DisplayJson(string savegamePath)
+        {
+            if (string.IsNullOrEmpty(savegamePath)) 
+            {
+                Console.WriteLine("Invalid savegame path.");
+                return;
+            }
+
+            FakeTextBox fakeTextBox = new FakeTextBox();
+            try
+            {
+                Player playerObject = DataReader.ReadFromFile(savegamePath, fakeTextBox);
+                string json = JsonHandler.GetJson(playerObject);
+                Console.WriteLine(json);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
+        public static void RunApp()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new FrmLoadSaveGame());
         }
     }
 }
