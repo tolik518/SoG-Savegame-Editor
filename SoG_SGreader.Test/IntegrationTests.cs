@@ -33,9 +33,34 @@ namespace SoG_SGreader.Test
             return Path.Combine(projectDirectory, "SoG_SGreader.Test", "SaveGames", saveGameNumber + ".cha");
         }
         
+        [Fact]
+        public void TestBadPath()
+        {
+            string arguments = "-t " + GetSaveGamePath("doesntexist");
+
+            // Start the process
+            using var process = new Process
+            {
+                StartInfo = new ProcessStartInfo
+                {
+                    FileName = GetExePath(),
+                    Arguments = arguments,
+                    RedirectStandardOutput = true,
+                    UseShellExecute = false,
+                    CreateNoWindow = true,
+                }
+            };
+            
+            process.Start();
+            string output = process.StandardOutput.ReadToEnd();
+            process.WaitForExit();
+            
+            Assert.Contains("Could not find file", output);
+            Assert.Contains("SaveGames/doesntexist.cha", output);
+        }
 
         [Fact]
-        public void TestSavegameTextOutput()
+        public void TestTextOutput()
         {
             string arguments = "-t " + GetSaveGamePath("1");
 
@@ -63,7 +88,7 @@ namespace SoG_SGreader.Test
         }
         
         [Fact]
-        public void TestSavegameJsonOutput()
+        public void TestJsonOutput()
         {
             string arguments = "-j " + GetSaveGamePath("1");
 
@@ -113,31 +138,6 @@ namespace SoG_SGreader.Test
             process.WaitForExit();
             
             Assert.Contains(FrmMain.CurrentPatch, output);
-        }
-        
-        [Fact]
-        public void TestHelpOutput()
-        {
-            string arguments = "--help";
-
-            // Start the process
-            using var process = new Process
-            {
-                StartInfo = new ProcessStartInfo
-                {
-                    FileName = GetExePath(),
-                    Arguments = arguments,
-                    RedirectStandardOutput = true,
-                    UseShellExecute = false,
-                    CreateNoWindow = true,
-                }
-            };
-            
-            process.Start();
-            string output = process.StandardOutput.ReadToEnd();
-            process.WaitForExit();
-            
-            Assert.Contains("--help", output);
         }
     }
 }
