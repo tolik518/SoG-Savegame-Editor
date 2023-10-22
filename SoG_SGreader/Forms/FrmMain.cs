@@ -11,6 +11,7 @@ namespace SoG_SGreader
 {
     public partial class FrmMain : Form
     {
+        public static readonly string CurrentPatch = "Patch 0.949a";
         private Player playerObject = new Player();
         private readonly ComboBox[] cbQuickslot = new ComboBox[10];
         private readonly ComboBox[] cbQuickslotType = new ComboBox[10];

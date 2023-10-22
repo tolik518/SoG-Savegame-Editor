@@ -434,7 +434,7 @@
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(91, 16);
             this.label55.TabIndex = 0;
-            this.label55.Text = "[Patch 0.949a]";
+            this.label55.Text = "[" + FrmMain.CurrentPatch +"]";
             // 
             // numID
             // 

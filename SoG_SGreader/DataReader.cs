@@ -65,10 +65,12 @@ namespace SoG_SGreader
                 playerObject.Style.PantsColor = readBinary.ReadByte();
 
                 playerObject.Style.Sex = readBinary.ReadByte();  // female = 0; male = 1
+                txtConsole.AppendText("\r\nGender: " + playerObject.Style.Sex);
 
                 playerObject.NicknameLength = readBinary.ReadByte();
 
                 playerObject.Nickname = new string(readBinary.ReadChars(playerObject.NicknameLength));
+                txtConsole.AppendText("\r\nNickname: " + playerObject.Nickname);
 
                 playerObject.ItemsCount = readBinary.ReadInt32();
 
@@ -146,6 +148,7 @@ namespace SoG_SGreader
                 txtConsole.AppendText("\r\nSkillCount: " + playerObject.SkillsCount);
 
                 playerObject.Level = readBinary.ReadInt16();         //Level
+                txtConsole.AppendText("\r\nLevel: " + playerObject.Level);
 
                 playerObject.ExpCurrent = readBinary.ReadInt32();     //currentexp
                 playerObject.ExpUnknown0 = readBinary.ReadInt32();     //something exp ?
@@ -155,6 +158,7 @@ namespace SoG_SGreader
                 playerObject.SkillSilverPoints = readBinary.ReadInt16();    //Silver Skill Points
                 playerObject.SkillGoldPoints = readBinary.ReadInt16();    //Gold Skill Points
                 playerObject.Cash = readBinary.ReadInt32();   //cash
+                txtConsole.AppendText("\r\nCash: " + playerObject.Cash);
 
                 playerObject.PetsCount = readBinary.ReadByte();
                 txtConsole.AppendText("\r\nPetsCount: " + playerObject.PetsCount);
@@ -287,6 +291,7 @@ namespace SoG_SGreader
 
                 playerObject.PotionsMax = readBinary.ReadByte();
                 txtConsole.AppendText("\r\n" + "PotionsMax: " + playerObject.PotionsMax);
+                
                 playerObject.PotionsEquipped = readBinary.ReadByte();
                 txtConsole.AppendText("\r\n" + "PotionsEquipped: " + playerObject.PotionsEquipped);
 
@@ -307,7 +312,7 @@ namespace SoG_SGreader
                 playerObject.UnknownVariable04 = readBinary.ReadInt32();
                 playerObject.UnknownVariable05 = readBinary.ReadInt32();
                 playerObject.PlayTimeTotal = readBinary.ReadInt32();
-                txtConsole.AppendText("\r\nPlayTimeTotal: " + (double)playerObject.PlayTimeTotal / 60 / 60 / 60 + " hours");
+                txtConsole.AppendText("\r\nPlayTimeTotal: " + Math.Round((double)playerObject.PlayTimeTotal / 60 / 60 / 60, 2) + " hours");
                 playerObject.UnknownVariable06 = readBinary.ReadByte();
 
                 playerObject.UnknownVariable07Count = readBinary.ReadInt16();
@@ -358,6 +363,7 @@ namespace SoG_SGreader
 
                 txtConsole.AppendText("\r\nLength: " + readBinary.BaseStream.Length);
                 txtConsole.AppendText("\r\nPosition: " + readBinary.BaseStream.Position);
+                txtConsole.AppendText("\r\nIs Position and length the same?: " + (readBinary.BaseStream.Position == readBinary.BaseStream.Length).ToString());
 
                 readBinary.Close();
                 fileStream.Close();
