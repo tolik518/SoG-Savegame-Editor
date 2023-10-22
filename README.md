@@ -5,7 +5,7 @@
 Head over to the releases if you are just here for the [download link](https://github.com/tolik518/SoG_SGreader/releases), then press on `Assets`   
 on the latest version and download the `SoG_SGreader.exe` file. 
 
-Or just [press here](https://github.com/tolik518/SoG_SGreader/releases/latest/download/SoG_SGreader.exe) to download the latest version.
+Or just [press here](https://github.com/tolik518/SoG_SGreader/releases/latest/download/SoG_SGreader.zip) to download the latest version.
 
 ## How to use
 ![SoG_SGreader](https://returnnull.de/images/SoG_SGreader7.png)
