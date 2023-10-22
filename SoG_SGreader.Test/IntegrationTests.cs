@@ -55,7 +55,7 @@ namespace SoG_SGreader.Test
             process.WaitForExit();
             
             Assert.Contains("Could not find file", output);
-            Assert.Contains("SaveGames/doesntexist.cha", output);
+            Assert.Contains(Path.Combine("SaveGames", "doesntexist.cha"), output);
         }
 
         [Fact]
