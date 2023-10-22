@@ -107,6 +107,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComandLineOptions.cs" />
     <Compile Include="Enum\SogColors.cs" />
     <Compile Include="Enum\SogItems.cs" />
     <Compile Include="Enum\SogSkills.cs" />
@@ -139,7 +140,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Wrapper\ConsoleTextBox.cs" />
+    <Compile Include="Wrapper\CommandLineTextBox.cs" />
     <Compile Include="Wrapper\FakeTextBox.cs" />
     <Compile Include="Wrapper\ITextBoxWrapper.cs" />
     <Compile Include="Wrapper\UITextBox.cs" />

@@ -5,34 +5,17 @@ using CommandLine;
 
 namespace SoG_SGreader
 {
-    class Options
-    {
-        [Value(0, MetaName = "savegame path", Required = false, HelpText = "Path to the savegame")]
-        public string SavegamePath { get; set; }
-
-        [Option('t', "text", HelpText = "Show a short summary of the savegame")]
-        public bool ShowText { get; set; }
-
-        [Option('j', "json", HelpText = "Print json of the savegame to console")]
-        public bool ShowJson { get; set; }
-
-        [Option('h', "help", HelpText = "Show help")]
-        public bool ShowHelp { get; set; }
-        
-        [Option('p', "patch", HelpText = "Show the current supported patch version")]
-        public bool ShowPatch { get; set; }
-    }
-    
     public static class Program
     {
         [STAThread]
         static void Main(string[] args)
         {
-            Parser.Default.ParseArguments<Options>(args)
+            Parser.Default
+                .ParseArguments<ComandLineOptions>(args)
                 .WithParsed(RunOptions);
         }
         
-        static void RunOptions(Options opts)
+        static void RunOptions(ComandLineOptions opts)
         {
             if (opts.ShowText)
             {
@@ -60,10 +43,10 @@ namespace SoG_SGreader
                 return;
             }
             
-            ConsoleTextBox consoleTextBox = new ConsoleTextBox();
+            CommandLineTextBox commandLineTextBox = new CommandLineTextBox();
             try
             {
-                DataReader.ReadFromFile(savegamePath, consoleTextBox);
+                DataReader.ReadFromFile(savegamePath, commandLineTextBox);
             }
             catch (Exception e)
             {

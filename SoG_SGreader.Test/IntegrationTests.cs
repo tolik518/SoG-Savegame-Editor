@@ -18,7 +18,6 @@ namespace SoG_SGreader.Test
             }
             
             return Path.Combine(projectDirectory, "SoG_SGreader", "bin", "Debug", "SoG_SGreader.exe");
-
         }
         
         private static string GetSaveGamePath(string saveGameNumber)

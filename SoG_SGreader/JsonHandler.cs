@@ -6,7 +6,6 @@ namespace SoG_SGreader
 {
     public class JsonHandler
     {
-
         private static bool IsDirectory(string jsonFilePath)
         {
             try
@@ -46,7 +45,6 @@ namespace SoG_SGreader
             }
 
             return jsonPath;
-            
         }
         
         public static string GetJson(Player player)

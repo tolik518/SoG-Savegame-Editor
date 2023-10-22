@@ -129,8 +129,7 @@ namespace SoG_SGreader
         {
             return items.Where(item => prefixes.Any(item.StartsWith) || item == "Null").ToArray();
         }
-
-
+        
         private void InitFields()
         {
             var items = Enum.GetNames(typeof(SogItems));

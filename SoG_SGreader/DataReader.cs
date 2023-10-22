@@ -7,7 +7,6 @@ namespace SoG_SGreader
 {
     public class DataReader
     {
-
         public static Player ReadFromFile(string fileName, ITextBoxWrapper txtConsole)
         {
             Player playerObject = new Player();
