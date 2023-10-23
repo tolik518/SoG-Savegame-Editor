@@ -27,7 +27,7 @@ namespace SoG_SGreader
             }
             else if (opts.ShowPatch)
             {
-                Console.WriteLine(FrmMain.CurrentPatch);
+                Console.WriteLine(FrmMain.SupportedPatch);
             }
             else
             {

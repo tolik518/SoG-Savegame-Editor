@@ -3,16 +3,21 @@
 
 using System.Reflection;
 
-[assembly: AssemblyVersion("<#= this.Major #>.<#= this.Minor #>.<#= this.DaysSinceProjectStarted #>.<#= this.MinutesSinceMidnight  #>")]
+[assembly: AssemblyVersion("<#= AssemblyVersion() #>")]
+[assembly: AssemblyFileVersion("<#= AssemblyFileVersion()  #>")]
+[assembly: AssemblyInformationalVersionAttribute("<#= AssemblyInformationalVersionAttribute() #>")]
 
 <#+
+ public static int Major = 0;
+ public static int Minor = 5;
+ public static int Patch = 1;
+ public static string Version = Major + "." + Minor + "." + Patch;
 
- int Major = 0;
- int Minor = 5;
- 
- static DateTime ProjectStartedDate = new DateTime(year: 2020, month: 3, day: 12);
- int DaysSinceProjectStarted = (int)((DateTime.UtcNow - ProjectStartedDate).TotalDays);
+ public static DateTime ProjectStartedDate = new DateTime(year: 2020, month: 3, day: 12);
+ public static int DaysSinceProjectStarted = (int)((DateTime.UtcNow - ProjectStartedDate).TotalDays);
+ public static int MinutesSinceMidnight = (int)DateTime.UtcNow.TimeOfDay.TotalMinutes;
 
- int MinutesSinceMidnight = (int)DateTime.UtcNow.TimeOfDay.TotalMinutes;
-
+ string AssemblyVersion() => Version;
+ string AssemblyFileVersion() => $"{Major}.{Minor}.{Patch}.{DaysSinceProjectStarted}";
+ string AssemblyInformationalVersionAttribute() => Version;
 #>

@@ -1,3 +1,4 @@
+using System;
 using System.Windows.Forms;
 
 namespace SoG_SGreader.Wrapper
@@ -13,7 +14,22 @@ namespace SoG_SGreader.Wrapper
 
         public void AppendText(string text)
         {
-            _textBox.AppendText(text);
+            if (_textBox.InvokeRequired)
+            {
+                _textBox.Invoke(new Action(() => _textBox.AppendText(text)));
+            }
+            else
+            {
+                _textBox.AppendText(text);
+            }
+        }
+
+
+        public bool InvokeRequired => _textBox.InvokeRequired;
+
+        public void Invoke(Action action)
+        {
+            _textBox.Invoke(action);
         }
     }
 }

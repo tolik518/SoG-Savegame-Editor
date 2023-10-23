@@ -8,5 +8,11 @@ namespace SoG_SGreader.Wrapper
         {
             Console.Write(text);
         }
+ 
+        bool ITextBoxWrapper.InvokeRequired => throw new NotImplementedException();
+
+        public void Invoke(Action action)
+        {
+        }
     }
 }

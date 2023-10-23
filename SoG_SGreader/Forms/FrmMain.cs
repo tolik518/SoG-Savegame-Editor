@@ -3,15 +3,14 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
 using SoG_SGreader.Wrapper;
 
 namespace SoG_SGreader
 {
     public partial class FrmMain : Form
     {
-        public static readonly string CurrentPatch = "Patch 0.949a";
+        public static readonly string SupportedPatch = "0.949a";
+        public string InstalledGamePatch = "";
         private Player playerObject = new Player();
         private readonly ComboBox[] cbQuickslot = new ComboBox[10];
         private readonly ComboBox[] cbQuickslotType = new ComboBox[10];
@@ -19,11 +18,9 @@ namespace SoG_SGreader
 
         public FrmMain(string saveGamePath)
         {
-            InitializeComponent();    //Initializing elements from the Designer
+            InitializeComponent(); //Initializing elements from the Designer
             InitElements(); //Initializing elements from this file
-            txtConsole.AppendText("Support me by giving the Repository a star on Github \r\n");
-            txtConsole.AppendText("https://github.com/tolik518/SoG_SGreader \r\n");
-            txtConsole.AppendText("________________________________________\r\n");
+            txtConsole.AppendText("Official Repository: https://github.com/tolik518/SoG_SGreader \r\n");
             
             if (File.Exists(saveGamePath))
             {
@@ -173,6 +170,7 @@ namespace SoG_SGreader
 
         private void PopulateFields()
         {
+
             txtNickname.Text = playerObject.Nickname;
 
             cbHat.Text = ((SogItems)playerObject.Equip.Hat).ToString();
@@ -626,6 +624,27 @@ namespace SoG_SGreader
             frmAbout.ShowDialog();
         }
 
-        private void FrmMain_Load(object sender, EventArgs e) { }
+        private async void FrmMain_Load(object sender, EventArgs e) 
+        {
+            this.Text = "SoG: Savegame Editor v" + Application.ProductVersion + " by tolik518";
+
+            ITextBoxWrapper txtConsoleWrapped = new UITextBox(txtConsole);
+
+            try
+            {
+                var patchVersion = await GamePatchReader.GetCurrentGamePatchAsync(txtConsoleWrapped);
+                if (!patchVersion.Equals(SupportedPatch) && !patchVersion.Equals("?.???a"))
+                {
+                    txtConsole.AppendText("\r\nPlease open an issue on Github or contact me. There is a mismatch between the supported patch and game patch which could lead to potential data loss.");
+                }
+                lblGamePatch.Text = lblGamePatch.Text.Replace("0.000a", patchVersion);
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions that might occur
+                lblGamePatch.Text = "?.???a";
+                txtConsole.AppendText("\r\n" + ex.Message);
+            }
+        }
     }
 }

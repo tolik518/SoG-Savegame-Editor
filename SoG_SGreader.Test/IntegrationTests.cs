@@ -136,7 +136,7 @@ namespace SoG_SGreader.Test
             string output = process.StandardOutput.ReadToEnd();
             process.WaitForExit();
             
-            Assert.Contains(FrmMain.CurrentPatch, output);
+            Assert.Contains(FrmMain.SupportedPatch, output);
         }
     }
 }
