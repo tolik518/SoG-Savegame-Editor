@@ -28,68 +28,7 @@ namespace SoG_SGreader
             frmMain.ShowDialog();
             this.Close();
         }
-
-        private string GetCharName(string fileName) // shouldnt be in that class here
-        {
-            using (FileStream fileStream = new FileStream(fileName, FileMode.Open))
-            {
-
-                BinaryReader readBinary = new BinaryReader(fileStream);
-
-                readBinary.ReadInt32(); //I dont know yet what the first bytes stand for tbh    
-                readBinary.ReadInt32(); //pPlayer.equip.Hat =
-                readBinary.ReadInt32(); //pPlayer.equip.Facegear =
-                readBinary.ReadChar(); // pPlayer.style.Bodytype = 
-                readBinary.ReadInt32(); //pPlayer.style.Hair = 
-                readBinary.ReadInt32(); //pPlayer.equip.Weapon = 
-                readBinary.ReadInt32(); //pPlayer.equip.Shield = 
-                readBinary.ReadInt32(); //pPlayer.equip.Armor =
-                readBinary.ReadInt32(); //pPlayer.equip.Shoes = 
-                readBinary.ReadInt32(); //pPlayer.equip.Accessory1 = 
-                readBinary.ReadInt32(); //pPlayer.equip.Accessory2 = 
-                readBinary.ReadInt32(); //pPlayer.style.Hat = 
-                readBinary.ReadInt32(); //pPlayer.style.Facegear = 
-                readBinary.ReadInt32(); //pPlayer.style.Weapon = 
-                readBinary.ReadInt32(); //pPlayer.style.Shield = 
-
-                readBinary.ReadBoolean(); //pPlayer.style.HatHidden = 
-                readBinary.ReadBoolean(); //pPlayer.style.FacegearHidden = 
-
-                readBinary.ReadInt32(); //pPlayer.LastTwoHander =  
-                readBinary.ReadInt32(); //pPlayer.LastOneHander =  
-                readBinary.ReadInt32(); //pPlayer.LastBow =     
-
-                for (int i = 0; i < 10; i++)
-                {
-                    int quckslotType = readBinary.ReadByte();
-                    if (quckslotType == 1)
-                    {
-                        readBinary.ReadInt32(); //pPlayer.quickslots.Add((Sog_Items)
-                    }
-                    else if (quckslotType == 2)
-                    {
-                        readBinary.ReadUInt16();    //pPlayer.quickslots.Add((Sog_Spells)
-                    }
-                    else
-                    {
-                        
-                    }
-                }
-
-                readBinary.ReadByte();      //pPlayer.style.HairColor = 
-                readBinary.ReadByte();      //pPlayer.style.SkinColor = 
-                readBinary.ReadByte();      //pPlayer.style.PonchoColor = 
-                readBinary.ReadByte();      // pPlayer.style.ShirtColor = 
-                readBinary.ReadByte();      //pPlayer.style.PantsColor = 
-
-                readBinary.ReadByte();   //pPlayer.style.Sex = 
-                string nickname = readBinary.ReadString();               
-                readBinary.Dispose();
-
-                return nickname;
-            }
-        }
-
+        
         private void GetSaveGameFiles(string sFilePath)
         {
             lstvSaveGames.Items.Clear();
@@ -98,7 +37,7 @@ namespace SoG_SGreader
                 string savegame = Path.Combine(sFilePath, i + ".cha");
                 if (File.Exists(savegame))
                 {
-                    string[] item = new string[] { i + ".cha", GetCharName(savegame)};
+                    string[] item = new string[] { i + ".cha", DataReader.GetCharName(savegame)};
                     lstvSaveGames.Items.Add(new ListViewItem(item, 0));
                 }
             }

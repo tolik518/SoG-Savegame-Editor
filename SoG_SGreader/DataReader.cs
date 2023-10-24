@@ -4,7 +4,7 @@ using System.IO;
 
 namespace SoG_SGreader
 {
-    public class DataReader
+    public static class DataReader
     {
         public static Player ReadFromFile(string fileName, ITextBoxWrapper txtConsole)
         {
@@ -16,7 +16,9 @@ namespace SoG_SGreader
 
                 txtConsole.AppendText("\r\nFilesize: " + new FileInfo(fileName).Length);
 
-                playerObject.MagicByte = readBinary.ReadInt32(); //I dont know yet what the first bytes stand for tbh    
+                playerObject.MagicByte = readBinary.ReadInt32(); //I dont know yet what the first bytes stand for tbh  
+                
+                //TODO: Cast to SogItems
                 playerObject.Equip.Hat = readBinary.ReadInt32();
                 playerObject.Equip.Facegear = readBinary.ReadInt32();
                 playerObject.Style.Bodytype = readBinary.ReadChar(); //seems like always B ?    
@@ -35,6 +37,7 @@ namespace SoG_SGreader
                 playerObject.Style.HatHidden = readBinary.ReadBoolean();     //[Sog_PlayerProperty(16)]
                 playerObject.Style.FacegearHidden = readBinary.ReadBoolean();
 
+                //TODO: Cast to SogItems
                 playerObject.LastTwoHander = readBinary.ReadInt32();  //last equipped onehander? 
                 playerObject.LastOneHander = readBinary.ReadInt32(); //last equipped twohander?   
                 playerObject.LastBow = readBinary.ReadInt32(); //last equipped bow?     
@@ -369,6 +372,66 @@ namespace SoG_SGreader
             txtConsole.AppendText("\r\n");
             
             return playerObject;
+        }
+        
+        public static string GetCharName(string fileName)
+        {
+            using (FileStream fileStream = new FileStream(fileName, FileMode.Open))
+            {
+                BinaryReader readBinary = new BinaryReader(fileStream);
+
+                readBinary.ReadInt32(); //I dont know yet what the first bytes stand for tbh    
+                readBinary.ReadInt32(); //pPlayer.equip.Hat =
+                readBinary.ReadInt32(); //pPlayer.equip.Facegear =
+                readBinary.ReadChar(); // pPlayer.style.Bodytype = 
+                readBinary.ReadInt32(); //pPlayer.style.Hair = 
+                readBinary.ReadInt32(); //pPlayer.equip.Weapon = 
+                readBinary.ReadInt32(); //pPlayer.equip.Shield = 
+                readBinary.ReadInt32(); //pPlayer.equip.Armor =
+                readBinary.ReadInt32(); //pPlayer.equip.Shoes = 
+                readBinary.ReadInt32(); //pPlayer.equip.Accessory1 = 
+                readBinary.ReadInt32(); //pPlayer.equip.Accessory2 = 
+                readBinary.ReadInt32(); //pPlayer.style.Hat = 
+                readBinary.ReadInt32(); //pPlayer.style.Facegear = 
+                readBinary.ReadInt32(); //pPlayer.style.Weapon = 
+                readBinary.ReadInt32(); //pPlayer.style.Shield = 
+
+                readBinary.ReadBoolean(); //pPlayer.style.HatHidden = 
+                readBinary.ReadBoolean(); //pPlayer.style.FacegearHidden = 
+
+                readBinary.ReadInt32(); //pPlayer.LastTwoHander =  
+                readBinary.ReadInt32(); //pPlayer.LastOneHander =  
+                readBinary.ReadInt32(); //pPlayer.LastBow =     
+
+                for (int i = 0; i < 10; i++)
+                {
+                    int quckslotType = readBinary.ReadByte();
+                    if (quckslotType == 1)
+                    {
+                        readBinary.ReadInt32(); //pPlayer.quickslots.Add((Sog_Items)
+                    }
+                    else if (quckslotType == 2)
+                    {
+                        readBinary.ReadUInt16();    //pPlayer.quickslots.Add((Sog_Spells)
+                    }
+                    else
+                    {
+                        
+                    }
+                }
+
+                readBinary.ReadByte();      //pPlayer.style.HairColor = 
+                readBinary.ReadByte();      //pPlayer.style.SkinColor = 
+                readBinary.ReadByte();      //pPlayer.style.PonchoColor = 
+                readBinary.ReadByte();      // pPlayer.style.ShirtColor = 
+                readBinary.ReadByte();      //pPlayer.style.PantsColor = 
+
+                readBinary.ReadByte();   //pPlayer.style.Sex = 
+                string nickname = readBinary.ReadString();               
+                readBinary.Dispose();
+
+                return nickname;
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using SoG_SGreader.Wrapper;
 using CommandLine;
@@ -7,15 +8,33 @@ namespace SoG_SGreader
 {
     public static class Program
     {
-        [STAThread]
-        static void Main(string[] args)
+        [DllImport("kernel32.dll", SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        private static extern bool AllocConsole();
+        
+        public static void Main(string[] args)
         {
+            if (args.Length <= 0)
+            {
+                RunApp();
+                return;
+            }
+
+            PlatformID pid = Environment.OSVersion.Platform;
+            // If on Windows, allocate a console.
+            if (pid == PlatformID.Win32NT || pid == PlatformID.Win32S || 
+                pid == PlatformID.Win32Windows || pid == PlatformID.WinCE)
+            {
+                AllocConsole();
+            }
+
             Parser.Default
                 .ParseArguments<ComandLineOptions>(args)
                 .WithParsed(RunOptions);
+            
         }
         
-        static void RunOptions(ComandLineOptions opts)
+        private static void RunOptions(ComandLineOptions opts)
         {
             if (opts.ShowText)
             {
@@ -35,7 +54,7 @@ namespace SoG_SGreader
             }
         }
 
-        public static void DisplayTextSummary(string savegamePath)
+        private static void DisplayTextSummary(string savegamePath)
         {
             if (string.IsNullOrEmpty(savegamePath)) 
             {
@@ -50,11 +69,19 @@ namespace SoG_SGreader
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                try // nested try-catch to handle broken pipe
+                {
+                    Console.WriteLine("Could not read savegame.");
+                    Console.WriteLine(e.Message);
+                }
+                catch (Exception)
+                {
+                    // ignored, since we cant write to the console anymore
+                }
             }
         }
 
-        public static void DisplayJson(string savegamePath)
+        private static void DisplayJson(string savegamePath)
         {
             if (string.IsNullOrEmpty(savegamePath)) 
             {
@@ -71,11 +98,19 @@ namespace SoG_SGreader
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                try // nested try-catch to handle broken pipe
+                {
+                    Console.WriteLine("Could not read savegame.");
+                    Console.WriteLine(e.Message);
+                }
+                catch (Exception)
+                {
+                    // ignored, since we cant write to the console anymore
+                }
             }
         }
 
-        public static void RunApp()
+        private static void RunApp()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace SoG_SGreader
 {
-    class GamePatchReader
+    static class GamePatchReader
     {
         public static async Task<string> GetCurrentGamePatchAsync(ITextBoxWrapper txtConsole)
         {
             string gameDataPath = GetGameDataPath(txtConsole);
-            if (string.IsNullOrEmpty(gameDataPath))
+            if (string.IsNullOrEmpty(gameDataPath) || !Directory.Exists(gameDataPath))
             {
                 txtConsole.AppendText("\r\nGame data folder not found under: " + gameDataPath);
                 return "?.???a";
             }
 
             txtConsole.AppendText("\r\nGame data folder located: " + gameDataPath);
+            
             string exeFile = Path.Combine(gameDataPath, "Secrets Of Grindea.exe");
 
             if (!File.Exists(exeFile))
@@ -33,30 +34,24 @@ namespace SoG_SGreader
         {
             PlatformID pid = Environment.OSVersion.Platform;
 
-            if (pid == PlatformID.Win32NT || pid == PlatformID.Win32S || pid == PlatformID.Win32Windows || pid == PlatformID.WinCE)
+            switch (pid)
             {
-                // Windows-specific code
-                txtConsole.AppendText("\r\nOS: Windows");
-                string steamPath = (string)Microsoft.Win32.Registry.GetValue(@"HKEY_CURRENT_USER\Software\Valve\Steam", "SteamPath", null);
-                return Path.Combine(steamPath, "steamapps", "common", "SecretsOfGrindea");
-            }
-            else if (pid == PlatformID.Unix)
-            {
-                // Linux-specific code
-                txtConsole.AppendText("\r\nOS: Linux");
-                return Path.Combine(Environment.GetEnvironmentVariable("HOME"), ".local", "share", "Steam", "steamapps", "common", "SecretsOfGrindea");
-            }
-            else if (pid == PlatformID.MacOSX)
-            {
-                // MacOSX-specific code
-                txtConsole.AppendText("\r\nOS: MacOSX");
-                return Path.Combine(Environment.GetEnvironmentVariable("HOME"), "Library", "Application Support", "Steam", "steamapps", "common", "SecretsOfGrindeaa");
-            }
-            else
-            {
-                // Unknown OS
-                txtConsole.AppendText("\r\nOS: Unknown");
-                return null;
+                case PlatformID.Win32NT:
+                case PlatformID.Win32S:
+                case PlatformID.Win32Windows:
+                case PlatformID.WinCE:
+                    txtConsole.AppendText("\r\nOS: Windows");
+                    string steamPath = (string)Microsoft.Win32.Registry.GetValue(@"HKEY_CURRENT_USER\Software\Valve\Steam", "SteamPath", null);
+                    return Path.Combine(steamPath, "steamapps", "common", "SecretsOfGrindea");
+                case PlatformID.Unix:
+                    txtConsole.AppendText("\r\nOS: Linux");
+                    return Path.Combine(Environment.GetEnvironmentVariable("HOME"), ".local", "share", "Steam", "steamapps", "common", "SecretsOfGrindea");
+                case PlatformID.MacOSX:
+                    txtConsole.AppendText("\r\nOS: MacOSX");
+                    return Path.Combine(Environment.GetEnvironmentVariable("HOME"), "Library", "Application Support", "Steam", "steamapps", "common", "SecretsOfGrindeaa");
+                default:
+                    txtConsole.AppendText("\r\nOS: Unknown");
+                    return null;
             }
         }
 
@@ -112,7 +107,5 @@ namespace SoG_SGreader
             }
             return "?.???a";
         }
-
-
     }
 }

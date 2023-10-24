@@ -1,10 +1,11 @@
 using System;
 using System.IO;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace SoG_SGreader
 {
-    public class JsonHandler
+    public static class JsonHandler
     {
         private static bool IsDirectory(string jsonFilePath)
         {
@@ -17,12 +18,14 @@ namespace SoG_SGreader
                 return false;
             }
         }
+        
         public static string SaveGameToJson(Player player, string jsonFilePath)
         {
             JsonSerializer serializer = new JsonSerializer();
             serializer.NullValueHandling = NullValueHandling.Include;
             serializer.Formatting = Formatting.Indented;
-
+            serializer.Converters.Add(new StringEnumConverter());
+            
             string jsonPath = jsonFilePath;
             
             if (IsDirectory(jsonFilePath))
@@ -52,14 +55,26 @@ namespace SoG_SGreader
             JsonSerializer serializer = new JsonSerializer();
             serializer.NullValueHandling = NullValueHandling.Include;
             serializer.Formatting = Formatting.Indented;
-            
-            StringWriter sw = new StringWriter();
-            using (JsonWriter writer = new JsonTextWriter(sw))
+            serializer.Converters.Add(new StringEnumConverter()); // TODO: make this optional
+            try
             {
-                serializer.Serialize(writer, player);
-            }
+                StringWriter sw = new StringWriter();
+                using (JsonWriter writer = new JsonTextWriter(sw))
+                {
+                    serializer.Serialize(writer, player);
+                }
+                return sw.ToString();
 
-            return sw.ToString();
+            }
+            catch (Exception e)
+            {
+                StringWriter sw = new StringWriter();
+                using (JsonWriter writer = new JsonTextWriter(sw))
+                {
+                    serializer.Serialize(writer, e);
+                }
+                return sw.ToString();
+            }
         }
     }
 }
