@@ -439,9 +439,10 @@ namespace SoG_SGreader
             this.label55.AutoSize = true;
             this.label55.Location = new System.Drawing.Point(13, 99);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(77, 13);
+            this.label55.Size = new System.Drawing.Size(71, 13);
             this.label55.TabIndex = 0;
-            this.label55.Text = "[Patch 0.949a]";
+            this.label55.Text = "[Patch 0.99c]";
+            this.label55.Click += new System.EventHandler(this.label55_Click);
             // 
             // numID
             // 
@@ -2711,7 +2712,7 @@ namespace SoG_SGreader
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
@@ -2719,7 +2720,7 @@ namespace SoG_SGreader
             // 
             this.saveToolStripMenuItem.Enabled = false;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
@@ -2727,7 +2728,7 @@ namespace SoG_SGreader
             // 
             this.importToolStripMenuItem.Enabled = false;
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.importToolStripMenuItem.Text = "Import";
             // 
             // exportAsToolStripMenuItem
@@ -2735,7 +2736,7 @@ namespace SoG_SGreader
             this.exportAsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.jSONToolStripMenuItem});
             this.exportAsToolStripMenuItem.Name = "exportAsToolStripMenuItem";
-            this.exportAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportAsToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.exportAsToolStripMenuItem.Text = "Export as...";
             // 
             // jSONToolStripMenuItem
@@ -2748,7 +2749,7 @@ namespace SoG_SGreader
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -2763,7 +2764,7 @@ namespace SoG_SGreader
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 

@@ -1,6 +1,7 @@
 ﻿namespace SoG_SGreader
 {
-    //Pets from: 0.949a
+    // Source: Secrets of Grindea: SoG.NPCCodex
+    // Game Version: 0.99c
     public enum SogPets
     {
         Rabby = 0x2710,

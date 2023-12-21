@@ -126,6 +126,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enum\SogSavepointId.cs" />
+    <Compile Include="Enum\SogTreasuremap.cs" />
     <Compile Include="GamePatchReader.cs" />
     <Compile Include="ComandLineOptions.cs" />
     <Compile Include="Enum\SogColors.cs" />

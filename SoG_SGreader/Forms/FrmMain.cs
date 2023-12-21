@@ -9,7 +9,7 @@ namespace SoG_SGreader
 {
     public partial class FrmMain : Form
     {
-        public static readonly string SupportedPatch = "0.949a";
+        public static readonly string SupportedPatch = "0.99c";
         public string InstalledGamePatch = "";
         private Player playerObject = new Player();
         private readonly ComboBox[] cbQuickslot = new ComboBox[10];
@@ -645,6 +645,11 @@ namespace SoG_SGreader
                 lblGamePatch.Text = "?.???a";
                 txtConsole.AppendText("\r\n" + ex.Message);
             }
+        }
+
+        private void label55_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
