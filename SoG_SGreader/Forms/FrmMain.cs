@@ -646,10 +646,5 @@ namespace SoG_SGreader
                 txtConsole.AppendText("\r\n" + ex.Message);
             }
         }
-
-        private void label55_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
