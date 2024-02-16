@@ -11,7 +11,8 @@ namespace SoG_SGreader
         [DllImport("kernel32.dll", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
         private static extern bool AllocConsole();
-        
+
+        [STAThread]
         public static void Main(string[] args)
         {
             if (args.Length <= 0)
