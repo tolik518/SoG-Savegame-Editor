@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using SoG_SGreader.Wrapper;
 using CommandLine;
 using System.Diagnostics;
+using System.Security.Cryptography;
 
 namespace SoG_SGreader
 {
@@ -20,9 +21,10 @@ namespace SoG_SGreader
         [STAThread]
         public static void Main(string[] args)
         {
+            PlatformID pid = Environment.OSVersion.Platform;
+
             if (args.Length > 0)
             {
-                PlatformID pid = Environment.OSVersion.Platform;
                 // If on Windows, allocate a console.
                 if (pid == PlatformID.Win32NT || pid == PlatformID.Win32S ||
                     pid == PlatformID.Win32Windows || pid == PlatformID.WinCE)
@@ -34,10 +36,14 @@ namespace SoG_SGreader
                 Parser.Default
                     .ParseArguments<ComandLineOptions>(args)
                     .WithParsed(RunOptions);
-            } 
+            }
             else
             {
-                FreeConsole();
+                if (pid == PlatformID.Win32NT || pid == PlatformID.Win32S ||
+                     pid == PlatformID.Win32Windows || pid == PlatformID.WinCE)
+                {
+                    FreeConsole();
+                }
                 RunApp();
             }
         }
