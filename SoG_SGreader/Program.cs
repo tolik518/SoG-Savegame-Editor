@@ -3,6 +3,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using SoG_SGreader.Wrapper;
 using CommandLine;
+using System.Diagnostics;
 
 namespace SoG_SGreader
 {
@@ -12,27 +13,33 @@ namespace SoG_SGreader
         [return: MarshalAs(UnmanagedType.Bool)]
         private static extern bool AllocConsole();
 
+        [DllImport("kernel32.dll", SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        private static extern bool FreeConsole();
+
         [STAThread]
         public static void Main(string[] args)
         {
-            if (args.Length <= 0)
+            if (args.Length > 0)
             {
+                PlatformID pid = Environment.OSVersion.Platform;
+                // If on Windows, allocate a console.
+                if (pid == PlatformID.Win32NT || pid == PlatformID.Win32S ||
+                    pid == PlatformID.Win32Windows || pid == PlatformID.WinCE)
+                {
+                    AllocConsole();
+
+                }
+
+                Parser.Default
+                    .ParseArguments<ComandLineOptions>(args)
+                    .WithParsed(RunOptions);
+            } 
+            else
+            {
+                FreeConsole();
                 RunApp();
-                return;
             }
-
-            PlatformID pid = Environment.OSVersion.Platform;
-            // If on Windows, allocate a console.
-            if (pid == PlatformID.Win32NT || pid == PlatformID.Win32S || 
-                pid == PlatformID.Win32Windows || pid == PlatformID.WinCE)
-            {
-                AllocConsole();
-            }
-
-            Parser.Default
-                .ParseArguments<ComandLineOptions>(args)
-                .WithParsed(RunOptions);
-            
         }
         
         private static void RunOptions(ComandLineOptions opts)
