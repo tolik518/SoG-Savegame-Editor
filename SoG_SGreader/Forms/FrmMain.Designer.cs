@@ -442,7 +442,6 @@ namespace SoG_SGreader
             this.label55.Size = new System.Drawing.Size(71, 13);
             this.label55.TabIndex = 0;
             this.label55.Text = "[Patch 0.99c]";
-            this.label55.Click += new System.EventHandler(this.label55_Click);
             // 
             // numID
             // 
