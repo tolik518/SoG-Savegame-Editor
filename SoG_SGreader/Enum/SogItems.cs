@@ -1,7 +1,7 @@
 ﻿namespace SoG_SGreader
 {
     // Source: Secrets of Grindea: SoG.ItemCodex
-    // Game Version: 0.99c
+    // Game Version: 0.99g
     public enum SogItems
 	{
         Null = -1, 
