@@ -131,6 +131,7 @@
   <ItemGroup>
     <!--<Compile Include="Enum\SogSavepointId.cs" />-->
     <!--<Compile Include="Enum\SogTreasuremap.cs" />-->
+    <Compile Include="Enum\SogEnemies.cs" />
     <Compile Include="GamePatchReader.cs" />
     <Compile Include="ComandLineOptions.cs" />
     <Compile Include="Enum\SogColors.cs" />
@@ -220,6 +221,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

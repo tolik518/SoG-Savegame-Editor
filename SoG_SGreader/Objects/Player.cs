@@ -87,5 +87,28 @@ namespace SoG_SGreader
         {
             return Skills.FirstOrDefault(s => s.SkillID == skill.SkillID)?.SkillLevel ?? 0;
         }
+
+        internal bool HasCard(SogEnemies sogEnemies)
+        {
+            return Cards.Any(card => card.CardID == sogEnemies);
+        }
+
+        internal void AddCard(SogEnemies sogEnemies)
+        {
+            // add card to player, dont add duplicates
+            if (!HasCard(sogEnemies))
+            {
+                Cards.Add(new Card(sogEnemies));
+            }
+        }
+
+        internal void RemoveCard(SogEnemies sogEnemies)
+        {
+            // remove card from player, if it exists
+            if (HasCard(sogEnemies))
+            {
+                Cards.RemoveAll(card => card.CardID == sogEnemies);
+            }
+        }
     }
 }

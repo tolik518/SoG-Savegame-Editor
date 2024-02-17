@@ -9,11 +9,12 @@ namespace SoG_SGreader
 {
     public partial class FrmMain : Form
     {
-        public static readonly string SupportedPatch = "0.99c";
+        public static readonly string SupportedPatch = "0.99g";
         public string InstalledGamePatch = "";
         private Player playerObject = new Player();
         private readonly ComboBox[] cbQuickslot = new ComboBox[10];
         private readonly ComboBox[] cbQuickslotType = new ComboBox[10];
+        
         public string OpenedSaveGamePath { get; set; }
 
         public FrmMain(string saveGamePath)
@@ -166,6 +167,10 @@ namespace SoG_SGreader
             }
 
             cbSelectedItem.DataSource = items;
+
+            //fill cblstCards with all the cards from Enemies enum
+            var cards = Enum.GetNames(typeof(SogEnemies));
+            cblstCards.DataSource = cards;
         }
 
         private void PopulateFields()
@@ -274,6 +279,13 @@ namespace SoG_SGreader
             sliderSkillMagicA0.Value = playerObject.GetSkillLevel(SogSkills.Magic_Wind_ChainLightning);
             sliderSkillMagicA1.Value = playerObject.GetSkillLevel(SogSkills.Magic_Wind_SummonCloud);
             sliderSkillMagicA2.Value = playerObject.GetSkillLevel(SogSkills.Magic_Wind_StaticTouch);
+
+            // find out if player has the card. mark the checkbox if yes
+            for (int i = 0; i < cblstCards.Items.Count; i++)
+            {
+                bool playerHasCard = playerObject.HasCard((SogEnemies)Enum.Parse(typeof(SogEnemies), cblstCards.Items[i].ToString()));
+                cblstCards.SetItemChecked(i, playerHasCard);
+            }
         }
 
         //TODO: we need to clean all our variables before we load a new file 
@@ -379,6 +391,19 @@ namespace SoG_SGreader
             playerObject.BirthdayMonth = (int)numBirtdayMonth.Value;
 
             playerObject.Style.Sex = rbMale.Checked ? 1 : 0;
+
+            playerObject.Cards.Clear();
+            for (int i = 0; i < cblstCards.Items.Count; i++)
+            {
+                if (cblstCards.GetItemChecked(i))
+                {
+                    playerObject.Cards.Add(
+                        new Card(
+                            (SogEnemies)Enum.Parse(typeof(SogEnemies), cblstCards.Items[i].ToString())
+                        )
+                    );
+                }
+            }
         }
 
         private void LstInventory_SelectedIndexChanged(object sender, EventArgs e)
@@ -644,6 +669,31 @@ namespace SoG_SGreader
                 // Handle any exceptions that might occur
                 lblGamePatch.Text = "?.???a";
                 txtConsole.AppendText("\r\n" + ex.Message);
+            }
+        }
+
+        private void btnResetCards_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstCards.Items.Count; i++)
+            {
+                bool playerHasCard = playerObject.HasCard((SogEnemies)Enum.Parse(typeof(SogEnemies), cblstCards.Items[i].ToString()));
+                cblstCards.SetItemChecked(i, playerHasCard);
+            }
+        }
+
+        private void btnSelectAllCards_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstCards.Items.Count; i++)
+            {
+                cblstCards.SetItemChecked(i, true);
+            }
+        }
+
+        private void btnDeselectAllCards_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstCards.Items.Count; i++)
+            {
+                cblstCards.SetItemChecked(i, false);
             }
         }
     }

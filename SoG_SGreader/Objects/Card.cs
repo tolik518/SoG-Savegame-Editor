@@ -2,9 +2,9 @@ namespace SoG_SGreader
 {
     public class Card
     {
-        public int CardID { get; set; }
+        public SogEnemies CardID { get; set; }
 
-        public Card(int cardId)
+        public Card(SogEnemies cardId)
         {
             this.CardID = cardId;
         }

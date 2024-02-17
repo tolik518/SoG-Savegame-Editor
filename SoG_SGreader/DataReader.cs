@@ -109,7 +109,7 @@ namespace SoG_SGreader
                 {
                     playerObject.Cards.Add(new Card
                     (
-                        readBinary.ReadInt32()
+                        (SogEnemies)readBinary.ReadInt32()
                     ));
                 }
                 txtConsole.AppendText("\r\nCardsCount: " + playerObject.CardsCount);

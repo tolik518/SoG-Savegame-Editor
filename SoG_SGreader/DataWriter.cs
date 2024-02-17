@@ -82,10 +82,10 @@ namespace SoG_SGreader
                     writeBinary.Write(playerObject.MerchantItems[i].ItemCount);
                 }
 
-                writeBinary.Write(playerObject.CardsCount);
-                for (var i = 0; i != playerObject.CardsCount; i++)
+                writeBinary.Write(playerObject.Cards.Count);
+                for (var i = 0; i != playerObject.Cards.Count; i++)
                 {
-                    writeBinary.Write(playerObject.Cards[i].CardID);
+                    writeBinary.Write((int) playerObject.Cards[i].CardID);
                 }
 
                 writeBinary.Write(playerObject.TreasureMapsCount);
