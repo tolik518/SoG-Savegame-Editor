@@ -3,7 +3,7 @@
 
 ## Download
 Head over to the releases if you are just here for the [download link](https://github.com/tolik518/SoG_SGreader/releases), then press on `Assets`   
-on the latest version and download the `SoG_SGreader.exe` file. 
+on the latest version and download the `SoG_SGreader.zip` file. 
 
 Or just [press here](https://github.com/tolik518/SoG_SGreader/releases/latest/download/SoG_SGreader.zip) to download the latest version.
 
