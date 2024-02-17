@@ -144,6 +144,10 @@ namespace SoG_SGreader
             this.numPetEnergy = new System.Windows.Forms.NumericUpDown();
             this.numPetHP = new System.Windows.Forms.NumericUpDown();
             this.tabCards = new System.Windows.Forms.TabPage();
+            this.grpCards = new System.Windows.Forms.GroupBox();
+            this.btnSelectAllCards = new System.Windows.Forms.Button();
+            this.btnResetCards = new System.Windows.Forms.Button();
+            this.btnDeselectAllCards = new System.Windows.Forms.Button();
             this.cblstCards = new System.Windows.Forms.CheckedListBox();
             this.tabQuickslots = new System.Windows.Forms.TabPage();
             this.label57 = new System.Windows.Forms.Label();
@@ -258,10 +262,6 @@ namespace SoG_SGreader
             this.txtConsole = new System.Windows.Forms.TextBox();
             this.Tooltips = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnSelectAllCards = new System.Windows.Forms.Button();
-            this.btnDeselectAllCards = new System.Windows.Forms.Button();
-            this.btnResetCards = new System.Windows.Forms.Button();
-            this.grpCards = new System.Windows.Forms.GroupBox();
             this.tabContainer.SuspendLayout();
             this.tabChar.SuspendLayout();
             this.grpPatch.SuspendLayout();
@@ -294,6 +294,7 @@ namespace SoG_SGreader
             ((System.ComponentModel.ISupportInitialize)(this.numPetEnergy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPetHP)).BeginInit();
             this.tabCards.SuspendLayout();
+            this.grpCards.SuspendLayout();
             this.tabQuickslots.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabSkills.SuspendLayout();
@@ -377,7 +378,6 @@ namespace SoG_SGreader
             this.tabPage1.SuspendLayout();
             this.msMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.grpCards.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabContainer
@@ -642,7 +642,7 @@ namespace SoG_SGreader
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(11, 211);
+            this.label10.Location = new System.Drawing.Point(7, 211);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(68, 13);
             this.label10.TabIndex = 22;
@@ -651,7 +651,7 @@ namespace SoG_SGreader
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(11, 184);
+            this.label9.Location = new System.Drawing.Point(7, 184);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(68, 13);
             this.label9.TabIndex = 21;
@@ -660,7 +660,7 @@ namespace SoG_SGreader
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(11, 157);
+            this.label8.Location = new System.Drawing.Point(7, 157);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(40, 13);
             this.label8.TabIndex = 20;
@@ -669,7 +669,7 @@ namespace SoG_SGreader
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(11, 130);
+            this.label7.Location = new System.Drawing.Point(7, 130);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 13);
             this.label7.TabIndex = 19;
@@ -678,7 +678,7 @@ namespace SoG_SGreader
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 103);
+            this.label6.Location = new System.Drawing.Point(7, 103);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 13);
             this.label6.TabIndex = 18;
@@ -687,7 +687,7 @@ namespace SoG_SGreader
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(11, 76);
+            this.label11.Location = new System.Drawing.Point(7, 76);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(51, 13);
             this.label11.TabIndex = 17;
@@ -696,7 +696,7 @@ namespace SoG_SGreader
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(11, 49);
+            this.label12.Location = new System.Drawing.Point(7, 49);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(55, 13);
             this.label12.TabIndex = 16;
@@ -705,7 +705,7 @@ namespace SoG_SGreader
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(11, 22);
+            this.label13.Location = new System.Drawing.Point(7, 22);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(27, 13);
             this.label13.TabIndex = 15;
@@ -795,7 +795,7 @@ namespace SoG_SGreader
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(11, 103);
+            this.label14.Location = new System.Drawing.Point(7, 103);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(39, 13);
             this.label14.TabIndex = 30;
@@ -812,7 +812,7 @@ namespace SoG_SGreader
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(11, 76);
+            this.label15.Location = new System.Drawing.Point(7, 76);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(51, 13);
             this.label15.TabIndex = 29;
@@ -829,7 +829,7 @@ namespace SoG_SGreader
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(11, 49);
+            this.label16.Location = new System.Drawing.Point(7, 49);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(55, 13);
             this.label16.TabIndex = 28;
@@ -846,7 +846,7 @@ namespace SoG_SGreader
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(11, 22);
+            this.label17.Location = new System.Drawing.Point(7, 22);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(27, 13);
             this.label17.TabIndex = 27;
@@ -1587,6 +1587,48 @@ namespace SoG_SGreader
             this.tabCards.TabIndex = 5;
             this.tabCards.Text = "Cards";
             this.tabCards.UseVisualStyleBackColor = true;
+            // 
+            // grpCards
+            // 
+            this.grpCards.Controls.Add(this.btnSelectAllCards);
+            this.grpCards.Controls.Add(this.btnResetCards);
+            this.grpCards.Controls.Add(this.btnDeselectAllCards);
+            this.grpCards.Location = new System.Drawing.Point(454, 6);
+            this.grpCards.Name = "grpCards";
+            this.grpCards.Size = new System.Drawing.Size(97, 379);
+            this.grpCards.TabIndex = 6;
+            this.grpCards.TabStop = false;
+            this.grpCards.Text = "Cards";
+            // 
+            // btnSelectAllCards
+            // 
+            this.btnSelectAllCards.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllCards.Name = "btnSelectAllCards";
+            this.btnSelectAllCards.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllCards.TabIndex = 3;
+            this.btnSelectAllCards.Text = "Select all";
+            this.btnSelectAllCards.UseVisualStyleBackColor = true;
+            this.btnSelectAllCards.Click += new System.EventHandler(this.btnSelectAllCards_Click);
+            // 
+            // btnResetCards
+            // 
+            this.btnResetCards.Location = new System.Drawing.Point(6, 350);
+            this.btnResetCards.Name = "btnResetCards";
+            this.btnResetCards.Size = new System.Drawing.Size(87, 23);
+            this.btnResetCards.TabIndex = 5;
+            this.btnResetCards.Text = "Reset";
+            this.btnResetCards.UseVisualStyleBackColor = true;
+            this.btnResetCards.Click += new System.EventHandler(this.btnResetCards_Click);
+            // 
+            // btnDeselectAllCards
+            // 
+            this.btnDeselectAllCards.Location = new System.Drawing.Point(6, 48);
+            this.btnDeselectAllCards.Name = "btnDeselectAllCards";
+            this.btnDeselectAllCards.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllCards.TabIndex = 4;
+            this.btnDeselectAllCards.Text = "Deselect all";
+            this.btnDeselectAllCards.UseVisualStyleBackColor = true;
+            this.btnDeselectAllCards.Click += new System.EventHandler(this.btnDeselectAllCards_Click);
             // 
             // cblstCards
             // 
@@ -2795,48 +2837,6 @@ namespace SoG_SGreader
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.PictureBox3_Click);
             // 
-            // btnSelectAllCards
-            // 
-            this.btnSelectAllCards.Location = new System.Drawing.Point(6, 19);
-            this.btnSelectAllCards.Name = "btnSelectAllCards";
-            this.btnSelectAllCards.Size = new System.Drawing.Size(87, 23);
-            this.btnSelectAllCards.TabIndex = 3;
-            this.btnSelectAllCards.Text = "Select all";
-            this.btnSelectAllCards.UseVisualStyleBackColor = true;
-            this.btnSelectAllCards.Click += new System.EventHandler(this.btnSelectAllCards_Click);
-            // 
-            // btnDeselectAllCards
-            // 
-            this.btnDeselectAllCards.Location = new System.Drawing.Point(6, 48);
-            this.btnDeselectAllCards.Name = "btnDeselectAllCards";
-            this.btnDeselectAllCards.Size = new System.Drawing.Size(87, 23);
-            this.btnDeselectAllCards.TabIndex = 4;
-            this.btnDeselectAllCards.Text = "Deselect all";
-            this.btnDeselectAllCards.UseVisualStyleBackColor = true;
-            this.btnDeselectAllCards.Click += new System.EventHandler(this.btnDeselectAllCards_Click);
-            // 
-            // btnResetCards
-            // 
-            this.btnResetCards.Location = new System.Drawing.Point(6, 350);
-            this.btnResetCards.Name = "btnResetCards";
-            this.btnResetCards.Size = new System.Drawing.Size(87, 23);
-            this.btnResetCards.TabIndex = 5;
-            this.btnResetCards.Text = "Reset";
-            this.btnResetCards.UseVisualStyleBackColor = true;
-            this.btnResetCards.Click += new System.EventHandler(this.btnResetCards_Click);
-            // 
-            // grpCards
-            // 
-            this.grpCards.Controls.Add(this.btnSelectAllCards);
-            this.grpCards.Controls.Add(this.btnResetCards);
-            this.grpCards.Controls.Add(this.btnDeselectAllCards);
-            this.grpCards.Location = new System.Drawing.Point(454, 6);
-            this.grpCards.Name = "grpCards";
-            this.grpCards.Size = new System.Drawing.Size(97, 379);
-            this.grpCards.TabIndex = 6;
-            this.grpCards.TabStop = false;
-            this.grpCards.Text = "Cards";
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2895,6 +2895,7 @@ namespace SoG_SGreader
             ((System.ComponentModel.ISupportInitialize)(this.numPetEnergy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPetHP)).EndInit();
             this.tabCards.ResumeLayout(false);
+            this.grpCards.ResumeLayout(false);
             this.tabQuickslots.ResumeLayout(false);
             this.tabQuickslots.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -2993,7 +2994,6 @@ namespace SoG_SGreader
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.grpCards.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
