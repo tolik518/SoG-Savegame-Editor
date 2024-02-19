@@ -90,9 +90,8 @@ namespace SoG_SGreader
                     Size = new Size(79, 21),
                     Enabled = false
                 };
-                groupBox3.Controls.Add(cbQuickslotType[i]);
-                groupBox3.Controls.Add(cbQuickslot[i]);
-                cbQuickslotType[i].SelectedIndexChanged += new System.EventHandler(QuickslotType_SelectedIndexChanged);
+                grpQuickslots.Controls.Add(cbQuickslotType[i]);
+                grpQuickslots.Controls.Add(cbQuickslot[i]);
 
                 iQuickslotYpos -= 27;
             }
@@ -309,6 +308,7 @@ namespace SoG_SGreader
             playerObject.Style.Weapon = (int)Enum.Parse(typeof(SogItems), cbStyleWeapon.Text);
             playerObject.Style.Shield = (int)Enum.Parse(typeof(SogItems), cbStyleShield.Text);
 
+            /* TODO: Quickslots are not being saved correctly, we need to fix this
             for (int i = 0; i < 10; i++)
             {
                 if (cbQuickslotType[i].Text == nameof(SogItems))
@@ -323,9 +323,10 @@ namespace SoG_SGreader
                 }
                 else
                 {
-                    playerObject.Quickslots[i] = (int)0;
-                }
+                    //playerObject.Quickslots[i] = 0;
+                    playerObject.Quickslots[i] = playerObject.Quickslots[i];
             }
+            }*/
 
             playerObject.ItemsCount = lstInventory.Items.Count;
             playerObject.Inventory.Clear();

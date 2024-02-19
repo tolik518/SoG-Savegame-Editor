@@ -151,7 +151,7 @@ namespace SoG_SGreader
             this.cblstCards = new System.Windows.Forms.CheckedListBox();
             this.tabQuickslots = new System.Windows.Forms.TabPage();
             this.label57 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.grpQuickslots = new System.Windows.Forms.GroupBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -296,7 +296,7 @@ namespace SoG_SGreader
             this.tabCards.SuspendLayout();
             this.grpCards.SuspendLayout();
             this.tabQuickslots.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.grpQuickslots.SuspendLayout();
             this.tabSkills.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabSkillsMelee.SuspendLayout();
@@ -1641,7 +1641,7 @@ namespace SoG_SGreader
             // tabQuickslots
             // 
             this.tabQuickslots.Controls.Add(this.label57);
-            this.tabQuickslots.Controls.Add(this.groupBox3);
+            this.tabQuickslots.Controls.Add(this.grpQuickslots);
             this.tabQuickslots.Location = new System.Drawing.Point(4, 22);
             this.tabQuickslots.Name = "tabQuickslots";
             this.tabQuickslots.Padding = new System.Windows.Forms.Padding(3);
@@ -1662,24 +1662,24 @@ namespace SoG_SGreader
             this.label57.Text = "* = support for this function was removed due to the risk of losing your save gam" +
     "e";
             // 
-            // groupBox3
+            // grpQuickslots
             // 
-            this.groupBox3.Controls.Add(this.label22);
-            this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Controls.Add(this.label23);
-            this.groupBox3.Controls.Add(this.label24);
-            this.groupBox3.Controls.Add(this.label25);
-            this.groupBox3.Controls.Add(this.label26);
-            this.groupBox3.Controls.Add(this.label27);
-            this.groupBox3.Location = new System.Drawing.Point(6, 6);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(341, 294);
-            this.groupBox3.TabIndex = 29;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Quckslots";
+            this.grpQuickslots.Controls.Add(this.label22);
+            this.grpQuickslots.Controls.Add(this.label21);
+            this.grpQuickslots.Controls.Add(this.label18);
+            this.grpQuickslots.Controls.Add(this.label19);
+            this.grpQuickslots.Controls.Add(this.label20);
+            this.grpQuickslots.Controls.Add(this.label23);
+            this.grpQuickslots.Controls.Add(this.label24);
+            this.grpQuickslots.Controls.Add(this.label25);
+            this.grpQuickslots.Controls.Add(this.label26);
+            this.grpQuickslots.Controls.Add(this.label27);
+            this.grpQuickslots.Location = new System.Drawing.Point(6, 6);
+            this.grpQuickslots.Name = "grpQuickslots";
+            this.grpQuickslots.Size = new System.Drawing.Size(341, 294);
+            this.grpQuickslots.TabIndex = 29;
+            this.grpQuickslots.TabStop = false;
+            this.grpQuickslots.Text = "Quckslots";
             // 
             // label22
             // 
@@ -2898,8 +2898,8 @@ namespace SoG_SGreader
             this.grpCards.ResumeLayout(false);
             this.tabQuickslots.ResumeLayout(false);
             this.tabQuickslots.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.grpQuickslots.ResumeLayout(false);
+            this.grpQuickslots.PerformLayout();
             this.tabSkills.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabSkillsMelee.ResumeLayout(false);
@@ -3011,7 +3011,7 @@ namespace SoG_SGreader
         private System.Windows.Forms.ToolStripMenuItem jSONToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox grpQuickslots;
 
 
 

@@ -22,7 +22,11 @@ namespace SoG_SGreader.Test
             if (Environment.GetEnvironmentVariable("GITHUB_WORKSPACE") != null) {
                 projectDirectory = Environment.GetEnvironmentVariable("GITHUB_WORKSPACE");
             }
-            
+            else
+            {
+                projectDirectory = Path.Combine(projectDirectory, "SoG_SGreader");
+            }
+
             string filePath = Path.Combine(projectDirectory, "SoG_SGreader.Test", "SaveGames", saveGameNumber + ".cha");
 
             return DataReader.ReadFromFile(filePath, fakeTextBox);

@@ -116,8 +116,8 @@ namespace SoG_SGreader
                 writeBinary.Write(playerObject.SkillGoldPoints);
                 writeBinary.Write(playerObject.Cash);
 
-                writeBinary.Write(playerObject.PetsCount);
-                for (var i = 0; i != playerObject.PetsCount; i++)
+                writeBinary.Write(playerObject.Pets.Count);
+                for (var i = 0; i != playerObject.Pets.Count; i++)
                 {
                     var currentPet = playerObject.Pets[i];
 

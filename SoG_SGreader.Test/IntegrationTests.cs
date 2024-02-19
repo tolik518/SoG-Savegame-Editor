@@ -16,7 +16,11 @@ namespace SoG_SGreader.Test
                 projectDirectory = Environment.GetEnvironmentVariable("GITHUB_WORKSPACE");
                 return Path.Combine(projectDirectory, "SoG_SGreader", "bin", "Release", "SoG_SGreader.exe");
             }
-            
+            else
+            {
+                projectDirectory = Path.Combine(projectDirectory, "SoG_SGreader");
+            }
+
             return Path.Combine(projectDirectory, "SoG_SGreader", "bin", "Debug", "SoG_SGreader.exe");
         }
         
@@ -27,6 +31,10 @@ namespace SoG_SGreader.Test
             // Exception for GitHub Actions Test Runner
             if (Environment.GetEnvironmentVariable("GITHUB_WORKSPACE") != null) {
                 projectDirectory = Environment.GetEnvironmentVariable("GITHUB_WORKSPACE");
+            }  
+            else
+            {
+                projectDirectory = Path.Combine(projectDirectory,"SoG_SGreader");
             }
             
             return Path.Combine(projectDirectory, "SoG_SGreader.Test", "SaveGames", saveGameNumber + ".cha");
@@ -54,7 +62,7 @@ namespace SoG_SGreader.Test
             string output = process.StandardOutput.ReadToEnd();
             process.WaitForExit();
             
-            Assert.Contains("Could not find file", output);
+            Assert.Contains("Could not read savegame", output);
             Assert.Contains(Path.Combine("SaveGames", "doesntexist.cha"), output);
         }
 
