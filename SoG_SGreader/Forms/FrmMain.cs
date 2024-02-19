@@ -333,11 +333,16 @@ namespace SoG_SGreader
 
             for (int i = 0; i != lstInventory.Items.Count; i++)
             {
-                Item item = new Item(
-                    (SogItems)Enum.Parse(typeof(SogItems), lstInventory.Items[i].SubItems[0].Text), 
-                    Int32.Parse(lstInventory.Items[i].SubItems[1].Text),
-                    UInt32.Parse(lstInventory.Items[i].SubItems[2].Text)
-                 );
+                var itemId = (SogItems)Enum.Parse(typeof(SogItems), lstInventory.Items[i].SubItems[0].Text);
+                var itemCount = Int32.Parse(lstInventory.Items[i].SubItems[1].Text);
+                var itemPos = UInt32.Parse(lstInventory.Items[i].SubItems[2].Text);
+                
+                Item item = new Item
+                {
+                    ItemID = itemId,
+                    ItemCount = itemCount,
+                    ItemPos = itemPos
+                };
 
                 playerObject.Inventory.Add(item);
             }
@@ -399,9 +404,9 @@ namespace SoG_SGreader
                 if (cblstCards.GetItemChecked(i))
                 {
                     playerObject.Cards.Add(
-                        new Card(
-                            (SogEnemies)Enum.Parse(typeof(SogEnemies), cblstCards.Items[i].ToString())
-                        )
+                        new Card{
+                            CardID = (SogEnemies)Enum.Parse(typeof(SogEnemies), cblstCards.Items[i].ToString())
+                        }
                     );
                 }
             }

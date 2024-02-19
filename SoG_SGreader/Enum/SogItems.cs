@@ -2,7 +2,7 @@
 {
     // Source: Secrets of Grindea: SoG.ItemCodex
     // Game Version: 0.99g
-    public enum SogItems
+    public enum SogItems: int
 	{
         Null = -1, 
         Apple = 0,

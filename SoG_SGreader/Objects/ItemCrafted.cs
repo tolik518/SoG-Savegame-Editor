@@ -1,12 +1,8 @@
 namespace SoG_SGreader
 {
+    [System.Serializable]
     public class ItemCrafted
     {
         public SogItems ItemID { get; set; }
-
-        public ItemCrafted(SogItems itemId)
-        {
-            this.ItemID = itemId;
-        }
     }
 }

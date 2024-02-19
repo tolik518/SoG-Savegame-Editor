@@ -16,7 +16,7 @@ namespace SoG_SGreader.Test
                 projectDirectory = Environment.GetEnvironmentVariable("GITHUB_WORKSPACE");
                 return Path.Combine(projectDirectory, "SoG_SGreader", "bin", "Release", "SoG_SGreader.exe");
             }
-            else
+            else if (Environment.OSVersion.Platform != PlatformID.Unix)
             {
                 projectDirectory = Path.Combine(projectDirectory, "SoG_SGreader");
             }
@@ -32,7 +32,7 @@ namespace SoG_SGreader.Test
             if (Environment.GetEnvironmentVariable("GITHUB_WORKSPACE") != null) {
                 projectDirectory = Environment.GetEnvironmentVariable("GITHUB_WORKSPACE");
             }  
-            else
+            else if (Environment.OSVersion.Platform != PlatformID.Unix)
             {
                 projectDirectory = Path.Combine(projectDirectory,"SoG_SGreader");
             }

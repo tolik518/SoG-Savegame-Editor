@@ -1,6 +1,6 @@
 ﻿namespace SoG_SGreader
 {
-    public enum SogEnemies
+    public enum SogEnemies: int
     {
         Null = -1, 
         GreenSlime = 0,

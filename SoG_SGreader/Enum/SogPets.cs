@@ -2,7 +2,7 @@
 {
     // Source: Secrets of Grindea: SoG.NPCCodex
     // Game Version: 0.99c
-    public enum SogPets
+    public enum SogPets: int
     {
         Rabby = 0x2710,
         Slimy = 0x2711,

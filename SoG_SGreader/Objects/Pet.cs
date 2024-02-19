@@ -2,9 +2,9 @@ using System;
 
 namespace SoG_SGreader
 {
+    [System.Serializable]
     public class Pet
     {
-
         public int Type1 { get; set; }
         public int Type2 { get; set; }
         public string Nickname { get; set; }
@@ -22,6 +22,5 @@ namespace SoG_SGreader
         public UInt16 StatProgressDamage { get; set; }
         public UInt16 StatProgressCrit { get; set; }
         public UInt16 StatProgressSpeed { get; set; }
-
     }
 }

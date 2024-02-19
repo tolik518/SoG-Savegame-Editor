@@ -1,14 +1,8 @@
-using System;
-
 namespace SoG_SGreader
 {
+    [System.Serializable]
     public class TreasureMap
     {
-        public Int16 TreasureMapID { get; set; }
-
-        public TreasureMap(Int16 treasureMapID)
-        {
-            this.TreasureMapID = treasureMapID;
-        }
+        public short TreasureMapID { get; set; }
     }
 }
