@@ -113,5 +113,33 @@ namespace SoG_SGreader
                 Cards.RemoveAll(card => card.CardID == sogEnemies);
             }
         }
+
+        //same as above, but for quests
+
+        internal bool HasQuest(SogQuests sogQuests)
+        {
+            return Quests.Any(quest => quest.QuestID == sogQuests);
+        }
+
+        internal void AddQuest(SogQuests sogQuests)
+        {
+            // add quest to player, dont add duplicates
+            if (!HasQuest(sogQuests))
+            {
+                Quests.Add(new Quest
+                {
+                    QuestID = sogQuests
+                });
+            }
+        }
+
+        internal void RemoveQuest(SogQuests sogQuests)
+        {
+            // remove quest from player, if it exists
+            if (HasQuest(sogQuests))
+            {
+                Quests.RemoveAll(quest => quest.QuestID == sogQuests);
+            }
+        }
     }
 }

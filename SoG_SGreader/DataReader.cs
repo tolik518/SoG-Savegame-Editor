@@ -231,7 +231,7 @@ namespace SoG_SGreader
                 {
                     playerObject.Quests.Add(new Quest
                     {
-                        QuestID = readBinary.ReadUInt16()
+                        QuestID = (SogQuests)readBinary.ReadUInt16()
                     });
                 }
                 txtConsole.AppendText("\r\n" + "QuestsCount: " + playerObject.QuestsCount);
@@ -241,9 +241,9 @@ namespace SoG_SGreader
                 for (int i = 0; i != playerObject.EnemiesMetCount; i++)
                 {
                     playerObject.Enemies.Add(new Enemy
-                    (
-                        readBinary.ReadInt32()
-                    ));
+                    {
+                        EnemyID = readBinary.ReadInt32()
+                    });
                 }
                 txtConsole.AppendText("\r\n" + "EnemiesMetCount: " + playerObject.EnemiesMetCount);
 

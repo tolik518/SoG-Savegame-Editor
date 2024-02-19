@@ -170,6 +170,9 @@ namespace SoG_SGreader
             //fill cblstCards with all the cards from Enemies enum
             var cards = Enum.GetNames(typeof(SogEnemies));
             cblstCards.DataSource = cards;
+
+            var quests = Enum.GetNames(typeof(SogQuests));
+            cblstQuests.DataSource = quests;
         }
 
         private void PopulateFields()
@@ -284,6 +287,13 @@ namespace SoG_SGreader
             {
                 bool playerHasCard = playerObject.HasCard((SogEnemies)Enum.Parse(typeof(SogEnemies), cblstCards.Items[i].ToString()));
                 cblstCards.SetItemChecked(i, playerHasCard);
+            }
+
+            // find out if player has the Quest. mark the checkbox if yes
+            for (int i = 0; i < cblstQuests.Items.Count; i++)
+            {
+                bool playerHasQuest = playerObject.HasQuest((SogQuests)Enum.Parse(typeof(SogQuests), cblstQuests.Items[i].ToString()));
+                cblstQuests.SetItemChecked(i, playerHasQuest);
             }
         }
 
@@ -410,6 +420,20 @@ namespace SoG_SGreader
                     );
                 }
             }
+
+            playerObject.Quests.Clear();
+            for (int i = 0; i < cblstQuests.Items.Count; i++)
+            {
+                if (cblstQuests.GetItemChecked(i))
+                {
+                    playerObject.Quests.Add(
+                        new Quest
+                        {
+                            QuestID = (SogQuests)Enum.Parse(typeof(SogQuests), cblstQuests.Items[i].ToString())
+                        }
+                    );
+                }
+            }
         }
 
         private void LstInventory_SelectedIndexChanged(object sender, EventArgs e)
@@ -441,7 +465,7 @@ namespace SoG_SGreader
                     fileStream.Close();
                 }
                 
-                this.GetDataFromFields();
+                GetDataFromFields();
                 DataWriter dataWriter = new DataWriter(playerObject);
                 dataWriter.WriteToFile(sFilename);
                 
@@ -657,7 +681,7 @@ namespace SoG_SGreader
 
         private async void FrmMain_Load(object sender, EventArgs e) 
         {
-            this.Text = "SoG: Savegame Editor v" + Application.ProductVersion + " by tolik518";
+            Text = "SoG: Savegame Editor v" + Application.ProductVersion + " by tolik518";
 
             ITextBoxWrapper txtConsoleWrapped = new UITextBox(txtConsole);
 
@@ -700,6 +724,31 @@ namespace SoG_SGreader
             for (int i = 0; i < cblstCards.Items.Count; i++)
             {
                 cblstCards.SetItemChecked(i, false);
+            }
+        }
+
+        private void btnResetQuests_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstQuests.Items.Count; i++)
+            {
+                bool playerHasQuest = playerObject.HasQuest((SogQuests)Enum.Parse(typeof(SogQuests), cblstQuests.Items[i].ToString()));
+                cblstQuests.SetItemChecked(i, playerHasQuest);
+            }
+        }
+
+        private void btnSelectAllQuests_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstQuests.Items.Count; i++)
+            {
+                cblstQuests.SetItemChecked(i, true);
+            }
+        }
+
+        private void btnDeselectAllQuests_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstQuests.Items.Count; i++)
+            {
+                cblstQuests.SetItemChecked(i, false);
             }
         }
     }

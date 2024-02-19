@@ -24,9 +24,9 @@ namespace SoG_SGreader
                 filePath = Path.Combine(filePath, lstvSaveGames.SelectedItems[0].Text);
             }
             FrmMain frmMain = new FrmMain(filePath);
-            this.Hide();
+            Hide();
             frmMain.ShowDialog();
-            this.Close();
+            Close();
         }
         
         private void GetSaveGameFiles(string sFilePath)
@@ -75,9 +75,9 @@ namespace SoG_SGreader
         private void BtnStartWithoitLoading_Click(object sender, EventArgs e)
         {
             FrmMain frmMain = new FrmMain("");
-            this.Hide();
+            Hide();
             frmMain.ShowDialog();
-            this.Close();
+            Close();
         }
 
         private void UpdateFilePathLabel()

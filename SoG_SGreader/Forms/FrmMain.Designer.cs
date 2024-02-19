@@ -248,7 +248,11 @@ namespace SoG_SGreader
             this.tabTreasureMaps = new System.Windows.Forms.TabPage();
             this.label41 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label50 = new System.Windows.Forms.Label();
+            this.grpQuests = new System.Windows.Forms.GroupBox();
+            this.btnSelectAllQuests = new System.Windows.Forms.Button();
+            this.btnResetQuests = new System.Windows.Forms.Button();
+            this.btnDeselectAllQuests = new System.Windows.Forms.Button();
+            this.cblstQuests = new System.Windows.Forms.CheckedListBox();
             this.msMenu = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -376,6 +380,7 @@ namespace SoG_SGreader
             this.tabMerchant.SuspendLayout();
             this.tabTreasureMaps.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.grpQuests.SuspendLayout();
             this.msMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -2707,7 +2712,8 @@ namespace SoG_SGreader
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.label50);
+            this.tabPage1.Controls.Add(this.grpQuests);
+            this.tabPage1.Controls.Add(this.cblstQuests);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -2716,16 +2722,55 @@ namespace SoG_SGreader
             this.tabPage1.Text = "*Quests";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // label50
+            // grpQuests
             // 
-            this.label50.AutoSize = true;
-            this.label50.BackColor = System.Drawing.Color.Transparent;
-            this.label50.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label50.Location = new System.Drawing.Point(6, 3);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(117, 13);
-            this.label50.TabIndex = 32;
-            this.label50.Text = "* = not yet implemented";
+            this.grpQuests.Controls.Add(this.btnSelectAllQuests);
+            this.grpQuests.Controls.Add(this.btnResetQuests);
+            this.grpQuests.Controls.Add(this.btnDeselectAllQuests);
+            this.grpQuests.Location = new System.Drawing.Point(454, 6);
+            this.grpQuests.Name = "grpQuests";
+            this.grpQuests.Size = new System.Drawing.Size(97, 379);
+            this.grpQuests.TabIndex = 8;
+            this.grpQuests.TabStop = false;
+            this.grpQuests.Text = "Quests";
+            // 
+            // btnSelectAllQuests
+            // 
+            this.btnSelectAllQuests.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllQuests.Name = "btnSelectAllQuests";
+            this.btnSelectAllQuests.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllQuests.TabIndex = 3;
+            this.btnSelectAllQuests.Text = "Select all";
+            this.btnSelectAllQuests.UseVisualStyleBackColor = true;
+            this.btnSelectAllQuests.Click += new System.EventHandler(this.btnSelectAllQuests_Click);
+            // 
+            // btnResetQuests
+            // 
+            this.btnResetQuests.Location = new System.Drawing.Point(6, 350);
+            this.btnResetQuests.Name = "btnResetQuests";
+            this.btnResetQuests.Size = new System.Drawing.Size(87, 23);
+            this.btnResetQuests.TabIndex = 5;
+            this.btnResetQuests.Text = "Reset";
+            this.btnResetQuests.UseVisualStyleBackColor = true;
+            this.btnResetQuests.Click += new System.EventHandler(this.btnResetQuests_Click);
+            // 
+            // btnDeselectAllQuests
+            // 
+            this.btnDeselectAllQuests.Location = new System.Drawing.Point(6, 48);
+            this.btnDeselectAllQuests.Name = "btnDeselectAllQuests";
+            this.btnDeselectAllQuests.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllQuests.TabIndex = 4;
+            this.btnDeselectAllQuests.Text = "Deselect all";
+            this.btnDeselectAllQuests.UseVisualStyleBackColor = true;
+            this.btnDeselectAllQuests.Click += new System.EventHandler(this.btnDeselectAllQuests_Click);
+            // 
+            // cblstQuests
+            // 
+            this.cblstQuests.FormattingEnabled = true;
+            this.cblstQuests.Location = new System.Drawing.Point(6, 6);
+            this.cblstQuests.Name = "cblstQuests";
+            this.cblstQuests.Size = new System.Drawing.Size(442, 379);
+            this.cblstQuests.TabIndex = 7;
             // 
             // msMenu
             // 
@@ -2990,7 +3035,7 @@ namespace SoG_SGreader
             this.tabTreasureMaps.ResumeLayout(false);
             this.tabTreasureMaps.PerformLayout();
             this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.grpQuests.ResumeLayout(false);
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -3128,7 +3173,6 @@ namespace SoG_SGreader
         private System.Windows.Forms.Button btnDeleteSelectedItem;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.ComboBox cbPetType;
         private System.Windows.Forms.Label label52;
@@ -3234,5 +3278,10 @@ namespace SoG_SGreader
         private Button btnDeselectAllCards;
         private Button btnSelectAllCards;
         private GroupBox grpCards;
+        private GroupBox grpQuests;
+        private Button btnSelectAllQuests;
+        private Button btnResetQuests;
+        private Button btnDeselectAllQuests;
+        private CheckedListBox cblstQuests;
     }
 }

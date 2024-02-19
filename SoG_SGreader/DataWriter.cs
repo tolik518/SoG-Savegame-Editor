@@ -146,7 +146,7 @@ namespace SoG_SGreader
                 writeBinary.Write(playerObject.QuestsCount);
                 for (int i = 0; i != playerObject.QuestsCount; i++)
                 {
-                    writeBinary.Write(playerObject.Quests[i].QuestID);
+                    writeBinary.Write((ushort)playerObject.Quests[i].QuestID);
                 }
 
                 writeBinary.Write(playerObject.EnemiesMetCount);
