@@ -152,7 +152,7 @@
     <Compile Include="Objects\MerchantItem.cs" />
     <Compile Include="Objects\Pet.cs" />
     <Compile Include="Objects\Player.cs" />
-    <Compile Include="Objects\Player.ItemsSeen.cs" />
+    <Compile Include="Objects\ItemsSeen.cs" />
     <Compile Include="Objects\Potion.cs" />
     <Compile Include="Objects\Quest.cs" />
     <Compile Include="Objects\Skill.cs" />

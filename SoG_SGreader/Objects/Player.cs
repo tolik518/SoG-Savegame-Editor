@@ -4,7 +4,6 @@ using System.Linq;
 
 namespace SoG_SGreader
 {
-    [Serializable]
     public class Player
     {
         public int MagicByte { get; set; }

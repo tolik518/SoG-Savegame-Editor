@@ -342,16 +342,12 @@ namespace SoG_SGreader
             playerObject.Inventory.Clear();
 
             for (int i = 0; i != lstInventory.Items.Count; i++)
-            {
-                var itemId = (SogItems)Enum.Parse(typeof(SogItems), lstInventory.Items[i].SubItems[0].Text);
-                var itemCount = Int32.Parse(lstInventory.Items[i].SubItems[1].Text);
-                var itemPos = UInt32.Parse(lstInventory.Items[i].SubItems[2].Text);
-                
+            { 
                 Item item = new Item
                 {
-                    ItemID = itemId,
-                    ItemCount = itemCount,
-                    ItemPos = itemPos
+                    ItemID = (SogItems)Enum.Parse(typeof(SogItems), lstInventory.Items[i].SubItems[0].Text),
+                    ItemCount = int.Parse(lstInventory.Items[i].SubItems[1].Text),
+                    ItemPos = uint.Parse(lstInventory.Items[i].SubItems[2].Text)
                 };
 
                 playerObject.Inventory.Add(item);
@@ -409,26 +405,25 @@ namespace SoG_SGreader
             playerObject.Style.Sex = rbMale.Checked ? 1 : 0;
 
             playerObject.Cards.Clear();
-            for (int i = 0; i < cblstCards.Items.Count; i++)
+            for (int i = 0; i != cblstCards.Items.Count; i++)
             {
                 if (cblstCards.GetItemChecked(i))
                 {
                     playerObject.Cards.Add(
-                        new Card{
+                        new Card {
                             CardID = (SogEnemies)Enum.Parse(typeof(SogEnemies), cblstCards.Items[i].ToString())
                         }
                     );
                 }
             }
-
+            
             playerObject.Quests.Clear();
-            for (int i = 0; i < cblstQuests.Items.Count; i++)
+            for (int i = 0; i != cblstQuests.Items.Count; i++)
             {
                 if (cblstQuests.GetItemChecked(i))
                 {
                     playerObject.Quests.Add(
-                        new Quest
-                        {
+                        new Quest {
                             QuestID = (SogQuests)Enum.Parse(typeof(SogQuests), cblstQuests.Items[i].ToString())
                         }
                     );
@@ -584,7 +579,7 @@ namespace SoG_SGreader
 
             txtPetNickname.Text = lstPets.Items[index].SubItems[1].Text;
 
-            cbPetType.Text = (SogPets)playerObject.Pets[index].Type1 + "";
+            cbPetType.Text = ((SogPets)playerObject.Pets[index].Type1).ToString();
         }
 
         private void BtnDeleteSelectedItem_Click(object sender, EventArgs e)
@@ -599,27 +594,27 @@ namespace SoG_SGreader
             {
                 lstPets.Items[lstPets.FocusedItem.Index].SubItems[2].Text = numPetHP.Value.ToString();
 
-                if (((Control)sender) == numPetHP)
+                if ((Control) sender == numPetHP)
                 {
                     lstPets.Items[lstPets.FocusedItem.Index].SubItems[2].Text = numPetHP.Value.ToString();
                 }
-                else if (((Control)sender) == numPetEnergy)
+                else if ((Control) sender == numPetEnergy)
                 {
                     lstPets.Items[lstPets.FocusedItem.Index].SubItems[3].Text = numPetEnergy.Value.ToString();
                 }
-                else if (((Control)sender) == numPetDamage)
+                else if ((Control) sender == numPetDamage)
                 {
                     lstPets.Items[lstPets.FocusedItem.Index].SubItems[4].Text = numPetDamage.Value.ToString();
                 }
-                else if (((Control)sender) == numPetCrit)
+                else if ((Control)sender == numPetCrit)
                 {
                     lstPets.Items[lstPets.FocusedItem.Index].SubItems[5].Text = numPetCrit.Value.ToString();
                 }
-                else if (((Control)sender) == numPetSpeed)
+                else if ((Control) sender == numPetSpeed)
                 {
                     lstPets.Items[lstPets.FocusedItem.Index].SubItems[6].Text = numPetSpeed.Value.ToString();
                 }
-                else if (((Control)sender) == numPetLevel)
+                else if ((Control) sender == numPetLevel)
                 {
                     lstPets.Items[lstPets.FocusedItem.Index].SubItems[0].Text = numPetLevel.Value.ToString();
                 }

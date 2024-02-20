@@ -2,7 +2,7 @@
 {
     // Source: Secrets of Grindea: SoG.SpellCodex
     // Game Version: 0.99g
-    public enum SogSkills : ushort
+    public enum SogSkills: ushort
     {
        NULL = 0,
        Basic_HealthBoost = 1,

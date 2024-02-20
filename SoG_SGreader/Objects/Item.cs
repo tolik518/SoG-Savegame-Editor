@@ -1,8 +1,5 @@
-using System;
-
 namespace SoG_SGreader
 {
-    [System.Serializable]
     public class Item
     {
         public SogItems ItemID { get; set; }

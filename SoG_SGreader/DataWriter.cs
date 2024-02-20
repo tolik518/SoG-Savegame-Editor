@@ -82,7 +82,7 @@ namespace SoG_SGreader
                     writeBinary.Write(playerObject.MerchantItems[i].ItemCount);
                 }
 
-                writeBinary.Write(playerObject.Cards.Count);
+                writeBinary.Write((int) playerObject.Cards.Count);
                 for (var i = 0; i != playerObject.Cards.Count; i++)
                 {
                     writeBinary.Write((int) playerObject.Cards[i].CardID);
@@ -116,7 +116,7 @@ namespace SoG_SGreader
                 writeBinary.Write(playerObject.SkillGoldPoints);
                 writeBinary.Write(playerObject.Cash);
 
-                writeBinary.Write(playerObject.Pets.Count);
+                writeBinary.Write((byte) playerObject.Pets.Count);
                 for (var i = 0; i != playerObject.Pets.Count; i++)
                 {
                     var currentPet = playerObject.Pets[i];
@@ -143,10 +143,10 @@ namespace SoG_SGreader
                 writeBinary.Write(playerObject.PetsSelected);
                 writeBinary.Write(playerObject.PetHidden);
 
-                writeBinary.Write(playerObject.QuestsCount);
-                for (int i = 0; i != playerObject.QuestsCount; i++)
+                writeBinary.Write((ushort) playerObject.Quests.Count);
+                for (int i = 0; i != playerObject.Quests.Count; i++)
                 {
-                    writeBinary.Write((ushort)playerObject.Quests[i].QuestID);
+                    writeBinary.Write((ushort) playerObject.Quests[i].QuestID);
                 }
 
                 writeBinary.Write(playerObject.EnemiesMetCount);

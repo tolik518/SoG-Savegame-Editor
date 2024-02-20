@@ -2,7 +2,6 @@ using System;
 
 namespace SoG_SGreader
 {
-    [System.Serializable]
     public class Pet
     {
         public int Type1 { get; set; }

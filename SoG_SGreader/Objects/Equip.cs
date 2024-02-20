@@ -1,6 +1,5 @@
 namespace SoG_SGreader
 {
-    [System.Serializable]
     public class Equip
     {
         public int Hat { get; set; }
