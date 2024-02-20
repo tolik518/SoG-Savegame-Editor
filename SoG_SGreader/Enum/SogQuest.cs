@@ -2,7 +2,7 @@
 {
     // Source: Secrets of Grindea: SoG.QuestCodex
     // Game Version: 0.99g
-    public enum SogQuests: ushort
+    public enum SogQuest: ushort
     {
         MainQuest_FirstVillage_FindApples = 0,
         MainQuest_FirstVillage_GearUp = 1,

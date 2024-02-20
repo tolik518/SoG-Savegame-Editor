@@ -77,7 +77,7 @@ namespace SoG_SGreader
         public byte HouseStylesCount { get; set; }
         public List<HouseStyle> Houses;
         
-        internal byte GetSkillLevel(SogSkills skillId)
+        internal byte GetSkillLevel(SogSkill skillId)
         {
             return Skills.FirstOrDefault(skill => skill.SkillID == skillId)?.SkillLevel ?? 0;
         }
@@ -87,12 +87,12 @@ namespace SoG_SGreader
             return Skills.FirstOrDefault(s => s.SkillID == skill.SkillID)?.SkillLevel ?? 0;
         }
 
-        internal bool HasCard(SogEnemies sogEnemies)
+        internal bool HasCard(SogEnemy sogEnemies)
         {
             return Cards.Any(card => card.CardID == sogEnemies);
         }
 
-        internal void AddCard(SogEnemies sogEnemies)
+        internal void AddCard(SogEnemy sogEnemies)
         {
             // add card to player, dont add duplicates
             if (!HasCard(sogEnemies))
@@ -104,7 +104,7 @@ namespace SoG_SGreader
             }
         }
 
-        internal void RemoveCard(SogEnemies sogEnemies)
+        internal void RemoveCard(SogEnemy sogEnemies)
         {
             // remove card from player, if it exists
             if (HasCard(sogEnemies))
@@ -115,12 +115,12 @@ namespace SoG_SGreader
 
         //same as above, but for quests
 
-        internal bool HasQuest(SogQuests sogQuests)
+        internal bool HasQuest(SogQuest sogQuests)
         {
             return Quests.Any(quest => quest.QuestID == sogQuests);
         }
 
-        internal void AddQuest(SogQuests sogQuests)
+        internal void AddQuest(SogQuest sogQuests)
         {
             // add quest to player, dont add duplicates
             if (!HasQuest(sogQuests))
@@ -132,7 +132,7 @@ namespace SoG_SGreader
             }
         }
 
-        internal void RemoveQuest(SogQuests sogQuests)
+        internal void RemoveQuest(SogQuest sogQuests)
         {
             // remove quest from player, if it exists
             if (HasQuest(sogQuests))

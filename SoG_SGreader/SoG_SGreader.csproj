@@ -131,14 +131,14 @@
   <ItemGroup>
     <!--<Compile Include="Enum\SogSavepointId.cs" />-->
     <!--<Compile Include="Enum\SogTreasuremap.cs" />-->
-    <Compile Include="Enum\SogEnemies.cs" />
-    <Compile Include="Enum\SogQuests.cs" />
+    <Compile Include="Enum\SogEnemy.cs" />
+    <Compile Include="Enum\SogQuest.cs" />
     <Compile Include="GamePatchReader.cs" />
     <Compile Include="ComandLineOptions.cs" />
-    <Compile Include="Enum\SogColors.cs" />
-    <Compile Include="Enum\SogItems.cs" />
-    <Compile Include="Enum\SogSkills.cs" />
-    <Compile Include="Enum\SogPets.cs" />
+    <Compile Include="Enum\SogColor.cs" />
+    <Compile Include="Enum\SogItem.cs" />
+    <Compile Include="Enum\SogSkill.cs" />
+    <Compile Include="Enum\SogPet.cs" />
     <Compile Include="JsonHandler.cs" />
     <Compile Include="Objects\Card.cs" />
     <Compile Include="Objects\Enemy.cs" />

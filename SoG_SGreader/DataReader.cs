@@ -51,10 +51,10 @@ namespace SoG_SGreader
                     switch (quickSlotType)
                     {
                         case 1:
-                            playerObject.Quickslots.Add((SogItems)readBinary.ReadInt32());
+                            playerObject.Quickslots.Add((SogItem)readBinary.ReadInt32());
                             break;
                         case 2:
-                            playerObject.Quickslots.Add((SogSkills)readBinary.ReadUInt16());
+                            playerObject.Quickslots.Add((SogSkill)readBinary.ReadUInt16());
                             break;
                         default:
                             playerObject.Quickslots.Add(0);
@@ -82,7 +82,7 @@ namespace SoG_SGreader
                 {
                     playerObject.Inventory.Add(new Item
                     {
-                        ItemID = (SogItems)readBinary.ReadInt32(),
+                        ItemID = (SogItem)readBinary.ReadInt32(),
                         ItemCount = readBinary.ReadInt32(),
                         ItemPos = readBinary.ReadUInt32()
                     });
@@ -100,7 +100,7 @@ namespace SoG_SGreader
                 {
                     playerObject.MerchantItems.Add(new MerchantItem 
                     {
-                        ItemID = (SogItems)readBinary.ReadInt32(),
+                        ItemID = (SogItem)readBinary.ReadInt32(),
                         ItemCount = readBinary.ReadInt32()
                     });
                 }
@@ -115,7 +115,7 @@ namespace SoG_SGreader
                 {
                     playerObject.Cards.Add(new Card
                     {
-                        CardID = (SogEnemies)readBinary.ReadInt32()
+                        CardID = (SogEnemy)readBinary.ReadInt32()
                     });
                 }
  
@@ -152,7 +152,7 @@ namespace SoG_SGreader
                 {
                     playerObject.Skills.Add(new Skill
                     { 
-                        SkillID = (SogSkills)readBinary.ReadInt16(), 
+                        SkillID = (SogSkill)readBinary.ReadInt16(), 
                         SkillLevel = readBinary.ReadByte()
                     });
                 }
@@ -238,7 +238,7 @@ namespace SoG_SGreader
                 {
                     playerObject.Quests.Add(new Quest
                     {
-                        QuestID = (SogQuests) readBinary.ReadUInt16()
+                        QuestID = (SogQuest) readBinary.ReadUInt16()
                     });
                 }
                 txtConsole.AppendText("\r\n" + "QuestsCount: " + playerObject.QuestsCount);
@@ -296,7 +296,7 @@ namespace SoG_SGreader
                 {
                     playerObject.ItemsMet.Add(new ItemsSeen
                     {
-                        ItemID = (SogItems)readBinary.ReadInt32()
+                        ItemID = (SogItem)readBinary.ReadInt32()
                     });
                 }
 
@@ -309,7 +309,7 @@ namespace SoG_SGreader
                 {
                     playerObject.ItemsCrafted.Add(new ItemCrafted
                     {
-                        ItemID = (SogItems)readBinary.ReadInt32()
+                        ItemID = (SogItem)readBinary.ReadInt32()
                     });
                 }
 
@@ -322,7 +322,7 @@ namespace SoG_SGreader
                 {
                     playerObject.FishiesCaught.Add(new FishCaught
                     {
-                        FishID = (SogItems)readBinary.ReadInt32()
+                        FishID = (SogItem)readBinary.ReadInt32()
                     });
                 }
 

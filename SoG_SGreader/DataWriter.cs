@@ -41,12 +41,12 @@ namespace SoG_SGreader
 
                 foreach (var quickslot in playerObject.Quickslots)
                 {
-                    if (quickslot.GetType() == typeof(SogItems))
+                    if (quickslot.GetType() == typeof(SogItem))
                     {
                         writeBinary.Write((byte) 1);
                         writeBinary.Write((int) quickslot);
                     }
-                    else if (quickslot.GetType() == typeof(SogSkills))
+                    else if (quickslot.GetType() == typeof(SogSkill))
                     {
                         writeBinary.Write((byte) 2);
                         writeBinary.Write((ushort) quickslot);

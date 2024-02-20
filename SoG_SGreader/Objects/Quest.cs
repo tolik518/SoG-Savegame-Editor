@@ -2,6 +2,6 @@ namespace SoG_SGreader
 {
     public class Quest
     {
-        public SogQuests QuestID { get; set; }
+        public SogQuest QuestID { get; set; }
     }
 }
