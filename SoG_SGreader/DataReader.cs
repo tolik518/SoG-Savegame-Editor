@@ -224,12 +224,6 @@ namespace SoG_SGreader
                 playerObject.PetHidden = readBinary.ReadByte();
 
 
-                //              |            // 
-                //              |            // 
-                //          new stuff        // 
-                //      we're not editing    // 
-                //             yet           // 
-
                 playerObject.QuestsCount = readBinary.ReadUInt16();
                 txtConsole.AppendText("\r\n" + "> QuestsCount Position: " + readBinary.BaseStream.Position.ToString("X"));
 
@@ -243,18 +237,24 @@ namespace SoG_SGreader
                 }
                 txtConsole.AppendText("\r\n" + "QuestsCount: " + playerObject.QuestsCount);
 
-                txtConsole.AppendText("\r\n" + "> EnemiesMetCount Position: " + readBinary.BaseStream.Position.ToString("X"));
-                playerObject.EnemiesMetCount = readBinary.ReadUInt16();
-                playerObject.Enemies = new List<Enemy>(playerObject.EnemiesMetCount);
-                for (int i = 0; i != playerObject.EnemiesMetCount; i++)
+                txtConsole.AppendText("\r\n" + "> EnemiesSeenCount Position: " + readBinary.BaseStream.Position.ToString("X"));
+                playerObject.EnemiesSeenCount = readBinary.ReadUInt16();
+                playerObject.EnemiesSeen = new List<Enemy>(playerObject.EnemiesSeenCount);
+                for (int i = 0; i != playerObject.EnemiesSeenCount; i++)
                 {
-                    playerObject.Enemies.Add(new Enemy
+                    playerObject.EnemiesSeen.Add(new Enemy
                     {
-                        EnemyID = readBinary.ReadInt32()
+                        EnemyID = (SogEnemy) readBinary.ReadInt32()
                     });
                 }
-                txtConsole.AppendText("\r\n" + "EnemiesMetCount: " + playerObject.EnemiesMetCount);
-                txtConsole.AppendText("\r\n" + "> EnemiesMetCount Position: " + readBinary.BaseStream.Position.ToString("X"));
+                txtConsole.AppendText("\r\n" + "EnemiesSeenCount: " + playerObject.EnemiesSeenCount);
+                txtConsole.AppendText("\r\n" + "> EnemiesSeenCount Position: " + readBinary.BaseStream.Position.ToString("X"));
+
+                //              |            // 
+                //              |            // 
+                //          new stuff        // 
+                //      we're not editing    // 
+                //             yet           // 
 
                 playerObject.UnknownVariable02Count = (UInt16)(readBinary.ReadUInt16() * 16);  // there are X sequences, each 10 bytes long
                 txtConsole.AppendText("\r\n" + "UnknownVariable02Count: " + playerObject.UnknownVariable02Count);
@@ -275,26 +275,26 @@ namespace SoG_SGreader
                 txtConsole.AppendText("\r\n" + "RobinBowHighscore: " + playerObject.RobinBowHighscore);
                 txtConsole.AppendText("\r\n" + "> RobinBowHighscore Position: " + readBinary.BaseStream.Position.ToString("X"));
 
-                playerObject.UnknownVariable03Count = (UInt16)(readBinary.ReadUInt16());
-                playerObject.UnknownVariables03 = new List<UnknownVariable03>(playerObject.UnknownVariable03Count);
-                for (int i = 0; i != playerObject.UnknownVariable03Count; i++)
+                playerObject.TrophiesCount = (UInt16)(readBinary.ReadUInt16());
+                playerObject.Trophies = new List<Trophy>(playerObject.TrophiesCount);
+                for (int i = 0; i != playerObject.TrophiesCount; i++)
                 {
-                    playerObject.UnknownVariables03.Add(new UnknownVariable03
+                    playerObject.Trophies.Add(new Trophy
                     {
-                        UnknownVariable = readBinary.ReadUInt16()
+                        TrophyID = readBinary.ReadUInt16()
                     });
                 }
-                txtConsole.AppendText("\r\n" + "UnknownVariable03Count: " + playerObject.UnknownVariable03Count);
-                txtConsole.AppendText("\r\n" + "> UnknownVariable03Count Position: " + readBinary.BaseStream.Position.ToString("X"));
+                txtConsole.AppendText("\r\n" + "TrophiesCount: " + playerObject.TrophiesCount);
+                txtConsole.AppendText("\r\n" + "> TrophiesCount Position: " + readBinary.BaseStream.Position.ToString("X"));
 
-                playerObject.ItemsMetCount = (UInt16)(readBinary.ReadUInt16());
-                txtConsole.AppendText("\r\n" + "ItemsMetCount: " + playerObject.ItemsMetCount);
-                txtConsole.AppendText("\r\n" + "> ItemsMetCount Position: " + readBinary.BaseStream.Position.ToString("X"));
+                playerObject.ItemsSeenCount = (UInt16)(readBinary.ReadUInt16());
+                txtConsole.AppendText("\r\n" + "ItemsSeenCount: " + playerObject.ItemsSeenCount);
+                txtConsole.AppendText("\r\n" + "> ItemsSeenCount Position: " + readBinary.BaseStream.Position.ToString("X"));
 
-                playerObject.ItemsMet = new List<ItemsSeen>(playerObject.ItemsMetCount);
-                for (int i = 0; i != playerObject.ItemsMetCount; i++)
+                playerObject.ItemsSeen = new List<ItemsSeen>(playerObject.ItemsSeenCount);
+                for (int i = 0; i != playerObject.ItemsSeenCount; i++)
                 {
-                    playerObject.ItemsMet.Add(new ItemsSeen
+                    playerObject.ItemsSeen.Add(new ItemsSeen
                     {
                         ItemID = (SogItem)readBinary.ReadInt32()
                     });
@@ -367,23 +367,23 @@ namespace SoG_SGreader
                 playerObject.UniquePlayerId = readBinary.ReadUInt32();
                 txtConsole.AppendText("\r\n" + "UniquePlayerId: " + playerObject.UniquePlayerId);
                 txtConsole.AppendText("\r\n" + "> UniquePlayerId Position: " + readBinary.BaseStream.Position.ToString("X"));
-                playerObject.UnknownVariable04 = readBinary.ReadInt32();
-                playerObject.UnknownVariable05 = readBinary.ReadInt32();
+                playerObject.LastAutosave = readBinary.ReadInt32();
+                playerObject.SaveUnknown = readBinary.ReadInt32();
                 playerObject.PlayTimeTotal = readBinary.ReadInt32();
                 txtConsole.AppendText("\r\n" + "PlayTimeTotal: " + playerObject.PlayTimeTotal);
                 txtConsole.AppendText("\r\n" + "> PlayTimeTotal Position: " + readBinary.BaseStream.Position.ToString("X"));
                 txtConsole.AppendText("\r\nPlayTimeTotal: " + Math.Round((double)playerObject.PlayTimeTotal / 60 / 60 / 60, 2) + " hours");
-                playerObject.UnknownVariable06 = readBinary.ReadByte();
+                playerObject.PhaseShiftStuff = readBinary.ReadByte();
 
-                playerObject.UnknownVariable07Count = readBinary.ReadInt16();
-                playerObject.UnknownVariables07 = new List<UnknownVariable07>(playerObject.UnknownVariable07Count);
-                for (int i = 0; i != playerObject.UnknownVariable07Count; i++)
+                playerObject.CharacterFlagCount = readBinary.ReadInt16();
+                playerObject.CharacterFlags = new List<CharacterFlags>(playerObject.CharacterFlagCount);
+                for (int i = 0; i != playerObject.CharacterFlagCount; i++)
                 {
                     string unknownString = readBinary.ReadString();
-                    playerObject.UnknownVariables07.Add(new UnknownVariable07
+                    playerObject.CharacterFlags.Add(new CharacterFlags
                     {
-                        UnknownString = unknownString, 
-                        UnknownFloat = readBinary.ReadSingle()
+                        Name = unknownString, 
+                        Value = readBinary.ReadSingle()
                     });
                     
                     txtConsole.AppendText("\r\nUnknownstring: " + unknownString);
@@ -401,7 +401,7 @@ namespace SoG_SGreader
                 txtConsole.AppendText("\r\nFlagsCount: " + playerObject.FlagsCount);
 
                 playerObject.HouseStylesCount = readBinary.ReadByte();
-                playerObject.Houses = new List<HouseStyle>(playerObject.HouseStylesCount);
+                playerObject.HouseStyles = new List<HouseStyle>(playerObject.HouseStylesCount);
                 for (int i = 0; i != playerObject.HouseStylesCount; i++)
                 {
                     byte styleNumber = readBinary.ReadByte();
@@ -413,11 +413,11 @@ namespace SoG_SGreader
                         styleBytes[j] = readBinary.ReadByte();
                     }
                     // add the housestyle to the list
-                    playerObject.Houses.Add(new HouseStyle
+                    playerObject.HouseStyles.Add(new HouseStyle
                     {
-                        HouseStyleNumber = styleNumber,
-                        HouseStyleLength = styleLength,
-                        HouseStyleBytes = styleBytes
+                        Number = styleNumber,
+                        Length = styleLength,
+                        Bytes = styleBytes
                     });
                 }
                 

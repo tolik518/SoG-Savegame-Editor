@@ -90,7 +90,7 @@ namespace SoG_SGreader.Test
             
             Assert.Contains("Filesize: 4494", output);
             Assert.Contains("Birthday: 24.6.1081", output);
-            Assert.Contains("ItemsMetCount: 124", output);
+            Assert.Contains("ItemsSeenCount: 124", output);
             Assert.Contains("KilledEnemiesCount: 58", output);
         }
         

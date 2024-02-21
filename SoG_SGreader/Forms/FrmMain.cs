@@ -14,6 +14,7 @@ namespace SoG_SGreader
         private Player playerObject = new Player();
         private readonly ComboBox[] cbQuickslot = new ComboBox[10];
         private readonly ComboBox[] cbQuickslotType = new ComboBox[10];
+        private string InitialPlaytime;
         
         public string OpenedSaveGamePath { get; set; }
 
@@ -167,12 +168,10 @@ namespace SoG_SGreader
 
             cbSelectedItem.DataSource = items;
 
-            //fill cblstCards with all the cards from Enemies enum
-            var cards = Enum.GetNames(typeof(SogEnemy));
-            cblstCards.DataSource = cards;
-
-            var quests = Enum.GetNames(typeof(SogQuest));
-            cblstQuests.DataSource = quests;
+            //fill checkboxLists with all the values from the enums
+            cblstCards.DataSource = Enum.GetNames(typeof(SogEnemy));
+            cblstQuests.DataSource = Enum.GetNames(typeof(SogQuest));
+            cblstEnemiesSeens.DataSource = Enum.GetNames(typeof(SogEnemy));
         }
 
         private void PopulateFields()
@@ -246,7 +245,8 @@ namespace SoG_SGreader
                 lstPets.Items.Add(pPet);
             }
 
-            txtTimePlayed.Text = TimeSpan.FromSeconds(playerObject.PlayTimeTotal / 60).ToString(@"d\:hh\:mm\:ss");
+            InitialPlaytime = TimeSpan.FromSeconds(playerObject.PlayTimeTotal / 60).ToString(@"d\:hh\:mm\:ss");
+            txtTimePlayed.Text = InitialPlaytime;
             numID.Value = playerObject.UniquePlayerId;
             numBirthdayDay.Value = playerObject.BirthdayDay;
             numBirtdayMonth.Value = playerObject.BirthdayMonth;
@@ -294,6 +294,12 @@ namespace SoG_SGreader
             {
                 bool playerHasQuest = playerObject.HasQuest((SogQuest)Enum.Parse(typeof(SogQuest), cblstQuests.Items[i].ToString()));
                 cblstQuests.SetItemChecked(i, playerHasQuest);
+            }
+
+            for (int i = 0; i < cblstQuests.Items.Count; i++)
+            {
+                bool playerHasMetEnemy = playerObject.HasSeenEnemy((SogEnemy)Enum.Parse(typeof(SogEnemy), cblstEnemiesSeens.Items[i].ToString()));
+                cblstEnemiesSeens.SetItemChecked(i, playerHasMetEnemy);
             }
         }
 
@@ -394,7 +400,22 @@ namespace SoG_SGreader
             
             // dont change the playtime if its not parseable
             if (TimeSpan.TryParse(txtTimePlayed.Text, out TimeSpan result)) {
-                playerObject.PlayTimeTotal = Math.Min((int)(result.TotalSeconds * 60), int.MaxValue);
+                if (result.TotalSeconds > int.MaxValue)
+                {
+                    txtConsole.AppendText("\r\n\r\nPlaytime is too high. Please check the format.");
+                    return;
+                }
+
+                // if the playtime was changed, update the playtime
+                // was added to prevent rounding errors
+                if (InitialPlaytime != txtTimePlayed.Text)
+                {
+                    playerObject.PlayTimeTotal = Math.Min((int)(result.TotalSeconds * 60), int.MaxValue);
+                } 
+                else
+                {
+                    playerObject.PlayTimeTotal = playerObject.PlayTimeTotal;
+                }
             } else {
                 txtConsole.AppendText("\r\n\r\nPlaytime is not parseable. Please check the format.");
             }
@@ -410,7 +431,8 @@ namespace SoG_SGreader
                 if (cblstCards.GetItemChecked(i))
                 {
                     playerObject.Cards.Add(
-                        new Card {
+                        new Card 
+                        {
                             CardID = (SogEnemy)Enum.Parse(typeof(SogEnemy), cblstCards.Items[i].ToString())
                         }
                     );
@@ -423,8 +445,23 @@ namespace SoG_SGreader
                 if (cblstQuests.GetItemChecked(i))
                 {
                     playerObject.Quests.Add(
-                        new Quest {
+                        new Quest 
+                        {
                             QuestID = (SogQuest)Enum.Parse(typeof(SogQuest), cblstQuests.Items[i].ToString())
+                        }
+                    );
+                }
+            }
+
+            playerObject.EnemiesSeen.Clear();
+            for (int i = 0; i != cblstEnemiesSeens.Items.Count; i++)
+            {
+                if (cblstEnemiesSeens.GetItemChecked(i))
+                {
+                    playerObject.EnemiesSeen.Add(
+                        new Enemy
+                        {
+                            EnemyID = (SogEnemy)Enum.Parse(typeof(SogEnemy), cblstEnemiesSeens.Items[i].ToString())
                         }
                     );
                 }
@@ -745,6 +782,37 @@ namespace SoG_SGreader
             {
                 cblstQuests.SetItemChecked(i, false);
             }
+        }
+
+        private void btnSelectAllEnemiesSeen_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstEnemiesSeens.Items.Count; i++)
+            {
+                cblstEnemiesSeens.SetItemChecked(i, true);
+            }   
+        }
+
+        private void btnDeselectAllEnemiesSeen_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstEnemiesSeens.Items.Count; i++)
+            {
+                cblstEnemiesSeens.SetItemChecked(i, false);
+            }
+        }
+
+        private void btnResetEnemiesSeen_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstEnemiesSeens.Items.Count; i++)
+            {
+                bool playerHasMetEnemy = playerObject.HasSeenEnemy((SogEnemy)Enum.Parse(typeof(SogEnemy), cblstEnemiesSeens.Items[i].ToString()));
+                cblstEnemiesSeens.SetItemChecked(i, playerHasMetEnemy);
+            }
+        }
+        
+        private void openSavegameFolderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string folderPath = Directory.GetParent(OpenedSaveGamePath).FullName;
+            System.Diagnostics.Process.Start(folderPath);
         }
     }
 }

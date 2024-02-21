@@ -14,6 +14,7 @@
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
+    <LangVersion>8</LangVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -29,7 +30,6 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <LangVersion>8</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -129,10 +129,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <!--<Compile Include="Enum\SogSavepointId.cs" />-->
-    <!--<Compile Include="Enum\SogTreasuremap.cs" />-->
+    <Compile Include="Enum\SogTreasuremap.cs" />
     <Compile Include="Enum\SogEnemy.cs" />
     <Compile Include="Enum\SogQuest.cs" />
+    <Compile Include="Enum\SogSavepoint.cs" />
     <Compile Include="GamePatchReader.cs" />
     <Compile Include="ComandLineOptions.cs" />
     <Compile Include="Enum\SogColor.cs" />
@@ -160,8 +160,8 @@
     <Compile Include="Objects\TreasureMap.cs" />
     <Compile Include="Objects\UnknownVariable01.cs" />
     <Compile Include="Objects\UnknownVariable02.cs" />
-    <Compile Include="Objects\UnknownVariable03.cs" />
-    <Compile Include="Objects\UnknownVariable07.cs" />
+    <Compile Include="Objects\Trophy.cs" />
+    <Compile Include="Objects\CharacterFlags.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -171,12 +171,8 @@
     <Compile Include="Wrapper\FakeTextBox.cs" />
     <Compile Include="Wrapper\ITextBoxWrapper.cs" />
     <Compile Include="Wrapper\UITextBox.cs" />
-    <Compile Include="DataWriter.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DataReader.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="DataWriter.cs" />
+    <Compile Include="DataReader.cs" />
     <Compile Include="Forms\FrmColorSelect.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,7 +245,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 und x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

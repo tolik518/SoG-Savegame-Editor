@@ -2,8 +2,8 @@ namespace SoG_SGreader
 {
     public class HouseStyle
     {
-        public byte HouseStyleNumber { get; set; } //style 0, 1, 2 etc 
-        public int HouseStyleLength { get; set; }
-        public byte[] HouseStyleBytes { get; set; }
+        public byte Number { get; set; } //style 0, 1, 2 etc 
+        public int Length { get; set; }
+        public byte[] Bytes { get; set; }
     }
 }

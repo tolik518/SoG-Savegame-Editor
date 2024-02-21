@@ -44,16 +44,16 @@ namespace SoG_SGreader
         public byte PetHidden { get; set; }
         public ushort QuestsCount { get; set; }
         public List<Quest> Quests;
-        public ushort EnemiesMetCount { get; set; }
-        public List<Enemy> Enemies;
+        public ushort EnemiesSeenCount { get; set; }
+        public List<Enemy> EnemiesSeen;
         public ushort UnknownVariable02Count { get; set; }     //something to do with challenges?
         public List<UnknownVariable02> UnknownVariables02;
         public int RobinBowHighscore { get; set; }
-        public ushort UnknownVariable03Count { get; set; }    //trophies?
+        public ushort TrophiesCount { get; set; }    //trophies?
 
-        public List<UnknownVariable03> UnknownVariables03;
-        public ushort ItemsMetCount { get; set; }
-        public List<ItemsSeen> ItemsMet;
+        public List<Trophy> Trophies;
+        public ushort ItemsSeenCount { get; set; }
+        public List<ItemsSeen> ItemsSeen;
         public ushort ItemsCraftedCount { get; set; }
         public List<ItemCrafted> ItemsCrafted;
         public ushort FishiesCaughtCount { get; set; }
@@ -66,16 +66,16 @@ namespace SoG_SGreader
         public int BirthdayMonth { get; set; }
         public int BirthdayDay { get; set; }
         public uint UniquePlayerId { get; set; }
-        public int UnknownVariable04 { get; set; } // saving mechanism related
-        public int UnknownVariable05 { get; set; } // saving mechanism related
+        public int LastAutosave { get; set; } // saving mechanism related
+        public int SaveUnknown { get; set; } // saving mechanism related
         public int PlayTimeTotal { get; set; } // saved in frames
-        public byte UnknownVariable06 { get; set; } //??
-        public short UnknownVariable07Count { get; set; }
-        public List<UnknownVariable07> UnknownVariables07;
+        public byte PhaseShiftStuff { get; set; } //??
+        public short CharacterFlagCount { get; set; }
+        public List<CharacterFlags> CharacterFlags;
         public short FlagsCount { get; set; }
         public List<Flag> Flags;
         public byte HouseStylesCount { get; set; }
-        public List<HouseStyle> Houses;
+        public List<HouseStyle> HouseStyles;
         
         internal byte GetSkillLevel(SogSkill skillId)
         {
@@ -139,6 +139,12 @@ namespace SoG_SGreader
             {
                 Quests.RemoveAll(quest => quest.QuestID == sogQuests);
             }
+        }
+
+        //same as above, but for enemies
+        internal bool HasSeenEnemy(SogEnemy sogEnemies)
+        {
+            return EnemiesSeen.Any(enemy => enemy.EnemyID == sogEnemies);
         }
     }
 }
