@@ -1,7 +1,7 @@
 ﻿namespace SoG_SGreader
 {
-    // Game Version: 0.99c
-
+    // Source: Secrets of Grindea: SoG.TreasureMapEntry
+    // Game Version: 0.99g
     public enum TreasureMapID : ushort
     {
         Null = 0,
@@ -26,5 +26,4 @@
         FinderMap02 = 3,
         FinderMap03 = 4
     }
-
 }

@@ -2,7 +2,7 @@
 {
     // Source: Secrets of Grindea: SoG.SavePoint
     // Game Version: 0.99c
-    public enum SavePointID
+    public enum SavePoint
     {
         Legacy = -2,
         Null = -1,
@@ -29,5 +29,4 @@
         GhostShip_PrePsychosis = 20,
         FinalTower = 0x15
     }
-
 }
