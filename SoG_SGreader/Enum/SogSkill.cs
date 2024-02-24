@@ -1,7 +1,7 @@
 ﻿namespace SoG_SGreader
 {
-    // Source: Secrets of Grindea: SoG.SpellCodex
-    // Game Version: 0.99g
+    // Source: Secrets of Grindea: SoG.SpellCodex.SpellTypes
+    // Game Version: 0.99xx
     public enum SogSkill: ushort
     {
        NULL = 0,

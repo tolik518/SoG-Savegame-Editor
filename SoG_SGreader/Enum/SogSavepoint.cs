@@ -1,7 +1,7 @@
 ﻿namespace SoG_SGreader
 {
     // Source: Secrets of Grindea: SoG.SavePoint
-    // Game Version: 0.99c
+    // Game Version: 0.99xx
     public enum SavePoint
     {
         Legacy = -2,
@@ -22,11 +22,11 @@
         DesertMid = 13,
         PortTown = 14,
         PortTown_WithTele = 15,
-        GhostShip_Entrance = 0x10,
-        GhostShip_F3 = 0x11,
-        GhostShip_Startington = 0x12,
-        TopOfPillar = 0x13,
+        GhostShip_Entrance = 16,
+        GhostShip_F3 = 17,
+        GhostShip_Startington = 18,
+        TopOfPillar = 19,
         GhostShip_PrePsychosis = 20,
-        FinalTower = 0x15
+        FinalTower = 21,
     }
 }

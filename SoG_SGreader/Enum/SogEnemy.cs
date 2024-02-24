@@ -1,5 +1,7 @@
 ﻿namespace SoG_SGreader
 {
+    // Source: Secrets of Grindea: SoG.EnemyCodex.EnemyTypes
+    // Game Version: 0.99xx
     public enum SogEnemy: int
     {
         Null = -1, 
