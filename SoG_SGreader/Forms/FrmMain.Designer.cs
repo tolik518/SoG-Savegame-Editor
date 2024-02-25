@@ -171,13 +171,6 @@ namespace SoG_SGreader
             this.btnResetFlags = new System.Windows.Forms.Button();
             this.btnDeselectAllFlags = new System.Windows.Forms.Button();
             this.cblstFlags = new System.Windows.Forms.CheckedListBox();
-            this.tabEnemiesSeen = new System.Windows.Forms.TabPage();
-            this.grpEnemiesSeen = new System.Windows.Forms.GroupBox();
-            this.label50 = new System.Windows.Forms.Label();
-            this.btnSelectAllEnemiesSeen = new System.Windows.Forms.Button();
-            this.btnResetEnemiesSeen = new System.Windows.Forms.Button();
-            this.btnDeselectAllEnemiesSeen = new System.Windows.Forms.Button();
-            this.cblstEnemiesSeens = new System.Windows.Forms.CheckedListBox();
             this.tabTrophies = new System.Windows.Forms.TabPage();
             this.grpTrophies = new System.Windows.Forms.GroupBox();
             this.label59 = new System.Windows.Forms.Label();
@@ -185,6 +178,20 @@ namespace SoG_SGreader
             this.btnResetTrophies = new System.Windows.Forms.Button();
             this.btnDeselectAllTrophies = new System.Windows.Forms.Button();
             this.cblstTrophies = new System.Windows.Forms.CheckedListBox();
+            this.tabFishCaught = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label62 = new System.Windows.Forms.Label();
+            this.btnSelectAllFishCaught = new System.Windows.Forms.Button();
+            this.btnResetFishCaught = new System.Windows.Forms.Button();
+            this.btnDeselectAllFishCaught = new System.Windows.Forms.Button();
+            this.cblstFishCaught = new System.Windows.Forms.CheckedListBox();
+            this.tabEnemiesSeen = new System.Windows.Forms.TabPage();
+            this.grpEnemiesSeen = new System.Windows.Forms.GroupBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.btnSelectAllEnemiesSeen = new System.Windows.Forms.Button();
+            this.btnResetEnemiesSeen = new System.Windows.Forms.Button();
+            this.btnDeselectAllEnemiesSeen = new System.Windows.Forms.Button();
+            this.cblstEnemiesSeens = new System.Windows.Forms.CheckedListBox();
             this.tabItemsSeen = new System.Windows.Forms.TabPage();
             this.grpItemsSeen = new System.Windows.Forms.GroupBox();
             this.label60 = new System.Windows.Forms.Label();
@@ -307,13 +314,6 @@ namespace SoG_SGreader
             this.txtConsole = new System.Windows.Forms.TextBox();
             this.Tooltips = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.tabFishCaught = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label62 = new System.Windows.Forms.Label();
-            this.btnSelectAllFishCaught = new System.Windows.Forms.Button();
-            this.btnResetFishCaught = new System.Windows.Forms.Button();
-            this.btnDeselectAllFishCaught = new System.Windows.Forms.Button();
-            this.cblstFishCaught = new System.Windows.Forms.CheckedListBox();
             this.tabs.SuspendLayout();
             this.tabChar.SuspendLayout();
             this.grpPatch.SuspendLayout();
@@ -353,10 +353,12 @@ namespace SoG_SGreader
             this.grpQuests.SuspendLayout();
             this.tabFlags.SuspendLayout();
             this.grpFlags.SuspendLayout();
-            this.tabEnemiesSeen.SuspendLayout();
-            this.grpEnemiesSeen.SuspendLayout();
             this.tabTrophies.SuspendLayout();
             this.grpTrophies.SuspendLayout();
+            this.tabFishCaught.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.tabEnemiesSeen.SuspendLayout();
+            this.grpEnemiesSeen.SuspendLayout();
             this.tabItemsSeen.SuspendLayout();
             this.grpItemsSeen.SuspendLayout();
             this.tabItemsCrafted.SuspendLayout();
@@ -441,8 +443,6 @@ namespace SoG_SGreader
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             this.msMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.tabFishCaught.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabs
@@ -677,6 +677,7 @@ namespace SoG_SGreader
             // 
             // label49
             // 
+            this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label49.AutoSize = true;
             this.label49.Location = new System.Drawing.Point(435, 378);
             this.label49.Name = "label49";
@@ -1399,6 +1400,9 @@ namespace SoG_SGreader
             // 
             // lstPets
             // 
+            this.lstPets.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lstPets.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Level,
             this.Nickname,
@@ -1456,6 +1460,8 @@ namespace SoG_SGreader
             // 
             // grpPet
             // 
+            this.grpPet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpPet.Controls.Add(this.cbPetType);
             this.grpPet.Controls.Add(this.label52);
             this.grpPet.Controls.Add(this.numPetLevel);
@@ -1660,6 +1666,8 @@ namespace SoG_SGreader
             // 
             // grpCards
             // 
+            this.grpCards.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpCards.Controls.Add(this.label58);
             this.grpCards.Controls.Add(this.btnSelectAllCards);
             this.grpCards.Controls.Add(this.btnResetCards);
@@ -1692,6 +1700,7 @@ namespace SoG_SGreader
             // 
             // btnResetCards
             // 
+            this.btnResetCards.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnResetCards.Location = new System.Drawing.Point(6, 350);
             this.btnResetCards.Name = "btnResetCards";
             this.btnResetCards.Size = new System.Drawing.Size(87, 23);
@@ -1712,6 +1721,9 @@ namespace SoG_SGreader
             // 
             // cblstCards
             // 
+            this.cblstCards.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstCards.FormattingEnabled = true;
             this.cblstCards.Location = new System.Drawing.Point(6, 6);
             this.cblstCards.Name = "cblstCards";
@@ -1732,6 +1744,8 @@ namespace SoG_SGreader
             // 
             // grpMaps
             // 
+            this.grpMaps.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpMaps.Controls.Add(this.label39);
             this.grpMaps.Controls.Add(this.btnSelectAllMaps);
             this.grpMaps.Controls.Add(this.btnResetMaps);
@@ -1764,6 +1778,7 @@ namespace SoG_SGreader
             // 
             // btnResetMaps
             // 
+            this.btnResetMaps.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnResetMaps.Location = new System.Drawing.Point(6, 350);
             this.btnResetMaps.Name = "btnResetMaps";
             this.btnResetMaps.Size = new System.Drawing.Size(87, 23);
@@ -1784,6 +1799,9 @@ namespace SoG_SGreader
             // 
             // cblstMaps
             // 
+            this.cblstMaps.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstMaps.FormattingEnabled = true;
             this.cblstMaps.Location = new System.Drawing.Point(6, 6);
             this.cblstMaps.Name = "cblstMaps";
@@ -1804,6 +1822,8 @@ namespace SoG_SGreader
             // 
             // grpQuests
             // 
+            this.grpQuests.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpQuests.Controls.Add(this.label40);
             this.grpQuests.Controls.Add(this.btnSelectAllQuests);
             this.grpQuests.Controls.Add(this.btnResetQuests);
@@ -1836,6 +1856,7 @@ namespace SoG_SGreader
             // 
             // btnResetQuests
             // 
+            this.btnResetQuests.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnResetQuests.Location = new System.Drawing.Point(6, 350);
             this.btnResetQuests.Name = "btnResetQuests";
             this.btnResetQuests.Size = new System.Drawing.Size(87, 23);
@@ -1856,6 +1877,9 @@ namespace SoG_SGreader
             // 
             // cblstQuests
             // 
+            this.cblstQuests.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstQuests.FormattingEnabled = true;
             this.cblstQuests.Location = new System.Drawing.Point(6, 6);
             this.cblstQuests.Name = "cblstQuests";
@@ -1876,6 +1900,8 @@ namespace SoG_SGreader
             // 
             // grpFlags
             // 
+            this.grpFlags.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpFlags.Controls.Add(this.label41);
             this.grpFlags.Controls.Add(this.btnSelectAllFlags);
             this.grpFlags.Controls.Add(this.btnResetFlags);
@@ -1908,6 +1934,7 @@ namespace SoG_SGreader
             // 
             // btnResetFlags
             // 
+            this.btnResetFlags.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnResetFlags.Location = new System.Drawing.Point(6, 350);
             this.btnResetFlags.Name = "btnResetFlags";
             this.btnResetFlags.Size = new System.Drawing.Size(87, 23);
@@ -1928,83 +1955,14 @@ namespace SoG_SGreader
             // 
             // cblstFlags
             // 
+            this.cblstFlags.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstFlags.FormattingEnabled = true;
             this.cblstFlags.Location = new System.Drawing.Point(6, 6);
             this.cblstFlags.Name = "cblstFlags";
             this.cblstFlags.Size = new System.Drawing.Size(442, 379);
             this.cblstFlags.TabIndex = 9;
-            // 
-            // tabEnemiesSeen
-            // 
-            this.tabEnemiesSeen.Controls.Add(this.grpEnemiesSeen);
-            this.tabEnemiesSeen.Controls.Add(this.cblstEnemiesSeens);
-            this.tabEnemiesSeen.Location = new System.Drawing.Point(4, 22);
-            this.tabEnemiesSeen.Name = "tabEnemiesSeen";
-            this.tabEnemiesSeen.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEnemiesSeen.Size = new System.Drawing.Size(559, 396);
-            this.tabEnemiesSeen.TabIndex = 4;
-            this.tabEnemiesSeen.Text = "Enemies seen";
-            this.tabEnemiesSeen.UseVisualStyleBackColor = true;
-            // 
-            // grpEnemiesSeen
-            // 
-            this.grpEnemiesSeen.Controls.Add(this.label50);
-            this.grpEnemiesSeen.Controls.Add(this.btnSelectAllEnemiesSeen);
-            this.grpEnemiesSeen.Controls.Add(this.btnResetEnemiesSeen);
-            this.grpEnemiesSeen.Controls.Add(this.btnDeselectAllEnemiesSeen);
-            this.grpEnemiesSeen.Location = new System.Drawing.Point(454, 6);
-            this.grpEnemiesSeen.Name = "grpEnemiesSeen";
-            this.grpEnemiesSeen.Size = new System.Drawing.Size(97, 379);
-            this.grpEnemiesSeen.TabIndex = 10;
-            this.grpEnemiesSeen.TabStop = false;
-            this.grpEnemiesSeen.Text = "Enemies seen";
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(6, 74);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(72, 52);
-            this.label50.TabIndex = 8;
-            this.label50.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
-            // 
-            // btnSelectAllEnemiesSeen
-            // 
-            this.btnSelectAllEnemiesSeen.Location = new System.Drawing.Point(6, 19);
-            this.btnSelectAllEnemiesSeen.Name = "btnSelectAllEnemiesSeen";
-            this.btnSelectAllEnemiesSeen.Size = new System.Drawing.Size(87, 23);
-            this.btnSelectAllEnemiesSeen.TabIndex = 3;
-            this.btnSelectAllEnemiesSeen.Text = "Select all";
-            this.btnSelectAllEnemiesSeen.UseVisualStyleBackColor = true;
-            this.btnSelectAllEnemiesSeen.Click += new System.EventHandler(this.btnSelectAllEnemiesSeen_Click);
-            // 
-            // btnResetEnemiesSeen
-            // 
-            this.btnResetEnemiesSeen.Location = new System.Drawing.Point(6, 350);
-            this.btnResetEnemiesSeen.Name = "btnResetEnemiesSeen";
-            this.btnResetEnemiesSeen.Size = new System.Drawing.Size(87, 23);
-            this.btnResetEnemiesSeen.TabIndex = 5;
-            this.btnResetEnemiesSeen.Text = "Reset";
-            this.btnResetEnemiesSeen.UseVisualStyleBackColor = true;
-            this.btnResetEnemiesSeen.Click += new System.EventHandler(this.btnResetEnemiesSeen_Click);
-            // 
-            // btnDeselectAllEnemiesSeen
-            // 
-            this.btnDeselectAllEnemiesSeen.Location = new System.Drawing.Point(6, 48);
-            this.btnDeselectAllEnemiesSeen.Name = "btnDeselectAllEnemiesSeen";
-            this.btnDeselectAllEnemiesSeen.Size = new System.Drawing.Size(87, 23);
-            this.btnDeselectAllEnemiesSeen.TabIndex = 4;
-            this.btnDeselectAllEnemiesSeen.Text = "Deselect all";
-            this.btnDeselectAllEnemiesSeen.UseVisualStyleBackColor = true;
-            this.btnDeselectAllEnemiesSeen.Click += new System.EventHandler(this.btnDeselectAllEnemiesSeen_Click);
-            // 
-            // cblstEnemiesSeens
-            // 
-            this.cblstEnemiesSeens.FormattingEnabled = true;
-            this.cblstEnemiesSeens.Location = new System.Drawing.Point(6, 6);
-            this.cblstEnemiesSeens.Name = "cblstEnemiesSeens";
-            this.cblstEnemiesSeens.Size = new System.Drawing.Size(442, 379);
-            this.cblstEnemiesSeens.TabIndex = 9;
             // 
             // tabTrophies
             // 
@@ -2019,6 +1977,8 @@ namespace SoG_SGreader
             // 
             // grpTrophies
             // 
+            this.grpTrophies.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpTrophies.Controls.Add(this.label59);
             this.grpTrophies.Controls.Add(this.btnSelectAllTrophies);
             this.grpTrophies.Controls.Add(this.btnResetTrophies);
@@ -2051,6 +2011,7 @@ namespace SoG_SGreader
             // 
             // btnResetTrophies
             // 
+            this.btnResetTrophies.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnResetTrophies.Location = new System.Drawing.Point(6, 350);
             this.btnResetTrophies.Name = "btnResetTrophies";
             this.btnResetTrophies.Size = new System.Drawing.Size(87, 23);
@@ -2071,11 +2032,169 @@ namespace SoG_SGreader
             // 
             // cblstTrophies
             // 
+            this.cblstTrophies.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstTrophies.FormattingEnabled = true;
             this.cblstTrophies.Location = new System.Drawing.Point(6, 6);
             this.cblstTrophies.Name = "cblstTrophies";
             this.cblstTrophies.Size = new System.Drawing.Size(442, 379);
             this.cblstTrophies.TabIndex = 11;
+            // 
+            // tabFishCaught
+            // 
+            this.tabFishCaught.Controls.Add(this.groupBox2);
+            this.tabFishCaught.Controls.Add(this.cblstFishCaught);
+            this.tabFishCaught.Location = new System.Drawing.Point(4, 22);
+            this.tabFishCaught.Name = "tabFishCaught";
+            this.tabFishCaught.Size = new System.Drawing.Size(559, 396);
+            this.tabFishCaught.TabIndex = 14;
+            this.tabFishCaught.Text = "Fish Caught";
+            this.tabFishCaught.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.label62);
+            this.groupBox2.Controls.Add(this.btnSelectAllFishCaught);
+            this.groupBox2.Controls.Add(this.btnResetFishCaught);
+            this.groupBox2.Controls.Add(this.btnDeselectAllFishCaught);
+            this.groupBox2.Location = new System.Drawing.Point(454, 6);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(97, 379);
+            this.groupBox2.TabIndex = 18;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Fish Caught";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Location = new System.Drawing.Point(6, 74);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(72, 52);
+            this.label62.TabIndex = 8;
+            this.label62.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
+            // 
+            // btnSelectAllFishCaught
+            // 
+            this.btnSelectAllFishCaught.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllFishCaught.Name = "btnSelectAllFishCaught";
+            this.btnSelectAllFishCaught.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllFishCaught.TabIndex = 3;
+            this.btnSelectAllFishCaught.Text = "Select all";
+            this.btnSelectAllFishCaught.UseVisualStyleBackColor = true;
+            this.btnSelectAllFishCaught.Click += new System.EventHandler(this.btnSelectAllFishCaught_Click);
+            // 
+            // btnResetFishCaught
+            // 
+            this.btnResetFishCaught.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnResetFishCaught.Location = new System.Drawing.Point(6, 350);
+            this.btnResetFishCaught.Name = "btnResetFishCaught";
+            this.btnResetFishCaught.Size = new System.Drawing.Size(87, 23);
+            this.btnResetFishCaught.TabIndex = 5;
+            this.btnResetFishCaught.Text = "Reset";
+            this.btnResetFishCaught.UseVisualStyleBackColor = true;
+            this.btnResetFishCaught.Click += new System.EventHandler(this.btnResetFishCaught_Click);
+            // 
+            // btnDeselectAllFishCaught
+            // 
+            this.btnDeselectAllFishCaught.Location = new System.Drawing.Point(6, 48);
+            this.btnDeselectAllFishCaught.Name = "btnDeselectAllFishCaught";
+            this.btnDeselectAllFishCaught.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllFishCaught.TabIndex = 4;
+            this.btnDeselectAllFishCaught.Text = "Deselect all";
+            this.btnDeselectAllFishCaught.UseVisualStyleBackColor = true;
+            this.btnDeselectAllFishCaught.Click += new System.EventHandler(this.btnDeselectAllFishCaught_Click);
+            // 
+            // cblstFishCaught
+            // 
+            this.cblstFishCaught.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cblstFishCaught.FormattingEnabled = true;
+            this.cblstFishCaught.Location = new System.Drawing.Point(6, 6);
+            this.cblstFishCaught.Name = "cblstFishCaught";
+            this.cblstFishCaught.Size = new System.Drawing.Size(442, 379);
+            this.cblstFishCaught.TabIndex = 17;
+            // 
+            // tabEnemiesSeen
+            // 
+            this.tabEnemiesSeen.Controls.Add(this.grpEnemiesSeen);
+            this.tabEnemiesSeen.Controls.Add(this.cblstEnemiesSeens);
+            this.tabEnemiesSeen.Location = new System.Drawing.Point(4, 22);
+            this.tabEnemiesSeen.Name = "tabEnemiesSeen";
+            this.tabEnemiesSeen.Padding = new System.Windows.Forms.Padding(3);
+            this.tabEnemiesSeen.Size = new System.Drawing.Size(559, 396);
+            this.tabEnemiesSeen.TabIndex = 4;
+            this.tabEnemiesSeen.Text = "Enemies seen";
+            this.tabEnemiesSeen.UseVisualStyleBackColor = true;
+            // 
+            // grpEnemiesSeen
+            // 
+            this.grpEnemiesSeen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpEnemiesSeen.Controls.Add(this.label50);
+            this.grpEnemiesSeen.Controls.Add(this.btnSelectAllEnemiesSeen);
+            this.grpEnemiesSeen.Controls.Add(this.btnResetEnemiesSeen);
+            this.grpEnemiesSeen.Controls.Add(this.btnDeselectAllEnemiesSeen);
+            this.grpEnemiesSeen.Location = new System.Drawing.Point(454, 6);
+            this.grpEnemiesSeen.Name = "grpEnemiesSeen";
+            this.grpEnemiesSeen.Size = new System.Drawing.Size(97, 379);
+            this.grpEnemiesSeen.TabIndex = 10;
+            this.grpEnemiesSeen.TabStop = false;
+            this.grpEnemiesSeen.Text = "Enemies seen";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(6, 74);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(72, 52);
+            this.label50.TabIndex = 8;
+            this.label50.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
+            // 
+            // btnSelectAllEnemiesSeen
+            // 
+            this.btnSelectAllEnemiesSeen.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllEnemiesSeen.Name = "btnSelectAllEnemiesSeen";
+            this.btnSelectAllEnemiesSeen.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllEnemiesSeen.TabIndex = 3;
+            this.btnSelectAllEnemiesSeen.Text = "Select all";
+            this.btnSelectAllEnemiesSeen.UseVisualStyleBackColor = true;
+            this.btnSelectAllEnemiesSeen.Click += new System.EventHandler(this.btnSelectAllEnemiesSeen_Click);
+            // 
+            // btnResetEnemiesSeen
+            // 
+            this.btnResetEnemiesSeen.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnResetEnemiesSeen.Location = new System.Drawing.Point(6, 350);
+            this.btnResetEnemiesSeen.Name = "btnResetEnemiesSeen";
+            this.btnResetEnemiesSeen.Size = new System.Drawing.Size(87, 23);
+            this.btnResetEnemiesSeen.TabIndex = 5;
+            this.btnResetEnemiesSeen.Text = "Reset";
+            this.btnResetEnemiesSeen.UseVisualStyleBackColor = true;
+            this.btnResetEnemiesSeen.Click += new System.EventHandler(this.btnResetEnemiesSeen_Click);
+            // 
+            // btnDeselectAllEnemiesSeen
+            // 
+            this.btnDeselectAllEnemiesSeen.Location = new System.Drawing.Point(6, 48);
+            this.btnDeselectAllEnemiesSeen.Name = "btnDeselectAllEnemiesSeen";
+            this.btnDeselectAllEnemiesSeen.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllEnemiesSeen.TabIndex = 4;
+            this.btnDeselectAllEnemiesSeen.Text = "Deselect all";
+            this.btnDeselectAllEnemiesSeen.UseVisualStyleBackColor = true;
+            this.btnDeselectAllEnemiesSeen.Click += new System.EventHandler(this.btnDeselectAllEnemiesSeen_Click);
+            // 
+            // cblstEnemiesSeens
+            // 
+            this.cblstEnemiesSeens.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cblstEnemiesSeens.FormattingEnabled = true;
+            this.cblstEnemiesSeens.Location = new System.Drawing.Point(6, 6);
+            this.cblstEnemiesSeens.Name = "cblstEnemiesSeens";
+            this.cblstEnemiesSeens.Size = new System.Drawing.Size(442, 379);
+            this.cblstEnemiesSeens.TabIndex = 9;
             // 
             // tabItemsSeen
             // 
@@ -2090,6 +2209,8 @@ namespace SoG_SGreader
             // 
             // grpItemsSeen
             // 
+            this.grpItemsSeen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpItemsSeen.Controls.Add(this.label60);
             this.grpItemsSeen.Controls.Add(this.btnSelectAllItemsSeen);
             this.grpItemsSeen.Controls.Add(this.btnResetItemsSeen);
@@ -2122,6 +2243,7 @@ namespace SoG_SGreader
             // 
             // btnResetItemsSeen
             // 
+            this.btnResetItemsSeen.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnResetItemsSeen.Location = new System.Drawing.Point(6, 350);
             this.btnResetItemsSeen.Name = "btnResetItemsSeen";
             this.btnResetItemsSeen.Size = new System.Drawing.Size(87, 23);
@@ -2142,6 +2264,9 @@ namespace SoG_SGreader
             // 
             // cblstItemsSeen
             // 
+            this.cblstItemsSeen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstItemsSeen.FormattingEnabled = true;
             this.cblstItemsSeen.Location = new System.Drawing.Point(6, 6);
             this.cblstItemsSeen.Name = "cblstItemsSeen";
@@ -2161,6 +2286,8 @@ namespace SoG_SGreader
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label61);
             this.groupBox1.Controls.Add(this.btnSelectAllItemsCrafted);
             this.groupBox1.Controls.Add(this.btnResetItemsCrafted);
@@ -2193,6 +2320,7 @@ namespace SoG_SGreader
             // 
             // btnResetItemsCrafted
             // 
+            this.btnResetItemsCrafted.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnResetItemsCrafted.Location = new System.Drawing.Point(6, 350);
             this.btnResetItemsCrafted.Name = "btnResetItemsCrafted";
             this.btnResetItemsCrafted.Size = new System.Drawing.Size(87, 23);
@@ -2213,6 +2341,9 @@ namespace SoG_SGreader
             // 
             // cblstItemsCrafted
             // 
+            this.cblstItemsCrafted.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstItemsCrafted.FormattingEnabled = true;
             this.cblstItemsCrafted.Location = new System.Drawing.Point(6, 6);
             this.cblstItemsCrafted.Name = "cblstItemsCrafted";
@@ -3351,6 +3482,7 @@ namespace SoG_SGreader
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::SoG_SGreader.Properties.Resources.ada21;
             this.pictureBox3.Location = new System.Drawing.Point(547, 2);
@@ -3359,77 +3491,6 @@ namespace SoG_SGreader
             this.pictureBox3.TabIndex = 30;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.PictureBox3_Click);
-            // 
-            // tabFishCaught
-            // 
-            this.tabFishCaught.Controls.Add(this.groupBox2);
-            this.tabFishCaught.Controls.Add(this.cblstFishCaught);
-            this.tabFishCaught.Location = new System.Drawing.Point(4, 22);
-            this.tabFishCaught.Name = "tabFishCaught";
-            this.tabFishCaught.Size = new System.Drawing.Size(559, 396);
-            this.tabFishCaught.TabIndex = 14;
-            this.tabFishCaught.Text = "Fish Caught";
-            this.tabFishCaught.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label62);
-            this.groupBox2.Controls.Add(this.btnSelectAllFishCaught);
-            this.groupBox2.Controls.Add(this.btnResetFishCaught);
-            this.groupBox2.Controls.Add(this.btnDeselectAllFishCaught);
-            this.groupBox2.Location = new System.Drawing.Point(454, 6);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(97, 379);
-            this.groupBox2.TabIndex = 18;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Fish Caught";
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(6, 74);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(72, 52);
-            this.label62.TabIndex = 8;
-            this.label62.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
-            // 
-            // btnSelectAllFishCaught
-            // 
-            this.btnSelectAllFishCaught.Location = new System.Drawing.Point(6, 19);
-            this.btnSelectAllFishCaught.Name = "btnSelectAllFishCaught";
-            this.btnSelectAllFishCaught.Size = new System.Drawing.Size(87, 23);
-            this.btnSelectAllFishCaught.TabIndex = 3;
-            this.btnSelectAllFishCaught.Text = "Select all";
-            this.btnSelectAllFishCaught.UseVisualStyleBackColor = true;
-            this.btnSelectAllFishCaught.Click += new System.EventHandler(this.btnSelectAllFishCaught_Click);
-            // 
-            // btnResetFishCaught
-            // 
-            this.btnResetFishCaught.Location = new System.Drawing.Point(6, 350);
-            this.btnResetFishCaught.Name = "btnResetFishCaught";
-            this.btnResetFishCaught.Size = new System.Drawing.Size(87, 23);
-            this.btnResetFishCaught.TabIndex = 5;
-            this.btnResetFishCaught.Text = "Reset";
-            this.btnResetFishCaught.UseVisualStyleBackColor = true;
-            this.btnResetFishCaught.Click += new System.EventHandler(this.btnResetFishCaught_Click);
-            // 
-            // btnDeselectAllFishCaught
-            // 
-            this.btnDeselectAllFishCaught.Location = new System.Drawing.Point(6, 48);
-            this.btnDeselectAllFishCaught.Name = "btnDeselectAllFishCaught";
-            this.btnDeselectAllFishCaught.Size = new System.Drawing.Size(87, 23);
-            this.btnDeselectAllFishCaught.TabIndex = 4;
-            this.btnDeselectAllFishCaught.Text = "Deselect all";
-            this.btnDeselectAllFishCaught.UseVisualStyleBackColor = true;
-            this.btnDeselectAllFishCaught.Click += new System.EventHandler(this.btnDeselectAllFishCaught_Click);
-            // 
-            // cblstFishCaught
-            // 
-            this.cblstFishCaught.FormattingEnabled = true;
-            this.cblstFishCaught.Location = new System.Drawing.Point(6, 6);
-            this.cblstFishCaught.Name = "cblstFishCaught";
-            this.cblstFishCaught.Size = new System.Drawing.Size(442, 379);
-            this.cblstFishCaught.TabIndex = 17;
             // 
             // FrmMain
             // 
@@ -3444,6 +3505,7 @@ namespace SoG_SGreader
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenu;
             this.Name = "FrmMain";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "SoG: Savegame Editor v16.9.30803.129 by tolik518";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.tabs.ResumeLayout(false);
@@ -3500,12 +3562,15 @@ namespace SoG_SGreader
             this.tabFlags.ResumeLayout(false);
             this.grpFlags.ResumeLayout(false);
             this.grpFlags.PerformLayout();
-            this.tabEnemiesSeen.ResumeLayout(false);
-            this.grpEnemiesSeen.ResumeLayout(false);
-            this.grpEnemiesSeen.PerformLayout();
             this.tabTrophies.ResumeLayout(false);
             this.grpTrophies.ResumeLayout(false);
             this.grpTrophies.PerformLayout();
+            this.tabFishCaught.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.tabEnemiesSeen.ResumeLayout(false);
+            this.grpEnemiesSeen.ResumeLayout(false);
+            this.grpEnemiesSeen.PerformLayout();
             this.tabItemsSeen.ResumeLayout(false);
             this.grpItemsSeen.ResumeLayout(false);
             this.grpItemsSeen.PerformLayout();
@@ -3604,9 +3669,6 @@ namespace SoG_SGreader
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.tabFishCaught.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -162,8 +162,9 @@ namespace SoG_SGreader
             this.Controls.Add(this.btnLoadSaveGame);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FrmLoadSaveGame";
-            this.Text = "SoG: Savegame Editor v" + Application.ProductVersion + " by tolik518";
+            this.Text = "SoG: Savegame Editor v17.9.34607.119 by tolik518";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

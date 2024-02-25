@@ -45,12 +45,14 @@ namespace SoG_SGreader
             // 
             // lblVersion
             // 
+            this.lblVersion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVersion.AutoSize = true;
             this.lblVersion.BackColor = System.Drawing.Color.Transparent;
             this.lblVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVersion.Location = new System.Drawing.Point(98, 15);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(210, 16);
+            this.lblVersion.Size = new System.Drawing.Size(209, 16);
             this.lblVersion.TabIndex = 0;
             this.lblVersion.Text = "SoG: Savegame Editor v0.0.0";
             this.lblVersion.Click += new System.EventHandler(this.lblVersion_Click);
@@ -79,6 +81,8 @@ namespace SoG_SGreader
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(101, 31);
             this.label3.Name = "label3";
@@ -97,6 +101,9 @@ namespace SoG_SGreader
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.lblYourPatch);
@@ -129,9 +136,10 @@ namespace SoG_SGreader
             // 
             // txtConsole
             // 
+            this.txtConsole.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtConsole.BackColor = System.Drawing.Color.Black;
             this.txtConsole.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtConsole.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtConsole.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtConsole.ForeColor = System.Drawing.Color.LimeGreen;
             this.txtConsole.Location = new System.Drawing.Point(0, 153);
@@ -147,6 +155,8 @@ namespace SoG_SGreader
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::SoG_SGreader.Properties.Resources.icon;
             this.pictureBox1.InitialImage = global::SoG_SGreader.Properties.Resources.icon;
@@ -167,6 +177,7 @@ namespace SoG_SGreader
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblVersion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "FrmAbout";
             this.Text = "About";
             this.Load += new System.EventHandler(this.FrmAbout_Load);

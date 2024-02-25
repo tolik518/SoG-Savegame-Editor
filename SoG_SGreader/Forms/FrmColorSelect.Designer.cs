@@ -69,6 +69,7 @@ namespace SoG_SGreader
             this.panelColor29.Name = "panelColor29";
             this.panelColor29.Size = new System.Drawing.Size(20, 20);
             this.panelColor29.TabIndex = 59;
+            this.panelColor29.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor28
             // 
@@ -78,6 +79,7 @@ namespace SoG_SGreader
             this.panelColor28.Name = "panelColor28";
             this.panelColor28.Size = new System.Drawing.Size(20, 20);
             this.panelColor28.TabIndex = 58;
+            this.panelColor28.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor27
             // 
@@ -87,6 +89,7 @@ namespace SoG_SGreader
             this.panelColor27.Name = "panelColor27";
             this.panelColor27.Size = new System.Drawing.Size(20, 20);
             this.panelColor27.TabIndex = 57;
+            this.panelColor27.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor26
             // 
@@ -96,6 +99,7 @@ namespace SoG_SGreader
             this.panelColor26.Name = "panelColor26";
             this.panelColor26.Size = new System.Drawing.Size(20, 20);
             this.panelColor26.TabIndex = 56;
+            this.panelColor26.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor25
             // 
@@ -105,6 +109,7 @@ namespace SoG_SGreader
             this.panelColor25.Name = "panelColor25";
             this.panelColor25.Size = new System.Drawing.Size(20, 20);
             this.panelColor25.TabIndex = 55;
+            this.panelColor25.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor24
             // 
@@ -114,6 +119,7 @@ namespace SoG_SGreader
             this.panelColor24.Name = "panelColor24";
             this.panelColor24.Size = new System.Drawing.Size(20, 20);
             this.panelColor24.TabIndex = 54;
+            this.panelColor24.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor23
             // 
@@ -123,6 +129,7 @@ namespace SoG_SGreader
             this.panelColor23.Name = "panelColor23";
             this.panelColor23.Size = new System.Drawing.Size(20, 20);
             this.panelColor23.TabIndex = 53;
+            this.panelColor23.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor22
             // 
@@ -132,6 +139,7 @@ namespace SoG_SGreader
             this.panelColor22.Name = "panelColor22";
             this.panelColor22.Size = new System.Drawing.Size(20, 20);
             this.panelColor22.TabIndex = 52;
+            this.panelColor22.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor21
             // 
@@ -141,6 +149,7 @@ namespace SoG_SGreader
             this.panelColor21.Name = "panelColor21";
             this.panelColor21.Size = new System.Drawing.Size(20, 20);
             this.panelColor21.TabIndex = 51;
+            this.panelColor21.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor20
             // 
@@ -150,6 +159,7 @@ namespace SoG_SGreader
             this.panelColor20.Name = "panelColor20";
             this.panelColor20.Size = new System.Drawing.Size(20, 20);
             this.panelColor20.TabIndex = 50;
+            this.panelColor20.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor19
             // 
@@ -159,6 +169,7 @@ namespace SoG_SGreader
             this.panelColor19.Name = "panelColor19";
             this.panelColor19.Size = new System.Drawing.Size(20, 20);
             this.panelColor19.TabIndex = 49;
+            this.panelColor19.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor18
             // 
@@ -168,6 +179,7 @@ namespace SoG_SGreader
             this.panelColor18.Name = "panelColor18";
             this.panelColor18.Size = new System.Drawing.Size(20, 20);
             this.panelColor18.TabIndex = 48;
+            this.panelColor18.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor17
             // 
@@ -177,6 +189,7 @@ namespace SoG_SGreader
             this.panelColor17.Name = "panelColor17";
             this.panelColor17.Size = new System.Drawing.Size(20, 20);
             this.panelColor17.TabIndex = 47;
+            this.panelColor17.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor11
             // 
@@ -186,6 +199,7 @@ namespace SoG_SGreader
             this.panelColor11.Name = "panelColor11";
             this.panelColor11.Size = new System.Drawing.Size(20, 20);
             this.panelColor11.TabIndex = 41;
+            this.panelColor11.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor16
             // 
@@ -195,6 +209,7 @@ namespace SoG_SGreader
             this.panelColor16.Name = "panelColor16";
             this.panelColor16.Size = new System.Drawing.Size(20, 20);
             this.panelColor16.TabIndex = 46;
+            this.panelColor16.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor5
             // 
@@ -204,6 +219,7 @@ namespace SoG_SGreader
             this.panelColor5.Name = "panelColor5";
             this.panelColor5.Size = new System.Drawing.Size(20, 20);
             this.panelColor5.TabIndex = 35;
+            this.panelColor5.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor15
             // 
@@ -213,6 +229,7 @@ namespace SoG_SGreader
             this.panelColor15.Name = "panelColor15";
             this.panelColor15.Size = new System.Drawing.Size(20, 20);
             this.panelColor15.TabIndex = 45;
+            this.panelColor15.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor14
             // 
@@ -222,6 +239,7 @@ namespace SoG_SGreader
             this.panelColor14.Name = "panelColor14";
             this.panelColor14.Size = new System.Drawing.Size(20, 20);
             this.panelColor14.TabIndex = 44;
+            this.panelColor14.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor10
             // 
@@ -231,6 +249,7 @@ namespace SoG_SGreader
             this.panelColor10.Name = "panelColor10";
             this.panelColor10.Size = new System.Drawing.Size(20, 20);
             this.panelColor10.TabIndex = 40;
+            this.panelColor10.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor13
             // 
@@ -240,6 +259,7 @@ namespace SoG_SGreader
             this.panelColor13.Name = "panelColor13";
             this.panelColor13.Size = new System.Drawing.Size(20, 20);
             this.panelColor13.TabIndex = 43;
+            this.panelColor13.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor4
             // 
@@ -249,6 +269,7 @@ namespace SoG_SGreader
             this.panelColor4.Name = "panelColor4";
             this.panelColor4.Size = new System.Drawing.Size(20, 20);
             this.panelColor4.TabIndex = 34;
+            this.panelColor4.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor12
             // 
@@ -258,6 +279,7 @@ namespace SoG_SGreader
             this.panelColor12.Name = "panelColor12";
             this.panelColor12.Size = new System.Drawing.Size(20, 20);
             this.panelColor12.TabIndex = 42;
+            this.panelColor12.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor9
             // 
@@ -267,6 +289,7 @@ namespace SoG_SGreader
             this.panelColor9.Name = "panelColor9";
             this.panelColor9.Size = new System.Drawing.Size(20, 20);
             this.panelColor9.TabIndex = 39;
+            this.panelColor9.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor3
             // 
@@ -276,6 +299,7 @@ namespace SoG_SGreader
             this.panelColor3.Name = "panelColor3";
             this.panelColor3.Size = new System.Drawing.Size(20, 20);
             this.panelColor3.TabIndex = 33;
+            this.panelColor3.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor8
             // 
@@ -285,6 +309,7 @@ namespace SoG_SGreader
             this.panelColor8.Name = "panelColor8";
             this.panelColor8.Size = new System.Drawing.Size(20, 20);
             this.panelColor8.TabIndex = 38;
+            this.panelColor8.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor7
             // 
@@ -294,6 +319,7 @@ namespace SoG_SGreader
             this.panelColor7.Name = "panelColor7";
             this.panelColor7.Size = new System.Drawing.Size(20, 20);
             this.panelColor7.TabIndex = 37;
+            this.panelColor7.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor2
             // 
@@ -303,6 +329,7 @@ namespace SoG_SGreader
             this.panelColor2.Name = "panelColor2";
             this.panelColor2.Size = new System.Drawing.Size(20, 20);
             this.panelColor2.TabIndex = 32;
+            this.panelColor2.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor6
             // 
@@ -312,6 +339,7 @@ namespace SoG_SGreader
             this.panelColor6.Name = "panelColor6";
             this.panelColor6.Size = new System.Drawing.Size(20, 20);
             this.panelColor6.TabIndex = 36;
+            this.panelColor6.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor1
             // 
@@ -321,6 +349,7 @@ namespace SoG_SGreader
             this.panelColor1.Name = "panelColor1";
             this.panelColor1.Size = new System.Drawing.Size(20, 20);
             this.panelColor1.TabIndex = 31;
+            this.panelColor1.Click += new System.EventHandler(this.ColorSelect);
             // 
             // panelColor0
             // 
@@ -330,38 +359,7 @@ namespace SoG_SGreader
             this.panelColor0.Name = "panelColor0";
             this.panelColor0.Size = new System.Drawing.Size(20, 20);
             this.panelColor0.TabIndex = 30;
-
-            //            this.panelColor0.Click += new System.EventHandler(this.panelColor0_Click);
             this.panelColor0.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor1.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor2.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor3.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor4.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor5.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor6.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor7.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor8.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor9.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor10.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor11.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor12.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor13.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor14.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor15.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor16.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor17.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor18.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor19.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor20.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor21.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor22.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor23.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor24.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor25.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor26.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor27.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor28.Click += new System.EventHandler(this.ColorSelect);
-            this.panelColor29.Click += new System.EventHandler(this.ColorSelect);
             // 
             // FrmColorSelect
             // 
@@ -399,6 +397,7 @@ namespace SoG_SGreader
             this.Controls.Add(this.panelColor1);
             this.Controls.Add(this.panelColor0);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "FrmColorSelect";
             this.Text = "Color ";
             this.ResumeLayout(false);
