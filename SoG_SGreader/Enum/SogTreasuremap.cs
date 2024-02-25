@@ -2,7 +2,7 @@
 {
     // Source: Secrets of Grindea: SoG.TreasureMapEntry.TreasureMapID
     // Game Version: 0.99xx
-    public enum TreasureMapID : ushort
+    public enum SogTreasureMap : ushort
     {
         Null = 0,
         TreasureMap01 = 0x3e8,
