@@ -92,7 +92,7 @@ namespace SoG_SGreader
                 writeBinary.Write((int) playerObject.TreasureMaps.Count);
                 for (var i = 0; i != playerObject.TreasureMaps.Count; i++)
                 {
-                    writeBinary.Write(playerObject.TreasureMaps[i].TreasureMapID);
+                    writeBinary.Write((ushort) playerObject.TreasureMaps[i].TreasureMapID);
                 }
 
                 writeBinary.Write((int) playerObject.UnknownVariables01.Count);
@@ -167,10 +167,10 @@ namespace SoG_SGreader
                 writeBinary.Write((ushort) playerObject.Trophies.Count);
                 for (int i = 0; i != playerObject.Trophies.Count; i++)
                 {
-                    writeBinary.Write(playerObject.Trophies[i].TrophyID);
+                    writeBinary.Write((ushort) playerObject.Trophies[i].TrophyID);
                 }
 
-                writeBinary.Write((ushort)playerObject.ItemsSeen.Count);
+                writeBinary.Write((ushort) playerObject.ItemsSeen.Count);
                 for (int i = 0; i != playerObject.ItemsSeen.Count; i++)
                 {
                     writeBinary.Write((int) playerObject.ItemsSeen[i].ItemID);
@@ -182,16 +182,16 @@ namespace SoG_SGreader
                     writeBinary.Write((int) playerObject.ItemsCrafted[i].ItemID);
                 }
 
-                writeBinary.Write((ushort) playerObject.FishiesCaught.Count);
-                for (int i = 0; i != playerObject.FishiesCaught.Count; i++)
+                writeBinary.Write((ushort) playerObject.FishCaught.Count);
+                for (int i = 0; i != playerObject.FishCaught.Count; i++)
                 {
-                    writeBinary.Write((int) playerObject.FishiesCaught[i].FishID);
+                    writeBinary.Write((int) playerObject.FishCaught[i].FishID);
                 }
 
                 writeBinary.Write((ushort) playerObject.KilledEnemies.Count);
                 for (int i = 0; i != playerObject.KilledEnemies.Count; i++)
                 {
-                    writeBinary.Write((int)playerObject.KilledEnemies[i].EnemyID);
+                    writeBinary.Write((int) playerObject.KilledEnemies[i].EnemyID);
                     writeBinary.Write(playerObject.KilledEnemies[i].KillCount);
                 }
 
@@ -223,7 +223,7 @@ namespace SoG_SGreader
                 writeBinary.Write((ushort) playerObject.Flags.Count);
                 for (int i = 0; i != playerObject.Flags.Count; i++)
                 {
-                    writeBinary.Write(playerObject.Flags[i].FlagID);
+                    writeBinary.Write((ushort) playerObject.Flags[i].FlagID);
                 }
 
                 writeBinary.Write((byte) playerObject.HouseStyles.Count);

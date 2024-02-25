@@ -11,7 +11,7 @@ namespace SoG_SGreader
         public FrmAbout()
         {
             InitializeComponent();
-            lblBuild.Text = lblBuild.Text.Replace("0.0.000.000",FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion);      //AssemblyFileVersion
+            lblBuild.Text = lblBuild.Text.Replace("0.0.000.000", FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion);      //AssemblyFileVersion
             lblVersion.Text = lblVersion.Text.Replace("0.0.0", Application.ProductVersion);
             lblCurrentPatch.Text = lblCurrentPatch.Text.Replace("0.000a", FrmMain.SupportedPatch);
         }

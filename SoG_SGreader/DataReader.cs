@@ -104,7 +104,6 @@ namespace SoG_SGreader
                         ItemCount = readBinary.ReadInt32()
                     });
                 }
-                
 
                 txtConsole.AppendText("\r\nItemCountMerchant: " + playerObject.MerchantItemsCount);
                 
@@ -127,7 +126,7 @@ namespace SoG_SGreader
                 {
                     playerObject.TreasureMaps.Add(new TreasureMap
                     { 
-                        TreasureMapID = readBinary.ReadInt16()
+                        TreasureMapID = (SogTreasureMap) readBinary.ReadInt16()
                     });
                 }
 
@@ -250,12 +249,6 @@ namespace SoG_SGreader
                 txtConsole.AppendText("\r\n" + "EnemiesSeenCount: " + playerObject.EnemiesSeenCount);
                 txtConsole.AppendText("\r\n" + "> EnemiesSeenCount Position: " + readBinary.BaseStream.Position.ToString("X"));
 
-                //              |            // 
-                //              |            // 
-                //          new stuff        // 
-                //      we're not editing    // 
-                //             yet           // 
-
                 playerObject.UnknownVariable02Count = (UInt16)(readBinary.ReadUInt16() * 16);  // there are X sequences, each 10 bytes long
                 txtConsole.AppendText("\r\n" + "UnknownVariable02Count: " + playerObject.UnknownVariable02Count);
                 txtConsole.AppendText("\r\n" + "> UnknownVariable02Count Position: " + readBinary.BaseStream.Position.ToString("X"));
@@ -275,13 +268,13 @@ namespace SoG_SGreader
                 txtConsole.AppendText("\r\n" + "RobinBowHighscore: " + playerObject.RobinBowHighscore);
                 txtConsole.AppendText("\r\n" + "> RobinBowHighscore Position: " + readBinary.BaseStream.Position.ToString("X"));
 
-                playerObject.TrophiesCount = (UInt16)(readBinary.ReadUInt16());
+                playerObject.TrophiesCount = (ushort)(readBinary.ReadUInt16());
                 playerObject.Trophies = new List<Trophy>(playerObject.TrophiesCount);
                 for (int i = 0; i != playerObject.TrophiesCount; i++)
                 {
                     playerObject.Trophies.Add(new Trophy
                     {
-                        TrophyID = readBinary.ReadUInt16()
+                        TrophyID = (SogTrophy) readBinary.ReadUInt16()
                     });
                 }
                 txtConsole.AppendText("\r\n" + "TrophiesCount: " + playerObject.TrophiesCount);
@@ -291,12 +284,12 @@ namespace SoG_SGreader
                 txtConsole.AppendText("\r\n" + "ItemsSeenCount: " + playerObject.ItemsSeenCount);
                 txtConsole.AppendText("\r\n" + "> ItemsSeenCount Position: " + readBinary.BaseStream.Position.ToString("X"));
 
-                playerObject.ItemsSeen = new List<ItemsSeen>(playerObject.ItemsSeenCount);
+                playerObject.ItemsSeen = new List<ItemSeen>(playerObject.ItemsSeenCount);
                 for (int i = 0; i != playerObject.ItemsSeenCount; i++)
                 {
-                    playerObject.ItemsSeen.Add(new ItemsSeen
+                    playerObject.ItemsSeen.Add(new ItemSeen
                     {
-                        ItemID = (SogItem)readBinary.ReadInt32()
+                        ItemID = (SogItem) readBinary.ReadInt32()
                     });
                 }
 
@@ -309,20 +302,20 @@ namespace SoG_SGreader
                 {
                     playerObject.ItemsCrafted.Add(new ItemCrafted
                     {
-                        ItemID = (SogItem)readBinary.ReadInt32()
+                        ItemID = (SogItem) readBinary.ReadInt32()
                     });
                 }
 
                 playerObject.FishiesCaughtCount = (UInt16)(readBinary.ReadUInt16());
-                playerObject.FishiesCaught = new List<FishCaught>(playerObject.FishiesCaughtCount);
+                playerObject.FishCaught = new List<FishCaught>(playerObject.FishiesCaughtCount);
                 txtConsole.AppendText("\r\n" + "FishiesCaughtCount: " + playerObject.FishiesCaughtCount);
                 txtConsole.AppendText("\r\n" + "> FishiesCaughtCount Position: " + readBinary.BaseStream.Position.ToString("X"));
 
                 for (int i = 0; i != playerObject.FishiesCaughtCount; i++)
                 {
-                    playerObject.FishiesCaught.Add(new FishCaught
+                    playerObject.FishCaught.Add(new FishCaught
                     {
-                        FishID = (SogItem)readBinary.ReadInt32()
+                        FishID = (SogItem) readBinary.ReadInt32()
                     });
                 }
 
@@ -335,7 +328,7 @@ namespace SoG_SGreader
                 {
                     playerObject.KilledEnemies.Add(new KilledEnemy
                     {
-                        EnemyID = readBinary.ReadInt32(), 
+                        EnemyID = (SogEnemy) readBinary.ReadInt32(), 
                         KillCount = readBinary.ReadInt32()
                     });
                 }
@@ -395,7 +388,7 @@ namespace SoG_SGreader
                 {
                     playerObject.Flags.Add(new Flag
                     {
-                        FlagID = readBinary.ReadUInt16()
+                        FlagID = (SogFlag) readBinary.ReadUInt16()
                     });
                 }
                 txtConsole.AppendText("\r\nFlagsCount: " + playerObject.FlagsCount);

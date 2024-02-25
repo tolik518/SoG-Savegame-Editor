@@ -129,10 +129,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enum\SogTreasuremap.cs" />
+    <Compile Include="Enum\SogFish.cs" />
+    <Compile Include="Enum\SogFlag.cs" />
+    <Compile Include="Enum\SogTreasureMap.cs" />
     <Compile Include="Enum\SogEnemy.cs" />
     <Compile Include="Enum\SogQuest.cs" />
     <Compile Include="Enum\SogSavepoint.cs" />
+    <Compile Include="Enum\SogTrophy.cs" />
     <Compile Include="GamePatchReader.cs" />
     <Compile Include="ComandLineOptions.cs" />
     <Compile Include="Enum\SogColor.cs" />
@@ -152,7 +155,7 @@
     <Compile Include="Objects\MerchantItem.cs" />
     <Compile Include="Objects\Pet.cs" />
     <Compile Include="Objects\Player.cs" />
-    <Compile Include="Objects\ItemsSeen.cs" />
+    <Compile Include="Objects\ItemSeen.cs" />
     <Compile Include="Objects\Potion.cs" />
     <Compile Include="Objects\Quest.cs" />
     <Compile Include="Objects\Skill.cs" />

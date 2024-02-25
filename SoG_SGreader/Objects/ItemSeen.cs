@@ -1,6 +1,6 @@
 namespace SoG_SGreader
 {
-    public class ItemsSeen
+    public class ItemSeen
     {
         public SogItem ItemID { get; set; }
     }

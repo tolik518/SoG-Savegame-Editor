@@ -27,6 +27,8 @@ namespace SoG_SGreader
                 return "?.???a";
             }
 
+            txtConsole.AppendText("\r\nGame patch-version wont be read.");
+            return "?.???a";
             return await Task.Run(() => GetLatestGamePatch(exeFile, txtConsole)); // Run the heavy reflection code on a background thread
         }
 

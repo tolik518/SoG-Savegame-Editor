@@ -53,11 +53,11 @@ namespace SoG_SGreader
 
         public List<Trophy> Trophies;
         public ushort ItemsSeenCount { get; set; }
-        public List<ItemsSeen> ItemsSeen;
+        public List<ItemSeen> ItemsSeen;
         public ushort ItemsCraftedCount { get; set; }
         public List<ItemCrafted> ItemsCrafted;
         public ushort FishiesCaughtCount { get; set; }
-        public List<FishCaught> FishiesCaught;
+        public List<FishCaught> FishCaught;
         public ushort KilledEnemiesCount { get; set; }
         public List<KilledEnemy> KilledEnemies;
         public byte PotionsMax { get; set; }
@@ -92,18 +92,6 @@ namespace SoG_SGreader
             return Cards.Any(card => card.CardID == sogEnemies);
         }
 
-        internal void AddCard(SogEnemy sogEnemies)
-        {
-            // add card to player, dont add duplicates
-            if (!HasCard(sogEnemies))
-            {
-                Cards.Add(new Card
-                {
-                    CardID = sogEnemies
-                });
-            }
-        }
-
         internal void RemoveCard(SogEnemy sogEnemies)
         {
             // remove card from player, if it exists
@@ -113,38 +101,44 @@ namespace SoG_SGreader
             }
         }
 
-        //same as above, but for quests
-
         internal bool HasQuest(SogQuest sogQuests)
         {
             return Quests.Any(quest => quest.QuestID == sogQuests);
         }
 
-        internal void AddQuest(SogQuest sogQuests)
-        {
-            // add quest to player, dont add duplicates
-            if (!HasQuest(sogQuests))
-            {
-                Quests.Add(new Quest
-                {
-                    QuestID = sogQuests
-                });
-            }
-        }
-
-        internal void RemoveQuest(SogQuest sogQuests)
-        {
-            // remove quest from player, if it exists
-            if (HasQuest(sogQuests))
-            {
-                Quests.RemoveAll(quest => quest.QuestID == sogQuests);
-            }
-        }
-
-        //same as above, but for enemies
         internal bool HasSeenEnemy(SogEnemy sogEnemies)
         {
             return EnemiesSeen.Any(enemy => enemy.EnemyID == sogEnemies);
+        }
+
+        internal bool HasFlag(SogFlag sogFlag)
+        {
+            return Flags.Any(flag => flag.FlagID == sogFlag);
+        }
+
+        internal bool HasMap(SogTreasureMap sogMap)
+        {
+            return TreasureMaps.Any(map => map.TreasureMapID == sogMap);
+        }
+
+        internal bool HasTrophy(SogTrophy sogTrophy)
+        {
+            return Trophies.Any(trophy => trophy.TrophyID == sogTrophy);
+        }
+
+        internal bool HasSeenItem(SogItem sogItem)
+        {
+            return ItemsSeen.Any(item => item.ItemID == sogItem);
+        }
+
+        internal bool HasCraftedItem(SogItem sogItem)
+        {
+            return ItemsCrafted.Any(item => item.ItemID == sogItem);
+        }
+
+        internal bool HasCaughtFish(SogItem sogItem)
+        {
+            return FishCaught.Any(fish => fish.FishID == sogItem);
         }
     }
 }

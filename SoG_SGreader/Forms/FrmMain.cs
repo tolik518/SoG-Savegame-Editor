@@ -1,21 +1,21 @@
-﻿using System;
+﻿using SoG_SGreader.Wrapper;
+using System;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using SoG_SGreader.Wrapper;
 
 namespace SoG_SGreader
 {
     public partial class FrmMain : Form
     {
-        public static readonly string SupportedPatch = "0.99g";
+        public static readonly string SupportedPatch = "0.99xx";
         public string InstalledGamePatch = "";
         private Player playerObject = new Player();
         private readonly ComboBox[] cbQuickslot = new ComboBox[10];
         private readonly ComboBox[] cbQuickslotType = new ComboBox[10];
         private string InitialPlaytime;
-        
+
         public string OpenedSaveGamePath { get; set; }
 
         public FrmMain(string saveGamePath)
@@ -23,12 +23,12 @@ namespace SoG_SGreader
             InitializeComponent(); //Initializing elements from the Designer
             InitElements(); //Initializing elements from this file
             txtConsole.AppendText("Official Repository: https://github.com/tolik518/SoG_SGreader \r\n");
-            
+
             if (File.Exists(saveGamePath))
             {
                 OpenedSaveGamePath = saveGamePath;
                 LoadSaveGame();
-            } 
+            }
             else
             {
                 txtConsole.AppendText("Savefile with the following path doesnt exist: " + saveGamePath + "\r\n");
@@ -40,7 +40,7 @@ namespace SoG_SGreader
             txtConsole.Text = "";
             OpenFileDialog openFileDialog1 = new OpenFileDialog
             {
-                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + Path.DirectorySeparatorChar + Path.Combine("Secrets of Grindea","Characters"),
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + Path.DirectorySeparatorChar + Path.Combine("Secrets of Grindea", "Characters"),
                 Filter = "SoG Savegame (*.cha)|*.cha",
                 FilterIndex = 2,
                 RestoreDirectory = true
@@ -57,11 +57,11 @@ namespace SoG_SGreader
         {
             txtConsole.AppendText(OpenedSaveGamePath);
             InitVariables();
-            
+
             // TODO: This is a workaround to get the textbox into the wrapper (for easier testing)
-            ITextBoxWrapper txtConsoleWrapped = new UITextBox(txtConsole);
+            var txtConsoleWrapped = new UITextBox(txtConsole);
             playerObject = DataReader.ReadFromFile(OpenedSaveGamePath, txtConsoleWrapped);
-            
+
             saveToolStripMenuItem.Enabled = true;
 
             InitFields();
@@ -127,7 +127,7 @@ namespace SoG_SGreader
         {
             return items.Where(item => prefixes.Any(item.StartsWith) || item == "Null").ToArray();
         }
-        
+
         private void InitFields()
         {
             var items = Enum.GetNames(typeof(SogItem));
@@ -142,7 +142,7 @@ namespace SoG_SGreader
             cbAccessory1.DataSource = FilterItems(items, "Accessory_");
             cbAccessory2.DataSource = FilterItems(items, "Accessory_");
             cbStyleHat.DataSource = FilterItems(items, "Hat_");
-            
+
             cbStyleFacegear.DataSource = FilterItems(items, "Facegear_");
             cbStyleWeapon.DataSource = FilterItems(items, "OneHanded_", "TwoHanded_", "Bow_");
             cbStyleShield.DataSource = FilterItems(items, "Shield_");
@@ -172,6 +172,12 @@ namespace SoG_SGreader
             cblstCards.DataSource = Enum.GetNames(typeof(SogEnemy));
             cblstQuests.DataSource = Enum.GetNames(typeof(SogQuest));
             cblstEnemiesSeens.DataSource = Enum.GetNames(typeof(SogEnemy));
+            cblstFlags.DataSource = Enum.GetNames(typeof(SogFlag));
+            cblstMaps.DataSource = Enum.GetNames(typeof(SogTreasureMap));
+            cblstTrophies.DataSource = Enum.GetNames(typeof(SogTrophy));
+            cblstItemsSeen.DataSource = Enum.GetNames(typeof(SogItem));
+            cblstItemsCrafted.DataSource = Enum.GetNames(typeof(SogItem));
+            cblstFishCaught.DataSource = Enum.GetNames(typeof(SogFish));
         }
 
         private void PopulateFields()
@@ -209,10 +215,10 @@ namespace SoG_SGreader
             for (int i = 0; i != playerObject.ItemsCount; i++)
             {
                 var vItem = new ListViewItem(
-                    new[] { 
-                        playerObject.Inventory[i].ItemID.ToString(), 
-                        playerObject.Inventory[i].ItemCount.ToString(), 
-                        playerObject.Inventory[i].ItemPos.ToString() 
+                    new[] {
+                        playerObject.Inventory[i].ItemID.ToString(),
+                        playerObject.Inventory[i].ItemCount.ToString(),
+                        playerObject.Inventory[i].ItemPos.ToString()
                     }
                 );
 
@@ -269,15 +275,15 @@ namespace SoG_SGreader
             sliderSkillMagicF0.Value = playerObject.GetSkillLevel(SogSkill.Magic_Fire_Fireball);
             sliderSkillMagicF1.Value = playerObject.GetSkillLevel(SogSkill.Magic_Fire_Meteor);
             sliderSkillMagicF2.Value = playerObject.GetSkillLevel(SogSkill.Magic_Fire_Flamethrower);
- 
+
             sliderSkillMagicI0.Value = playerObject.GetSkillLevel(SogSkill.Magic_Ice_IceSpikes);
             sliderSkillMagicI1.Value = playerObject.GetSkillLevel(SogSkill.Magic_Ice_IceNova);
             sliderSkillMagicI2.Value = playerObject.GetSkillLevel(SogSkill.Magic_Ice_FrostyFriend);
- 
+
             sliderSkillMagicE0.Value = playerObject.GetSkillLevel(SogSkill.Magic_Earth_EarthSpike);
             sliderSkillMagicE1.Value = playerObject.GetSkillLevel(SogSkill.Magic_Earth_SummonPlant);
             sliderSkillMagicE2.Value = playerObject.GetSkillLevel(SogSkill.Magic_Earth_InsectSwarm);
- 
+
             sliderSkillMagicA0.Value = playerObject.GetSkillLevel(SogSkill.Magic_Wind_ChainLightning);
             sliderSkillMagicA1.Value = playerObject.GetSkillLevel(SogSkill.Magic_Wind_SummonCloud);
             sliderSkillMagicA2.Value = playerObject.GetSkillLevel(SogSkill.Magic_Wind_StaticTouch);
@@ -296,10 +302,46 @@ namespace SoG_SGreader
                 cblstQuests.SetItemChecked(i, playerHasQuest);
             }
 
-            for (int i = 0; i < cblstQuests.Items.Count; i++)
+            for (int i = 0; i < cblstEnemiesSeens.Items.Count; i++)
             {
                 bool playerHasMetEnemy = playerObject.HasSeenEnemy((SogEnemy)Enum.Parse(typeof(SogEnemy), cblstEnemiesSeens.Items[i].ToString()));
                 cblstEnemiesSeens.SetItemChecked(i, playerHasMetEnemy);
+            }
+
+            for (int i = 0; i < cblstFlags.Items.Count; i++)
+            {
+                bool playerHasFlag = playerObject.HasFlag((SogFlag)Enum.Parse(typeof(SogFlag), cblstFlags.Items[i].ToString()));
+                cblstFlags.SetItemChecked(i, playerHasFlag);
+            }
+
+            for (int i = 0; i < cblstMaps.Items.Count; i++)
+            {
+                bool playerHasMap = playerObject.HasMap((SogTreasureMap)Enum.Parse(typeof(SogTreasureMap), cblstMaps.Items[i].ToString()));
+                cblstMaps.SetItemChecked(i, playerHasMap);
+            }
+
+            for (int i = 0; i < cblstTrophies.Items.Count; i++)
+            {
+                bool playerHasTrophy = playerObject.HasTrophy((SogTrophy)Enum.Parse(typeof(SogTrophy), cblstTrophies.Items[i].ToString()));
+                cblstTrophies.SetItemChecked(i, playerHasTrophy);
+            }
+
+            for (int i = 0; i < cblstItemsSeen.Items.Count; i++)
+            {
+                bool playerHasSeenItem = playerObject.HasSeenItem((SogItem)Enum.Parse(typeof(SogItem), cblstItemsSeen.Items[i].ToString()));
+                cblstItemsSeen.SetItemChecked(i, playerHasSeenItem);
+            }
+
+            for (int i = 0; i < cblstItemsCrafted.Items.Count; i++)
+            {
+                bool playerHasCraftedItem = playerObject.HasCraftedItem((SogItem)Enum.Parse(typeof(SogItem), cblstItemsCrafted.Items[i].ToString()));
+                cblstItemsCrafted.SetItemChecked(i, playerHasCraftedItem);
+            }
+
+            for (int i = 0; i < cblstFishCaught.Items.Count; i++)
+            {
+                bool playerHasCaughtFish = playerObject.HasCaughtFish((SogItem)Enum.Parse(typeof(SogItem), cblstFishCaught.Items[i].ToString()));
+                cblstFishCaught.SetItemChecked(i, playerHasCaughtFish);
             }
         }
 
@@ -348,7 +390,7 @@ namespace SoG_SGreader
             playerObject.Inventory.Clear();
 
             for (int i = 0; i != lstInventory.Items.Count; i++)
-            { 
+            {
                 Item item = new Item
                 {
                     ItemID = (SogItem)Enum.Parse(typeof(SogItem), lstInventory.Items[i].SubItems[0].Text),
@@ -397,9 +439,10 @@ namespace SoG_SGreader
             }
 
             playerObject.UniquePlayerId = (UInt32)numID.Value;
-            
+
             // dont change the playtime if its not parseable
-            if (TimeSpan.TryParse(txtTimePlayed.Text, out TimeSpan result)) {
+            if (TimeSpan.TryParse(txtTimePlayed.Text, out TimeSpan result))
+            {
                 if (result.TotalSeconds > int.MaxValue)
                 {
                     txtConsole.AppendText("\r\n\r\nPlaytime is too high. Please check the format.");
@@ -411,15 +454,17 @@ namespace SoG_SGreader
                 if (InitialPlaytime != txtTimePlayed.Text)
                 {
                     playerObject.PlayTimeTotal = Math.Min((int)(result.TotalSeconds * 60), int.MaxValue);
-                } 
+                }
                 else
                 {
                     playerObject.PlayTimeTotal = playerObject.PlayTimeTotal;
                 }
-            } else {
+            }
+            else
+            {
                 txtConsole.AppendText("\r\n\r\nPlaytime is not parseable. Please check the format.");
             }
-            
+
             playerObject.BirthdayDay = (int)numBirthdayDay.Value;
             playerObject.BirthdayMonth = (int)numBirtdayMonth.Value;
 
@@ -431,21 +476,21 @@ namespace SoG_SGreader
                 if (cblstCards.GetItemChecked(i))
                 {
                     playerObject.Cards.Add(
-                        new Card 
+                        new Card
                         {
                             CardID = (SogEnemy)Enum.Parse(typeof(SogEnemy), cblstCards.Items[i].ToString())
                         }
                     );
                 }
             }
-            
+
             playerObject.Quests.Clear();
             for (int i = 0; i != cblstQuests.Items.Count; i++)
             {
                 if (cblstQuests.GetItemChecked(i))
                 {
                     playerObject.Quests.Add(
-                        new Quest 
+                        new Quest
                         {
                             QuestID = (SogQuest)Enum.Parse(typeof(SogQuest), cblstQuests.Items[i].ToString())
                         }
@@ -464,6 +509,90 @@ namespace SoG_SGreader
                             EnemyID = (SogEnemy)Enum.Parse(typeof(SogEnemy), cblstEnemiesSeens.Items[i].ToString())
                         }
                     );
+                }
+            }
+
+            playerObject.Flags.Clear();
+            for (int i = 0; i != cblstFlags.Items.Count; i++)
+            {
+                if (cblstFlags.GetItemChecked(i))
+                {
+                    playerObject.Flags.Add(
+                        new Flag
+                        {
+                            FlagID = (SogFlag)Enum.Parse(typeof(SogFlag), cblstFlags.Items[i].ToString())
+                        }
+                    );
+                }
+            }
+
+            playerObject.TreasureMaps.Clear();
+            for (int i = 0; i != cblstMaps.Items.Count; i++)
+            {
+                if (cblstMaps.GetItemChecked(i))
+                {
+                    playerObject.TreasureMaps.Add(
+                        new TreasureMap
+                        {
+                            TreasureMapID = (SogTreasureMap)Enum.Parse(typeof(SogTreasureMap), cblstMaps.Items[i].ToString())
+                        }
+                    );
+                }
+            }
+
+            playerObject.Trophies.Clear();
+            for (int i = 0; i != cblstTrophies.Items.Count; i++)
+            {
+                if (cblstTrophies.GetItemChecked(i))
+                {
+                    playerObject.Trophies.Add(
+                        new Trophy
+                        {
+                            TrophyID = (SogTrophy)Enum.Parse(typeof(SogTrophy), cblstTrophies.Items[i].ToString())
+                        }
+                     );
+                }
+            }
+
+            playerObject.ItemsSeen.Clear();
+            for (int i = 0; i != cblstItemsSeen.Items.Count; i++)
+            {
+                if (cblstItemsSeen.GetItemChecked(i))
+                {
+                    playerObject.ItemsSeen.Add(
+                        new ItemSeen
+                        {
+                            ItemID = (SogItem)Enum.Parse(typeof(SogItem), cblstItemsSeen.Items[i].ToString())
+                        }
+                    );
+                }
+            }
+
+            playerObject.ItemsCrafted.Clear();
+            for (int i = 0; i != cblstItemsCrafted.Items.Count; i++)
+            {
+                if (cblstItemsCrafted.GetItemChecked(i))
+                {
+                    playerObject.ItemsCrafted.Add(
+                        new ItemCrafted
+                        {
+                            ItemID = (SogItem)Enum.Parse(typeof(SogItem), cblstItemsCrafted.Items[i].ToString())
+                        }
+                     );
+                }
+            }
+
+            playerObject.FishCaught.Clear();
+            for (int i = 0; i != cblstFishCaught.Items.Count; i++)
+            {
+                if (cblstFishCaught.GetItemChecked(i))
+                {
+                    playerObject.FishCaught.Add(
+                        new FishCaught
+                        {
+                            FishID = (SogItem)Enum.Parse(typeof(SogItem), cblstFishCaught.Items[i].ToString())
+                        }
+                     );
                 }
             }
         }
@@ -496,11 +625,11 @@ namespace SoG_SGreader
                     FileStream fileStream = File.Create(sFilename); //there should be a better way to do this lol
                     fileStream.Close();
                 }
-                
+
                 GetDataFromFields();
                 DataWriter dataWriter = new DataWriter(playerObject);
                 dataWriter.WriteToFile(sFilename);
-                
+
                 txtConsole.AppendText("\r\n\r\nFile was saved successfully under: ");
                 txtConsole.AppendText("\r\n" + sFilename);
             }
@@ -631,15 +760,15 @@ namespace SoG_SGreader
             {
                 lstPets.Items[lstPets.FocusedItem.Index].SubItems[2].Text = numPetHP.Value.ToString();
 
-                if ((Control) sender == numPetHP)
+                if ((Control)sender == numPetHP)
                 {
                     lstPets.Items[lstPets.FocusedItem.Index].SubItems[2].Text = numPetHP.Value.ToString();
                 }
-                else if ((Control) sender == numPetEnergy)
+                else if ((Control)sender == numPetEnergy)
                 {
                     lstPets.Items[lstPets.FocusedItem.Index].SubItems[3].Text = numPetEnergy.Value.ToString();
                 }
-                else if ((Control) sender == numPetDamage)
+                else if ((Control)sender == numPetDamage)
                 {
                     lstPets.Items[lstPets.FocusedItem.Index].SubItems[4].Text = numPetDamage.Value.ToString();
                 }
@@ -647,11 +776,11 @@ namespace SoG_SGreader
                 {
                     lstPets.Items[lstPets.FocusedItem.Index].SubItems[5].Text = numPetCrit.Value.ToString();
                 }
-                else if ((Control) sender == numPetSpeed)
+                else if ((Control)sender == numPetSpeed)
                 {
                     lstPets.Items[lstPets.FocusedItem.Index].SubItems[6].Text = numPetSpeed.Value.ToString();
                 }
-                else if ((Control) sender == numPetLevel)
+                else if ((Control)sender == numPetLevel)
                 {
                     lstPets.Items[lstPets.FocusedItem.Index].SubItems[0].Text = numPetLevel.Value.ToString();
                 }
@@ -662,13 +791,13 @@ namespace SoG_SGreader
         {
             lstPets.Items[lstPets.FocusedItem.Index].SubItems[1].Text = txtPetNickname.Text;
         }
-        
+
         private void JSONToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string message = "File was saved successfully under\r\n";
             string caption = "Save complete";
             MessageBoxButtons buttons = MessageBoxButtons.OK;
-            
+
             try
             {
                 string jsonPath = JsonHandler.SaveGameToJson(playerObject, Directory.GetParent(OpenedSaveGamePath).FullName);
@@ -711,7 +840,7 @@ namespace SoG_SGreader
             frmAbout.ShowDialog();
         }
 
-        private async void FrmMain_Load(object sender, EventArgs e) 
+        private async void FrmMain_Load(object sender, EventArgs e)
         {
             Text = "SoG: Savegame Editor v" + Application.ProductVersion + " by tolik518";
 
@@ -789,7 +918,7 @@ namespace SoG_SGreader
             for (int i = 0; i < cblstEnemiesSeens.Items.Count; i++)
             {
                 cblstEnemiesSeens.SetItemChecked(i, true);
-            }   
+            }
         }
 
         private void btnDeselectAllEnemiesSeen_Click(object sender, EventArgs e)
@@ -808,11 +937,161 @@ namespace SoG_SGreader
                 cblstEnemiesSeens.SetItemChecked(i, playerHasMetEnemy);
             }
         }
-        
+
         private void openSavegameFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string folderPath = Directory.GetParent(OpenedSaveGamePath).FullName;
             System.Diagnostics.Process.Start(folderPath);
+        }
+
+        private void btnSelectAllFlags_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstFlags.Items.Count; i++)
+            {
+                cblstFlags.SetItemChecked(i, true);
+            }
+        }
+
+        private void btnDeselectAllFlags_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstFlags.Items.Count; i++)
+            {
+                cblstFlags.SetItemChecked(i, false);
+            }
+        }
+
+        private void btnResetFlags_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstFlags.Items.Count; i++)
+            {
+                bool playerHasFlag = playerObject.HasFlag((SogFlag)Enum.Parse(typeof(SogFlag), cblstFlags.Items[i].ToString()));
+                cblstFlags.SetItemChecked(i, playerHasFlag);
+            }
+        }
+
+        private void btnSelectAllMaps_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstMaps.Items.Count; i++)
+            {
+                cblstMaps.SetItemChecked(i, true);
+            }
+        }
+
+        private void btnDeselectAllMaps_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstMaps.Items.Count; i++)
+            {
+                cblstMaps.SetItemChecked(i, false);
+            }
+        }
+
+        private void btnResetMaps_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstMaps.Items.Count; i++)
+            {
+                bool playerHasMap = playerObject.HasMap((SogTreasureMap)Enum.Parse(typeof(SogTreasureMap), cblstMaps.Items[i].ToString()));
+                cblstMaps.SetItemChecked(i, playerHasMap);
+            }
+        }
+
+        private void btnSelectAllTrophies_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstTrophies.Items.Count; i++)
+            {
+                cblstTrophies.SetItemChecked(i, true);
+            }
+        }
+
+        private void btnDeselectAllTrophies_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstTrophies.Items.Count; i++)
+            {
+                cblstTrophies.SetItemChecked(i, false);
+            }
+        }
+
+        private void btnResetTrophies_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstTrophies.Items.Count; i++)
+            {
+                bool playerHasTrophy = playerObject.HasTrophy((SogTrophy)Enum.Parse(typeof(SogTrophy), cblstTrophies.Items[i].ToString()));
+                cblstTrophies.SetItemChecked(i, playerHasTrophy);
+            }
+        }
+
+        private void btnSelectAllItemsSeen_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstItemsSeen.Items.Count; i++)
+            {
+                cblstItemsSeen.SetItemChecked(i, true);
+            }
+        }
+
+        private void btnDeselectAllItemsSeen_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstItemsSeen.Items.Count; i++)
+            {
+                cblstItemsSeen.SetItemChecked(i, false);
+            }
+        }
+
+        private void btnResetItemsSeen_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstItemsSeen.Items.Count; i++)
+            {
+                bool playerHasSeenItem = playerObject.HasSeenItem((SogItem)Enum.Parse(typeof(SogItem), cblstItemsSeen.Items[i].ToString()));
+                cblstItemsSeen.SetItemChecked(i, playerHasSeenItem);
+            }
+        }
+
+        private void btnSelectAllItemsCrafted_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstItemsCrafted.Items.Count; i++)
+            {
+                cblstItemsCrafted.SetItemChecked(i, true);
+            }
+        }
+
+        private void btnDeselectAllItemsCrafted_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstItemsCrafted.Items.Count; i++)
+            {
+                cblstItemsCrafted.SetItemChecked(i, false);
+            }
+        }
+
+        private void btnResetItemsCrafted_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstItemsCrafted.Items.Count; i++)
+            {
+                bool playerHasCraftedItem = playerObject.HasCraftedItem((SogItem)Enum.Parse(typeof(SogItem), cblstItemsCrafted.Items[i].ToString()));
+                cblstItemsCrafted.SetItemChecked(i, playerHasCraftedItem);
+            }
+        }
+
+        private void btnSelectAllFishCaught_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstFishCaught.Items.Count; i++)
+            {
+                cblstFishCaught.SetItemChecked(i, true);
+            }
+        }
+
+        private void btnDeselectAllFishCaught_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstFishCaught.Items.Count; i++)
+            {
+                cblstFishCaught.SetItemChecked(i, false);
+            }
+        }
+
+        private void btnResetFishCaught_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cblstFishCaught.Items.Count; i++)
+            {
+                bool playerHasCaughtFish = playerObject.HasCaughtFish((SogItem)Enum.Parse(typeof(SogItem), cblstFishCaught.Items[i].ToString()));
+                cblstFishCaught.SetItemChecked(i, playerHasCaughtFish);
+            }
         }
     }
 }

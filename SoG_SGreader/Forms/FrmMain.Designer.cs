@@ -32,7 +32,7 @@ namespace SoG_SGreader
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
-            this.grpEnemiesSeen = new System.Windows.Forms.TabControl();
+            this.tabs = new System.Windows.Forms.TabControl();
             this.tabChar = new System.Windows.Forms.TabPage();
             this.grpPatch = new System.Windows.Forms.GroupBox();
             this.lblGamePatch = new System.Windows.Forms.Label();
@@ -145,22 +145,60 @@ namespace SoG_SGreader
             this.numPetHP = new System.Windows.Forms.NumericUpDown();
             this.tabCards = new System.Windows.Forms.TabPage();
             this.grpCards = new System.Windows.Forms.GroupBox();
+            this.label58 = new System.Windows.Forms.Label();
             this.btnSelectAllCards = new System.Windows.Forms.Button();
             this.btnResetCards = new System.Windows.Forms.Button();
             this.btnDeselectAllCards = new System.Windows.Forms.Button();
             this.cblstCards = new System.Windows.Forms.CheckedListBox();
+            this.tabMaps = new System.Windows.Forms.TabPage();
+            this.grpMaps = new System.Windows.Forms.GroupBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.btnSelectAllMaps = new System.Windows.Forms.Button();
+            this.btnResetMaps = new System.Windows.Forms.Button();
+            this.btnDeselectAllMaps = new System.Windows.Forms.Button();
+            this.cblstMaps = new System.Windows.Forms.CheckedListBox();
             this.tabQuests = new System.Windows.Forms.TabPage();
             this.grpQuests = new System.Windows.Forms.GroupBox();
+            this.label40 = new System.Windows.Forms.Label();
             this.btnSelectAllQuests = new System.Windows.Forms.Button();
             this.btnResetQuests = new System.Windows.Forms.Button();
             this.btnDeselectAllQuests = new System.Windows.Forms.Button();
             this.cblstQuests = new System.Windows.Forms.CheckedListBox();
+            this.tabFlags = new System.Windows.Forms.TabPage();
+            this.grpFlags = new System.Windows.Forms.GroupBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.btnSelectAllFlags = new System.Windows.Forms.Button();
+            this.btnResetFlags = new System.Windows.Forms.Button();
+            this.btnDeselectAllFlags = new System.Windows.Forms.Button();
+            this.cblstFlags = new System.Windows.Forms.CheckedListBox();
             this.tabEnemiesSeen = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpEnemiesSeen = new System.Windows.Forms.GroupBox();
+            this.label50 = new System.Windows.Forms.Label();
             this.btnSelectAllEnemiesSeen = new System.Windows.Forms.Button();
             this.btnResetEnemiesSeen = new System.Windows.Forms.Button();
             this.btnDeselectAllEnemiesSeen = new System.Windows.Forms.Button();
             this.cblstEnemiesSeens = new System.Windows.Forms.CheckedListBox();
+            this.tabTrophies = new System.Windows.Forms.TabPage();
+            this.grpTrophies = new System.Windows.Forms.GroupBox();
+            this.label59 = new System.Windows.Forms.Label();
+            this.btnSelectAllTrophies = new System.Windows.Forms.Button();
+            this.btnResetTrophies = new System.Windows.Forms.Button();
+            this.btnDeselectAllTrophies = new System.Windows.Forms.Button();
+            this.cblstTrophies = new System.Windows.Forms.CheckedListBox();
+            this.tabItemsSeen = new System.Windows.Forms.TabPage();
+            this.grpItemsSeen = new System.Windows.Forms.GroupBox();
+            this.label60 = new System.Windows.Forms.Label();
+            this.btnSelectAllItemsSeen = new System.Windows.Forms.Button();
+            this.btnResetItemsSeen = new System.Windows.Forms.Button();
+            this.btnDeselectAllItemsSeen = new System.Windows.Forms.Button();
+            this.cblstItemsSeen = new System.Windows.Forms.CheckedListBox();
+            this.tabItemsCrafted = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label61 = new System.Windows.Forms.Label();
+            this.btnSelectAllItemsCrafted = new System.Windows.Forms.Button();
+            this.btnResetItemsCrafted = new System.Windows.Forms.Button();
+            this.btnDeselectAllItemsCrafted = new System.Windows.Forms.Button();
+            this.cblstItemsCrafted = new System.Windows.Forms.CheckedListBox();
             this.tabQuickslots = new System.Windows.Forms.TabPage();
             this.label57 = new System.Windows.Forms.Label();
             this.grpQuickslots = new System.Windows.Forms.GroupBox();
@@ -255,8 +293,6 @@ namespace SoG_SGreader
             this.tabTalentsGeneral = new System.Windows.Forms.TabPage();
             this.tabTalentsMelee = new System.Windows.Forms.TabPage();
             this.tabTalentsMagic = new System.Windows.Forms.TabPage();
-            this.tabTreasureMaps = new System.Windows.Forms.TabPage();
-            this.label41 = new System.Windows.Forms.Label();
             this.msMenu = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -271,7 +307,14 @@ namespace SoG_SGreader
             this.txtConsole = new System.Windows.Forms.TextBox();
             this.Tooltips = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.grpEnemiesSeen.SuspendLayout();
+            this.tabFishCaught = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label62 = new System.Windows.Forms.Label();
+            this.btnSelectAllFishCaught = new System.Windows.Forms.Button();
+            this.btnResetFishCaught = new System.Windows.Forms.Button();
+            this.btnDeselectAllFishCaught = new System.Windows.Forms.Button();
+            this.cblstFishCaught = new System.Windows.Forms.CheckedListBox();
+            this.tabs.SuspendLayout();
             this.tabChar.SuspendLayout();
             this.grpPatch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numID)).BeginInit();
@@ -304,9 +347,19 @@ namespace SoG_SGreader
             ((System.ComponentModel.ISupportInitialize)(this.numPetHP)).BeginInit();
             this.tabCards.SuspendLayout();
             this.grpCards.SuspendLayout();
+            this.tabMaps.SuspendLayout();
+            this.grpMaps.SuspendLayout();
             this.tabQuests.SuspendLayout();
             this.grpQuests.SuspendLayout();
+            this.tabFlags.SuspendLayout();
+            this.grpFlags.SuspendLayout();
             this.tabEnemiesSeen.SuspendLayout();
+            this.grpEnemiesSeen.SuspendLayout();
+            this.tabTrophies.SuspendLayout();
+            this.grpTrophies.SuspendLayout();
+            this.tabItemsSeen.SuspendLayout();
+            this.grpItemsSeen.SuspendLayout();
+            this.tabItemsCrafted.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabQuickslots.SuspendLayout();
             this.grpQuickslots.SuspendLayout();
@@ -386,30 +439,36 @@ namespace SoG_SGreader
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityO2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
-            this.tabTreasureMaps.SuspendLayout();
             this.msMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.tabFishCaught.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // grpEnemiesSeen
+            // tabs
             // 
-            this.grpEnemiesSeen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grpEnemiesSeen.Controls.Add(this.tabChar);
-            this.grpEnemiesSeen.Controls.Add(this.tabInventory);
-            this.grpEnemiesSeen.Controls.Add(this.tabPets);
-            this.grpEnemiesSeen.Controls.Add(this.tabCards);
-            this.grpEnemiesSeen.Controls.Add(this.tabQuests);
-            this.grpEnemiesSeen.Controls.Add(this.tabEnemiesSeen);
-            this.grpEnemiesSeen.Controls.Add(this.tabQuickslots);
-            this.grpEnemiesSeen.Controls.Add(this.tabSkills);
-            this.grpEnemiesSeen.Controls.Add(this.tabTreasureMaps);
-            this.grpEnemiesSeen.Location = new System.Drawing.Point(0, 24);
-            this.grpEnemiesSeen.Name = "grpEnemiesSeen";
-            this.grpEnemiesSeen.SelectedIndex = 0;
-            this.grpEnemiesSeen.Size = new System.Drawing.Size(567, 422);
-            this.grpEnemiesSeen.TabIndex = 0;
+            this.tabs.Controls.Add(this.tabChar);
+            this.tabs.Controls.Add(this.tabInventory);
+            this.tabs.Controls.Add(this.tabPets);
+            this.tabs.Controls.Add(this.tabCards);
+            this.tabs.Controls.Add(this.tabMaps);
+            this.tabs.Controls.Add(this.tabQuests);
+            this.tabs.Controls.Add(this.tabFlags);
+            this.tabs.Controls.Add(this.tabTrophies);
+            this.tabs.Controls.Add(this.tabFishCaught);
+            this.tabs.Controls.Add(this.tabEnemiesSeen);
+            this.tabs.Controls.Add(this.tabItemsSeen);
+            this.tabs.Controls.Add(this.tabItemsCrafted);
+            this.tabs.Controls.Add(this.tabQuickslots);
+            this.tabs.Controls.Add(this.tabSkills);
+            this.tabs.Location = new System.Drawing.Point(0, 24);
+            this.tabs.Name = "tabs";
+            this.tabs.SelectedIndex = 0;
+            this.tabs.Size = new System.Drawing.Size(567, 422);
+            this.tabs.TabIndex = 0;
             // 
             // tabChar
             // 
@@ -1601,6 +1660,7 @@ namespace SoG_SGreader
             // 
             // grpCards
             // 
+            this.grpCards.Controls.Add(this.label58);
             this.grpCards.Controls.Add(this.btnSelectAllCards);
             this.grpCards.Controls.Add(this.btnResetCards);
             this.grpCards.Controls.Add(this.btnDeselectAllCards);
@@ -1610,6 +1670,15 @@ namespace SoG_SGreader
             this.grpCards.TabIndex = 6;
             this.grpCards.TabStop = false;
             this.grpCards.Text = "Cards";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(6, 74);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(72, 52);
+            this.label58.TabIndex = 7;
+            this.label58.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllCards
             // 
@@ -1649,6 +1718,78 @@ namespace SoG_SGreader
             this.cblstCards.Size = new System.Drawing.Size(442, 379);
             this.cblstCards.TabIndex = 2;
             // 
+            // tabMaps
+            // 
+            this.tabMaps.Controls.Add(this.grpMaps);
+            this.tabMaps.Controls.Add(this.cblstMaps);
+            this.tabMaps.Location = new System.Drawing.Point(4, 22);
+            this.tabMaps.Name = "tabMaps";
+            this.tabMaps.Padding = new System.Windows.Forms.Padding(3);
+            this.tabMaps.Size = new System.Drawing.Size(559, 396);
+            this.tabMaps.TabIndex = 10;
+            this.tabMaps.Text = "Maps";
+            this.tabMaps.UseVisualStyleBackColor = true;
+            // 
+            // grpMaps
+            // 
+            this.grpMaps.Controls.Add(this.label39);
+            this.grpMaps.Controls.Add(this.btnSelectAllMaps);
+            this.grpMaps.Controls.Add(this.btnResetMaps);
+            this.grpMaps.Controls.Add(this.btnDeselectAllMaps);
+            this.grpMaps.Location = new System.Drawing.Point(454, 6);
+            this.grpMaps.Name = "grpMaps";
+            this.grpMaps.Size = new System.Drawing.Size(97, 379);
+            this.grpMaps.TabIndex = 8;
+            this.grpMaps.TabStop = false;
+            this.grpMaps.Text = "Maps";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(6, 74);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(72, 52);
+            this.label39.TabIndex = 8;
+            this.label39.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
+            // 
+            // btnSelectAllMaps
+            // 
+            this.btnSelectAllMaps.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllMaps.Name = "btnSelectAllMaps";
+            this.btnSelectAllMaps.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllMaps.TabIndex = 3;
+            this.btnSelectAllMaps.Text = "Select all";
+            this.btnSelectAllMaps.UseVisualStyleBackColor = true;
+            this.btnSelectAllMaps.Click += new System.EventHandler(this.btnSelectAllMaps_Click);
+            // 
+            // btnResetMaps
+            // 
+            this.btnResetMaps.Location = new System.Drawing.Point(6, 350);
+            this.btnResetMaps.Name = "btnResetMaps";
+            this.btnResetMaps.Size = new System.Drawing.Size(87, 23);
+            this.btnResetMaps.TabIndex = 5;
+            this.btnResetMaps.Text = "Reset";
+            this.btnResetMaps.UseVisualStyleBackColor = true;
+            this.btnResetMaps.Click += new System.EventHandler(this.btnResetMaps_Click);
+            // 
+            // btnDeselectAllMaps
+            // 
+            this.btnDeselectAllMaps.Location = new System.Drawing.Point(6, 48);
+            this.btnDeselectAllMaps.Name = "btnDeselectAllMaps";
+            this.btnDeselectAllMaps.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllMaps.TabIndex = 4;
+            this.btnDeselectAllMaps.Text = "Deselect all";
+            this.btnDeselectAllMaps.UseVisualStyleBackColor = true;
+            this.btnDeselectAllMaps.Click += new System.EventHandler(this.btnDeselectAllMaps_Click);
+            // 
+            // cblstMaps
+            // 
+            this.cblstMaps.FormattingEnabled = true;
+            this.cblstMaps.Location = new System.Drawing.Point(6, 6);
+            this.cblstMaps.Name = "cblstMaps";
+            this.cblstMaps.Size = new System.Drawing.Size(442, 379);
+            this.cblstMaps.TabIndex = 7;
+            // 
             // tabQuests
             // 
             this.tabQuests.Controls.Add(this.grpQuests);
@@ -1663,6 +1804,7 @@ namespace SoG_SGreader
             // 
             // grpQuests
             // 
+            this.grpQuests.Controls.Add(this.label40);
             this.grpQuests.Controls.Add(this.btnSelectAllQuests);
             this.grpQuests.Controls.Add(this.btnResetQuests);
             this.grpQuests.Controls.Add(this.btnDeselectAllQuests);
@@ -1672,6 +1814,15 @@ namespace SoG_SGreader
             this.grpQuests.TabIndex = 8;
             this.grpQuests.TabStop = false;
             this.grpQuests.Text = "Quests";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(6, 74);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(72, 52);
+            this.label40.TabIndex = 8;
+            this.label40.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllQuests
             // 
@@ -1711,9 +1862,81 @@ namespace SoG_SGreader
             this.cblstQuests.Size = new System.Drawing.Size(442, 379);
             this.cblstQuests.TabIndex = 7;
             // 
+            // tabFlags
+            // 
+            this.tabFlags.Controls.Add(this.grpFlags);
+            this.tabFlags.Controls.Add(this.cblstFlags);
+            this.tabFlags.Location = new System.Drawing.Point(4, 22);
+            this.tabFlags.Name = "tabFlags";
+            this.tabFlags.Padding = new System.Windows.Forms.Padding(3);
+            this.tabFlags.Size = new System.Drawing.Size(559, 396);
+            this.tabFlags.TabIndex = 6;
+            this.tabFlags.Text = "Flags";
+            this.tabFlags.UseVisualStyleBackColor = true;
+            // 
+            // grpFlags
+            // 
+            this.grpFlags.Controls.Add(this.label41);
+            this.grpFlags.Controls.Add(this.btnSelectAllFlags);
+            this.grpFlags.Controls.Add(this.btnResetFlags);
+            this.grpFlags.Controls.Add(this.btnDeselectAllFlags);
+            this.grpFlags.Location = new System.Drawing.Point(454, 6);
+            this.grpFlags.Name = "grpFlags";
+            this.grpFlags.Size = new System.Drawing.Size(97, 379);
+            this.grpFlags.TabIndex = 10;
+            this.grpFlags.TabStop = false;
+            this.grpFlags.Text = "Flags";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(6, 74);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(72, 52);
+            this.label41.TabIndex = 8;
+            this.label41.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
+            // 
+            // btnSelectAllFlags
+            // 
+            this.btnSelectAllFlags.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllFlags.Name = "btnSelectAllFlags";
+            this.btnSelectAllFlags.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllFlags.TabIndex = 3;
+            this.btnSelectAllFlags.Text = "Select all";
+            this.btnSelectAllFlags.UseVisualStyleBackColor = true;
+            this.btnSelectAllFlags.Click += new System.EventHandler(this.btnSelectAllFlags_Click);
+            // 
+            // btnResetFlags
+            // 
+            this.btnResetFlags.Location = new System.Drawing.Point(6, 350);
+            this.btnResetFlags.Name = "btnResetFlags";
+            this.btnResetFlags.Size = new System.Drawing.Size(87, 23);
+            this.btnResetFlags.TabIndex = 5;
+            this.btnResetFlags.Text = "Reset";
+            this.btnResetFlags.UseVisualStyleBackColor = true;
+            this.btnResetFlags.Click += new System.EventHandler(this.btnResetFlags_Click);
+            // 
+            // btnDeselectAllFlags
+            // 
+            this.btnDeselectAllFlags.Location = new System.Drawing.Point(6, 48);
+            this.btnDeselectAllFlags.Name = "btnDeselectAllFlags";
+            this.btnDeselectAllFlags.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllFlags.TabIndex = 4;
+            this.btnDeselectAllFlags.Text = "Deselect all";
+            this.btnDeselectAllFlags.UseVisualStyleBackColor = true;
+            this.btnDeselectAllFlags.Click += new System.EventHandler(this.btnDeselectAllFlags_Click);
+            // 
+            // cblstFlags
+            // 
+            this.cblstFlags.FormattingEnabled = true;
+            this.cblstFlags.Location = new System.Drawing.Point(6, 6);
+            this.cblstFlags.Name = "cblstFlags";
+            this.cblstFlags.Size = new System.Drawing.Size(442, 379);
+            this.cblstFlags.TabIndex = 9;
+            // 
             // tabEnemiesSeen
             // 
-            this.tabEnemiesSeen.Controls.Add(this.groupBox1);
+            this.tabEnemiesSeen.Controls.Add(this.grpEnemiesSeen);
             this.tabEnemiesSeen.Controls.Add(this.cblstEnemiesSeens);
             this.tabEnemiesSeen.Location = new System.Drawing.Point(4, 22);
             this.tabEnemiesSeen.Name = "tabEnemiesSeen";
@@ -1723,17 +1946,27 @@ namespace SoG_SGreader
             this.tabEnemiesSeen.Text = "Enemies seen";
             this.tabEnemiesSeen.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // grpEnemiesSeen
             // 
-            this.groupBox1.Controls.Add(this.btnSelectAllEnemiesSeen);
-            this.groupBox1.Controls.Add(this.btnResetEnemiesSeen);
-            this.groupBox1.Controls.Add(this.btnDeselectAllEnemiesSeen);
-            this.groupBox1.Location = new System.Drawing.Point(454, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(97, 379);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Enemies seen";
+            this.grpEnemiesSeen.Controls.Add(this.label50);
+            this.grpEnemiesSeen.Controls.Add(this.btnSelectAllEnemiesSeen);
+            this.grpEnemiesSeen.Controls.Add(this.btnResetEnemiesSeen);
+            this.grpEnemiesSeen.Controls.Add(this.btnDeselectAllEnemiesSeen);
+            this.grpEnemiesSeen.Location = new System.Drawing.Point(454, 6);
+            this.grpEnemiesSeen.Name = "grpEnemiesSeen";
+            this.grpEnemiesSeen.Size = new System.Drawing.Size(97, 379);
+            this.grpEnemiesSeen.TabIndex = 10;
+            this.grpEnemiesSeen.TabStop = false;
+            this.grpEnemiesSeen.Text = "Enemies seen";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(6, 74);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(72, 52);
+            this.label50.TabIndex = 8;
+            this.label50.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllEnemiesSeen
             // 
@@ -1772,6 +2005,219 @@ namespace SoG_SGreader
             this.cblstEnemiesSeens.Name = "cblstEnemiesSeens";
             this.cblstEnemiesSeens.Size = new System.Drawing.Size(442, 379);
             this.cblstEnemiesSeens.TabIndex = 9;
+            // 
+            // tabTrophies
+            // 
+            this.tabTrophies.Controls.Add(this.grpTrophies);
+            this.tabTrophies.Controls.Add(this.cblstTrophies);
+            this.tabTrophies.Location = new System.Drawing.Point(4, 22);
+            this.tabTrophies.Name = "tabTrophies";
+            this.tabTrophies.Size = new System.Drawing.Size(559, 396);
+            this.tabTrophies.TabIndex = 11;
+            this.tabTrophies.Text = "Trophies";
+            this.tabTrophies.UseVisualStyleBackColor = true;
+            // 
+            // grpTrophies
+            // 
+            this.grpTrophies.Controls.Add(this.label59);
+            this.grpTrophies.Controls.Add(this.btnSelectAllTrophies);
+            this.grpTrophies.Controls.Add(this.btnResetTrophies);
+            this.grpTrophies.Controls.Add(this.btnDeselectAllTrophies);
+            this.grpTrophies.Location = new System.Drawing.Point(454, 6);
+            this.grpTrophies.Name = "grpTrophies";
+            this.grpTrophies.Size = new System.Drawing.Size(97, 379);
+            this.grpTrophies.TabIndex = 12;
+            this.grpTrophies.TabStop = false;
+            this.grpTrophies.Text = "Trophies";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(6, 74);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(72, 52);
+            this.label59.TabIndex = 8;
+            this.label59.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
+            // 
+            // btnSelectAllTrophies
+            // 
+            this.btnSelectAllTrophies.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllTrophies.Name = "btnSelectAllTrophies";
+            this.btnSelectAllTrophies.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllTrophies.TabIndex = 3;
+            this.btnSelectAllTrophies.Text = "Select all";
+            this.btnSelectAllTrophies.UseVisualStyleBackColor = true;
+            this.btnSelectAllTrophies.Click += new System.EventHandler(this.btnSelectAllTrophies_Click);
+            // 
+            // btnResetTrophies
+            // 
+            this.btnResetTrophies.Location = new System.Drawing.Point(6, 350);
+            this.btnResetTrophies.Name = "btnResetTrophies";
+            this.btnResetTrophies.Size = new System.Drawing.Size(87, 23);
+            this.btnResetTrophies.TabIndex = 5;
+            this.btnResetTrophies.Text = "Reset";
+            this.btnResetTrophies.UseVisualStyleBackColor = true;
+            this.btnResetTrophies.Click += new System.EventHandler(this.btnResetTrophies_Click);
+            // 
+            // btnDeselectAllTrophies
+            // 
+            this.btnDeselectAllTrophies.Location = new System.Drawing.Point(6, 48);
+            this.btnDeselectAllTrophies.Name = "btnDeselectAllTrophies";
+            this.btnDeselectAllTrophies.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllTrophies.TabIndex = 4;
+            this.btnDeselectAllTrophies.Text = "Deselect all";
+            this.btnDeselectAllTrophies.UseVisualStyleBackColor = true;
+            this.btnDeselectAllTrophies.Click += new System.EventHandler(this.btnDeselectAllTrophies_Click);
+            // 
+            // cblstTrophies
+            // 
+            this.cblstTrophies.FormattingEnabled = true;
+            this.cblstTrophies.Location = new System.Drawing.Point(6, 6);
+            this.cblstTrophies.Name = "cblstTrophies";
+            this.cblstTrophies.Size = new System.Drawing.Size(442, 379);
+            this.cblstTrophies.TabIndex = 11;
+            // 
+            // tabItemsSeen
+            // 
+            this.tabItemsSeen.Controls.Add(this.grpItemsSeen);
+            this.tabItemsSeen.Controls.Add(this.cblstItemsSeen);
+            this.tabItemsSeen.Location = new System.Drawing.Point(4, 22);
+            this.tabItemsSeen.Name = "tabItemsSeen";
+            this.tabItemsSeen.Size = new System.Drawing.Size(559, 396);
+            this.tabItemsSeen.TabIndex = 12;
+            this.tabItemsSeen.Text = "Items Seen";
+            this.tabItemsSeen.UseVisualStyleBackColor = true;
+            // 
+            // grpItemsSeen
+            // 
+            this.grpItemsSeen.Controls.Add(this.label60);
+            this.grpItemsSeen.Controls.Add(this.btnSelectAllItemsSeen);
+            this.grpItemsSeen.Controls.Add(this.btnResetItemsSeen);
+            this.grpItemsSeen.Controls.Add(this.btnDeselectAllItemsSeen);
+            this.grpItemsSeen.Location = new System.Drawing.Point(454, 6);
+            this.grpItemsSeen.Name = "grpItemsSeen";
+            this.grpItemsSeen.Size = new System.Drawing.Size(97, 379);
+            this.grpItemsSeen.TabIndex = 14;
+            this.grpItemsSeen.TabStop = false;
+            this.grpItemsSeen.Text = "Items Seen";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(6, 74);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(72, 52);
+            this.label60.TabIndex = 8;
+            this.label60.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
+            // 
+            // btnSelectAllItemsSeen
+            // 
+            this.btnSelectAllItemsSeen.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllItemsSeen.Name = "btnSelectAllItemsSeen";
+            this.btnSelectAllItemsSeen.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllItemsSeen.TabIndex = 3;
+            this.btnSelectAllItemsSeen.Text = "Select all";
+            this.btnSelectAllItemsSeen.UseVisualStyleBackColor = true;
+            this.btnSelectAllItemsSeen.Click += new System.EventHandler(this.btnSelectAllItemsSeen_Click);
+            // 
+            // btnResetItemsSeen
+            // 
+            this.btnResetItemsSeen.Location = new System.Drawing.Point(6, 350);
+            this.btnResetItemsSeen.Name = "btnResetItemsSeen";
+            this.btnResetItemsSeen.Size = new System.Drawing.Size(87, 23);
+            this.btnResetItemsSeen.TabIndex = 5;
+            this.btnResetItemsSeen.Text = "Reset";
+            this.btnResetItemsSeen.UseVisualStyleBackColor = true;
+            this.btnResetItemsSeen.Click += new System.EventHandler(this.btnResetItemsSeen_Click);
+            // 
+            // btnDeselectAllItemsSeen
+            // 
+            this.btnDeselectAllItemsSeen.Location = new System.Drawing.Point(6, 48);
+            this.btnDeselectAllItemsSeen.Name = "btnDeselectAllItemsSeen";
+            this.btnDeselectAllItemsSeen.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllItemsSeen.TabIndex = 4;
+            this.btnDeselectAllItemsSeen.Text = "Deselect all";
+            this.btnDeselectAllItemsSeen.UseVisualStyleBackColor = true;
+            this.btnDeselectAllItemsSeen.Click += new System.EventHandler(this.btnDeselectAllItemsSeen_Click);
+            // 
+            // cblstItemsSeen
+            // 
+            this.cblstItemsSeen.FormattingEnabled = true;
+            this.cblstItemsSeen.Location = new System.Drawing.Point(6, 6);
+            this.cblstItemsSeen.Name = "cblstItemsSeen";
+            this.cblstItemsSeen.Size = new System.Drawing.Size(442, 379);
+            this.cblstItemsSeen.TabIndex = 13;
+            // 
+            // tabItemsCrafted
+            // 
+            this.tabItemsCrafted.Controls.Add(this.groupBox1);
+            this.tabItemsCrafted.Controls.Add(this.cblstItemsCrafted);
+            this.tabItemsCrafted.Location = new System.Drawing.Point(4, 22);
+            this.tabItemsCrafted.Name = "tabItemsCrafted";
+            this.tabItemsCrafted.Size = new System.Drawing.Size(559, 396);
+            this.tabItemsCrafted.TabIndex = 13;
+            this.tabItemsCrafted.Text = "Items Crafted";
+            this.tabItemsCrafted.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label61);
+            this.groupBox1.Controls.Add(this.btnSelectAllItemsCrafted);
+            this.groupBox1.Controls.Add(this.btnResetItemsCrafted);
+            this.groupBox1.Controls.Add(this.btnDeselectAllItemsCrafted);
+            this.groupBox1.Location = new System.Drawing.Point(454, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(97, 379);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Items Crafted";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(6, 74);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(72, 52);
+            this.label61.TabIndex = 8;
+            this.label61.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
+            // 
+            // btnSelectAllItemsCrafted
+            // 
+            this.btnSelectAllItemsCrafted.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllItemsCrafted.Name = "btnSelectAllItemsCrafted";
+            this.btnSelectAllItemsCrafted.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllItemsCrafted.TabIndex = 3;
+            this.btnSelectAllItemsCrafted.Text = "Select all";
+            this.btnSelectAllItemsCrafted.UseVisualStyleBackColor = true;
+            this.btnSelectAllItemsCrafted.Click += new System.EventHandler(this.btnSelectAllItemsCrafted_Click);
+            // 
+            // btnResetItemsCrafted
+            // 
+            this.btnResetItemsCrafted.Location = new System.Drawing.Point(6, 350);
+            this.btnResetItemsCrafted.Name = "btnResetItemsCrafted";
+            this.btnResetItemsCrafted.Size = new System.Drawing.Size(87, 23);
+            this.btnResetItemsCrafted.TabIndex = 5;
+            this.btnResetItemsCrafted.Text = "Reset";
+            this.btnResetItemsCrafted.UseVisualStyleBackColor = true;
+            this.btnResetItemsCrafted.Click += new System.EventHandler(this.btnResetItemsCrafted_Click);
+            // 
+            // btnDeselectAllItemsCrafted
+            // 
+            this.btnDeselectAllItemsCrafted.Location = new System.Drawing.Point(6, 48);
+            this.btnDeselectAllItemsCrafted.Name = "btnDeselectAllItemsCrafted";
+            this.btnDeselectAllItemsCrafted.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllItemsCrafted.TabIndex = 4;
+            this.btnDeselectAllItemsCrafted.Text = "Deselect all";
+            this.btnDeselectAllItemsCrafted.UseVisualStyleBackColor = true;
+            this.btnDeselectAllItemsCrafted.Click += new System.EventHandler(this.btnDeselectAllItemsCrafted_Click);
+            // 
+            // cblstItemsCrafted
+            // 
+            this.cblstItemsCrafted.FormattingEnabled = true;
+            this.cblstItemsCrafted.Location = new System.Drawing.Point(6, 6);
+            this.cblstItemsCrafted.Name = "cblstItemsCrafted";
+            this.cblstItemsCrafted.Size = new System.Drawing.Size(442, 379);
+            this.cblstItemsCrafted.TabIndex = 15;
             // 
             // tabQuickslots
             // 
@@ -2796,28 +3242,6 @@ namespace SoG_SGreader
             this.tabTalentsMagic.Text = "Talents: Magic";
             this.tabTalentsMagic.UseVisualStyleBackColor = true;
             // 
-            // tabTreasureMaps
-            // 
-            this.tabTreasureMaps.Controls.Add(this.label41);
-            this.tabTreasureMaps.Location = new System.Drawing.Point(4, 22);
-            this.tabTreasureMaps.Name = "tabTreasureMaps";
-            this.tabTreasureMaps.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTreasureMaps.Size = new System.Drawing.Size(559, 396);
-            this.tabTreasureMaps.TabIndex = 6;
-            this.tabTreasureMaps.Text = "*Treasure Maps";
-            this.tabTreasureMaps.UseVisualStyleBackColor = true;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.BackColor = System.Drawing.Color.Transparent;
-            this.label41.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label41.Location = new System.Drawing.Point(6, 3);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(117, 13);
-            this.label41.TabIndex = 31;
-            this.label41.Text = "* = not yet implemented";
-            // 
             // msMenu
             // 
             this.msMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -2936,6 +3360,77 @@ namespace SoG_SGreader
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.PictureBox3_Click);
             // 
+            // tabFishCaught
+            // 
+            this.tabFishCaught.Controls.Add(this.groupBox2);
+            this.tabFishCaught.Controls.Add(this.cblstFishCaught);
+            this.tabFishCaught.Location = new System.Drawing.Point(4, 22);
+            this.tabFishCaught.Name = "tabFishCaught";
+            this.tabFishCaught.Size = new System.Drawing.Size(559, 396);
+            this.tabFishCaught.TabIndex = 14;
+            this.tabFishCaught.Text = "Fish Caught";
+            this.tabFishCaught.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label62);
+            this.groupBox2.Controls.Add(this.btnSelectAllFishCaught);
+            this.groupBox2.Controls.Add(this.btnResetFishCaught);
+            this.groupBox2.Controls.Add(this.btnDeselectAllFishCaught);
+            this.groupBox2.Location = new System.Drawing.Point(454, 6);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(97, 379);
+            this.groupBox2.TabIndex = 18;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Fish Caught";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Location = new System.Drawing.Point(6, 74);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(72, 52);
+            this.label62.TabIndex = 8;
+            this.label62.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
+            // 
+            // btnSelectAllFishCaught
+            // 
+            this.btnSelectAllFishCaught.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllFishCaught.Name = "btnSelectAllFishCaught";
+            this.btnSelectAllFishCaught.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllFishCaught.TabIndex = 3;
+            this.btnSelectAllFishCaught.Text = "Select all";
+            this.btnSelectAllFishCaught.UseVisualStyleBackColor = true;
+            this.btnSelectAllFishCaught.Click += new System.EventHandler(this.btnSelectAllFishCaught_Click);
+            // 
+            // btnResetFishCaught
+            // 
+            this.btnResetFishCaught.Location = new System.Drawing.Point(6, 350);
+            this.btnResetFishCaught.Name = "btnResetFishCaught";
+            this.btnResetFishCaught.Size = new System.Drawing.Size(87, 23);
+            this.btnResetFishCaught.TabIndex = 5;
+            this.btnResetFishCaught.Text = "Reset";
+            this.btnResetFishCaught.UseVisualStyleBackColor = true;
+            this.btnResetFishCaught.Click += new System.EventHandler(this.btnResetFishCaught_Click);
+            // 
+            // btnDeselectAllFishCaught
+            // 
+            this.btnDeselectAllFishCaught.Location = new System.Drawing.Point(6, 48);
+            this.btnDeselectAllFishCaught.Name = "btnDeselectAllFishCaught";
+            this.btnDeselectAllFishCaught.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllFishCaught.TabIndex = 4;
+            this.btnDeselectAllFishCaught.Text = "Deselect all";
+            this.btnDeselectAllFishCaught.UseVisualStyleBackColor = true;
+            this.btnDeselectAllFishCaught.Click += new System.EventHandler(this.btnDeselectAllFishCaught_Click);
+            // 
+            // cblstFishCaught
+            // 
+            this.cblstFishCaught.FormattingEnabled = true;
+            this.cblstFishCaught.Location = new System.Drawing.Point(6, 6);
+            this.cblstFishCaught.Name = "cblstFishCaught";
+            this.cblstFishCaught.Size = new System.Drawing.Size(442, 379);
+            this.cblstFishCaught.TabIndex = 17;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2944,14 +3439,14 @@ namespace SoG_SGreader
             this.ClientSize = new System.Drawing.Size(567, 570);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txtConsole);
-            this.Controls.Add(this.grpEnemiesSeen);
+            this.Controls.Add(this.tabs);
             this.Controls.Add(this.msMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenu;
             this.Name = "FrmMain";
             this.Text = "SoG: Savegame Editor v16.9.30803.129 by tolik518";
             this.Load += new System.EventHandler(this.FrmMain_Load);
-            this.grpEnemiesSeen.ResumeLayout(false);
+            this.tabs.ResumeLayout(false);
             this.tabChar.ResumeLayout(false);
             this.tabChar.PerformLayout();
             this.grpPatch.ResumeLayout(false);
@@ -2995,10 +3490,28 @@ namespace SoG_SGreader
             ((System.ComponentModel.ISupportInitialize)(this.numPetHP)).EndInit();
             this.tabCards.ResumeLayout(false);
             this.grpCards.ResumeLayout(false);
+            this.grpCards.PerformLayout();
+            this.tabMaps.ResumeLayout(false);
+            this.grpMaps.ResumeLayout(false);
+            this.grpMaps.PerformLayout();
             this.tabQuests.ResumeLayout(false);
             this.grpQuests.ResumeLayout(false);
+            this.grpQuests.PerformLayout();
+            this.tabFlags.ResumeLayout(false);
+            this.grpFlags.ResumeLayout(false);
+            this.grpFlags.PerformLayout();
             this.tabEnemiesSeen.ResumeLayout(false);
+            this.grpEnemiesSeen.ResumeLayout(false);
+            this.grpEnemiesSeen.PerformLayout();
+            this.tabTrophies.ResumeLayout(false);
+            this.grpTrophies.ResumeLayout(false);
+            this.grpTrophies.PerformLayout();
+            this.tabItemsSeen.ResumeLayout(false);
+            this.grpItemsSeen.ResumeLayout(false);
+            this.grpItemsSeen.PerformLayout();
+            this.tabItemsCrafted.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tabQuickslots.ResumeLayout(false);
             this.tabQuickslots.PerformLayout();
             this.grpQuickslots.ResumeLayout(false);
@@ -3088,11 +3601,12 @@ namespace SoG_SGreader
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityO2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
-            this.tabTreasureMaps.ResumeLayout(false);
-            this.tabTreasureMaps.PerformLayout();
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.tabFishCaught.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3100,7 +3614,7 @@ namespace SoG_SGreader
 
         #endregion
 
-        private System.Windows.Forms.TabControl grpEnemiesSeen;
+        private System.Windows.Forms.TabControl tabs;
         private System.Windows.Forms.TabPage tabQuickslots;
         private System.Windows.Forms.MenuStrip msMenu;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
@@ -3153,7 +3667,7 @@ namespace SoG_SGreader
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabEnemiesSeen;
         private System.Windows.Forms.TabPage tabCards;
-        private System.Windows.Forms.TabPage tabTreasureMaps;
+        private System.Windows.Forms.TabPage tabFlags;
         private System.Windows.Forms.GroupBox grpLevel;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
@@ -3198,7 +3712,6 @@ namespace SoG_SGreader
         private System.Windows.Forms.ComboBox cbStyleFacegear;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox cbStyleWeapon;
-        private System.Windows.Forms.Label label41;
         private System.Windows.Forms.TabPage tabPets;
         private System.Windows.Forms.ListView lstPets;
         private System.Windows.Forms.ColumnHeader Level;
@@ -3337,10 +3850,54 @@ namespace SoG_SGreader
         private Button btnDeselectAllQuests;
         private CheckedListBox cblstQuests;
         private ToolStripMenuItem openSavegameFolderToolStripMenuItem;
-        private GroupBox groupBox1;
+        private GroupBox grpEnemiesSeen;
         private Button btnSelectAllEnemiesSeen;
         private Button btnResetEnemiesSeen;
         private Button btnDeselectAllEnemiesSeen;
         private CheckedListBox cblstEnemiesSeens;
+        private GroupBox grpFlags;
+        private Button btnSelectAllFlags;
+        private Button btnResetFlags;
+        private Button btnDeselectAllFlags;
+        private CheckedListBox cblstFlags;
+        private TabPage tabMaps;
+        private GroupBox grpMaps;
+        private Button btnSelectAllMaps;
+        private Button btnResetMaps;
+        private Button btnDeselectAllMaps;
+        private CheckedListBox cblstMaps;
+        private Label label58;
+        private Label label39;
+        private Label label40;
+        private Label label41;
+        private Label label50;
+        private TabPage tabTrophies;
+        private GroupBox grpTrophies;
+        private Label label59;
+        private Button btnSelectAllTrophies;
+        private Button btnResetTrophies;
+        private Button btnDeselectAllTrophies;
+        private CheckedListBox cblstTrophies;
+        private TabPage tabItemsSeen;
+        private GroupBox grpItemsSeen;
+        private Label label60;
+        private Button btnSelectAllItemsSeen;
+        private Button btnResetItemsSeen;
+        private Button btnDeselectAllItemsSeen;
+        private CheckedListBox cblstItemsSeen;
+        private TabPage tabItemsCrafted;
+        private GroupBox groupBox1;
+        private Label label61;
+        private Button btnSelectAllItemsCrafted;
+        private Button btnResetItemsCrafted;
+        private Button btnDeselectAllItemsCrafted;
+        private CheckedListBox cblstItemsCrafted;
+        private TabPage tabFishCaught;
+        private GroupBox groupBox2;
+        private Label label62;
+        private Button btnSelectAllFishCaught;
+        private Button btnResetFishCaught;
+        private Button btnDeselectAllFishCaught;
+        private CheckedListBox cblstFishCaught;
     }
 }
