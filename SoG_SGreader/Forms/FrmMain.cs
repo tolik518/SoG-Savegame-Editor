@@ -10,7 +10,7 @@ namespace SoG_SGreader
 {
     public partial class FrmMain : Form
     {
-        public static readonly string SupportedPatch = "0.99xx";
+        public static readonly string SupportedPatch = "1.00";
         public string InstalledGamePatch = "";
         private Player playerObject;
         private readonly ComboBox[] cbQuickslot = new ComboBox[10];
@@ -714,7 +714,7 @@ namespace SoG_SGreader
                     }
                 }
             }
-            ActiveControl = label1; //workarround so the button won't be highlighted anymore
+            ActiveControl = lblHair; //workarround so the button won't be highlighted anymore
         }
 
         private void LstPets_SelectedIndexChanged(object sender, EventArgs e)

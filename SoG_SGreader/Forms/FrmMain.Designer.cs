@@ -34,7 +34,7 @@ namespace SoG_SGreader
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
-            this.tabs = new System.Windows.Forms.TabControl();
+            this.lblTrophiesNullWarning = new System.Windows.Forms.TabControl();
             this.tabChar = new System.Windows.Forms.TabPage();
             this.grpPatch = new System.Windows.Forms.GroupBox();
             this.lblGamePatch = new System.Windows.Forms.Label();
@@ -44,24 +44,24 @@ namespace SoG_SGreader
             this.rbFemale = new System.Windows.Forms.RadioButton();
             this.lblGender = new System.Windows.Forms.Label();
             this.rbMale = new System.Windows.Forms.RadioButton();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
+            this.lblTimePlayed = new System.Windows.Forms.Label();
+            this.lblCollectorId = new System.Windows.Forms.Label();
             this.txtNickname = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblBirthday = new System.Windows.Forms.Label();
             this.numBirtdayMonth = new System.Windows.Forms.NumericUpDown();
             this.numBirthdayDay = new System.Windows.Forms.NumericUpDown();
             this.txtTimePlayed = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
             this.grpEquipped = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblAccessory2 = new System.Windows.Forms.Label();
+            this.lblAccessory1 = new System.Windows.Forms.Label();
+            this.lblShoes = new System.Windows.Forms.Label();
+            this.lblArmor = new System.Windows.Forms.Label();
+            this.lblShield = new System.Windows.Forms.Label();
+            this.lblWeapon = new System.Windows.Forms.Label();
+            this.lblFacegear = new System.Windows.Forms.Label();
+            this.lblHat = new System.Windows.Forms.Label();
             this.cbAccessory2 = new System.Windows.Forms.ComboBox();
             this.cbAccessory1 = new System.Windows.Forms.ComboBox();
             this.cbShoes = new System.Windows.Forms.ComboBox();
@@ -71,48 +71,48 @@ namespace SoG_SGreader
             this.cbFacegear = new System.Windows.Forms.ComboBox();
             this.cbHat = new System.Windows.Forms.ComboBox();
             this.grpEquippedStyle = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblEqShield = new System.Windows.Forms.Label();
             this.cbStyleShield = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblEqWeapon = new System.Windows.Forms.Label();
             this.cbStyleHat = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lblEqFacegear = new System.Windows.Forms.Label();
             this.cbStyleFacegear = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lblEqHat = new System.Windows.Forms.Label();
             this.cbStyleWeapon = new System.Windows.Forms.ComboBox();
             this.grpSkillpoints = new System.Windows.Forms.GroupBox();
             this.numSkillTalentPoints = new System.Windows.Forms.NumericUpDown();
-            this.label36 = new System.Windows.Forms.Label();
+            this.lblGoldPoints = new System.Windows.Forms.Label();
             this.numSkillSilverPoints = new System.Windows.Forms.NumericUpDown();
             this.numSkillGoldPoints = new System.Windows.Forms.NumericUpDown();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
+            this.lblSilverPoints = new System.Windows.Forms.Label();
+            this.lblTalentPoints = new System.Windows.Forms.Label();
             this.grpLevel = new System.Windows.Forms.GroupBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
+            this.lblExpUnknown1 = new System.Windows.Forms.Label();
+            this.lblExpUnknown0 = new System.Windows.Forms.Label();
+            this.lblCurrectExp = new System.Windows.Forms.Label();
+            this.lblLevel = new System.Windows.Forms.Label();
             this.numEXPUnknown1 = new System.Windows.Forms.NumericUpDown();
             this.numEXPUnknown0 = new System.Windows.Forms.NumericUpDown();
             this.numEXPcurrent = new System.Windows.Forms.NumericUpDown();
             this.numLevel = new System.Windows.Forms.NumericUpDown();
             this.grpColors = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblPants = new System.Windows.Forms.Label();
+            this.lblShirt = new System.Windows.Forms.Label();
+            this.lblPoncho = new System.Windows.Forms.Label();
+            this.lblSkin = new System.Windows.Forms.Label();
             this.btnPantsColor = new System.Windows.Forms.Button();
             this.btnShirtColor = new System.Windows.Forms.Button();
             this.btnPonchoColor = new System.Windows.Forms.Button();
             this.btnSkinColor = new System.Windows.Forms.Button();
             this.btnHairColor = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblHair = new System.Windows.Forms.Label();
             this.tabInventory = new System.Windows.Forms.TabPage();
             this.numGold = new System.Windows.Forms.NumericUpDown();
-            this.label37 = new System.Windows.Forms.Label();
+            this.lblGold = new System.Windows.Forms.Label();
             this.grpItem = new System.Windows.Forms.GroupBox();
             this.btnDeleteSelectedItem = new System.Windows.Forms.Button();
             this.btnAddItem = new System.Windows.Forms.Button();
-            this.label28 = new System.Windows.Forms.Label();
+            this.lblItemCount = new System.Windows.Forms.Label();
             this.numItemCount = new System.Windows.Forms.NumericUpDown();
             this.cbSelectedItem = new System.Windows.Forms.ComboBox();
             this.lstInventory = new System.Windows.Forms.ListView();
@@ -130,16 +130,16 @@ namespace SoG_SGreader
             this.Speed = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.grpPet = new System.Windows.Forms.GroupBox();
             this.cbPetType = new System.Windows.Forms.ComboBox();
-            this.label52 = new System.Windows.Forms.Label();
+            this.lblPetType = new System.Windows.Forms.Label();
             this.numPetLevel = new System.Windows.Forms.NumericUpDown();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
+            this.lblPetLevel = new System.Windows.Forms.Label();
+            this.lblPetSpeed = new System.Windows.Forms.Label();
+            this.lblPetCrit = new System.Windows.Forms.Label();
+            this.lblPetDamage = new System.Windows.Forms.Label();
+            this.lblPetEnergy = new System.Windows.Forms.Label();
+            this.lblPetNickname = new System.Windows.Forms.Label();
             this.txtPetNickname = new System.Windows.Forms.TextBox();
-            this.label43 = new System.Windows.Forms.Label();
+            this.lblPetHealth = new System.Windows.Forms.Label();
             this.numPetSpeed = new System.Windows.Forms.NumericUpDown();
             this.numPetCrit = new System.Windows.Forms.NumericUpDown();
             this.numPetDamage = new System.Windows.Forms.NumericUpDown();
@@ -147,21 +147,21 @@ namespace SoG_SGreader
             this.numPetHP = new System.Windows.Forms.NumericUpDown();
             this.tabCards = new System.Windows.Forms.TabPage();
             this.grpCards = new System.Windows.Forms.GroupBox();
-            this.label58 = new System.Windows.Forms.Label();
+            this.lblCardsNullWarning = new System.Windows.Forms.Label();
             this.btnSelectAllCards = new System.Windows.Forms.Button();
             this.btnResetCards = new System.Windows.Forms.Button();
             this.btnDeselectAllCards = new System.Windows.Forms.Button();
             this.cblstCards = new System.Windows.Forms.CheckedListBox();
             this.tabMaps = new System.Windows.Forms.TabPage();
             this.grpMaps = new System.Windows.Forms.GroupBox();
-            this.label39 = new System.Windows.Forms.Label();
+            this.lblMapsNullWarning = new System.Windows.Forms.Label();
             this.btnSelectAllMaps = new System.Windows.Forms.Button();
             this.btnResetMaps = new System.Windows.Forms.Button();
             this.btnDeselectAllMaps = new System.Windows.Forms.Button();
             this.cblstMaps = new System.Windows.Forms.CheckedListBox();
             this.tabQuests = new System.Windows.Forms.TabPage();
             this.grpQuests = new System.Windows.Forms.GroupBox();
-            this.label40 = new System.Windows.Forms.Label();
+            this.lblQuestsNullWarning = new System.Windows.Forms.Label();
             this.btnSelectAllQuests = new System.Windows.Forms.Button();
             this.btnResetQuests = new System.Windows.Forms.Button();
             this.btnDeselectAllQuests = new System.Windows.Forms.Button();
@@ -183,28 +183,28 @@ namespace SoG_SGreader
             this.cblstTrophies = new System.Windows.Forms.CheckedListBox();
             this.tabFishCaught = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label62 = new System.Windows.Forms.Label();
+            this.lblFishNullWarning = new System.Windows.Forms.Label();
             this.btnSelectAllFishCaught = new System.Windows.Forms.Button();
             this.btnResetFishCaught = new System.Windows.Forms.Button();
             this.btnDeselectAllFishCaught = new System.Windows.Forms.Button();
             this.cblstFishCaught = new System.Windows.Forms.CheckedListBox();
             this.tabEnemiesSeen = new System.Windows.Forms.TabPage();
             this.grpEnemiesSeen = new System.Windows.Forms.GroupBox();
-            this.label50 = new System.Windows.Forms.Label();
+            this.lblEnemiesSeenNullWarning = new System.Windows.Forms.Label();
             this.btnSelectAllEnemiesSeen = new System.Windows.Forms.Button();
             this.btnResetEnemiesSeen = new System.Windows.Forms.Button();
             this.btnDeselectAllEnemiesSeen = new System.Windows.Forms.Button();
             this.cblstEnemiesSeens = new System.Windows.Forms.CheckedListBox();
             this.tabItemsSeen = new System.Windows.Forms.TabPage();
             this.grpItemsSeen = new System.Windows.Forms.GroupBox();
-            this.label60 = new System.Windows.Forms.Label();
+            this.lblItemsSeenNullWarning = new System.Windows.Forms.Label();
             this.btnSelectAllItemsSeen = new System.Windows.Forms.Button();
             this.btnResetItemsSeen = new System.Windows.Forms.Button();
             this.btnDeselectAllItemsSeen = new System.Windows.Forms.Button();
             this.cblstItemsSeen = new System.Windows.Forms.CheckedListBox();
             this.tabItemsCrafted = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label61 = new System.Windows.Forms.Label();
+            this.lblItemsCraftedNullWarning = new System.Windows.Forms.Label();
             this.btnSelectAllItemsCrafted = new System.Windows.Forms.Button();
             this.btnResetItemsCrafted = new System.Windows.Forms.Button();
             this.btnDeselectAllItemsCrafted = new System.Windows.Forms.Button();
@@ -317,7 +317,9 @@ namespace SoG_SGreader
             this.txtConsole = new System.Windows.Forms.TextBox();
             this.Tooltips = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.tabs.SuspendLayout();
+            this.lblFlagsChaningNoEffect = new System.Windows.Forms.Label();
+            this.lblQuestsChaningNoEffect = new System.Windows.Forms.Label();
+            this.lblTrophiesNullWarning.SuspendLayout();
             this.tabChar.SuspendLayout();
             this.grpPatch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numID)).BeginInit();
@@ -448,30 +450,30 @@ namespace SoG_SGreader
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabs
+            // lblTrophiesNullWarning
             // 
-            this.tabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblTrophiesNullWarning.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabs.Controls.Add(this.tabChar);
-            this.tabs.Controls.Add(this.tabInventory);
-            this.tabs.Controls.Add(this.tabPets);
-            this.tabs.Controls.Add(this.tabCards);
-            this.tabs.Controls.Add(this.tabMaps);
-            this.tabs.Controls.Add(this.tabQuests);
-            this.tabs.Controls.Add(this.tabFlags);
-            this.tabs.Controls.Add(this.tabTrophies);
-            this.tabs.Controls.Add(this.tabFishCaught);
-            this.tabs.Controls.Add(this.tabEnemiesSeen);
-            this.tabs.Controls.Add(this.tabItemsSeen);
-            this.tabs.Controls.Add(this.tabItemsCrafted);
-            this.tabs.Controls.Add(this.tabQuickslots);
-            this.tabs.Controls.Add(this.tabSkills);
-            this.tabs.Location = new System.Drawing.Point(0, 24);
-            this.tabs.Name = "tabs";
-            this.tabs.SelectedIndex = 0;
-            this.tabs.Size = new System.Drawing.Size(567, 422);
-            this.tabs.TabIndex = 0;
+            this.lblTrophiesNullWarning.Controls.Add(this.tabChar);
+            this.lblTrophiesNullWarning.Controls.Add(this.tabInventory);
+            this.lblTrophiesNullWarning.Controls.Add(this.tabPets);
+            this.lblTrophiesNullWarning.Controls.Add(this.tabCards);
+            this.lblTrophiesNullWarning.Controls.Add(this.tabMaps);
+            this.lblTrophiesNullWarning.Controls.Add(this.tabQuests);
+            this.lblTrophiesNullWarning.Controls.Add(this.tabFlags);
+            this.lblTrophiesNullWarning.Controls.Add(this.tabTrophies);
+            this.lblTrophiesNullWarning.Controls.Add(this.tabFishCaught);
+            this.lblTrophiesNullWarning.Controls.Add(this.tabEnemiesSeen);
+            this.lblTrophiesNullWarning.Controls.Add(this.tabItemsSeen);
+            this.lblTrophiesNullWarning.Controls.Add(this.tabItemsCrafted);
+            this.lblTrophiesNullWarning.Controls.Add(this.tabQuickslots);
+            this.lblTrophiesNullWarning.Controls.Add(this.tabSkills);
+            this.lblTrophiesNullWarning.Location = new System.Drawing.Point(0, 24);
+            this.lblTrophiesNullWarning.Name = "lblTrophiesNullWarning";
+            this.lblTrophiesNullWarning.SelectedIndex = 0;
+            this.lblTrophiesNullWarning.Size = new System.Drawing.Size(567, 422);
+            this.lblTrophiesNullWarning.TabIndex = 0;
             // 
             // tabChar
             // 
@@ -517,9 +519,9 @@ namespace SoG_SGreader
             this.label55.AutoSize = true;
             this.label55.Location = new System.Drawing.Point(13, 99);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(71, 13);
+            this.label55.Size = new System.Drawing.Size(65, 13);
             this.label55.TabIndex = 0;
-            this.label55.Text = "[Patch 0.99g]";
+            this.label55.Text = "[Patch 1.00]";
             // 
             // numID
             // 
@@ -538,11 +540,11 @@ namespace SoG_SGreader
             this.grpGeneral.Controls.Add(this.rbFemale);
             this.grpGeneral.Controls.Add(this.lblGender);
             this.grpGeneral.Controls.Add(this.rbMale);
-            this.grpGeneral.Controls.Add(this.label51);
-            this.grpGeneral.Controls.Add(this.label54);
+            this.grpGeneral.Controls.Add(this.lblTimePlayed);
+            this.grpGeneral.Controls.Add(this.lblCollectorId);
             this.grpGeneral.Controls.Add(this.txtNickname);
-            this.grpGeneral.Controls.Add(this.label29);
-            this.grpGeneral.Controls.Add(this.label53);
+            this.grpGeneral.Controls.Add(this.lblName);
+            this.grpGeneral.Controls.Add(this.lblBirthday);
             this.grpGeneral.Controls.Add(this.numBirtdayMonth);
             this.grpGeneral.Controls.Add(this.numBirthdayDay);
             this.grpGeneral.Controls.Add(this.txtTimePlayed);
@@ -587,24 +589,24 @@ namespace SoG_SGreader
             this.rbMale.Text = "♂";
             this.rbMale.UseVisualStyleBackColor = true;
             // 
-            // label51
+            // lblTimePlayed
             // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(5, 75);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(67, 13);
-            this.label51.TabIndex = 44;
-            this.label51.Text = "Time played:";
-            this.Tooltips.SetToolTip(this.label51, "D:HH:MM:SS");
+            this.lblTimePlayed.AutoSize = true;
+            this.lblTimePlayed.Location = new System.Drawing.Point(5, 75);
+            this.lblTimePlayed.Name = "lblTimePlayed";
+            this.lblTimePlayed.Size = new System.Drawing.Size(67, 13);
+            this.lblTimePlayed.TabIndex = 44;
+            this.lblTimePlayed.Text = "Time played:";
+            this.Tooltips.SetToolTip(this.lblTimePlayed, "D:HH:MM:SS");
             // 
-            // label54
+            // lblCollectorId
             // 
-            this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(5, 48);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(65, 13);
-            this.label54.TabIndex = 51;
-            this.label54.Text = "Collector ID:";
+            this.lblCollectorId.AutoSize = true;
+            this.lblCollectorId.Location = new System.Drawing.Point(5, 48);
+            this.lblCollectorId.Name = "lblCollectorId";
+            this.lblCollectorId.Size = new System.Drawing.Size(65, 13);
+            this.lblCollectorId.TabIndex = 51;
+            this.lblCollectorId.Text = "Collector ID:";
             // 
             // txtNickname
             // 
@@ -614,24 +616,24 @@ namespace SoG_SGreader
             this.txtNickname.TabIndex = 34;
             this.txtNickname.Text = "tolik518";
             // 
-            // label29
+            // lblName
             // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(5, 22);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(38, 13);
-            this.label29.TabIndex = 35;
-            this.label29.Text = "Name:";
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(5, 22);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(38, 13);
+            this.lblName.TabIndex = 35;
+            this.lblName.Text = "Name:";
             // 
-            // label53
+            // lblBirthday
             // 
-            this.label53.AutoSize = true;
-            this.label53.Location = new System.Drawing.Point(5, 100);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(48, 13);
-            this.label53.TabIndex = 49;
-            this.label53.Text = "Birthday:";
-            this.Tooltips.SetToolTip(this.label53, "Day / Month");
+            this.lblBirthday.AutoSize = true;
+            this.lblBirthday.Location = new System.Drawing.Point(5, 100);
+            this.lblBirthday.Name = "lblBirthday";
+            this.lblBirthday.Size = new System.Drawing.Size(48, 13);
+            this.lblBirthday.TabIndex = 49;
+            this.lblBirthday.Text = "Birthday:";
+            this.Tooltips.SetToolTip(this.lblBirthday, "Day / Month");
             // 
             // numBirtdayMonth
             // 
@@ -690,14 +692,14 @@ namespace SoG_SGreader
             // 
             // grpEquipped
             // 
-            this.grpEquipped.Controls.Add(this.label10);
-            this.grpEquipped.Controls.Add(this.label9);
-            this.grpEquipped.Controls.Add(this.label8);
-            this.grpEquipped.Controls.Add(this.label7);
-            this.grpEquipped.Controls.Add(this.label6);
-            this.grpEquipped.Controls.Add(this.label11);
-            this.grpEquipped.Controls.Add(this.label12);
-            this.grpEquipped.Controls.Add(this.label13);
+            this.grpEquipped.Controls.Add(this.lblAccessory2);
+            this.grpEquipped.Controls.Add(this.lblAccessory1);
+            this.grpEquipped.Controls.Add(this.lblShoes);
+            this.grpEquipped.Controls.Add(this.lblArmor);
+            this.grpEquipped.Controls.Add(this.lblShield);
+            this.grpEquipped.Controls.Add(this.lblWeapon);
+            this.grpEquipped.Controls.Add(this.lblFacegear);
+            this.grpEquipped.Controls.Add(this.lblHat);
             this.grpEquipped.Controls.Add(this.cbAccessory2);
             this.grpEquipped.Controls.Add(this.cbAccessory1);
             this.grpEquipped.Controls.Add(this.cbShoes);
@@ -713,77 +715,77 @@ namespace SoG_SGreader
             this.grpEquipped.TabStop = false;
             this.grpEquipped.Text = "Equipped Gear";
             // 
-            // label10
+            // lblAccessory2
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(7, 211);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 13);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "Accessory 2:";
+            this.lblAccessory2.AutoSize = true;
+            this.lblAccessory2.Location = new System.Drawing.Point(7, 211);
+            this.lblAccessory2.Name = "lblAccessory2";
+            this.lblAccessory2.Size = new System.Drawing.Size(68, 13);
+            this.lblAccessory2.TabIndex = 22;
+            this.lblAccessory2.Text = "Accessory 2:";
             // 
-            // label9
+            // lblAccessory1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(7, 184);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 13);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "Accessory 1:";
+            this.lblAccessory1.AutoSize = true;
+            this.lblAccessory1.Location = new System.Drawing.Point(7, 184);
+            this.lblAccessory1.Name = "lblAccessory1";
+            this.lblAccessory1.Size = new System.Drawing.Size(68, 13);
+            this.lblAccessory1.TabIndex = 21;
+            this.lblAccessory1.Text = "Accessory 1:";
             // 
-            // label8
+            // lblShoes
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 157);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 13);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Shoes:";
+            this.lblShoes.AutoSize = true;
+            this.lblShoes.Location = new System.Drawing.Point(7, 157);
+            this.lblShoes.Name = "lblShoes";
+            this.lblShoes.Size = new System.Drawing.Size(40, 13);
+            this.lblShoes.TabIndex = 20;
+            this.lblShoes.Text = "Shoes:";
             // 
-            // label7
+            // lblArmor
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 130);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 13);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Armor:";
+            this.lblArmor.AutoSize = true;
+            this.lblArmor.Location = new System.Drawing.Point(7, 130);
+            this.lblArmor.Name = "lblArmor";
+            this.lblArmor.Size = new System.Drawing.Size(37, 13);
+            this.lblArmor.TabIndex = 19;
+            this.lblArmor.Text = "Armor:";
             // 
-            // label6
+            // lblShield
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(7, 103);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 13);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Shield:";
+            this.lblShield.AutoSize = true;
+            this.lblShield.Location = new System.Drawing.Point(7, 103);
+            this.lblShield.Name = "lblShield";
+            this.lblShield.Size = new System.Drawing.Size(39, 13);
+            this.lblShield.TabIndex = 18;
+            this.lblShield.Text = "Shield:";
             // 
-            // label11
+            // lblWeapon
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(7, 76);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(51, 13);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "Weapon:";
+            this.lblWeapon.AutoSize = true;
+            this.lblWeapon.Location = new System.Drawing.Point(7, 76);
+            this.lblWeapon.Name = "lblWeapon";
+            this.lblWeapon.Size = new System.Drawing.Size(51, 13);
+            this.lblWeapon.TabIndex = 17;
+            this.lblWeapon.Text = "Weapon:";
             // 
-            // label12
+            // lblFacegear
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(7, 49);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(55, 13);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "Facegear:";
+            this.lblFacegear.AutoSize = true;
+            this.lblFacegear.Location = new System.Drawing.Point(7, 49);
+            this.lblFacegear.Name = "lblFacegear";
+            this.lblFacegear.Size = new System.Drawing.Size(55, 13);
+            this.lblFacegear.TabIndex = 16;
+            this.lblFacegear.Text = "Facegear:";
             // 
-            // label13
+            // lblHat
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(7, 22);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(27, 13);
-            this.label13.TabIndex = 15;
-            this.label13.Text = "Hat:";
+            this.lblHat.AutoSize = true;
+            this.lblHat.Location = new System.Drawing.Point(7, 22);
+            this.lblHat.Name = "lblHat";
+            this.lblHat.Size = new System.Drawing.Size(27, 13);
+            this.lblHat.TabIndex = 15;
+            this.lblHat.Text = "Hat:";
             // 
             // cbAccessory2
             // 
@@ -851,13 +853,13 @@ namespace SoG_SGreader
             // 
             // grpEquippedStyle
             // 
-            this.grpEquippedStyle.Controls.Add(this.label14);
+            this.grpEquippedStyle.Controls.Add(this.lblEqShield);
             this.grpEquippedStyle.Controls.Add(this.cbStyleShield);
-            this.grpEquippedStyle.Controls.Add(this.label15);
+            this.grpEquippedStyle.Controls.Add(this.lblEqWeapon);
             this.grpEquippedStyle.Controls.Add(this.cbStyleHat);
-            this.grpEquippedStyle.Controls.Add(this.label16);
+            this.grpEquippedStyle.Controls.Add(this.lblEqFacegear);
             this.grpEquippedStyle.Controls.Add(this.cbStyleFacegear);
-            this.grpEquippedStyle.Controls.Add(this.label17);
+            this.grpEquippedStyle.Controls.Add(this.lblEqHat);
             this.grpEquippedStyle.Controls.Add(this.cbStyleWeapon);
             this.grpEquippedStyle.Location = new System.Drawing.Point(280, 249);
             this.grpEquippedStyle.Name = "grpEquippedStyle";
@@ -866,14 +868,14 @@ namespace SoG_SGreader
             this.grpEquippedStyle.TabStop = false;
             this.grpEquippedStyle.Text = "Equipped Style";
             // 
-            // label14
+            // lblEqShield
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(7, 103);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(39, 13);
-            this.label14.TabIndex = 30;
-            this.label14.Text = "Shield:";
+            this.lblEqShield.AutoSize = true;
+            this.lblEqShield.Location = new System.Drawing.Point(7, 103);
+            this.lblEqShield.Name = "lblEqShield";
+            this.lblEqShield.Size = new System.Drawing.Size(39, 13);
+            this.lblEqShield.TabIndex = 30;
+            this.lblEqShield.Text = "Shield:";
             // 
             // cbStyleShield
             // 
@@ -883,14 +885,14 @@ namespace SoG_SGreader
             this.cbStyleShield.Size = new System.Drawing.Size(186, 21);
             this.cbStyleShield.TabIndex = 26;
             // 
-            // label15
+            // lblEqWeapon
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(7, 76);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(51, 13);
-            this.label15.TabIndex = 29;
-            this.label15.Text = "Weapon:";
+            this.lblEqWeapon.AutoSize = true;
+            this.lblEqWeapon.Location = new System.Drawing.Point(7, 76);
+            this.lblEqWeapon.Name = "lblEqWeapon";
+            this.lblEqWeapon.Size = new System.Drawing.Size(51, 13);
+            this.lblEqWeapon.TabIndex = 29;
+            this.lblEqWeapon.Text = "Weapon:";
             // 
             // cbStyleHat
             // 
@@ -900,14 +902,14 @@ namespace SoG_SGreader
             this.cbStyleHat.Size = new System.Drawing.Size(186, 21);
             this.cbStyleHat.TabIndex = 23;
             // 
-            // label16
+            // lblEqFacegear
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(7, 49);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(55, 13);
-            this.label16.TabIndex = 28;
-            this.label16.Text = "Facegear:";
+            this.lblEqFacegear.AutoSize = true;
+            this.lblEqFacegear.Location = new System.Drawing.Point(7, 49);
+            this.lblEqFacegear.Name = "lblEqFacegear";
+            this.lblEqFacegear.Size = new System.Drawing.Size(55, 13);
+            this.lblEqFacegear.TabIndex = 28;
+            this.lblEqFacegear.Text = "Facegear:";
             // 
             // cbStyleFacegear
             // 
@@ -917,14 +919,14 @@ namespace SoG_SGreader
             this.cbStyleFacegear.Size = new System.Drawing.Size(186, 21);
             this.cbStyleFacegear.TabIndex = 24;
             // 
-            // label17
+            // lblEqHat
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(7, 22);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(27, 13);
-            this.label17.TabIndex = 27;
-            this.label17.Text = "Hat:";
+            this.lblEqHat.AutoSize = true;
+            this.lblEqHat.Location = new System.Drawing.Point(7, 22);
+            this.lblEqHat.Name = "lblEqHat";
+            this.lblEqHat.Size = new System.Drawing.Size(27, 13);
+            this.lblEqHat.TabIndex = 27;
+            this.lblEqHat.Text = "Hat:";
             // 
             // cbStyleWeapon
             // 
@@ -937,11 +939,11 @@ namespace SoG_SGreader
             // grpSkillpoints
             // 
             this.grpSkillpoints.Controls.Add(this.numSkillTalentPoints);
-            this.grpSkillpoints.Controls.Add(this.label36);
+            this.grpSkillpoints.Controls.Add(this.lblGoldPoints);
             this.grpSkillpoints.Controls.Add(this.numSkillSilverPoints);
             this.grpSkillpoints.Controls.Add(this.numSkillGoldPoints);
-            this.grpSkillpoints.Controls.Add(this.label35);
-            this.grpSkillpoints.Controls.Add(this.label34);
+            this.grpSkillpoints.Controls.Add(this.lblSilverPoints);
+            this.grpSkillpoints.Controls.Add(this.lblTalentPoints);
             this.grpSkillpoints.Location = new System.Drawing.Point(6, 288);
             this.grpSkillpoints.Name = "grpSkillpoints";
             this.grpSkillpoints.Size = new System.Drawing.Size(157, 100);
@@ -961,14 +963,14 @@ namespace SoG_SGreader
             this.numSkillTalentPoints.Size = new System.Drawing.Size(51, 20);
             this.numSkillTalentPoints.TabIndex = 3;
             // 
-            // label36
+            // lblGoldPoints
             // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(5, 74);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(81, 13);
-            this.label36.TabIndex = 2;
-            this.label36.Text = "Gold Skill Point:";
+            this.lblGoldPoints.AutoSize = true;
+            this.lblGoldPoints.Location = new System.Drawing.Point(5, 74);
+            this.lblGoldPoints.Name = "lblGoldPoints";
+            this.lblGoldPoints.Size = new System.Drawing.Size(81, 13);
+            this.lblGoldPoints.TabIndex = 2;
+            this.lblGoldPoints.Text = "Gold Skill Point:";
             // 
             // numSkillSilverPoints
             // 
@@ -994,30 +996,30 @@ namespace SoG_SGreader
             this.numSkillGoldPoints.Size = new System.Drawing.Size(51, 20);
             this.numSkillGoldPoints.TabIndex = 5;
             // 
-            // label35
+            // lblSilverPoints
             // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(5, 48);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(85, 13);
-            this.label35.TabIndex = 1;
-            this.label35.Text = "Silver Skill Point:";
+            this.lblSilverPoints.AutoSize = true;
+            this.lblSilverPoints.Location = new System.Drawing.Point(5, 48);
+            this.lblSilverPoints.Name = "lblSilverPoints";
+            this.lblSilverPoints.Size = new System.Drawing.Size(85, 13);
+            this.lblSilverPoints.TabIndex = 1;
+            this.lblSilverPoints.Text = "Silver Skill Point:";
             // 
-            // label34
+            // lblTalentPoints
             // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(5, 22);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(72, 13);
-            this.label34.TabIndex = 0;
-            this.label34.Text = "Talent Points:";
+            this.lblTalentPoints.AutoSize = true;
+            this.lblTalentPoints.Location = new System.Drawing.Point(5, 22);
+            this.lblTalentPoints.Name = "lblTalentPoints";
+            this.lblTalentPoints.Size = new System.Drawing.Size(72, 13);
+            this.lblTalentPoints.TabIndex = 0;
+            this.lblTalentPoints.Text = "Talent Points:";
             // 
             // grpLevel
             // 
-            this.grpLevel.Controls.Add(this.label33);
-            this.grpLevel.Controls.Add(this.label32);
-            this.grpLevel.Controls.Add(this.label31);
-            this.grpLevel.Controls.Add(this.label30);
+            this.grpLevel.Controls.Add(this.lblExpUnknown1);
+            this.grpLevel.Controls.Add(this.lblExpUnknown0);
+            this.grpLevel.Controls.Add(this.lblCurrectExp);
+            this.grpLevel.Controls.Add(this.lblLevel);
             this.grpLevel.Controls.Add(this.numEXPUnknown1);
             this.grpLevel.Controls.Add(this.numEXPUnknown0);
             this.grpLevel.Controls.Add(this.numEXPcurrent);
@@ -1029,42 +1031,42 @@ namespace SoG_SGreader
             this.grpLevel.TabStop = false;
             this.grpLevel.Text = "Level";
             // 
-            // label33
+            // lblExpUnknown1
             // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(5, 99);
-            this.label33.Name = "label33";
-            this.label33.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label33.Size = new System.Drawing.Size(89, 13);
-            this.label33.TabIndex = 7;
-            this.label33.Text = "[EXPUnknown1]:";
+            this.lblExpUnknown1.AutoSize = true;
+            this.lblExpUnknown1.Location = new System.Drawing.Point(5, 99);
+            this.lblExpUnknown1.Name = "lblExpUnknown1";
+            this.lblExpUnknown1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblExpUnknown1.Size = new System.Drawing.Size(89, 13);
+            this.lblExpUnknown1.TabIndex = 7;
+            this.lblExpUnknown1.Text = "[EXPUnknown1]:";
             // 
-            // label32
+            // lblExpUnknown0
             // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(5, 73);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(89, 13);
-            this.label32.TabIndex = 6;
-            this.label32.Text = "[EXPUnknown0]:";
+            this.lblExpUnknown0.AutoSize = true;
+            this.lblExpUnknown0.Location = new System.Drawing.Point(5, 73);
+            this.lblExpUnknown0.Name = "lblExpUnknown0";
+            this.lblExpUnknown0.Size = new System.Drawing.Size(89, 13);
+            this.lblExpUnknown0.TabIndex = 6;
+            this.lblExpUnknown0.Text = "[EXPUnknown0]:";
             // 
-            // label31
+            // lblCurrectExp
             // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(5, 47);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(68, 13);
-            this.label31.TabIndex = 5;
-            this.label31.Text = "Current EXP:";
+            this.lblCurrectExp.AutoSize = true;
+            this.lblCurrectExp.Location = new System.Drawing.Point(5, 47);
+            this.lblCurrectExp.Name = "lblCurrectExp";
+            this.lblCurrectExp.Size = new System.Drawing.Size(68, 13);
+            this.lblCurrectExp.TabIndex = 5;
+            this.lblCurrectExp.Text = "Current EXP:";
             // 
-            // label30
+            // lblLevel
             // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(5, 21);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(36, 13);
-            this.label30.TabIndex = 4;
-            this.label30.Text = "Level:";
+            this.lblLevel.AutoSize = true;
+            this.lblLevel.Location = new System.Drawing.Point(5, 21);
+            this.lblLevel.Name = "lblLevel";
+            this.lblLevel.Size = new System.Drawing.Size(36, 13);
+            this.lblLevel.TabIndex = 4;
+            this.lblLevel.Text = "Level:";
             // 
             // numEXPUnknown1
             // 
@@ -1130,16 +1132,16 @@ namespace SoG_SGreader
             // 
             // grpColors
             // 
-            this.grpColors.Controls.Add(this.label5);
-            this.grpColors.Controls.Add(this.label4);
-            this.grpColors.Controls.Add(this.label3);
-            this.grpColors.Controls.Add(this.label2);
+            this.grpColors.Controls.Add(this.lblPants);
+            this.grpColors.Controls.Add(this.lblShirt);
+            this.grpColors.Controls.Add(this.lblPoncho);
+            this.grpColors.Controls.Add(this.lblSkin);
             this.grpColors.Controls.Add(this.btnPantsColor);
             this.grpColors.Controls.Add(this.btnShirtColor);
             this.grpColors.Controls.Add(this.btnPonchoColor);
             this.grpColors.Controls.Add(this.btnSkinColor);
             this.grpColors.Controls.Add(this.btnHairColor);
-            this.grpColors.Controls.Add(this.label1);
+            this.grpColors.Controls.Add(this.lblHair);
             this.grpColors.Location = new System.Drawing.Point(169, 4);
             this.grpColors.Name = "grpColors";
             this.grpColors.Size = new System.Drawing.Size(105, 148);
@@ -1147,41 +1149,41 @@ namespace SoG_SGreader
             this.grpColors.TabStop = false;
             this.grpColors.Text = "Colors";
             // 
-            // label5
+            // lblPants
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 122);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Pants:";
+            this.lblPants.AutoSize = true;
+            this.lblPants.Location = new System.Drawing.Point(6, 122);
+            this.lblPants.Name = "lblPants";
+            this.lblPants.Size = new System.Drawing.Size(37, 13);
+            this.lblPants.TabIndex = 13;
+            this.lblPants.Text = "Pants:";
             // 
-            // label4
+            // lblShirt
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 96);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Shirt:";
+            this.lblShirt.AutoSize = true;
+            this.lblShirt.Location = new System.Drawing.Point(6, 96);
+            this.lblShirt.Name = "lblShirt";
+            this.lblShirt.Size = new System.Drawing.Size(31, 13);
+            this.lblShirt.TabIndex = 12;
+            this.lblShirt.Text = "Shirt:";
             // 
-            // label3
+            // lblPoncho
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 70);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Poncho:";
+            this.lblPoncho.AutoSize = true;
+            this.lblPoncho.Location = new System.Drawing.Point(6, 70);
+            this.lblPoncho.Name = "lblPoncho";
+            this.lblPoncho.Size = new System.Drawing.Size(47, 13);
+            this.lblPoncho.TabIndex = 11;
+            this.lblPoncho.Text = "Poncho:";
             // 
-            // label2
+            // lblSkin
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Skin:";
+            this.lblSkin.AutoSize = true;
+            this.lblSkin.Location = new System.Drawing.Point(6, 44);
+            this.lblSkin.Name = "lblSkin";
+            this.lblSkin.Size = new System.Drawing.Size(31, 13);
+            this.lblSkin.TabIndex = 10;
+            this.lblSkin.Text = "Skin:";
             // 
             // btnPantsColor
             // 
@@ -1239,19 +1241,19 @@ namespace SoG_SGreader
             this.btnHairColor.UseVisualStyleBackColor = false;
             this.btnHairColor.Click += new System.EventHandler(this.ClothingColor_Click);
             // 
-            // label1
+            // lblHair
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Hair:";
+            this.lblHair.AutoSize = true;
+            this.lblHair.Location = new System.Drawing.Point(6, 18);
+            this.lblHair.Name = "lblHair";
+            this.lblHair.Size = new System.Drawing.Size(29, 13);
+            this.lblHair.TabIndex = 0;
+            this.lblHair.Text = "Hair:";
             // 
             // tabInventory
             // 
             this.tabInventory.Controls.Add(this.numGold);
-            this.tabInventory.Controls.Add(this.label37);
+            this.tabInventory.Controls.Add(this.lblGold);
             this.tabInventory.Controls.Add(this.grpItem);
             this.tabInventory.Controls.Add(this.lstInventory);
             this.tabInventory.Location = new System.Drawing.Point(4, 22);
@@ -1276,22 +1278,22 @@ namespace SoG_SGreader
             this.numGold.TabIndex = 40;
             this.Tooltips.SetToolTip(this.numGold, "Money/Papes/Cheddar/Mulla/Dollar/Coins/Green Faces/Loochies/Bread/Dosh");
             // 
-            // label37
+            // lblGold
             // 
-            this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(447, 345);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(32, 13);
-            this.label37.TabIndex = 41;
-            this.label37.Text = "Gold:";
+            this.lblGold.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblGold.AutoSize = true;
+            this.lblGold.Location = new System.Drawing.Point(447, 345);
+            this.lblGold.Name = "lblGold";
+            this.lblGold.Size = new System.Drawing.Size(32, 13);
+            this.lblGold.TabIndex = 41;
+            this.lblGold.Text = "Gold:";
             // 
             // grpItem
             // 
             this.grpItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.grpItem.Controls.Add(this.btnDeleteSelectedItem);
             this.grpItem.Controls.Add(this.btnAddItem);
-            this.grpItem.Controls.Add(this.label28);
+            this.grpItem.Controls.Add(this.lblItemCount);
             this.grpItem.Controls.Add(this.numItemCount);
             this.grpItem.Controls.Add(this.cbSelectedItem);
             this.grpItem.Location = new System.Drawing.Point(3, 315);
@@ -1322,14 +1324,14 @@ namespace SoG_SGreader
             this.btnAddItem.UseVisualStyleBackColor = true;
             this.btnAddItem.Click += new System.EventHandler(this.BtnAddItem_Click);
             // 
-            // label28
+            // lblItemCount
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(132, 48);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(38, 13);
-            this.label28.TabIndex = 2;
-            this.label28.Text = "Count:";
+            this.lblItemCount.AutoSize = true;
+            this.lblItemCount.Location = new System.Drawing.Point(132, 48);
+            this.lblItemCount.Name = "lblItemCount";
+            this.lblItemCount.Size = new System.Drawing.Size(38, 13);
+            this.lblItemCount.TabIndex = 2;
+            this.lblItemCount.Text = "Count:";
             // 
             // numItemCount
             // 
@@ -1466,16 +1468,16 @@ namespace SoG_SGreader
             this.grpPet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpPet.Controls.Add(this.cbPetType);
-            this.grpPet.Controls.Add(this.label52);
+            this.grpPet.Controls.Add(this.lblPetType);
             this.grpPet.Controls.Add(this.numPetLevel);
-            this.grpPet.Controls.Add(this.label48);
-            this.grpPet.Controls.Add(this.label47);
-            this.grpPet.Controls.Add(this.label46);
-            this.grpPet.Controls.Add(this.label45);
-            this.grpPet.Controls.Add(this.label44);
-            this.grpPet.Controls.Add(this.label42);
+            this.grpPet.Controls.Add(this.lblPetLevel);
+            this.grpPet.Controls.Add(this.lblPetSpeed);
+            this.grpPet.Controls.Add(this.lblPetCrit);
+            this.grpPet.Controls.Add(this.lblPetDamage);
+            this.grpPet.Controls.Add(this.lblPetEnergy);
+            this.grpPet.Controls.Add(this.lblPetNickname);
             this.grpPet.Controls.Add(this.txtPetNickname);
-            this.grpPet.Controls.Add(this.label43);
+            this.grpPet.Controls.Add(this.lblPetHealth);
             this.grpPet.Controls.Add(this.numPetSpeed);
             this.grpPet.Controls.Add(this.numPetCrit);
             this.grpPet.Controls.Add(this.numPetDamage);
@@ -1497,14 +1499,14 @@ namespace SoG_SGreader
             this.cbPetType.Size = new System.Drawing.Size(93, 21);
             this.cbPetType.TabIndex = 2;
             // 
-            // label52
+            // lblPetType
             // 
-            this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(6, 49);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(26, 13);
-            this.label52.TabIndex = 15;
-            this.label52.Text = "Pet:";
+            this.lblPetType.AutoSize = true;
+            this.lblPetType.Location = new System.Drawing.Point(6, 49);
+            this.lblPetType.Name = "lblPetType";
+            this.lblPetType.Size = new System.Drawing.Size(26, 13);
+            this.lblPetType.TabIndex = 15;
+            this.lblPetType.Text = "Pet:";
             // 
             // numPetLevel
             // 
@@ -1519,59 +1521,59 @@ namespace SoG_SGreader
             this.numPetLevel.TabIndex = 14;
             this.numPetLevel.ValueChanged += new System.EventHandler(this.NumPetStat_ValueChanged);
             // 
-            // label48
+            // lblPetLevel
             // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(6, 74);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(51, 13);
-            this.label48.TabIndex = 13;
-            this.label48.Text = "Pet level:";
+            this.lblPetLevel.AutoSize = true;
+            this.lblPetLevel.Location = new System.Drawing.Point(6, 74);
+            this.lblPetLevel.Name = "lblPetLevel";
+            this.lblPetLevel.Size = new System.Drawing.Size(51, 13);
+            this.lblPetLevel.TabIndex = 13;
+            this.lblPetLevel.Text = "Pet level:";
             // 
-            // label47
+            // lblPetSpeed
             // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(6, 199);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(66, 13);
-            this.label47.TabIndex = 12;
-            this.label47.Text = "Speed level:";
+            this.lblPetSpeed.AutoSize = true;
+            this.lblPetSpeed.Location = new System.Drawing.Point(6, 199);
+            this.lblPetSpeed.Name = "lblPetSpeed";
+            this.lblPetSpeed.Size = new System.Drawing.Size(66, 13);
+            this.lblPetSpeed.TabIndex = 12;
+            this.lblPetSpeed.Text = "Speed level:";
             // 
-            // label46
+            // lblPetCrit
             // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(6, 174);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(50, 13);
-            this.label46.TabIndex = 11;
-            this.label46.Text = "Crit level:";
+            this.lblPetCrit.AutoSize = true;
+            this.lblPetCrit.Location = new System.Drawing.Point(6, 174);
+            this.lblPetCrit.Name = "lblPetCrit";
+            this.lblPetCrit.Size = new System.Drawing.Size(50, 13);
+            this.lblPetCrit.TabIndex = 11;
+            this.lblPetCrit.Text = "Crit level:";
             // 
-            // label45
+            // lblPetDamage
             // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(6, 149);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(75, 13);
-            this.label45.TabIndex = 10;
-            this.label45.Text = "Damage level:";
+            this.lblPetDamage.AutoSize = true;
+            this.lblPetDamage.Location = new System.Drawing.Point(6, 149);
+            this.lblPetDamage.Name = "lblPetDamage";
+            this.lblPetDamage.Size = new System.Drawing.Size(75, 13);
+            this.lblPetDamage.TabIndex = 10;
+            this.lblPetDamage.Text = "Damage level:";
             // 
-            // label44
+            // lblPetEnergy
             // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(6, 124);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(68, 13);
-            this.label44.TabIndex = 9;
-            this.label44.Text = "Energy level:";
+            this.lblPetEnergy.AutoSize = true;
+            this.lblPetEnergy.Location = new System.Drawing.Point(6, 124);
+            this.lblPetEnergy.Name = "lblPetEnergy";
+            this.lblPetEnergy.Size = new System.Drawing.Size(68, 13);
+            this.lblPetEnergy.TabIndex = 9;
+            this.lblPetEnergy.Text = "Energy level:";
             // 
-            // label42
+            // lblPetNickname
             // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(6, 24);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(58, 13);
-            this.label42.TabIndex = 2;
-            this.label42.Text = "Nickname:";
+            this.lblPetNickname.AutoSize = true;
+            this.lblPetNickname.Location = new System.Drawing.Point(6, 24);
+            this.lblPetNickname.Name = "lblPetNickname";
+            this.lblPetNickname.Size = new System.Drawing.Size(58, 13);
+            this.lblPetNickname.TabIndex = 2;
+            this.lblPetNickname.Text = "Nickname:";
             // 
             // txtPetNickname
             // 
@@ -1581,14 +1583,14 @@ namespace SoG_SGreader
             this.txtPetNickname.TabIndex = 1;
             this.txtPetNickname.TextChanged += new System.EventHandler(this.TxtPetNickname_TextChanged);
             // 
-            // label43
+            // lblPetHealth
             // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(6, 99);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(66, 13);
-            this.label43.TabIndex = 8;
-            this.label43.Text = "Health level:";
+            this.lblPetHealth.AutoSize = true;
+            this.lblPetHealth.Location = new System.Drawing.Point(6, 99);
+            this.lblPetHealth.Name = "lblPetHealth";
+            this.lblPetHealth.Size = new System.Drawing.Size(66, 13);
+            this.lblPetHealth.TabIndex = 8;
+            this.lblPetHealth.Text = "Health level:";
             // 
             // numPetSpeed
             // 
@@ -1671,7 +1673,7 @@ namespace SoG_SGreader
             // 
             this.grpCards.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grpCards.Controls.Add(this.label58);
+            this.grpCards.Controls.Add(this.lblCardsNullWarning);
             this.grpCards.Controls.Add(this.btnSelectAllCards);
             this.grpCards.Controls.Add(this.btnResetCards);
             this.grpCards.Controls.Add(this.btnDeselectAllCards);
@@ -1682,14 +1684,14 @@ namespace SoG_SGreader
             this.grpCards.TabStop = false;
             this.grpCards.Text = "Cards";
             // 
-            // label58
+            // lblCardsNullWarning
             // 
-            this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(6, 74);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(72, 52);
-            this.label58.TabIndex = 7;
-            this.label58.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
+            this.lblCardsNullWarning.AutoSize = true;
+            this.lblCardsNullWarning.Location = new System.Drawing.Point(6, 74);
+            this.lblCardsNullWarning.Name = "lblCardsNullWarning";
+            this.lblCardsNullWarning.Size = new System.Drawing.Size(72, 52);
+            this.lblCardsNullWarning.TabIndex = 7;
+            this.lblCardsNullWarning.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllCards
             // 
@@ -1749,7 +1751,7 @@ namespace SoG_SGreader
             // 
             this.grpMaps.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grpMaps.Controls.Add(this.label39);
+            this.grpMaps.Controls.Add(this.lblMapsNullWarning);
             this.grpMaps.Controls.Add(this.btnSelectAllMaps);
             this.grpMaps.Controls.Add(this.btnResetMaps);
             this.grpMaps.Controls.Add(this.btnDeselectAllMaps);
@@ -1760,14 +1762,14 @@ namespace SoG_SGreader
             this.grpMaps.TabStop = false;
             this.grpMaps.Text = "Maps";
             // 
-            // label39
+            // lblMapsNullWarning
             // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(6, 74);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(72, 52);
-            this.label39.TabIndex = 8;
-            this.label39.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
+            this.lblMapsNullWarning.AutoSize = true;
+            this.lblMapsNullWarning.Location = new System.Drawing.Point(6, 74);
+            this.lblMapsNullWarning.Name = "lblMapsNullWarning";
+            this.lblMapsNullWarning.Size = new System.Drawing.Size(72, 52);
+            this.lblMapsNullWarning.TabIndex = 8;
+            this.lblMapsNullWarning.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllMaps
             // 
@@ -1827,7 +1829,8 @@ namespace SoG_SGreader
             // 
             this.grpQuests.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grpQuests.Controls.Add(this.label40);
+            this.grpQuests.Controls.Add(this.lblQuestsChaningNoEffect);
+            this.grpQuests.Controls.Add(this.lblQuestsNullWarning);
             this.grpQuests.Controls.Add(this.btnSelectAllQuests);
             this.grpQuests.Controls.Add(this.btnResetQuests);
             this.grpQuests.Controls.Add(this.btnDeselectAllQuests);
@@ -1838,14 +1841,14 @@ namespace SoG_SGreader
             this.grpQuests.TabStop = false;
             this.grpQuests.Text = "Quests";
             // 
-            // label40
+            // lblQuestsNullWarning
             // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(6, 74);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(72, 52);
-            this.label40.TabIndex = 8;
-            this.label40.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
+            this.lblQuestsNullWarning.AutoSize = true;
+            this.lblQuestsNullWarning.Location = new System.Drawing.Point(6, 74);
+            this.lblQuestsNullWarning.Name = "lblQuestsNullWarning";
+            this.lblQuestsNullWarning.Size = new System.Drawing.Size(72, 52);
+            this.lblQuestsNullWarning.TabIndex = 8;
+            this.lblQuestsNullWarning.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllQuests
             // 
@@ -1916,6 +1919,7 @@ namespace SoG_SGreader
             // 
             this.grpFlags.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpFlags.Controls.Add(this.lblFlagsChaningNoEffect);
             this.grpFlags.Controls.Add(this.label41);
             this.grpFlags.Controls.Add(this.btnSelectAllFlags);
             this.grpFlags.Controls.Add(this.btnResetFlags);
@@ -2071,7 +2075,7 @@ namespace SoG_SGreader
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.label62);
+            this.groupBox2.Controls.Add(this.lblFishNullWarning);
             this.groupBox2.Controls.Add(this.btnSelectAllFishCaught);
             this.groupBox2.Controls.Add(this.btnResetFishCaught);
             this.groupBox2.Controls.Add(this.btnDeselectAllFishCaught);
@@ -2082,14 +2086,14 @@ namespace SoG_SGreader
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Fish Caught";
             // 
-            // label62
+            // lblFishNullWarning
             // 
-            this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(6, 74);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(72, 52);
-            this.label62.TabIndex = 8;
-            this.label62.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
+            this.lblFishNullWarning.AutoSize = true;
+            this.lblFishNullWarning.Location = new System.Drawing.Point(6, 74);
+            this.lblFishNullWarning.Name = "lblFishNullWarning";
+            this.lblFishNullWarning.Size = new System.Drawing.Size(72, 52);
+            this.lblFishNullWarning.TabIndex = 8;
+            this.lblFishNullWarning.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllFishCaught
             // 
@@ -2149,7 +2153,7 @@ namespace SoG_SGreader
             // 
             this.grpEnemiesSeen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grpEnemiesSeen.Controls.Add(this.label50);
+            this.grpEnemiesSeen.Controls.Add(this.lblEnemiesSeenNullWarning);
             this.grpEnemiesSeen.Controls.Add(this.btnSelectAllEnemiesSeen);
             this.grpEnemiesSeen.Controls.Add(this.btnResetEnemiesSeen);
             this.grpEnemiesSeen.Controls.Add(this.btnDeselectAllEnemiesSeen);
@@ -2160,14 +2164,14 @@ namespace SoG_SGreader
             this.grpEnemiesSeen.TabStop = false;
             this.grpEnemiesSeen.Text = "Enemies seen";
             // 
-            // label50
+            // lblEnemiesSeenNullWarning
             // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(6, 74);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(72, 52);
-            this.label50.TabIndex = 8;
-            this.label50.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
+            this.lblEnemiesSeenNullWarning.AutoSize = true;
+            this.lblEnemiesSeenNullWarning.Location = new System.Drawing.Point(6, 74);
+            this.lblEnemiesSeenNullWarning.Name = "lblEnemiesSeenNullWarning";
+            this.lblEnemiesSeenNullWarning.Size = new System.Drawing.Size(72, 52);
+            this.lblEnemiesSeenNullWarning.TabIndex = 8;
+            this.lblEnemiesSeenNullWarning.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllEnemiesSeen
             // 
@@ -2226,7 +2230,7 @@ namespace SoG_SGreader
             // 
             this.grpItemsSeen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grpItemsSeen.Controls.Add(this.label60);
+            this.grpItemsSeen.Controls.Add(this.lblItemsSeenNullWarning);
             this.grpItemsSeen.Controls.Add(this.btnSelectAllItemsSeen);
             this.grpItemsSeen.Controls.Add(this.btnResetItemsSeen);
             this.grpItemsSeen.Controls.Add(this.btnDeselectAllItemsSeen);
@@ -2237,14 +2241,14 @@ namespace SoG_SGreader
             this.grpItemsSeen.TabStop = false;
             this.grpItemsSeen.Text = "Items Seen";
             // 
-            // label60
+            // lblItemsSeenNullWarning
             // 
-            this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(6, 74);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(72, 52);
-            this.label60.TabIndex = 8;
-            this.label60.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
+            this.lblItemsSeenNullWarning.AutoSize = true;
+            this.lblItemsSeenNullWarning.Location = new System.Drawing.Point(6, 74);
+            this.lblItemsSeenNullWarning.Name = "lblItemsSeenNullWarning";
+            this.lblItemsSeenNullWarning.Size = new System.Drawing.Size(72, 52);
+            this.lblItemsSeenNullWarning.TabIndex = 8;
+            this.lblItemsSeenNullWarning.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllItemsSeen
             // 
@@ -2303,7 +2307,7 @@ namespace SoG_SGreader
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.label61);
+            this.groupBox1.Controls.Add(this.lblItemsCraftedNullWarning);
             this.groupBox1.Controls.Add(this.btnSelectAllItemsCrafted);
             this.groupBox1.Controls.Add(this.btnResetItemsCrafted);
             this.groupBox1.Controls.Add(this.btnDeselectAllItemsCrafted);
@@ -2314,14 +2318,14 @@ namespace SoG_SGreader
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Items Crafted";
             // 
-            // label61
+            // lblItemsCraftedNullWarning
             // 
-            this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(6, 74);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(72, 52);
-            this.label61.TabIndex = 8;
-            this.label61.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
+            this.lblItemsCraftedNullWarning.AutoSize = true;
+            this.lblItemsCraftedNullWarning.Location = new System.Drawing.Point(6, 74);
+            this.lblItemsCraftedNullWarning.Name = "lblItemsCraftedNullWarning";
+            this.lblItemsCraftedNullWarning.Size = new System.Drawing.Size(72, 52);
+            this.lblItemsCraftedNullWarning.TabIndex = 8;
+            this.lblItemsCraftedNullWarning.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllItemsCrafted
             // 
@@ -3507,6 +3511,26 @@ namespace SoG_SGreader
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.PictureBox3_Click);
             // 
+            // lblFlagsChaningNoEffect
+            // 
+            this.lblFlagsChaningNoEffect.AutoSize = true;
+            this.lblFlagsChaningNoEffect.Location = new System.Drawing.Point(6, 186);
+            this.lblFlagsChaningNoEffect.Name = "lblFlagsChaningNoEffect";
+            this.lblFlagsChaningNoEffect.Size = new System.Drawing.Size(80, 104);
+            this.lblFlagsChaningNoEffect.TabIndex = 9;
+            this.lblFlagsChaningNoEffect.Text = "Changing Flags\r\nmay have no \r\neffect on your\r\ngame since\r\nthese are addi-\r\ntional" +
+    "ly saved\r\nin the World \r\nfiles.";
+            // 
+            // lblQuestsChaningNoEffect
+            // 
+            this.lblQuestsChaningNoEffect.AutoSize = true;
+            this.lblQuestsChaningNoEffect.Location = new System.Drawing.Point(6, 186);
+            this.lblQuestsChaningNoEffect.Name = "lblQuestsChaningNoEffect";
+            this.lblQuestsChaningNoEffect.Size = new System.Drawing.Size(88, 104);
+            this.lblQuestsChaningNoEffect.TabIndex = 10;
+            this.lblQuestsChaningNoEffect.Text = "Changing Quests\r\nmay have no \r\neffect on your\r\ngame since\r\nthese are addi-\r\ntiona" +
+    "lly saved\r\nin the World \r\nfiles.";
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3515,7 +3539,7 @@ namespace SoG_SGreader
             this.ClientSize = new System.Drawing.Size(567, 570);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txtConsole);
-            this.Controls.Add(this.tabs);
+            this.Controls.Add(this.lblTrophiesNullWarning);
             this.Controls.Add(this.msMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenu;
@@ -3523,7 +3547,7 @@ namespace SoG_SGreader
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "SoG: Savegame Editor v16.9.30803.129 by tolik518";
             this.Load += new System.EventHandler(this.FrmMain_Load);
-            this.tabs.ResumeLayout(false);
+            this.lblTrophiesNullWarning.ResumeLayout(false);
             this.tabChar.ResumeLayout(false);
             this.tabChar.PerformLayout();
             this.grpPatch.ResumeLayout(false);
@@ -3691,7 +3715,7 @@ namespace SoG_SGreader
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabs;
+        private System.Windows.Forms.TabControl lblTrophiesNullWarning;
         private System.Windows.Forms.TabPage tabQuickslots;
         private System.Windows.Forms.MenuStrip msMenu;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
@@ -3719,7 +3743,7 @@ namespace SoG_SGreader
         private System.Windows.Forms.TabPage tabInventory;
         private System.Windows.Forms.ListView lstInventory;
         private System.Windows.Forms.GroupBox grpItem;
-        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label lblItemCount;
         private System.Windows.Forms.NumericUpDown numItemCount;
         private System.Windows.Forms.ComboBox cbSelectedItem;
         private System.Windows.Forms.ColumnHeader Item;
@@ -3729,49 +3753,49 @@ namespace SoG_SGreader
         private System.Windows.Forms.ColumnHeader Position;
         private System.Windows.Forms.Button btnAddItem;
         private System.Windows.Forms.TabPage tabChar;
-        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txtNickname;
         private System.Windows.Forms.GroupBox grpColors;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPants;
+        private System.Windows.Forms.Label lblShirt;
+        private System.Windows.Forms.Label lblPoncho;
+        private System.Windows.Forms.Label lblSkin;
         private System.Windows.Forms.Button btnPantsColor;
         private System.Windows.Forms.Button btnShirtColor;
         private System.Windows.Forms.Button btnPonchoColor;
         private System.Windows.Forms.Button btnSkinColor;
         private System.Windows.Forms.Button btnHairColor;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblHair;
         private System.Windows.Forms.TabPage tabEnemiesSeen;
         private System.Windows.Forms.TabPage tabCards;
         private System.Windows.Forms.TabPage tabFlags;
         private System.Windows.Forms.GroupBox grpLevel;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label lblExpUnknown1;
+        private System.Windows.Forms.Label lblExpUnknown0;
+        private System.Windows.Forms.Label lblCurrectExp;
+        private System.Windows.Forms.Label lblLevel;
         private System.Windows.Forms.NumericUpDown numEXPUnknown1;
         private System.Windows.Forms.NumericUpDown numEXPUnknown0;
         private System.Windows.Forms.NumericUpDown numEXPcurrent;
         private System.Windows.Forms.NumericUpDown numLevel;
         private System.Windows.Forms.TabPage tabSkills;
         private System.Windows.Forms.GroupBox grpSkillpoints;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label lblGoldPoints;
+        private System.Windows.Forms.Label lblSilverPoints;
+        private System.Windows.Forms.Label lblTalentPoints;
         private System.Windows.Forms.NumericUpDown numSkillTalentPoints;
         private System.Windows.Forms.NumericUpDown numSkillSilverPoints;
         private System.Windows.Forms.NumericUpDown numSkillGoldPoints;
         private System.Windows.Forms.ToolTip Tooltips;
         private System.Windows.Forms.GroupBox grpEquipped;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblAccessory2;
+        private System.Windows.Forms.Label lblAccessory1;
+        private System.Windows.Forms.Label lblShoes;
+        private System.Windows.Forms.Label lblArmor;
+        private System.Windows.Forms.Label lblShield;
+        private System.Windows.Forms.Label lblWeapon;
+        private System.Windows.Forms.Label lblFacegear;
+        private System.Windows.Forms.Label lblHat;
         private System.Windows.Forms.ComboBox cbAccessory2;
         private System.Windows.Forms.ComboBox cbAccessory1;
         private System.Windows.Forms.ComboBox cbShoes;
@@ -3781,13 +3805,13 @@ namespace SoG_SGreader
         private System.Windows.Forms.ComboBox cbFacegear;
         private System.Windows.Forms.ComboBox cbHat;
         private System.Windows.Forms.GroupBox grpEquippedStyle;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblEqShield;
         private System.Windows.Forms.ComboBox cbStyleShield;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblEqWeapon;
         private System.Windows.Forms.ComboBox cbStyleHat;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblEqFacegear;
         private System.Windows.Forms.ComboBox cbStyleFacegear;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblEqHat;
         private System.Windows.Forms.ComboBox cbStyleWeapon;
         private System.Windows.Forms.TabPage tabPets;
         private System.Windows.Forms.ListView lstPets;
@@ -3799,37 +3823,37 @@ namespace SoG_SGreader
         private System.Windows.Forms.ColumnHeader Crit;
         private System.Windows.Forms.ColumnHeader Speed;
         private System.Windows.Forms.GroupBox grpPet;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label lblPetSpeed;
+        private System.Windows.Forms.Label lblPetCrit;
+        private System.Windows.Forms.Label lblPetDamage;
+        private System.Windows.Forms.Label lblPetEnergy;
+        private System.Windows.Forms.Label lblPetHealth;
         private System.Windows.Forms.NumericUpDown numPetSpeed;
         private System.Windows.Forms.NumericUpDown numPetCrit;
         private System.Windows.Forms.NumericUpDown numPetDamage;
         private System.Windows.Forms.TextBox txtPetNickname;
         private System.Windows.Forms.NumericUpDown numPetEnergy;
-        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label lblPetNickname;
         private System.Windows.Forms.NumericUpDown numPetHP;
         private System.Windows.Forms.NumericUpDown numPetLevel;
-        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label lblPetLevel;
         private System.Windows.Forms.Button btnDeleteSelectedItem;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.TabPage tabQuests;
-        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label lblTimePlayed;
         private System.Windows.Forms.ComboBox cbPetType;
-        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label lblPetType;
         private System.Windows.Forms.TextBox txtTimePlayed;
-        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label lblBirthday;
         private System.Windows.Forms.NumericUpDown numBirtdayMonth;
         private System.Windows.Forms.NumericUpDown numBirthdayDay;
         private System.Windows.Forms.GroupBox grpPatch;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.NumericUpDown numID;
         private System.Windows.Forms.GroupBox grpGeneral;
-        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label lblCollectorId;
         private System.Windows.Forms.NumericUpDown numGold;
-        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label lblGold;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabSkillsMelee;
         private System.Windows.Forms.TabPage tabSkillsMagic;
@@ -3943,11 +3967,11 @@ namespace SoG_SGreader
         private Button btnResetMaps;
         private Button btnDeselectAllMaps;
         private CheckedListBox cblstMaps;
-        private Label label58;
-        private Label label39;
-        private Label label40;
+        private Label lblCardsNullWarning;
+        private Label lblMapsNullWarning;
+        private Label lblQuestsNullWarning;
         private Label label41;
-        private Label label50;
+        private Label lblEnemiesSeenNullWarning;
         private TabPage tabTrophies;
         private GroupBox grpTrophies;
         private Label label59;
@@ -3957,25 +3981,27 @@ namespace SoG_SGreader
         private CheckedListBox cblstTrophies;
         private TabPage tabItemsSeen;
         private GroupBox grpItemsSeen;
-        private Label label60;
+        private Label lblItemsSeenNullWarning;
         private Button btnSelectAllItemsSeen;
         private Button btnResetItemsSeen;
         private Button btnDeselectAllItemsSeen;
         private CheckedListBox cblstItemsSeen;
         private TabPage tabItemsCrafted;
         private GroupBox groupBox1;
-        private Label label61;
+        private Label lblItemsCraftedNullWarning;
         private Button btnSelectAllItemsCrafted;
         private Button btnResetItemsCrafted;
         private Button btnDeselectAllItemsCrafted;
         private CheckedListBox cblstItemsCrafted;
         private TabPage tabFishCaught;
         private GroupBox groupBox2;
-        private Label label62;
+        private Label lblFishNullWarning;
         private Button btnSelectAllFishCaught;
         private Button btnResetFishCaught;
         private Button btnDeselectAllFishCaught;
         private CheckedListBox cblstFishCaught;
         private CheckedListBox cblstFlagsChecked;
+        private Label lblFlagsChaningNoEffect;
+        private Label lblQuestsChaningNoEffect;
     }
 }
