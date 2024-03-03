@@ -156,15 +156,18 @@
     <Compile Include="Objects\Pet.cs" />
     <Compile Include="Objects\Player.cs" />
     <Compile Include="Objects\ItemSeen.cs" />
+    <Compile Include="Objects\PlayerPreview.cs" />
     <Compile Include="Objects\Potion.cs" />
     <Compile Include="Objects\Quest.cs" />
+    <Compile Include="Objects\QuestLog.cs" />
     <Compile Include="Objects\Skill.cs" />
     <Compile Include="Objects\Style.cs" />
     <Compile Include="Objects\TreasureMap.cs" />
-    <Compile Include="Objects\UnknownVariable01.cs" />
+    <Compile Include="Objects\TreasureFound.cs" />
     <Compile Include="Objects\UnknownVariable02.cs" />
     <Compile Include="Objects\Trophy.cs" />
     <Compile Include="Objects\CharacterFlags.cs" />
+    <Compile Include="Objects\World.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

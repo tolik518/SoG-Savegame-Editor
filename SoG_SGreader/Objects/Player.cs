@@ -26,8 +26,8 @@ namespace SoG_SGreader
         public List<Card> Cards;
         public int TreasureMapsCount { get; set; }
         public List<TreasureMap> TreasureMaps;
-        public int UnknownVariable01Count { get; set; }
-        public List<UnknownVariable01> UnknownVariables01;
+        public int TreasureFoundCount { get; set; }
+        public List<TreasureFound> TreasureFound;
         public int SkillsCount { get; set; }
         public List<Skill> Skills;
         public short Level { get; set; }

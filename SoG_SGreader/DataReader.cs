@@ -132,16 +132,16 @@ namespace SoG_SGreader
 
                 txtConsole.AppendText("\r\nTreasureMapCount: " + playerObject.TreasureMapsCount);
 
-                playerObject.UnknownVariable01Count = readBinary.ReadInt32();     //How many Unknown Int16 do we need to count
-                playerObject.UnknownVariables01 = new List<UnknownVariable01>(playerObject.UnknownVariable01Count);
-                for (int i = 0; i != playerObject.UnknownVariable01Count; i++)
+                playerObject.TreasureFoundCount = readBinary.ReadInt32();     //How many Unknown Int16 do we need to count
+                playerObject.TreasureFound = new List<TreasureFound>(playerObject.TreasureFoundCount);
+                for (int i = 0; i != playerObject.TreasureFoundCount; i++)
                 {
-                    playerObject.UnknownVariables01.Add(new UnknownVariable01
+                    playerObject.TreasureFound.Add(new TreasureFound
                     {
-                        UnknownVariable01ID = readBinary.ReadInt16()
+                        TreasureMapID = (SogTreasureMap) readBinary.ReadInt16()
                     });
                 }
-                txtConsole.AppendText("\r\nUnknownCount: " + playerObject.UnknownVariable01Count);
+                txtConsole.AppendText("\r\nUnknownCount: " + playerObject.TreasureFoundCount);
 
                 playerObject.SkillsCount = readBinary.ReadInt32();     //How many Skills do we need to count
                 txtConsole.AppendText("\r\n" + "> SkillsCount Position: " + readBinary.BaseStream.Position.ToString("X"));
@@ -398,7 +398,7 @@ namespace SoG_SGreader
                 for (int i = 0; i != playerObject.HouseStylesCount; i++)
                 {
                     byte styleNumber = readBinary.ReadByte();
-                    int styleLength = readBinary.ReadInt32();
+                    uint styleLength = readBinary.ReadUInt32();
                     byte[] styleBytes = new byte[styleLength];
                     
                     for (int j = 0; j != styleLength; j++)
@@ -427,65 +427,92 @@ namespace SoG_SGreader
             
             return playerObject;
         }
-        
-        public static string GetCharName(string fileName)
+
+        public static PlayerPreview GetCharName(string fileName)
         {
-            using (FileStream fileStream = new FileStream(fileName, FileMode.Open))
-            {
+            string nickname = "";
+            bool sex = false;
+            try {
+                using FileStream fileStream = new FileStream(fileName, FileMode.Open);
                 BinaryReader readBinary = new BinaryReader(fileStream);
 
-                readBinary.ReadInt32(); //I dont know yet what the first bytes stand for tbh    
-                readBinary.ReadInt32(); //pPlayer.equip.Hat =
-                readBinary.ReadInt32(); //pPlayer.equip.Facegear =
-                readBinary.ReadChar(); // pPlayer.style.Bodytype = 
-                readBinary.ReadInt32(); //pPlayer.style.Hair = 
-                readBinary.ReadInt32(); //pPlayer.equip.Weapon = 
-                readBinary.ReadInt32(); //pPlayer.equip.Shield = 
-                readBinary.ReadInt32(); //pPlayer.equip.Armor =
-                readBinary.ReadInt32(); //pPlayer.equip.Shoes = 
-                readBinary.ReadInt32(); //pPlayer.equip.Accessory1 = 
-                readBinary.ReadInt32(); //pPlayer.equip.Accessory2 = 
-                readBinary.ReadInt32(); //pPlayer.style.Hat = 
-                readBinary.ReadInt32(); //pPlayer.style.Facegear = 
-                readBinary.ReadInt32(); //pPlayer.style.Weapon = 
-                readBinary.ReadInt32(); //pPlayer.style.Shield = 
+                readBinary.ReadInt32();    
+                readBinary.ReadInt32(); //equip.Hat
+                readBinary.ReadInt32(); //equip.Facegear
+                readBinary.ReadChar();  //style.Bodytype 
+                readBinary.ReadInt32(); //style.Hair 
+                readBinary.ReadInt32(); //equip.Weapon
+                readBinary.ReadInt32(); //equip.Shield
+                readBinary.ReadInt32(); //equip.Armor
+                readBinary.ReadInt32(); //equip.Shoes
+                readBinary.ReadInt32(); //equip.Accessory1
+                readBinary.ReadInt32(); //equip.Accessory2
+                readBinary.ReadInt32(); //style.Hat
+                readBinary.ReadInt32(); //style.Facegear  
+                readBinary.ReadInt32(); //style.Weapon  
+                readBinary.ReadInt32(); //style.Shield
 
-                readBinary.ReadBoolean(); //pPlayer.style.HatHidden = 
-                readBinary.ReadBoolean(); //pPlayer.style.FacegearHidden = 
+                readBinary.ReadBoolean(); //style.HatHidden
+                readBinary.ReadBoolean(); //style.FacegearHidde 
 
-                readBinary.ReadInt32(); //pPlayer.LastTwoHander =  
-                readBinary.ReadInt32(); //pPlayer.LastOneHander =  
-                readBinary.ReadInt32(); //pPlayer.LastBow =     
+                readBinary.ReadInt32(); //LastTwoHander 
+                readBinary.ReadInt32(); //LastOneHander 
+                readBinary.ReadInt32(); //LastBow     
 
                 for (int i = 0; i < 10; i++)
                 {
                     int quckslotType = readBinary.ReadByte();
                     if (quckslotType == 1)
                     {
-                        readBinary.ReadInt32(); //pPlayer.quickslots.Add((Sog_Items)
+                        readBinary.ReadInt32(); //SogItem
                     }
                     else if (quckslotType == 2)
                     {
-                        readBinary.ReadUInt16();    //pPlayer.quickslots.Add((Sog_Spells)
-                    }
-                    else
-                    {
-                        
+                        readBinary.ReadUInt16(); //SogSkill
                     }
                 }
 
-                readBinary.ReadByte();      //pPlayer.style.HairColor = 
-                readBinary.ReadByte();      //pPlayer.style.SkinColor = 
-                readBinary.ReadByte();      //pPlayer.style.PonchoColor = 
-                readBinary.ReadByte();      // pPlayer.style.ShirtColor = 
-                readBinary.ReadByte();      //pPlayer.style.PantsColor = 
+                readBinary.ReadByte(); //style.HairColor
+                readBinary.ReadByte(); //style.SkinColor
+                readBinary.ReadByte(); //style.PonchoColor
+                readBinary.ReadByte(); //style.ShirtColor
+                readBinary.ReadByte(); //style.PantsColor
 
-                readBinary.ReadByte();   //pPlayer.style.Sex = 
-                string nickname = readBinary.ReadString();               
+                sex = readBinary.ReadBoolean();
+                nickname = readBinary.ReadString();
                 readBinary.Dispose();
-
-                return nickname;
             }
+            catch (Exception)
+            {
+                nickname = "[!ERROR!]";
+                sex = false;
+            }
+            
+            return new PlayerPreview { Sex = sex, Nickname = nickname};
         }
+    
+        public static World ReadWorldFromFile(string fileName, ITextBoxWrapper txtConsole)
+        {
+            World worldObject = new World();
+            using (FileStream fileStream = new FileStream(fileName, FileMode.Open))
+            {
+                BinaryReader readBinary = new BinaryReader(fileStream);
+
+                worldObject.MagicByte = readBinary.ReadInt32();
+                worldObject.SavePointId = readBinary.ReadInt32(); 
+                worldObject.QuestsCount = readBinary.ReadInt32();  
+                worldObject.Quests = new List<Quest>(worldObject.QuestsCount);
+                for (int i = 0; i != worldObject.QuestsCount; i++)
+                {
+                    var currentObjectiveGroup = readBinary.ReadByte();
+
+                }
+                readBinary.Close();
+                fileStream.Close();
+            }
+            return worldObject;
+        }
+
+
     }
 }

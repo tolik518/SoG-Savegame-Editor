@@ -8,13 +8,12 @@ namespace SoG_SGreader
         
         public override bool Equals(object obj)
         {
-            Item item = obj as Item;
-            if (item == null)
+            if (obj is Item item)
             {
-                return false;
+                return ItemID == item.ItemID && ItemCount == item.ItemCount && ItemPos == item.ItemPos;
             }
 
-            return ItemID == item.ItemID && ItemCount == item.ItemCount && ItemPos == item.ItemPos;
+            return false;
         }
     }
 }

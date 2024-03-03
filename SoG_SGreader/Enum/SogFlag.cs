@@ -3,7 +3,6 @@
 // Game Version: 0.99xx
 public enum SogFlag : ushort
 {
-
     Null = 0,
     Testshit_Housecutscene = 1,
     MainStory_Bagcutscene = 2,

@@ -1,6 +1,7 @@
 ﻿using SoG_SGreader.Wrapper;
 using System;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -11,7 +12,7 @@ namespace SoG_SGreader
     {
         public static readonly string SupportedPatch = "0.99xx";
         public string InstalledGamePatch = "";
-        private Player playerObject = new Player();
+        private Player playerObject;
         private readonly ComboBox[] cbQuickslot = new ComboBox[10];
         private readonly ComboBox[] cbQuickslotType = new ComboBox[10];
         private string InitialPlaytime;
@@ -55,8 +56,11 @@ namespace SoG_SGreader
 
         private void LoadSaveGame()
         {
+            playerObject = new Player();
+            lstPets.Items.Clear();
+            lstInventory.Items.Clear();
+
             txtConsole.AppendText(OpenedSaveGamePath);
-            InitVariables();
 
             // TODO: This is a workaround to get the textbox into the wrapper (for easier testing)
             var txtConsoleWrapped = new UITextBox(txtConsole);
@@ -107,18 +111,12 @@ namespace SoG_SGreader
 
             for (int i = 0; i < 10; i++)
             {
-                switch (cbQuickslotType[i].Text)
+                cbQuickslot[i].DataSource = cbQuickslotType[i].Text switch
                 {
-                    case "SogItem":
-                        cbQuickslot[i].DataSource = items;
-                        break;
-                    case "SogSpells":
-                        cbQuickslot[i].DataSource = skills;
-                        break;
-                    default:
-                        cbQuickslot[i].DataSource = null;
-                        break;
-                }
+                    "SogItem" => items,
+                    "SogSpells" => skills,
+                    _ => null,
+                };
                 cbQuickslot[i].Text = playerObject.Quickslots[i].ToString();
             }
         }
@@ -150,19 +148,12 @@ namespace SoG_SGreader
             var quickslotTypes = new[] { "Sog_Items", "Sog_Spells", "Int32" };
             for (int i = 0; i != 10; i++)
             {
-                switch (cbQuickslotType[i].Text)
+                cbQuickslot[i].DataSource = cbQuickslotType[i].Text switch
                 {
-                    case "SogItem":
-                        cbQuickslot[i].DataSource = items;
-                        break;
-                    case "SogSpells":
-                        cbQuickslot[i].DataSource = skills;
-                        break;
-                    default:
-                        cbQuickslot[i].DataSource = null;
-                        break;
-                }
-
+                    "SogItem" => items,
+                    "SogSpells" => skills,
+                    _ => null,
+                };
                 cbQuickslotType[i].DataSource = quickslotTypes;
             }
 
@@ -344,9 +335,6 @@ namespace SoG_SGreader
                 cblstFishCaught.SetItemChecked(i, playerHasCaughtFish);
             }
         }
-
-        //TODO: we need to clean all our variables before we load a new file 
-        private void InitVariables() { }
 
         private void GetDataFromFields()
         {
@@ -610,12 +598,14 @@ namespace SoG_SGreader
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string sFilename;
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Title = "Save character";
-            saveFileDialog1.DefaultExt = ".cha";
-            saveFileDialog1.Filter = "Character files (*.cha)|*.cha|All files (*.*)|*.*";
-            saveFileDialog1.RestoreDirectory = true;
-            saveFileDialog1.InitialDirectory = Directory.GetParent(OpenedSaveGamePath).FullName;
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog
+            {
+                Title = "Save character",
+                DefaultExt = ".cha",
+                Filter = "Character files (*.cha)|*.cha|All files (*.*)|*.*",
+                RestoreDirectory = true,
+                InitialDirectory = Directory.GetParent(OpenedSaveGamePath).FullName
+            };
 
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -822,9 +812,12 @@ namespace SoG_SGreader
         {
             SolidBrush brush = new SolidBrush(Color.Black); //monochrome brush
             RectangleF tabTextArea = (RectangleF)tabControl1.GetTabRect(e.Index); //Drawing area
-            StringFormat sf = new StringFormat(); //Package text layout format information
-            sf.LineAlignment = StringAlignment.Center;
-            sf.Alignment = StringAlignment.Center;
+            StringFormat sf = new StringFormat
+            {
+                LineAlignment = StringAlignment.Center,
+                Alignment = StringAlignment.Center
+            }; //Package text layout format information
+
             e.Graphics.DrawString(
                 tabControl1.Controls[e.Index].Text,
                 SystemInformation.MenuFont,
@@ -940,6 +933,13 @@ namespace SoG_SGreader
 
         private void openSavegameFolderToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // dont crash OpenedSaveGamePath is null, just open the default folder
+            if (string.IsNullOrEmpty(OpenedSaveGamePath))
+            {
+                System.Diagnostics.Process.Start(Directory.GetCurrentDirectory());
+                return;
+            }
+
             string folderPath = Directory.GetParent(OpenedSaveGamePath).FullName;
             System.Diagnostics.Process.Start(folderPath);
         }
@@ -1091,6 +1091,34 @@ namespace SoG_SGreader
             {
                 bool playerHasCaughtFish = playerObject.HasCaughtFish((SogItem)Enum.Parse(typeof(SogItem), cblstFishCaught.Items[i].ToString()));
                 cblstFishCaught.SetItemChecked(i, playerHasCaughtFish);
+            }
+        }
+
+        private void cblstFlags_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if (e.NewValue == CheckState.Checked)
+            {
+                if (!cblstFlagsChecked.Items.Contains(cblstFlags.Items[e.Index]))
+                {
+                    cblstFlagsChecked.Items.Add(cblstFlags.Items[e.Index]);
+                    cblstFlagsChecked.SetItemChecked(cblstFlagsChecked.Items.Count - 1, true);
+                }
+            } 
+            else if (e.NewValue == CheckState.Unchecked)
+            {
+                cblstFlagsChecked.Items.RemoveAt(cblstFlagsChecked.Items.IndexOf(cblstFlags.Items[e.Index]));
+            }
+            
+        }
+
+        private void cblstFlagsChecked_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if (e.NewValue == CheckState.Unchecked)
+            {
+                cblstFlags.SetItemChecked(
+                    cblstFlags.Items.IndexOf(cblstFlagsChecked.Items[e.Index]),
+                    false
+                );
             }
         }
     }

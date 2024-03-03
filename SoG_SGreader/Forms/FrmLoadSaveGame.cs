@@ -18,14 +18,7 @@ namespace SoG_SGreader
 
         private void BtnLoadSaveGame_Click(object sender, EventArgs e)
         {
-            if (lstvSaveGames.SelectedItems.Count != 0)
-            {
-                filePath = Path.Combine(filePath, lstvSaveGames.SelectedItems[0].Text);
-            }
-            FrmMain frmMain = new FrmMain(filePath);
-            Hide();
-            frmMain.ShowDialog();
-            Close();
+            ForwardSelectedSavegameToMain();
         }
 
         private void GetSaveGameFiles(string sFilePath)
@@ -36,7 +29,8 @@ namespace SoG_SGreader
                 string savegame = Path.Combine(sFilePath, i + ".cha");
                 if (File.Exists(savegame))
                 {
-                    string[] item = new string[] { i + ".cha", DataReader.GetCharName(savegame) };
+                    PlayerPreview player = DataReader.GetCharName(savegame);
+                    string[] item = new string[] { i.ToString(), player.GetSex(), player.Nickname };
                     lstvSaveGames.Items.Add(new ListViewItem(item, 0));
                 }
             }
@@ -54,7 +48,8 @@ namespace SoG_SGreader
 
         private string GetSaveGamePath()
         {
-            return filePath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + Path.DirectorySeparatorChar + Path.Combine("Secrets of Grindea", "Characters");
+            var appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            return filePath = appDataPath + Path.DirectorySeparatorChar + Path.Combine("Secrets of Grindea", "Characters");
         }
 
         private void BtnChooseFolder_Click(object sender, EventArgs e)
@@ -73,17 +68,28 @@ namespace SoG_SGreader
 
         private void BtnStartWithoitLoading_Click(object sender, EventArgs e)
         {
-            FrmMain frmMain = new FrmMain("");
-            Hide();
-            frmMain.ShowDialog();
-            Close();
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + Path.DirectorySeparatorChar + Path.Combine("Secrets of Grindea", "Characters"),
+                Filter = "SoG Savegame (*.cha)|*.cha",
+                FilterIndex = 2,
+                RestoreDirectory = true
+            };
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                FrmMain frmMain = new FrmMain(openFileDialog.FileName);
+                Hide();
+                frmMain.ShowDialog();
+                Close();
+            }
         }
 
         private void UpdateFilePathLabel()
         {
             if (lstvSaveGames.SelectedItems.Count != 0)
             {
-                lblFilePath.Text = Path.Combine(filePath, lstvSaveGames.SelectedItems[0].Text);
+                lblFilePath.Text = Path.Combine(filePath, lstvSaveGames.SelectedItems[0].Text + ".cha");
             }
             else
             {
@@ -98,6 +104,23 @@ namespace SoG_SGreader
                 btnLoadSaveGame.Enabled = true;
             }
             UpdateFilePathLabel();
+        }
+
+        private void ForwardSelectedSavegameToMain()
+        {
+            if (lstvSaveGames.SelectedItems.Count != 0)
+            {
+                filePath = Path.Combine(filePath, lstvSaveGames.SelectedItems[0].Text + ".cha");
+            }
+            FrmMain frmMain = new FrmMain(filePath);
+            Hide();
+            frmMain.ShowDialog();
+            Close();
+        }
+
+        private void lstvSaveGames_DoubleClick(object sender, EventArgs e)
+        {
+             ForwardSelectedSavegameToMain();
         }
     }
 }

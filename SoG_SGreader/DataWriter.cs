@@ -95,10 +95,10 @@ namespace SoG_SGreader
                     writeBinary.Write((ushort) playerObject.TreasureMaps[i].TreasureMapID);
                 }
 
-                writeBinary.Write((int) playerObject.UnknownVariables01.Count);
-                for (var i = 0; i != playerObject.UnknownVariables01.Count; i++)
+                writeBinary.Write((int) playerObject.TreasureFound.Count);
+                for (var i = 0; i != playerObject.TreasureFound.Count; i++)
                 {
-                    writeBinary.Write(playerObject.UnknownVariables01[i].UnknownVariable01ID);
+                    writeBinary.Write((ushort) playerObject.TreasureFound[i].TreasureMapID);
                 }
 
                 writeBinary.Write((int) playerObject.Skills.Count);
@@ -230,7 +230,7 @@ namespace SoG_SGreader
                 for (int i = 0; i != playerObject.HouseStyles.Count; i++)
                 {
                     writeBinary.Write(playerObject.HouseStyles[i].Number);
-                    writeBinary.Write(playerObject.HouseStyles[i].Length);
+                    writeBinary.Write((uint) playerObject.HouseStyles[i].Length);
                     writeBinary.Write(playerObject.HouseStyles[i].Bytes);
                 }
 

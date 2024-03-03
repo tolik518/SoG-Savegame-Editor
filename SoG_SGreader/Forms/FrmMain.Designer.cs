@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
 
 namespace SoG_SGreader
 {
@@ -165,6 +167,7 @@ namespace SoG_SGreader
             this.btnDeselectAllQuests = new System.Windows.Forms.Button();
             this.cblstQuests = new System.Windows.Forms.CheckedListBox();
             this.tabFlags = new System.Windows.Forms.TabPage();
+            this.cblstFlagsChecked = new System.Windows.Forms.CheckedListBox();
             this.grpFlags = new System.Windows.Forms.GroupBox();
             this.label41 = new System.Windows.Forms.Label();
             this.btnSelectAllFlags = new System.Windows.Forms.Button();
@@ -1888,6 +1891,7 @@ namespace SoG_SGreader
             // 
             // tabFlags
             // 
+            this.tabFlags.Controls.Add(this.cblstFlagsChecked);
             this.tabFlags.Controls.Add(this.grpFlags);
             this.tabFlags.Controls.Add(this.cblstFlags);
             this.tabFlags.Location = new System.Drawing.Point(4, 22);
@@ -1897,6 +1901,16 @@ namespace SoG_SGreader
             this.tabFlags.TabIndex = 6;
             this.tabFlags.Text = "Flags";
             this.tabFlags.UseVisualStyleBackColor = true;
+            // 
+            // cblstFlagsChecked
+            // 
+            this.cblstFlagsChecked.Enabled = false;
+            this.cblstFlagsChecked.FormattingEnabled = true;
+            this.cblstFlagsChecked.Location = new System.Drawing.Point(8, 244);
+            this.cblstFlagsChecked.Name = "cblstFlagsChecked";
+            this.cblstFlagsChecked.Size = new System.Drawing.Size(440, 139);
+            this.cblstFlagsChecked.TabIndex = 11;
+            this.cblstFlagsChecked.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cblstFlagsChecked_ItemCheck);
             // 
             // grpFlags
             // 
@@ -1961,8 +1975,9 @@ namespace SoG_SGreader
             this.cblstFlags.FormattingEnabled = true;
             this.cblstFlags.Location = new System.Drawing.Point(6, 6);
             this.cblstFlags.Name = "cblstFlags";
-            this.cblstFlags.Size = new System.Drawing.Size(442, 379);
+            this.cblstFlags.Size = new System.Drawing.Size(442, 229);
             this.cblstFlags.TabIndex = 9;
+            this.cblstFlags.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cblstFlags_ItemCheck);
             // 
             // tabTrophies
             // 
@@ -3961,5 +3976,6 @@ namespace SoG_SGreader
         private Button btnResetFishCaught;
         private Button btnDeselectAllFishCaught;
         private CheckedListBox cblstFishCaught;
+        private CheckedListBox cblstFlagsChecked;
     }
 }
