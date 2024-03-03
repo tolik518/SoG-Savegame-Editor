@@ -122,5 +122,10 @@ namespace SoG_SGreader
         {
              ForwardSelectedSavegameToMain();
         }
+
+        private void FrmLoadSaveGame_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

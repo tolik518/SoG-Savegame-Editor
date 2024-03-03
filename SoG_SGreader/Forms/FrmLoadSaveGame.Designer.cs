@@ -39,11 +39,11 @@ namespace SoG_SGreader
             this.lblSaveGameCount = new System.Windows.Forms.Label();
             this.lstvSaveGames = new System.Windows.Forms.ListView();
             this.columnSavefile = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnSex = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnCharName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnChooseFolder = new System.Windows.Forms.Button();
-            this.columnSex = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,6 +115,12 @@ namespace SoG_SGreader
             this.columnSavefile.Text = "Slot";
             this.columnSavefile.Width = 35;
             // 
+            // columnSex
+            // 
+            this.columnSex.Text = "Sex";
+            this.columnSex.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnSex.Width = 35;
+            // 
             // columnCharName
             // 
             this.columnCharName.Text = "Character";
@@ -149,12 +155,6 @@ namespace SoG_SGreader
             this.btnChooseFolder.UseVisualStyleBackColor = true;
             this.btnChooseFolder.Click += new System.EventHandler(this.BtnChooseFolder_Click);
             // 
-            // columnSex
-            // 
-            this.columnSex.Text = "Sex";
-            this.columnSex.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnSex.Width = 35;
-            // 
             // FrmLoadSaveGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,7 +172,8 @@ namespace SoG_SGreader
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmLoadSaveGame";
-            this.Text = "SoG: Savegame Editor v17.9.34607.119 by tolik518";
+            this.Text = "SoG: Savegame Editor v0.7.0 by tolik518";
+            this.Load += new System.EventHandler(this.FrmLoadSaveGame_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
