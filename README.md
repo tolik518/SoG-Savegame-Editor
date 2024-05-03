@@ -17,6 +17,8 @@ on the latest version and download the `SoG_SGreader.zip` file.
 
 Or just [press here](https://github.com/tolik518/SoG_SGreader/releases/latest/download/SoG_SGreader.zip) to download the latest version.
 
+**Hint**: *You just want to just change your **name** and **gender** and are afraid of being tempted to cheat? Then it's better to use the stripped-down [Character Editor](https://github.com/tolik518/sog-character-editor)*
+
 ## How to use
 ![SoG_SGreader](.github/screenshots/SoG_SGreader_load_0.7.0.PNG)
 
