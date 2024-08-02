@@ -521,7 +521,7 @@ namespace SoG_SGreader
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(65, 13);
             this.label55.TabIndex = 0;
-            this.label55.Text = "[Patch 1.00]";
+            this.label55.Text = "[Patch 1.03a]";
             // 
             // numID
             // 

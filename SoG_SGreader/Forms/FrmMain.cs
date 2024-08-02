@@ -10,7 +10,7 @@ namespace SoG_SGreader
 {
     public partial class FrmMain : Form
     {
-        public static readonly string SupportedPatch = "1.00";
+        public static readonly string SupportedPatch = "1.03a";
         public string InstalledGamePatch = "";
         private Player playerObject;
         private readonly ComboBox[] cbQuickslot = new ComboBox[10];
