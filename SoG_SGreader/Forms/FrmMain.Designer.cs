@@ -228,78 +228,75 @@ namespace SoG_SGreader
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabSkillsMelee = new System.Windows.Forms.TabPage();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.sliderSkillMelee2h4 = new System.Windows.Forms.TrackBar();
-            this.sliderSkillMelee2h0 = new System.Windows.Forms.TrackBar();
+            this.numSkillMelee2h0 = new System.Windows.Forms.NumericUpDown();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.sliderSkillMelee2h1 = new System.Windows.Forms.TrackBar();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.sliderSkillMelee2h3 = new System.Windows.Forms.TrackBar();
-            this.sliderSkillMelee2h2 = new System.Windows.Forms.TrackBar();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.numSkillMelee1h2 = new System.Windows.Forms.NumericUpDown();
+            this.numSkillMelee1h3 = new System.Windows.Forms.NumericUpDown();
+            this.numSkillMelee1h4 = new System.Windows.Forms.NumericUpDown();
+            this.numSkillMagicA2 = new System.Windows.Forms.NumericUpDown();
+            this.numSkillMagicA1 = new System.Windows.Forms.NumericUpDown();
+            this.numSkillMagicA0 = new System.Windows.Forms.NumericUpDown();
+            this.numSkillMagicE2 = new System.Windows.Forms.NumericUpDown();
+            this.numSkillMagicE1 = new System.Windows.Forms.NumericUpDown();
+            this.numSkillMagicE0 = new System.Windows.Forms.NumericUpDown();
+            this.numSkillMagicI2 = new System.Windows.Forms.NumericUpDown();
+            this.numSkillMagicI1 = new System.Windows.Forms.NumericUpDown();
+            this.numSkillMagicI0 = new System.Windows.Forms.NumericUpDown();
+            this.numSkillMagicF2 = new System.Windows.Forms.NumericUpDown();
+            this.numSkillMagicF1 = new System.Windows.Forms.NumericUpDown();
+            this.numSkillMagicF0 = new System.Windows.Forms.NumericUpDown();
+            this.numUtilityE0 = new System.Windows.Forms.NumericUpDown();
+            this.numUtilityE1 = new System.Windows.Forms.NumericUpDown();
+            this.numUtilityE2 = new System.Windows.Forms.NumericUpDown();
+            this.numUtilityD0 = new System.Windows.Forms.NumericUpDown();
+            this.numUtilityD1 = new System.Windows.Forms.NumericUpDown();
+            this.numUtilityD2 = new System.Windows.Forms.NumericUpDown();
+            this.numUtilityO0 = new System.Windows.Forms.NumericUpDown();
+            this.numUtilityO1 = new System.Windows.Forms.NumericUpDown();
+            this.numUtilityO2 = new System.Windows.Forms.NumericUpDown();
+            this.numSkillMelee1h1 = new System.Windows.Forms.NumericUpDown();
+            this.numSkillMelee1h0 = new System.Windows.Forms.NumericUpDown();
             this.label56 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.sliderSkillMelee1h1 = new System.Windows.Forms.TrackBar();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.sliderSkillMelee1h2 = new System.Windows.Forms.TrackBar();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.sliderSkillMelee1h3 = new System.Windows.Forms.TrackBar();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.sliderSkillMelee1h4 = new System.Windows.Forms.TrackBar();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.tabSkillsMagic = new System.Windows.Forms.TabPage();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.sliderSkillMagicA2 = new System.Windows.Forms.TrackBar();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
-            this.sliderSkillMagicA1 = new System.Windows.Forms.TrackBar();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.sliderSkillMagicA0 = new System.Windows.Forms.TrackBar();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.sliderSkillMagicE2 = new System.Windows.Forms.TrackBar();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.sliderSkillMagicE1 = new System.Windows.Forms.TrackBar();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.sliderSkillMagicE0 = new System.Windows.Forms.TrackBar();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.sliderSkillMagicI2 = new System.Windows.Forms.TrackBar();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.sliderSkillMagicI1 = new System.Windows.Forms.TrackBar();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.sliderSkillMagicI0 = new System.Windows.Forms.TrackBar();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.sliderSkillMagicF2 = new System.Windows.Forms.TrackBar();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.sliderSkillMagicF1 = new System.Windows.Forms.TrackBar();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.sliderSkillMagicF0 = new System.Windows.Forms.TrackBar();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.tabSkillsUtility = new System.Windows.Forms.TabPage();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
-            this.sliderUtilityE0 = new System.Windows.Forms.TrackBar();
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
-            this.sliderUtilityE1 = new System.Windows.Forms.TrackBar();
             this.pictureBox31 = new System.Windows.Forms.PictureBox();
-            this.sliderUtilityE2 = new System.Windows.Forms.TrackBar();
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.sliderUtilityD0 = new System.Windows.Forms.TrackBar();
             this.pictureBox27 = new System.Windows.Forms.PictureBox();
-            this.sliderUtilityD1 = new System.Windows.Forms.TrackBar();
             this.pictureBox28 = new System.Windows.Forms.PictureBox();
-            this.sliderUtilityD2 = new System.Windows.Forms.TrackBar();
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.sliderUtilityO0 = new System.Windows.Forms.TrackBar();
             this.pictureBox24 = new System.Windows.Forms.PictureBox();
-            this.sliderUtilityO1 = new System.Windows.Forms.TrackBar();
             this.pictureBox25 = new System.Windows.Forms.PictureBox();
-            this.sliderUtilityO2 = new System.Windows.Forms.TrackBar();
             this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.tabTalentsGeneral = new System.Windows.Forms.TabPage();
             this.tabTalentsMelee = new System.Windows.Forms.TabPage();
@@ -318,7 +315,10 @@ namespace SoG_SGreader
             this.txtConsole = new System.Windows.Forms.TextBox();
             this.Tooltips = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.numSkillMelee1h0 = new System.Windows.Forms.NumericUpDown();
+            this.numSkillMelee2h1 = new System.Windows.Forms.NumericUpDown();
+            this.numSkillMelee2h2 = new System.Windows.Forms.NumericUpDown();
+            this.numSkillMelee2h3 = new System.Windows.Forms.NumericUpDown();
+            this.numSkillMelee2h4 = new System.Windows.Forms.NumericUpDown();
             this.lblTrophiesNullWarning.SuspendLayout();
             this.tabChar.SuspendLayout();
             this.grpPatch.SuspendLayout();
@@ -374,80 +374,80 @@ namespace SoG_SGreader
             this.tabControl1.SuspendLayout();
             this.tabSkillsMelee.SuspendLayout();
             this.groupBox11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee2h4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee2h0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee2h0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee2h1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee2h3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee2h2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee1h2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee1h3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee1h4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicA2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicA1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicA0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicE2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicE1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicE0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicI2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicI1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicI0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicF2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicF1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicF0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUtilityE0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUtilityE1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUtilityE2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUtilityD0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUtilityD1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUtilityD2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUtilityO0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUtilityO1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUtilityO2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee1h1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee1h0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee1h1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee1h2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee1h3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee1h4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.tabSkillsMagic.SuspendLayout();
             this.groupBox15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicA2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicA1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicA0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             this.groupBox14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicE2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicE1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicE0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             this.groupBox13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicI2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicI1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicI0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.groupBox12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicF2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicF1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicF0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.tabSkillsUtility.SuspendLayout();
             this.groupBox18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityE0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityE1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityE2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
             this.groupBox17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityD0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityD1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityD2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
             this.groupBox16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityO0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityO1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityO2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             this.msMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee1h0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee2h1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee2h2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee2h3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee2h4)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTrophiesNullWarning
@@ -2766,15 +2766,15 @@ namespace SoG_SGreader
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.sliderSkillMelee2h4);
-            this.groupBox11.Controls.Add(this.sliderSkillMelee2h0);
+            this.groupBox11.Controls.Add(this.numSkillMelee2h4);
+            this.groupBox11.Controls.Add(this.numSkillMelee2h3);
+            this.groupBox11.Controls.Add(this.numSkillMelee2h2);
+            this.groupBox11.Controls.Add(this.numSkillMelee2h1);
             this.groupBox11.Controls.Add(this.pictureBox7);
             this.groupBox11.Controls.Add(this.pictureBox11);
-            this.groupBox11.Controls.Add(this.sliderSkillMelee2h1);
             this.groupBox11.Controls.Add(this.pictureBox8);
             this.groupBox11.Controls.Add(this.pictureBox10);
-            this.groupBox11.Controls.Add(this.sliderSkillMelee2h3);
-            this.groupBox11.Controls.Add(this.sliderSkillMelee2h2);
+            this.groupBox11.Controls.Add(this.numSkillMelee2h0);
             this.groupBox11.Controls.Add(this.pictureBox9);
             this.groupBox11.Location = new System.Drawing.Point(9, 262);
             this.groupBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -2785,27 +2785,17 @@ namespace SoG_SGreader
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Two Handed";
             // 
-            // sliderSkillMelee2h4
+            // numSkillMelee2h0
             // 
-            this.sliderSkillMelee2h4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMelee2h4.Location = new System.Drawing.Point(507, 132);
-            this.sliderSkillMelee2h4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderSkillMelee2h4.Name = "sliderSkillMelee2h4";
-            this.sliderSkillMelee2h4.Size = new System.Drawing.Size(118, 69);
-            this.sliderSkillMelee2h4.TabIndex = 18;
-            this.sliderSkillMelee2h4.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderSkillMelee2h4.Value = 10;
-            // 
-            // sliderSkillMelee2h0
-            // 
-            this.sliderSkillMelee2h0.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMelee2h0.Location = new System.Drawing.Point(15, 132);
-            this.sliderSkillMelee2h0.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderSkillMelee2h0.Name = "sliderSkillMelee2h0";
-            this.sliderSkillMelee2h0.Size = new System.Drawing.Size(118, 69);
-            this.sliderSkillMelee2h0.TabIndex = 10;
-            this.sliderSkillMelee2h0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderSkillMelee2h0.Value = 10;
+            this.numSkillMelee2h0.Location = new System.Drawing.Point(15, 131);
+            this.numSkillMelee2h0.Name = "numSkillMelee2h0";
+            this.numSkillMelee2h0.Size = new System.Drawing.Size(118, 26);
+            this.numSkillMelee2h0.TabIndex = 10;
+            this.numSkillMelee2h0.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             // 
             // pictureBox7
             // 
@@ -2829,17 +2819,6 @@ namespace SoG_SGreader
             this.pictureBox11.TabIndex = 11;
             this.pictureBox11.TabStop = false;
             // 
-            // sliderSkillMelee2h1
-            // 
-            this.sliderSkillMelee2h1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMelee2h1.Location = new System.Drawing.Point(142, 132);
-            this.sliderSkillMelee2h1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderSkillMelee2h1.Name = "sliderSkillMelee2h1";
-            this.sliderSkillMelee2h1.Size = new System.Drawing.Size(118, 69);
-            this.sliderSkillMelee2h1.TabIndex = 12;
-            this.sliderSkillMelee2h1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderSkillMelee2h1.Value = 10;
-            // 
             // pictureBox8
             // 
             this.pictureBox8.Image = global::SoG_SGreader.Properties.Resources.icon_2hsmash;
@@ -2862,28 +2841,6 @@ namespace SoG_SGreader
             this.pictureBox10.TabIndex = 13;
             this.pictureBox10.TabStop = false;
             // 
-            // sliderSkillMelee2h3
-            // 
-            this.sliderSkillMelee2h3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMelee2h3.Location = new System.Drawing.Point(380, 132);
-            this.sliderSkillMelee2h3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderSkillMelee2h3.Name = "sliderSkillMelee2h3";
-            this.sliderSkillMelee2h3.Size = new System.Drawing.Size(118, 69);
-            this.sliderSkillMelee2h3.TabIndex = 16;
-            this.sliderSkillMelee2h3.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderSkillMelee2h3.Value = 10;
-            // 
-            // sliderSkillMelee2h2
-            // 
-            this.sliderSkillMelee2h2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMelee2h2.Location = new System.Drawing.Point(261, 132);
-            this.sliderSkillMelee2h2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderSkillMelee2h2.Name = "sliderSkillMelee2h2";
-            this.sliderSkillMelee2h2.Size = new System.Drawing.Size(118, 69);
-            this.sliderSkillMelee2h2.TabIndex = 14;
-            this.sliderSkillMelee2h2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderSkillMelee2h2.Value = 10;
-            // 
             // pictureBox9
             // 
             this.pictureBox9.Image = global::SoG_SGreader.Properties.Resources.icon_2hthrow;
@@ -2897,17 +2854,17 @@ namespace SoG_SGreader
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.numSkillMelee1h1);
             this.groupBox10.Controls.Add(this.numSkillMelee1h0);
             this.groupBox10.Controls.Add(this.label56);
             this.groupBox10.Controls.Add(this.label38);
             this.groupBox10.Controls.Add(this.pictureBox1);
-            this.groupBox10.Controls.Add(this.sliderSkillMelee1h1);
             this.groupBox10.Controls.Add(this.pictureBox2);
-            this.groupBox10.Controls.Add(this.sliderSkillMelee1h2);
+            this.groupBox10.Controls.Add(this.numSkillMelee1h2);
             this.groupBox10.Controls.Add(this.pictureBox4);
-            this.groupBox10.Controls.Add(this.sliderSkillMelee1h3);
+            this.groupBox10.Controls.Add(this.numSkillMelee1h3);
             this.groupBox10.Controls.Add(this.pictureBox5);
-            this.groupBox10.Controls.Add(this.sliderSkillMelee1h4);
+            this.groupBox10.Controls.Add(this.numSkillMelee1h4);
             this.groupBox10.Controls.Add(this.pictureBox6);
             this.groupBox10.Location = new System.Drawing.Point(9, 9);
             this.groupBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -2917,6 +2874,348 @@ namespace SoG_SGreader
             this.groupBox10.TabIndex = 20;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "One Handed";
+            // 
+            // numSkillMelee1h2
+            // 
+            this.numSkillMelee1h2.Location = new System.Drawing.Point(261, 135);
+            this.numSkillMelee1h2.Name = "numSkillMelee1h2";
+            this.numSkillMelee1h2.Size = new System.Drawing.Size(118, 26);
+            this.numSkillMelee1h2.TabIndex = 4;
+            this.numSkillMelee1h2.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // numSkillMelee1h3
+            // 
+            this.numSkillMelee1h3.Location = new System.Drawing.Point(380, 135);
+            this.numSkillMelee1h3.Name = "numSkillMelee1h3";
+            this.numSkillMelee1h3.Size = new System.Drawing.Size(118, 26);
+            this.numSkillMelee1h3.TabIndex = 6;
+            this.numSkillMelee1h3.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // numSkillMelee1h4
+            // 
+            this.numSkillMelee1h4.Location = new System.Drawing.Point(507, 135);
+            this.numSkillMelee1h4.Name = "numSkillMelee1h4";
+            this.numSkillMelee1h4.Size = new System.Drawing.Size(118, 26);
+            this.numSkillMelee1h4.TabIndex = 8;
+            this.numSkillMelee1h4.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // numSkillMagicA2
+            // 
+            this.numSkillMagicA2.Location = new System.Drawing.Point(204, 135);
+            this.numSkillMagicA2.Name = "numSkillMagicA2";
+            this.numSkillMagicA2.Size = new System.Drawing.Size(100, 26);
+            this.numSkillMagicA2.TabIndex = 10;
+            this.numSkillMagicA2.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // numSkillMagicA1
+            // 
+            this.numSkillMagicA1.Location = new System.Drawing.Point(110, 135);
+            this.numSkillMagicA1.Name = "numSkillMagicA1";
+            this.numSkillMagicA1.Size = new System.Drawing.Size(100, 26);
+            this.numSkillMagicA1.TabIndex = 8;
+            this.numSkillMagicA1.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // numSkillMagicA0
+            // 
+            this.numSkillMagicA0.Location = new System.Drawing.Point(14, 135);
+            this.numSkillMagicA0.Name = "numSkillMagicA0";
+            this.numSkillMagicA0.Size = new System.Drawing.Size(100, 26);
+            this.numSkillMagicA0.TabIndex = 6;
+            this.numSkillMagicA0.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // numSkillMagicE2
+            // 
+            this.numSkillMagicE2.Location = new System.Drawing.Point(204, 135);
+            this.numSkillMagicE2.Name = "numSkillMagicE2";
+            this.numSkillMagicE2.Size = new System.Drawing.Size(100, 26);
+            this.numSkillMagicE2.TabIndex = 10;
+            this.numSkillMagicE2.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // numSkillMagicE1
+            // 
+            this.numSkillMagicE1.Location = new System.Drawing.Point(110, 135);
+            this.numSkillMagicE1.Name = "numSkillMagicE1";
+            this.numSkillMagicE1.Size = new System.Drawing.Size(100, 26);
+            this.numSkillMagicE1.TabIndex = 8;
+            this.numSkillMagicE1.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // numSkillMagicE0
+            // 
+            this.numSkillMagicE0.Location = new System.Drawing.Point(14, 135);
+            this.numSkillMagicE0.Name = "numSkillMagicE0";
+            this.numSkillMagicE0.Size = new System.Drawing.Size(100, 26);
+            this.numSkillMagicE0.TabIndex = 6;
+            this.numSkillMagicE0.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // numSkillMagicI2
+            // 
+            this.numSkillMagicI2.Location = new System.Drawing.Point(204, 135);
+            this.numSkillMagicI2.Name = "numSkillMagicI2";
+            this.numSkillMagicI2.Size = new System.Drawing.Size(100, 26);
+            this.numSkillMagicI2.TabIndex = 10;
+            this.numSkillMagicI2.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // numSkillMagicI1
+            // 
+            this.numSkillMagicI1.Location = new System.Drawing.Point(110, 135);
+            this.numSkillMagicI1.Name = "numSkillMagicI1";
+            this.numSkillMagicI1.Size = new System.Drawing.Size(100, 26);
+            this.numSkillMagicI1.TabIndex = 8;
+            this.numSkillMagicI1.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // numSkillMagicI0
+            // 
+            this.numSkillMagicI0.Location = new System.Drawing.Point(14, 135);
+            this.numSkillMagicI0.Name = "numSkillMagicI0";
+            this.numSkillMagicI0.Size = new System.Drawing.Size(100, 26);
+            this.numSkillMagicI0.TabIndex = 6;
+            this.numSkillMagicI0.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // numSkillMagicF2
+            // 
+            this.numSkillMagicF2.Location = new System.Drawing.Point(204, 135);
+            this.numSkillMagicF2.Name = "numSkillMagicF2";
+            this.numSkillMagicF2.Size = new System.Drawing.Size(100, 26);
+            this.numSkillMagicF2.TabIndex = 10;
+            this.numSkillMagicF2.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // numSkillMagicF1
+            // 
+            this.numSkillMagicF1.Location = new System.Drawing.Point(110, 135);
+            this.numSkillMagicF1.Name = "numSkillMagicF1";
+            this.numSkillMagicF1.Size = new System.Drawing.Size(100, 26);
+            this.numSkillMagicF1.TabIndex = 8;
+            this.numSkillMagicF1.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // numSkillMagicF0
+            // 
+            this.numSkillMagicF0.Location = new System.Drawing.Point(14, 135);
+            this.numSkillMagicF0.Name = "numSkillMagicF0";
+            this.numSkillMagicF0.Size = new System.Drawing.Size(100, 26);
+            this.numSkillMagicF0.TabIndex = 6;
+            this.numSkillMagicF0.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // numUtilityE0
+            // 
+            this.numUtilityE0.Location = new System.Drawing.Point(135, 105);
+            this.numUtilityE0.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numUtilityE0.Name = "numUtilityE0";
+            this.numUtilityE0.Size = new System.Drawing.Size(118, 26);
+            this.numUtilityE0.TabIndex = 0;
+            this.numUtilityE0.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // numUtilityE1
+            // 
+            this.numUtilityE1.Location = new System.Drawing.Point(262, 105);
+            this.numUtilityE1.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numUtilityE1.Name = "numUtilityE1";
+            this.numUtilityE1.Size = new System.Drawing.Size(118, 26);
+            this.numUtilityE1.TabIndex = 2;
+            this.numUtilityE1.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // numUtilityE2
+            // 
+            this.numUtilityE2.Location = new System.Drawing.Point(381, 105);
+            this.numUtilityE2.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numUtilityE2.Name = "numUtilityE2";
+            this.numUtilityE2.Size = new System.Drawing.Size(118, 26);
+            this.numUtilityE2.TabIndex = 4;
+            this.numUtilityE2.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // numUtilityD0
+            // 
+            this.numUtilityD0.Location = new System.Drawing.Point(135, 105);
+            this.numUtilityD0.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numUtilityD0.Name = "numUtilityD0";
+            this.numUtilityD0.Size = new System.Drawing.Size(118, 26);
+            this.numUtilityD0.TabIndex = 0;
+            this.numUtilityD0.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // numUtilityD1
+            // 
+            this.numUtilityD1.Location = new System.Drawing.Point(262, 105);
+            this.numUtilityD1.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numUtilityD1.Name = "numUtilityD1";
+            this.numUtilityD1.Size = new System.Drawing.Size(118, 26);
+            this.numUtilityD1.TabIndex = 2;
+            this.numUtilityD1.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // numUtilityD2
+            // 
+            this.numUtilityD2.Location = new System.Drawing.Point(381, 105);
+            this.numUtilityD2.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numUtilityD2.Name = "numUtilityD2";
+            this.numUtilityD2.Size = new System.Drawing.Size(118, 26);
+            this.numUtilityD2.TabIndex = 4;
+            this.numUtilityD2.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // numUtilityO0
+            // 
+            this.numUtilityO0.Location = new System.Drawing.Point(135, 105);
+            this.numUtilityO0.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numUtilityO0.Name = "numUtilityO0";
+            this.numUtilityO0.Size = new System.Drawing.Size(118, 26);
+            this.numUtilityO0.TabIndex = 0;
+            // 
+            // numUtilityO1
+            // 
+            this.numUtilityO1.Location = new System.Drawing.Point(262, 105);
+            this.numUtilityO1.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numUtilityO1.Name = "numUtilityO1";
+            this.numUtilityO1.Size = new System.Drawing.Size(118, 26);
+            this.numUtilityO1.TabIndex = 2;
+            this.numUtilityO1.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // numUtilityO2
+            // 
+            this.numUtilityO2.Location = new System.Drawing.Point(381, 105);
+            this.numUtilityO2.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.numUtilityO2.Name = "numUtilityO2";
+            this.numUtilityO2.Size = new System.Drawing.Size(118, 26);
+            this.numUtilityO2.TabIndex = 4;
+            this.numUtilityO2.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // numSkillMelee1h1
+            // 
+            this.numSkillMelee1h1.Location = new System.Drawing.Point(142, 135);
+            this.numSkillMelee1h1.Name = "numSkillMelee1h1";
+            this.numSkillMelee1h1.Size = new System.Drawing.Size(118, 26);
+            this.numSkillMelee1h1.TabIndex = 13;
+            // 
+            // numSkillMelee1h0
+            // 
+            this.numSkillMelee1h0.Location = new System.Drawing.Point(15, 135);
+            this.numSkillMelee1h0.Name = "numSkillMelee1h0";
+            this.numSkillMelee1h0.Size = new System.Drawing.Size(118, 26);
+            this.numSkillMelee1h0.TabIndex = 12;
             // 
             // label56
             // 
@@ -2949,17 +3248,6 @@ namespace SoG_SGreader
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // sliderSkillMelee1h1
-            // 
-            this.sliderSkillMelee1h1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMelee1h1.Location = new System.Drawing.Point(142, 135);
-            this.sliderSkillMelee1h1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderSkillMelee1h1.Name = "sliderSkillMelee1h1";
-            this.sliderSkillMelee1h1.Size = new System.Drawing.Size(118, 69);
-            this.sliderSkillMelee1h1.TabIndex = 2;
-            this.sliderSkillMelee1h1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderSkillMelee1h1.Value = 10;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::SoG_SGreader.Properties.Resources.icon_millionstabs;
@@ -2970,17 +3258,6 @@ namespace SoG_SGreader
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
-            // 
-            // sliderSkillMelee1h2
-            // 
-            this.sliderSkillMelee1h2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMelee1h2.Location = new System.Drawing.Point(261, 135);
-            this.sliderSkillMelee1h2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderSkillMelee1h2.Name = "sliderSkillMelee1h2";
-            this.sliderSkillMelee1h2.Size = new System.Drawing.Size(118, 69);
-            this.sliderSkillMelee1h2.TabIndex = 4;
-            this.sliderSkillMelee1h2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderSkillMelee1h2.Value = 10;
             // 
             // pictureBox4
             // 
@@ -2993,17 +3270,6 @@ namespace SoG_SGreader
             this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
             // 
-            // sliderSkillMelee1h3
-            // 
-            this.sliderSkillMelee1h3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMelee1h3.Location = new System.Drawing.Point(380, 135);
-            this.sliderSkillMelee1h3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderSkillMelee1h3.Name = "sliderSkillMelee1h3";
-            this.sliderSkillMelee1h3.Size = new System.Drawing.Size(118, 69);
-            this.sliderSkillMelee1h3.TabIndex = 6;
-            this.sliderSkillMelee1h3.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderSkillMelee1h3.Value = 10;
-            // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::SoG_SGreader.Properties.Resources.icon_shadowclone;
@@ -3014,17 +3280,6 @@ namespace SoG_SGreader
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 7;
             this.pictureBox5.TabStop = false;
-            // 
-            // sliderSkillMelee1h4
-            // 
-            this.sliderSkillMelee1h4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMelee1h4.Location = new System.Drawing.Point(507, 135);
-            this.sliderSkillMelee1h4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderSkillMelee1h4.Name = "sliderSkillMelee1h4";
-            this.sliderSkillMelee1h4.Size = new System.Drawing.Size(118, 69);
-            this.sliderSkillMelee1h4.TabIndex = 8;
-            this.sliderSkillMelee1h4.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderSkillMelee1h4.Value = 10;
             // 
             // pictureBox6
             // 
@@ -3054,11 +3309,11 @@ namespace SoG_SGreader
             // 
             // groupBox15
             // 
-            this.groupBox15.Controls.Add(this.sliderSkillMagicA2);
+            this.groupBox15.Controls.Add(this.numSkillMagicA2);
             this.groupBox15.Controls.Add(this.pictureBox21);
-            this.groupBox15.Controls.Add(this.sliderSkillMagicA1);
+            this.groupBox15.Controls.Add(this.numSkillMagicA1);
             this.groupBox15.Controls.Add(this.pictureBox22);
-            this.groupBox15.Controls.Add(this.sliderSkillMagicA0);
+            this.groupBox15.Controls.Add(this.numSkillMagicA0);
             this.groupBox15.Controls.Add(this.pictureBox23);
             this.groupBox15.Location = new System.Drawing.Point(332, 262);
             this.groupBox15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -3068,17 +3323,6 @@ namespace SoG_SGreader
             this.groupBox15.TabIndex = 22;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Air Magic";
-            // 
-            // sliderSkillMagicA2
-            // 
-            this.sliderSkillMagicA2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMagicA2.Location = new System.Drawing.Point(204, 135);
-            this.sliderSkillMagicA2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderSkillMagicA2.Name = "sliderSkillMagicA2";
-            this.sliderSkillMagicA2.Size = new System.Drawing.Size(100, 69);
-            this.sliderSkillMagicA2.TabIndex = 10;
-            this.sliderSkillMagicA2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderSkillMagicA2.Value = 10;
             // 
             // pictureBox21
             // 
@@ -3091,17 +3335,6 @@ namespace SoG_SGreader
             this.pictureBox21.TabIndex = 11;
             this.pictureBox21.TabStop = false;
             // 
-            // sliderSkillMagicA1
-            // 
-            this.sliderSkillMagicA1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMagicA1.Location = new System.Drawing.Point(110, 135);
-            this.sliderSkillMagicA1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderSkillMagicA1.Name = "sliderSkillMagicA1";
-            this.sliderSkillMagicA1.Size = new System.Drawing.Size(100, 69);
-            this.sliderSkillMagicA1.TabIndex = 8;
-            this.sliderSkillMagicA1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderSkillMagicA1.Value = 10;
-            // 
             // pictureBox22
             // 
             this.pictureBox22.Image = global::SoG_SGreader.Properties.Resources.icon_summoncloud;
@@ -3112,17 +3345,6 @@ namespace SoG_SGreader
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox22.TabIndex = 9;
             this.pictureBox22.TabStop = false;
-            // 
-            // sliderSkillMagicA0
-            // 
-            this.sliderSkillMagicA0.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMagicA0.Location = new System.Drawing.Point(14, 135);
-            this.sliderSkillMagicA0.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderSkillMagicA0.Name = "sliderSkillMagicA0";
-            this.sliderSkillMagicA0.Size = new System.Drawing.Size(100, 69);
-            this.sliderSkillMagicA0.TabIndex = 6;
-            this.sliderSkillMagicA0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderSkillMagicA0.Value = 10;
             // 
             // pictureBox23
             // 
@@ -3137,11 +3359,11 @@ namespace SoG_SGreader
             // 
             // groupBox14
             // 
-            this.groupBox14.Controls.Add(this.sliderSkillMagicE2);
+            this.groupBox14.Controls.Add(this.numSkillMagicE2);
             this.groupBox14.Controls.Add(this.pictureBox18);
-            this.groupBox14.Controls.Add(this.sliderSkillMagicE1);
+            this.groupBox14.Controls.Add(this.numSkillMagicE1);
             this.groupBox14.Controls.Add(this.pictureBox19);
-            this.groupBox14.Controls.Add(this.sliderSkillMagicE0);
+            this.groupBox14.Controls.Add(this.numSkillMagicE0);
             this.groupBox14.Controls.Add(this.pictureBox20);
             this.groupBox14.Location = new System.Drawing.Point(9, 262);
             this.groupBox14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -3151,17 +3373,6 @@ namespace SoG_SGreader
             this.groupBox14.TabIndex = 22;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Earth Magic";
-            // 
-            // sliderSkillMagicE2
-            // 
-            this.sliderSkillMagicE2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMagicE2.Location = new System.Drawing.Point(204, 135);
-            this.sliderSkillMagicE2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderSkillMagicE2.Name = "sliderSkillMagicE2";
-            this.sliderSkillMagicE2.Size = new System.Drawing.Size(100, 69);
-            this.sliderSkillMagicE2.TabIndex = 10;
-            this.sliderSkillMagicE2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderSkillMagicE2.Value = 10;
             // 
             // pictureBox18
             // 
@@ -3174,17 +3385,6 @@ namespace SoG_SGreader
             this.pictureBox18.TabIndex = 11;
             this.pictureBox18.TabStop = false;
             // 
-            // sliderSkillMagicE1
-            // 
-            this.sliderSkillMagicE1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMagicE1.Location = new System.Drawing.Point(110, 135);
-            this.sliderSkillMagicE1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderSkillMagicE1.Name = "sliderSkillMagicE1";
-            this.sliderSkillMagicE1.Size = new System.Drawing.Size(100, 69);
-            this.sliderSkillMagicE1.TabIndex = 8;
-            this.sliderSkillMagicE1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderSkillMagicE1.Value = 10;
-            // 
             // pictureBox19
             // 
             this.pictureBox19.Image = global::SoG_SGreader.Properties.Resources.icon_plantsummon;
@@ -3195,17 +3395,6 @@ namespace SoG_SGreader
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox19.TabIndex = 9;
             this.pictureBox19.TabStop = false;
-            // 
-            // sliderSkillMagicE0
-            // 
-            this.sliderSkillMagicE0.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMagicE0.Location = new System.Drawing.Point(14, 135);
-            this.sliderSkillMagicE0.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderSkillMagicE0.Name = "sliderSkillMagicE0";
-            this.sliderSkillMagicE0.Size = new System.Drawing.Size(100, 69);
-            this.sliderSkillMagicE0.TabIndex = 6;
-            this.sliderSkillMagicE0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderSkillMagicE0.Value = 10;
             // 
             // pictureBox20
             // 
@@ -3220,11 +3409,11 @@ namespace SoG_SGreader
             // 
             // groupBox13
             // 
-            this.groupBox13.Controls.Add(this.sliderSkillMagicI2);
+            this.groupBox13.Controls.Add(this.numSkillMagicI2);
             this.groupBox13.Controls.Add(this.pictureBox15);
-            this.groupBox13.Controls.Add(this.sliderSkillMagicI1);
+            this.groupBox13.Controls.Add(this.numSkillMagicI1);
             this.groupBox13.Controls.Add(this.pictureBox16);
-            this.groupBox13.Controls.Add(this.sliderSkillMagicI0);
+            this.groupBox13.Controls.Add(this.numSkillMagicI0);
             this.groupBox13.Controls.Add(this.pictureBox17);
             this.groupBox13.Location = new System.Drawing.Point(332, 9);
             this.groupBox13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -3234,17 +3423,6 @@ namespace SoG_SGreader
             this.groupBox13.TabIndex = 22;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Ice Magic";
-            // 
-            // sliderSkillMagicI2
-            // 
-            this.sliderSkillMagicI2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMagicI2.Location = new System.Drawing.Point(204, 135);
-            this.sliderSkillMagicI2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderSkillMagicI2.Name = "sliderSkillMagicI2";
-            this.sliderSkillMagicI2.Size = new System.Drawing.Size(100, 69);
-            this.sliderSkillMagicI2.TabIndex = 10;
-            this.sliderSkillMagicI2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderSkillMagicI2.Value = 10;
             // 
             // pictureBox15
             // 
@@ -3257,17 +3435,6 @@ namespace SoG_SGreader
             this.pictureBox15.TabIndex = 11;
             this.pictureBox15.TabStop = false;
             // 
-            // sliderSkillMagicI1
-            // 
-            this.sliderSkillMagicI1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMagicI1.Location = new System.Drawing.Point(110, 135);
-            this.sliderSkillMagicI1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderSkillMagicI1.Name = "sliderSkillMagicI1";
-            this.sliderSkillMagicI1.Size = new System.Drawing.Size(100, 69);
-            this.sliderSkillMagicI1.TabIndex = 8;
-            this.sliderSkillMagicI1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderSkillMagicI1.Value = 10;
-            // 
             // pictureBox16
             // 
             this.pictureBox16.Image = global::SoG_SGreader.Properties.Resources.icon_frostnova_clover;
@@ -3278,17 +3445,6 @@ namespace SoG_SGreader
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox16.TabIndex = 9;
             this.pictureBox16.TabStop = false;
-            // 
-            // sliderSkillMagicI0
-            // 
-            this.sliderSkillMagicI0.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMagicI0.Location = new System.Drawing.Point(14, 135);
-            this.sliderSkillMagicI0.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderSkillMagicI0.Name = "sliderSkillMagicI0";
-            this.sliderSkillMagicI0.Size = new System.Drawing.Size(100, 69);
-            this.sliderSkillMagicI0.TabIndex = 6;
-            this.sliderSkillMagicI0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderSkillMagicI0.Value = 10;
             // 
             // pictureBox17
             // 
@@ -3303,11 +3459,11 @@ namespace SoG_SGreader
             // 
             // groupBox12
             // 
-            this.groupBox12.Controls.Add(this.sliderSkillMagicF2);
+            this.groupBox12.Controls.Add(this.numSkillMagicF2);
             this.groupBox12.Controls.Add(this.pictureBox14);
-            this.groupBox12.Controls.Add(this.sliderSkillMagicF1);
+            this.groupBox12.Controls.Add(this.numSkillMagicF1);
             this.groupBox12.Controls.Add(this.pictureBox13);
-            this.groupBox12.Controls.Add(this.sliderSkillMagicF0);
+            this.groupBox12.Controls.Add(this.numSkillMagicF0);
             this.groupBox12.Controls.Add(this.pictureBox12);
             this.groupBox12.Location = new System.Drawing.Point(9, 9);
             this.groupBox12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -3317,17 +3473,6 @@ namespace SoG_SGreader
             this.groupBox12.TabIndex = 21;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Fire Magic";
-            // 
-            // sliderSkillMagicF2
-            // 
-            this.sliderSkillMagicF2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMagicF2.Location = new System.Drawing.Point(204, 135);
-            this.sliderSkillMagicF2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderSkillMagicF2.Name = "sliderSkillMagicF2";
-            this.sliderSkillMagicF2.Size = new System.Drawing.Size(100, 69);
-            this.sliderSkillMagicF2.TabIndex = 10;
-            this.sliderSkillMagicF2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderSkillMagicF2.Value = 10;
             // 
             // pictureBox14
             // 
@@ -3340,17 +3485,6 @@ namespace SoG_SGreader
             this.pictureBox14.TabIndex = 11;
             this.pictureBox14.TabStop = false;
             // 
-            // sliderSkillMagicF1
-            // 
-            this.sliderSkillMagicF1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMagicF1.Location = new System.Drawing.Point(110, 135);
-            this.sliderSkillMagicF1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderSkillMagicF1.Name = "sliderSkillMagicF1";
-            this.sliderSkillMagicF1.Size = new System.Drawing.Size(100, 69);
-            this.sliderSkillMagicF1.TabIndex = 8;
-            this.sliderSkillMagicF1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderSkillMagicF1.Value = 10;
-            // 
             // pictureBox13
             // 
             this.pictureBox13.Image = global::SoG_SGreader.Properties.Resources.icon_meteor;
@@ -3361,17 +3495,6 @@ namespace SoG_SGreader
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 9;
             this.pictureBox13.TabStop = false;
-            // 
-            // sliderSkillMagicF0
-            // 
-            this.sliderSkillMagicF0.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMagicF0.Location = new System.Drawing.Point(14, 135);
-            this.sliderSkillMagicF0.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderSkillMagicF0.Name = "sliderSkillMagicF0";
-            this.sliderSkillMagicF0.Size = new System.Drawing.Size(100, 69);
-            this.sliderSkillMagicF0.TabIndex = 6;
-            this.sliderSkillMagicF0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderSkillMagicF0.Value = 10;
             // 
             // pictureBox12
             // 
@@ -3400,11 +3523,11 @@ namespace SoG_SGreader
             // 
             // groupBox18
             // 
-            this.groupBox18.Controls.Add(this.sliderUtilityE0);
+            this.groupBox18.Controls.Add(this.numUtilityE0);
             this.groupBox18.Controls.Add(this.pictureBox30);
-            this.groupBox18.Controls.Add(this.sliderUtilityE1);
+            this.groupBox18.Controls.Add(this.numUtilityE1);
             this.groupBox18.Controls.Add(this.pictureBox31);
-            this.groupBox18.Controls.Add(this.sliderUtilityE2);
+            this.groupBox18.Controls.Add(this.numUtilityE2);
             this.groupBox18.Controls.Add(this.pictureBox32);
             this.groupBox18.Location = new System.Drawing.Point(9, 389);
             this.groupBox18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -3414,18 +3537,6 @@ namespace SoG_SGreader
             this.groupBox18.TabIndex = 22;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "Enhancing";
-            // 
-            // sliderUtilityE0
-            // 
-            this.sliderUtilityE0.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderUtilityE0.Location = new System.Drawing.Point(135, 105);
-            this.sliderUtilityE0.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderUtilityE0.Maximum = 3;
-            this.sliderUtilityE0.Name = "sliderUtilityE0";
-            this.sliderUtilityE0.Size = new System.Drawing.Size(118, 69);
-            this.sliderUtilityE0.TabIndex = 0;
-            this.sliderUtilityE0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderUtilityE0.Value = 3;
             // 
             // pictureBox30
             // 
@@ -3438,18 +3549,6 @@ namespace SoG_SGreader
             this.pictureBox30.TabIndex = 1;
             this.pictureBox30.TabStop = false;
             // 
-            // sliderUtilityE1
-            // 
-            this.sliderUtilityE1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderUtilityE1.Location = new System.Drawing.Point(262, 105);
-            this.sliderUtilityE1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderUtilityE1.Maximum = 3;
-            this.sliderUtilityE1.Name = "sliderUtilityE1";
-            this.sliderUtilityE1.Size = new System.Drawing.Size(118, 69);
-            this.sliderUtilityE1.TabIndex = 2;
-            this.sliderUtilityE1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderUtilityE1.Value = 3;
-            // 
             // pictureBox31
             // 
             this.pictureBox31.Image = global::SoG_SGreader.Properties.Resources.icon_speedup;
@@ -3460,18 +3559,6 @@ namespace SoG_SGreader
             this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox31.TabIndex = 3;
             this.pictureBox31.TabStop = false;
-            // 
-            // sliderUtilityE2
-            // 
-            this.sliderUtilityE2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderUtilityE2.Location = new System.Drawing.Point(381, 105);
-            this.sliderUtilityE2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderUtilityE2.Maximum = 3;
-            this.sliderUtilityE2.Name = "sliderUtilityE2";
-            this.sliderUtilityE2.Size = new System.Drawing.Size(118, 69);
-            this.sliderUtilityE2.TabIndex = 4;
-            this.sliderUtilityE2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderUtilityE2.Value = 3;
             // 
             // pictureBox32
             // 
@@ -3486,11 +3573,11 @@ namespace SoG_SGreader
             // 
             // groupBox17
             // 
-            this.groupBox17.Controls.Add(this.sliderUtilityD0);
+            this.groupBox17.Controls.Add(this.numUtilityD0);
             this.groupBox17.Controls.Add(this.pictureBox27);
-            this.groupBox17.Controls.Add(this.sliderUtilityD1);
+            this.groupBox17.Controls.Add(this.numUtilityD1);
             this.groupBox17.Controls.Add(this.pictureBox28);
-            this.groupBox17.Controls.Add(this.sliderUtilityD2);
+            this.groupBox17.Controls.Add(this.numUtilityD2);
             this.groupBox17.Controls.Add(this.pictureBox29);
             this.groupBox17.Location = new System.Drawing.Point(9, 195);
             this.groupBox17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -3500,18 +3587,6 @@ namespace SoG_SGreader
             this.groupBox17.TabIndex = 22;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Defensive";
-            // 
-            // sliderUtilityD0
-            // 
-            this.sliderUtilityD0.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderUtilityD0.Location = new System.Drawing.Point(135, 105);
-            this.sliderUtilityD0.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderUtilityD0.Maximum = 3;
-            this.sliderUtilityD0.Name = "sliderUtilityD0";
-            this.sliderUtilityD0.Size = new System.Drawing.Size(118, 69);
-            this.sliderUtilityD0.TabIndex = 0;
-            this.sliderUtilityD0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderUtilityD0.Value = 3;
             // 
             // pictureBox27
             // 
@@ -3524,18 +3599,6 @@ namespace SoG_SGreader
             this.pictureBox27.TabIndex = 1;
             this.pictureBox27.TabStop = false;
             // 
-            // sliderUtilityD1
-            // 
-            this.sliderUtilityD1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderUtilityD1.Location = new System.Drawing.Point(262, 105);
-            this.sliderUtilityD1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderUtilityD1.Maximum = 3;
-            this.sliderUtilityD1.Name = "sliderUtilityD1";
-            this.sliderUtilityD1.Size = new System.Drawing.Size(118, 69);
-            this.sliderUtilityD1.TabIndex = 2;
-            this.sliderUtilityD1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderUtilityD1.Value = 3;
-            // 
             // pictureBox28
             // 
             this.pictureBox28.Image = global::SoG_SGreader.Properties.Resources.icon_utility_focus;
@@ -3546,18 +3609,6 @@ namespace SoG_SGreader
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox28.TabIndex = 3;
             this.pictureBox28.TabStop = false;
-            // 
-            // sliderUtilityD2
-            // 
-            this.sliderUtilityD2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderUtilityD2.Location = new System.Drawing.Point(381, 105);
-            this.sliderUtilityD2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderUtilityD2.Maximum = 3;
-            this.sliderUtilityD2.Name = "sliderUtilityD2";
-            this.sliderUtilityD2.Size = new System.Drawing.Size(118, 69);
-            this.sliderUtilityD2.TabIndex = 4;
-            this.sliderUtilityD2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderUtilityD2.Value = 3;
             // 
             // pictureBox29
             // 
@@ -3572,11 +3623,11 @@ namespace SoG_SGreader
             // 
             // groupBox16
             // 
-            this.groupBox16.Controls.Add(this.sliderUtilityO0);
+            this.groupBox16.Controls.Add(this.numUtilityO0);
             this.groupBox16.Controls.Add(this.pictureBox24);
-            this.groupBox16.Controls.Add(this.sliderUtilityO1);
+            this.groupBox16.Controls.Add(this.numUtilityO1);
             this.groupBox16.Controls.Add(this.pictureBox25);
-            this.groupBox16.Controls.Add(this.sliderUtilityO2);
+            this.groupBox16.Controls.Add(this.numUtilityO2);
             this.groupBox16.Controls.Add(this.pictureBox26);
             this.groupBox16.Location = new System.Drawing.Point(9, 9);
             this.groupBox16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -3586,17 +3637,6 @@ namespace SoG_SGreader
             this.groupBox16.TabIndex = 21;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Offensive";
-            // 
-            // sliderUtilityO0
-            // 
-            this.sliderUtilityO0.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderUtilityO0.Location = new System.Drawing.Point(135, 105);
-            this.sliderUtilityO0.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderUtilityO0.Maximum = 3;
-            this.sliderUtilityO0.Name = "sliderUtilityO0";
-            this.sliderUtilityO0.Size = new System.Drawing.Size(118, 69);
-            this.sliderUtilityO0.TabIndex = 0;
-            this.sliderUtilityO0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             // 
             // pictureBox24
             // 
@@ -3609,18 +3649,6 @@ namespace SoG_SGreader
             this.pictureBox24.TabIndex = 1;
             this.pictureBox24.TabStop = false;
             // 
-            // sliderUtilityO1
-            // 
-            this.sliderUtilityO1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderUtilityO1.Location = new System.Drawing.Point(262, 105);
-            this.sliderUtilityO1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderUtilityO1.Maximum = 3;
-            this.sliderUtilityO1.Name = "sliderUtilityO1";
-            this.sliderUtilityO1.Size = new System.Drawing.Size(118, 69);
-            this.sliderUtilityO1.TabIndex = 2;
-            this.sliderUtilityO1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderUtilityO1.Value = 3;
-            // 
             // pictureBox25
             // 
             this.pictureBox25.Image = global::SoG_SGreader.Properties.Resources.icon_utility_sleep;
@@ -3631,18 +3659,6 @@ namespace SoG_SGreader
             this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox25.TabIndex = 3;
             this.pictureBox25.TabStop = false;
-            // 
-            // sliderUtilityO2
-            // 
-            this.sliderUtilityO2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderUtilityO2.Location = new System.Drawing.Point(381, 105);
-            this.sliderUtilityO2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sliderUtilityO2.Maximum = 3;
-            this.sliderUtilityO2.Name = "sliderUtilityO2";
-            this.sliderUtilityO2.Size = new System.Drawing.Size(118, 69);
-            this.sliderUtilityO2.TabIndex = 4;
-            this.sliderUtilityO2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.sliderUtilityO2.Value = 3;
             // 
             // pictureBox26
             // 
@@ -3807,12 +3823,53 @@ namespace SoG_SGreader
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.PictureBox3_Click);
             // 
-            // numSkillMelee1h0
+            // numSkillMelee2h1
             // 
-            this.numSkillMelee1h0.Location = new System.Drawing.Point(15, 135);
-            this.numSkillMelee1h0.Name = "numSkillMelee1h0";
-            this.numSkillMelee1h0.Size = new System.Drawing.Size(118, 26);
-            this.numSkillMelee1h0.TabIndex = 12;
+            this.numSkillMelee2h1.Location = new System.Drawing.Point(142, 131);
+            this.numSkillMelee2h1.Name = "numSkillMelee2h1";
+            this.numSkillMelee2h1.Size = new System.Drawing.Size(118, 26);
+            this.numSkillMelee2h1.TabIndex = 20;
+            this.numSkillMelee2h1.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // numSkillMelee2h2
+            // 
+            this.numSkillMelee2h2.Location = new System.Drawing.Point(261, 131);
+            this.numSkillMelee2h2.Name = "numSkillMelee2h2";
+            this.numSkillMelee2h2.Size = new System.Drawing.Size(118, 26);
+            this.numSkillMelee2h2.TabIndex = 19;
+            this.numSkillMelee2h2.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // numSkillMelee2h3
+            // 
+            this.numSkillMelee2h3.Location = new System.Drawing.Point(380, 131);
+            this.numSkillMelee2h3.Name = "numSkillMelee2h3";
+            this.numSkillMelee2h3.Size = new System.Drawing.Size(118, 26);
+            this.numSkillMelee2h3.TabIndex = 19;
+            this.numSkillMelee2h3.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // numSkillMelee2h4
+            // 
+            this.numSkillMelee2h4.Location = new System.Drawing.Point(507, 131);
+            this.numSkillMelee2h4.Name = "numSkillMelee2h4";
+            this.numSkillMelee2h4.Size = new System.Drawing.Size(118, 26);
+            this.numSkillMelee2h4.TabIndex = 19;
+            this.numSkillMelee2h4.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             // 
             // FrmMain
             // 
@@ -3908,90 +3965,82 @@ namespace SoG_SGreader
             this.tabControl1.ResumeLayout(false);
             this.tabSkillsMelee.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee2h4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee2h0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee2h0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee2h1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee2h3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee2h2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee1h2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee1h3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee1h4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicA2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicA1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicA0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicE2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicE1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicE0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicI2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicI1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicI0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicF2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicF1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicF0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUtilityE0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUtilityE1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUtilityE2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUtilityD0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUtilityD1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUtilityD2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUtilityO0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUtilityO1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUtilityO2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee1h1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee1h0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee1h1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee1h2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee1h3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee1h4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.tabSkillsMagic.ResumeLayout(false);
             this.groupBox15.ResumeLayout(false);
-            this.groupBox15.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicA2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicA1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicA0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             this.groupBox14.ResumeLayout(false);
-            this.groupBox14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicE2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicE1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicE0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             this.groupBox13.ResumeLayout(false);
-            this.groupBox13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicI2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicI1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicI0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.groupBox12.ResumeLayout(false);
-            this.groupBox12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicF2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicF1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMagicF0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.tabSkillsUtility.ResumeLayout(false);
             this.groupBox18.ResumeLayout(false);
-            this.groupBox18.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityE0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityE1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityE2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
             this.groupBox17.ResumeLayout(false);
-            this.groupBox17.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityD0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityD1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityD2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
             this.groupBox16.ResumeLayout(false);
-            this.groupBox16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityO0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityO1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderUtilityO2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee1h0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee2h1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee2h2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee2h3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee2h4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4148,73 +4197,43 @@ namespace SoG_SGreader
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.TrackBar sliderSkillMelee2h4;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.TrackBar sliderSkillMelee2h3;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.TrackBar sliderSkillMelee2h2;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.TrackBar sliderSkillMelee2h1;
         private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.TrackBar sliderSkillMelee2h0;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.TrackBar sliderSkillMelee1h4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.TrackBar sliderSkillMelee1h3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.TrackBar sliderSkillMelee1h2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TrackBar sliderSkillMelee1h1;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.GroupBox groupBox15;
-        private System.Windows.Forms.TrackBar sliderSkillMagicA2;
         private System.Windows.Forms.PictureBox pictureBox21;
-        private System.Windows.Forms.TrackBar sliderSkillMagicA1;
         private System.Windows.Forms.PictureBox pictureBox22;
-        private System.Windows.Forms.TrackBar sliderSkillMagicA0;
         private System.Windows.Forms.PictureBox pictureBox23;
         private System.Windows.Forms.GroupBox groupBox14;
-        private System.Windows.Forms.TrackBar sliderSkillMagicE2;
         private System.Windows.Forms.PictureBox pictureBox18;
-        private System.Windows.Forms.TrackBar sliderSkillMagicE1;
         private System.Windows.Forms.PictureBox pictureBox19;
-        private System.Windows.Forms.TrackBar sliderSkillMagicE0;
         private System.Windows.Forms.PictureBox pictureBox20;
         private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.TrackBar sliderSkillMagicI2;
         private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.TrackBar sliderSkillMagicI1;
         private System.Windows.Forms.PictureBox pictureBox16;
-        private System.Windows.Forms.TrackBar sliderSkillMagicI0;
         private System.Windows.Forms.PictureBox pictureBox17;
         private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.TrackBar sliderSkillMagicF2;
         private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.TrackBar sliderSkillMagicF1;
         private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.TrackBar sliderSkillMagicF0;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.GroupBox groupBox18;
-        private System.Windows.Forms.TrackBar sliderUtilityE0;
         private System.Windows.Forms.PictureBox pictureBox30;
-        private System.Windows.Forms.TrackBar sliderUtilityE1;
         private System.Windows.Forms.PictureBox pictureBox31;
-        private System.Windows.Forms.TrackBar sliderUtilityE2;
         private System.Windows.Forms.PictureBox pictureBox32;
         private System.Windows.Forms.GroupBox groupBox17;
-        private System.Windows.Forms.TrackBar sliderUtilityD0;
         private System.Windows.Forms.PictureBox pictureBox27;
-        private System.Windows.Forms.TrackBar sliderUtilityD1;
         private System.Windows.Forms.PictureBox pictureBox28;
-        private System.Windows.Forms.TrackBar sliderUtilityD2;
         private System.Windows.Forms.PictureBox pictureBox29;
         private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.TrackBar sliderUtilityO0;
         private System.Windows.Forms.PictureBox pictureBox24;
-        private System.Windows.Forms.TrackBar sliderUtilityO1;
         private System.Windows.Forms.PictureBox pictureBox25;
-        private System.Windows.Forms.TrackBar sliderUtilityO2;
         private System.Windows.Forms.PictureBox pictureBox26;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label56;
@@ -4287,5 +4306,35 @@ namespace SoG_SGreader
         private Label lblFlagsChaningNoEffect;
         private Label lblQuestsChaningNoEffect;
         private NumericUpDown numSkillMelee1h0;
+        private NumericUpDown numSkillMelee1h1;
+        private NumericUpDown numSkillMelee2h0;
+        private NumericUpDown numSkillMelee1h2;
+        private NumericUpDown numSkillMelee1h3;
+        private NumericUpDown numSkillMelee1h4;
+        private NumericUpDown numSkillMagicA2;
+        private NumericUpDown numSkillMagicA1;
+        private NumericUpDown numSkillMagicA0;
+        private NumericUpDown numSkillMagicE2;
+        private NumericUpDown numSkillMagicE1;
+        private NumericUpDown numSkillMagicE0;
+        private NumericUpDown numSkillMagicI2;
+        private NumericUpDown numSkillMagicI1;
+        private NumericUpDown numSkillMagicI0;
+        private NumericUpDown numSkillMagicF2;
+        private NumericUpDown numSkillMagicF1;
+        private NumericUpDown numSkillMagicF0;
+        private NumericUpDown numUtilityE0;
+        private NumericUpDown numUtilityE1;
+        private NumericUpDown numUtilityE2;
+        private NumericUpDown numUtilityD0;
+        private NumericUpDown numUtilityD1;
+        private NumericUpDown numUtilityD2;
+        private NumericUpDown numUtilityO0;
+        private NumericUpDown numUtilityO1;
+        private NumericUpDown numUtilityO2;
+        private NumericUpDown numSkillMelee2h4;
+        private NumericUpDown numSkillMelee2h3;
+        private NumericUpDown numSkillMelee2h2;
+        private NumericUpDown numSkillMelee2h1;
     }
 }
