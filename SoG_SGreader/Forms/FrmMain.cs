@@ -279,6 +279,18 @@ namespace SoG_SGreader
             numSkillMagicA1.Value = playerObject.GetSkillLevel(SogSkill.Magic_Wind_SummonCloud);
             numSkillMagicA2.Value = playerObject.GetSkillLevel(SogSkill.Magic_Wind_StaticTouch);
 
+            numUtilityO0.Value = playerObject.GetSkillLevel(SogSkill.Magic_Support_DeathMark);
+            numUtilityO1.Value = playerObject.GetSkillLevel(SogSkill.Magic_Support_Stasis); 
+            numUtilityO2.Value = playerObject.GetSkillLevel(SogSkill.Magic_Support_Taunt);
+
+            numUtilityD0.Value = playerObject.GetSkillLevel(SogSkill.Magic_Support_Blink);
+            numUtilityD1.Value = playerObject.GetSkillLevel(SogSkill.Magic_Support_Focus); 
+            numUtilityD2.Value = playerObject.GetSkillLevel(SogSkill.Magic_Support_Barrier);
+
+            numUtilityE0.Value = playerObject.GetSkillLevel(SogSkill.Magic_Support_BuffATK);
+            numUtilityE1.Value = playerObject.GetSkillLevel(SogSkill.Magic_Support_BuffSPD);
+            numUtilityE2.Value = playerObject.GetSkillLevel(SogSkill.Magic_Support_BuffDEF);
+
             // find out if player has the card. mark the checkbox if yes
             for (int i = 0; i < cblstCards.Items.Count; i++)
             {
@@ -398,6 +410,21 @@ namespace SoG_SGreader
             playerObject.SkillTalentPoints = (Int16)numSkillTalentPoints.Value;
             playerObject.SkillSilverPoints = (Int16)numSkillSilverPoints.Value;
             playerObject.SkillGoldPoints = (Int16)numSkillGoldPoints.Value;
+
+            playerObject.Skills.Clear();
+            var skills = getSkillMappings();
+
+            foreach (var skill in skills)
+            {
+                if (skill.Field.Value != 0)
+                {
+                    playerObject.Skills.Add(new Skill
+                    {
+                        SkillID = skill.SkillID,
+                        SkillLevel = (byte)skill.Field.Value
+                    });
+                }
+            }
 
             playerObject.PetsCount = (byte)lstPets.Items.Count;
 
@@ -583,6 +610,44 @@ namespace SoG_SGreader
                      );
                 }
             }
+        }
+
+        private (NumericUpDown Field, SogSkill SkillID)[] getSkillMappings()
+        {
+            return new (NumericUpDown Field, SogSkill SkillID)[]
+            {
+                (numSkillMelee1h0, SogSkill.Skill_OneHanded_Stinger),
+                (numSkillMelee1h1, SogSkill.Skill_OneHanded_MillionStabs),
+                (numSkillMelee1h2, SogSkill.Skill_OneHanded_SpiritSlash),
+                (numSkillMelee1h3, SogSkill.Skill_OneHanded_ShadowClone),
+                (numSkillMelee1h4, SogSkill.Skill_OneHanded_QuickCounter),
+                (numSkillMelee2h0, SogSkill.Skill_TwoHanded_Overhead),
+                (numSkillMelee2h1, SogSkill.Skill_TwoHanded_Spin),
+                (numSkillMelee2h2, SogSkill.Skill_TwoHanded_Throw),
+                (numSkillMelee2h3, SogSkill.Skill_TwoHanded_Smash),
+                (numSkillMelee2h4, SogSkill.Skill_TwoHanded_BerserkMode),
+                (numSkillMagicF0, SogSkill.Magic_Fire_Fireball),
+                (numSkillMagicF1, SogSkill.Magic_Fire_Meteor),
+                (numSkillMagicF2, SogSkill.Magic_Fire_Flamethrower),
+                (numSkillMagicI0, SogSkill.Magic_Ice_IceSpikes),
+                (numSkillMagicI1, SogSkill.Magic_Ice_IceNova),
+                (numSkillMagicI2, SogSkill.Magic_Ice_FrostyFriend),
+                (numSkillMagicE0, SogSkill.Magic_Earth_EarthSpike),
+                (numSkillMagicE1, SogSkill.Magic_Earth_SummonPlant),
+                (numSkillMagicE2, SogSkill.Magic_Earth_InsectSwarm),
+                (numSkillMagicA0, SogSkill.Magic_Wind_ChainLightning),
+                (numSkillMagicA1, SogSkill.Magic_Wind_SummonCloud),
+                (numSkillMagicA2, SogSkill.Magic_Wind_StaticTouch),
+                (numUtilityO0, SogSkill.Magic_Support_DeathMark),
+                (numUtilityO1, SogSkill.Magic_Support_Stasis),
+                (numUtilityO2, SogSkill.Magic_Support_Taunt),
+                (numUtilityD0, SogSkill.Magic_Support_Blink),
+                (numUtilityD1, SogSkill.Magic_Support_Focus),
+                (numUtilityD2, SogSkill.Magic_Support_Barrier),
+                (numUtilityE0, SogSkill.Magic_Support_BuffATK),
+                (numUtilityE1, SogSkill.Magic_Support_BuffSPD),
+                (numUtilityE2, SogSkill.Magic_Support_BuffDEF)
+            };
         }
 
         private void LstInventory_SelectedIndexChanged(object sender, EventArgs e)

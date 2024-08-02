@@ -149,13 +149,16 @@ namespace SoG_SGreader
                 playerObject.Skills = new List<Skill>(playerObject.SkillsCount);
                 for (int i = 0; i != playerObject.SkillsCount; i++)
                 {
+                    var skillID = (SogSkill)readBinary.ReadInt16();
+                    var skillLevel = readBinary.ReadByte();
                     playerObject.Skills.Add(new Skill
                     { 
-                        SkillID = (SogSkill)readBinary.ReadInt16(), 
-                        SkillLevel = readBinary.ReadByte()
+                        SkillID = skillID, 
+                        SkillLevel = skillLevel
                     });
+                    txtConsole.AppendText("\r\n" + "Skill " + i +": " + skillID.ToString() + " Level " + skillLevel);
                 }
-                
+
                 txtConsole.AppendText("\r\nSkillCount: " + playerObject.SkillsCount);
 
 
