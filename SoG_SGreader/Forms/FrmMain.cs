@@ -251,33 +251,33 @@ namespace SoG_SGreader
             rbMale.Checked = playerObject.Style.Sex != 0;
             rbFemale.Checked = playerObject.Style.Sex == 0;
 
-            sliderSkillMelee1h0.Value = playerObject.GetSkillLevel(SogSkill.Skill_OneHanded_Stinger);
-            sliderSkillMelee1h1.Value = playerObject.GetSkillLevel(SogSkill.Skill_OneHanded_MillionStabs);
-            sliderSkillMelee1h2.Value = playerObject.GetSkillLevel(SogSkill.Skill_OneHanded_SpiritSlash);
-            sliderSkillMelee1h3.Value = playerObject.GetSkillLevel(SogSkill.Skill_OneHanded_ShadowClone);
-            sliderSkillMelee1h4.Value = playerObject.GetSkillLevel(SogSkill.Skill_OneHanded_QuickCounter);
+            numSkillMelee1h0.Value = playerObject.GetSkillLevel(SogSkill.Skill_OneHanded_Stinger);
+            numSkillMelee1h1.Value = playerObject.GetSkillLevel(SogSkill.Skill_OneHanded_MillionStabs);
+            numSkillMelee1h2.Value = playerObject.GetSkillLevel(SogSkill.Skill_OneHanded_SpiritSlash);
+            numSkillMelee1h3.Value = playerObject.GetSkillLevel(SogSkill.Skill_OneHanded_ShadowClone);
+            numSkillMelee1h4.Value = playerObject.GetSkillLevel(SogSkill.Skill_OneHanded_QuickCounter);
 
-            sliderSkillMelee2h0.Value = playerObject.GetSkillLevel(SogSkill.Skill_TwoHanded_Overhead);
-            sliderSkillMelee2h1.Value = playerObject.GetSkillLevel(SogSkill.Skill_TwoHanded_Spin);
-            sliderSkillMelee2h2.Value = playerObject.GetSkillLevel(SogSkill.Skill_TwoHanded_Throw);
-            sliderSkillMelee2h3.Value = playerObject.GetSkillLevel(SogSkill.Skill_TwoHanded_Smash);
-            sliderSkillMelee2h4.Value = playerObject.GetSkillLevel(SogSkill.Skill_TwoHanded_BerserkMode);
+            numSkillMelee2h0.Value = playerObject.GetSkillLevel(SogSkill.Skill_TwoHanded_Overhead);
+            numSkillMelee2h1.Value = playerObject.GetSkillLevel(SogSkill.Skill_TwoHanded_Spin);
+            numSkillMelee2h2.Value = playerObject.GetSkillLevel(SogSkill.Skill_TwoHanded_Throw);
+            numSkillMelee2h3.Value = playerObject.GetSkillLevel(SogSkill.Skill_TwoHanded_Smash);
+            numSkillMelee2h4.Value = playerObject.GetSkillLevel(SogSkill.Skill_TwoHanded_BerserkMode);
 
-            sliderSkillMagicF0.Value = playerObject.GetSkillLevel(SogSkill.Magic_Fire_Fireball);
-            sliderSkillMagicF1.Value = playerObject.GetSkillLevel(SogSkill.Magic_Fire_Meteor);
-            sliderSkillMagicF2.Value = playerObject.GetSkillLevel(SogSkill.Magic_Fire_Flamethrower);
+            numSkillMagicF0.Value = playerObject.GetSkillLevel(SogSkill.Magic_Fire_Fireball);
+            numSkillMagicF1.Value = playerObject.GetSkillLevel(SogSkill.Magic_Fire_Meteor);
+            numSkillMagicF2.Value = playerObject.GetSkillLevel(SogSkill.Magic_Fire_Flamethrower);
 
-            sliderSkillMagicI0.Value = playerObject.GetSkillLevel(SogSkill.Magic_Ice_IceSpikes);
-            sliderSkillMagicI1.Value = playerObject.GetSkillLevel(SogSkill.Magic_Ice_IceNova);
-            sliderSkillMagicI2.Value = playerObject.GetSkillLevel(SogSkill.Magic_Ice_FrostyFriend);
+            numSkillMagicI0.Value = playerObject.GetSkillLevel(SogSkill.Magic_Ice_IceSpikes);
+            numSkillMagicI1.Value = playerObject.GetSkillLevel(SogSkill.Magic_Ice_IceNova);
+            numSkillMagicI2.Value = playerObject.GetSkillLevel(SogSkill.Magic_Ice_FrostyFriend);
 
-            sliderSkillMagicE0.Value = playerObject.GetSkillLevel(SogSkill.Magic_Earth_EarthSpike);
-            sliderSkillMagicE1.Value = playerObject.GetSkillLevel(SogSkill.Magic_Earth_SummonPlant);
-            sliderSkillMagicE2.Value = playerObject.GetSkillLevel(SogSkill.Magic_Earth_InsectSwarm);
+            numSkillMagicE0.Value = playerObject.GetSkillLevel(SogSkill.Magic_Earth_EarthSpike);
+            numSkillMagicE1.Value = playerObject.GetSkillLevel(SogSkill.Magic_Earth_SummonPlant);
+            numSkillMagicE2.Value = playerObject.GetSkillLevel(SogSkill.Magic_Earth_InsectSwarm);
 
-            sliderSkillMagicA0.Value = playerObject.GetSkillLevel(SogSkill.Magic_Wind_ChainLightning);
-            sliderSkillMagicA1.Value = playerObject.GetSkillLevel(SogSkill.Magic_Wind_SummonCloud);
-            sliderSkillMagicA2.Value = playerObject.GetSkillLevel(SogSkill.Magic_Wind_StaticTouch);
+            numSkillMagicA0.Value = playerObject.GetSkillLevel(SogSkill.Magic_Wind_ChainLightning);
+            numSkillMagicA1.Value = playerObject.GetSkillLevel(SogSkill.Magic_Wind_SummonCloud);
+            numSkillMagicA2.Value = playerObject.GetSkillLevel(SogSkill.Magic_Wind_StaticTouch);
 
             // find out if player has the card. mark the checkbox if yes
             for (int i = 0; i < cblstCards.Items.Count; i++)

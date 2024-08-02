@@ -161,6 +161,7 @@ namespace SoG_SGreader
             this.cblstMaps = new System.Windows.Forms.CheckedListBox();
             this.tabQuests = new System.Windows.Forms.TabPage();
             this.grpQuests = new System.Windows.Forms.GroupBox();
+            this.lblQuestsChaningNoEffect = new System.Windows.Forms.Label();
             this.lblQuestsNullWarning = new System.Windows.Forms.Label();
             this.btnSelectAllQuests = new System.Windows.Forms.Button();
             this.btnResetQuests = new System.Windows.Forms.Button();
@@ -169,6 +170,7 @@ namespace SoG_SGreader
             this.tabFlags = new System.Windows.Forms.TabPage();
             this.cblstFlagsChecked = new System.Windows.Forms.CheckedListBox();
             this.grpFlags = new System.Windows.Forms.GroupBox();
+            this.lblFlagsChaningNoEffect = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.btnSelectAllFlags = new System.Windows.Forms.Button();
             this.btnResetFlags = new System.Windows.Forms.Button();
@@ -239,7 +241,6 @@ namespace SoG_SGreader
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.label56 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.sliderSkillMelee1h0 = new System.Windows.Forms.TrackBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sliderSkillMelee1h1 = new System.Windows.Forms.TrackBar();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -317,8 +318,7 @@ namespace SoG_SGreader
             this.txtConsole = new System.Windows.Forms.TextBox();
             this.Tooltips = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lblFlagsChaningNoEffect = new System.Windows.Forms.Label();
-            this.lblQuestsChaningNoEffect = new System.Windows.Forms.Label();
+            this.numSkillMelee1h0 = new System.Windows.Forms.NumericUpDown();
             this.lblTrophiesNullWarning.SuspendLayout();
             this.tabChar.SuspendLayout();
             this.grpPatch.SuspendLayout();
@@ -385,7 +385,6 @@ namespace SoG_SGreader
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee2h2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.groupBox10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee1h0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee1h1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -448,6 +447,7 @@ namespace SoG_SGreader
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             this.msMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee1h0)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTrophiesNullWarning
@@ -469,10 +469,11 @@ namespace SoG_SGreader
             this.lblTrophiesNullWarning.Controls.Add(this.tabItemsCrafted);
             this.lblTrophiesNullWarning.Controls.Add(this.tabQuickslots);
             this.lblTrophiesNullWarning.Controls.Add(this.tabSkills);
-            this.lblTrophiesNullWarning.Location = new System.Drawing.Point(0, 24);
+            this.lblTrophiesNullWarning.Location = new System.Drawing.Point(0, 37);
+            this.lblTrophiesNullWarning.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblTrophiesNullWarning.Name = "lblTrophiesNullWarning";
             this.lblTrophiesNullWarning.SelectedIndex = 0;
-            this.lblTrophiesNullWarning.Size = new System.Drawing.Size(567, 422);
+            this.lblTrophiesNullWarning.Size = new System.Drawing.Size(850, 649);
             this.lblTrophiesNullWarning.TabIndex = 0;
             // 
             // tabChar
@@ -486,10 +487,11 @@ namespace SoG_SGreader
             this.tabChar.Controls.Add(this.grpSkillpoints);
             this.tabChar.Controls.Add(this.grpLevel);
             this.tabChar.Controls.Add(this.grpColors);
-            this.tabChar.Location = new System.Drawing.Point(4, 22);
+            this.tabChar.Location = new System.Drawing.Point(4, 29);
+            this.tabChar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabChar.Name = "tabChar";
-            this.tabChar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabChar.Size = new System.Drawing.Size(559, 396);
+            this.tabChar.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabChar.Size = new System.Drawing.Size(842, 616);
             this.tabChar.TabIndex = 3;
             this.tabChar.Text = "Character / Equip";
             this.tabChar.UseVisualStyleBackColor = true;
@@ -499,40 +501,45 @@ namespace SoG_SGreader
             this.grpPatch.BackColor = System.Drawing.Color.Transparent;
             this.grpPatch.Controls.Add(this.lblGamePatch);
             this.grpPatch.Controls.Add(this.label55);
-            this.grpPatch.Location = new System.Drawing.Point(169, 158);
+            this.grpPatch.Location = new System.Drawing.Point(254, 243);
+            this.grpPatch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpPatch.Name = "grpPatch";
-            this.grpPatch.Size = new System.Drawing.Size(105, 230);
+            this.grpPatch.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpPatch.Size = new System.Drawing.Size(158, 354);
             this.grpPatch.TabIndex = 54;
             this.grpPatch.TabStop = false;
             // 
             // lblGamePatch
             // 
             this.lblGamePatch.AutoSize = true;
-            this.lblGamePatch.Location = new System.Drawing.Point(13, 116);
+            this.lblGamePatch.Location = new System.Drawing.Point(20, 178);
+            this.lblGamePatch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGamePatch.Name = "lblGamePatch";
-            this.lblGamePatch.Size = new System.Drawing.Size(77, 13);
+            this.lblGamePatch.Size = new System.Drawing.Size(114, 20);
             this.lblGamePatch.TabIndex = 1;
             this.lblGamePatch.Text = "[Game 0.000a]";
             // 
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(13, 99);
+            this.label55.Location = new System.Drawing.Point(20, 152);
+            this.label55.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(65, 13);
+            this.label55.Size = new System.Drawing.Size(102, 20);
             this.label55.TabIndex = 0;
             this.label55.Text = "[Patch 1.03a]";
             // 
             // numID
             // 
-            this.numID.Location = new System.Drawing.Point(79, 49);
+            this.numID.Location = new System.Drawing.Point(118, 75);
+            this.numID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numID.Maximum = new decimal(new int[] {
             -2,
             0,
             0,
             0});
             this.numID.Name = "numID";
-            this.numID.Size = new System.Drawing.Size(75, 20);
+            this.numID.Size = new System.Drawing.Size(112, 26);
             this.numID.TabIndex = 53;
             // 
             // grpGeneral
@@ -548,9 +555,11 @@ namespace SoG_SGreader
             this.grpGeneral.Controls.Add(this.numBirtdayMonth);
             this.grpGeneral.Controls.Add(this.numBirthdayDay);
             this.grpGeneral.Controls.Add(this.txtTimePlayed);
-            this.grpGeneral.Location = new System.Drawing.Point(6, 4);
+            this.grpGeneral.Location = new System.Drawing.Point(9, 6);
+            this.grpGeneral.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpGeneral.Name = "grpGeneral";
-            this.grpGeneral.Size = new System.Drawing.Size(157, 148);
+            this.grpGeneral.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpGeneral.Size = new System.Drawing.Size(236, 228);
             this.grpGeneral.TabIndex = 52;
             this.grpGeneral.TabStop = false;
             this.grpGeneral.Text = "General";
@@ -558,10 +567,9 @@ namespace SoG_SGreader
             // rbFemale
             // 
             this.rbFemale.AutoSize = true;
-            this.rbFemale.Location = new System.Drawing.Point(108, 127);
-            this.rbFemale.Margin = new System.Windows.Forms.Padding(2);
+            this.rbFemale.Location = new System.Drawing.Point(162, 195);
             this.rbFemale.Name = "rbFemale";
-            this.rbFemale.Size = new System.Drawing.Size(34, 17);
+            this.rbFemale.Size = new System.Drawing.Size(50, 24);
             this.rbFemale.TabIndex = 2;
             this.rbFemale.TabStop = true;
             this.rbFemale.Text = "♀";
@@ -570,9 +578,10 @@ namespace SoG_SGreader
             // lblGender
             // 
             this.lblGender.AutoSize = true;
-            this.lblGender.Location = new System.Drawing.Point(5, 126);
+            this.lblGender.Location = new System.Drawing.Point(8, 194);
+            this.lblGender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(45, 13);
+            this.lblGender.Size = new System.Drawing.Size(67, 20);
             this.lblGender.TabIndex = 52;
             this.lblGender.Text = "Gender:";
             this.Tooltips.SetToolTip(this.lblGender, "Day / Month");
@@ -580,10 +589,9 @@ namespace SoG_SGreader
             // rbMale
             // 
             this.rbMale.AutoSize = true;
-            this.rbMale.Location = new System.Drawing.Point(73, 127);
-            this.rbMale.Margin = new System.Windows.Forms.Padding(2);
+            this.rbMale.Location = new System.Drawing.Point(110, 195);
             this.rbMale.Name = "rbMale";
-            this.rbMale.Size = new System.Drawing.Size(35, 17);
+            this.rbMale.Size = new System.Drawing.Size(50, 24);
             this.rbMale.TabIndex = 1;
             this.rbMale.TabStop = true;
             this.rbMale.Text = "♂";
@@ -592,9 +600,10 @@ namespace SoG_SGreader
             // lblTimePlayed
             // 
             this.lblTimePlayed.AutoSize = true;
-            this.lblTimePlayed.Location = new System.Drawing.Point(5, 75);
+            this.lblTimePlayed.Location = new System.Drawing.Point(8, 115);
+            this.lblTimePlayed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTimePlayed.Name = "lblTimePlayed";
-            this.lblTimePlayed.Size = new System.Drawing.Size(67, 13);
+            this.lblTimePlayed.Size = new System.Drawing.Size(97, 20);
             this.lblTimePlayed.TabIndex = 44;
             this.lblTimePlayed.Text = "Time played:";
             this.Tooltips.SetToolTip(this.lblTimePlayed, "D:HH:MM:SS");
@@ -602,49 +611,54 @@ namespace SoG_SGreader
             // lblCollectorId
             // 
             this.lblCollectorId.AutoSize = true;
-            this.lblCollectorId.Location = new System.Drawing.Point(5, 48);
+            this.lblCollectorId.Location = new System.Drawing.Point(8, 74);
+            this.lblCollectorId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCollectorId.Name = "lblCollectorId";
-            this.lblCollectorId.Size = new System.Drawing.Size(65, 13);
+            this.lblCollectorId.Size = new System.Drawing.Size(96, 20);
             this.lblCollectorId.TabIndex = 51;
             this.lblCollectorId.Text = "Collector ID:";
             // 
             // txtNickname
             // 
-            this.txtNickname.Location = new System.Drawing.Point(47, 19);
+            this.txtNickname.Location = new System.Drawing.Point(70, 29);
+            this.txtNickname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNickname.Name = "txtNickname";
-            this.txtNickname.Size = new System.Drawing.Size(101, 20);
+            this.txtNickname.Size = new System.Drawing.Size(150, 26);
             this.txtNickname.TabIndex = 34;
             this.txtNickname.Text = "tolik518";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(5, 22);
+            this.lblName.Location = new System.Drawing.Point(8, 34);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(38, 13);
+            this.lblName.Size = new System.Drawing.Size(55, 20);
             this.lblName.TabIndex = 35;
             this.lblName.Text = "Name:";
             // 
             // lblBirthday
             // 
             this.lblBirthday.AutoSize = true;
-            this.lblBirthday.Location = new System.Drawing.Point(5, 100);
+            this.lblBirthday.Location = new System.Drawing.Point(8, 154);
+            this.lblBirthday.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBirthday.Name = "lblBirthday";
-            this.lblBirthday.Size = new System.Drawing.Size(48, 13);
+            this.lblBirthday.Size = new System.Drawing.Size(71, 20);
             this.lblBirthday.TabIndex = 49;
             this.lblBirthday.Text = "Birthday:";
             this.Tooltips.SetToolTip(this.lblBirthday, "Day / Month");
             // 
             // numBirtdayMonth
             // 
-            this.numBirtdayMonth.Location = new System.Drawing.Point(113, 98);
+            this.numBirtdayMonth.Location = new System.Drawing.Point(170, 151);
+            this.numBirtdayMonth.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numBirtdayMonth.Maximum = new decimal(new int[] {
             12,
             0,
             0,
             0});
             this.numBirtdayMonth.Name = "numBirtdayMonth";
-            this.numBirtdayMonth.Size = new System.Drawing.Size(35, 20);
+            this.numBirtdayMonth.Size = new System.Drawing.Size(52, 26);
             this.numBirtdayMonth.TabIndex = 48;
             this.Tooltips.SetToolTip(this.numBirtdayMonth, "Month\tStarsign\r\n____________________\r\n1-2\tThe Slime\r\n3-4\tThe Rabby\r\n5-6\tThe Bee\r\n" +
         "7-8\tThe Boar\r\n9-10\tThe Bloomo\r\n11-12\tThe Yeti");
@@ -656,14 +670,15 @@ namespace SoG_SGreader
             // 
             // numBirthdayDay
             // 
-            this.numBirthdayDay.Location = new System.Drawing.Point(73, 98);
+            this.numBirthdayDay.Location = new System.Drawing.Point(110, 151);
+            this.numBirthdayDay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numBirthdayDay.Maximum = new decimal(new int[] {
             31,
             0,
             0,
             0});
             this.numBirthdayDay.Name = "numBirthdayDay";
-            this.numBirthdayDay.Size = new System.Drawing.Size(35, 20);
+            this.numBirthdayDay.Size = new System.Drawing.Size(52, 26);
             this.numBirthdayDay.TabIndex = 46;
             this.numBirthdayDay.Value = new decimal(new int[] {
             31,
@@ -673,10 +688,11 @@ namespace SoG_SGreader
             // 
             // txtTimePlayed
             // 
-            this.txtTimePlayed.Location = new System.Drawing.Point(73, 72);
+            this.txtTimePlayed.Location = new System.Drawing.Point(110, 111);
+            this.txtTimePlayed.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTimePlayed.MaxLength = 13;
             this.txtTimePlayed.Name = "txtTimePlayed";
-            this.txtTimePlayed.Size = new System.Drawing.Size(75, 20);
+            this.txtTimePlayed.Size = new System.Drawing.Size(110, 26);
             this.txtTimePlayed.TabIndex = 45;
             this.Tooltips.SetToolTip(this.txtTimePlayed, "D:HH:MM:SS");
             // 
@@ -684,9 +700,10 @@ namespace SoG_SGreader
             // 
             this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(435, 378);
+            this.label49.Location = new System.Drawing.Point(652, 582);
+            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(116, 13);
+            this.label49.Size = new System.Drawing.Size(163, 20);
             this.label49.TabIndex = 42;
             this.label49.Text = "↑ ↑ ↓ ↓ ← → ← → B A";
             // 
@@ -708,9 +725,11 @@ namespace SoG_SGreader
             this.grpEquipped.Controls.Add(this.cbWeapon);
             this.grpEquipped.Controls.Add(this.cbFacegear);
             this.grpEquipped.Controls.Add(this.cbHat);
-            this.grpEquipped.Location = new System.Drawing.Point(280, 4);
+            this.grpEquipped.Location = new System.Drawing.Point(420, 6);
+            this.grpEquipped.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpEquipped.Name = "grpEquipped";
-            this.grpEquipped.Size = new System.Drawing.Size(271, 239);
+            this.grpEquipped.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpEquipped.Size = new System.Drawing.Size(406, 368);
             this.grpEquipped.TabIndex = 40;
             this.grpEquipped.TabStop = false;
             this.grpEquipped.Text = "Equipped Gear";
@@ -718,137 +737,153 @@ namespace SoG_SGreader
             // lblAccessory2
             // 
             this.lblAccessory2.AutoSize = true;
-            this.lblAccessory2.Location = new System.Drawing.Point(7, 211);
+            this.lblAccessory2.Location = new System.Drawing.Point(10, 325);
+            this.lblAccessory2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAccessory2.Name = "lblAccessory2";
-            this.lblAccessory2.Size = new System.Drawing.Size(68, 13);
+            this.lblAccessory2.Size = new System.Drawing.Size(99, 20);
             this.lblAccessory2.TabIndex = 22;
             this.lblAccessory2.Text = "Accessory 2:";
             // 
             // lblAccessory1
             // 
             this.lblAccessory1.AutoSize = true;
-            this.lblAccessory1.Location = new System.Drawing.Point(7, 184);
+            this.lblAccessory1.Location = new System.Drawing.Point(10, 283);
+            this.lblAccessory1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAccessory1.Name = "lblAccessory1";
-            this.lblAccessory1.Size = new System.Drawing.Size(68, 13);
+            this.lblAccessory1.Size = new System.Drawing.Size(99, 20);
             this.lblAccessory1.TabIndex = 21;
             this.lblAccessory1.Text = "Accessory 1:";
             // 
             // lblShoes
             // 
             this.lblShoes.AutoSize = true;
-            this.lblShoes.Location = new System.Drawing.Point(7, 157);
+            this.lblShoes.Location = new System.Drawing.Point(10, 242);
+            this.lblShoes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblShoes.Name = "lblShoes";
-            this.lblShoes.Size = new System.Drawing.Size(40, 13);
+            this.lblShoes.Size = new System.Drawing.Size(59, 20);
             this.lblShoes.TabIndex = 20;
             this.lblShoes.Text = "Shoes:";
             // 
             // lblArmor
             // 
             this.lblArmor.AutoSize = true;
-            this.lblArmor.Location = new System.Drawing.Point(7, 130);
+            this.lblArmor.Location = new System.Drawing.Point(10, 200);
+            this.lblArmor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblArmor.Name = "lblArmor";
-            this.lblArmor.Size = new System.Drawing.Size(37, 13);
+            this.lblArmor.Size = new System.Drawing.Size(56, 20);
             this.lblArmor.TabIndex = 19;
             this.lblArmor.Text = "Armor:";
             // 
             // lblShield
             // 
             this.lblShield.AutoSize = true;
-            this.lblShield.Location = new System.Drawing.Point(7, 103);
+            this.lblShield.Location = new System.Drawing.Point(10, 158);
+            this.lblShield.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblShield.Name = "lblShield";
-            this.lblShield.Size = new System.Drawing.Size(39, 13);
+            this.lblShield.Size = new System.Drawing.Size(57, 20);
             this.lblShield.TabIndex = 18;
             this.lblShield.Text = "Shield:";
             // 
             // lblWeapon
             // 
             this.lblWeapon.AutoSize = true;
-            this.lblWeapon.Location = new System.Drawing.Point(7, 76);
+            this.lblWeapon.Location = new System.Drawing.Point(10, 117);
+            this.lblWeapon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWeapon.Name = "lblWeapon";
-            this.lblWeapon.Size = new System.Drawing.Size(51, 13);
+            this.lblWeapon.Size = new System.Drawing.Size(73, 20);
             this.lblWeapon.TabIndex = 17;
             this.lblWeapon.Text = "Weapon:";
             // 
             // lblFacegear
             // 
             this.lblFacegear.AutoSize = true;
-            this.lblFacegear.Location = new System.Drawing.Point(7, 49);
+            this.lblFacegear.Location = new System.Drawing.Point(10, 75);
+            this.lblFacegear.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFacegear.Name = "lblFacegear";
-            this.lblFacegear.Size = new System.Drawing.Size(55, 13);
+            this.lblFacegear.Size = new System.Drawing.Size(81, 20);
             this.lblFacegear.TabIndex = 16;
             this.lblFacegear.Text = "Facegear:";
             // 
             // lblHat
             // 
             this.lblHat.AutoSize = true;
-            this.lblHat.Location = new System.Drawing.Point(7, 22);
+            this.lblHat.Location = new System.Drawing.Point(10, 34);
+            this.lblHat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHat.Name = "lblHat";
-            this.lblHat.Size = new System.Drawing.Size(27, 13);
+            this.lblHat.Size = new System.Drawing.Size(39, 20);
             this.lblHat.TabIndex = 15;
             this.lblHat.Text = "Hat:";
             // 
             // cbAccessory2
             // 
             this.cbAccessory2.FormattingEnabled = true;
-            this.cbAccessory2.Location = new System.Drawing.Point(79, 208);
+            this.cbAccessory2.Location = new System.Drawing.Point(118, 320);
+            this.cbAccessory2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbAccessory2.Name = "cbAccessory2";
-            this.cbAccessory2.Size = new System.Drawing.Size(186, 21);
+            this.cbAccessory2.Size = new System.Drawing.Size(277, 28);
             this.cbAccessory2.TabIndex = 14;
             // 
             // cbAccessory1
             // 
             this.cbAccessory1.FormattingEnabled = true;
-            this.cbAccessory1.Location = new System.Drawing.Point(79, 181);
+            this.cbAccessory1.Location = new System.Drawing.Point(118, 278);
+            this.cbAccessory1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbAccessory1.Name = "cbAccessory1";
-            this.cbAccessory1.Size = new System.Drawing.Size(186, 21);
+            this.cbAccessory1.Size = new System.Drawing.Size(277, 28);
             this.cbAccessory1.TabIndex = 13;
             // 
             // cbShoes
             // 
             this.cbShoes.FormattingEnabled = true;
-            this.cbShoes.Location = new System.Drawing.Point(79, 154);
+            this.cbShoes.Location = new System.Drawing.Point(118, 237);
+            this.cbShoes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbShoes.Name = "cbShoes";
-            this.cbShoes.Size = new System.Drawing.Size(186, 21);
+            this.cbShoes.Size = new System.Drawing.Size(277, 28);
             this.cbShoes.TabIndex = 12;
             // 
             // cbArmor
             // 
             this.cbArmor.FormattingEnabled = true;
-            this.cbArmor.Location = new System.Drawing.Point(79, 127);
+            this.cbArmor.Location = new System.Drawing.Point(118, 195);
+            this.cbArmor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbArmor.Name = "cbArmor";
-            this.cbArmor.Size = new System.Drawing.Size(186, 21);
+            this.cbArmor.Size = new System.Drawing.Size(277, 28);
             this.cbArmor.TabIndex = 11;
             // 
             // cbShield
             // 
             this.cbShield.FormattingEnabled = true;
-            this.cbShield.Location = new System.Drawing.Point(79, 100);
+            this.cbShield.Location = new System.Drawing.Point(118, 154);
+            this.cbShield.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbShield.Name = "cbShield";
-            this.cbShield.Size = new System.Drawing.Size(186, 21);
+            this.cbShield.Size = new System.Drawing.Size(277, 28);
             this.cbShield.TabIndex = 10;
             // 
             // cbWeapon
             // 
             this.cbWeapon.FormattingEnabled = true;
-            this.cbWeapon.Location = new System.Drawing.Point(79, 73);
+            this.cbWeapon.Location = new System.Drawing.Point(118, 112);
+            this.cbWeapon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbWeapon.Name = "cbWeapon";
-            this.cbWeapon.Size = new System.Drawing.Size(186, 21);
+            this.cbWeapon.Size = new System.Drawing.Size(277, 28);
             this.cbWeapon.TabIndex = 9;
             // 
             // cbFacegear
             // 
             this.cbFacegear.FormattingEnabled = true;
-            this.cbFacegear.Location = new System.Drawing.Point(79, 46);
+            this.cbFacegear.Location = new System.Drawing.Point(118, 71);
+            this.cbFacegear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbFacegear.Name = "cbFacegear";
-            this.cbFacegear.Size = new System.Drawing.Size(186, 21);
+            this.cbFacegear.Size = new System.Drawing.Size(277, 28);
             this.cbFacegear.TabIndex = 8;
             // 
             // cbHat
             // 
             this.cbHat.FormattingEnabled = true;
-            this.cbHat.Location = new System.Drawing.Point(79, 19);
+            this.cbHat.Location = new System.Drawing.Point(118, 29);
+            this.cbHat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbHat.Name = "cbHat";
-            this.cbHat.Size = new System.Drawing.Size(186, 21);
+            this.cbHat.Size = new System.Drawing.Size(277, 28);
             this.cbHat.TabIndex = 7;
             // 
             // grpEquippedStyle
@@ -861,9 +896,11 @@ namespace SoG_SGreader
             this.grpEquippedStyle.Controls.Add(this.cbStyleFacegear);
             this.grpEquippedStyle.Controls.Add(this.lblEqHat);
             this.grpEquippedStyle.Controls.Add(this.cbStyleWeapon);
-            this.grpEquippedStyle.Location = new System.Drawing.Point(280, 249);
+            this.grpEquippedStyle.Location = new System.Drawing.Point(420, 383);
+            this.grpEquippedStyle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpEquippedStyle.Name = "grpEquippedStyle";
-            this.grpEquippedStyle.Size = new System.Drawing.Size(271, 129);
+            this.grpEquippedStyle.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpEquippedStyle.Size = new System.Drawing.Size(406, 198);
             this.grpEquippedStyle.TabIndex = 41;
             this.grpEquippedStyle.TabStop = false;
             this.grpEquippedStyle.Text = "Equipped Style";
@@ -871,69 +908,77 @@ namespace SoG_SGreader
             // lblEqShield
             // 
             this.lblEqShield.AutoSize = true;
-            this.lblEqShield.Location = new System.Drawing.Point(7, 103);
+            this.lblEqShield.Location = new System.Drawing.Point(10, 158);
+            this.lblEqShield.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEqShield.Name = "lblEqShield";
-            this.lblEqShield.Size = new System.Drawing.Size(39, 13);
+            this.lblEqShield.Size = new System.Drawing.Size(57, 20);
             this.lblEqShield.TabIndex = 30;
             this.lblEqShield.Text = "Shield:";
             // 
             // cbStyleShield
             // 
             this.cbStyleShield.FormattingEnabled = true;
-            this.cbStyleShield.Location = new System.Drawing.Point(79, 100);
+            this.cbStyleShield.Location = new System.Drawing.Point(118, 154);
+            this.cbStyleShield.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbStyleShield.Name = "cbStyleShield";
-            this.cbStyleShield.Size = new System.Drawing.Size(186, 21);
+            this.cbStyleShield.Size = new System.Drawing.Size(277, 28);
             this.cbStyleShield.TabIndex = 26;
             // 
             // lblEqWeapon
             // 
             this.lblEqWeapon.AutoSize = true;
-            this.lblEqWeapon.Location = new System.Drawing.Point(7, 76);
+            this.lblEqWeapon.Location = new System.Drawing.Point(10, 117);
+            this.lblEqWeapon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEqWeapon.Name = "lblEqWeapon";
-            this.lblEqWeapon.Size = new System.Drawing.Size(51, 13);
+            this.lblEqWeapon.Size = new System.Drawing.Size(73, 20);
             this.lblEqWeapon.TabIndex = 29;
             this.lblEqWeapon.Text = "Weapon:";
             // 
             // cbStyleHat
             // 
             this.cbStyleHat.FormattingEnabled = true;
-            this.cbStyleHat.Location = new System.Drawing.Point(79, 19);
+            this.cbStyleHat.Location = new System.Drawing.Point(118, 29);
+            this.cbStyleHat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbStyleHat.Name = "cbStyleHat";
-            this.cbStyleHat.Size = new System.Drawing.Size(186, 21);
+            this.cbStyleHat.Size = new System.Drawing.Size(277, 28);
             this.cbStyleHat.TabIndex = 23;
             // 
             // lblEqFacegear
             // 
             this.lblEqFacegear.AutoSize = true;
-            this.lblEqFacegear.Location = new System.Drawing.Point(7, 49);
+            this.lblEqFacegear.Location = new System.Drawing.Point(10, 75);
+            this.lblEqFacegear.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEqFacegear.Name = "lblEqFacegear";
-            this.lblEqFacegear.Size = new System.Drawing.Size(55, 13);
+            this.lblEqFacegear.Size = new System.Drawing.Size(81, 20);
             this.lblEqFacegear.TabIndex = 28;
             this.lblEqFacegear.Text = "Facegear:";
             // 
             // cbStyleFacegear
             // 
             this.cbStyleFacegear.FormattingEnabled = true;
-            this.cbStyleFacegear.Location = new System.Drawing.Point(79, 46);
+            this.cbStyleFacegear.Location = new System.Drawing.Point(118, 71);
+            this.cbStyleFacegear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbStyleFacegear.Name = "cbStyleFacegear";
-            this.cbStyleFacegear.Size = new System.Drawing.Size(186, 21);
+            this.cbStyleFacegear.Size = new System.Drawing.Size(277, 28);
             this.cbStyleFacegear.TabIndex = 24;
             // 
             // lblEqHat
             // 
             this.lblEqHat.AutoSize = true;
-            this.lblEqHat.Location = new System.Drawing.Point(7, 22);
+            this.lblEqHat.Location = new System.Drawing.Point(10, 34);
+            this.lblEqHat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEqHat.Name = "lblEqHat";
-            this.lblEqHat.Size = new System.Drawing.Size(27, 13);
+            this.lblEqHat.Size = new System.Drawing.Size(39, 20);
             this.lblEqHat.TabIndex = 27;
             this.lblEqHat.Text = "Hat:";
             // 
             // cbStyleWeapon
             // 
             this.cbStyleWeapon.FormattingEnabled = true;
-            this.cbStyleWeapon.Location = new System.Drawing.Point(79, 73);
+            this.cbStyleWeapon.Location = new System.Drawing.Point(118, 112);
+            this.cbStyleWeapon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbStyleWeapon.Name = "cbStyleWeapon";
-            this.cbStyleWeapon.Size = new System.Drawing.Size(186, 21);
+            this.cbStyleWeapon.Size = new System.Drawing.Size(277, 28);
             this.cbStyleWeapon.TabIndex = 25;
             // 
             // grpSkillpoints
@@ -944,73 +989,81 @@ namespace SoG_SGreader
             this.grpSkillpoints.Controls.Add(this.numSkillGoldPoints);
             this.grpSkillpoints.Controls.Add(this.lblSilverPoints);
             this.grpSkillpoints.Controls.Add(this.lblTalentPoints);
-            this.grpSkillpoints.Location = new System.Drawing.Point(6, 288);
+            this.grpSkillpoints.Location = new System.Drawing.Point(9, 443);
+            this.grpSkillpoints.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpSkillpoints.Name = "grpSkillpoints";
-            this.grpSkillpoints.Size = new System.Drawing.Size(157, 100);
+            this.grpSkillpoints.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpSkillpoints.Size = new System.Drawing.Size(236, 154);
             this.grpSkillpoints.TabIndex = 37;
             this.grpSkillpoints.TabStop = false;
             this.grpSkillpoints.Text = "Skill Points";
             // 
             // numSkillTalentPoints
             // 
-            this.numSkillTalentPoints.Location = new System.Drawing.Point(95, 20);
+            this.numSkillTalentPoints.Location = new System.Drawing.Point(142, 31);
+            this.numSkillTalentPoints.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numSkillTalentPoints.Maximum = new decimal(new int[] {
             32767,
             0,
             0,
             0});
             this.numSkillTalentPoints.Name = "numSkillTalentPoints";
-            this.numSkillTalentPoints.Size = new System.Drawing.Size(51, 20);
+            this.numSkillTalentPoints.Size = new System.Drawing.Size(76, 26);
             this.numSkillTalentPoints.TabIndex = 3;
             // 
             // lblGoldPoints
             // 
             this.lblGoldPoints.AutoSize = true;
-            this.lblGoldPoints.Location = new System.Drawing.Point(5, 74);
+            this.lblGoldPoints.Location = new System.Drawing.Point(8, 114);
+            this.lblGoldPoints.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGoldPoints.Name = "lblGoldPoints";
-            this.lblGoldPoints.Size = new System.Drawing.Size(81, 13);
+            this.lblGoldPoints.Size = new System.Drawing.Size(119, 20);
             this.lblGoldPoints.TabIndex = 2;
             this.lblGoldPoints.Text = "Gold Skill Point:";
             // 
             // numSkillSilverPoints
             // 
-            this.numSkillSilverPoints.Location = new System.Drawing.Point(95, 46);
+            this.numSkillSilverPoints.Location = new System.Drawing.Point(142, 71);
+            this.numSkillSilverPoints.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numSkillSilverPoints.Maximum = new decimal(new int[] {
             32767,
             0,
             0,
             0});
             this.numSkillSilverPoints.Name = "numSkillSilverPoints";
-            this.numSkillSilverPoints.Size = new System.Drawing.Size(51, 20);
+            this.numSkillSilverPoints.Size = new System.Drawing.Size(76, 26);
             this.numSkillSilverPoints.TabIndex = 4;
             // 
             // numSkillGoldPoints
             // 
-            this.numSkillGoldPoints.Location = new System.Drawing.Point(95, 72);
+            this.numSkillGoldPoints.Location = new System.Drawing.Point(142, 111);
+            this.numSkillGoldPoints.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numSkillGoldPoints.Maximum = new decimal(new int[] {
             32767,
             0,
             0,
             0});
             this.numSkillGoldPoints.Name = "numSkillGoldPoints";
-            this.numSkillGoldPoints.Size = new System.Drawing.Size(51, 20);
+            this.numSkillGoldPoints.Size = new System.Drawing.Size(76, 26);
             this.numSkillGoldPoints.TabIndex = 5;
             // 
             // lblSilverPoints
             // 
             this.lblSilverPoints.AutoSize = true;
-            this.lblSilverPoints.Location = new System.Drawing.Point(5, 48);
+            this.lblSilverPoints.Location = new System.Drawing.Point(8, 74);
+            this.lblSilverPoints.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSilverPoints.Name = "lblSilverPoints";
-            this.lblSilverPoints.Size = new System.Drawing.Size(85, 13);
+            this.lblSilverPoints.Size = new System.Drawing.Size(123, 20);
             this.lblSilverPoints.TabIndex = 1;
             this.lblSilverPoints.Text = "Silver Skill Point:";
             // 
             // lblTalentPoints
             // 
             this.lblTalentPoints.AutoSize = true;
-            this.lblTalentPoints.Location = new System.Drawing.Point(5, 22);
+            this.lblTalentPoints.Location = new System.Drawing.Point(8, 34);
+            this.lblTalentPoints.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTalentPoints.Name = "lblTalentPoints";
-            this.lblTalentPoints.Size = new System.Drawing.Size(72, 13);
+            this.lblTalentPoints.Size = new System.Drawing.Size(105, 20);
             this.lblTalentPoints.TabIndex = 0;
             this.lblTalentPoints.Text = "Talent Points:";
             // 
@@ -1024,9 +1077,11 @@ namespace SoG_SGreader
             this.grpLevel.Controls.Add(this.numEXPUnknown0);
             this.grpLevel.Controls.Add(this.numEXPcurrent);
             this.grpLevel.Controls.Add(this.numLevel);
-            this.grpLevel.Location = new System.Drawing.Point(6, 158);
+            this.grpLevel.Location = new System.Drawing.Point(9, 243);
+            this.grpLevel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpLevel.Name = "grpLevel";
-            this.grpLevel.Size = new System.Drawing.Size(157, 126);
+            this.grpLevel.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpLevel.Size = new System.Drawing.Size(236, 194);
             this.grpLevel.TabIndex = 36;
             this.grpLevel.TabStop = false;
             this.grpLevel.Text = "Level";
@@ -1034,82 +1089,90 @@ namespace SoG_SGreader
             // lblExpUnknown1
             // 
             this.lblExpUnknown1.AutoSize = true;
-            this.lblExpUnknown1.Location = new System.Drawing.Point(5, 99);
+            this.lblExpUnknown1.Location = new System.Drawing.Point(8, 152);
+            this.lblExpUnknown1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblExpUnknown1.Name = "lblExpUnknown1";
             this.lblExpUnknown1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblExpUnknown1.Size = new System.Drawing.Size(89, 13);
+            this.lblExpUnknown1.Size = new System.Drawing.Size(129, 20);
             this.lblExpUnknown1.TabIndex = 7;
             this.lblExpUnknown1.Text = "[EXPUnknown1]:";
             // 
             // lblExpUnknown0
             // 
             this.lblExpUnknown0.AutoSize = true;
-            this.lblExpUnknown0.Location = new System.Drawing.Point(5, 73);
+            this.lblExpUnknown0.Location = new System.Drawing.Point(8, 112);
+            this.lblExpUnknown0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblExpUnknown0.Name = "lblExpUnknown0";
-            this.lblExpUnknown0.Size = new System.Drawing.Size(89, 13);
+            this.lblExpUnknown0.Size = new System.Drawing.Size(129, 20);
             this.lblExpUnknown0.TabIndex = 6;
             this.lblExpUnknown0.Text = "[EXPUnknown0]:";
             // 
             // lblCurrectExp
             // 
             this.lblCurrectExp.AutoSize = true;
-            this.lblCurrectExp.Location = new System.Drawing.Point(5, 47);
+            this.lblCurrectExp.Location = new System.Drawing.Point(8, 72);
+            this.lblCurrectExp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCurrectExp.Name = "lblCurrectExp";
-            this.lblCurrectExp.Size = new System.Drawing.Size(68, 13);
+            this.lblCurrectExp.Size = new System.Drawing.Size(102, 20);
             this.lblCurrectExp.TabIndex = 5;
             this.lblCurrectExp.Text = "Current EXP:";
             // 
             // lblLevel
             // 
             this.lblLevel.AutoSize = true;
-            this.lblLevel.Location = new System.Drawing.Point(5, 21);
+            this.lblLevel.Location = new System.Drawing.Point(8, 32);
+            this.lblLevel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(36, 13);
+            this.lblLevel.Size = new System.Drawing.Size(50, 20);
             this.lblLevel.TabIndex = 4;
             this.lblLevel.Text = "Level:";
             // 
             // numEXPUnknown1
             // 
-            this.numEXPUnknown1.Location = new System.Drawing.Point(96, 97);
+            this.numEXPUnknown1.Location = new System.Drawing.Point(144, 149);
+            this.numEXPUnknown1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numEXPUnknown1.Maximum = new decimal(new int[] {
             32767,
             0,
             0,
             0});
             this.numEXPUnknown1.Name = "numEXPUnknown1";
-            this.numEXPUnknown1.Size = new System.Drawing.Size(51, 20);
+            this.numEXPUnknown1.Size = new System.Drawing.Size(76, 26);
             this.numEXPUnknown1.TabIndex = 3;
             this.Tooltips.SetToolTip(this.numEXPUnknown1, "idk? probably the exp you need to level up?");
             // 
             // numEXPUnknown0
             // 
-            this.numEXPUnknown0.Location = new System.Drawing.Point(96, 71);
+            this.numEXPUnknown0.Location = new System.Drawing.Point(144, 109);
+            this.numEXPUnknown0.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numEXPUnknown0.Maximum = new decimal(new int[] {
             32767,
             0,
             0,
             0});
             this.numEXPUnknown0.Name = "numEXPUnknown0";
-            this.numEXPUnknown0.Size = new System.Drawing.Size(51, 20);
+            this.numEXPUnknown0.Size = new System.Drawing.Size(76, 26);
             this.numEXPUnknown0.TabIndex = 2;
             this.Tooltips.SetToolTip(this.numEXPUnknown0, "idk");
             // 
             // numEXPcurrent
             // 
-            this.numEXPcurrent.Location = new System.Drawing.Point(96, 45);
+            this.numEXPcurrent.Location = new System.Drawing.Point(144, 69);
+            this.numEXPcurrent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numEXPcurrent.Maximum = new decimal(new int[] {
             32767,
             0,
             0,
             0});
             this.numEXPcurrent.Name = "numEXPcurrent";
-            this.numEXPcurrent.Size = new System.Drawing.Size(51, 20);
+            this.numEXPcurrent.Size = new System.Drawing.Size(76, 26);
             this.numEXPcurrent.TabIndex = 1;
             this.Tooltips.SetToolTip(this.numEXPcurrent, "Seit it to 9999 to level up after next kill");
             // 
             // numLevel
             // 
-            this.numLevel.Location = new System.Drawing.Point(108, 19);
+            this.numLevel.Location = new System.Drawing.Point(162, 29);
+            this.numLevel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numLevel.Maximum = new decimal(new int[] {
             32767,
             0,
@@ -1121,7 +1184,7 @@ namespace SoG_SGreader
             0,
             0});
             this.numLevel.Name = "numLevel";
-            this.numLevel.Size = new System.Drawing.Size(39, 20);
+            this.numLevel.Size = new System.Drawing.Size(58, 26);
             this.numLevel.TabIndex = 0;
             this.Tooltips.SetToolTip(this.numLevel, "Changing Level won\'t give you any Skill Points!");
             this.numLevel.Value = new decimal(new int[] {
@@ -1142,9 +1205,11 @@ namespace SoG_SGreader
             this.grpColors.Controls.Add(this.btnSkinColor);
             this.grpColors.Controls.Add(this.btnHairColor);
             this.grpColors.Controls.Add(this.lblHair);
-            this.grpColors.Location = new System.Drawing.Point(169, 4);
+            this.grpColors.Location = new System.Drawing.Point(254, 6);
+            this.grpColors.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpColors.Name = "grpColors";
-            this.grpColors.Size = new System.Drawing.Size(105, 148);
+            this.grpColors.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpColors.Size = new System.Drawing.Size(158, 228);
             this.grpColors.TabIndex = 33;
             this.grpColors.TabStop = false;
             this.grpColors.Text = "Colors";
@@ -1152,45 +1217,50 @@ namespace SoG_SGreader
             // lblPants
             // 
             this.lblPants.AutoSize = true;
-            this.lblPants.Location = new System.Drawing.Point(6, 122);
+            this.lblPants.Location = new System.Drawing.Point(9, 188);
+            this.lblPants.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPants.Name = "lblPants";
-            this.lblPants.Size = new System.Drawing.Size(37, 13);
+            this.lblPants.Size = new System.Drawing.Size(54, 20);
             this.lblPants.TabIndex = 13;
             this.lblPants.Text = "Pants:";
             // 
             // lblShirt
             // 
             this.lblShirt.AutoSize = true;
-            this.lblShirt.Location = new System.Drawing.Point(6, 96);
+            this.lblShirt.Location = new System.Drawing.Point(9, 148);
+            this.lblShirt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblShirt.Name = "lblShirt";
-            this.lblShirt.Size = new System.Drawing.Size(31, 13);
+            this.lblShirt.Size = new System.Drawing.Size(46, 20);
             this.lblShirt.TabIndex = 12;
             this.lblShirt.Text = "Shirt:";
             // 
             // lblPoncho
             // 
             this.lblPoncho.AutoSize = true;
-            this.lblPoncho.Location = new System.Drawing.Point(6, 70);
+            this.lblPoncho.Location = new System.Drawing.Point(9, 108);
+            this.lblPoncho.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPoncho.Name = "lblPoncho";
-            this.lblPoncho.Size = new System.Drawing.Size(47, 13);
+            this.lblPoncho.Size = new System.Drawing.Size(67, 20);
             this.lblPoncho.TabIndex = 11;
             this.lblPoncho.Text = "Poncho:";
             // 
             // lblSkin
             // 
             this.lblSkin.AutoSize = true;
-            this.lblSkin.Location = new System.Drawing.Point(6, 44);
+            this.lblSkin.Location = new System.Drawing.Point(9, 68);
+            this.lblSkin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSkin.Name = "lblSkin";
-            this.lblSkin.Size = new System.Drawing.Size(31, 13);
+            this.lblSkin.Size = new System.Drawing.Size(44, 20);
             this.lblSkin.TabIndex = 10;
             this.lblSkin.Text = "Skin:";
             // 
             // btnPantsColor
             // 
             this.btnPantsColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPantsColor.Location = new System.Drawing.Point(74, 118);
+            this.btnPantsColor.Location = new System.Drawing.Point(111, 182);
+            this.btnPantsColor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPantsColor.Name = "btnPantsColor";
-            this.btnPantsColor.Size = new System.Drawing.Size(20, 20);
+            this.btnPantsColor.Size = new System.Drawing.Size(30, 31);
             this.btnPantsColor.TabIndex = 9;
             this.btnPantsColor.TabStop = false;
             this.btnPantsColor.UseVisualStyleBackColor = false;
@@ -1199,9 +1269,10 @@ namespace SoG_SGreader
             // btnShirtColor
             // 
             this.btnShirtColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShirtColor.Location = new System.Drawing.Point(74, 92);
+            this.btnShirtColor.Location = new System.Drawing.Point(111, 142);
+            this.btnShirtColor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnShirtColor.Name = "btnShirtColor";
-            this.btnShirtColor.Size = new System.Drawing.Size(20, 20);
+            this.btnShirtColor.Size = new System.Drawing.Size(30, 31);
             this.btnShirtColor.TabIndex = 8;
             this.btnShirtColor.TabStop = false;
             this.btnShirtColor.UseVisualStyleBackColor = false;
@@ -1210,9 +1281,10 @@ namespace SoG_SGreader
             // btnPonchoColor
             // 
             this.btnPonchoColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPonchoColor.Location = new System.Drawing.Point(74, 66);
+            this.btnPonchoColor.Location = new System.Drawing.Point(111, 102);
+            this.btnPonchoColor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPonchoColor.Name = "btnPonchoColor";
-            this.btnPonchoColor.Size = new System.Drawing.Size(20, 20);
+            this.btnPonchoColor.Size = new System.Drawing.Size(30, 31);
             this.btnPonchoColor.TabIndex = 7;
             this.btnPonchoColor.TabStop = false;
             this.btnPonchoColor.UseVisualStyleBackColor = false;
@@ -1221,9 +1293,10 @@ namespace SoG_SGreader
             // btnSkinColor
             // 
             this.btnSkinColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSkinColor.Location = new System.Drawing.Point(74, 40);
+            this.btnSkinColor.Location = new System.Drawing.Point(111, 62);
+            this.btnSkinColor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSkinColor.Name = "btnSkinColor";
-            this.btnSkinColor.Size = new System.Drawing.Size(20, 20);
+            this.btnSkinColor.Size = new System.Drawing.Size(30, 31);
             this.btnSkinColor.TabIndex = 6;
             this.btnSkinColor.TabStop = false;
             this.Tooltips.SetToolTip(this.btnSkinColor, "Not implemented yet");
@@ -1233,9 +1306,10 @@ namespace SoG_SGreader
             // 
             this.btnHairColor.BackColor = System.Drawing.Color.White;
             this.btnHairColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHairColor.Location = new System.Drawing.Point(74, 14);
+            this.btnHairColor.Location = new System.Drawing.Point(111, 22);
+            this.btnHairColor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnHairColor.Name = "btnHairColor";
-            this.btnHairColor.Size = new System.Drawing.Size(20, 20);
+            this.btnHairColor.Size = new System.Drawing.Size(30, 31);
             this.btnHairColor.TabIndex = 5;
             this.btnHairColor.TabStop = false;
             this.btnHairColor.UseVisualStyleBackColor = false;
@@ -1244,9 +1318,10 @@ namespace SoG_SGreader
             // lblHair
             // 
             this.lblHair.AutoSize = true;
-            this.lblHair.Location = new System.Drawing.Point(6, 18);
+            this.lblHair.Location = new System.Drawing.Point(9, 28);
+            this.lblHair.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHair.Name = "lblHair";
-            this.lblHair.Size = new System.Drawing.Size(29, 13);
+            this.lblHair.Size = new System.Drawing.Size(42, 20);
             this.lblHair.TabIndex = 0;
             this.lblHair.Text = "Hair:";
             // 
@@ -1256,10 +1331,11 @@ namespace SoG_SGreader
             this.tabInventory.Controls.Add(this.lblGold);
             this.tabInventory.Controls.Add(this.grpItem);
             this.tabInventory.Controls.Add(this.lstInventory);
-            this.tabInventory.Location = new System.Drawing.Point(4, 22);
+            this.tabInventory.Location = new System.Drawing.Point(4, 29);
+            this.tabInventory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabInventory.Name = "tabInventory";
-            this.tabInventory.Padding = new System.Windows.Forms.Padding(3);
-            this.tabInventory.Size = new System.Drawing.Size(559, 396);
+            this.tabInventory.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabInventory.Size = new System.Drawing.Size(842, 616);
             this.tabInventory.TabIndex = 2;
             this.tabInventory.Text = "Inventory";
             this.tabInventory.UseVisualStyleBackColor = true;
@@ -1267,14 +1343,15 @@ namespace SoG_SGreader
             // numGold
             // 
             this.numGold.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.numGold.Location = new System.Drawing.Point(450, 361);
+            this.numGold.Location = new System.Drawing.Point(675, 555);
+            this.numGold.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numGold.Maximum = new decimal(new int[] {
             2147483647,
             0,
             0,
             0});
             this.numGold.Name = "numGold";
-            this.numGold.Size = new System.Drawing.Size(101, 20);
+            this.numGold.Size = new System.Drawing.Size(152, 26);
             this.numGold.TabIndex = 40;
             this.Tooltips.SetToolTip(this.numGold, "Money/Papes/Cheddar/Mulla/Dollar/Coins/Green Faces/Loochies/Bread/Dosh");
             // 
@@ -1282,9 +1359,10 @@ namespace SoG_SGreader
             // 
             this.lblGold.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGold.AutoSize = true;
-            this.lblGold.Location = new System.Drawing.Point(447, 345);
+            this.lblGold.Location = new System.Drawing.Point(670, 531);
+            this.lblGold.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGold.Name = "lblGold";
-            this.lblGold.Size = new System.Drawing.Size(32, 13);
+            this.lblGold.Size = new System.Drawing.Size(47, 20);
             this.lblGold.TabIndex = 41;
             this.lblGold.Text = "Gold:";
             // 
@@ -1296,18 +1374,21 @@ namespace SoG_SGreader
             this.grpItem.Controls.Add(this.lblItemCount);
             this.grpItem.Controls.Add(this.numItemCount);
             this.grpItem.Controls.Add(this.cbSelectedItem);
-            this.grpItem.Location = new System.Drawing.Point(3, 315);
+            this.grpItem.Location = new System.Drawing.Point(4, 485);
+            this.grpItem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpItem.Name = "grpItem";
-            this.grpItem.Size = new System.Drawing.Size(319, 74);
+            this.grpItem.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpItem.Size = new System.Drawing.Size(478, 114);
             this.grpItem.TabIndex = 1;
             this.grpItem.TabStop = false;
             this.grpItem.Text = "Item";
             // 
             // btnDeleteSelectedItem
             // 
-            this.btnDeleteSelectedItem.Location = new System.Drawing.Point(253, 43);
+            this.btnDeleteSelectedItem.Location = new System.Drawing.Point(380, 66);
+            this.btnDeleteSelectedItem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeleteSelectedItem.Name = "btnDeleteSelectedItem";
-            this.btnDeleteSelectedItem.Size = new System.Drawing.Size(60, 23);
+            this.btnDeleteSelectedItem.Size = new System.Drawing.Size(90, 35);
             this.btnDeleteSelectedItem.TabIndex = 2;
             this.btnDeleteSelectedItem.Text = "Remove";
             this.btnDeleteSelectedItem.UseVisualStyleBackColor = true;
@@ -1315,9 +1396,10 @@ namespace SoG_SGreader
             // 
             // btnAddItem
             // 
-            this.btnAddItem.Location = new System.Drawing.Point(253, 17);
+            this.btnAddItem.Location = new System.Drawing.Point(380, 26);
+            this.btnAddItem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(60, 23);
+            this.btnAddItem.Size = new System.Drawing.Size(90, 35);
             this.btnAddItem.TabIndex = 2;
             this.btnAddItem.Text = "Add";
             this.Tooltips.SetToolTip(this.btnAddItem, "Some Items COULD potentially break your game");
@@ -1327,31 +1409,34 @@ namespace SoG_SGreader
             // lblItemCount
             // 
             this.lblItemCount.AutoSize = true;
-            this.lblItemCount.Location = new System.Drawing.Point(132, 48);
+            this.lblItemCount.Location = new System.Drawing.Point(198, 74);
+            this.lblItemCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblItemCount.Name = "lblItemCount";
-            this.lblItemCount.Size = new System.Drawing.Size(38, 13);
+            this.lblItemCount.Size = new System.Drawing.Size(56, 20);
             this.lblItemCount.TabIndex = 2;
             this.lblItemCount.Text = "Count:";
             // 
             // numItemCount
             // 
-            this.numItemCount.Location = new System.Drawing.Point(176, 46);
+            this.numItemCount.Location = new System.Drawing.Point(264, 71);
+            this.numItemCount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numItemCount.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
             this.numItemCount.Name = "numItemCount";
-            this.numItemCount.Size = new System.Drawing.Size(71, 20);
+            this.numItemCount.Size = new System.Drawing.Size(106, 26);
             this.numItemCount.TabIndex = 1;
             this.numItemCount.ValueChanged += new System.EventHandler(this.NumItemCount_ValueChanged);
             // 
             // cbSelectedItem
             // 
             this.cbSelectedItem.FormattingEnabled = true;
-            this.cbSelectedItem.Location = new System.Drawing.Point(6, 19);
+            this.cbSelectedItem.Location = new System.Drawing.Point(9, 29);
+            this.cbSelectedItem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbSelectedItem.Name = "cbSelectedItem";
-            this.cbSelectedItem.Size = new System.Drawing.Size(241, 21);
+            this.cbSelectedItem.Size = new System.Drawing.Size(360, 28);
             this.cbSelectedItem.TabIndex = 0;
             // 
             // lstInventory
@@ -1367,10 +1452,11 @@ namespace SoG_SGreader
             this.lstInventory.GridLines = true;
             this.lstInventory.HideSelection = false;
             this.lstInventory.LabelWrap = false;
-            this.lstInventory.Location = new System.Drawing.Point(6, 6);
+            this.lstInventory.Location = new System.Drawing.Point(9, 9);
+            this.lstInventory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lstInventory.MultiSelect = false;
             this.lstInventory.Name = "lstInventory";
-            this.lstInventory.Size = new System.Drawing.Size(547, 303);
+            this.lstInventory.Size = new System.Drawing.Size(818, 464);
             this.lstInventory.TabIndex = 0;
             this.lstInventory.UseCompatibleStateImageBehavior = false;
             this.lstInventory.View = System.Windows.Forms.View.Details;
@@ -1395,10 +1481,11 @@ namespace SoG_SGreader
             // 
             this.tabPets.Controls.Add(this.lstPets);
             this.tabPets.Controls.Add(this.grpPet);
-            this.tabPets.Location = new System.Drawing.Point(4, 22);
+            this.tabPets.Location = new System.Drawing.Point(4, 29);
+            this.tabPets.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPets.Name = "tabPets";
-            this.tabPets.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPets.Size = new System.Drawing.Size(559, 396);
+            this.tabPets.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPets.Size = new System.Drawing.Size(842, 616);
             this.tabPets.TabIndex = 8;
             this.tabPets.Text = "Pets";
             this.tabPets.UseVisualStyleBackColor = true;
@@ -1419,10 +1506,11 @@ namespace SoG_SGreader
             this.lstPets.FullRowSelect = true;
             this.lstPets.GridLines = true;
             this.lstPets.HideSelection = false;
-            this.lstPets.Location = new System.Drawing.Point(6, 6);
+            this.lstPets.Location = new System.Drawing.Point(9, 9);
+            this.lstPets.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lstPets.MultiSelect = false;
             this.lstPets.Name = "lstPets";
-            this.lstPets.Size = new System.Drawing.Size(368, 383);
+            this.lstPets.Size = new System.Drawing.Size(550, 587);
             this.lstPets.TabIndex = 1;
             this.lstPets.UseCompatibleStateImageBehavior = false;
             this.lstPets.View = System.Windows.Forms.View.Details;
@@ -1483,9 +1571,11 @@ namespace SoG_SGreader
             this.grpPet.Controls.Add(this.numPetDamage);
             this.grpPet.Controls.Add(this.numPetEnergy);
             this.grpPet.Controls.Add(this.numPetHP);
-            this.grpPet.Location = new System.Drawing.Point(380, 6);
+            this.grpPet.Location = new System.Drawing.Point(570, 9);
+            this.grpPet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpPet.Name = "grpPet";
-            this.grpPet.Size = new System.Drawing.Size(171, 227);
+            this.grpPet.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpPet.Size = new System.Drawing.Size(256, 349);
             this.grpPet.TabIndex = 0;
             this.grpPet.TabStop = false;
             this.grpPet.Text = "Pet";
@@ -1494,166 +1584,182 @@ namespace SoG_SGreader
             // 
             this.cbPetType.Enabled = false;
             this.cbPetType.FormattingEnabled = true;
-            this.cbPetType.Location = new System.Drawing.Point(73, 46);
+            this.cbPetType.Location = new System.Drawing.Point(110, 71);
+            this.cbPetType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbPetType.Name = "cbPetType";
-            this.cbPetType.Size = new System.Drawing.Size(93, 21);
+            this.cbPetType.Size = new System.Drawing.Size(138, 28);
             this.cbPetType.TabIndex = 2;
             // 
             // lblPetType
             // 
             this.lblPetType.AutoSize = true;
-            this.lblPetType.Location = new System.Drawing.Point(6, 49);
+            this.lblPetType.Location = new System.Drawing.Point(9, 75);
+            this.lblPetType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPetType.Name = "lblPetType";
-            this.lblPetType.Size = new System.Drawing.Size(26, 13);
+            this.lblPetType.Size = new System.Drawing.Size(37, 20);
             this.lblPetType.TabIndex = 15;
             this.lblPetType.Text = "Pet:";
             // 
             // numPetLevel
             // 
-            this.numPetLevel.Location = new System.Drawing.Point(111, 72);
+            this.numPetLevel.Location = new System.Drawing.Point(166, 111);
+            this.numPetLevel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numPetLevel.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numPetLevel.Name = "numPetLevel";
-            this.numPetLevel.Size = new System.Drawing.Size(55, 20);
+            this.numPetLevel.Size = new System.Drawing.Size(82, 26);
             this.numPetLevel.TabIndex = 14;
             this.numPetLevel.ValueChanged += new System.EventHandler(this.NumPetStat_ValueChanged);
             // 
             // lblPetLevel
             // 
             this.lblPetLevel.AutoSize = true;
-            this.lblPetLevel.Location = new System.Drawing.Point(6, 74);
+            this.lblPetLevel.Location = new System.Drawing.Point(9, 114);
+            this.lblPetLevel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPetLevel.Name = "lblPetLevel";
-            this.lblPetLevel.Size = new System.Drawing.Size(51, 13);
+            this.lblPetLevel.Size = new System.Drawing.Size(72, 20);
             this.lblPetLevel.TabIndex = 13;
             this.lblPetLevel.Text = "Pet level:";
             // 
             // lblPetSpeed
             // 
             this.lblPetSpeed.AutoSize = true;
-            this.lblPetSpeed.Location = new System.Drawing.Point(6, 199);
+            this.lblPetSpeed.Location = new System.Drawing.Point(9, 306);
+            this.lblPetSpeed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPetSpeed.Name = "lblPetSpeed";
-            this.lblPetSpeed.Size = new System.Drawing.Size(66, 13);
+            this.lblPetSpeed.Size = new System.Drawing.Size(95, 20);
             this.lblPetSpeed.TabIndex = 12;
             this.lblPetSpeed.Text = "Speed level:";
             // 
             // lblPetCrit
             // 
             this.lblPetCrit.AutoSize = true;
-            this.lblPetCrit.Location = new System.Drawing.Point(6, 174);
+            this.lblPetCrit.Location = new System.Drawing.Point(9, 268);
+            this.lblPetCrit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPetCrit.Name = "lblPetCrit";
-            this.lblPetCrit.Size = new System.Drawing.Size(50, 13);
+            this.lblPetCrit.Size = new System.Drawing.Size(72, 20);
             this.lblPetCrit.TabIndex = 11;
             this.lblPetCrit.Text = "Crit level:";
             // 
             // lblPetDamage
             // 
             this.lblPetDamage.AutoSize = true;
-            this.lblPetDamage.Location = new System.Drawing.Point(6, 149);
+            this.lblPetDamage.Location = new System.Drawing.Point(9, 229);
+            this.lblPetDamage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPetDamage.Name = "lblPetDamage";
-            this.lblPetDamage.Size = new System.Drawing.Size(75, 13);
+            this.lblPetDamage.Size = new System.Drawing.Size(109, 20);
             this.lblPetDamage.TabIndex = 10;
             this.lblPetDamage.Text = "Damage level:";
             // 
             // lblPetEnergy
             // 
             this.lblPetEnergy.AutoSize = true;
-            this.lblPetEnergy.Location = new System.Drawing.Point(6, 124);
+            this.lblPetEnergy.Location = new System.Drawing.Point(9, 191);
+            this.lblPetEnergy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPetEnergy.Name = "lblPetEnergy";
-            this.lblPetEnergy.Size = new System.Drawing.Size(68, 13);
+            this.lblPetEnergy.Size = new System.Drawing.Size(98, 20);
             this.lblPetEnergy.TabIndex = 9;
             this.lblPetEnergy.Text = "Energy level:";
             // 
             // lblPetNickname
             // 
             this.lblPetNickname.AutoSize = true;
-            this.lblPetNickname.Location = new System.Drawing.Point(6, 24);
+            this.lblPetNickname.Location = new System.Drawing.Point(9, 37);
+            this.lblPetNickname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPetNickname.Name = "lblPetNickname";
-            this.lblPetNickname.Size = new System.Drawing.Size(58, 13);
+            this.lblPetNickname.Size = new System.Drawing.Size(83, 20);
             this.lblPetNickname.TabIndex = 2;
             this.lblPetNickname.Text = "Nickname:";
             // 
             // txtPetNickname
             // 
-            this.txtPetNickname.Location = new System.Drawing.Point(73, 21);
+            this.txtPetNickname.Location = new System.Drawing.Point(110, 32);
+            this.txtPetNickname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPetNickname.Name = "txtPetNickname";
-            this.txtPetNickname.Size = new System.Drawing.Size(93, 20);
+            this.txtPetNickname.Size = new System.Drawing.Size(138, 26);
             this.txtPetNickname.TabIndex = 1;
             this.txtPetNickname.TextChanged += new System.EventHandler(this.TxtPetNickname_TextChanged);
             // 
             // lblPetHealth
             // 
             this.lblPetHealth.AutoSize = true;
-            this.lblPetHealth.Location = new System.Drawing.Point(6, 99);
+            this.lblPetHealth.Location = new System.Drawing.Point(9, 152);
+            this.lblPetHealth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPetHealth.Name = "lblPetHealth";
-            this.lblPetHealth.Size = new System.Drawing.Size(66, 13);
+            this.lblPetHealth.Size = new System.Drawing.Size(95, 20);
             this.lblPetHealth.TabIndex = 8;
             this.lblPetHealth.Text = "Health level:";
             // 
             // numPetSpeed
             // 
-            this.numPetSpeed.Location = new System.Drawing.Point(111, 197);
+            this.numPetSpeed.Location = new System.Drawing.Point(166, 303);
+            this.numPetSpeed.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numPetSpeed.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.numPetSpeed.Name = "numPetSpeed";
-            this.numPetSpeed.Size = new System.Drawing.Size(55, 20);
+            this.numPetSpeed.Size = new System.Drawing.Size(82, 26);
             this.numPetSpeed.TabIndex = 7;
             this.numPetSpeed.ValueChanged += new System.EventHandler(this.NumPetStat_ValueChanged);
             // 
             // numPetCrit
             // 
-            this.numPetCrit.Location = new System.Drawing.Point(111, 172);
+            this.numPetCrit.Location = new System.Drawing.Point(166, 265);
+            this.numPetCrit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numPetCrit.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.numPetCrit.Name = "numPetCrit";
-            this.numPetCrit.Size = new System.Drawing.Size(55, 20);
+            this.numPetCrit.Size = new System.Drawing.Size(82, 26);
             this.numPetCrit.TabIndex = 6;
             this.numPetCrit.ValueChanged += new System.EventHandler(this.NumPetStat_ValueChanged);
             // 
             // numPetDamage
             // 
-            this.numPetDamage.Location = new System.Drawing.Point(111, 147);
+            this.numPetDamage.Location = new System.Drawing.Point(166, 226);
+            this.numPetDamage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numPetDamage.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.numPetDamage.Name = "numPetDamage";
-            this.numPetDamage.Size = new System.Drawing.Size(55, 20);
+            this.numPetDamage.Size = new System.Drawing.Size(82, 26);
             this.numPetDamage.TabIndex = 5;
             this.numPetDamage.ValueChanged += new System.EventHandler(this.NumPetStat_ValueChanged);
             // 
             // numPetEnergy
             // 
-            this.numPetEnergy.Location = new System.Drawing.Point(111, 122);
+            this.numPetEnergy.Location = new System.Drawing.Point(166, 188);
+            this.numPetEnergy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numPetEnergy.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.numPetEnergy.Name = "numPetEnergy";
-            this.numPetEnergy.Size = new System.Drawing.Size(55, 20);
+            this.numPetEnergy.Size = new System.Drawing.Size(82, 26);
             this.numPetEnergy.TabIndex = 4;
             this.numPetEnergy.ValueChanged += new System.EventHandler(this.NumPetStat_ValueChanged);
             // 
             // numPetHP
             // 
-            this.numPetHP.Location = new System.Drawing.Point(111, 97);
+            this.numPetHP.Location = new System.Drawing.Point(166, 149);
+            this.numPetHP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numPetHP.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.numPetHP.Name = "numPetHP";
-            this.numPetHP.Size = new System.Drawing.Size(55, 20);
+            this.numPetHP.Size = new System.Drawing.Size(82, 26);
             this.numPetHP.TabIndex = 3;
             this.numPetHP.ValueChanged += new System.EventHandler(this.NumPetStat_ValueChanged);
             // 
@@ -1661,10 +1767,11 @@ namespace SoG_SGreader
             // 
             this.tabCards.Controls.Add(this.grpCards);
             this.tabCards.Controls.Add(this.cblstCards);
-            this.tabCards.Location = new System.Drawing.Point(4, 22);
+            this.tabCards.Location = new System.Drawing.Point(4, 29);
+            this.tabCards.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabCards.Name = "tabCards";
-            this.tabCards.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCards.Size = new System.Drawing.Size(559, 396);
+            this.tabCards.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabCards.Size = new System.Drawing.Size(842, 616);
             this.tabCards.TabIndex = 5;
             this.tabCards.Text = "Cards";
             this.tabCards.UseVisualStyleBackColor = true;
@@ -1677,9 +1784,11 @@ namespace SoG_SGreader
             this.grpCards.Controls.Add(this.btnSelectAllCards);
             this.grpCards.Controls.Add(this.btnResetCards);
             this.grpCards.Controls.Add(this.btnDeselectAllCards);
-            this.grpCards.Location = new System.Drawing.Point(454, 6);
+            this.grpCards.Location = new System.Drawing.Point(681, 9);
+            this.grpCards.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpCards.Name = "grpCards";
-            this.grpCards.Size = new System.Drawing.Size(97, 379);
+            this.grpCards.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpCards.Size = new System.Drawing.Size(146, 583);
             this.grpCards.TabIndex = 6;
             this.grpCards.TabStop = false;
             this.grpCards.Text = "Cards";
@@ -1687,17 +1796,19 @@ namespace SoG_SGreader
             // lblCardsNullWarning
             // 
             this.lblCardsNullWarning.AutoSize = true;
-            this.lblCardsNullWarning.Location = new System.Drawing.Point(6, 74);
+            this.lblCardsNullWarning.Location = new System.Drawing.Point(9, 114);
+            this.lblCardsNullWarning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCardsNullWarning.Name = "lblCardsNullWarning";
-            this.lblCardsNullWarning.Size = new System.Drawing.Size(72, 52);
+            this.lblCardsNullWarning.Size = new System.Drawing.Size(106, 80);
             this.lblCardsNullWarning.TabIndex = 7;
             this.lblCardsNullWarning.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllCards
             // 
-            this.btnSelectAllCards.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllCards.Location = new System.Drawing.Point(9, 29);
+            this.btnSelectAllCards.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSelectAllCards.Name = "btnSelectAllCards";
-            this.btnSelectAllCards.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllCards.Size = new System.Drawing.Size(130, 35);
             this.btnSelectAllCards.TabIndex = 3;
             this.btnSelectAllCards.Text = "Select all";
             this.btnSelectAllCards.UseVisualStyleBackColor = true;
@@ -1706,9 +1817,10 @@ namespace SoG_SGreader
             // btnResetCards
             // 
             this.btnResetCards.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetCards.Location = new System.Drawing.Point(6, 350);
+            this.btnResetCards.Location = new System.Drawing.Point(9, 538);
+            this.btnResetCards.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnResetCards.Name = "btnResetCards";
-            this.btnResetCards.Size = new System.Drawing.Size(87, 23);
+            this.btnResetCards.Size = new System.Drawing.Size(130, 35);
             this.btnResetCards.TabIndex = 5;
             this.btnResetCards.Text = "Reset";
             this.btnResetCards.UseVisualStyleBackColor = true;
@@ -1716,9 +1828,10 @@ namespace SoG_SGreader
             // 
             // btnDeselectAllCards
             // 
-            this.btnDeselectAllCards.Location = new System.Drawing.Point(6, 48);
+            this.btnDeselectAllCards.Location = new System.Drawing.Point(9, 74);
+            this.btnDeselectAllCards.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeselectAllCards.Name = "btnDeselectAllCards";
-            this.btnDeselectAllCards.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllCards.Size = new System.Drawing.Size(130, 35);
             this.btnDeselectAllCards.TabIndex = 4;
             this.btnDeselectAllCards.Text = "Deselect all";
             this.btnDeselectAllCards.UseVisualStyleBackColor = true;
@@ -1730,19 +1843,21 @@ namespace SoG_SGreader
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstCards.FormattingEnabled = true;
-            this.cblstCards.Location = new System.Drawing.Point(6, 6);
+            this.cblstCards.Location = new System.Drawing.Point(9, 9);
+            this.cblstCards.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cblstCards.Name = "cblstCards";
-            this.cblstCards.Size = new System.Drawing.Size(442, 379);
+            this.cblstCards.Size = new System.Drawing.Size(661, 579);
             this.cblstCards.TabIndex = 2;
             // 
             // tabMaps
             // 
             this.tabMaps.Controls.Add(this.grpMaps);
             this.tabMaps.Controls.Add(this.cblstMaps);
-            this.tabMaps.Location = new System.Drawing.Point(4, 22);
+            this.tabMaps.Location = new System.Drawing.Point(4, 29);
+            this.tabMaps.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabMaps.Name = "tabMaps";
-            this.tabMaps.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMaps.Size = new System.Drawing.Size(559, 396);
+            this.tabMaps.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabMaps.Size = new System.Drawing.Size(842, 616);
             this.tabMaps.TabIndex = 10;
             this.tabMaps.Text = "Maps";
             this.tabMaps.UseVisualStyleBackColor = true;
@@ -1755,9 +1870,11 @@ namespace SoG_SGreader
             this.grpMaps.Controls.Add(this.btnSelectAllMaps);
             this.grpMaps.Controls.Add(this.btnResetMaps);
             this.grpMaps.Controls.Add(this.btnDeselectAllMaps);
-            this.grpMaps.Location = new System.Drawing.Point(454, 6);
+            this.grpMaps.Location = new System.Drawing.Point(681, 9);
+            this.grpMaps.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpMaps.Name = "grpMaps";
-            this.grpMaps.Size = new System.Drawing.Size(97, 379);
+            this.grpMaps.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpMaps.Size = new System.Drawing.Size(146, 583);
             this.grpMaps.TabIndex = 8;
             this.grpMaps.TabStop = false;
             this.grpMaps.Text = "Maps";
@@ -1765,17 +1882,19 @@ namespace SoG_SGreader
             // lblMapsNullWarning
             // 
             this.lblMapsNullWarning.AutoSize = true;
-            this.lblMapsNullWarning.Location = new System.Drawing.Point(6, 74);
+            this.lblMapsNullWarning.Location = new System.Drawing.Point(9, 114);
+            this.lblMapsNullWarning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMapsNullWarning.Name = "lblMapsNullWarning";
-            this.lblMapsNullWarning.Size = new System.Drawing.Size(72, 52);
+            this.lblMapsNullWarning.Size = new System.Drawing.Size(106, 80);
             this.lblMapsNullWarning.TabIndex = 8;
             this.lblMapsNullWarning.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllMaps
             // 
-            this.btnSelectAllMaps.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllMaps.Location = new System.Drawing.Point(9, 29);
+            this.btnSelectAllMaps.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSelectAllMaps.Name = "btnSelectAllMaps";
-            this.btnSelectAllMaps.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllMaps.Size = new System.Drawing.Size(130, 35);
             this.btnSelectAllMaps.TabIndex = 3;
             this.btnSelectAllMaps.Text = "Select all";
             this.btnSelectAllMaps.UseVisualStyleBackColor = true;
@@ -1784,9 +1903,10 @@ namespace SoG_SGreader
             // btnResetMaps
             // 
             this.btnResetMaps.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetMaps.Location = new System.Drawing.Point(6, 350);
+            this.btnResetMaps.Location = new System.Drawing.Point(9, 538);
+            this.btnResetMaps.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnResetMaps.Name = "btnResetMaps";
-            this.btnResetMaps.Size = new System.Drawing.Size(87, 23);
+            this.btnResetMaps.Size = new System.Drawing.Size(130, 35);
             this.btnResetMaps.TabIndex = 5;
             this.btnResetMaps.Text = "Reset";
             this.btnResetMaps.UseVisualStyleBackColor = true;
@@ -1794,9 +1914,10 @@ namespace SoG_SGreader
             // 
             // btnDeselectAllMaps
             // 
-            this.btnDeselectAllMaps.Location = new System.Drawing.Point(6, 48);
+            this.btnDeselectAllMaps.Location = new System.Drawing.Point(9, 74);
+            this.btnDeselectAllMaps.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeselectAllMaps.Name = "btnDeselectAllMaps";
-            this.btnDeselectAllMaps.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllMaps.Size = new System.Drawing.Size(130, 35);
             this.btnDeselectAllMaps.TabIndex = 4;
             this.btnDeselectAllMaps.Text = "Deselect all";
             this.btnDeselectAllMaps.UseVisualStyleBackColor = true;
@@ -1808,19 +1929,21 @@ namespace SoG_SGreader
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstMaps.FormattingEnabled = true;
-            this.cblstMaps.Location = new System.Drawing.Point(6, 6);
+            this.cblstMaps.Location = new System.Drawing.Point(9, 9);
+            this.cblstMaps.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cblstMaps.Name = "cblstMaps";
-            this.cblstMaps.Size = new System.Drawing.Size(442, 379);
+            this.cblstMaps.Size = new System.Drawing.Size(661, 579);
             this.cblstMaps.TabIndex = 7;
             // 
             // tabQuests
             // 
             this.tabQuests.Controls.Add(this.grpQuests);
             this.tabQuests.Controls.Add(this.cblstQuests);
-            this.tabQuests.Location = new System.Drawing.Point(4, 22);
+            this.tabQuests.Location = new System.Drawing.Point(4, 29);
+            this.tabQuests.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabQuests.Name = "tabQuests";
-            this.tabQuests.Padding = new System.Windows.Forms.Padding(3);
-            this.tabQuests.Size = new System.Drawing.Size(559, 396);
+            this.tabQuests.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabQuests.Size = new System.Drawing.Size(842, 616);
             this.tabQuests.TabIndex = 9;
             this.tabQuests.Text = "Quests";
             this.tabQuests.UseVisualStyleBackColor = true;
@@ -1834,27 +1957,42 @@ namespace SoG_SGreader
             this.grpQuests.Controls.Add(this.btnSelectAllQuests);
             this.grpQuests.Controls.Add(this.btnResetQuests);
             this.grpQuests.Controls.Add(this.btnDeselectAllQuests);
-            this.grpQuests.Location = new System.Drawing.Point(454, 6);
+            this.grpQuests.Location = new System.Drawing.Point(681, 9);
+            this.grpQuests.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpQuests.Name = "grpQuests";
-            this.grpQuests.Size = new System.Drawing.Size(97, 379);
+            this.grpQuests.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpQuests.Size = new System.Drawing.Size(146, 583);
             this.grpQuests.TabIndex = 8;
             this.grpQuests.TabStop = false;
             this.grpQuests.Text = "Quests";
             // 
+            // lblQuestsChaningNoEffect
+            // 
+            this.lblQuestsChaningNoEffect.AutoSize = true;
+            this.lblQuestsChaningNoEffect.Location = new System.Drawing.Point(9, 286);
+            this.lblQuestsChaningNoEffect.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblQuestsChaningNoEffect.Name = "lblQuestsChaningNoEffect";
+            this.lblQuestsChaningNoEffect.Size = new System.Drawing.Size(132, 160);
+            this.lblQuestsChaningNoEffect.TabIndex = 10;
+            this.lblQuestsChaningNoEffect.Text = "Changing Quests\r\nmay have no \r\neffect on your\r\ngame since\r\nthese are addi-\r\ntiona" +
+    "lly saved\r\nin the World \r\nfiles.";
+            // 
             // lblQuestsNullWarning
             // 
             this.lblQuestsNullWarning.AutoSize = true;
-            this.lblQuestsNullWarning.Location = new System.Drawing.Point(6, 74);
+            this.lblQuestsNullWarning.Location = new System.Drawing.Point(9, 114);
+            this.lblQuestsNullWarning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQuestsNullWarning.Name = "lblQuestsNullWarning";
-            this.lblQuestsNullWarning.Size = new System.Drawing.Size(72, 52);
+            this.lblQuestsNullWarning.Size = new System.Drawing.Size(106, 80);
             this.lblQuestsNullWarning.TabIndex = 8;
             this.lblQuestsNullWarning.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllQuests
             // 
-            this.btnSelectAllQuests.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllQuests.Location = new System.Drawing.Point(9, 29);
+            this.btnSelectAllQuests.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSelectAllQuests.Name = "btnSelectAllQuests";
-            this.btnSelectAllQuests.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllQuests.Size = new System.Drawing.Size(130, 35);
             this.btnSelectAllQuests.TabIndex = 3;
             this.btnSelectAllQuests.Text = "Select all";
             this.btnSelectAllQuests.UseVisualStyleBackColor = true;
@@ -1863,9 +2001,10 @@ namespace SoG_SGreader
             // btnResetQuests
             // 
             this.btnResetQuests.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetQuests.Location = new System.Drawing.Point(6, 350);
+            this.btnResetQuests.Location = new System.Drawing.Point(9, 538);
+            this.btnResetQuests.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnResetQuests.Name = "btnResetQuests";
-            this.btnResetQuests.Size = new System.Drawing.Size(87, 23);
+            this.btnResetQuests.Size = new System.Drawing.Size(130, 35);
             this.btnResetQuests.TabIndex = 5;
             this.btnResetQuests.Text = "Reset";
             this.btnResetQuests.UseVisualStyleBackColor = true;
@@ -1873,9 +2012,10 @@ namespace SoG_SGreader
             // 
             // btnDeselectAllQuests
             // 
-            this.btnDeselectAllQuests.Location = new System.Drawing.Point(6, 48);
+            this.btnDeselectAllQuests.Location = new System.Drawing.Point(9, 74);
+            this.btnDeselectAllQuests.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeselectAllQuests.Name = "btnDeselectAllQuests";
-            this.btnDeselectAllQuests.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllQuests.Size = new System.Drawing.Size(130, 35);
             this.btnDeselectAllQuests.TabIndex = 4;
             this.btnDeselectAllQuests.Text = "Deselect all";
             this.btnDeselectAllQuests.UseVisualStyleBackColor = true;
@@ -1887,9 +2027,10 @@ namespace SoG_SGreader
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstQuests.FormattingEnabled = true;
-            this.cblstQuests.Location = new System.Drawing.Point(6, 6);
+            this.cblstQuests.Location = new System.Drawing.Point(9, 9);
+            this.cblstQuests.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cblstQuests.Name = "cblstQuests";
-            this.cblstQuests.Size = new System.Drawing.Size(442, 379);
+            this.cblstQuests.Size = new System.Drawing.Size(661, 579);
             this.cblstQuests.TabIndex = 7;
             // 
             // tabFlags
@@ -1897,10 +2038,11 @@ namespace SoG_SGreader
             this.tabFlags.Controls.Add(this.cblstFlagsChecked);
             this.tabFlags.Controls.Add(this.grpFlags);
             this.tabFlags.Controls.Add(this.cblstFlags);
-            this.tabFlags.Location = new System.Drawing.Point(4, 22);
+            this.tabFlags.Location = new System.Drawing.Point(4, 29);
+            this.tabFlags.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabFlags.Name = "tabFlags";
-            this.tabFlags.Padding = new System.Windows.Forms.Padding(3);
-            this.tabFlags.Size = new System.Drawing.Size(559, 396);
+            this.tabFlags.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabFlags.Size = new System.Drawing.Size(842, 616);
             this.tabFlags.TabIndex = 6;
             this.tabFlags.Text = "Flags";
             this.tabFlags.UseVisualStyleBackColor = true;
@@ -1909,9 +2051,10 @@ namespace SoG_SGreader
             // 
             this.cblstFlagsChecked.Enabled = false;
             this.cblstFlagsChecked.FormattingEnabled = true;
-            this.cblstFlagsChecked.Location = new System.Drawing.Point(8, 244);
+            this.cblstFlagsChecked.Location = new System.Drawing.Point(12, 375);
+            this.cblstFlagsChecked.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cblstFlagsChecked.Name = "cblstFlagsChecked";
-            this.cblstFlagsChecked.Size = new System.Drawing.Size(440, 139);
+            this.cblstFlagsChecked.Size = new System.Drawing.Size(658, 211);
             this.cblstFlagsChecked.TabIndex = 11;
             this.cblstFlagsChecked.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cblstFlagsChecked_ItemCheck);
             // 
@@ -1924,27 +2067,42 @@ namespace SoG_SGreader
             this.grpFlags.Controls.Add(this.btnSelectAllFlags);
             this.grpFlags.Controls.Add(this.btnResetFlags);
             this.grpFlags.Controls.Add(this.btnDeselectAllFlags);
-            this.grpFlags.Location = new System.Drawing.Point(454, 6);
+            this.grpFlags.Location = new System.Drawing.Point(681, 9);
+            this.grpFlags.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpFlags.Name = "grpFlags";
-            this.grpFlags.Size = new System.Drawing.Size(97, 379);
+            this.grpFlags.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpFlags.Size = new System.Drawing.Size(146, 583);
             this.grpFlags.TabIndex = 10;
             this.grpFlags.TabStop = false;
             this.grpFlags.Text = "Flags";
             // 
+            // lblFlagsChaningNoEffect
+            // 
+            this.lblFlagsChaningNoEffect.AutoSize = true;
+            this.lblFlagsChaningNoEffect.Location = new System.Drawing.Point(9, 286);
+            this.lblFlagsChaningNoEffect.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFlagsChaningNoEffect.Name = "lblFlagsChaningNoEffect";
+            this.lblFlagsChaningNoEffect.Size = new System.Drawing.Size(120, 160);
+            this.lblFlagsChaningNoEffect.TabIndex = 9;
+            this.lblFlagsChaningNoEffect.Text = "Changing Flags\r\nmay have no \r\neffect on your\r\ngame since\r\nthese are addi-\r\ntional" +
+    "ly saved\r\nin the World \r\nfiles.";
+            // 
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(6, 74);
+            this.label41.Location = new System.Drawing.Point(9, 114);
+            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(72, 52);
+            this.label41.Size = new System.Drawing.Size(106, 80);
             this.label41.TabIndex = 8;
             this.label41.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllFlags
             // 
-            this.btnSelectAllFlags.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllFlags.Location = new System.Drawing.Point(9, 29);
+            this.btnSelectAllFlags.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSelectAllFlags.Name = "btnSelectAllFlags";
-            this.btnSelectAllFlags.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllFlags.Size = new System.Drawing.Size(130, 35);
             this.btnSelectAllFlags.TabIndex = 3;
             this.btnSelectAllFlags.Text = "Select all";
             this.btnSelectAllFlags.UseVisualStyleBackColor = true;
@@ -1953,9 +2111,10 @@ namespace SoG_SGreader
             // btnResetFlags
             // 
             this.btnResetFlags.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetFlags.Location = new System.Drawing.Point(6, 350);
+            this.btnResetFlags.Location = new System.Drawing.Point(9, 538);
+            this.btnResetFlags.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnResetFlags.Name = "btnResetFlags";
-            this.btnResetFlags.Size = new System.Drawing.Size(87, 23);
+            this.btnResetFlags.Size = new System.Drawing.Size(130, 35);
             this.btnResetFlags.TabIndex = 5;
             this.btnResetFlags.Text = "Reset";
             this.btnResetFlags.UseVisualStyleBackColor = true;
@@ -1963,9 +2122,10 @@ namespace SoG_SGreader
             // 
             // btnDeselectAllFlags
             // 
-            this.btnDeselectAllFlags.Location = new System.Drawing.Point(6, 48);
+            this.btnDeselectAllFlags.Location = new System.Drawing.Point(9, 74);
+            this.btnDeselectAllFlags.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeselectAllFlags.Name = "btnDeselectAllFlags";
-            this.btnDeselectAllFlags.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllFlags.Size = new System.Drawing.Size(130, 35);
             this.btnDeselectAllFlags.TabIndex = 4;
             this.btnDeselectAllFlags.Text = "Deselect all";
             this.btnDeselectAllFlags.UseVisualStyleBackColor = true;
@@ -1977,9 +2137,10 @@ namespace SoG_SGreader
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstFlags.FormattingEnabled = true;
-            this.cblstFlags.Location = new System.Drawing.Point(6, 6);
+            this.cblstFlags.Location = new System.Drawing.Point(9, 9);
+            this.cblstFlags.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cblstFlags.Name = "cblstFlags";
-            this.cblstFlags.Size = new System.Drawing.Size(442, 229);
+            this.cblstFlags.Size = new System.Drawing.Size(661, 349);
             this.cblstFlags.TabIndex = 9;
             this.cblstFlags.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cblstFlags_ItemCheck);
             // 
@@ -1987,9 +2148,10 @@ namespace SoG_SGreader
             // 
             this.tabTrophies.Controls.Add(this.grpTrophies);
             this.tabTrophies.Controls.Add(this.cblstTrophies);
-            this.tabTrophies.Location = new System.Drawing.Point(4, 22);
+            this.tabTrophies.Location = new System.Drawing.Point(4, 29);
+            this.tabTrophies.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabTrophies.Name = "tabTrophies";
-            this.tabTrophies.Size = new System.Drawing.Size(559, 396);
+            this.tabTrophies.Size = new System.Drawing.Size(842, 616);
             this.tabTrophies.TabIndex = 11;
             this.tabTrophies.Text = "Trophies";
             this.tabTrophies.UseVisualStyleBackColor = true;
@@ -2002,9 +2164,11 @@ namespace SoG_SGreader
             this.grpTrophies.Controls.Add(this.btnSelectAllTrophies);
             this.grpTrophies.Controls.Add(this.btnResetTrophies);
             this.grpTrophies.Controls.Add(this.btnDeselectAllTrophies);
-            this.grpTrophies.Location = new System.Drawing.Point(454, 6);
+            this.grpTrophies.Location = new System.Drawing.Point(681, 9);
+            this.grpTrophies.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpTrophies.Name = "grpTrophies";
-            this.grpTrophies.Size = new System.Drawing.Size(97, 379);
+            this.grpTrophies.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpTrophies.Size = new System.Drawing.Size(146, 583);
             this.grpTrophies.TabIndex = 12;
             this.grpTrophies.TabStop = false;
             this.grpTrophies.Text = "Trophies";
@@ -2012,17 +2176,19 @@ namespace SoG_SGreader
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(6, 74);
+            this.label59.Location = new System.Drawing.Point(9, 114);
+            this.label59.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(72, 52);
+            this.label59.Size = new System.Drawing.Size(106, 80);
             this.label59.TabIndex = 8;
             this.label59.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllTrophies
             // 
-            this.btnSelectAllTrophies.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllTrophies.Location = new System.Drawing.Point(9, 29);
+            this.btnSelectAllTrophies.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSelectAllTrophies.Name = "btnSelectAllTrophies";
-            this.btnSelectAllTrophies.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllTrophies.Size = new System.Drawing.Size(130, 35);
             this.btnSelectAllTrophies.TabIndex = 3;
             this.btnSelectAllTrophies.Text = "Select all";
             this.btnSelectAllTrophies.UseVisualStyleBackColor = true;
@@ -2031,9 +2197,10 @@ namespace SoG_SGreader
             // btnResetTrophies
             // 
             this.btnResetTrophies.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetTrophies.Location = new System.Drawing.Point(6, 350);
+            this.btnResetTrophies.Location = new System.Drawing.Point(9, 538);
+            this.btnResetTrophies.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnResetTrophies.Name = "btnResetTrophies";
-            this.btnResetTrophies.Size = new System.Drawing.Size(87, 23);
+            this.btnResetTrophies.Size = new System.Drawing.Size(130, 35);
             this.btnResetTrophies.TabIndex = 5;
             this.btnResetTrophies.Text = "Reset";
             this.btnResetTrophies.UseVisualStyleBackColor = true;
@@ -2041,9 +2208,10 @@ namespace SoG_SGreader
             // 
             // btnDeselectAllTrophies
             // 
-            this.btnDeselectAllTrophies.Location = new System.Drawing.Point(6, 48);
+            this.btnDeselectAllTrophies.Location = new System.Drawing.Point(9, 74);
+            this.btnDeselectAllTrophies.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeselectAllTrophies.Name = "btnDeselectAllTrophies";
-            this.btnDeselectAllTrophies.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllTrophies.Size = new System.Drawing.Size(130, 35);
             this.btnDeselectAllTrophies.TabIndex = 4;
             this.btnDeselectAllTrophies.Text = "Deselect all";
             this.btnDeselectAllTrophies.UseVisualStyleBackColor = true;
@@ -2055,18 +2223,20 @@ namespace SoG_SGreader
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstTrophies.FormattingEnabled = true;
-            this.cblstTrophies.Location = new System.Drawing.Point(6, 6);
+            this.cblstTrophies.Location = new System.Drawing.Point(9, 9);
+            this.cblstTrophies.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cblstTrophies.Name = "cblstTrophies";
-            this.cblstTrophies.Size = new System.Drawing.Size(442, 379);
+            this.cblstTrophies.Size = new System.Drawing.Size(661, 579);
             this.cblstTrophies.TabIndex = 11;
             // 
             // tabFishCaught
             // 
             this.tabFishCaught.Controls.Add(this.groupBox2);
             this.tabFishCaught.Controls.Add(this.cblstFishCaught);
-            this.tabFishCaught.Location = new System.Drawing.Point(4, 22);
+            this.tabFishCaught.Location = new System.Drawing.Point(4, 29);
+            this.tabFishCaught.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabFishCaught.Name = "tabFishCaught";
-            this.tabFishCaught.Size = new System.Drawing.Size(559, 396);
+            this.tabFishCaught.Size = new System.Drawing.Size(842, 616);
             this.tabFishCaught.TabIndex = 14;
             this.tabFishCaught.Text = "Fish Caught";
             this.tabFishCaught.UseVisualStyleBackColor = true;
@@ -2079,9 +2249,11 @@ namespace SoG_SGreader
             this.groupBox2.Controls.Add(this.btnSelectAllFishCaught);
             this.groupBox2.Controls.Add(this.btnResetFishCaught);
             this.groupBox2.Controls.Add(this.btnDeselectAllFishCaught);
-            this.groupBox2.Location = new System.Drawing.Point(454, 6);
+            this.groupBox2.Location = new System.Drawing.Point(681, 9);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(97, 379);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Size = new System.Drawing.Size(146, 583);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Fish Caught";
@@ -2089,17 +2261,19 @@ namespace SoG_SGreader
             // lblFishNullWarning
             // 
             this.lblFishNullWarning.AutoSize = true;
-            this.lblFishNullWarning.Location = new System.Drawing.Point(6, 74);
+            this.lblFishNullWarning.Location = new System.Drawing.Point(9, 114);
+            this.lblFishNullWarning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFishNullWarning.Name = "lblFishNullWarning";
-            this.lblFishNullWarning.Size = new System.Drawing.Size(72, 52);
+            this.lblFishNullWarning.Size = new System.Drawing.Size(106, 80);
             this.lblFishNullWarning.TabIndex = 8;
             this.lblFishNullWarning.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllFishCaught
             // 
-            this.btnSelectAllFishCaught.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllFishCaught.Location = new System.Drawing.Point(9, 29);
+            this.btnSelectAllFishCaught.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSelectAllFishCaught.Name = "btnSelectAllFishCaught";
-            this.btnSelectAllFishCaught.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllFishCaught.Size = new System.Drawing.Size(130, 35);
             this.btnSelectAllFishCaught.TabIndex = 3;
             this.btnSelectAllFishCaught.Text = "Select all";
             this.btnSelectAllFishCaught.UseVisualStyleBackColor = true;
@@ -2108,9 +2282,10 @@ namespace SoG_SGreader
             // btnResetFishCaught
             // 
             this.btnResetFishCaught.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetFishCaught.Location = new System.Drawing.Point(6, 350);
+            this.btnResetFishCaught.Location = new System.Drawing.Point(9, 538);
+            this.btnResetFishCaught.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnResetFishCaught.Name = "btnResetFishCaught";
-            this.btnResetFishCaught.Size = new System.Drawing.Size(87, 23);
+            this.btnResetFishCaught.Size = new System.Drawing.Size(130, 35);
             this.btnResetFishCaught.TabIndex = 5;
             this.btnResetFishCaught.Text = "Reset";
             this.btnResetFishCaught.UseVisualStyleBackColor = true;
@@ -2118,9 +2293,10 @@ namespace SoG_SGreader
             // 
             // btnDeselectAllFishCaught
             // 
-            this.btnDeselectAllFishCaught.Location = new System.Drawing.Point(6, 48);
+            this.btnDeselectAllFishCaught.Location = new System.Drawing.Point(9, 74);
+            this.btnDeselectAllFishCaught.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeselectAllFishCaught.Name = "btnDeselectAllFishCaught";
-            this.btnDeselectAllFishCaught.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllFishCaught.Size = new System.Drawing.Size(130, 35);
             this.btnDeselectAllFishCaught.TabIndex = 4;
             this.btnDeselectAllFishCaught.Text = "Deselect all";
             this.btnDeselectAllFishCaught.UseVisualStyleBackColor = true;
@@ -2132,19 +2308,21 @@ namespace SoG_SGreader
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstFishCaught.FormattingEnabled = true;
-            this.cblstFishCaught.Location = new System.Drawing.Point(6, 6);
+            this.cblstFishCaught.Location = new System.Drawing.Point(9, 9);
+            this.cblstFishCaught.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cblstFishCaught.Name = "cblstFishCaught";
-            this.cblstFishCaught.Size = new System.Drawing.Size(442, 379);
+            this.cblstFishCaught.Size = new System.Drawing.Size(661, 579);
             this.cblstFishCaught.TabIndex = 17;
             // 
             // tabEnemiesSeen
             // 
             this.tabEnemiesSeen.Controls.Add(this.grpEnemiesSeen);
             this.tabEnemiesSeen.Controls.Add(this.cblstEnemiesSeens);
-            this.tabEnemiesSeen.Location = new System.Drawing.Point(4, 22);
+            this.tabEnemiesSeen.Location = new System.Drawing.Point(4, 29);
+            this.tabEnemiesSeen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabEnemiesSeen.Name = "tabEnemiesSeen";
-            this.tabEnemiesSeen.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEnemiesSeen.Size = new System.Drawing.Size(559, 396);
+            this.tabEnemiesSeen.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabEnemiesSeen.Size = new System.Drawing.Size(842, 616);
             this.tabEnemiesSeen.TabIndex = 4;
             this.tabEnemiesSeen.Text = "Enemies seen";
             this.tabEnemiesSeen.UseVisualStyleBackColor = true;
@@ -2157,9 +2335,11 @@ namespace SoG_SGreader
             this.grpEnemiesSeen.Controls.Add(this.btnSelectAllEnemiesSeen);
             this.grpEnemiesSeen.Controls.Add(this.btnResetEnemiesSeen);
             this.grpEnemiesSeen.Controls.Add(this.btnDeselectAllEnemiesSeen);
-            this.grpEnemiesSeen.Location = new System.Drawing.Point(454, 6);
+            this.grpEnemiesSeen.Location = new System.Drawing.Point(681, 9);
+            this.grpEnemiesSeen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpEnemiesSeen.Name = "grpEnemiesSeen";
-            this.grpEnemiesSeen.Size = new System.Drawing.Size(97, 379);
+            this.grpEnemiesSeen.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpEnemiesSeen.Size = new System.Drawing.Size(146, 583);
             this.grpEnemiesSeen.TabIndex = 10;
             this.grpEnemiesSeen.TabStop = false;
             this.grpEnemiesSeen.Text = "Enemies seen";
@@ -2167,17 +2347,19 @@ namespace SoG_SGreader
             // lblEnemiesSeenNullWarning
             // 
             this.lblEnemiesSeenNullWarning.AutoSize = true;
-            this.lblEnemiesSeenNullWarning.Location = new System.Drawing.Point(6, 74);
+            this.lblEnemiesSeenNullWarning.Location = new System.Drawing.Point(9, 114);
+            this.lblEnemiesSeenNullWarning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEnemiesSeenNullWarning.Name = "lblEnemiesSeenNullWarning";
-            this.lblEnemiesSeenNullWarning.Size = new System.Drawing.Size(72, 52);
+            this.lblEnemiesSeenNullWarning.Size = new System.Drawing.Size(106, 80);
             this.lblEnemiesSeenNullWarning.TabIndex = 8;
             this.lblEnemiesSeenNullWarning.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllEnemiesSeen
             // 
-            this.btnSelectAllEnemiesSeen.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllEnemiesSeen.Location = new System.Drawing.Point(9, 29);
+            this.btnSelectAllEnemiesSeen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSelectAllEnemiesSeen.Name = "btnSelectAllEnemiesSeen";
-            this.btnSelectAllEnemiesSeen.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllEnemiesSeen.Size = new System.Drawing.Size(130, 35);
             this.btnSelectAllEnemiesSeen.TabIndex = 3;
             this.btnSelectAllEnemiesSeen.Text = "Select all";
             this.btnSelectAllEnemiesSeen.UseVisualStyleBackColor = true;
@@ -2186,9 +2368,10 @@ namespace SoG_SGreader
             // btnResetEnemiesSeen
             // 
             this.btnResetEnemiesSeen.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetEnemiesSeen.Location = new System.Drawing.Point(6, 350);
+            this.btnResetEnemiesSeen.Location = new System.Drawing.Point(9, 538);
+            this.btnResetEnemiesSeen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnResetEnemiesSeen.Name = "btnResetEnemiesSeen";
-            this.btnResetEnemiesSeen.Size = new System.Drawing.Size(87, 23);
+            this.btnResetEnemiesSeen.Size = new System.Drawing.Size(130, 35);
             this.btnResetEnemiesSeen.TabIndex = 5;
             this.btnResetEnemiesSeen.Text = "Reset";
             this.btnResetEnemiesSeen.UseVisualStyleBackColor = true;
@@ -2196,9 +2379,10 @@ namespace SoG_SGreader
             // 
             // btnDeselectAllEnemiesSeen
             // 
-            this.btnDeselectAllEnemiesSeen.Location = new System.Drawing.Point(6, 48);
+            this.btnDeselectAllEnemiesSeen.Location = new System.Drawing.Point(9, 74);
+            this.btnDeselectAllEnemiesSeen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeselectAllEnemiesSeen.Name = "btnDeselectAllEnemiesSeen";
-            this.btnDeselectAllEnemiesSeen.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllEnemiesSeen.Size = new System.Drawing.Size(130, 35);
             this.btnDeselectAllEnemiesSeen.TabIndex = 4;
             this.btnDeselectAllEnemiesSeen.Text = "Deselect all";
             this.btnDeselectAllEnemiesSeen.UseVisualStyleBackColor = true;
@@ -2210,18 +2394,20 @@ namespace SoG_SGreader
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstEnemiesSeens.FormattingEnabled = true;
-            this.cblstEnemiesSeens.Location = new System.Drawing.Point(6, 6);
+            this.cblstEnemiesSeens.Location = new System.Drawing.Point(9, 9);
+            this.cblstEnemiesSeens.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cblstEnemiesSeens.Name = "cblstEnemiesSeens";
-            this.cblstEnemiesSeens.Size = new System.Drawing.Size(442, 379);
+            this.cblstEnemiesSeens.Size = new System.Drawing.Size(661, 579);
             this.cblstEnemiesSeens.TabIndex = 9;
             // 
             // tabItemsSeen
             // 
             this.tabItemsSeen.Controls.Add(this.grpItemsSeen);
             this.tabItemsSeen.Controls.Add(this.cblstItemsSeen);
-            this.tabItemsSeen.Location = new System.Drawing.Point(4, 22);
+            this.tabItemsSeen.Location = new System.Drawing.Point(4, 29);
+            this.tabItemsSeen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabItemsSeen.Name = "tabItemsSeen";
-            this.tabItemsSeen.Size = new System.Drawing.Size(559, 396);
+            this.tabItemsSeen.Size = new System.Drawing.Size(842, 616);
             this.tabItemsSeen.TabIndex = 12;
             this.tabItemsSeen.Text = "Items Seen";
             this.tabItemsSeen.UseVisualStyleBackColor = true;
@@ -2234,9 +2420,11 @@ namespace SoG_SGreader
             this.grpItemsSeen.Controls.Add(this.btnSelectAllItemsSeen);
             this.grpItemsSeen.Controls.Add(this.btnResetItemsSeen);
             this.grpItemsSeen.Controls.Add(this.btnDeselectAllItemsSeen);
-            this.grpItemsSeen.Location = new System.Drawing.Point(454, 6);
+            this.grpItemsSeen.Location = new System.Drawing.Point(681, 9);
+            this.grpItemsSeen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpItemsSeen.Name = "grpItemsSeen";
-            this.grpItemsSeen.Size = new System.Drawing.Size(97, 379);
+            this.grpItemsSeen.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpItemsSeen.Size = new System.Drawing.Size(146, 583);
             this.grpItemsSeen.TabIndex = 14;
             this.grpItemsSeen.TabStop = false;
             this.grpItemsSeen.Text = "Items Seen";
@@ -2244,17 +2432,19 @@ namespace SoG_SGreader
             // lblItemsSeenNullWarning
             // 
             this.lblItemsSeenNullWarning.AutoSize = true;
-            this.lblItemsSeenNullWarning.Location = new System.Drawing.Point(6, 74);
+            this.lblItemsSeenNullWarning.Location = new System.Drawing.Point(9, 114);
+            this.lblItemsSeenNullWarning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblItemsSeenNullWarning.Name = "lblItemsSeenNullWarning";
-            this.lblItemsSeenNullWarning.Size = new System.Drawing.Size(72, 52);
+            this.lblItemsSeenNullWarning.Size = new System.Drawing.Size(106, 80);
             this.lblItemsSeenNullWarning.TabIndex = 8;
             this.lblItemsSeenNullWarning.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllItemsSeen
             // 
-            this.btnSelectAllItemsSeen.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllItemsSeen.Location = new System.Drawing.Point(9, 29);
+            this.btnSelectAllItemsSeen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSelectAllItemsSeen.Name = "btnSelectAllItemsSeen";
-            this.btnSelectAllItemsSeen.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllItemsSeen.Size = new System.Drawing.Size(130, 35);
             this.btnSelectAllItemsSeen.TabIndex = 3;
             this.btnSelectAllItemsSeen.Text = "Select all";
             this.btnSelectAllItemsSeen.UseVisualStyleBackColor = true;
@@ -2263,9 +2453,10 @@ namespace SoG_SGreader
             // btnResetItemsSeen
             // 
             this.btnResetItemsSeen.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetItemsSeen.Location = new System.Drawing.Point(6, 350);
+            this.btnResetItemsSeen.Location = new System.Drawing.Point(9, 538);
+            this.btnResetItemsSeen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnResetItemsSeen.Name = "btnResetItemsSeen";
-            this.btnResetItemsSeen.Size = new System.Drawing.Size(87, 23);
+            this.btnResetItemsSeen.Size = new System.Drawing.Size(130, 35);
             this.btnResetItemsSeen.TabIndex = 5;
             this.btnResetItemsSeen.Text = "Reset";
             this.btnResetItemsSeen.UseVisualStyleBackColor = true;
@@ -2273,9 +2464,10 @@ namespace SoG_SGreader
             // 
             // btnDeselectAllItemsSeen
             // 
-            this.btnDeselectAllItemsSeen.Location = new System.Drawing.Point(6, 48);
+            this.btnDeselectAllItemsSeen.Location = new System.Drawing.Point(9, 74);
+            this.btnDeselectAllItemsSeen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeselectAllItemsSeen.Name = "btnDeselectAllItemsSeen";
-            this.btnDeselectAllItemsSeen.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllItemsSeen.Size = new System.Drawing.Size(130, 35);
             this.btnDeselectAllItemsSeen.TabIndex = 4;
             this.btnDeselectAllItemsSeen.Text = "Deselect all";
             this.btnDeselectAllItemsSeen.UseVisualStyleBackColor = true;
@@ -2287,18 +2479,20 @@ namespace SoG_SGreader
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstItemsSeen.FormattingEnabled = true;
-            this.cblstItemsSeen.Location = new System.Drawing.Point(6, 6);
+            this.cblstItemsSeen.Location = new System.Drawing.Point(9, 9);
+            this.cblstItemsSeen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cblstItemsSeen.Name = "cblstItemsSeen";
-            this.cblstItemsSeen.Size = new System.Drawing.Size(442, 379);
+            this.cblstItemsSeen.Size = new System.Drawing.Size(661, 579);
             this.cblstItemsSeen.TabIndex = 13;
             // 
             // tabItemsCrafted
             // 
             this.tabItemsCrafted.Controls.Add(this.groupBox1);
             this.tabItemsCrafted.Controls.Add(this.cblstItemsCrafted);
-            this.tabItemsCrafted.Location = new System.Drawing.Point(4, 22);
+            this.tabItemsCrafted.Location = new System.Drawing.Point(4, 29);
+            this.tabItemsCrafted.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabItemsCrafted.Name = "tabItemsCrafted";
-            this.tabItemsCrafted.Size = new System.Drawing.Size(559, 396);
+            this.tabItemsCrafted.Size = new System.Drawing.Size(842, 616);
             this.tabItemsCrafted.TabIndex = 13;
             this.tabItemsCrafted.Text = "Items Crafted";
             this.tabItemsCrafted.UseVisualStyleBackColor = true;
@@ -2311,9 +2505,11 @@ namespace SoG_SGreader
             this.groupBox1.Controls.Add(this.btnSelectAllItemsCrafted);
             this.groupBox1.Controls.Add(this.btnResetItemsCrafted);
             this.groupBox1.Controls.Add(this.btnDeselectAllItemsCrafted);
-            this.groupBox1.Location = new System.Drawing.Point(454, 6);
+            this.groupBox1.Location = new System.Drawing.Point(681, 9);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(97, 379);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(146, 583);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Items Crafted";
@@ -2321,17 +2517,19 @@ namespace SoG_SGreader
             // lblItemsCraftedNullWarning
             // 
             this.lblItemsCraftedNullWarning.AutoSize = true;
-            this.lblItemsCraftedNullWarning.Location = new System.Drawing.Point(6, 74);
+            this.lblItemsCraftedNullWarning.Location = new System.Drawing.Point(9, 114);
+            this.lblItemsCraftedNullWarning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblItemsCraftedNullWarning.Name = "lblItemsCraftedNullWarning";
-            this.lblItemsCraftedNullWarning.Size = new System.Drawing.Size(72, 52);
+            this.lblItemsCraftedNullWarning.Size = new System.Drawing.Size(106, 80);
             this.lblItemsCraftedNullWarning.TabIndex = 8;
             this.lblItemsCraftedNullWarning.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllItemsCrafted
             // 
-            this.btnSelectAllItemsCrafted.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllItemsCrafted.Location = new System.Drawing.Point(9, 29);
+            this.btnSelectAllItemsCrafted.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSelectAllItemsCrafted.Name = "btnSelectAllItemsCrafted";
-            this.btnSelectAllItemsCrafted.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllItemsCrafted.Size = new System.Drawing.Size(130, 35);
             this.btnSelectAllItemsCrafted.TabIndex = 3;
             this.btnSelectAllItemsCrafted.Text = "Select all";
             this.btnSelectAllItemsCrafted.UseVisualStyleBackColor = true;
@@ -2340,9 +2538,10 @@ namespace SoG_SGreader
             // btnResetItemsCrafted
             // 
             this.btnResetItemsCrafted.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetItemsCrafted.Location = new System.Drawing.Point(6, 350);
+            this.btnResetItemsCrafted.Location = new System.Drawing.Point(9, 538);
+            this.btnResetItemsCrafted.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnResetItemsCrafted.Name = "btnResetItemsCrafted";
-            this.btnResetItemsCrafted.Size = new System.Drawing.Size(87, 23);
+            this.btnResetItemsCrafted.Size = new System.Drawing.Size(130, 35);
             this.btnResetItemsCrafted.TabIndex = 5;
             this.btnResetItemsCrafted.Text = "Reset";
             this.btnResetItemsCrafted.UseVisualStyleBackColor = true;
@@ -2350,9 +2549,10 @@ namespace SoG_SGreader
             // 
             // btnDeselectAllItemsCrafted
             // 
-            this.btnDeselectAllItemsCrafted.Location = new System.Drawing.Point(6, 48);
+            this.btnDeselectAllItemsCrafted.Location = new System.Drawing.Point(9, 74);
+            this.btnDeselectAllItemsCrafted.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeselectAllItemsCrafted.Name = "btnDeselectAllItemsCrafted";
-            this.btnDeselectAllItemsCrafted.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllItemsCrafted.Size = new System.Drawing.Size(130, 35);
             this.btnDeselectAllItemsCrafted.TabIndex = 4;
             this.btnDeselectAllItemsCrafted.Text = "Deselect all";
             this.btnDeselectAllItemsCrafted.UseVisualStyleBackColor = true;
@@ -2364,19 +2564,21 @@ namespace SoG_SGreader
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstItemsCrafted.FormattingEnabled = true;
-            this.cblstItemsCrafted.Location = new System.Drawing.Point(6, 6);
+            this.cblstItemsCrafted.Location = new System.Drawing.Point(9, 9);
+            this.cblstItemsCrafted.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cblstItemsCrafted.Name = "cblstItemsCrafted";
-            this.cblstItemsCrafted.Size = new System.Drawing.Size(442, 379);
+            this.cblstItemsCrafted.Size = new System.Drawing.Size(661, 579);
             this.cblstItemsCrafted.TabIndex = 15;
             // 
             // tabQuickslots
             // 
             this.tabQuickslots.Controls.Add(this.label57);
             this.tabQuickslots.Controls.Add(this.grpQuickslots);
-            this.tabQuickslots.Location = new System.Drawing.Point(4, 22);
+            this.tabQuickslots.Location = new System.Drawing.Point(4, 29);
+            this.tabQuickslots.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabQuickslots.Name = "tabQuickslots";
-            this.tabQuickslots.Padding = new System.Windows.Forms.Padding(3);
-            this.tabQuickslots.Size = new System.Drawing.Size(559, 396);
+            this.tabQuickslots.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabQuickslots.Size = new System.Drawing.Size(842, 616);
             this.tabQuickslots.TabIndex = 1;
             this.tabQuickslots.Text = "*Quickslots";
             this.tabQuickslots.UseVisualStyleBackColor = true;
@@ -2386,9 +2588,10 @@ namespace SoG_SGreader
             this.label57.AutoSize = true;
             this.label57.BackColor = System.Drawing.Color.Transparent;
             this.label57.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label57.Location = new System.Drawing.Point(6, 303);
+            this.label57.Location = new System.Drawing.Point(9, 466);
+            this.label57.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(389, 13);
+            this.label57.Size = new System.Drawing.Size(578, 20);
             this.label57.TabIndex = 32;
             this.label57.Text = "* = support for this function was removed due to the risk of losing your save gam" +
     "e";
@@ -2405,9 +2608,11 @@ namespace SoG_SGreader
             this.grpQuickslots.Controls.Add(this.label25);
             this.grpQuickslots.Controls.Add(this.label26);
             this.grpQuickslots.Controls.Add(this.label27);
-            this.grpQuickslots.Location = new System.Drawing.Point(6, 6);
+            this.grpQuickslots.Location = new System.Drawing.Point(9, 9);
+            this.grpQuickslots.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpQuickslots.Name = "grpQuickslots";
-            this.grpQuickslots.Size = new System.Drawing.Size(341, 294);
+            this.grpQuickslots.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpQuickslots.Size = new System.Drawing.Size(512, 452);
             this.grpQuickslots.TabIndex = 29;
             this.grpQuickslots.TabStop = false;
             this.grpQuickslots.Text = "Quckslots";
@@ -2415,90 +2620,100 @@ namespace SoG_SGreader
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(12, 22);
+            this.label22.Location = new System.Drawing.Point(18, 34);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(77, 13);
+            this.label22.Size = new System.Drawing.Size(113, 20);
             this.label22.TabIndex = 26;
             this.label22.Text = "Quckslot 0 (C):";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(12, 265);
+            this.label21.Location = new System.Drawing.Point(18, 408);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(78, 13);
+            this.label21.Size = new System.Drawing.Size(114, 20);
             this.label21.TabIndex = 24;
             this.label21.Text = "Quckslot 9 (R):";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(12, 238);
+            this.label18.Location = new System.Drawing.Point(18, 366);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(77, 13);
+            this.label18.Size = new System.Drawing.Size(113, 20);
             this.label18.TabIndex = 22;
             this.label18.Text = "Quckslot 8 (E):";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(12, 211);
+            this.label19.Location = new System.Drawing.Point(18, 325);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(81, 13);
+            this.label19.Size = new System.Drawing.Size(117, 20);
             this.label19.TabIndex = 21;
             this.label19.Text = "Quckslot 7 (W):";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(12, 184);
+            this.label20.Location = new System.Drawing.Point(18, 283);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(78, 13);
+            this.label20.Size = new System.Drawing.Size(114, 20);
             this.label20.TabIndex = 20;
             this.label20.Text = "Quckslot 6 (Q):";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(12, 157);
+            this.label23.Location = new System.Drawing.Point(18, 242);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(76, 13);
+            this.label23.Size = new System.Drawing.Size(112, 20);
             this.label23.TabIndex = 19;
             this.label23.Text = "Quckslot 5 (F):";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(12, 130);
+            this.label24.Location = new System.Drawing.Point(18, 200);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(77, 13);
+            this.label24.Size = new System.Drawing.Size(113, 20);
             this.label24.TabIndex = 18;
             this.label24.Text = "Quckslot 4 (V):";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(12, 103);
+            this.label25.Location = new System.Drawing.Point(18, 158);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(78, 13);
+            this.label25.Size = new System.Drawing.Size(114, 20);
             this.label25.TabIndex = 17;
             this.label25.Text = "Quckslot 3 (D):";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(12, 76);
+            this.label26.Location = new System.Drawing.Point(18, 117);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(77, 13);
+            this.label26.Size = new System.Drawing.Size(113, 20);
             this.label26.TabIndex = 16;
             this.label26.Text = "Quckslot 2 (S):";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(12, 49);
+            this.label27.Location = new System.Drawing.Point(18, 75);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(77, 13);
+            this.label27.Size = new System.Drawing.Size(113, 20);
             this.label27.TabIndex = 15;
             this.label27.Text = "Quckslot 1 (A):";
             // 
@@ -2506,10 +2721,11 @@ namespace SoG_SGreader
             // 
             this.tabSkills.BackColor = System.Drawing.Color.Transparent;
             this.tabSkills.Controls.Add(this.tabControl1);
-            this.tabSkills.Location = new System.Drawing.Point(4, 22);
+            this.tabSkills.Location = new System.Drawing.Point(4, 29);
+            this.tabSkills.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabSkills.Name = "tabSkills";
-            this.tabSkills.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSkills.Size = new System.Drawing.Size(559, 396);
+            this.tabSkills.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabSkills.Size = new System.Drawing.Size(842, 616);
             this.tabSkills.TabIndex = 7;
             this.tabSkills.Text = "*Skills";
             this.tabSkills.UseVisualStyleBackColor = true;
@@ -2525,11 +2741,12 @@ namespace SoG_SGreader
             this.tabControl1.Controls.Add(this.tabTalentsMagic);
             this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabControl1.ItemSize = new System.Drawing.Size(60, 100);
-            this.tabControl1.Location = new System.Drawing.Point(8, 6);
+            this.tabControl1.Location = new System.Drawing.Point(12, 9);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(545, 365);
+            this.tabControl1.Size = new System.Drawing.Size(818, 562);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 32;
             this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.TabControl1_DrawItem);
@@ -2539,9 +2756,10 @@ namespace SoG_SGreader
             this.tabSkillsMelee.Controls.Add(this.groupBox11);
             this.tabSkillsMelee.Controls.Add(this.groupBox10);
             this.tabSkillsMelee.Location = new System.Drawing.Point(104, 4);
+            this.tabSkillsMelee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabSkillsMelee.Name = "tabSkillsMelee";
-            this.tabSkillsMelee.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSkillsMelee.Size = new System.Drawing.Size(437, 357);
+            this.tabSkillsMelee.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabSkillsMelee.Size = new System.Drawing.Size(710, 554);
             this.tabSkillsMelee.TabIndex = 0;
             this.tabSkillsMelee.Text = "Skills: Melee";
             this.tabSkillsMelee.UseVisualStyleBackColor = true;
@@ -2558,9 +2776,11 @@ namespace SoG_SGreader
             this.groupBox11.Controls.Add(this.sliderSkillMelee2h3);
             this.groupBox11.Controls.Add(this.sliderSkillMelee2h2);
             this.groupBox11.Controls.Add(this.pictureBox9);
-            this.groupBox11.Location = new System.Drawing.Point(6, 170);
+            this.groupBox11.Location = new System.Drawing.Point(9, 262);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(425, 136);
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox11.Size = new System.Drawing.Size(638, 209);
             this.groupBox11.TabIndex = 21;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Two Handed";
@@ -2568,9 +2788,10 @@ namespace SoG_SGreader
             // sliderSkillMelee2h4
             // 
             this.sliderSkillMelee2h4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMelee2h4.Location = new System.Drawing.Point(338, 86);
+            this.sliderSkillMelee2h4.Location = new System.Drawing.Point(507, 132);
+            this.sliderSkillMelee2h4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderSkillMelee2h4.Name = "sliderSkillMelee2h4";
-            this.sliderSkillMelee2h4.Size = new System.Drawing.Size(79, 45);
+            this.sliderSkillMelee2h4.Size = new System.Drawing.Size(118, 69);
             this.sliderSkillMelee2h4.TabIndex = 18;
             this.sliderSkillMelee2h4.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMelee2h4.Value = 10;
@@ -2578,9 +2799,10 @@ namespace SoG_SGreader
             // sliderSkillMelee2h0
             // 
             this.sliderSkillMelee2h0.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMelee2h0.Location = new System.Drawing.Point(10, 86);
+            this.sliderSkillMelee2h0.Location = new System.Drawing.Point(15, 132);
+            this.sliderSkillMelee2h0.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderSkillMelee2h0.Name = "sliderSkillMelee2h0";
-            this.sliderSkillMelee2h0.Size = new System.Drawing.Size(79, 45);
+            this.sliderSkillMelee2h0.Size = new System.Drawing.Size(118, 69);
             this.sliderSkillMelee2h0.TabIndex = 10;
             this.sliderSkillMelee2h0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMelee2h0.Value = 10;
@@ -2588,9 +2810,10 @@ namespace SoG_SGreader
             // pictureBox7
             // 
             this.pictureBox7.Image = global::SoG_SGreader.Properties.Resources.icon_berserk;
-            this.pictureBox7.Location = new System.Drawing.Point(355, 34);
+            this.pictureBox7.Location = new System.Drawing.Point(532, 52);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox7.Size = new System.Drawing.Size(69, 71);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 19;
             this.pictureBox7.TabStop = false;
@@ -2598,9 +2821,10 @@ namespace SoG_SGreader
             // pictureBox11
             // 
             this.pictureBox11.Image = global::SoG_SGreader.Properties.Resources.icon_overhead;
-            this.pictureBox11.Location = new System.Drawing.Point(27, 34);
+            this.pictureBox11.Location = new System.Drawing.Point(40, 52);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox11.Size = new System.Drawing.Size(69, 71);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 11;
             this.pictureBox11.TabStop = false;
@@ -2608,9 +2832,10 @@ namespace SoG_SGreader
             // sliderSkillMelee2h1
             // 
             this.sliderSkillMelee2h1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMelee2h1.Location = new System.Drawing.Point(95, 86);
+            this.sliderSkillMelee2h1.Location = new System.Drawing.Point(142, 132);
+            this.sliderSkillMelee2h1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderSkillMelee2h1.Name = "sliderSkillMelee2h1";
-            this.sliderSkillMelee2h1.Size = new System.Drawing.Size(79, 45);
+            this.sliderSkillMelee2h1.Size = new System.Drawing.Size(118, 69);
             this.sliderSkillMelee2h1.TabIndex = 12;
             this.sliderSkillMelee2h1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMelee2h1.Value = 10;
@@ -2618,9 +2843,10 @@ namespace SoG_SGreader
             // pictureBox8
             // 
             this.pictureBox8.Image = global::SoG_SGreader.Properties.Resources.icon_2hsmash;
-            this.pictureBox8.Location = new System.Drawing.Point(270, 34);
+            this.pictureBox8.Location = new System.Drawing.Point(405, 52);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox8.Size = new System.Drawing.Size(69, 71);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 17;
             this.pictureBox8.TabStop = false;
@@ -2628,9 +2854,10 @@ namespace SoG_SGreader
             // pictureBox10
             // 
             this.pictureBox10.Image = global::SoG_SGreader.Properties.Resources.icon_swirl_clover;
-            this.pictureBox10.Location = new System.Drawing.Point(112, 34);
+            this.pictureBox10.Location = new System.Drawing.Point(168, 52);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox10.Size = new System.Drawing.Size(69, 71);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 13;
             this.pictureBox10.TabStop = false;
@@ -2638,9 +2865,10 @@ namespace SoG_SGreader
             // sliderSkillMelee2h3
             // 
             this.sliderSkillMelee2h3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMelee2h3.Location = new System.Drawing.Point(253, 86);
+            this.sliderSkillMelee2h3.Location = new System.Drawing.Point(380, 132);
+            this.sliderSkillMelee2h3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderSkillMelee2h3.Name = "sliderSkillMelee2h3";
-            this.sliderSkillMelee2h3.Size = new System.Drawing.Size(79, 45);
+            this.sliderSkillMelee2h3.Size = new System.Drawing.Size(118, 69);
             this.sliderSkillMelee2h3.TabIndex = 16;
             this.sliderSkillMelee2h3.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMelee2h3.Value = 10;
@@ -2648,9 +2876,10 @@ namespace SoG_SGreader
             // sliderSkillMelee2h2
             // 
             this.sliderSkillMelee2h2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMelee2h2.Location = new System.Drawing.Point(174, 86);
+            this.sliderSkillMelee2h2.Location = new System.Drawing.Point(261, 132);
+            this.sliderSkillMelee2h2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderSkillMelee2h2.Name = "sliderSkillMelee2h2";
-            this.sliderSkillMelee2h2.Size = new System.Drawing.Size(79, 45);
+            this.sliderSkillMelee2h2.Size = new System.Drawing.Size(118, 69);
             this.sliderSkillMelee2h2.TabIndex = 14;
             this.sliderSkillMelee2h2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMelee2h2.Value = 10;
@@ -2658,18 +2887,19 @@ namespace SoG_SGreader
             // pictureBox9
             // 
             this.pictureBox9.Image = global::SoG_SGreader.Properties.Resources.icon_2hthrow;
-            this.pictureBox9.Location = new System.Drawing.Point(191, 34);
+            this.pictureBox9.Location = new System.Drawing.Point(286, 52);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox9.Size = new System.Drawing.Size(69, 71);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 15;
             this.pictureBox9.TabStop = false;
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.numSkillMelee1h0);
             this.groupBox10.Controls.Add(this.label56);
             this.groupBox10.Controls.Add(this.label38);
-            this.groupBox10.Controls.Add(this.sliderSkillMelee1h0);
             this.groupBox10.Controls.Add(this.pictureBox1);
             this.groupBox10.Controls.Add(this.sliderSkillMelee1h1);
             this.groupBox10.Controls.Add(this.pictureBox2);
@@ -2679,9 +2909,11 @@ namespace SoG_SGreader
             this.groupBox10.Controls.Add(this.pictureBox5);
             this.groupBox10.Controls.Add(this.sliderSkillMelee1h4);
             this.groupBox10.Controls.Add(this.pictureBox6);
-            this.groupBox10.Location = new System.Drawing.Point(6, 6);
+            this.groupBox10.Location = new System.Drawing.Point(9, 9);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(425, 158);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox10.Size = new System.Drawing.Size(638, 243);
             this.groupBox10.TabIndex = 20;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "One Handed";
@@ -2689,38 +2921,30 @@ namespace SoG_SGreader
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(24, 20);
+            this.label56.Location = new System.Drawing.Point(36, 31);
+            this.label56.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(160, 13);
+            this.label56.Size = new System.Drawing.Size(231, 20);
             this.label56.TabIndex = 11;
             this.label56.Text = "*These values will not be saved.";
             // 
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(24, 120);
+            this.label38.Location = new System.Drawing.Point(36, 185);
+            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(45, 13);
+            this.label38.Size = new System.Drawing.Size(63, 20);
             this.label38.TabIndex = 10;
             this.label38.Text = "Level: 0";
-            // 
-            // sliderSkillMelee1h0
-            // 
-            this.sliderSkillMelee1h0.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMelee1h0.Location = new System.Drawing.Point(10, 88);
-            this.sliderSkillMelee1h0.Name = "sliderSkillMelee1h0";
-            this.sliderSkillMelee1h0.Size = new System.Drawing.Size(79, 45);
-            this.sliderSkillMelee1h0.TabIndex = 0;
-            this.sliderSkillMelee1h0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
-            this.Tooltips.SetToolTip(this.sliderSkillMelee1h0, "{sliderSkillMelee1h0.Value}");
-            this.sliderSkillMelee1h0.Value = 10;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SoG_SGreader.Properties.Resources.icon_stinger_clover;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 36);
+            this.pictureBox1.Location = new System.Drawing.Point(40, 55);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox1.Size = new System.Drawing.Size(69, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -2728,9 +2952,10 @@ namespace SoG_SGreader
             // sliderSkillMelee1h1
             // 
             this.sliderSkillMelee1h1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMelee1h1.Location = new System.Drawing.Point(95, 88);
+            this.sliderSkillMelee1h1.Location = new System.Drawing.Point(142, 135);
+            this.sliderSkillMelee1h1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderSkillMelee1h1.Name = "sliderSkillMelee1h1";
-            this.sliderSkillMelee1h1.Size = new System.Drawing.Size(79, 45);
+            this.sliderSkillMelee1h1.Size = new System.Drawing.Size(118, 69);
             this.sliderSkillMelee1h1.TabIndex = 2;
             this.sliderSkillMelee1h1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMelee1h1.Value = 10;
@@ -2738,9 +2963,10 @@ namespace SoG_SGreader
             // pictureBox2
             // 
             this.pictureBox2.Image = global::SoG_SGreader.Properties.Resources.icon_millionstabs;
-            this.pictureBox2.Location = new System.Drawing.Point(112, 36);
+            this.pictureBox2.Location = new System.Drawing.Point(168, 55);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox2.Size = new System.Drawing.Size(69, 71);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -2748,9 +2974,10 @@ namespace SoG_SGreader
             // sliderSkillMelee1h2
             // 
             this.sliderSkillMelee1h2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMelee1h2.Location = new System.Drawing.Point(174, 88);
+            this.sliderSkillMelee1h2.Location = new System.Drawing.Point(261, 135);
+            this.sliderSkillMelee1h2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderSkillMelee1h2.Name = "sliderSkillMelee1h2";
-            this.sliderSkillMelee1h2.Size = new System.Drawing.Size(79, 45);
+            this.sliderSkillMelee1h2.Size = new System.Drawing.Size(118, 69);
             this.sliderSkillMelee1h2.TabIndex = 4;
             this.sliderSkillMelee1h2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMelee1h2.Value = 10;
@@ -2758,9 +2985,10 @@ namespace SoG_SGreader
             // pictureBox4
             // 
             this.pictureBox4.Image = global::SoG_SGreader.Properties.Resources.icon_soulstrike;
-            this.pictureBox4.Location = new System.Drawing.Point(191, 36);
+            this.pictureBox4.Location = new System.Drawing.Point(286, 55);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox4.Size = new System.Drawing.Size(69, 71);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
@@ -2768,9 +2996,10 @@ namespace SoG_SGreader
             // sliderSkillMelee1h3
             // 
             this.sliderSkillMelee1h3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMelee1h3.Location = new System.Drawing.Point(253, 88);
+            this.sliderSkillMelee1h3.Location = new System.Drawing.Point(380, 135);
+            this.sliderSkillMelee1h3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderSkillMelee1h3.Name = "sliderSkillMelee1h3";
-            this.sliderSkillMelee1h3.Size = new System.Drawing.Size(79, 45);
+            this.sliderSkillMelee1h3.Size = new System.Drawing.Size(118, 69);
             this.sliderSkillMelee1h3.TabIndex = 6;
             this.sliderSkillMelee1h3.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMelee1h3.Value = 10;
@@ -2778,9 +3007,10 @@ namespace SoG_SGreader
             // pictureBox5
             // 
             this.pictureBox5.Image = global::SoG_SGreader.Properties.Resources.icon_shadowclone;
-            this.pictureBox5.Location = new System.Drawing.Point(270, 36);
+            this.pictureBox5.Location = new System.Drawing.Point(405, 55);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox5.Size = new System.Drawing.Size(69, 71);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 7;
             this.pictureBox5.TabStop = false;
@@ -2788,9 +3018,10 @@ namespace SoG_SGreader
             // sliderSkillMelee1h4
             // 
             this.sliderSkillMelee1h4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMelee1h4.Location = new System.Drawing.Point(338, 88);
+            this.sliderSkillMelee1h4.Location = new System.Drawing.Point(507, 135);
+            this.sliderSkillMelee1h4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderSkillMelee1h4.Name = "sliderSkillMelee1h4";
-            this.sliderSkillMelee1h4.Size = new System.Drawing.Size(79, 45);
+            this.sliderSkillMelee1h4.Size = new System.Drawing.Size(118, 69);
             this.sliderSkillMelee1h4.TabIndex = 8;
             this.sliderSkillMelee1h4.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMelee1h4.Value = 10;
@@ -2798,9 +3029,10 @@ namespace SoG_SGreader
             // pictureBox6
             // 
             this.pictureBox6.Image = global::SoG_SGreader.Properties.Resources.icon_dodgingstrike;
-            this.pictureBox6.Location = new System.Drawing.Point(355, 36);
+            this.pictureBox6.Location = new System.Drawing.Point(532, 55);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox6.Size = new System.Drawing.Size(69, 71);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 9;
             this.pictureBox6.TabStop = false;
@@ -2812,9 +3044,10 @@ namespace SoG_SGreader
             this.tabSkillsMagic.Controls.Add(this.groupBox13);
             this.tabSkillsMagic.Controls.Add(this.groupBox12);
             this.tabSkillsMagic.Location = new System.Drawing.Point(104, 4);
+            this.tabSkillsMagic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabSkillsMagic.Name = "tabSkillsMagic";
-            this.tabSkillsMagic.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSkillsMagic.Size = new System.Drawing.Size(437, 357);
+            this.tabSkillsMagic.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabSkillsMagic.Size = new System.Drawing.Size(710, 554);
             this.tabSkillsMagic.TabIndex = 1;
             this.tabSkillsMagic.Text = "Skills: Magic";
             this.tabSkillsMagic.UseVisualStyleBackColor = true;
@@ -2827,9 +3060,11 @@ namespace SoG_SGreader
             this.groupBox15.Controls.Add(this.pictureBox22);
             this.groupBox15.Controls.Add(this.sliderSkillMagicA0);
             this.groupBox15.Controls.Add(this.pictureBox23);
-            this.groupBox15.Location = new System.Drawing.Point(221, 170);
+            this.groupBox15.Location = new System.Drawing.Point(332, 262);
+            this.groupBox15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(209, 158);
+            this.groupBox15.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox15.Size = new System.Drawing.Size(314, 243);
             this.groupBox15.TabIndex = 22;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Air Magic";
@@ -2837,9 +3072,10 @@ namespace SoG_SGreader
             // sliderSkillMagicA2
             // 
             this.sliderSkillMagicA2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMagicA2.Location = new System.Drawing.Point(136, 88);
+            this.sliderSkillMagicA2.Location = new System.Drawing.Point(204, 135);
+            this.sliderSkillMagicA2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderSkillMagicA2.Name = "sliderSkillMagicA2";
-            this.sliderSkillMagicA2.Size = new System.Drawing.Size(67, 45);
+            this.sliderSkillMagicA2.Size = new System.Drawing.Size(100, 69);
             this.sliderSkillMagicA2.TabIndex = 10;
             this.sliderSkillMagicA2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMagicA2.Value = 10;
@@ -2847,9 +3083,10 @@ namespace SoG_SGreader
             // pictureBox21
             // 
             this.pictureBox21.Image = global::SoG_SGreader.Properties.Resources.icon_statictouch;
-            this.pictureBox21.Location = new System.Drawing.Point(146, 36);
+            this.pictureBox21.Location = new System.Drawing.Point(219, 55);
+            this.pictureBox21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox21.Size = new System.Drawing.Size(69, 71);
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox21.TabIndex = 11;
             this.pictureBox21.TabStop = false;
@@ -2857,9 +3094,10 @@ namespace SoG_SGreader
             // sliderSkillMagicA1
             // 
             this.sliderSkillMagicA1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMagicA1.Location = new System.Drawing.Point(73, 88);
+            this.sliderSkillMagicA1.Location = new System.Drawing.Point(110, 135);
+            this.sliderSkillMagicA1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderSkillMagicA1.Name = "sliderSkillMagicA1";
-            this.sliderSkillMagicA1.Size = new System.Drawing.Size(67, 45);
+            this.sliderSkillMagicA1.Size = new System.Drawing.Size(100, 69);
             this.sliderSkillMagicA1.TabIndex = 8;
             this.sliderSkillMagicA1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMagicA1.Value = 10;
@@ -2867,9 +3105,10 @@ namespace SoG_SGreader
             // pictureBox22
             // 
             this.pictureBox22.Image = global::SoG_SGreader.Properties.Resources.icon_summoncloud;
-            this.pictureBox22.Location = new System.Drawing.Point(83, 36);
+            this.pictureBox22.Location = new System.Drawing.Point(124, 55);
+            this.pictureBox22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox22.Size = new System.Drawing.Size(69, 71);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox22.TabIndex = 9;
             this.pictureBox22.TabStop = false;
@@ -2877,9 +3116,10 @@ namespace SoG_SGreader
             // sliderSkillMagicA0
             // 
             this.sliderSkillMagicA0.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMagicA0.Location = new System.Drawing.Point(9, 88);
+            this.sliderSkillMagicA0.Location = new System.Drawing.Point(14, 135);
+            this.sliderSkillMagicA0.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderSkillMagicA0.Name = "sliderSkillMagicA0";
-            this.sliderSkillMagicA0.Size = new System.Drawing.Size(67, 45);
+            this.sliderSkillMagicA0.Size = new System.Drawing.Size(100, 69);
             this.sliderSkillMagicA0.TabIndex = 6;
             this.sliderSkillMagicA0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMagicA0.Value = 10;
@@ -2887,9 +3127,10 @@ namespace SoG_SGreader
             // pictureBox23
             // 
             this.pictureBox23.Image = global::SoG_SGreader.Properties.Resources.icon_chainlightning;
-            this.pictureBox23.Location = new System.Drawing.Point(19, 36);
+            this.pictureBox23.Location = new System.Drawing.Point(28, 55);
+            this.pictureBox23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox23.Size = new System.Drawing.Size(69, 71);
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox23.TabIndex = 7;
             this.pictureBox23.TabStop = false;
@@ -2902,9 +3143,11 @@ namespace SoG_SGreader
             this.groupBox14.Controls.Add(this.pictureBox19);
             this.groupBox14.Controls.Add(this.sliderSkillMagicE0);
             this.groupBox14.Controls.Add(this.pictureBox20);
-            this.groupBox14.Location = new System.Drawing.Point(6, 170);
+            this.groupBox14.Location = new System.Drawing.Point(9, 262);
+            this.groupBox14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(209, 158);
+            this.groupBox14.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox14.Size = new System.Drawing.Size(314, 243);
             this.groupBox14.TabIndex = 22;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Earth Magic";
@@ -2912,9 +3155,10 @@ namespace SoG_SGreader
             // sliderSkillMagicE2
             // 
             this.sliderSkillMagicE2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMagicE2.Location = new System.Drawing.Point(136, 88);
+            this.sliderSkillMagicE2.Location = new System.Drawing.Point(204, 135);
+            this.sliderSkillMagicE2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderSkillMagicE2.Name = "sliderSkillMagicE2";
-            this.sliderSkillMagicE2.Size = new System.Drawing.Size(67, 45);
+            this.sliderSkillMagicE2.Size = new System.Drawing.Size(100, 69);
             this.sliderSkillMagicE2.TabIndex = 10;
             this.sliderSkillMagicE2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMagicE2.Value = 10;
@@ -2922,9 +3166,10 @@ namespace SoG_SGreader
             // pictureBox18
             // 
             this.pictureBox18.Image = global::SoG_SGreader.Properties.Resources.icon_swarm;
-            this.pictureBox18.Location = new System.Drawing.Point(146, 36);
+            this.pictureBox18.Location = new System.Drawing.Point(219, 55);
+            this.pictureBox18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox18.Size = new System.Drawing.Size(69, 71);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox18.TabIndex = 11;
             this.pictureBox18.TabStop = false;
@@ -2932,9 +3177,10 @@ namespace SoG_SGreader
             // sliderSkillMagicE1
             // 
             this.sliderSkillMagicE1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMagicE1.Location = new System.Drawing.Point(73, 88);
+            this.sliderSkillMagicE1.Location = new System.Drawing.Point(110, 135);
+            this.sliderSkillMagicE1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderSkillMagicE1.Name = "sliderSkillMagicE1";
-            this.sliderSkillMagicE1.Size = new System.Drawing.Size(67, 45);
+            this.sliderSkillMagicE1.Size = new System.Drawing.Size(100, 69);
             this.sliderSkillMagicE1.TabIndex = 8;
             this.sliderSkillMagicE1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMagicE1.Value = 10;
@@ -2942,9 +3188,10 @@ namespace SoG_SGreader
             // pictureBox19
             // 
             this.pictureBox19.Image = global::SoG_SGreader.Properties.Resources.icon_plantsummon;
-            this.pictureBox19.Location = new System.Drawing.Point(83, 36);
+            this.pictureBox19.Location = new System.Drawing.Point(124, 55);
+            this.pictureBox19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox19.Size = new System.Drawing.Size(69, 71);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox19.TabIndex = 9;
             this.pictureBox19.TabStop = false;
@@ -2952,9 +3199,10 @@ namespace SoG_SGreader
             // sliderSkillMagicE0
             // 
             this.sliderSkillMagicE0.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMagicE0.Location = new System.Drawing.Point(9, 88);
+            this.sliderSkillMagicE0.Location = new System.Drawing.Point(14, 135);
+            this.sliderSkillMagicE0.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderSkillMagicE0.Name = "sliderSkillMagicE0";
-            this.sliderSkillMagicE0.Size = new System.Drawing.Size(67, 45);
+            this.sliderSkillMagicE0.Size = new System.Drawing.Size(100, 69);
             this.sliderSkillMagicE0.TabIndex = 6;
             this.sliderSkillMagicE0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMagicE0.Value = 10;
@@ -2962,9 +3210,10 @@ namespace SoG_SGreader
             // pictureBox20
             // 
             this.pictureBox20.Image = global::SoG_SGreader.Properties.Resources.icon_earthspike;
-            this.pictureBox20.Location = new System.Drawing.Point(19, 36);
+            this.pictureBox20.Location = new System.Drawing.Point(28, 55);
+            this.pictureBox20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox20.Size = new System.Drawing.Size(69, 71);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox20.TabIndex = 7;
             this.pictureBox20.TabStop = false;
@@ -2977,9 +3226,11 @@ namespace SoG_SGreader
             this.groupBox13.Controls.Add(this.pictureBox16);
             this.groupBox13.Controls.Add(this.sliderSkillMagicI0);
             this.groupBox13.Controls.Add(this.pictureBox17);
-            this.groupBox13.Location = new System.Drawing.Point(221, 6);
+            this.groupBox13.Location = new System.Drawing.Point(332, 9);
+            this.groupBox13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(209, 158);
+            this.groupBox13.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox13.Size = new System.Drawing.Size(314, 243);
             this.groupBox13.TabIndex = 22;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Ice Magic";
@@ -2987,9 +3238,10 @@ namespace SoG_SGreader
             // sliderSkillMagicI2
             // 
             this.sliderSkillMagicI2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMagicI2.Location = new System.Drawing.Point(136, 88);
+            this.sliderSkillMagicI2.Location = new System.Drawing.Point(204, 135);
+            this.sliderSkillMagicI2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderSkillMagicI2.Name = "sliderSkillMagicI2";
-            this.sliderSkillMagicI2.Size = new System.Drawing.Size(67, 45);
+            this.sliderSkillMagicI2.Size = new System.Drawing.Size(100, 69);
             this.sliderSkillMagicI2.TabIndex = 10;
             this.sliderSkillMagicI2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMagicI2.Value = 10;
@@ -2997,9 +3249,10 @@ namespace SoG_SGreader
             // pictureBox15
             // 
             this.pictureBox15.Image = global::SoG_SGreader.Properties.Resources.icon_frosty;
-            this.pictureBox15.Location = new System.Drawing.Point(146, 36);
+            this.pictureBox15.Location = new System.Drawing.Point(219, 55);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox15.Size = new System.Drawing.Size(69, 71);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox15.TabIndex = 11;
             this.pictureBox15.TabStop = false;
@@ -3007,9 +3260,10 @@ namespace SoG_SGreader
             // sliderSkillMagicI1
             // 
             this.sliderSkillMagicI1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMagicI1.Location = new System.Drawing.Point(73, 88);
+            this.sliderSkillMagicI1.Location = new System.Drawing.Point(110, 135);
+            this.sliderSkillMagicI1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderSkillMagicI1.Name = "sliderSkillMagicI1";
-            this.sliderSkillMagicI1.Size = new System.Drawing.Size(67, 45);
+            this.sliderSkillMagicI1.Size = new System.Drawing.Size(100, 69);
             this.sliderSkillMagicI1.TabIndex = 8;
             this.sliderSkillMagicI1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMagicI1.Value = 10;
@@ -3017,9 +3271,10 @@ namespace SoG_SGreader
             // pictureBox16
             // 
             this.pictureBox16.Image = global::SoG_SGreader.Properties.Resources.icon_frostnova_clover;
-            this.pictureBox16.Location = new System.Drawing.Point(83, 36);
+            this.pictureBox16.Location = new System.Drawing.Point(124, 55);
+            this.pictureBox16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox16.Size = new System.Drawing.Size(69, 71);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox16.TabIndex = 9;
             this.pictureBox16.TabStop = false;
@@ -3027,9 +3282,10 @@ namespace SoG_SGreader
             // sliderSkillMagicI0
             // 
             this.sliderSkillMagicI0.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMagicI0.Location = new System.Drawing.Point(9, 88);
+            this.sliderSkillMagicI0.Location = new System.Drawing.Point(14, 135);
+            this.sliderSkillMagicI0.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderSkillMagicI0.Name = "sliderSkillMagicI0";
-            this.sliderSkillMagicI0.Size = new System.Drawing.Size(67, 45);
+            this.sliderSkillMagicI0.Size = new System.Drawing.Size(100, 69);
             this.sliderSkillMagicI0.TabIndex = 6;
             this.sliderSkillMagicI0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMagicI0.Value = 10;
@@ -3037,9 +3293,10 @@ namespace SoG_SGreader
             // pictureBox17
             // 
             this.pictureBox17.Image = global::SoG_SGreader.Properties.Resources.icon_icespikes;
-            this.pictureBox17.Location = new System.Drawing.Point(19, 36);
+            this.pictureBox17.Location = new System.Drawing.Point(28, 55);
+            this.pictureBox17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox17.Size = new System.Drawing.Size(69, 71);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox17.TabIndex = 7;
             this.pictureBox17.TabStop = false;
@@ -3052,9 +3309,11 @@ namespace SoG_SGreader
             this.groupBox12.Controls.Add(this.pictureBox13);
             this.groupBox12.Controls.Add(this.sliderSkillMagicF0);
             this.groupBox12.Controls.Add(this.pictureBox12);
-            this.groupBox12.Location = new System.Drawing.Point(6, 6);
+            this.groupBox12.Location = new System.Drawing.Point(9, 9);
+            this.groupBox12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(209, 158);
+            this.groupBox12.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox12.Size = new System.Drawing.Size(314, 243);
             this.groupBox12.TabIndex = 21;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Fire Magic";
@@ -3062,9 +3321,10 @@ namespace SoG_SGreader
             // sliderSkillMagicF2
             // 
             this.sliderSkillMagicF2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMagicF2.Location = new System.Drawing.Point(136, 88);
+            this.sliderSkillMagicF2.Location = new System.Drawing.Point(204, 135);
+            this.sliderSkillMagicF2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderSkillMagicF2.Name = "sliderSkillMagicF2";
-            this.sliderSkillMagicF2.Size = new System.Drawing.Size(67, 45);
+            this.sliderSkillMagicF2.Size = new System.Drawing.Size(100, 69);
             this.sliderSkillMagicF2.TabIndex = 10;
             this.sliderSkillMagicF2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMagicF2.Value = 10;
@@ -3072,9 +3332,10 @@ namespace SoG_SGreader
             // pictureBox14
             // 
             this.pictureBox14.Image = global::SoG_SGreader.Properties.Resources.icon_flamethrower;
-            this.pictureBox14.Location = new System.Drawing.Point(146, 36);
+            this.pictureBox14.Location = new System.Drawing.Point(219, 55);
+            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox14.Size = new System.Drawing.Size(69, 71);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 11;
             this.pictureBox14.TabStop = false;
@@ -3082,9 +3343,10 @@ namespace SoG_SGreader
             // sliderSkillMagicF1
             // 
             this.sliderSkillMagicF1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMagicF1.Location = new System.Drawing.Point(73, 88);
+            this.sliderSkillMagicF1.Location = new System.Drawing.Point(110, 135);
+            this.sliderSkillMagicF1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderSkillMagicF1.Name = "sliderSkillMagicF1";
-            this.sliderSkillMagicF1.Size = new System.Drawing.Size(67, 45);
+            this.sliderSkillMagicF1.Size = new System.Drawing.Size(100, 69);
             this.sliderSkillMagicF1.TabIndex = 8;
             this.sliderSkillMagicF1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMagicF1.Value = 10;
@@ -3092,9 +3354,10 @@ namespace SoG_SGreader
             // pictureBox13
             // 
             this.pictureBox13.Image = global::SoG_SGreader.Properties.Resources.icon_meteor;
-            this.pictureBox13.Location = new System.Drawing.Point(83, 36);
+            this.pictureBox13.Location = new System.Drawing.Point(124, 55);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox13.Size = new System.Drawing.Size(69, 71);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 9;
             this.pictureBox13.TabStop = false;
@@ -3102,9 +3365,10 @@ namespace SoG_SGreader
             // sliderSkillMagicF0
             // 
             this.sliderSkillMagicF0.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderSkillMagicF0.Location = new System.Drawing.Point(9, 88);
+            this.sliderSkillMagicF0.Location = new System.Drawing.Point(14, 135);
+            this.sliderSkillMagicF0.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderSkillMagicF0.Name = "sliderSkillMagicF0";
-            this.sliderSkillMagicF0.Size = new System.Drawing.Size(67, 45);
+            this.sliderSkillMagicF0.Size = new System.Drawing.Size(100, 69);
             this.sliderSkillMagicF0.TabIndex = 6;
             this.sliderSkillMagicF0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderSkillMagicF0.Value = 10;
@@ -3112,9 +3376,10 @@ namespace SoG_SGreader
             // pictureBox12
             // 
             this.pictureBox12.Image = global::SoG_SGreader.Properties.Resources.icon_fireball;
-            this.pictureBox12.Location = new System.Drawing.Point(19, 36);
+            this.pictureBox12.Location = new System.Drawing.Point(28, 55);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox12.Size = new System.Drawing.Size(69, 71);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 7;
             this.pictureBox12.TabStop = false;
@@ -3125,9 +3390,10 @@ namespace SoG_SGreader
             this.tabSkillsUtility.Controls.Add(this.groupBox17);
             this.tabSkillsUtility.Controls.Add(this.groupBox16);
             this.tabSkillsUtility.Location = new System.Drawing.Point(104, 4);
+            this.tabSkillsUtility.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabSkillsUtility.Name = "tabSkillsUtility";
-            this.tabSkillsUtility.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSkillsUtility.Size = new System.Drawing.Size(437, 357);
+            this.tabSkillsUtility.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabSkillsUtility.Size = new System.Drawing.Size(710, 554);
             this.tabSkillsUtility.TabIndex = 2;
             this.tabSkillsUtility.Text = "Skills: Utility";
             this.tabSkillsUtility.UseVisualStyleBackColor = true;
@@ -3140,9 +3406,11 @@ namespace SoG_SGreader
             this.groupBox18.Controls.Add(this.pictureBox31);
             this.groupBox18.Controls.Add(this.sliderUtilityE2);
             this.groupBox18.Controls.Add(this.pictureBox32);
-            this.groupBox18.Location = new System.Drawing.Point(6, 253);
+            this.groupBox18.Location = new System.Drawing.Point(9, 389);
+            this.groupBox18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Size = new System.Drawing.Size(425, 121);
+            this.groupBox18.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox18.Size = new System.Drawing.Size(638, 186);
             this.groupBox18.TabIndex = 22;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "Enhancing";
@@ -3150,10 +3418,11 @@ namespace SoG_SGreader
             // sliderUtilityE0
             // 
             this.sliderUtilityE0.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderUtilityE0.Location = new System.Drawing.Point(90, 68);
+            this.sliderUtilityE0.Location = new System.Drawing.Point(135, 105);
+            this.sliderUtilityE0.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderUtilityE0.Maximum = 3;
             this.sliderUtilityE0.Name = "sliderUtilityE0";
-            this.sliderUtilityE0.Size = new System.Drawing.Size(79, 45);
+            this.sliderUtilityE0.Size = new System.Drawing.Size(118, 69);
             this.sliderUtilityE0.TabIndex = 0;
             this.sliderUtilityE0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderUtilityE0.Value = 3;
@@ -3161,9 +3430,10 @@ namespace SoG_SGreader
             // pictureBox30
             // 
             this.pictureBox30.Image = global::SoG_SGreader.Properties.Resources.icon_dmgup;
-            this.pictureBox30.Location = new System.Drawing.Point(107, 19);
+            this.pictureBox30.Location = new System.Drawing.Point(160, 29);
+            this.pictureBox30.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox30.Name = "pictureBox30";
-            this.pictureBox30.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox30.Size = new System.Drawing.Size(69, 71);
             this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox30.TabIndex = 1;
             this.pictureBox30.TabStop = false;
@@ -3171,10 +3441,11 @@ namespace SoG_SGreader
             // sliderUtilityE1
             // 
             this.sliderUtilityE1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderUtilityE1.Location = new System.Drawing.Point(175, 68);
+            this.sliderUtilityE1.Location = new System.Drawing.Point(262, 105);
+            this.sliderUtilityE1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderUtilityE1.Maximum = 3;
             this.sliderUtilityE1.Name = "sliderUtilityE1";
-            this.sliderUtilityE1.Size = new System.Drawing.Size(79, 45);
+            this.sliderUtilityE1.Size = new System.Drawing.Size(118, 69);
             this.sliderUtilityE1.TabIndex = 2;
             this.sliderUtilityE1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderUtilityE1.Value = 3;
@@ -3182,9 +3453,10 @@ namespace SoG_SGreader
             // pictureBox31
             // 
             this.pictureBox31.Image = global::SoG_SGreader.Properties.Resources.icon_speedup;
-            this.pictureBox31.Location = new System.Drawing.Point(192, 19);
+            this.pictureBox31.Location = new System.Drawing.Point(288, 29);
+            this.pictureBox31.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox31.Name = "pictureBox31";
-            this.pictureBox31.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox31.Size = new System.Drawing.Size(69, 71);
             this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox31.TabIndex = 3;
             this.pictureBox31.TabStop = false;
@@ -3192,10 +3464,11 @@ namespace SoG_SGreader
             // sliderUtilityE2
             // 
             this.sliderUtilityE2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderUtilityE2.Location = new System.Drawing.Point(254, 68);
+            this.sliderUtilityE2.Location = new System.Drawing.Point(381, 105);
+            this.sliderUtilityE2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderUtilityE2.Maximum = 3;
             this.sliderUtilityE2.Name = "sliderUtilityE2";
-            this.sliderUtilityE2.Size = new System.Drawing.Size(79, 45);
+            this.sliderUtilityE2.Size = new System.Drawing.Size(118, 69);
             this.sliderUtilityE2.TabIndex = 4;
             this.sliderUtilityE2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderUtilityE2.Value = 3;
@@ -3203,9 +3476,10 @@ namespace SoG_SGreader
             // pictureBox32
             // 
             this.pictureBox32.Image = global::SoG_SGreader.Properties.Resources.icon_protect_clover;
-            this.pictureBox32.Location = new System.Drawing.Point(271, 19);
+            this.pictureBox32.Location = new System.Drawing.Point(406, 29);
+            this.pictureBox32.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox32.Name = "pictureBox32";
-            this.pictureBox32.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox32.Size = new System.Drawing.Size(69, 71);
             this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox32.TabIndex = 5;
             this.pictureBox32.TabStop = false;
@@ -3218,9 +3492,11 @@ namespace SoG_SGreader
             this.groupBox17.Controls.Add(this.pictureBox28);
             this.groupBox17.Controls.Add(this.sliderUtilityD2);
             this.groupBox17.Controls.Add(this.pictureBox29);
-            this.groupBox17.Location = new System.Drawing.Point(6, 127);
+            this.groupBox17.Location = new System.Drawing.Point(9, 195);
+            this.groupBox17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(425, 121);
+            this.groupBox17.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox17.Size = new System.Drawing.Size(638, 186);
             this.groupBox17.TabIndex = 22;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Defensive";
@@ -3228,10 +3504,11 @@ namespace SoG_SGreader
             // sliderUtilityD0
             // 
             this.sliderUtilityD0.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderUtilityD0.Location = new System.Drawing.Point(90, 68);
+            this.sliderUtilityD0.Location = new System.Drawing.Point(135, 105);
+            this.sliderUtilityD0.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderUtilityD0.Maximum = 3;
             this.sliderUtilityD0.Name = "sliderUtilityD0";
-            this.sliderUtilityD0.Size = new System.Drawing.Size(79, 45);
+            this.sliderUtilityD0.Size = new System.Drawing.Size(118, 69);
             this.sliderUtilityD0.TabIndex = 0;
             this.sliderUtilityD0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderUtilityD0.Value = 3;
@@ -3239,9 +3516,10 @@ namespace SoG_SGreader
             // pictureBox27
             // 
             this.pictureBox27.Image = global::SoG_SGreader.Properties.Resources.icon_utility_blink;
-            this.pictureBox27.Location = new System.Drawing.Point(107, 19);
+            this.pictureBox27.Location = new System.Drawing.Point(160, 29);
+            this.pictureBox27.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox27.Name = "pictureBox27";
-            this.pictureBox27.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox27.Size = new System.Drawing.Size(69, 71);
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox27.TabIndex = 1;
             this.pictureBox27.TabStop = false;
@@ -3249,10 +3527,11 @@ namespace SoG_SGreader
             // sliderUtilityD1
             // 
             this.sliderUtilityD1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderUtilityD1.Location = new System.Drawing.Point(175, 68);
+            this.sliderUtilityD1.Location = new System.Drawing.Point(262, 105);
+            this.sliderUtilityD1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderUtilityD1.Maximum = 3;
             this.sliderUtilityD1.Name = "sliderUtilityD1";
-            this.sliderUtilityD1.Size = new System.Drawing.Size(79, 45);
+            this.sliderUtilityD1.Size = new System.Drawing.Size(118, 69);
             this.sliderUtilityD1.TabIndex = 2;
             this.sliderUtilityD1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderUtilityD1.Value = 3;
@@ -3260,9 +3539,10 @@ namespace SoG_SGreader
             // pictureBox28
             // 
             this.pictureBox28.Image = global::SoG_SGreader.Properties.Resources.icon_utility_focus;
-            this.pictureBox28.Location = new System.Drawing.Point(192, 19);
+            this.pictureBox28.Location = new System.Drawing.Point(288, 29);
+            this.pictureBox28.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox28.Name = "pictureBox28";
-            this.pictureBox28.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox28.Size = new System.Drawing.Size(69, 71);
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox28.TabIndex = 3;
             this.pictureBox28.TabStop = false;
@@ -3270,10 +3550,11 @@ namespace SoG_SGreader
             // sliderUtilityD2
             // 
             this.sliderUtilityD2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderUtilityD2.Location = new System.Drawing.Point(254, 68);
+            this.sliderUtilityD2.Location = new System.Drawing.Point(381, 105);
+            this.sliderUtilityD2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderUtilityD2.Maximum = 3;
             this.sliderUtilityD2.Name = "sliderUtilityD2";
-            this.sliderUtilityD2.Size = new System.Drawing.Size(79, 45);
+            this.sliderUtilityD2.Size = new System.Drawing.Size(118, 69);
             this.sliderUtilityD2.TabIndex = 4;
             this.sliderUtilityD2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderUtilityD2.Value = 3;
@@ -3281,9 +3562,10 @@ namespace SoG_SGreader
             // pictureBox29
             // 
             this.pictureBox29.Image = global::SoG_SGreader.Properties.Resources.icon_utility_barrier;
-            this.pictureBox29.Location = new System.Drawing.Point(271, 19);
+            this.pictureBox29.Location = new System.Drawing.Point(406, 29);
+            this.pictureBox29.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox29.Name = "pictureBox29";
-            this.pictureBox29.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox29.Size = new System.Drawing.Size(69, 71);
             this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox29.TabIndex = 5;
             this.pictureBox29.TabStop = false;
@@ -3296,9 +3578,11 @@ namespace SoG_SGreader
             this.groupBox16.Controls.Add(this.pictureBox25);
             this.groupBox16.Controls.Add(this.sliderUtilityO2);
             this.groupBox16.Controls.Add(this.pictureBox26);
-            this.groupBox16.Location = new System.Drawing.Point(6, 6);
+            this.groupBox16.Location = new System.Drawing.Point(9, 9);
+            this.groupBox16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(425, 121);
+            this.groupBox16.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox16.Size = new System.Drawing.Size(638, 186);
             this.groupBox16.TabIndex = 21;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Offensive";
@@ -3306,19 +3590,21 @@ namespace SoG_SGreader
             // sliderUtilityO0
             // 
             this.sliderUtilityO0.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderUtilityO0.Location = new System.Drawing.Point(90, 68);
+            this.sliderUtilityO0.Location = new System.Drawing.Point(135, 105);
+            this.sliderUtilityO0.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderUtilityO0.Maximum = 3;
             this.sliderUtilityO0.Name = "sliderUtilityO0";
-            this.sliderUtilityO0.Size = new System.Drawing.Size(79, 45);
+            this.sliderUtilityO0.Size = new System.Drawing.Size(118, 69);
             this.sliderUtilityO0.TabIndex = 0;
             this.sliderUtilityO0.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             // 
             // pictureBox24
             // 
             this.pictureBox24.Image = global::SoG_SGreader.Properties.Resources.icon_utility_deathmark;
-            this.pictureBox24.Location = new System.Drawing.Point(107, 19);
+            this.pictureBox24.Location = new System.Drawing.Point(160, 29);
+            this.pictureBox24.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox24.Name = "pictureBox24";
-            this.pictureBox24.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox24.Size = new System.Drawing.Size(69, 71);
             this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox24.TabIndex = 1;
             this.pictureBox24.TabStop = false;
@@ -3326,10 +3612,11 @@ namespace SoG_SGreader
             // sliderUtilityO1
             // 
             this.sliderUtilityO1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderUtilityO1.Location = new System.Drawing.Point(175, 68);
+            this.sliderUtilityO1.Location = new System.Drawing.Point(262, 105);
+            this.sliderUtilityO1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderUtilityO1.Maximum = 3;
             this.sliderUtilityO1.Name = "sliderUtilityO1";
-            this.sliderUtilityO1.Size = new System.Drawing.Size(79, 45);
+            this.sliderUtilityO1.Size = new System.Drawing.Size(118, 69);
             this.sliderUtilityO1.TabIndex = 2;
             this.sliderUtilityO1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderUtilityO1.Value = 3;
@@ -3337,9 +3624,10 @@ namespace SoG_SGreader
             // pictureBox25
             // 
             this.pictureBox25.Image = global::SoG_SGreader.Properties.Resources.icon_utility_sleep;
-            this.pictureBox25.Location = new System.Drawing.Point(192, 19);
+            this.pictureBox25.Location = new System.Drawing.Point(288, 29);
+            this.pictureBox25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox25.Size = new System.Drawing.Size(69, 71);
             this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox25.TabIndex = 3;
             this.pictureBox25.TabStop = false;
@@ -3347,10 +3635,11 @@ namespace SoG_SGreader
             // sliderUtilityO2
             // 
             this.sliderUtilityO2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.sliderUtilityO2.Location = new System.Drawing.Point(254, 68);
+            this.sliderUtilityO2.Location = new System.Drawing.Point(381, 105);
+            this.sliderUtilityO2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sliderUtilityO2.Maximum = 3;
             this.sliderUtilityO2.Name = "sliderUtilityO2";
-            this.sliderUtilityO2.Size = new System.Drawing.Size(79, 45);
+            this.sliderUtilityO2.Size = new System.Drawing.Size(118, 69);
             this.sliderUtilityO2.TabIndex = 4;
             this.sliderUtilityO2.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             this.sliderUtilityO2.Value = 3;
@@ -3358,9 +3647,10 @@ namespace SoG_SGreader
             // pictureBox26
             // 
             this.pictureBox26.Image = global::SoG_SGreader.Properties.Resources.icon_utility_taunt;
-            this.pictureBox26.Location = new System.Drawing.Point(271, 19);
+            this.pictureBox26.Location = new System.Drawing.Point(406, 29);
+            this.pictureBox26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(46, 46);
+            this.pictureBox26.Size = new System.Drawing.Size(69, 71);
             this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox26.TabIndex = 5;
             this.pictureBox26.TabStop = false;
@@ -3368,8 +3658,9 @@ namespace SoG_SGreader
             // tabTalentsGeneral
             // 
             this.tabTalentsGeneral.Location = new System.Drawing.Point(104, 4);
+            this.tabTalentsGeneral.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabTalentsGeneral.Name = "tabTalentsGeneral";
-            this.tabTalentsGeneral.Size = new System.Drawing.Size(437, 357);
+            this.tabTalentsGeneral.Size = new System.Drawing.Size(710, 554);
             this.tabTalentsGeneral.TabIndex = 3;
             this.tabTalentsGeneral.Text = "Talents: General";
             this.tabTalentsGeneral.UseVisualStyleBackColor = true;
@@ -3377,8 +3668,9 @@ namespace SoG_SGreader
             // tabTalentsMelee
             // 
             this.tabTalentsMelee.Location = new System.Drawing.Point(104, 4);
+            this.tabTalentsMelee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabTalentsMelee.Name = "tabTalentsMelee";
-            this.tabTalentsMelee.Size = new System.Drawing.Size(437, 357);
+            this.tabTalentsMelee.Size = new System.Drawing.Size(710, 554);
             this.tabTalentsMelee.TabIndex = 4;
             this.tabTalentsMelee.Text = "Talents: Melee";
             this.tabTalentsMelee.UseVisualStyleBackColor = true;
@@ -3386,22 +3678,24 @@ namespace SoG_SGreader
             // tabTalentsMagic
             // 
             this.tabTalentsMagic.Location = new System.Drawing.Point(104, 4);
+            this.tabTalentsMagic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabTalentsMagic.Name = "tabTalentsMagic";
-            this.tabTalentsMagic.Size = new System.Drawing.Size(437, 357);
+            this.tabTalentsMagic.Size = new System.Drawing.Size(710, 554);
             this.tabTalentsMagic.TabIndex = 5;
             this.tabTalentsMagic.Text = "Talents: Magic";
             this.tabTalentsMagic.UseVisualStyleBackColor = true;
             // 
             // msMenu
             // 
+            this.msMenu.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.msMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.msMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.msMenu.Location = new System.Drawing.Point(0, 0);
             this.msMenu.Name = "msMenu";
-            this.msMenu.Padding = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.msMenu.Size = new System.Drawing.Size(567, 24);
+            this.msMenu.Padding = new System.Windows.Forms.Padding(3, 3, 0, 3);
+            this.msMenu.Size = new System.Drawing.Size(850, 35);
             this.msMenu.TabIndex = 1;
             this.msMenu.Text = "msMenu";
             // 
@@ -3415,13 +3709,13 @@ namespace SoG_SGreader
             this.openSavegameFolderToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(329, 34);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
@@ -3429,7 +3723,7 @@ namespace SoG_SGreader
             // 
             this.saveToolStripMenuItem.Enabled = false;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(329, 34);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
@@ -3437,7 +3731,7 @@ namespace SoG_SGreader
             // 
             this.importToolStripMenuItem.Enabled = false;
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(329, 34);
             this.importToolStripMenuItem.Text = "Import";
             // 
             // exportAsToolStripMenuItem
@@ -3445,27 +3739,27 @@ namespace SoG_SGreader
             this.exportAsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.jSONToolStripMenuItem});
             this.exportAsToolStripMenuItem.Name = "exportAsToolStripMenuItem";
-            this.exportAsToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.exportAsToolStripMenuItem.Size = new System.Drawing.Size(329, 34);
             this.exportAsToolStripMenuItem.Text = "Export as...";
             // 
             // jSONToolStripMenuItem
             // 
             this.jSONToolStripMenuItem.Name = "jSONToolStripMenuItem";
-            this.jSONToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
+            this.jSONToolStripMenuItem.Size = new System.Drawing.Size(157, 34);
             this.jSONToolStripMenuItem.Text = "JSON";
             this.jSONToolStripMenuItem.Click += new System.EventHandler(this.JSONToolStripMenuItem_Click);
             // 
             // openSavegameFolderToolStripMenuItem
             // 
             this.openSavegameFolderToolStripMenuItem.Name = "openSavegameFolderToolStripMenuItem";
-            this.openSavegameFolderToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.openSavegameFolderToolStripMenuItem.Size = new System.Drawing.Size(329, 34);
             this.openSavegameFolderToolStripMenuItem.Text = "Open Savegame Location...";
             this.openSavegameFolderToolStripMenuItem.Click += new System.EventHandler(this.openSavegameFolderToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(329, 34);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -3474,13 +3768,13 @@ namespace SoG_SGreader
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(164, 34);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
@@ -3490,12 +3784,13 @@ namespace SoG_SGreader
             this.txtConsole.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtConsole.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtConsole.ForeColor = System.Drawing.Color.LimeGreen;
-            this.txtConsole.Location = new System.Drawing.Point(0, 441);
+            this.txtConsole.Location = new System.Drawing.Point(0, 680);
+            this.txtConsole.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtConsole.Multiline = true;
             this.txtConsole.Name = "txtConsole";
             this.txtConsole.ReadOnly = true;
             this.txtConsole.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtConsole.Size = new System.Drawing.Size(567, 129);
+            this.txtConsole.Size = new System.Drawing.Size(850, 197);
             this.txtConsole.TabIndex = 28;
             this.txtConsole.TabStop = false;
             // 
@@ -3504,45 +3799,34 @@ namespace SoG_SGreader
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::SoG_SGreader.Properties.Resources.ada21;
-            this.pictureBox3.Location = new System.Drawing.Point(547, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(820, 3);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(17, 17);
+            this.pictureBox3.Size = new System.Drawing.Size(26, 26);
             this.pictureBox3.TabIndex = 30;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.PictureBox3_Click);
             // 
-            // lblFlagsChaningNoEffect
+            // numSkillMelee1h0
             // 
-            this.lblFlagsChaningNoEffect.AutoSize = true;
-            this.lblFlagsChaningNoEffect.Location = new System.Drawing.Point(6, 186);
-            this.lblFlagsChaningNoEffect.Name = "lblFlagsChaningNoEffect";
-            this.lblFlagsChaningNoEffect.Size = new System.Drawing.Size(80, 104);
-            this.lblFlagsChaningNoEffect.TabIndex = 9;
-            this.lblFlagsChaningNoEffect.Text = "Changing Flags\r\nmay have no \r\neffect on your\r\ngame since\r\nthese are addi-\r\ntional" +
-    "ly saved\r\nin the World \r\nfiles.";
-            // 
-            // lblQuestsChaningNoEffect
-            // 
-            this.lblQuestsChaningNoEffect.AutoSize = true;
-            this.lblQuestsChaningNoEffect.Location = new System.Drawing.Point(6, 186);
-            this.lblQuestsChaningNoEffect.Name = "lblQuestsChaningNoEffect";
-            this.lblQuestsChaningNoEffect.Size = new System.Drawing.Size(88, 104);
-            this.lblQuestsChaningNoEffect.TabIndex = 10;
-            this.lblQuestsChaningNoEffect.Text = "Changing Quests\r\nmay have no \r\neffect on your\r\ngame since\r\nthese are addi-\r\ntiona" +
-    "lly saved\r\nin the World \r\nfiles.";
+            this.numSkillMelee1h0.Location = new System.Drawing.Point(15, 135);
+            this.numSkillMelee1h0.Name = "numSkillMelee1h0";
+            this.numSkillMelee1h0.Size = new System.Drawing.Size(118, 26);
+            this.numSkillMelee1h0.TabIndex = 12;
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(567, 570);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(850, 877);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txtConsole);
             this.Controls.Add(this.lblTrophiesNullWarning);
             this.Controls.Add(this.msMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenu;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmMain";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "SoG: Savegame Editor v16.9.30803.129 by tolik518";
@@ -3637,7 +3921,6 @@ namespace SoG_SGreader
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee1h0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sliderSkillMelee1h1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -3708,6 +3991,7 @@ namespace SoG_SGreader
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee1h0)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3862,7 +4146,6 @@ namespace SoG_SGreader
         private System.Windows.Forms.TabPage tabTalentsMelee;
         private System.Windows.Forms.TabPage tabTalentsMagic;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TrackBar sliderSkillMelee1h0;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.TrackBar sliderSkillMelee2h4;
@@ -4003,5 +4286,6 @@ namespace SoG_SGreader
         private CheckedListBox cblstFlagsChecked;
         private Label lblFlagsChaningNoEffect;
         private Label lblQuestsChaningNoEffect;
+        private NumericUpDown numSkillMelee1h0;
     }
 }
