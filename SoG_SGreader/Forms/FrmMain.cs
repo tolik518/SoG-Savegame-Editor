@@ -251,45 +251,12 @@ namespace SoG_SGreader
             rbMale.Checked = playerObject.Style.Sex != 0;
             rbFemale.Checked = playerObject.Style.Sex == 0;
 
-            numSkillMelee1h0.Value = playerObject.GetSkillLevel(SogSkill.Skill_OneHanded_Stinger);
-            numSkillMelee1h1.Value = playerObject.GetSkillLevel(SogSkill.Skill_OneHanded_MillionStabs);
-            numSkillMelee1h2.Value = playerObject.GetSkillLevel(SogSkill.Skill_OneHanded_SpiritSlash);
-            numSkillMelee1h3.Value = playerObject.GetSkillLevel(SogSkill.Skill_OneHanded_ShadowClone);
-            numSkillMelee1h4.Value = playerObject.GetSkillLevel(SogSkill.Skill_OneHanded_QuickCounter);
 
-            numSkillMelee2h0.Value = playerObject.GetSkillLevel(SogSkill.Skill_TwoHanded_Overhead);
-            numSkillMelee2h1.Value = playerObject.GetSkillLevel(SogSkill.Skill_TwoHanded_Spin);
-            numSkillMelee2h2.Value = playerObject.GetSkillLevel(SogSkill.Skill_TwoHanded_Throw);
-            numSkillMelee2h3.Value = playerObject.GetSkillLevel(SogSkill.Skill_TwoHanded_Smash);
-            numSkillMelee2h4.Value = playerObject.GetSkillLevel(SogSkill.Skill_TwoHanded_BerserkMode);
-
-            numSkillMagicF0.Value = playerObject.GetSkillLevel(SogSkill.Magic_Fire_Fireball);
-            numSkillMagicF1.Value = playerObject.GetSkillLevel(SogSkill.Magic_Fire_Meteor);
-            numSkillMagicF2.Value = playerObject.GetSkillLevel(SogSkill.Magic_Fire_Flamethrower);
-
-            numSkillMagicI0.Value = playerObject.GetSkillLevel(SogSkill.Magic_Ice_IceSpikes);
-            numSkillMagicI1.Value = playerObject.GetSkillLevel(SogSkill.Magic_Ice_IceNova);
-            numSkillMagicI2.Value = playerObject.GetSkillLevel(SogSkill.Magic_Ice_FrostyFriend);
-
-            numSkillMagicE0.Value = playerObject.GetSkillLevel(SogSkill.Magic_Earth_EarthSpike);
-            numSkillMagicE1.Value = playerObject.GetSkillLevel(SogSkill.Magic_Earth_SummonPlant);
-            numSkillMagicE2.Value = playerObject.GetSkillLevel(SogSkill.Magic_Earth_InsectSwarm);
-
-            numSkillMagicA0.Value = playerObject.GetSkillLevel(SogSkill.Magic_Wind_ChainLightning);
-            numSkillMagicA1.Value = playerObject.GetSkillLevel(SogSkill.Magic_Wind_SummonCloud);
-            numSkillMagicA2.Value = playerObject.GetSkillLevel(SogSkill.Magic_Wind_StaticTouch);
-
-            numUtilityO0.Value = playerObject.GetSkillLevel(SogSkill.Magic_Support_DeathMark);
-            numUtilityO1.Value = playerObject.GetSkillLevel(SogSkill.Magic_Support_Stasis); 
-            numUtilityO2.Value = playerObject.GetSkillLevel(SogSkill.Magic_Support_Taunt);
-
-            numUtilityD0.Value = playerObject.GetSkillLevel(SogSkill.Magic_Support_Blink);
-            numUtilityD1.Value = playerObject.GetSkillLevel(SogSkill.Magic_Support_Focus); 
-            numUtilityD2.Value = playerObject.GetSkillLevel(SogSkill.Magic_Support_Barrier);
-
-            numUtilityE0.Value = playerObject.GetSkillLevel(SogSkill.Magic_Support_BuffATK);
-            numUtilityE1.Value = playerObject.GetSkillLevel(SogSkill.Magic_Support_BuffSPD);
-            numUtilityE2.Value = playerObject.GetSkillLevel(SogSkill.Magic_Support_BuffDEF);
+            var skills = getSkillMappings();
+            foreach (var skill in skills)
+            {
+                skill.Field.Value = playerObject.GetSkillLevel(skill.SkillID);
+            }
 
             // find out if player has the card. mark the checkbox if yes
             for (int i = 0; i < cblstCards.Items.Count; i++)
@@ -626,6 +593,7 @@ namespace SoG_SGreader
                 (numSkillMelee2h2, SogSkill.Skill_TwoHanded_Throw),
                 (numSkillMelee2h3, SogSkill.Skill_TwoHanded_Smash),
                 (numSkillMelee2h4, SogSkill.Skill_TwoHanded_BerserkMode),
+
                 (numSkillMagicF0, SogSkill.Magic_Fire_Fireball),
                 (numSkillMagicF1, SogSkill.Magic_Fire_Meteor),
                 (numSkillMagicF2, SogSkill.Magic_Fire_Flamethrower),
@@ -638,6 +606,7 @@ namespace SoG_SGreader
                 (numSkillMagicA0, SogSkill.Magic_Wind_ChainLightning),
                 (numSkillMagicA1, SogSkill.Magic_Wind_SummonCloud),
                 (numSkillMagicA2, SogSkill.Magic_Wind_StaticTouch),
+
                 (numUtilityO0, SogSkill.Magic_Support_DeathMark),
                 (numUtilityO1, SogSkill.Magic_Support_Stasis),
                 (numUtilityO2, SogSkill.Magic_Support_Taunt),
@@ -646,7 +615,60 @@ namespace SoG_SGreader
                 (numUtilityD2, SogSkill.Magic_Support_Barrier),
                 (numUtilityE0, SogSkill.Magic_Support_BuffATK),
                 (numUtilityE1, SogSkill.Magic_Support_BuffSPD),
-                (numUtilityE2, SogSkill.Magic_Support_BuffDEF)
+                (numUtilityE2, SogSkill.Magic_Support_BuffDEF),
+                (numTalentMelee0, SogSkill.Talent_Strength),
+                (numTalentMelee1, SogSkill.Talent_Fencer),
+                (numTalentMelee2, SogSkill.Talent_Brawler),
+                (numTalentMelee3, SogSkill.Talent_BurningWeapon),
+                (numTalentMelee4, SogSkill.Talent_ChillyTouch),
+                (numTalentMelee5, SogSkill.Talent_SecondWind),
+                (numTalentMelee6, SogSkill.Talent_Melee_KnowledgeIsPower),
+                (numTalentMelee7, SogSkill.Talent_Wit),
+                (numTalentMelee8, SogSkill.Talent_LastBreath),
+                (numTalentMelee9, SogSkill.Talent_Backhander),
+                (numTalentMelee10, SogSkill.Talent_InsultToInjury),
+                (numTalentMelee11, SogSkill.Talent_Melee_BloodThirst),
+                (numTalentMelee12, SogSkill.Talent_Melee_ComboStarter),
+                (numTalentMelee13, SogSkill.Talent_Melee_SuddenStrike),
+                (numTalentMelee14, SogSkill.Talent_Melee_Riposte),
+
+                (numTalentMagic0, SogSkill.Talent_Intelligence),
+                (numTalentMagic1, SogSkill.Talent_Magic_FastTalker),
+                (numTalentMagic2, SogSkill.Talent_ArcaneCharge),
+                (numTalentMagic3, SogSkill.Talent_Prismatic),
+                (numTalentMagic4, SogSkill.Talent_Battlemage),
+                (numTalentMagic5, SogSkill.Talent_Magic_Concentration),
+                (numTalentMagic6, SogSkill.Talent_Turtle),
+                (numTalentMagic7, SogSkill.Talent_Magic_SoulEater),
+                (numTalentMagic8, SogSkill.Talent_Magic_Specialist),
+                (numTalentMagic9, SogSkill.Talent_LastSpark),
+                (numTalentMagic10, SogSkill.Talent_Magic_WandMaster),
+                (numTalentMagic11, SogSkill.Talent_ArcaneCollar),
+                (numTalentMagic12, SogSkill.Talent_CripplingBlast),
+                (numTalentMagic13, SogSkill.Talent_Manaburn),
+                (numTalentMagic14, SogSkill.Talent_SnapCast),
+
+                (numTalentGeneral0, SogSkill.Talent_Adaptable),
+                (numTalentGeneral1, SogSkill.Talent_Tenacious),
+                (numTalentGeneral2, SogSkill.Talent_General_HealthInsurance),
+                (numTalentGeneral3, SogSkill.Talent_Endurance),
+                (numTalentGeneral4, SogSkill.Talent_General_Metabolism),
+                (numTalentGeneral5, SogSkill.Talent_Surgeon),
+                (numTalentGeneral6, SogSkill.Talent_Brutality),
+                (numTalentGeneral7, SogSkill.Talent_General_UtilityFlow),
+                (numTalentGeneral8, SogSkill.Talent_General_GotYouCovered),
+                (numTalentGeneral9, SogSkill.Talent_LastStand),
+                (numTalentGeneral10, SogSkill.Talent_General_SteadyDefense),
+                (numTalentGeneral11, SogSkill.Talent_General_LadyLuck),
+                (numTalentGeneral12, SogSkill.Talent_General_QuickShot),
+                (numTalentGeneral13, SogSkill.Talent_General_AmmoScavenger),
+                (numTalentGeneral14, SogSkill.Talent_Multitasking),
+                (numTalentGeneral15, SogSkill.Talent_ShieldBearer),
+                (numTalentGeneral16, SogSkill.Talent_General_KineticEnergy),
+                (numTalentGeneral17, SogSkill.Talent_General_EfficientCounter),
+                (numTalentGeneral18, SogSkill.Talent_QuickReflexes),
+                (numTalentGeneral19, SogSkill.Talent_FineTaste),
+                (numTalentGeneral20, SogSkill.Talent_General_Alchemist),
             };
         }
 
