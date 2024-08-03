@@ -616,16 +616,19 @@ namespace SoG_SGreader
                 (numUtilityE0, SogSkill.Magic_Support_BuffATK),
                 (numUtilityE1, SogSkill.Magic_Support_BuffSPD),
                 (numUtilityE2, SogSkill.Magic_Support_BuffDEF),
+
                 (numTalentMelee0, SogSkill.Talent_Strength),
                 (numTalentMelee1, SogSkill.Talent_Fencer),
                 (numTalentMelee2, SogSkill.Talent_Brawler),
                 (numTalentMelee3, SogSkill.Talent_BurningWeapon),
                 (numTalentMelee4, SogSkill.Talent_ChillyTouch),
+
                 (numTalentMelee5, SogSkill.Talent_SecondWind),
                 (numTalentMelee6, SogSkill.Talent_Melee_KnowledgeIsPower),
                 (numTalentMelee7, SogSkill.Talent_Wit),
                 (numTalentMelee8, SogSkill.Talent_LastBreath),
                 (numTalentMelee9, SogSkill.Talent_Backhander),
+
                 (numTalentMelee10, SogSkill.Talent_InsultToInjury),
                 (numTalentMelee11, SogSkill.Talent_Melee_BloodThirst),
                 (numTalentMelee12, SogSkill.Talent_Melee_ComboStarter),
@@ -637,11 +640,13 @@ namespace SoG_SGreader
                 (numTalentMagic2, SogSkill.Talent_ArcaneCharge),
                 (numTalentMagic3, SogSkill.Talent_Prismatic),
                 (numTalentMagic4, SogSkill.Talent_Battlemage),
+
                 (numTalentMagic5, SogSkill.Talent_Magic_Concentration),
                 (numTalentMagic6, SogSkill.Talent_Turtle),
                 (numTalentMagic7, SogSkill.Talent_Magic_SoulEater),
                 (numTalentMagic8, SogSkill.Talent_Magic_Specialist),
                 (numTalentMagic9, SogSkill.Talent_LastSpark),
+
                 (numTalentMagic10, SogSkill.Talent_Magic_WandMaster),
                 (numTalentMagic11, SogSkill.Talent_ArcaneCollar),
                 (numTalentMagic12, SogSkill.Talent_CripplingBlast),
@@ -655,6 +660,7 @@ namespace SoG_SGreader
                 (numTalentGeneral4, SogSkill.Talent_General_Metabolism),
                 (numTalentGeneral5, SogSkill.Talent_Surgeon),
                 (numTalentGeneral6, SogSkill.Talent_Brutality),
+
                 (numTalentGeneral7, SogSkill.Talent_General_UtilityFlow),
                 (numTalentGeneral8, SogSkill.Talent_General_GotYouCovered),
                 (numTalentGeneral9, SogSkill.Talent_LastStand),
@@ -662,6 +668,7 @@ namespace SoG_SGreader
                 (numTalentGeneral11, SogSkill.Talent_General_LadyLuck),
                 (numTalentGeneral12, SogSkill.Talent_General_QuickShot),
                 (numTalentGeneral13, SogSkill.Talent_General_AmmoScavenger),
+
                 (numTalentGeneral14, SogSkill.Talent_Multitasking),
                 (numTalentGeneral15, SogSkill.Talent_ShieldBearer),
                 (numTalentGeneral16, SogSkill.Talent_General_KineticEnergy),
@@ -1201,6 +1208,11 @@ namespace SoG_SGreader
                     false
                 );
             }
+        }
+
+        private void cbSelectedItem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

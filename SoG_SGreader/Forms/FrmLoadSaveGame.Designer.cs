@@ -43,7 +43,7 @@ namespace SoG_SGreader
             this.columnSex = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnCharName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.pictureBox1 = new PixelBox();
+            this.pictureBox1 = new SoG_SGreader.CustomControls.PixelBox();
             this.btnChooseFolder = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -51,9 +51,10 @@ namespace SoG_SGreader
             // btnLoadSaveGame
             // 
             this.btnLoadSaveGame.Enabled = false;
-            this.btnLoadSaveGame.Location = new System.Drawing.Point(236, 132);
+            this.btnLoadSaveGame.Location = new System.Drawing.Point(350, 205);
+            this.btnLoadSaveGame.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLoadSaveGame.Name = "btnLoadSaveGame";
-            this.btnLoadSaveGame.Size = new System.Drawing.Size(85, 54);
+            this.btnLoadSaveGame.Size = new System.Drawing.Size(128, 83);
             this.btnLoadSaveGame.TabIndex = 0;
             this.btnLoadSaveGame.Text = "Load";
             this.btnLoadSaveGame.UseVisualStyleBackColor = true;
@@ -61,9 +62,10 @@ namespace SoG_SGreader
             // 
             // btnStartWithoitLoading
             // 
-            this.btnStartWithoitLoading.Location = new System.Drawing.Point(327, 161);
+            this.btnStartWithoitLoading.Location = new System.Drawing.Point(490, 248);
+            this.btnStartWithoitLoading.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnStartWithoitLoading.Name = "btnStartWithoitLoading";
-            this.btnStartWithoitLoading.Size = new System.Drawing.Size(25, 25);
+            this.btnStartWithoitLoading.Size = new System.Drawing.Size(38, 38);
             this.btnStartWithoitLoading.TabIndex = 3;
             this.btnStartWithoitLoading.Text = "...";
             this.btnStartWithoitLoading.UseVisualStyleBackColor = true;
@@ -73,18 +75,20 @@ namespace SoG_SGreader
             // 
             this.lblFilePath.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblFilePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFilePath.Location = new System.Drawing.Point(0, 188);
+            this.lblFilePath.Location = new System.Drawing.Point(0, 289);
+            this.lblFilePath.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFilePath.Name = "lblFilePath";
-            this.lblFilePath.Size = new System.Drawing.Size(361, 24);
+            this.lblFilePath.Size = new System.Drawing.Size(542, 37);
             this.lblFilePath.TabIndex = 4;
             this.lblFilePath.Text = "[lblFilePath]";
             // 
             // lblSaveGameCount
             // 
             this.lblSaveGameCount.AutoSize = true;
-            this.lblSaveGameCount.Location = new System.Drawing.Point(236, 117);
+            this.lblSaveGameCount.Location = new System.Drawing.Point(354, 180);
+            this.lblSaveGameCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSaveGameCount.Name = "lblSaveGameCount";
-            this.lblSaveGameCount.Size = new System.Drawing.Size(113, 13);
+            this.lblSaveGameCount.Size = new System.Drawing.Size(166, 20);
             this.lblSaveGameCount.TabIndex = 5;
             this.lblSaveGameCount.Text = "No Savegames found!";
             // 
@@ -100,10 +104,11 @@ namespace SoG_SGreader
             this.lstvSaveGames.FullRowSelect = true;
             this.lstvSaveGames.GridLines = true;
             this.lstvSaveGames.HideSelection = false;
-            this.lstvSaveGames.Location = new System.Drawing.Point(3, 1);
+            this.lstvSaveGames.Location = new System.Drawing.Point(4, 2);
+            this.lstvSaveGames.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lstvSaveGames.MultiSelect = false;
             this.lstvSaveGames.Name = "lstvSaveGames";
-            this.lstvSaveGames.Size = new System.Drawing.Size(227, 184);
+            this.lstvSaveGames.Size = new System.Drawing.Size(338, 281);
             this.lstvSaveGames.SmallImageList = this.imageList1;
             this.lstvSaveGames.TabIndex = 6;
             this.lstvSaveGames.UseCompatibleStateImageBehavior = false;
@@ -114,13 +119,13 @@ namespace SoG_SGreader
             // columnSavefile
             // 
             this.columnSavefile.Text = "Slot";
-            this.columnSavefile.Width = 35;
+            this.columnSavefile.Width = 61;
             // 
             // columnSex
             // 
             this.columnSex.Text = "Sex";
             this.columnSex.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnSex.Width = 35;
+            this.columnSex.Width = 46;
             // 
             // columnCharName
             // 
@@ -138,9 +143,11 @@ namespace SoG_SGreader
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::SoG_SGreader.Properties.Resources.icon;
-            this.pictureBox1.Location = new System.Drawing.Point(236, 7);
+            this.pictureBox1.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox1.Location = new System.Drawing.Point(354, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(119, 105);
+            this.pictureBox1.Size = new System.Drawing.Size(176, 159);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
@@ -149,19 +156,20 @@ namespace SoG_SGreader
             // 
             this.btnChooseFolder.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnChooseFolder.Image = ((System.Drawing.Image)(resources.GetObject("btnChooseFolder.Image")));
-            this.btnChooseFolder.Location = new System.Drawing.Point(327, 132);
+            this.btnChooseFolder.Location = new System.Drawing.Point(490, 203);
+            this.btnChooseFolder.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnChooseFolder.Name = "btnChooseFolder";
-            this.btnChooseFolder.Size = new System.Drawing.Size(25, 25);
+            this.btnChooseFolder.Size = new System.Drawing.Size(38, 38);
             this.btnChooseFolder.TabIndex = 2;
             this.btnChooseFolder.UseVisualStyleBackColor = true;
             this.btnChooseFolder.Click += new System.EventHandler(this.BtnChooseFolder_Click);
             // 
             // FrmLoadSaveGame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(361, 212);
+            this.ClientSize = new System.Drawing.Size(542, 326);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lstvSaveGames);
             this.Controls.Add(this.lblSaveGameCount);
@@ -171,6 +179,7 @@ namespace SoG_SGreader
             this.Controls.Add(this.btnLoadSaveGame);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "FrmLoadSaveGame";
             this.Text = "SoG: Savegame Editor v0.8.0 by tolik518";

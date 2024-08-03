@@ -340,6 +340,7 @@ namespace SoG_SGreader
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtConsole = new System.Windows.Forms.TextBox();
             this.Tooltips = new System.Windows.Forms.ToolTip(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox7 = new SoG_SGreader.CustomControls.PixelBox();
             this.pictureBox11 = new SoG_SGreader.CustomControls.PixelBox();
             this.pictureBox8 = new SoG_SGreader.CustomControls.PixelBox();
@@ -684,6 +685,7 @@ namespace SoG_SGreader
             this.lblTrophiesNullWarning.Name = "lblTrophiesNullWarning";
             this.lblTrophiesNullWarning.SelectedIndex = 0;
             this.lblTrophiesNullWarning.Size = new System.Drawing.Size(850, 649);
+            this.lblTrophiesNullWarning.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.lblTrophiesNullWarning.TabIndex = 0;
             // 
             // tabChar
@@ -1642,12 +1644,15 @@ namespace SoG_SGreader
             // 
             // cbSelectedItem
             // 
+            this.cbSelectedItem.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbSelectedItem.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbSelectedItem.FormattingEnabled = true;
             this.cbSelectedItem.Location = new System.Drawing.Point(9, 29);
             this.cbSelectedItem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbSelectedItem.Name = "cbSelectedItem";
             this.cbSelectedItem.Size = new System.Drawing.Size(360, 28);
             this.cbSelectedItem.TabIndex = 0;
+            this.cbSelectedItem.SelectedIndexChanged += new System.EventHandler(this.cbSelectedItem_SelectedIndexChanged);
             // 
             // lstInventory
             // 
@@ -1675,12 +1680,12 @@ namespace SoG_SGreader
             // Item
             // 
             this.Item.Text = "Item";
-            this.Item.Width = 321;
+            this.Item.Width = 408;
             // 
             // Count
             // 
             this.Count.Text = "Count";
-            this.Count.Width = 54;
+            this.Count.Width = 62;
             // 
             // Position
             // 
@@ -1729,37 +1734,37 @@ namespace SoG_SGreader
             // Level
             // 
             this.Level.Text = "Level";
-            this.Level.Width = 39;
+            this.Level.Width = 55;
             // 
             // Nickname
             // 
             this.Nickname.Text = "Nickname";
-            this.Nickname.Width = 92;
+            this.Nickname.Width = 105;
             // 
             // HP
             // 
             this.HP.Text = "HP";
-            this.HP.Width = 45;
+            this.HP.Width = 54;
             // 
             // SP
             // 
             this.SP.Text = "SP";
-            this.SP.Width = 47;
+            this.SP.Width = 55;
             // 
             // Dmg
             // 
             this.Dmg.Text = "Dmg";
-            this.Dmg.Width = 48;
+            this.Dmg.Width = 54;
             // 
             // Crit
             // 
             this.Crit.Text = "Crit";
-            this.Crit.Width = 49;
+            this.Crit.Width = 53;
             // 
             // Speed
             // 
             this.Speed.Text = "Speed";
-            this.Speed.Width = 44;
+            this.Speed.Width = 74;
             // 
             // grpPet
             // 
@@ -3049,6 +3054,7 @@ namespace SoG_SGreader
             // 
             // tabTalentsGeneral
             // 
+            this.tabTalentsGeneral.Controls.Add(this.label1);
             this.tabTalentsGeneral.Controls.Add(this.groupBox5);
             this.tabTalentsGeneral.Location = new System.Drawing.Point(104, 4);
             this.tabTalentsGeneral.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -3649,11 +3655,11 @@ namespace SoG_SGreader
             // 
             // cblstFlagsChecked
             // 
-            this.cblstFlagsChecked.Enabled = false;
             this.cblstFlagsChecked.FormattingEnabled = true;
             this.cblstFlagsChecked.Location = new System.Drawing.Point(12, 375);
             this.cblstFlagsChecked.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cblstFlagsChecked.Name = "cblstFlagsChecked";
+            this.cblstFlagsChecked.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.cblstFlagsChecked.Size = new System.Drawing.Size(658, 211);
             this.cblstFlagsChecked.TabIndex = 11;
             this.cblstFlagsChecked.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cblstFlagsChecked_ItemCheck);
@@ -4426,6 +4432,16 @@ namespace SoG_SGreader
             this.txtConsole.TabIndex = 28;
             this.txtConsole.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 446);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(391, 60);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "Notes:\r\n- SteadyDefense on level 5, will make your game crash\r\n- FineTaste max le" +
+    "vel is 3";
+            // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::SoG_SGreader.Properties.Resources.icon_berserk;
@@ -4437,6 +4453,7 @@ namespace SoG_SGreader
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 19;
             this.pictureBox7.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox7, "BerserkMode");
             // 
             // pictureBox11
             // 
@@ -4449,6 +4466,7 @@ namespace SoG_SGreader
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 11;
             this.pictureBox11.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox11, "Overhead");
             // 
             // pictureBox8
             // 
@@ -4461,6 +4479,7 @@ namespace SoG_SGreader
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 17;
             this.pictureBox8.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox8, "Smash");
             // 
             // pictureBox10
             // 
@@ -4473,6 +4492,7 @@ namespace SoG_SGreader
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 13;
             this.pictureBox10.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox10, "Spin");
             // 
             // pictureBox9
             // 
@@ -4485,6 +4505,7 @@ namespace SoG_SGreader
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 15;
             this.pictureBox9.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox9, "Throw");
             // 
             // pictureBox1
             // 
@@ -4497,6 +4518,7 @@ namespace SoG_SGreader
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox1, "Stinger");
             // 
             // pictureBox2
             // 
@@ -4509,6 +4531,7 @@ namespace SoG_SGreader
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox2, "MillionStabs");
             // 
             // pictureBox4
             // 
@@ -4521,6 +4544,7 @@ namespace SoG_SGreader
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox4, "SpiritSlash");
             // 
             // pictureBox5
             // 
@@ -4533,6 +4557,7 @@ namespace SoG_SGreader
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 7;
             this.pictureBox5.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox5, "ShadowClone");
             // 
             // pictureBox6
             // 
@@ -4545,6 +4570,7 @@ namespace SoG_SGreader
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 9;
             this.pictureBox6.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox6, "QuickCounter");
             // 
             // pictureBox21
             // 
@@ -4557,6 +4583,7 @@ namespace SoG_SGreader
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox21.TabIndex = 11;
             this.pictureBox21.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox21, "StaticTouch");
             // 
             // pictureBox22
             // 
@@ -4569,6 +4596,7 @@ namespace SoG_SGreader
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox22.TabIndex = 9;
             this.pictureBox22.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox22, "SummonCloud");
             // 
             // pictureBox23
             // 
@@ -4581,6 +4609,7 @@ namespace SoG_SGreader
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox23.TabIndex = 7;
             this.pictureBox23.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox23, "ChainLightning");
             // 
             // pictureBox18
             // 
@@ -4593,6 +4622,7 @@ namespace SoG_SGreader
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox18.TabIndex = 11;
             this.pictureBox18.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox18, "InsectSwarm");
             // 
             // pictureBox19
             // 
@@ -4605,6 +4635,7 @@ namespace SoG_SGreader
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox19.TabIndex = 9;
             this.pictureBox19.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox19, "SummonPlant");
             // 
             // pictureBox20
             // 
@@ -4617,6 +4648,7 @@ namespace SoG_SGreader
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox20.TabIndex = 7;
             this.pictureBox20.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox20, "EarthSpike");
             // 
             // pictureBox15
             // 
@@ -4629,6 +4661,7 @@ namespace SoG_SGreader
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox15.TabIndex = 11;
             this.pictureBox15.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox15, "FrostyFriend");
             // 
             // pictureBox16
             // 
@@ -4641,6 +4674,7 @@ namespace SoG_SGreader
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox16.TabIndex = 9;
             this.pictureBox16.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox16, "IceNova");
             // 
             // pictureBox17
             // 
@@ -4653,6 +4687,7 @@ namespace SoG_SGreader
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox17.TabIndex = 7;
             this.pictureBox17.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox17, "IceSpikes");
             // 
             // pictureBox14
             // 
@@ -4665,6 +4700,7 @@ namespace SoG_SGreader
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 11;
             this.pictureBox14.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox14, "Flamethrower");
             // 
             // pictureBox13
             // 
@@ -4677,6 +4713,7 @@ namespace SoG_SGreader
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 9;
             this.pictureBox13.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox13, "Meteor");
             // 
             // pictureBox12
             // 
@@ -4689,6 +4726,7 @@ namespace SoG_SGreader
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 7;
             this.pictureBox12.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox12, "Fireball");
             // 
             // pictureBox30
             // 
@@ -4701,6 +4739,7 @@ namespace SoG_SGreader
             this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox30.TabIndex = 1;
             this.pictureBox30.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox30, "BuffATK");
             // 
             // pictureBox31
             // 
@@ -4713,6 +4752,7 @@ namespace SoG_SGreader
             this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox31.TabIndex = 3;
             this.pictureBox31.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox31, "BuffSPD");
             // 
             // pictureBox32
             // 
@@ -4725,6 +4765,7 @@ namespace SoG_SGreader
             this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox32.TabIndex = 5;
             this.pictureBox32.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox32, "BuffDEF");
             // 
             // pictureBox27
             // 
@@ -4737,6 +4778,7 @@ namespace SoG_SGreader
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox27.TabIndex = 1;
             this.pictureBox27.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox27, "Blink");
             // 
             // pictureBox28
             // 
@@ -4749,6 +4791,7 @@ namespace SoG_SGreader
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox28.TabIndex = 3;
             this.pictureBox28.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox28, "Focus");
             // 
             // pictureBox29
             // 
@@ -4761,6 +4804,7 @@ namespace SoG_SGreader
             this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox29.TabIndex = 5;
             this.pictureBox29.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox29, "Barrier");
             // 
             // pictureBox24
             // 
@@ -4773,6 +4817,7 @@ namespace SoG_SGreader
             this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox24.TabIndex = 1;
             this.pictureBox24.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox24, "DeathMark");
             // 
             // pictureBox25
             // 
@@ -4785,6 +4830,7 @@ namespace SoG_SGreader
             this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox25.TabIndex = 3;
             this.pictureBox25.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox25, "Stasis");
             // 
             // pictureBox26
             // 
@@ -4797,6 +4843,7 @@ namespace SoG_SGreader
             this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox26.TabIndex = 5;
             this.pictureBox26.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox26, "Taunt");
             // 
             // pictureBox43
             // 
@@ -4809,6 +4856,7 @@ namespace SoG_SGreader
             this.pictureBox43.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox43.TabIndex = 68;
             this.pictureBox43.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox43, "SuddenStrike");
             // 
             // pictureBox36
             // 
@@ -4821,6 +4869,7 @@ namespace SoG_SGreader
             this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox36.TabIndex = 58;
             this.pictureBox36.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox36, "LastBreath");
             // 
             // pictureBox44
             // 
@@ -4833,6 +4882,7 @@ namespace SoG_SGreader
             this.pictureBox44.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox44.TabIndex = 70;
             this.pictureBox44.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox44, "Riposte");
             // 
             // pictureBox39
             // 
@@ -4845,6 +4895,7 @@ namespace SoG_SGreader
             this.pictureBox39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox39.TabIndex = 60;
             this.pictureBox39.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox39, "Backhander");
             // 
             // pictureBox45
             // 
@@ -4857,6 +4908,7 @@ namespace SoG_SGreader
             this.pictureBox45.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox45.TabIndex = 62;
             this.pictureBox45.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox45, "InsultToInjury");
             // 
             // pictureBox40
             // 
@@ -4869,6 +4921,7 @@ namespace SoG_SGreader
             this.pictureBox40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox40.TabIndex = 52;
             this.pictureBox40.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox40, "SecondWind");
             // 
             // pictureBox46
             // 
@@ -4881,6 +4934,7 @@ namespace SoG_SGreader
             this.pictureBox46.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox46.TabIndex = 64;
             this.pictureBox46.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox46, "BloodThirst");
             // 
             // pictureBox41
             // 
@@ -4893,6 +4947,7 @@ namespace SoG_SGreader
             this.pictureBox41.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox41.TabIndex = 54;
             this.pictureBox41.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox41, "KnowledgeIsPower");
             // 
             // pictureBox47
             // 
@@ -4905,6 +4960,7 @@ namespace SoG_SGreader
             this.pictureBox47.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox47.TabIndex = 66;
             this.pictureBox47.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox47, "ComboStarter");
             // 
             // pictureBox42
             // 
@@ -4917,6 +4973,7 @@ namespace SoG_SGreader
             this.pictureBox42.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox42.TabIndex = 56;
             this.pictureBox42.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox42, "Wit");
             // 
             // pictureBox37
             // 
@@ -4929,6 +4986,7 @@ namespace SoG_SGreader
             this.pictureBox37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox37.TabIndex = 48;
             this.pictureBox37.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox37, "BurningWeapon");
             // 
             // pictureBox38
             // 
@@ -4941,6 +4999,7 @@ namespace SoG_SGreader
             this.pictureBox38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox38.TabIndex = 50;
             this.pictureBox38.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox38, "ChillyTouch");
             // 
             // pictureBox33
             // 
@@ -4953,6 +5012,7 @@ namespace SoG_SGreader
             this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox33.TabIndex = 42;
             this.pictureBox33.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox33, "Strength");
             // 
             // pictureBox34
             // 
@@ -4965,6 +5025,7 @@ namespace SoG_SGreader
             this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox34.TabIndex = 44;
             this.pictureBox34.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox34, "Fencer");
             // 
             // pictureBox35
             // 
@@ -4977,6 +5038,7 @@ namespace SoG_SGreader
             this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox35.TabIndex = 46;
             this.pictureBox35.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox35, "Brawler");
             // 
             // pictureBox48
             // 
@@ -4989,6 +5051,7 @@ namespace SoG_SGreader
             this.pictureBox48.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox48.TabIndex = 68;
             this.pictureBox48.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox48, "Manaburn");
             // 
             // pictureBox49
             // 
@@ -5001,6 +5064,7 @@ namespace SoG_SGreader
             this.pictureBox49.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox49.TabIndex = 58;
             this.pictureBox49.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox49, "Specialist");
             // 
             // pictureBox50
             // 
@@ -5013,6 +5077,7 @@ namespace SoG_SGreader
             this.pictureBox50.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox50.TabIndex = 70;
             this.pictureBox50.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox50, "SnapCast");
             // 
             // pictureBox51
             // 
@@ -5025,6 +5090,7 @@ namespace SoG_SGreader
             this.pictureBox51.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox51.TabIndex = 60;
             this.pictureBox51.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox51, "LastSpark");
             // 
             // pictureBox52
             // 
@@ -5037,6 +5103,7 @@ namespace SoG_SGreader
             this.pictureBox52.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox52.TabIndex = 62;
             this.pictureBox52.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox52, "WandMaster");
             // 
             // pictureBox53
             // 
@@ -5049,6 +5116,7 @@ namespace SoG_SGreader
             this.pictureBox53.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox53.TabIndex = 52;
             this.pictureBox53.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox53, "Concentration");
             // 
             // pictureBox54
             // 
@@ -5061,6 +5129,7 @@ namespace SoG_SGreader
             this.pictureBox54.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox54.TabIndex = 64;
             this.pictureBox54.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox54, "ArcaneCollar");
             // 
             // pictureBox55
             // 
@@ -5073,6 +5142,7 @@ namespace SoG_SGreader
             this.pictureBox55.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox55.TabIndex = 54;
             this.pictureBox55.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox55, "Turtle");
             // 
             // pictureBox56
             // 
@@ -5085,6 +5155,7 @@ namespace SoG_SGreader
             this.pictureBox56.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox56.TabIndex = 66;
             this.pictureBox56.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox56, "CripplingBlast");
             // 
             // pictureBox57
             // 
@@ -5097,6 +5168,7 @@ namespace SoG_SGreader
             this.pictureBox57.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox57.TabIndex = 56;
             this.pictureBox57.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox57, "SoulEater");
             // 
             // pictureBox58
             // 
@@ -5109,6 +5181,7 @@ namespace SoG_SGreader
             this.pictureBox58.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox58.TabIndex = 48;
             this.pictureBox58.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox58, "Prismatic");
             // 
             // pictureBox59
             // 
@@ -5121,6 +5194,7 @@ namespace SoG_SGreader
             this.pictureBox59.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox59.TabIndex = 50;
             this.pictureBox59.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox59, "Battlemage");
             // 
             // pictureBox60
             // 
@@ -5133,6 +5207,7 @@ namespace SoG_SGreader
             this.pictureBox60.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox60.TabIndex = 42;
             this.pictureBox60.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox60, "Intelligence");
             // 
             // pictureBox61
             // 
@@ -5145,6 +5220,7 @@ namespace SoG_SGreader
             this.pictureBox61.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox61.TabIndex = 44;
             this.pictureBox61.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox61, "FastTalker");
             // 
             // pictureBox62
             // 
@@ -5157,6 +5233,7 @@ namespace SoG_SGreader
             this.pictureBox62.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox62.TabIndex = 46;
             this.pictureBox62.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox62, "ArcaneCharge");
             // 
             // pictureBox78
             // 
@@ -5169,6 +5246,7 @@ namespace SoG_SGreader
             this.pictureBox78.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox78.TabIndex = 117;
             this.pictureBox78.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox78, "Alchemist");
             // 
             // pictureBox79
             // 
@@ -5181,6 +5259,7 @@ namespace SoG_SGreader
             this.pictureBox79.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox79.TabIndex = 115;
             this.pictureBox79.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox79, "FineTaste");
             // 
             // pictureBox80
             // 
@@ -5193,6 +5272,7 @@ namespace SoG_SGreader
             this.pictureBox80.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox80.TabIndex = 113;
             this.pictureBox80.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox80, "QuickReflexes");
             // 
             // pictureBox81
             // 
@@ -5205,6 +5285,7 @@ namespace SoG_SGreader
             this.pictureBox81.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox81.TabIndex = 111;
             this.pictureBox81.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox81, "EfficientCounter");
             // 
             // pictureBox82
             // 
@@ -5217,6 +5298,7 @@ namespace SoG_SGreader
             this.pictureBox82.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox82.TabIndex = 109;
             this.pictureBox82.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox82, "KineticEnergy");
             // 
             // pictureBox83
             // 
@@ -5229,6 +5311,7 @@ namespace SoG_SGreader
             this.pictureBox83.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox83.TabIndex = 107;
             this.pictureBox83.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox83, "ShieldBearer");
             // 
             // pictureBox65
             // 
@@ -5241,6 +5324,7 @@ namespace SoG_SGreader
             this.pictureBox65.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox65.TabIndex = 103;
             this.pictureBox65.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox65, "AmmoScavenger");
             // 
             // pictureBox72
             // 
@@ -5253,6 +5337,7 @@ namespace SoG_SGreader
             this.pictureBox72.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox72.TabIndex = 89;
             this.pictureBox72.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox72, "Brutality");
             // 
             // pictureBox66
             // 
@@ -5265,6 +5350,7 @@ namespace SoG_SGreader
             this.pictureBox66.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox66.TabIndex = 101;
             this.pictureBox66.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox66, "QuickShot");
             // 
             // pictureBox69
             // 
@@ -5277,6 +5363,7 @@ namespace SoG_SGreader
             this.pictureBox69.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox69.TabIndex = 85;
             this.pictureBox69.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox69, "Surgeon");
             // 
             // pictureBox73
             // 
@@ -5289,6 +5376,7 @@ namespace SoG_SGreader
             this.pictureBox73.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox73.TabIndex = 99;
             this.pictureBox73.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox73, "LadyLuck");
             // 
             // pictureBox70
             // 
@@ -5301,6 +5389,7 @@ namespace SoG_SGreader
             this.pictureBox70.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox70.TabIndex = 83;
             this.pictureBox70.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox70, "Metabolism");
             // 
             // pictureBox74
             // 
@@ -5313,6 +5402,7 @@ namespace SoG_SGreader
             this.pictureBox74.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox74.TabIndex = 97;
             this.pictureBox74.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox74, "SteadyDefense");
             // 
             // pictureBox71
             // 
@@ -5325,6 +5415,7 @@ namespace SoG_SGreader
             this.pictureBox71.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox71.TabIndex = 81;
             this.pictureBox71.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox71, "Endurance");
             // 
             // pictureBox76
             // 
@@ -5337,6 +5428,7 @@ namespace SoG_SGreader
             this.pictureBox76.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox76.TabIndex = 95;
             this.pictureBox76.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox76, "LastStand");
             // 
             // pictureBox64
             // 
@@ -5349,6 +5441,7 @@ namespace SoG_SGreader
             this.pictureBox64.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox64.TabIndex = 79;
             this.pictureBox64.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox64, "HealthInsurance");
             // 
             // pictureBox77
             // 
@@ -5361,6 +5454,7 @@ namespace SoG_SGreader
             this.pictureBox77.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox77.TabIndex = 93;
             this.pictureBox77.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox77, "GotYouCovered");
             // 
             // pictureBox63
             // 
@@ -5373,6 +5467,7 @@ namespace SoG_SGreader
             this.pictureBox63.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox63.TabIndex = 77;
             this.pictureBox63.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox63, "Tenacious");
             // 
             // pictureBox67
             // 
@@ -5385,6 +5480,7 @@ namespace SoG_SGreader
             this.pictureBox67.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox67.TabIndex = 62;
             this.pictureBox67.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox67, "Multitasking");
             // 
             // pictureBox68
             // 
@@ -5397,6 +5493,7 @@ namespace SoG_SGreader
             this.pictureBox68.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox68.TabIndex = 52;
             this.pictureBox68.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox68, "UtilityFlow");
             // 
             // pictureBox75
             // 
@@ -5409,11 +5506,12 @@ namespace SoG_SGreader
             this.pictureBox75.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox75.TabIndex = 42;
             this.pictureBox75.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox75, "Adaptable");
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(850, 877);
             this.Controls.Add(this.txtConsole);
@@ -5548,6 +5646,7 @@ namespace SoG_SGreader
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic2)).EndInit();
             this.tabTalentsGeneral.ResumeLayout(false);
+            this.tabTalentsGeneral.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral19)).EndInit();
@@ -6082,5 +6181,6 @@ namespace SoG_SGreader
         private PixelBox pictureBox24;
         private PixelBox pictureBox25;
         private PixelBox pictureBox26;
+        private Label label1;
     }
 }
