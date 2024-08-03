@@ -431,7 +431,7 @@ namespace SoG_SGreader
             return playerObject;
         }
 
-        public static PlayerPreview GetCharName(string fileName)
+        public static PlayerPreview GetPlayerPreview(string fileName)
         {
             string nickname = "";
             bool sex = false;

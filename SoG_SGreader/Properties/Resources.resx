@@ -118,14 +118,68 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="icon_soulstrike" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_soulstrike.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_fireball" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_fireball.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_speedup" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_speedup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="melee_burningweapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\melee_burningweapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_summoncloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_summoncloud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_chainlightning" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_chainlightning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="melee_combostarter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\melee_combostarter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="melee_chillytouch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\melee_chillytouch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="general_quickshot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\general_quickshot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_magicdamage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_magicdamage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="magic_battlemage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magic_battlemage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_utility_focus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_utility_focus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_earthspike" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_earthspike.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="magic_snapcast" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magic_snapcast.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="general_surgeon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\general_surgeon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="general_brutality" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\general_brutality.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_overhead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_overhead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="magic_soulsiphon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magic_soulsiphon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="general_tenacious" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\general_tenacious.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="general_metabolism" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\general_metabolism.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frame_1h" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frame_1h.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_utility_defenseup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_utility_defenseup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_frosty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_frosty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="melee_lastbreath" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\melee_lastbreath.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_utility_sleep" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_utility_sleep.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,136 +187,235 @@
   <data name="icon_icespikes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_icespikes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="save1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_attackspeed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_attackspeed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_shadowclone" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_shadowclone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_plantsummon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_plantsummon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_meteor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_meteor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_utility_focus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_utility_focus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_2hsmash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_2hsmash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_2hthrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_2hthrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_protect_clover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_protect_clover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_utility_blink" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_utility_blink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_overhead" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_overhead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_stinger_clover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_stinger_clover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_utility_barrier" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_utility_barrier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_frosty" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_frosty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ada2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ada2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ada21" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ada2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_seekinglights_clover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_seekinglights_clover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_utility_offenseup" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_utility_offenseup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_machinebow_clover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_machinebow_clover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_utility_deathmark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_utility_deathmark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_berserk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_berserk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_statictouch" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_statictouch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_swirl_clover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_swirl_clover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_manaboost" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_manaboost.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_speedup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_speedup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_swarm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_swarm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="magic_specialist" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magic_specialist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_splittingarrow_clover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_splittingarrow_clover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="melee_insultinjury" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\melee_insultinjury.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_utility_taunt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_utility_taunt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_2hsmash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_2hsmash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_dmgup" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_dmgup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_earthspike" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_earthspike.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_frostnova_clover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_frostnova_clover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_magicdamage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_magicdamage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_utility_deathmark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_utility_deathmark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_chainlightning" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_chainlightning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="save1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_healthboost" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_healthboost.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_fireball" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_fireball.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="melee_suddenstrike" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\melee_suddenstrike.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_utility_defenseup" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_utility_defenseup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="magic_concentration" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magic_concentration.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_attackdamage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_attackdamage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="magic_cripplingblast" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magic_cripplingblast.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_locked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_locked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_statictouch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_statictouch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_swirl_clover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_swirl_clover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="melee_backhanded" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\melee_backhanded.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_windslash" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_windslash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="melee_riposte" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\melee_riposte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_flamethrower" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_flamethrower.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_castspeed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_castspeed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="general_utilityflow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\general_utilityflow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_millionstabs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_millionstabs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="magic_intelligence" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magic_intelligence.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="magic_wandmaster" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magic_wandmaster.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="magic_turtle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magic_turtle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="melee_brawler" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\melee_brawler.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_shadowclone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_shadowclone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ada2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ada2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="general_multitask" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\general_multitask.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_plantsummon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_plantsummon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="general_finetaste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\general_finetaste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon_dodgingstrike" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_dodgingstrike.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="frame_1h" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\frame_1h.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_machinebow_clover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_machinebow_clover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="melee_fencer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\melee_fencer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_flamethrower" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_flamethrower.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_utility_blink" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_utility_blink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="magic_lastspark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magic_lastspark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="general_laststand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\general_laststand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_stinger_clover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_stinger_clover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="general_efficientcounter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\general_efficientcounter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="melee_secondbreath" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\melee_secondbreath.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_summoncloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_summoncloud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_soulstrike" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_soulstrike.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="melee_bloodthirst" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\melee_bloodthirst.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_castspeed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_castspeed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_splittingarrow_clover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_splittingarrow_clover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="magic_manaburn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magic_manaburn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_dmgup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_dmgup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_meteor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_meteor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="melee_strength" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\melee_strength.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="general_kineticenergy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\general_kineticenergy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="general_arrowscavenger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\general_arrowscavenger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_attackspeed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_attackspeed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_swarm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_swarm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_2hthrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_2hthrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_seekinglights_clover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_seekinglights_clover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="general_ladyluck" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\general_ladyluck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_protect_clover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_protect_clover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_utility_barrier" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_utility_barrier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_attackdamage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_attackdamage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_utility_offenseup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_utility_offenseup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="general_gotyoucovered" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\general_gotyoucovered.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_windslash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_windslash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="general_adaptable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\general_adaptable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_frostnova_clover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_frostnova_clover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="magic_arcanecollar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magic_arcanecollar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ada21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ada2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="general_healthinsurance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\general_healthinsurance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="general_quickreflex" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\general_quickreflex.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="magic_prismatic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magic_prismatic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="general_shieldbearer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\general_shieldbearer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_manaboost" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_manaboost.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_locked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_locked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="magic_fasttalker" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magic_fasttalker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="melee_wit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\melee_wit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="magic_arcanecharge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magic_arcanecharge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="general_endurance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\general_endurance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="melee_knowledgeispower" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\melee_knowledgeispower.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="general_unknown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\general_unknown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_utility_taunt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_utility_taunt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="general_alchemist" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\general_alchemist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -914,12 +914,6 @@ namespace SoG_SGreader
             );
         }
 
-        private void PictureBox3_Click(object sender, EventArgs e) //:3 Icon in the top corner
-        {
-            FrmAbout frmAbout = new FrmAbout();
-            frmAbout.ShowDialog();
-        }
-
         private async void FrmMain_Load(object sender, EventArgs e)
         {
             Text = "SoG: Savegame Editor v" + Application.ProductVersion + " by tolik518";
