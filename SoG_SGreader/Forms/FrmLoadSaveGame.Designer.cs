@@ -1,4 +1,5 @@
 ﻿
+using SoG_SGreader.CustomControls;
 using System.Windows.Forms;
 
 namespace SoG_SGreader
@@ -42,7 +43,7 @@ namespace SoG_SGreader
             this.columnSex = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnCharName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new PixelBox();
             this.btnChooseFolder = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -191,7 +192,7 @@ namespace SoG_SGreader
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ColumnHeader columnSavefile;
         private System.Windows.Forms.ColumnHeader columnCharName;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private PixelBox pictureBox1;
         private ColumnHeader columnSex;
     }
 }

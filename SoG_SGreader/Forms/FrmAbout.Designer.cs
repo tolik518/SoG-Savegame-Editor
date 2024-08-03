@@ -1,4 +1,7 @@
 ﻿
+using SoG_SGreader.CustomControls;
+using System.Windows.Forms;
+
 namespace SoG_SGreader
 {
     partial class FrmAbout
@@ -38,7 +41,7 @@ namespace SoG_SGreader
             this.lblYourPatch = new System.Windows.Forms.Label();
             this.lblCurrentPatch = new System.Windows.Forms.Label();
             this.txtConsole = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new PixelBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -200,6 +203,6 @@ namespace SoG_SGreader
         private System.Windows.Forms.Label lblCurrentPatch;
         private System.Windows.Forms.TextBox txtConsole;
         private System.Windows.Forms.Label lblYourPatch;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private PixelBox pictureBox1;
     }
 }
