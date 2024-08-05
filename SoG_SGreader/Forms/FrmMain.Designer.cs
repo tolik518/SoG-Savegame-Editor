@@ -147,107 +147,190 @@ namespace SoG_SGreader
             this.numPetEnergy = new System.Windows.Forms.NumericUpDown();
             this.numPetHP = new System.Windows.Forms.NumericUpDown();
             this.tabSkills = new System.Windows.Forms.TabPage();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControlSkills = new System.Windows.Forms.TabControl();
             this.tabSkillsMelee = new System.Windows.Forms.TabPage();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.numSkillMelee2h4 = new System.Windows.Forms.NumericUpDown();
             this.numSkillMelee2h3 = new System.Windows.Forms.NumericUpDown();
             this.numSkillMelee2h2 = new System.Windows.Forms.NumericUpDown();
             this.numSkillMelee2h1 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox7 = new SoG_SGreader.CustomControls.PixelBox();
+            this.pictureBox11 = new SoG_SGreader.CustomControls.PixelBox();
+            this.pictureBox8 = new SoG_SGreader.CustomControls.PixelBox();
+            this.pictureBox10 = new SoG_SGreader.CustomControls.PixelBox();
             this.numSkillMelee2h0 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox9 = new SoG_SGreader.CustomControls.PixelBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.numSkillMelee1h1 = new System.Windows.Forms.NumericUpDown();
             this.numSkillMelee1h0 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox1 = new SoG_SGreader.CustomControls.PixelBox();
+            this.pictureBox2 = new SoG_SGreader.CustomControls.PixelBox();
             this.numSkillMelee1h2 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox4 = new SoG_SGreader.CustomControls.PixelBox();
             this.numSkillMelee1h3 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox5 = new SoG_SGreader.CustomControls.PixelBox();
             this.numSkillMelee1h4 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox6 = new SoG_SGreader.CustomControls.PixelBox();
             this.tabSkillsMagic = new System.Windows.Forms.TabPage();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.numSkillMagicA2 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox21 = new SoG_SGreader.CustomControls.PixelBox();
             this.numSkillMagicA1 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox22 = new SoG_SGreader.CustomControls.PixelBox();
             this.numSkillMagicA0 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox23 = new SoG_SGreader.CustomControls.PixelBox();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.numSkillMagicE2 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox18 = new SoG_SGreader.CustomControls.PixelBox();
             this.numSkillMagicE1 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox19 = new SoG_SGreader.CustomControls.PixelBox();
             this.numSkillMagicE0 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox20 = new SoG_SGreader.CustomControls.PixelBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.numSkillMagicI2 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox15 = new SoG_SGreader.CustomControls.PixelBox();
             this.numSkillMagicI1 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox16 = new SoG_SGreader.CustomControls.PixelBox();
             this.numSkillMagicI0 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox17 = new SoG_SGreader.CustomControls.PixelBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.numSkillMagicF2 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox14 = new SoG_SGreader.CustomControls.PixelBox();
             this.numSkillMagicF1 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox13 = new SoG_SGreader.CustomControls.PixelBox();
             this.numSkillMagicF0 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox12 = new SoG_SGreader.CustomControls.PixelBox();
             this.tabSkillsUtility = new System.Windows.Forms.TabPage();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
             this.numUtilityE0 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox30 = new SoG_SGreader.CustomControls.PixelBox();
             this.numUtilityE1 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox31 = new SoG_SGreader.CustomControls.PixelBox();
             this.numUtilityE2 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox32 = new SoG_SGreader.CustomControls.PixelBox();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.numUtilityD0 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox27 = new SoG_SGreader.CustomControls.PixelBox();
             this.numUtilityD1 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox28 = new SoG_SGreader.CustomControls.PixelBox();
             this.numUtilityD2 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox29 = new SoG_SGreader.CustomControls.PixelBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.numUtilityO0 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox24 = new SoG_SGreader.CustomControls.PixelBox();
             this.numUtilityO1 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox25 = new SoG_SGreader.CustomControls.PixelBox();
             this.numUtilityO2 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox26 = new SoG_SGreader.CustomControls.PixelBox();
             this.tabTalentsMelee = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.numTalentMelee13 = new System.Windows.Forms.NumericUpDown();
             this.numTalentMelee8 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox43 = new SoG_SGreader.CustomControls.PixelBox();
+            this.pictureBox36 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentMelee14 = new System.Windows.Forms.NumericUpDown();
             this.numTalentMelee9 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox44 = new SoG_SGreader.CustomControls.PixelBox();
+            this.pictureBox39 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentMelee10 = new System.Windows.Forms.NumericUpDown();
             this.numTalentMelee5 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox45 = new SoG_SGreader.CustomControls.PixelBox();
+            this.pictureBox40 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentMelee11 = new System.Windows.Forms.NumericUpDown();
             this.numTalentMelee6 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox46 = new SoG_SGreader.CustomControls.PixelBox();
+            this.pictureBox41 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentMelee12 = new System.Windows.Forms.NumericUpDown();
             this.numTalentMelee7 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox47 = new SoG_SGreader.CustomControls.PixelBox();
+            this.pictureBox42 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentMelee3 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox37 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentMelee4 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox38 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentMelee0 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox33 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentMelee1 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox34 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentMelee2 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox35 = new SoG_SGreader.CustomControls.PixelBox();
             this.tabTalentsMagic = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.numTalentMagic13 = new System.Windows.Forms.NumericUpDown();
             this.numTalentMagic8 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox48 = new SoG_SGreader.CustomControls.PixelBox();
+            this.pictureBox49 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentMagic14 = new System.Windows.Forms.NumericUpDown();
             this.numTalentMagic9 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox50 = new SoG_SGreader.CustomControls.PixelBox();
+            this.pictureBox51 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentMagic10 = new System.Windows.Forms.NumericUpDown();
             this.numTalentMagic5 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox52 = new SoG_SGreader.CustomControls.PixelBox();
+            this.pictureBox53 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentMagic11 = new System.Windows.Forms.NumericUpDown();
             this.numTalentMagic6 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox54 = new SoG_SGreader.CustomControls.PixelBox();
+            this.pictureBox55 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentMagic12 = new System.Windows.Forms.NumericUpDown();
             this.numTalentMagic7 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox56 = new SoG_SGreader.CustomControls.PixelBox();
+            this.pictureBox57 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentMagic3 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox58 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentMagic4 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox59 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentMagic0 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox60 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentMagic1 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox61 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentMagic2 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox62 = new SoG_SGreader.CustomControls.PixelBox();
             this.tabTalentsGeneral = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.numTalentGeneral20 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox78 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentGeneral19 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox79 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentGeneral18 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox80 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentGeneral17 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox81 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentGeneral16 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox82 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentGeneral15 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox83 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentGeneral13 = new System.Windows.Forms.NumericUpDown();
             this.numTalentGeneral6 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox65 = new SoG_SGreader.CustomControls.PixelBox();
+            this.pictureBox72 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentGeneral12 = new System.Windows.Forms.NumericUpDown();
             this.numTalentGeneral5 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox66 = new SoG_SGreader.CustomControls.PixelBox();
+            this.pictureBox69 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentGeneral11 = new System.Windows.Forms.NumericUpDown();
             this.numTalentGeneral4 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox73 = new SoG_SGreader.CustomControls.PixelBox();
+            this.pictureBox70 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentGeneral10 = new System.Windows.Forms.NumericUpDown();
             this.numTalentGeneral3 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox74 = new SoG_SGreader.CustomControls.PixelBox();
+            this.pictureBox71 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentGeneral9 = new System.Windows.Forms.NumericUpDown();
             this.numTalentGeneral2 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox76 = new SoG_SGreader.CustomControls.PixelBox();
+            this.pictureBox64 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentGeneral8 = new System.Windows.Forms.NumericUpDown();
             this.numTalentGeneral1 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox77 = new SoG_SGreader.CustomControls.PixelBox();
+            this.pictureBox63 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentGeneral14 = new System.Windows.Forms.NumericUpDown();
             this.numTalentGeneral7 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox67 = new SoG_SGreader.CustomControls.PixelBox();
+            this.pictureBox68 = new SoG_SGreader.CustomControls.PixelBox();
             this.numTalentGeneral0 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox75 = new SoG_SGreader.CustomControls.PixelBox();
             this.tabCards = new System.Windows.Forms.TabPage();
             this.grpCards = new System.Windows.Forms.GroupBox();
             this.lblCardsNullWarning = new System.Windows.Forms.Label();
@@ -327,6 +410,7 @@ namespace SoG_SGreader
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
+            this.cbOnlyLegalLevels = new System.Windows.Forms.CheckBox();
             this.msMenu = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -340,89 +424,6 @@ namespace SoG_SGreader
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtConsole = new System.Windows.Forms.TextBox();
             this.Tooltips = new System.Windows.Forms.ToolTip(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox11 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox8 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox10 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox9 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox1 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox2 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox4 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox5 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox6 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox21 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox22 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox23 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox18 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox19 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox20 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox15 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox16 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox17 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox14 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox13 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox12 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox30 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox31 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox32 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox27 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox28 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox29 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox24 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox25 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox26 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox43 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox36 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox44 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox39 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox45 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox40 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox46 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox41 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox47 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox42 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox37 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox38 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox33 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox34 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox35 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox48 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox49 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox50 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox51 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox52 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox53 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox54 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox55 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox56 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox57 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox58 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox59 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox60 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox61 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox62 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox78 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox79 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox80 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox81 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox82 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox83 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox65 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox72 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox66 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox69 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox73 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox70 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox74 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox71 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox76 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox64 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox77 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox63 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox67 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox68 = new SoG_SGreader.CustomControls.PixelBox();
-            this.pictureBox75 = new SoG_SGreader.CustomControls.PixelBox();
             this.lblTrophiesNullWarning.SuspendLayout();
             this.tabChar.SuspendLayout();
             this.grpPatch.SuspendLayout();
@@ -455,107 +456,189 @@ namespace SoG_SGreader
             ((System.ComponentModel.ISupportInitialize)(this.numPetEnergy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPetHP)).BeginInit();
             this.tabSkills.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.tabControlSkills.SuspendLayout();
             this.tabSkillsMelee.SuspendLayout();
             this.groupBox11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee2h4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee2h3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee2h2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee2h1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee2h0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.groupBox10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee1h1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee1h0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee1h2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee1h3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee1h4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.tabSkillsMagic.SuspendLayout();
             this.groupBox15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicA2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicA1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicA0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             this.groupBox14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicE2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicE1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicE0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             this.groupBox13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicI2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicI1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicI0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.groupBox12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicF2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicF1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicF0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.tabSkillsUtility.SuspendLayout();
             this.groupBox18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUtilityE0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUtilityE1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUtilityE2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
             this.groupBox17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUtilityD0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUtilityD1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUtilityD2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
             this.groupBox16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUtilityO0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUtilityO1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUtilityO2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             this.tabTalentsMelee.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox43)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox40)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox46)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox41)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox47)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox42)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
             this.tabTalentsMagic.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox50)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox51)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox52)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox53)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox54)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox55)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox56)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox57)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox58)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox59)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox60)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox61)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox62)).BeginInit();
             this.tabTalentsGeneral.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox78)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox79)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox80)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox81)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox82)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox83)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox65)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox72)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox66)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox69)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox73)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox70)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox74)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox71)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox76)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox64)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox77)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox63)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox67)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox68)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox75)).BeginInit();
             this.tabCards.SuspendLayout();
             this.grpCards.SuspendLayout();
             this.tabMaps.SuspendLayout();
@@ -577,88 +660,6 @@ namespace SoG_SGreader
             this.tabQuickslots.SuspendLayout();
             this.grpQuickslots.SuspendLayout();
             this.msMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox43)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox40)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox46)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox41)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox47)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox42)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox50)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox51)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox52)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox53)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox54)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox55)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox56)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox57)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox58)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox59)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox60)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox61)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox62)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox78)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox79)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox80)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox81)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox82)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox83)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox65)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox72)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox66)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox69)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox73)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox70)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox74)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox71)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox76)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox64)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox77)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox63)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox67)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox68)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox75)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTrophiesNullWarning
@@ -1652,7 +1653,6 @@ namespace SoG_SGreader
             this.cbSelectedItem.Name = "cbSelectedItem";
             this.cbSelectedItem.Size = new System.Drawing.Size(360, 28);
             this.cbSelectedItem.TabIndex = 0;
-            this.cbSelectedItem.SelectedIndexChanged += new System.EventHandler(this.cbSelectedItem_SelectedIndexChanged);
             // 
             // lstInventory
             // 
@@ -1981,7 +1981,7 @@ namespace SoG_SGreader
             // tabSkills
             // 
             this.tabSkills.BackColor = System.Drawing.Color.Transparent;
-            this.tabSkills.Controls.Add(this.tabControl1);
+            this.tabSkills.Controls.Add(this.tabControlSkills);
             this.tabSkills.Location = new System.Drawing.Point(4, 29);
             this.tabSkills.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabSkills.Name = "tabSkills";
@@ -1991,30 +1991,32 @@ namespace SoG_SGreader
             this.tabSkills.Text = "Skills";
             this.tabSkills.UseVisualStyleBackColor = true;
             // 
-            // tabControl1
+            // tabControlSkills
             // 
-            this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tabControl1.Controls.Add(this.tabSkillsMelee);
-            this.tabControl1.Controls.Add(this.tabSkillsMagic);
-            this.tabControl1.Controls.Add(this.tabSkillsUtility);
-            this.tabControl1.Controls.Add(this.tabTalentsMelee);
-            this.tabControl1.Controls.Add(this.tabTalentsMagic);
-            this.tabControl1.Controls.Add(this.tabTalentsGeneral);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.tabControl1.ItemSize = new System.Drawing.Size(60, 100);
-            this.tabControl1.Location = new System.Drawing.Point(4, 5);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabControl1.Multiline = true;
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(834, 606);
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl1.TabIndex = 32;
-            this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.TabControl1_DrawItem);
+            this.tabControlSkills.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tabControlSkills.Controls.Add(this.tabSkillsMelee);
+            this.tabControlSkills.Controls.Add(this.tabSkillsMagic);
+            this.tabControlSkills.Controls.Add(this.tabSkillsUtility);
+            this.tabControlSkills.Controls.Add(this.tabTalentsMelee);
+            this.tabControlSkills.Controls.Add(this.tabTalentsMagic);
+            this.tabControlSkills.Controls.Add(this.tabTalentsGeneral);
+            this.tabControlSkills.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlSkills.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.tabControlSkills.ItemSize = new System.Drawing.Size(60, 100);
+            this.tabControlSkills.Location = new System.Drawing.Point(4, 5);
+            this.tabControlSkills.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabControlSkills.Multiline = true;
+            this.tabControlSkills.Name = "tabControlSkills";
+            this.tabControlSkills.SelectedIndex = 0;
+            this.tabControlSkills.Size = new System.Drawing.Size(834, 606);
+            this.tabControlSkills.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControlSkills.TabIndex = 32;
+            this.tabControlSkills.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.TabControl1_DrawItem);
+            this.tabControlSkills.SelectedIndexChanged += new System.EventHandler(this.tabControlSkills_SelectedIndexChanged);
             // 
             // tabSkillsMelee
             // 
+            this.tabSkillsMelee.Controls.Add(this.cbOnlyLegalLevels);
             this.tabSkillsMelee.Controls.Add(this.groupBox11);
             this.tabSkillsMelee.Controls.Add(this.groupBox10);
             this.tabSkillsMelee.Location = new System.Drawing.Point(104, 4);
@@ -2095,6 +2097,58 @@ namespace SoG_SGreader
             this.numSkillMelee2h1.Size = new System.Drawing.Size(69, 26);
             this.numSkillMelee2h1.TabIndex = 20;
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::SoG_SGreader.Properties.Resources.icon_berserk;
+            this.pictureBox7.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox7.Location = new System.Drawing.Point(532, 52);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 19;
+            this.pictureBox7.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox7, "BerserkMode");
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::SoG_SGreader.Properties.Resources.icon_overhead;
+            this.pictureBox11.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox11.Location = new System.Drawing.Point(40, 52);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 11;
+            this.pictureBox11.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox11, "Overhead");
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::SoG_SGreader.Properties.Resources.icon_2hsmash;
+            this.pictureBox8.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox8.Location = new System.Drawing.Point(405, 52);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 17;
+            this.pictureBox8.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox8, "Smash");
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::SoG_SGreader.Properties.Resources.icon_swirl_clover;
+            this.pictureBox10.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox10.Location = new System.Drawing.Point(168, 52);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 13;
+            this.pictureBox10.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox10, "Spin");
+            // 
             // numSkillMelee2h0
             // 
             this.numSkillMelee2h0.Location = new System.Drawing.Point(40, 131);
@@ -2106,6 +2160,19 @@ namespace SoG_SGreader
             this.numSkillMelee2h0.Name = "numSkillMelee2h0";
             this.numSkillMelee2h0.Size = new System.Drawing.Size(69, 26);
             this.numSkillMelee2h0.TabIndex = 10;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::SoG_SGreader.Properties.Resources.icon_2hthrow;
+            this.pictureBox9.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox9.Location = new System.Drawing.Point(286, 52);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 15;
+            this.pictureBox9.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox9, "Throw");
             // 
             // groupBox10
             // 
@@ -2152,6 +2219,32 @@ namespace SoG_SGreader
             this.numSkillMelee1h0.Size = new System.Drawing.Size(69, 26);
             this.numSkillMelee1h0.TabIndex = 12;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SoG_SGreader.Properties.Resources.icon_stinger_clover;
+            this.pictureBox1.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox1.Location = new System.Drawing.Point(40, 55);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox1, "Stinger");
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::SoG_SGreader.Properties.Resources.icon_millionstabs;
+            this.pictureBox2.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox2.Location = new System.Drawing.Point(168, 55);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox2, "MillionStabs");
+            // 
             // numSkillMelee1h2
             // 
             this.numSkillMelee1h2.Location = new System.Drawing.Point(286, 135);
@@ -2163,6 +2256,19 @@ namespace SoG_SGreader
             this.numSkillMelee1h2.Name = "numSkillMelee1h2";
             this.numSkillMelee1h2.Size = new System.Drawing.Size(69, 26);
             this.numSkillMelee1h2.TabIndex = 4;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::SoG_SGreader.Properties.Resources.icon_soulstrike;
+            this.pictureBox4.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox4.Location = new System.Drawing.Point(286, 55);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 5;
+            this.pictureBox4.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox4, "SpiritSlash");
             // 
             // numSkillMelee1h3
             // 
@@ -2176,6 +2282,19 @@ namespace SoG_SGreader
             this.numSkillMelee1h3.Size = new System.Drawing.Size(69, 26);
             this.numSkillMelee1h3.TabIndex = 6;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::SoG_SGreader.Properties.Resources.icon_shadowclone;
+            this.pictureBox5.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox5.Location = new System.Drawing.Point(405, 55);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 7;
+            this.pictureBox5.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox5, "ShadowClone");
+            // 
             // numSkillMelee1h4
             // 
             this.numSkillMelee1h4.Location = new System.Drawing.Point(532, 135);
@@ -2187,6 +2306,19 @@ namespace SoG_SGreader
             this.numSkillMelee1h4.Name = "numSkillMelee1h4";
             this.numSkillMelee1h4.Size = new System.Drawing.Size(69, 26);
             this.numSkillMelee1h4.TabIndex = 8;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::SoG_SGreader.Properties.Resources.icon_dodgingstrike;
+            this.pictureBox6.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox6.Location = new System.Drawing.Point(532, 55);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 9;
+            this.pictureBox6.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox6, "QuickCounter");
             // 
             // tabSkillsMagic
             // 
@@ -2232,6 +2364,19 @@ namespace SoG_SGreader
             this.numSkillMagicA2.Size = new System.Drawing.Size(69, 26);
             this.numSkillMagicA2.TabIndex = 10;
             // 
+            // pictureBox21
+            // 
+            this.pictureBox21.Image = global::SoG_SGreader.Properties.Resources.icon_statictouch;
+            this.pictureBox21.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox21.Location = new System.Drawing.Point(219, 55);
+            this.pictureBox21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox21.Name = "pictureBox21";
+            this.pictureBox21.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox21.TabIndex = 11;
+            this.pictureBox21.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox21, "StaticTouch");
+            // 
             // numSkillMagicA1
             // 
             this.numSkillMagicA1.Location = new System.Drawing.Point(124, 135);
@@ -2244,6 +2389,19 @@ namespace SoG_SGreader
             this.numSkillMagicA1.Size = new System.Drawing.Size(69, 26);
             this.numSkillMagicA1.TabIndex = 8;
             // 
+            // pictureBox22
+            // 
+            this.pictureBox22.Image = global::SoG_SGreader.Properties.Resources.icon_summoncloud;
+            this.pictureBox22.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox22.Location = new System.Drawing.Point(124, 55);
+            this.pictureBox22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox22.TabIndex = 9;
+            this.pictureBox22.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox22, "SummonCloud");
+            // 
             // numSkillMagicA0
             // 
             this.numSkillMagicA0.Location = new System.Drawing.Point(28, 135);
@@ -2255,6 +2413,19 @@ namespace SoG_SGreader
             this.numSkillMagicA0.Name = "numSkillMagicA0";
             this.numSkillMagicA0.Size = new System.Drawing.Size(69, 26);
             this.numSkillMagicA0.TabIndex = 6;
+            // 
+            // pictureBox23
+            // 
+            this.pictureBox23.Image = global::SoG_SGreader.Properties.Resources.icon_chainlightning;
+            this.pictureBox23.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox23.Location = new System.Drawing.Point(28, 55);
+            this.pictureBox23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox23.Name = "pictureBox23";
+            this.pictureBox23.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox23.TabIndex = 7;
+            this.pictureBox23.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox23, "ChainLightning");
             // 
             // groupBox14
             // 
@@ -2285,6 +2456,19 @@ namespace SoG_SGreader
             this.numSkillMagicE2.Size = new System.Drawing.Size(69, 26);
             this.numSkillMagicE2.TabIndex = 10;
             // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Image = global::SoG_SGreader.Properties.Resources.icon_swarm;
+            this.pictureBox18.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox18.Location = new System.Drawing.Point(219, 55);
+            this.pictureBox18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox18.TabIndex = 11;
+            this.pictureBox18.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox18, "InsectSwarm");
+            // 
             // numSkillMagicE1
             // 
             this.numSkillMagicE1.Location = new System.Drawing.Point(124, 135);
@@ -2297,6 +2481,19 @@ namespace SoG_SGreader
             this.numSkillMagicE1.Size = new System.Drawing.Size(69, 26);
             this.numSkillMagicE1.TabIndex = 8;
             // 
+            // pictureBox19
+            // 
+            this.pictureBox19.Image = global::SoG_SGreader.Properties.Resources.icon_plantsummon;
+            this.pictureBox19.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox19.Location = new System.Drawing.Point(124, 55);
+            this.pictureBox19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox19.TabIndex = 9;
+            this.pictureBox19.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox19, "SummonPlant");
+            // 
             // numSkillMagicE0
             // 
             this.numSkillMagicE0.Location = new System.Drawing.Point(28, 135);
@@ -2308,6 +2505,19 @@ namespace SoG_SGreader
             this.numSkillMagicE0.Name = "numSkillMagicE0";
             this.numSkillMagicE0.Size = new System.Drawing.Size(69, 26);
             this.numSkillMagicE0.TabIndex = 6;
+            // 
+            // pictureBox20
+            // 
+            this.pictureBox20.Image = global::SoG_SGreader.Properties.Resources.icon_earthspike;
+            this.pictureBox20.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox20.Location = new System.Drawing.Point(28, 55);
+            this.pictureBox20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox20.TabIndex = 7;
+            this.pictureBox20.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox20, "EarthSpike");
             // 
             // groupBox13
             // 
@@ -2338,6 +2548,19 @@ namespace SoG_SGreader
             this.numSkillMagicI2.Size = new System.Drawing.Size(69, 26);
             this.numSkillMagicI2.TabIndex = 10;
             // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Image = global::SoG_SGreader.Properties.Resources.icon_frosty;
+            this.pictureBox15.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox15.Location = new System.Drawing.Point(219, 55);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox15.TabIndex = 11;
+            this.pictureBox15.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox15, "FrostyFriend");
+            // 
             // numSkillMagicI1
             // 
             this.numSkillMagicI1.Location = new System.Drawing.Point(124, 135);
@@ -2350,6 +2573,19 @@ namespace SoG_SGreader
             this.numSkillMagicI1.Size = new System.Drawing.Size(69, 26);
             this.numSkillMagicI1.TabIndex = 8;
             // 
+            // pictureBox16
+            // 
+            this.pictureBox16.Image = global::SoG_SGreader.Properties.Resources.icon_frostnova_clover;
+            this.pictureBox16.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox16.Location = new System.Drawing.Point(124, 55);
+            this.pictureBox16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.TabIndex = 9;
+            this.pictureBox16.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox16, "IceNova");
+            // 
             // numSkillMagicI0
             // 
             this.numSkillMagicI0.Location = new System.Drawing.Point(28, 135);
@@ -2361,6 +2597,19 @@ namespace SoG_SGreader
             this.numSkillMagicI0.Name = "numSkillMagicI0";
             this.numSkillMagicI0.Size = new System.Drawing.Size(69, 26);
             this.numSkillMagicI0.TabIndex = 6;
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = global::SoG_SGreader.Properties.Resources.icon_icespikes;
+            this.pictureBox17.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox17.Location = new System.Drawing.Point(28, 55);
+            this.pictureBox17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox17.TabIndex = 7;
+            this.pictureBox17.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox17, "IceSpikes");
             // 
             // groupBox12
             // 
@@ -2391,6 +2640,19 @@ namespace SoG_SGreader
             this.numSkillMagicF2.Size = new System.Drawing.Size(69, 26);
             this.numSkillMagicF2.TabIndex = 10;
             // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = global::SoG_SGreader.Properties.Resources.icon_flamethrower;
+            this.pictureBox14.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox14.Location = new System.Drawing.Point(219, 55);
+            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox14.TabIndex = 11;
+            this.pictureBox14.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox14, "Flamethrower");
+            // 
             // numSkillMagicF1
             // 
             this.numSkillMagicF1.Location = new System.Drawing.Point(124, 135);
@@ -2403,6 +2665,19 @@ namespace SoG_SGreader
             this.numSkillMagicF1.Size = new System.Drawing.Size(69, 26);
             this.numSkillMagicF1.TabIndex = 8;
             // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = global::SoG_SGreader.Properties.Resources.icon_meteor;
+            this.pictureBox13.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox13.Location = new System.Drawing.Point(124, 55);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 9;
+            this.pictureBox13.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox13, "Meteor");
+            // 
             // numSkillMagicF0
             // 
             this.numSkillMagicF0.Location = new System.Drawing.Point(28, 135);
@@ -2414,6 +2689,19 @@ namespace SoG_SGreader
             this.numSkillMagicF0.Name = "numSkillMagicF0";
             this.numSkillMagicF0.Size = new System.Drawing.Size(69, 26);
             this.numSkillMagicF0.TabIndex = 6;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::SoG_SGreader.Properties.Resources.icon_fireball;
+            this.pictureBox12.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox12.Location = new System.Drawing.Point(28, 55);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 7;
+            this.pictureBox12.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox12, "Fireball");
             // 
             // tabSkillsUtility
             // 
@@ -2437,11 +2725,11 @@ namespace SoG_SGreader
             this.groupBox18.Controls.Add(this.pictureBox31);
             this.groupBox18.Controls.Add(this.numUtilityE2);
             this.groupBox18.Controls.Add(this.pictureBox32);
-            this.groupBox18.Location = new System.Drawing.Point(9, 389);
+            this.groupBox18.Location = new System.Drawing.Point(9, 373);
             this.groupBox18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox18.Name = "groupBox18";
             this.groupBox18.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox18.Size = new System.Drawing.Size(638, 186);
+            this.groupBox18.Size = new System.Drawing.Size(638, 180);
             this.groupBox18.TabIndex = 22;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "Enhancing";
@@ -2458,6 +2746,19 @@ namespace SoG_SGreader
             this.numUtilityE0.Size = new System.Drawing.Size(69, 26);
             this.numUtilityE0.TabIndex = 0;
             // 
+            // pictureBox30
+            // 
+            this.pictureBox30.Image = global::SoG_SGreader.Properties.Resources.icon_dmgup;
+            this.pictureBox30.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox30.Location = new System.Drawing.Point(160, 29);
+            this.pictureBox30.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox30.Name = "pictureBox30";
+            this.pictureBox30.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox30.TabIndex = 1;
+            this.pictureBox30.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox30, "BuffATK");
+            // 
             // numUtilityE1
             // 
             this.numUtilityE1.Location = new System.Drawing.Point(288, 105);
@@ -2469,6 +2770,19 @@ namespace SoG_SGreader
             this.numUtilityE1.Name = "numUtilityE1";
             this.numUtilityE1.Size = new System.Drawing.Size(69, 26);
             this.numUtilityE1.TabIndex = 2;
+            // 
+            // pictureBox31
+            // 
+            this.pictureBox31.Image = global::SoG_SGreader.Properties.Resources.icon_speedup;
+            this.pictureBox31.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox31.Location = new System.Drawing.Point(288, 29);
+            this.pictureBox31.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox31.Name = "pictureBox31";
+            this.pictureBox31.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox31.TabIndex = 3;
+            this.pictureBox31.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox31, "BuffSPD");
             // 
             // numUtilityE2
             // 
@@ -2482,6 +2796,19 @@ namespace SoG_SGreader
             this.numUtilityE2.Size = new System.Drawing.Size(69, 26);
             this.numUtilityE2.TabIndex = 4;
             // 
+            // pictureBox32
+            // 
+            this.pictureBox32.Image = global::SoG_SGreader.Properties.Resources.icon_protect_clover;
+            this.pictureBox32.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox32.Location = new System.Drawing.Point(406, 29);
+            this.pictureBox32.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox32.Name = "pictureBox32";
+            this.pictureBox32.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox32.TabIndex = 5;
+            this.pictureBox32.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox32, "BuffDEF");
+            // 
             // groupBox17
             // 
             this.groupBox17.Controls.Add(this.numUtilityD0);
@@ -2490,11 +2817,11 @@ namespace SoG_SGreader
             this.groupBox17.Controls.Add(this.pictureBox28);
             this.groupBox17.Controls.Add(this.numUtilityD2);
             this.groupBox17.Controls.Add(this.pictureBox29);
-            this.groupBox17.Location = new System.Drawing.Point(9, 195);
+            this.groupBox17.Location = new System.Drawing.Point(9, 191);
             this.groupBox17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox17.Name = "groupBox17";
             this.groupBox17.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox17.Size = new System.Drawing.Size(638, 186);
+            this.groupBox17.Size = new System.Drawing.Size(638, 180);
             this.groupBox17.TabIndex = 22;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Defensive";
@@ -2511,6 +2838,19 @@ namespace SoG_SGreader
             this.numUtilityD0.Size = new System.Drawing.Size(69, 26);
             this.numUtilityD0.TabIndex = 0;
             // 
+            // pictureBox27
+            // 
+            this.pictureBox27.Image = global::SoG_SGreader.Properties.Resources.icon_utility_blink;
+            this.pictureBox27.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox27.Location = new System.Drawing.Point(160, 29);
+            this.pictureBox27.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox27.Name = "pictureBox27";
+            this.pictureBox27.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox27.TabIndex = 1;
+            this.pictureBox27.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox27, "Blink");
+            // 
             // numUtilityD1
             // 
             this.numUtilityD1.Location = new System.Drawing.Point(288, 105);
@@ -2522,6 +2862,19 @@ namespace SoG_SGreader
             this.numUtilityD1.Name = "numUtilityD1";
             this.numUtilityD1.Size = new System.Drawing.Size(69, 26);
             this.numUtilityD1.TabIndex = 2;
+            // 
+            // pictureBox28
+            // 
+            this.pictureBox28.Image = global::SoG_SGreader.Properties.Resources.icon_utility_focus;
+            this.pictureBox28.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox28.Location = new System.Drawing.Point(288, 29);
+            this.pictureBox28.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox28.Name = "pictureBox28";
+            this.pictureBox28.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox28.TabIndex = 3;
+            this.pictureBox28.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox28, "Focus");
             // 
             // numUtilityD2
             // 
@@ -2535,6 +2888,19 @@ namespace SoG_SGreader
             this.numUtilityD2.Size = new System.Drawing.Size(69, 26);
             this.numUtilityD2.TabIndex = 4;
             // 
+            // pictureBox29
+            // 
+            this.pictureBox29.Image = global::SoG_SGreader.Properties.Resources.icon_utility_barrier;
+            this.pictureBox29.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox29.Location = new System.Drawing.Point(406, 29);
+            this.pictureBox29.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox29.Name = "pictureBox29";
+            this.pictureBox29.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox29.TabIndex = 5;
+            this.pictureBox29.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox29, "Barrier");
+            // 
             // groupBox16
             // 
             this.groupBox16.Controls.Add(this.numUtilityO0);
@@ -2547,7 +2913,7 @@ namespace SoG_SGreader
             this.groupBox16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox16.Size = new System.Drawing.Size(638, 186);
+            this.groupBox16.Size = new System.Drawing.Size(638, 180);
             this.groupBox16.TabIndex = 21;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Offensive";
@@ -2564,6 +2930,19 @@ namespace SoG_SGreader
             this.numUtilityO0.Size = new System.Drawing.Size(69, 26);
             this.numUtilityO0.TabIndex = 0;
             // 
+            // pictureBox24
+            // 
+            this.pictureBox24.Image = global::SoG_SGreader.Properties.Resources.icon_utility_deathmark;
+            this.pictureBox24.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox24.Location = new System.Drawing.Point(160, 29);
+            this.pictureBox24.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox24.Name = "pictureBox24";
+            this.pictureBox24.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox24.TabIndex = 1;
+            this.pictureBox24.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox24, "DeathMark");
+            // 
             // numUtilityO1
             // 
             this.numUtilityO1.Location = new System.Drawing.Point(288, 105);
@@ -2576,6 +2955,19 @@ namespace SoG_SGreader
             this.numUtilityO1.Size = new System.Drawing.Size(69, 26);
             this.numUtilityO1.TabIndex = 2;
             // 
+            // pictureBox25
+            // 
+            this.pictureBox25.Image = global::SoG_SGreader.Properties.Resources.icon_utility_sleep;
+            this.pictureBox25.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox25.Location = new System.Drawing.Point(288, 29);
+            this.pictureBox25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox25.Name = "pictureBox25";
+            this.pictureBox25.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox25.TabIndex = 3;
+            this.pictureBox25.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox25, "Stasis");
+            // 
             // numUtilityO2
             // 
             this.numUtilityO2.Location = new System.Drawing.Point(406, 105);
@@ -2587,6 +2979,19 @@ namespace SoG_SGreader
             this.numUtilityO2.Name = "numUtilityO2";
             this.numUtilityO2.Size = new System.Drawing.Size(69, 26);
             this.numUtilityO2.TabIndex = 4;
+            // 
+            // pictureBox26
+            // 
+            this.pictureBox26.Image = global::SoG_SGreader.Properties.Resources.icon_utility_taunt;
+            this.pictureBox26.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox26.Location = new System.Drawing.Point(406, 29);
+            this.pictureBox26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox26.Name = "pictureBox26";
+            this.pictureBox26.Size = new System.Drawing.Size(69, 71);
+            this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox26.TabIndex = 5;
+            this.pictureBox26.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox26, "Taunt");
             // 
             // tabTalentsMelee
             // 
@@ -2664,6 +3069,32 @@ namespace SoG_SGreader
             this.numTalentMelee8.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee8.TabIndex = 57;
             // 
+            // pictureBox43
+            // 
+            this.pictureBox43.Image = global::SoG_SGreader.Properties.Resources.melee_suddenstrike;
+            this.pictureBox43.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox43.Location = new System.Drawing.Point(403, 297);
+            this.pictureBox43.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox43.Name = "pictureBox43";
+            this.pictureBox43.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox43.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox43.TabIndex = 68;
+            this.pictureBox43.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox43, "SuddenStrike");
+            // 
+            // pictureBox36
+            // 
+            this.pictureBox36.Image = global::SoG_SGreader.Properties.Resources.melee_lastbreath;
+            this.pictureBox36.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox36.Location = new System.Drawing.Point(403, 163);
+            this.pictureBox36.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox36.Name = "pictureBox36";
+            this.pictureBox36.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox36.TabIndex = 58;
+            this.pictureBox36.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox36, "LastBreath");
+            // 
             // numTalentMelee14
             // 
             this.numTalentMelee14.Location = new System.Drawing.Point(521, 373);
@@ -2687,6 +3118,32 @@ namespace SoG_SGreader
             this.numTalentMelee9.Name = "numTalentMelee9";
             this.numTalentMelee9.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee9.TabIndex = 59;
+            // 
+            // pictureBox44
+            // 
+            this.pictureBox44.Image = global::SoG_SGreader.Properties.Resources.melee_riposte;
+            this.pictureBox44.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox44.Location = new System.Drawing.Point(521, 297);
+            this.pictureBox44.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox44.Name = "pictureBox44";
+            this.pictureBox44.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox44.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox44.TabIndex = 70;
+            this.pictureBox44.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox44, "Riposte");
+            // 
+            // pictureBox39
+            // 
+            this.pictureBox39.Image = global::SoG_SGreader.Properties.Resources.melee_backhanded;
+            this.pictureBox39.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox39.Location = new System.Drawing.Point(521, 163);
+            this.pictureBox39.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox39.Name = "pictureBox39";
+            this.pictureBox39.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox39.TabIndex = 60;
+            this.pictureBox39.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox39, "Backhander");
             // 
             // numTalentMelee10
             // 
@@ -2712,6 +3169,32 @@ namespace SoG_SGreader
             this.numTalentMelee5.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee5.TabIndex = 51;
             // 
+            // pictureBox45
+            // 
+            this.pictureBox45.Image = global::SoG_SGreader.Properties.Resources.melee_insultinjury;
+            this.pictureBox45.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox45.Location = new System.Drawing.Point(29, 297);
+            this.pictureBox45.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox45.Name = "pictureBox45";
+            this.pictureBox45.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox45.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox45.TabIndex = 62;
+            this.pictureBox45.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox45, "InsultToInjury");
+            // 
+            // pictureBox40
+            // 
+            this.pictureBox40.Image = global::SoG_SGreader.Properties.Resources.melee_secondbreath;
+            this.pictureBox40.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox40.Location = new System.Drawing.Point(29, 163);
+            this.pictureBox40.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox40.Name = "pictureBox40";
+            this.pictureBox40.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox40.TabIndex = 52;
+            this.pictureBox40.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox40, "SecondWind");
+            // 
             // numTalentMelee11
             // 
             this.numTalentMelee11.Location = new System.Drawing.Point(157, 373);
@@ -2735,6 +3218,32 @@ namespace SoG_SGreader
             this.numTalentMelee6.Name = "numTalentMelee6";
             this.numTalentMelee6.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee6.TabIndex = 53;
+            // 
+            // pictureBox46
+            // 
+            this.pictureBox46.Image = global::SoG_SGreader.Properties.Resources.melee_bloodthirst;
+            this.pictureBox46.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox46.Location = new System.Drawing.Point(157, 297);
+            this.pictureBox46.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox46.Name = "pictureBox46";
+            this.pictureBox46.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox46.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox46.TabIndex = 64;
+            this.pictureBox46.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox46, "BloodThirst");
+            // 
+            // pictureBox41
+            // 
+            this.pictureBox41.Image = global::SoG_SGreader.Properties.Resources.melee_knowledgeispower;
+            this.pictureBox41.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox41.Location = new System.Drawing.Point(157, 163);
+            this.pictureBox41.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox41.Name = "pictureBox41";
+            this.pictureBox41.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox41.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox41.TabIndex = 54;
+            this.pictureBox41.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox41, "KnowledgeIsPower");
             // 
             // numTalentMelee12
             // 
@@ -2760,6 +3269,32 @@ namespace SoG_SGreader
             this.numTalentMelee7.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee7.TabIndex = 55;
             // 
+            // pictureBox47
+            // 
+            this.pictureBox47.Image = global::SoG_SGreader.Properties.Resources.melee_combostarter;
+            this.pictureBox47.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox47.Location = new System.Drawing.Point(275, 297);
+            this.pictureBox47.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox47.Name = "pictureBox47";
+            this.pictureBox47.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox47.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox47.TabIndex = 66;
+            this.pictureBox47.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox47, "ComboStarter");
+            // 
+            // pictureBox42
+            // 
+            this.pictureBox42.Image = global::SoG_SGreader.Properties.Resources.melee_wit;
+            this.pictureBox42.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox42.Location = new System.Drawing.Point(275, 163);
+            this.pictureBox42.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox42.Name = "pictureBox42";
+            this.pictureBox42.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox42.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox42.TabIndex = 56;
+            this.pictureBox42.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox42, "Wit");
+            // 
             // numTalentMelee3
             // 
             this.numTalentMelee3.Location = new System.Drawing.Point(403, 103);
@@ -2771,6 +3306,19 @@ namespace SoG_SGreader
             this.numTalentMelee3.Name = "numTalentMelee3";
             this.numTalentMelee3.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee3.TabIndex = 47;
+            // 
+            // pictureBox37
+            // 
+            this.pictureBox37.Image = global::SoG_SGreader.Properties.Resources.melee_burningweapon;
+            this.pictureBox37.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox37.Location = new System.Drawing.Point(403, 27);
+            this.pictureBox37.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox37.Name = "pictureBox37";
+            this.pictureBox37.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox37.TabIndex = 48;
+            this.pictureBox37.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox37, "BurningWeapon");
             // 
             // numTalentMelee4
             // 
@@ -2784,6 +3332,19 @@ namespace SoG_SGreader
             this.numTalentMelee4.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee4.TabIndex = 49;
             // 
+            // pictureBox38
+            // 
+            this.pictureBox38.Image = global::SoG_SGreader.Properties.Resources.melee_chillytouch;
+            this.pictureBox38.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox38.Location = new System.Drawing.Point(521, 27);
+            this.pictureBox38.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox38.Name = "pictureBox38";
+            this.pictureBox38.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox38.TabIndex = 50;
+            this.pictureBox38.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox38, "ChillyTouch");
+            // 
             // numTalentMelee0
             // 
             this.numTalentMelee0.Location = new System.Drawing.Point(29, 103);
@@ -2795,6 +3356,19 @@ namespace SoG_SGreader
             this.numTalentMelee0.Name = "numTalentMelee0";
             this.numTalentMelee0.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee0.TabIndex = 41;
+            // 
+            // pictureBox33
+            // 
+            this.pictureBox33.Image = global::SoG_SGreader.Properties.Resources.melee_strength;
+            this.pictureBox33.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox33.Location = new System.Drawing.Point(29, 27);
+            this.pictureBox33.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox33.Name = "pictureBox33";
+            this.pictureBox33.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox33.TabIndex = 42;
+            this.pictureBox33.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox33, "Strength");
             // 
             // numTalentMelee1
             // 
@@ -2808,6 +3382,19 @@ namespace SoG_SGreader
             this.numTalentMelee1.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee1.TabIndex = 43;
             // 
+            // pictureBox34
+            // 
+            this.pictureBox34.Image = global::SoG_SGreader.Properties.Resources.melee_fencer;
+            this.pictureBox34.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox34.Location = new System.Drawing.Point(157, 27);
+            this.pictureBox34.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox34.Name = "pictureBox34";
+            this.pictureBox34.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox34.TabIndex = 44;
+            this.pictureBox34.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox34, "Fencer");
+            // 
             // numTalentMelee2
             // 
             this.numTalentMelee2.Location = new System.Drawing.Point(275, 103);
@@ -2819,6 +3406,19 @@ namespace SoG_SGreader
             this.numTalentMelee2.Name = "numTalentMelee2";
             this.numTalentMelee2.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee2.TabIndex = 45;
+            // 
+            // pictureBox35
+            // 
+            this.pictureBox35.Image = global::SoG_SGreader.Properties.Resources.melee_brawler;
+            this.pictureBox35.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox35.Location = new System.Drawing.Point(275, 27);
+            this.pictureBox35.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox35.Name = "pictureBox35";
+            this.pictureBox35.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox35.TabIndex = 46;
+            this.pictureBox35.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox35, "Brawler");
             // 
             // tabTalentsMagic
             // 
@@ -2896,6 +3496,32 @@ namespace SoG_SGreader
             this.numTalentMagic8.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic8.TabIndex = 57;
             // 
+            // pictureBox48
+            // 
+            this.pictureBox48.Image = global::SoG_SGreader.Properties.Resources.magic_manaburn;
+            this.pictureBox48.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox48.Location = new System.Drawing.Point(403, 297);
+            this.pictureBox48.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox48.Name = "pictureBox48";
+            this.pictureBox48.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox48.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox48.TabIndex = 68;
+            this.pictureBox48.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox48, "Manaburn");
+            // 
+            // pictureBox49
+            // 
+            this.pictureBox49.Image = global::SoG_SGreader.Properties.Resources.magic_specialist;
+            this.pictureBox49.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox49.Location = new System.Drawing.Point(403, 163);
+            this.pictureBox49.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox49.Name = "pictureBox49";
+            this.pictureBox49.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox49.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox49.TabIndex = 58;
+            this.pictureBox49.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox49, "Specialist");
+            // 
             // numTalentMagic14
             // 
             this.numTalentMagic14.Location = new System.Drawing.Point(521, 373);
@@ -2919,6 +3545,32 @@ namespace SoG_SGreader
             this.numTalentMagic9.Name = "numTalentMagic9";
             this.numTalentMagic9.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic9.TabIndex = 59;
+            // 
+            // pictureBox50
+            // 
+            this.pictureBox50.Image = global::SoG_SGreader.Properties.Resources.magic_snapcast;
+            this.pictureBox50.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox50.Location = new System.Drawing.Point(521, 297);
+            this.pictureBox50.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox50.Name = "pictureBox50";
+            this.pictureBox50.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox50.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox50.TabIndex = 70;
+            this.pictureBox50.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox50, "SnapCast");
+            // 
+            // pictureBox51
+            // 
+            this.pictureBox51.Image = global::SoG_SGreader.Properties.Resources.magic_lastspark;
+            this.pictureBox51.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox51.Location = new System.Drawing.Point(521, 163);
+            this.pictureBox51.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox51.Name = "pictureBox51";
+            this.pictureBox51.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox51.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox51.TabIndex = 60;
+            this.pictureBox51.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox51, "LastSpark");
             // 
             // numTalentMagic10
             // 
@@ -2944,6 +3596,32 @@ namespace SoG_SGreader
             this.numTalentMagic5.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic5.TabIndex = 51;
             // 
+            // pictureBox52
+            // 
+            this.pictureBox52.Image = global::SoG_SGreader.Properties.Resources.magic_wandmaster;
+            this.pictureBox52.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox52.Location = new System.Drawing.Point(29, 297);
+            this.pictureBox52.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox52.Name = "pictureBox52";
+            this.pictureBox52.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox52.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox52.TabIndex = 62;
+            this.pictureBox52.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox52, "WandMaster");
+            // 
+            // pictureBox53
+            // 
+            this.pictureBox53.Image = global::SoG_SGreader.Properties.Resources.magic_concentration;
+            this.pictureBox53.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox53.Location = new System.Drawing.Point(29, 163);
+            this.pictureBox53.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox53.Name = "pictureBox53";
+            this.pictureBox53.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox53.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox53.TabIndex = 52;
+            this.pictureBox53.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox53, "Concentration");
+            // 
             // numTalentMagic11
             // 
             this.numTalentMagic11.Location = new System.Drawing.Point(157, 373);
@@ -2967,6 +3645,32 @@ namespace SoG_SGreader
             this.numTalentMagic6.Name = "numTalentMagic6";
             this.numTalentMagic6.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic6.TabIndex = 53;
+            // 
+            // pictureBox54
+            // 
+            this.pictureBox54.Image = global::SoG_SGreader.Properties.Resources.magic_arcanecollar;
+            this.pictureBox54.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox54.Location = new System.Drawing.Point(157, 297);
+            this.pictureBox54.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox54.Name = "pictureBox54";
+            this.pictureBox54.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox54.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox54.TabIndex = 64;
+            this.pictureBox54.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox54, "ArcaneCollar");
+            // 
+            // pictureBox55
+            // 
+            this.pictureBox55.Image = global::SoG_SGreader.Properties.Resources.magic_turtle;
+            this.pictureBox55.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox55.Location = new System.Drawing.Point(157, 163);
+            this.pictureBox55.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox55.Name = "pictureBox55";
+            this.pictureBox55.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox55.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox55.TabIndex = 54;
+            this.pictureBox55.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox55, "Turtle");
             // 
             // numTalentMagic12
             // 
@@ -2992,6 +3696,32 @@ namespace SoG_SGreader
             this.numTalentMagic7.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic7.TabIndex = 55;
             // 
+            // pictureBox56
+            // 
+            this.pictureBox56.Image = global::SoG_SGreader.Properties.Resources.magic_cripplingblast;
+            this.pictureBox56.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox56.Location = new System.Drawing.Point(275, 297);
+            this.pictureBox56.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox56.Name = "pictureBox56";
+            this.pictureBox56.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox56.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox56.TabIndex = 66;
+            this.pictureBox56.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox56, "CripplingBlast");
+            // 
+            // pictureBox57
+            // 
+            this.pictureBox57.Image = global::SoG_SGreader.Properties.Resources.magic_soulsiphon;
+            this.pictureBox57.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox57.Location = new System.Drawing.Point(275, 163);
+            this.pictureBox57.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox57.Name = "pictureBox57";
+            this.pictureBox57.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox57.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox57.TabIndex = 56;
+            this.pictureBox57.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox57, "SoulEater");
+            // 
             // numTalentMagic3
             // 
             this.numTalentMagic3.Location = new System.Drawing.Point(403, 103);
@@ -3003,6 +3733,19 @@ namespace SoG_SGreader
             this.numTalentMagic3.Name = "numTalentMagic3";
             this.numTalentMagic3.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic3.TabIndex = 47;
+            // 
+            // pictureBox58
+            // 
+            this.pictureBox58.Image = global::SoG_SGreader.Properties.Resources.magic_prismatic;
+            this.pictureBox58.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox58.Location = new System.Drawing.Point(403, 27);
+            this.pictureBox58.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox58.Name = "pictureBox58";
+            this.pictureBox58.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox58.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox58.TabIndex = 48;
+            this.pictureBox58.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox58, "Prismatic");
             // 
             // numTalentMagic4
             // 
@@ -3016,6 +3759,19 @@ namespace SoG_SGreader
             this.numTalentMagic4.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic4.TabIndex = 49;
             // 
+            // pictureBox59
+            // 
+            this.pictureBox59.Image = global::SoG_SGreader.Properties.Resources.magic_battlemage;
+            this.pictureBox59.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox59.Location = new System.Drawing.Point(521, 27);
+            this.pictureBox59.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox59.Name = "pictureBox59";
+            this.pictureBox59.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox59.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox59.TabIndex = 50;
+            this.pictureBox59.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox59, "Battlemage");
+            // 
             // numTalentMagic0
             // 
             this.numTalentMagic0.Location = new System.Drawing.Point(29, 103);
@@ -3027,6 +3783,19 @@ namespace SoG_SGreader
             this.numTalentMagic0.Name = "numTalentMagic0";
             this.numTalentMagic0.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic0.TabIndex = 41;
+            // 
+            // pictureBox60
+            // 
+            this.pictureBox60.Image = global::SoG_SGreader.Properties.Resources.magic_intelligence;
+            this.pictureBox60.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox60.Location = new System.Drawing.Point(29, 27);
+            this.pictureBox60.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox60.Name = "pictureBox60";
+            this.pictureBox60.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox60.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox60.TabIndex = 42;
+            this.pictureBox60.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox60, "Intelligence");
             // 
             // numTalentMagic1
             // 
@@ -3040,6 +3809,19 @@ namespace SoG_SGreader
             this.numTalentMagic1.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic1.TabIndex = 43;
             // 
+            // pictureBox61
+            // 
+            this.pictureBox61.Image = global::SoG_SGreader.Properties.Resources.magic_fasttalker;
+            this.pictureBox61.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox61.Location = new System.Drawing.Point(157, 27);
+            this.pictureBox61.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox61.Name = "pictureBox61";
+            this.pictureBox61.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox61.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox61.TabIndex = 44;
+            this.pictureBox61.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox61, "FastTalker");
+            // 
             // numTalentMagic2
             // 
             this.numTalentMagic2.Location = new System.Drawing.Point(275, 103);
@@ -3052,6 +3834,19 @@ namespace SoG_SGreader
             this.numTalentMagic2.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic2.TabIndex = 45;
             // 
+            // pictureBox62
+            // 
+            this.pictureBox62.Image = global::SoG_SGreader.Properties.Resources.magic_arcanecharge;
+            this.pictureBox62.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox62.Location = new System.Drawing.Point(275, 27);
+            this.pictureBox62.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox62.Name = "pictureBox62";
+            this.pictureBox62.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox62.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox62.TabIndex = 46;
+            this.pictureBox62.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox62, "ArcaneCharge");
+            // 
             // tabTalentsGeneral
             // 
             this.tabTalentsGeneral.Controls.Add(this.label1);
@@ -3063,6 +3858,16 @@ namespace SoG_SGreader
             this.tabTalentsGeneral.TabIndex = 5;
             this.tabTalentsGeneral.Text = "Talents: General";
             this.tabTalentsGeneral.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 446);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(391, 60);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "Notes:\r\n- SteadyDefense on level 5, will make your game crash\r\n- FineTaste max le" +
+    "vel is 3";
             // 
             // groupBox5
             // 
@@ -3129,6 +3934,19 @@ namespace SoG_SGreader
             this.numTalentGeneral20.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral20.TabIndex = 116;
             // 
+            // pictureBox78
+            // 
+            this.pictureBox78.Image = global::SoG_SGreader.Properties.Resources.general_alchemist;
+            this.pictureBox78.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox78.Location = new System.Drawing.Point(550, 297);
+            this.pictureBox78.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox78.Name = "pictureBox78";
+            this.pictureBox78.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox78.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox78.TabIndex = 117;
+            this.pictureBox78.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox78, "Alchemist");
+            // 
             // numTalentGeneral19
             // 
             this.numTalentGeneral19.Location = new System.Drawing.Point(460, 371);
@@ -3140,6 +3958,19 @@ namespace SoG_SGreader
             this.numTalentGeneral19.Name = "numTalentGeneral19";
             this.numTalentGeneral19.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral19.TabIndex = 114;
+            // 
+            // pictureBox79
+            // 
+            this.pictureBox79.Image = global::SoG_SGreader.Properties.Resources.general_finetaste;
+            this.pictureBox79.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox79.Location = new System.Drawing.Point(460, 297);
+            this.pictureBox79.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox79.Name = "pictureBox79";
+            this.pictureBox79.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox79.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox79.TabIndex = 115;
+            this.pictureBox79.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox79, "FineTaste");
             // 
             // numTalentGeneral18
             // 
@@ -3153,6 +3984,19 @@ namespace SoG_SGreader
             this.numTalentGeneral18.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral18.TabIndex = 112;
             // 
+            // pictureBox80
+            // 
+            this.pictureBox80.Image = global::SoG_SGreader.Properties.Resources.general_quickreflex;
+            this.pictureBox80.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox80.Location = new System.Drawing.Point(370, 297);
+            this.pictureBox80.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox80.Name = "pictureBox80";
+            this.pictureBox80.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox80.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox80.TabIndex = 113;
+            this.pictureBox80.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox80, "QuickReflexes");
+            // 
             // numTalentGeneral17
             // 
             this.numTalentGeneral17.Location = new System.Drawing.Point(280, 371);
@@ -3164,6 +4008,19 @@ namespace SoG_SGreader
             this.numTalentGeneral17.Name = "numTalentGeneral17";
             this.numTalentGeneral17.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral17.TabIndex = 110;
+            // 
+            // pictureBox81
+            // 
+            this.pictureBox81.Image = global::SoG_SGreader.Properties.Resources.general_efficientcounter;
+            this.pictureBox81.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox81.Location = new System.Drawing.Point(280, 297);
+            this.pictureBox81.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox81.Name = "pictureBox81";
+            this.pictureBox81.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox81.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox81.TabIndex = 111;
+            this.pictureBox81.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox81, "EfficientCounter");
             // 
             // numTalentGeneral16
             // 
@@ -3177,6 +4034,19 @@ namespace SoG_SGreader
             this.numTalentGeneral16.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral16.TabIndex = 108;
             // 
+            // pictureBox82
+            // 
+            this.pictureBox82.Image = global::SoG_SGreader.Properties.Resources.general_kineticenergy;
+            this.pictureBox82.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox82.Location = new System.Drawing.Point(190, 297);
+            this.pictureBox82.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox82.Name = "pictureBox82";
+            this.pictureBox82.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox82.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox82.TabIndex = 109;
+            this.pictureBox82.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox82, "KineticEnergy");
+            // 
             // numTalentGeneral15
             // 
             this.numTalentGeneral15.Location = new System.Drawing.Point(100, 371);
@@ -3188,6 +4058,19 @@ namespace SoG_SGreader
             this.numTalentGeneral15.Name = "numTalentGeneral15";
             this.numTalentGeneral15.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral15.TabIndex = 106;
+            // 
+            // pictureBox83
+            // 
+            this.pictureBox83.Image = global::SoG_SGreader.Properties.Resources.general_shieldbearer;
+            this.pictureBox83.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox83.Location = new System.Drawing.Point(100, 297);
+            this.pictureBox83.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox83.Name = "pictureBox83";
+            this.pictureBox83.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox83.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox83.TabIndex = 107;
+            this.pictureBox83.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox83, "ShieldBearer");
             // 
             // numTalentGeneral13
             // 
@@ -3213,6 +4096,32 @@ namespace SoG_SGreader
             this.numTalentGeneral6.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral6.TabIndex = 88;
             // 
+            // pictureBox65
+            // 
+            this.pictureBox65.Image = global::SoG_SGreader.Properties.Resources.general_arrowscavenger;
+            this.pictureBox65.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox65.Location = new System.Drawing.Point(550, 169);
+            this.pictureBox65.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox65.Name = "pictureBox65";
+            this.pictureBox65.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox65.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox65.TabIndex = 103;
+            this.pictureBox65.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox65, "AmmoScavenger");
+            // 
+            // pictureBox72
+            // 
+            this.pictureBox72.Image = global::SoG_SGreader.Properties.Resources.general_brutality;
+            this.pictureBox72.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox72.Location = new System.Drawing.Point(550, 27);
+            this.pictureBox72.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox72.Name = "pictureBox72";
+            this.pictureBox72.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox72.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox72.TabIndex = 89;
+            this.pictureBox72.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox72, "Brutality");
+            // 
             // numTalentGeneral12
             // 
             this.numTalentGeneral12.Location = new System.Drawing.Point(460, 243);
@@ -3236,6 +4145,32 @@ namespace SoG_SGreader
             this.numTalentGeneral5.Name = "numTalentGeneral5";
             this.numTalentGeneral5.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral5.TabIndex = 84;
+            // 
+            // pictureBox66
+            // 
+            this.pictureBox66.Image = global::SoG_SGreader.Properties.Resources.general_quickshot;
+            this.pictureBox66.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox66.Location = new System.Drawing.Point(460, 169);
+            this.pictureBox66.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox66.Name = "pictureBox66";
+            this.pictureBox66.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox66.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox66.TabIndex = 101;
+            this.pictureBox66.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox66, "QuickShot");
+            // 
+            // pictureBox69
+            // 
+            this.pictureBox69.Image = global::SoG_SGreader.Properties.Resources.general_surgeon;
+            this.pictureBox69.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox69.Location = new System.Drawing.Point(460, 27);
+            this.pictureBox69.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox69.Name = "pictureBox69";
+            this.pictureBox69.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox69.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox69.TabIndex = 85;
+            this.pictureBox69.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox69, "Surgeon");
             // 
             // numTalentGeneral11
             // 
@@ -3261,6 +4196,32 @@ namespace SoG_SGreader
             this.numTalentGeneral4.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral4.TabIndex = 82;
             // 
+            // pictureBox73
+            // 
+            this.pictureBox73.Image = global::SoG_SGreader.Properties.Resources.general_ladyluck;
+            this.pictureBox73.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox73.Location = new System.Drawing.Point(370, 169);
+            this.pictureBox73.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox73.Name = "pictureBox73";
+            this.pictureBox73.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox73.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox73.TabIndex = 99;
+            this.pictureBox73.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox73, "LadyLuck");
+            // 
+            // pictureBox70
+            // 
+            this.pictureBox70.Image = global::SoG_SGreader.Properties.Resources.general_metabolism;
+            this.pictureBox70.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox70.Location = new System.Drawing.Point(370, 27);
+            this.pictureBox70.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox70.Name = "pictureBox70";
+            this.pictureBox70.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox70.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox70.TabIndex = 83;
+            this.pictureBox70.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox70, "Metabolism");
+            // 
             // numTalentGeneral10
             // 
             this.numTalentGeneral10.Location = new System.Drawing.Point(280, 243);
@@ -3284,6 +4245,32 @@ namespace SoG_SGreader
             this.numTalentGeneral3.Name = "numTalentGeneral3";
             this.numTalentGeneral3.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral3.TabIndex = 80;
+            // 
+            // pictureBox74
+            // 
+            this.pictureBox74.Image = global::SoG_SGreader.Properties.Resources.general_unknown;
+            this.pictureBox74.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox74.Location = new System.Drawing.Point(280, 169);
+            this.pictureBox74.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox74.Name = "pictureBox74";
+            this.pictureBox74.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox74.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox74.TabIndex = 97;
+            this.pictureBox74.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox74, "SteadyDefense");
+            // 
+            // pictureBox71
+            // 
+            this.pictureBox71.Image = global::SoG_SGreader.Properties.Resources.general_endurance;
+            this.pictureBox71.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox71.Location = new System.Drawing.Point(280, 27);
+            this.pictureBox71.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox71.Name = "pictureBox71";
+            this.pictureBox71.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox71.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox71.TabIndex = 81;
+            this.pictureBox71.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox71, "Endurance");
             // 
             // numTalentGeneral9
             // 
@@ -3309,6 +4296,32 @@ namespace SoG_SGreader
             this.numTalentGeneral2.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral2.TabIndex = 78;
             // 
+            // pictureBox76
+            // 
+            this.pictureBox76.Image = global::SoG_SGreader.Properties.Resources.general_laststand;
+            this.pictureBox76.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox76.Location = new System.Drawing.Point(190, 169);
+            this.pictureBox76.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox76.Name = "pictureBox76";
+            this.pictureBox76.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox76.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox76.TabIndex = 95;
+            this.pictureBox76.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox76, "LastStand");
+            // 
+            // pictureBox64
+            // 
+            this.pictureBox64.Image = global::SoG_SGreader.Properties.Resources.general_healthinsurance;
+            this.pictureBox64.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox64.Location = new System.Drawing.Point(190, 27);
+            this.pictureBox64.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox64.Name = "pictureBox64";
+            this.pictureBox64.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox64.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox64.TabIndex = 79;
+            this.pictureBox64.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox64, "HealthInsurance");
+            // 
             // numTalentGeneral8
             // 
             this.numTalentGeneral8.Location = new System.Drawing.Point(100, 243);
@@ -3332,6 +4345,32 @@ namespace SoG_SGreader
             this.numTalentGeneral1.Name = "numTalentGeneral1";
             this.numTalentGeneral1.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral1.TabIndex = 76;
+            // 
+            // pictureBox77
+            // 
+            this.pictureBox77.Image = global::SoG_SGreader.Properties.Resources.general_gotyoucovered;
+            this.pictureBox77.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox77.Location = new System.Drawing.Point(100, 169);
+            this.pictureBox77.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox77.Name = "pictureBox77";
+            this.pictureBox77.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox77.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox77.TabIndex = 93;
+            this.pictureBox77.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox77, "GotYouCovered");
+            // 
+            // pictureBox63
+            // 
+            this.pictureBox63.Image = global::SoG_SGreader.Properties.Resources.general_tenacious;
+            this.pictureBox63.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox63.Location = new System.Drawing.Point(100, 27);
+            this.pictureBox63.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox63.Name = "pictureBox63";
+            this.pictureBox63.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox63.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox63.TabIndex = 77;
+            this.pictureBox63.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox63, "Tenacious");
             // 
             // numTalentGeneral14
             // 
@@ -3357,6 +4396,32 @@ namespace SoG_SGreader
             this.numTalentGeneral7.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral7.TabIndex = 71;
             // 
+            // pictureBox67
+            // 
+            this.pictureBox67.Image = global::SoG_SGreader.Properties.Resources.general_multitask;
+            this.pictureBox67.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox67.Location = new System.Drawing.Point(10, 297);
+            this.pictureBox67.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox67.Name = "pictureBox67";
+            this.pictureBox67.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox67.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox67.TabIndex = 62;
+            this.pictureBox67.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox67, "Multitasking");
+            // 
+            // pictureBox68
+            // 
+            this.pictureBox68.Image = global::SoG_SGreader.Properties.Resources.general_utilityflow;
+            this.pictureBox68.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox68.Location = new System.Drawing.Point(10, 169);
+            this.pictureBox68.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox68.Name = "pictureBox68";
+            this.pictureBox68.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox68.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox68.TabIndex = 52;
+            this.pictureBox68.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox68, "UtilityFlow");
+            // 
             // numTalentGeneral0
             // 
             this.numTalentGeneral0.Location = new System.Drawing.Point(10, 103);
@@ -3368,6 +4433,19 @@ namespace SoG_SGreader
             this.numTalentGeneral0.Name = "numTalentGeneral0";
             this.numTalentGeneral0.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral0.TabIndex = 41;
+            // 
+            // pictureBox75
+            // 
+            this.pictureBox75.Image = global::SoG_SGreader.Properties.Resources.general_adaptable;
+            this.pictureBox75.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            this.pictureBox75.Location = new System.Drawing.Point(10, 27);
+            this.pictureBox75.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox75.Name = "pictureBox75";
+            this.pictureBox75.Size = new System.Drawing.Size(80, 64);
+            this.pictureBox75.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox75.TabIndex = 42;
+            this.pictureBox75.TabStop = false;
+            this.Tooltips.SetToolTip(this.pictureBox75, "Adaptable");
             // 
             // tabCards
             // 
@@ -4323,6 +5401,17 @@ namespace SoG_SGreader
             this.label27.TabIndex = 15;
             this.label27.Text = "Quckslot 1 (A):";
             // 
+            // cbOnlyLegalLevels
+            // 
+            this.cbOnlyLegalLevels.AutoSize = true;
+            this.cbOnlyLegalLevels.Location = new System.Drawing.Point(573, 566);
+            this.cbOnlyLegalLevels.Name = "cbOnlyLegalLevels";
+            this.cbOnlyLegalLevels.Size = new System.Drawing.Size(146, 24);
+            this.cbOnlyLegalLevels.TabIndex = 21;
+            this.cbOnlyLegalLevels.Text = "Only legal levels";
+            this.cbOnlyLegalLevels.UseVisualStyleBackColor = true;
+            this.cbOnlyLegalLevels.CheckedChanged += new System.EventHandler(this.cbOnlyLegalMeleeSkills_CheckedChanged);
+            // 
             // msMenu
             // 
             this.msMenu.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
@@ -4432,1082 +5521,6 @@ namespace SoG_SGreader
             this.txtConsole.TabIndex = 28;
             this.txtConsole.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 446);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(391, 60);
-            this.label1.TabIndex = 44;
-            this.label1.Text = "Notes:\r\n- SteadyDefense on level 5, will make your game crash\r\n- FineTaste max le" +
-    "vel is 3";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::SoG_SGreader.Properties.Resources.icon_berserk;
-            this.pictureBox7.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox7.Location = new System.Drawing.Point(532, 52);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 19;
-            this.pictureBox7.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox7, "BerserkMode");
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = global::SoG_SGreader.Properties.Resources.icon_overhead;
-            this.pictureBox11.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox11.Location = new System.Drawing.Point(40, 52);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 11;
-            this.pictureBox11.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox11, "Overhead");
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::SoG_SGreader.Properties.Resources.icon_2hsmash;
-            this.pictureBox8.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox8.Location = new System.Drawing.Point(405, 52);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 17;
-            this.pictureBox8.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox8, "Smash");
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::SoG_SGreader.Properties.Resources.icon_swirl_clover;
-            this.pictureBox10.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox10.Location = new System.Drawing.Point(168, 52);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 13;
-            this.pictureBox10.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox10, "Spin");
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::SoG_SGreader.Properties.Resources.icon_2hthrow;
-            this.pictureBox9.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox9.Location = new System.Drawing.Point(286, 52);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 15;
-            this.pictureBox9.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox9, "Throw");
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SoG_SGreader.Properties.Resources.icon_stinger_clover;
-            this.pictureBox1.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox1.Location = new System.Drawing.Point(40, 55);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox1, "Stinger");
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::SoG_SGreader.Properties.Resources.icon_millionstabs;
-            this.pictureBox2.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox2.Location = new System.Drawing.Point(168, 55);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox2, "MillionStabs");
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::SoG_SGreader.Properties.Resources.icon_soulstrike;
-            this.pictureBox4.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox4.Location = new System.Drawing.Point(286, 55);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 5;
-            this.pictureBox4.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox4, "SpiritSlash");
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::SoG_SGreader.Properties.Resources.icon_shadowclone;
-            this.pictureBox5.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox5.Location = new System.Drawing.Point(405, 55);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 7;
-            this.pictureBox5.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox5, "ShadowClone");
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::SoG_SGreader.Properties.Resources.icon_dodgingstrike;
-            this.pictureBox6.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox6.Location = new System.Drawing.Point(532, 55);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 9;
-            this.pictureBox6.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox6, "QuickCounter");
-            // 
-            // pictureBox21
-            // 
-            this.pictureBox21.Image = global::SoG_SGreader.Properties.Resources.icon_statictouch;
-            this.pictureBox21.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox21.Location = new System.Drawing.Point(219, 55);
-            this.pictureBox21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox21.TabIndex = 11;
-            this.pictureBox21.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox21, "StaticTouch");
-            // 
-            // pictureBox22
-            // 
-            this.pictureBox22.Image = global::SoG_SGreader.Properties.Resources.icon_summoncloud;
-            this.pictureBox22.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox22.Location = new System.Drawing.Point(124, 55);
-            this.pictureBox22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox22.TabIndex = 9;
-            this.pictureBox22.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox22, "SummonCloud");
-            // 
-            // pictureBox23
-            // 
-            this.pictureBox23.Image = global::SoG_SGreader.Properties.Resources.icon_chainlightning;
-            this.pictureBox23.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox23.Location = new System.Drawing.Point(28, 55);
-            this.pictureBox23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox23.TabIndex = 7;
-            this.pictureBox23.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox23, "ChainLightning");
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.Image = global::SoG_SGreader.Properties.Resources.icon_swarm;
-            this.pictureBox18.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox18.Location = new System.Drawing.Point(219, 55);
-            this.pictureBox18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox18.TabIndex = 11;
-            this.pictureBox18.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox18, "InsectSwarm");
-            // 
-            // pictureBox19
-            // 
-            this.pictureBox19.Image = global::SoG_SGreader.Properties.Resources.icon_plantsummon;
-            this.pictureBox19.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox19.Location = new System.Drawing.Point(124, 55);
-            this.pictureBox19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox19.TabIndex = 9;
-            this.pictureBox19.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox19, "SummonPlant");
-            // 
-            // pictureBox20
-            // 
-            this.pictureBox20.Image = global::SoG_SGreader.Properties.Resources.icon_earthspike;
-            this.pictureBox20.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox20.Location = new System.Drawing.Point(28, 55);
-            this.pictureBox20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox20.TabIndex = 7;
-            this.pictureBox20.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox20, "EarthSpike");
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Image = global::SoG_SGreader.Properties.Resources.icon_frosty;
-            this.pictureBox15.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox15.Location = new System.Drawing.Point(219, 55);
-            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox15.TabIndex = 11;
-            this.pictureBox15.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox15, "FrostyFriend");
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.Image = global::SoG_SGreader.Properties.Resources.icon_frostnova_clover;
-            this.pictureBox16.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox16.Location = new System.Drawing.Point(124, 55);
-            this.pictureBox16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox16.TabIndex = 9;
-            this.pictureBox16.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox16, "IceNova");
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.Image = global::SoG_SGreader.Properties.Resources.icon_icespikes;
-            this.pictureBox17.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox17.Location = new System.Drawing.Point(28, 55);
-            this.pictureBox17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox17.TabIndex = 7;
-            this.pictureBox17.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox17, "IceSpikes");
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.Image = global::SoG_SGreader.Properties.Resources.icon_flamethrower;
-            this.pictureBox14.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox14.Location = new System.Drawing.Point(219, 55);
-            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox14.TabIndex = 11;
-            this.pictureBox14.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox14, "Flamethrower");
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = global::SoG_SGreader.Properties.Resources.icon_meteor;
-            this.pictureBox13.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox13.Location = new System.Drawing.Point(124, 55);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 9;
-            this.pictureBox13.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox13, "Meteor");
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = global::SoG_SGreader.Properties.Resources.icon_fireball;
-            this.pictureBox12.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox12.Location = new System.Drawing.Point(28, 55);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 7;
-            this.pictureBox12.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox12, "Fireball");
-            // 
-            // pictureBox30
-            // 
-            this.pictureBox30.Image = global::SoG_SGreader.Properties.Resources.icon_dmgup;
-            this.pictureBox30.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox30.Location = new System.Drawing.Point(160, 29);
-            this.pictureBox30.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox30.Name = "pictureBox30";
-            this.pictureBox30.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox30.TabIndex = 1;
-            this.pictureBox30.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox30, "BuffATK");
-            // 
-            // pictureBox31
-            // 
-            this.pictureBox31.Image = global::SoG_SGreader.Properties.Resources.icon_speedup;
-            this.pictureBox31.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox31.Location = new System.Drawing.Point(288, 29);
-            this.pictureBox31.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox31.Name = "pictureBox31";
-            this.pictureBox31.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox31.TabIndex = 3;
-            this.pictureBox31.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox31, "BuffSPD");
-            // 
-            // pictureBox32
-            // 
-            this.pictureBox32.Image = global::SoG_SGreader.Properties.Resources.icon_protect_clover;
-            this.pictureBox32.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox32.Location = new System.Drawing.Point(406, 29);
-            this.pictureBox32.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox32.Name = "pictureBox32";
-            this.pictureBox32.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox32.TabIndex = 5;
-            this.pictureBox32.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox32, "BuffDEF");
-            // 
-            // pictureBox27
-            // 
-            this.pictureBox27.Image = global::SoG_SGreader.Properties.Resources.icon_utility_blink;
-            this.pictureBox27.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox27.Location = new System.Drawing.Point(160, 29);
-            this.pictureBox27.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox27.Name = "pictureBox27";
-            this.pictureBox27.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox27.TabIndex = 1;
-            this.pictureBox27.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox27, "Blink");
-            // 
-            // pictureBox28
-            // 
-            this.pictureBox28.Image = global::SoG_SGreader.Properties.Resources.icon_utility_focus;
-            this.pictureBox28.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox28.Location = new System.Drawing.Point(288, 29);
-            this.pictureBox28.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox28.Name = "pictureBox28";
-            this.pictureBox28.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox28.TabIndex = 3;
-            this.pictureBox28.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox28, "Focus");
-            // 
-            // pictureBox29
-            // 
-            this.pictureBox29.Image = global::SoG_SGreader.Properties.Resources.icon_utility_barrier;
-            this.pictureBox29.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox29.Location = new System.Drawing.Point(406, 29);
-            this.pictureBox29.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox29.Name = "pictureBox29";
-            this.pictureBox29.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox29.TabIndex = 5;
-            this.pictureBox29.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox29, "Barrier");
-            // 
-            // pictureBox24
-            // 
-            this.pictureBox24.Image = global::SoG_SGreader.Properties.Resources.icon_utility_deathmark;
-            this.pictureBox24.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox24.Location = new System.Drawing.Point(160, 29);
-            this.pictureBox24.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox24.Name = "pictureBox24";
-            this.pictureBox24.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox24.TabIndex = 1;
-            this.pictureBox24.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox24, "DeathMark");
-            // 
-            // pictureBox25
-            // 
-            this.pictureBox25.Image = global::SoG_SGreader.Properties.Resources.icon_utility_sleep;
-            this.pictureBox25.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox25.Location = new System.Drawing.Point(288, 29);
-            this.pictureBox25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox25.TabIndex = 3;
-            this.pictureBox25.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox25, "Stasis");
-            // 
-            // pictureBox26
-            // 
-            this.pictureBox26.Image = global::SoG_SGreader.Properties.Resources.icon_utility_taunt;
-            this.pictureBox26.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox26.Location = new System.Drawing.Point(406, 29);
-            this.pictureBox26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(69, 71);
-            this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox26.TabIndex = 5;
-            this.pictureBox26.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox26, "Taunt");
-            // 
-            // pictureBox43
-            // 
-            this.pictureBox43.Image = global::SoG_SGreader.Properties.Resources.melee_suddenstrike;
-            this.pictureBox43.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox43.Location = new System.Drawing.Point(403, 297);
-            this.pictureBox43.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox43.Name = "pictureBox43";
-            this.pictureBox43.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox43.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox43.TabIndex = 68;
-            this.pictureBox43.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox43, "SuddenStrike");
-            // 
-            // pictureBox36
-            // 
-            this.pictureBox36.Image = global::SoG_SGreader.Properties.Resources.melee_lastbreath;
-            this.pictureBox36.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox36.Location = new System.Drawing.Point(403, 163);
-            this.pictureBox36.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox36.Name = "pictureBox36";
-            this.pictureBox36.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox36.TabIndex = 58;
-            this.pictureBox36.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox36, "LastBreath");
-            // 
-            // pictureBox44
-            // 
-            this.pictureBox44.Image = global::SoG_SGreader.Properties.Resources.melee_riposte;
-            this.pictureBox44.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox44.Location = new System.Drawing.Point(521, 297);
-            this.pictureBox44.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox44.Name = "pictureBox44";
-            this.pictureBox44.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox44.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox44.TabIndex = 70;
-            this.pictureBox44.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox44, "Riposte");
-            // 
-            // pictureBox39
-            // 
-            this.pictureBox39.Image = global::SoG_SGreader.Properties.Resources.melee_backhanded;
-            this.pictureBox39.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox39.Location = new System.Drawing.Point(521, 163);
-            this.pictureBox39.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox39.Name = "pictureBox39";
-            this.pictureBox39.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox39.TabIndex = 60;
-            this.pictureBox39.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox39, "Backhander");
-            // 
-            // pictureBox45
-            // 
-            this.pictureBox45.Image = global::SoG_SGreader.Properties.Resources.melee_insultinjury;
-            this.pictureBox45.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox45.Location = new System.Drawing.Point(29, 297);
-            this.pictureBox45.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox45.Name = "pictureBox45";
-            this.pictureBox45.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox45.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox45.TabIndex = 62;
-            this.pictureBox45.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox45, "InsultToInjury");
-            // 
-            // pictureBox40
-            // 
-            this.pictureBox40.Image = global::SoG_SGreader.Properties.Resources.melee_secondbreath;
-            this.pictureBox40.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox40.Location = new System.Drawing.Point(29, 163);
-            this.pictureBox40.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox40.Name = "pictureBox40";
-            this.pictureBox40.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox40.TabIndex = 52;
-            this.pictureBox40.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox40, "SecondWind");
-            // 
-            // pictureBox46
-            // 
-            this.pictureBox46.Image = global::SoG_SGreader.Properties.Resources.melee_bloodthirst;
-            this.pictureBox46.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox46.Location = new System.Drawing.Point(157, 297);
-            this.pictureBox46.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox46.Name = "pictureBox46";
-            this.pictureBox46.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox46.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox46.TabIndex = 64;
-            this.pictureBox46.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox46, "BloodThirst");
-            // 
-            // pictureBox41
-            // 
-            this.pictureBox41.Image = global::SoG_SGreader.Properties.Resources.melee_knowledgeispower;
-            this.pictureBox41.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox41.Location = new System.Drawing.Point(157, 163);
-            this.pictureBox41.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox41.Name = "pictureBox41";
-            this.pictureBox41.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox41.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox41.TabIndex = 54;
-            this.pictureBox41.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox41, "KnowledgeIsPower");
-            // 
-            // pictureBox47
-            // 
-            this.pictureBox47.Image = global::SoG_SGreader.Properties.Resources.melee_combostarter;
-            this.pictureBox47.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox47.Location = new System.Drawing.Point(275, 297);
-            this.pictureBox47.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox47.Name = "pictureBox47";
-            this.pictureBox47.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox47.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox47.TabIndex = 66;
-            this.pictureBox47.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox47, "ComboStarter");
-            // 
-            // pictureBox42
-            // 
-            this.pictureBox42.Image = global::SoG_SGreader.Properties.Resources.melee_wit;
-            this.pictureBox42.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox42.Location = new System.Drawing.Point(275, 163);
-            this.pictureBox42.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox42.Name = "pictureBox42";
-            this.pictureBox42.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox42.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox42.TabIndex = 56;
-            this.pictureBox42.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox42, "Wit");
-            // 
-            // pictureBox37
-            // 
-            this.pictureBox37.Image = global::SoG_SGreader.Properties.Resources.melee_burningweapon;
-            this.pictureBox37.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox37.Location = new System.Drawing.Point(403, 27);
-            this.pictureBox37.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox37.Name = "pictureBox37";
-            this.pictureBox37.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox37.TabIndex = 48;
-            this.pictureBox37.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox37, "BurningWeapon");
-            // 
-            // pictureBox38
-            // 
-            this.pictureBox38.Image = global::SoG_SGreader.Properties.Resources.melee_chillytouch;
-            this.pictureBox38.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox38.Location = new System.Drawing.Point(521, 27);
-            this.pictureBox38.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox38.Name = "pictureBox38";
-            this.pictureBox38.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox38.TabIndex = 50;
-            this.pictureBox38.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox38, "ChillyTouch");
-            // 
-            // pictureBox33
-            // 
-            this.pictureBox33.Image = global::SoG_SGreader.Properties.Resources.melee_strength;
-            this.pictureBox33.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox33.Location = new System.Drawing.Point(29, 27);
-            this.pictureBox33.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox33.Name = "pictureBox33";
-            this.pictureBox33.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox33.TabIndex = 42;
-            this.pictureBox33.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox33, "Strength");
-            // 
-            // pictureBox34
-            // 
-            this.pictureBox34.Image = global::SoG_SGreader.Properties.Resources.melee_fencer;
-            this.pictureBox34.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox34.Location = new System.Drawing.Point(157, 27);
-            this.pictureBox34.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox34.Name = "pictureBox34";
-            this.pictureBox34.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox34.TabIndex = 44;
-            this.pictureBox34.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox34, "Fencer");
-            // 
-            // pictureBox35
-            // 
-            this.pictureBox35.Image = global::SoG_SGreader.Properties.Resources.melee_brawler;
-            this.pictureBox35.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox35.Location = new System.Drawing.Point(275, 27);
-            this.pictureBox35.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox35.Name = "pictureBox35";
-            this.pictureBox35.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox35.TabIndex = 46;
-            this.pictureBox35.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox35, "Brawler");
-            // 
-            // pictureBox48
-            // 
-            this.pictureBox48.Image = global::SoG_SGreader.Properties.Resources.magic_manaburn;
-            this.pictureBox48.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox48.Location = new System.Drawing.Point(403, 297);
-            this.pictureBox48.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox48.Name = "pictureBox48";
-            this.pictureBox48.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox48.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox48.TabIndex = 68;
-            this.pictureBox48.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox48, "Manaburn");
-            // 
-            // pictureBox49
-            // 
-            this.pictureBox49.Image = global::SoG_SGreader.Properties.Resources.magic_specialist;
-            this.pictureBox49.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox49.Location = new System.Drawing.Point(403, 163);
-            this.pictureBox49.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox49.Name = "pictureBox49";
-            this.pictureBox49.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox49.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox49.TabIndex = 58;
-            this.pictureBox49.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox49, "Specialist");
-            // 
-            // pictureBox50
-            // 
-            this.pictureBox50.Image = global::SoG_SGreader.Properties.Resources.magic_snapcast;
-            this.pictureBox50.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox50.Location = new System.Drawing.Point(521, 297);
-            this.pictureBox50.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox50.Name = "pictureBox50";
-            this.pictureBox50.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox50.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox50.TabIndex = 70;
-            this.pictureBox50.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox50, "SnapCast");
-            // 
-            // pictureBox51
-            // 
-            this.pictureBox51.Image = global::SoG_SGreader.Properties.Resources.magic_lastspark;
-            this.pictureBox51.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox51.Location = new System.Drawing.Point(521, 163);
-            this.pictureBox51.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox51.Name = "pictureBox51";
-            this.pictureBox51.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox51.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox51.TabIndex = 60;
-            this.pictureBox51.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox51, "LastSpark");
-            // 
-            // pictureBox52
-            // 
-            this.pictureBox52.Image = global::SoG_SGreader.Properties.Resources.magic_wandmaster;
-            this.pictureBox52.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox52.Location = new System.Drawing.Point(29, 297);
-            this.pictureBox52.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox52.Name = "pictureBox52";
-            this.pictureBox52.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox52.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox52.TabIndex = 62;
-            this.pictureBox52.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox52, "WandMaster");
-            // 
-            // pictureBox53
-            // 
-            this.pictureBox53.Image = global::SoG_SGreader.Properties.Resources.magic_concentration;
-            this.pictureBox53.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox53.Location = new System.Drawing.Point(29, 163);
-            this.pictureBox53.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox53.Name = "pictureBox53";
-            this.pictureBox53.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox53.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox53.TabIndex = 52;
-            this.pictureBox53.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox53, "Concentration");
-            // 
-            // pictureBox54
-            // 
-            this.pictureBox54.Image = global::SoG_SGreader.Properties.Resources.magic_arcanecollar;
-            this.pictureBox54.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox54.Location = new System.Drawing.Point(157, 297);
-            this.pictureBox54.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox54.Name = "pictureBox54";
-            this.pictureBox54.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox54.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox54.TabIndex = 64;
-            this.pictureBox54.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox54, "ArcaneCollar");
-            // 
-            // pictureBox55
-            // 
-            this.pictureBox55.Image = global::SoG_SGreader.Properties.Resources.magic_turtle;
-            this.pictureBox55.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox55.Location = new System.Drawing.Point(157, 163);
-            this.pictureBox55.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox55.Name = "pictureBox55";
-            this.pictureBox55.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox55.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox55.TabIndex = 54;
-            this.pictureBox55.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox55, "Turtle");
-            // 
-            // pictureBox56
-            // 
-            this.pictureBox56.Image = global::SoG_SGreader.Properties.Resources.magic_cripplingblast;
-            this.pictureBox56.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox56.Location = new System.Drawing.Point(275, 297);
-            this.pictureBox56.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox56.Name = "pictureBox56";
-            this.pictureBox56.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox56.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox56.TabIndex = 66;
-            this.pictureBox56.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox56, "CripplingBlast");
-            // 
-            // pictureBox57
-            // 
-            this.pictureBox57.Image = global::SoG_SGreader.Properties.Resources.magic_soulsiphon;
-            this.pictureBox57.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox57.Location = new System.Drawing.Point(275, 163);
-            this.pictureBox57.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox57.Name = "pictureBox57";
-            this.pictureBox57.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox57.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox57.TabIndex = 56;
-            this.pictureBox57.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox57, "SoulEater");
-            // 
-            // pictureBox58
-            // 
-            this.pictureBox58.Image = global::SoG_SGreader.Properties.Resources.magic_prismatic;
-            this.pictureBox58.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox58.Location = new System.Drawing.Point(403, 27);
-            this.pictureBox58.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox58.Name = "pictureBox58";
-            this.pictureBox58.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox58.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox58.TabIndex = 48;
-            this.pictureBox58.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox58, "Prismatic");
-            // 
-            // pictureBox59
-            // 
-            this.pictureBox59.Image = global::SoG_SGreader.Properties.Resources.magic_battlemage;
-            this.pictureBox59.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox59.Location = new System.Drawing.Point(521, 27);
-            this.pictureBox59.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox59.Name = "pictureBox59";
-            this.pictureBox59.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox59.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox59.TabIndex = 50;
-            this.pictureBox59.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox59, "Battlemage");
-            // 
-            // pictureBox60
-            // 
-            this.pictureBox60.Image = global::SoG_SGreader.Properties.Resources.magic_intelligence;
-            this.pictureBox60.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox60.Location = new System.Drawing.Point(29, 27);
-            this.pictureBox60.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox60.Name = "pictureBox60";
-            this.pictureBox60.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox60.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox60.TabIndex = 42;
-            this.pictureBox60.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox60, "Intelligence");
-            // 
-            // pictureBox61
-            // 
-            this.pictureBox61.Image = global::SoG_SGreader.Properties.Resources.magic_fasttalker;
-            this.pictureBox61.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox61.Location = new System.Drawing.Point(157, 27);
-            this.pictureBox61.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox61.Name = "pictureBox61";
-            this.pictureBox61.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox61.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox61.TabIndex = 44;
-            this.pictureBox61.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox61, "FastTalker");
-            // 
-            // pictureBox62
-            // 
-            this.pictureBox62.Image = global::SoG_SGreader.Properties.Resources.magic_arcanecharge;
-            this.pictureBox62.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox62.Location = new System.Drawing.Point(275, 27);
-            this.pictureBox62.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox62.Name = "pictureBox62";
-            this.pictureBox62.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox62.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox62.TabIndex = 46;
-            this.pictureBox62.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox62, "ArcaneCharge");
-            // 
-            // pictureBox78
-            // 
-            this.pictureBox78.Image = global::SoG_SGreader.Properties.Resources.general_alchemist;
-            this.pictureBox78.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox78.Location = new System.Drawing.Point(550, 297);
-            this.pictureBox78.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox78.Name = "pictureBox78";
-            this.pictureBox78.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox78.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox78.TabIndex = 117;
-            this.pictureBox78.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox78, "Alchemist");
-            // 
-            // pictureBox79
-            // 
-            this.pictureBox79.Image = global::SoG_SGreader.Properties.Resources.general_finetaste;
-            this.pictureBox79.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox79.Location = new System.Drawing.Point(460, 297);
-            this.pictureBox79.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox79.Name = "pictureBox79";
-            this.pictureBox79.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox79.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox79.TabIndex = 115;
-            this.pictureBox79.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox79, "FineTaste");
-            // 
-            // pictureBox80
-            // 
-            this.pictureBox80.Image = global::SoG_SGreader.Properties.Resources.general_quickreflex;
-            this.pictureBox80.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox80.Location = new System.Drawing.Point(370, 297);
-            this.pictureBox80.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox80.Name = "pictureBox80";
-            this.pictureBox80.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox80.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox80.TabIndex = 113;
-            this.pictureBox80.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox80, "QuickReflexes");
-            // 
-            // pictureBox81
-            // 
-            this.pictureBox81.Image = global::SoG_SGreader.Properties.Resources.general_efficientcounter;
-            this.pictureBox81.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox81.Location = new System.Drawing.Point(280, 297);
-            this.pictureBox81.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox81.Name = "pictureBox81";
-            this.pictureBox81.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox81.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox81.TabIndex = 111;
-            this.pictureBox81.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox81, "EfficientCounter");
-            // 
-            // pictureBox82
-            // 
-            this.pictureBox82.Image = global::SoG_SGreader.Properties.Resources.general_kineticenergy;
-            this.pictureBox82.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox82.Location = new System.Drawing.Point(190, 297);
-            this.pictureBox82.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox82.Name = "pictureBox82";
-            this.pictureBox82.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox82.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox82.TabIndex = 109;
-            this.pictureBox82.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox82, "KineticEnergy");
-            // 
-            // pictureBox83
-            // 
-            this.pictureBox83.Image = global::SoG_SGreader.Properties.Resources.general_shieldbearer;
-            this.pictureBox83.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox83.Location = new System.Drawing.Point(100, 297);
-            this.pictureBox83.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox83.Name = "pictureBox83";
-            this.pictureBox83.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox83.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox83.TabIndex = 107;
-            this.pictureBox83.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox83, "ShieldBearer");
-            // 
-            // pictureBox65
-            // 
-            this.pictureBox65.Image = global::SoG_SGreader.Properties.Resources.general_arrowscavenger;
-            this.pictureBox65.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox65.Location = new System.Drawing.Point(550, 169);
-            this.pictureBox65.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox65.Name = "pictureBox65";
-            this.pictureBox65.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox65.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox65.TabIndex = 103;
-            this.pictureBox65.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox65, "AmmoScavenger");
-            // 
-            // pictureBox72
-            // 
-            this.pictureBox72.Image = global::SoG_SGreader.Properties.Resources.general_brutality;
-            this.pictureBox72.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox72.Location = new System.Drawing.Point(550, 27);
-            this.pictureBox72.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox72.Name = "pictureBox72";
-            this.pictureBox72.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox72.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox72.TabIndex = 89;
-            this.pictureBox72.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox72, "Brutality");
-            // 
-            // pictureBox66
-            // 
-            this.pictureBox66.Image = global::SoG_SGreader.Properties.Resources.general_quickshot;
-            this.pictureBox66.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox66.Location = new System.Drawing.Point(460, 169);
-            this.pictureBox66.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox66.Name = "pictureBox66";
-            this.pictureBox66.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox66.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox66.TabIndex = 101;
-            this.pictureBox66.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox66, "QuickShot");
-            // 
-            // pictureBox69
-            // 
-            this.pictureBox69.Image = global::SoG_SGreader.Properties.Resources.general_surgeon;
-            this.pictureBox69.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox69.Location = new System.Drawing.Point(460, 27);
-            this.pictureBox69.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox69.Name = "pictureBox69";
-            this.pictureBox69.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox69.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox69.TabIndex = 85;
-            this.pictureBox69.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox69, "Surgeon");
-            // 
-            // pictureBox73
-            // 
-            this.pictureBox73.Image = global::SoG_SGreader.Properties.Resources.general_ladyluck;
-            this.pictureBox73.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox73.Location = new System.Drawing.Point(370, 169);
-            this.pictureBox73.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox73.Name = "pictureBox73";
-            this.pictureBox73.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox73.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox73.TabIndex = 99;
-            this.pictureBox73.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox73, "LadyLuck");
-            // 
-            // pictureBox70
-            // 
-            this.pictureBox70.Image = global::SoG_SGreader.Properties.Resources.general_metabolism;
-            this.pictureBox70.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox70.Location = new System.Drawing.Point(370, 27);
-            this.pictureBox70.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox70.Name = "pictureBox70";
-            this.pictureBox70.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox70.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox70.TabIndex = 83;
-            this.pictureBox70.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox70, "Metabolism");
-            // 
-            // pictureBox74
-            // 
-            this.pictureBox74.Image = global::SoG_SGreader.Properties.Resources.general_unknown;
-            this.pictureBox74.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox74.Location = new System.Drawing.Point(280, 169);
-            this.pictureBox74.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox74.Name = "pictureBox74";
-            this.pictureBox74.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox74.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox74.TabIndex = 97;
-            this.pictureBox74.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox74, "SteadyDefense");
-            // 
-            // pictureBox71
-            // 
-            this.pictureBox71.Image = global::SoG_SGreader.Properties.Resources.general_endurance;
-            this.pictureBox71.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox71.Location = new System.Drawing.Point(280, 27);
-            this.pictureBox71.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox71.Name = "pictureBox71";
-            this.pictureBox71.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox71.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox71.TabIndex = 81;
-            this.pictureBox71.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox71, "Endurance");
-            // 
-            // pictureBox76
-            // 
-            this.pictureBox76.Image = global::SoG_SGreader.Properties.Resources.general_laststand;
-            this.pictureBox76.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox76.Location = new System.Drawing.Point(190, 169);
-            this.pictureBox76.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox76.Name = "pictureBox76";
-            this.pictureBox76.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox76.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox76.TabIndex = 95;
-            this.pictureBox76.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox76, "LastStand");
-            // 
-            // pictureBox64
-            // 
-            this.pictureBox64.Image = global::SoG_SGreader.Properties.Resources.general_healthinsurance;
-            this.pictureBox64.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox64.Location = new System.Drawing.Point(190, 27);
-            this.pictureBox64.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox64.Name = "pictureBox64";
-            this.pictureBox64.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox64.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox64.TabIndex = 79;
-            this.pictureBox64.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox64, "HealthInsurance");
-            // 
-            // pictureBox77
-            // 
-            this.pictureBox77.Image = global::SoG_SGreader.Properties.Resources.general_gotyoucovered;
-            this.pictureBox77.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox77.Location = new System.Drawing.Point(100, 169);
-            this.pictureBox77.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox77.Name = "pictureBox77";
-            this.pictureBox77.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox77.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox77.TabIndex = 93;
-            this.pictureBox77.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox77, "GotYouCovered");
-            // 
-            // pictureBox63
-            // 
-            this.pictureBox63.Image = global::SoG_SGreader.Properties.Resources.general_tenacious;
-            this.pictureBox63.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox63.Location = new System.Drawing.Point(100, 27);
-            this.pictureBox63.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox63.Name = "pictureBox63";
-            this.pictureBox63.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox63.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox63.TabIndex = 77;
-            this.pictureBox63.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox63, "Tenacious");
-            // 
-            // pictureBox67
-            // 
-            this.pictureBox67.Image = global::SoG_SGreader.Properties.Resources.general_multitask;
-            this.pictureBox67.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox67.Location = new System.Drawing.Point(10, 297);
-            this.pictureBox67.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox67.Name = "pictureBox67";
-            this.pictureBox67.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox67.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox67.TabIndex = 62;
-            this.pictureBox67.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox67, "Multitasking");
-            // 
-            // pictureBox68
-            // 
-            this.pictureBox68.Image = global::SoG_SGreader.Properties.Resources.general_utilityflow;
-            this.pictureBox68.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox68.Location = new System.Drawing.Point(10, 169);
-            this.pictureBox68.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox68.Name = "pictureBox68";
-            this.pictureBox68.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox68.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox68.TabIndex = 52;
-            this.pictureBox68.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox68, "UtilityFlow");
-            // 
-            // pictureBox75
-            // 
-            this.pictureBox75.Image = global::SoG_SGreader.Properties.Resources.general_adaptable;
-            this.pictureBox75.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox75.Location = new System.Drawing.Point(10, 27);
-            this.pictureBox75.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox75.Name = "pictureBox75";
-            this.pictureBox75.Size = new System.Drawing.Size(80, 64);
-            this.pictureBox75.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox75.TabIndex = 42;
-            this.pictureBox75.TabStop = false;
-            this.Tooltips.SetToolTip(this.pictureBox75, "Adaptable");
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
@@ -5567,108 +5580,190 @@ namespace SoG_SGreader
             ((System.ComponentModel.ISupportInitialize)(this.numPetEnergy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPetHP)).EndInit();
             this.tabSkills.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
+            this.tabControlSkills.ResumeLayout(false);
             this.tabSkillsMelee.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee2h4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee2h3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee2h2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee2h1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee2h0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.groupBox10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee1h1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee1h0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee1h2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee1h3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMelee1h4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.tabSkillsMagic.ResumeLayout(false);
             this.groupBox15.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicA2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicA1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicA0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             this.groupBox14.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicE2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicE1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicE0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             this.groupBox13.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicI2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicI1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicI0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.groupBox12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicF2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicF1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSkillMagicF0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.tabSkillsUtility.ResumeLayout(false);
             this.groupBox18.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numUtilityE0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUtilityE1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUtilityE2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
             this.groupBox17.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numUtilityD0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUtilityD1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUtilityD2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
             this.groupBox16.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numUtilityO0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUtilityO1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUtilityO2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             this.tabTalentsMelee.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox43)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox40)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox46)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox41)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox47)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox42)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMelee2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
             this.tabTalentsMagic.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox50)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox51)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox52)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox53)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox54)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox55)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox56)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox57)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox58)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox59)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox60)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox61)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentMagic2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox62)).EndInit();
             this.tabTalentsGeneral.ResumeLayout(false);
             this.tabTalentsGeneral.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox78)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox79)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox80)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox81)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox82)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox83)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox65)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox72)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox66)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox69)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox73)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox70)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox74)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox71)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox76)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox64)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox77)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox63)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox67)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox68)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox75)).EndInit();
             this.tabCards.ResumeLayout(false);
             this.grpCards.ResumeLayout(false);
             this.grpCards.PerformLayout();
@@ -5702,88 +5797,6 @@ namespace SoG_SGreader
             this.grpQuickslots.PerformLayout();
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox43)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox40)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox46)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox41)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox47)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox42)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox50)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox51)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox52)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox53)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox54)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox55)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox56)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox57)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox58)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox59)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox60)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox61)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox62)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox78)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox79)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox80)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox81)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox82)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox83)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox65)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox72)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox66)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox69)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox73)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox70)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox74)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox71)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox76)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox64)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox77)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox63)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox67)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox68)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox75)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5930,7 +5943,7 @@ namespace SoG_SGreader
         private System.Windows.Forms.Label lblCollectorId;
         private System.Windows.Forms.NumericUpDown numGold;
         private System.Windows.Forms.Label lblGold;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabControlSkills;
         private System.Windows.Forms.TabPage tabSkillsMelee;
         private System.Windows.Forms.TabPage tabSkillsMagic;
         private System.Windows.Forms.TabPage tabSkillsUtility;
@@ -6182,5 +6195,6 @@ namespace SoG_SGreader
         private PixelBox pictureBox25;
         private PixelBox pictureBox26;
         private Label label1;
+        private CheckBox cbOnlyLegalLevels;
     }
 }

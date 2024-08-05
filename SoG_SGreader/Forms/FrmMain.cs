@@ -904,7 +904,7 @@ namespace SoG_SGreader
         private void TabControl1_DrawItem(object sender, DrawItemEventArgs e)  //Skills Menu, makes the Tabs go sidewards
         {
             SolidBrush brush = new SolidBrush(Color.Black); //monochrome brush
-            RectangleF tabTextArea = (RectangleF)tabControl1.GetTabRect(e.Index); //Drawing area
+            RectangleF tabTextArea = (RectangleF)tabControlSkills.GetTabRect(e.Index); //Drawing area
             StringFormat sf = new StringFormat
             {
                 LineAlignment = StringAlignment.Center,
@@ -912,7 +912,7 @@ namespace SoG_SGreader
             }; //Package text layout format information
 
             e.Graphics.DrawString(
-                tabControl1.Controls[e.Index].Text,
+                tabControlSkills.Controls[e.Index].Text,
                 SystemInformation.MenuFont,
                 brush,
                 tabTextArea,
@@ -1209,9 +1209,29 @@ namespace SoG_SGreader
             }
         }
 
-        private void cbSelectedItem_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbOnlyLegalMeleeSkills_CheckedChanged(object sender, EventArgs e)
         {
+            // if checked, only let user select up to the max legal skill level
+            // get the max legal skill level from the attribute
+            if (cbOnlyLegalLevels.Checked)
+            {
+                for (int i = 0; i != getSkillMappings().Length; i++)
+                {
+                    getSkillMappings()[i].Field.Maximum = Skill.GetMaxLevel(getSkillMappings()[i].SkillID);
+                }
+            }
+            else
+            {
+                for (int i = 0; i != getSkillMappings().Length; i++)
+                {
+                    getSkillMappings()[i].Field.Maximum = 255;
+                }
+            }
+        }
 
+        private void tabControlSkills_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tabControlSkills.SelectedTab.Controls.Add(cbOnlyLegalLevels);
         }
     }
 }

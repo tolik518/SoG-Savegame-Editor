@@ -1,10 +1,12 @@
-﻿namespace SoG_SGreader.Enum.Attribute
+﻿using System;
+
+namespace SoG_SGreader.Enum.Attribute
 {
-    public class SkillMaxLevelAttribute : System.Attribute
+    internal class SkillMaxLevelAttribute : System.Attribute
     {
         public int MaxLevel { get; }
 
-        public SkillMaxLevelAttribute(int maxLevel)
+        internal SkillMaxLevelAttribute(int maxLevel)
         {
             MaxLevel = maxLevel;
         }
