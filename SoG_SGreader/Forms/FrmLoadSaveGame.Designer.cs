@@ -104,10 +104,12 @@ namespace SoG_SGreader
             this.lstvSaveGames.FullRowSelect = true;
             this.lstvSaveGames.GridLines = true;
             this.lstvSaveGames.HideSelection = false;
+            this.lstvSaveGames.LabelWrap = false;
             this.lstvSaveGames.Location = new System.Drawing.Point(4, 2);
             this.lstvSaveGames.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lstvSaveGames.MultiSelect = false;
             this.lstvSaveGames.Name = "lstvSaveGames";
+            this.lstvSaveGames.Scrollable = false;
             this.lstvSaveGames.Size = new System.Drawing.Size(338, 281);
             this.lstvSaveGames.SmallImageList = this.imageList1;
             this.lstvSaveGames.TabIndex = 6;
@@ -130,7 +132,7 @@ namespace SoG_SGreader
             // columnCharName
             // 
             this.columnCharName.Text = "Character";
-            this.columnCharName.Width = 116;
+            this.columnCharName.Width = 235;
             // 
             // imageList1
             // 
@@ -147,8 +149,8 @@ namespace SoG_SGreader
             this.pictureBox1.Location = new System.Drawing.Point(354, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(176, 159);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.Size = new System.Drawing.Size(166, 164);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             // 
