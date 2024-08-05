@@ -814,8 +814,11 @@ namespace SoG_SGreader
         {
             if (lstPets.FocusedItem == null)
             {
+                txtPetNickname.Enabled = false;
                 return;
             }
+            txtPetNickname.Enabled = true;
+
 
             int index = lstPets.FocusedItem.Index;
             numPetHP.Value = Int32.Parse(lstPets.Items[index].SubItems[2].Text);
