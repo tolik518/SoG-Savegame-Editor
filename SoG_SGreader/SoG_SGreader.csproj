@@ -135,6 +135,7 @@
     <Compile Include="CustomControls\PixelBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Enum\Attribute\SkillMaxLevelAttribute.cs" />
     <Compile Include="Enum\SogFish.cs" />
     <Compile Include="Enum\SogFlag.cs" />
     <Compile Include="Enum\SogTreasureMap.cs" />
