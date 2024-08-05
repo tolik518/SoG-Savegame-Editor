@@ -105,8 +105,8 @@ namespace SoG_SGreader
         //was selected in the Type combobox
         private void QuickslotType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var items = Enum.GetNames(typeof(SogItem));
-            var skills = Enum.GetNames(typeof(SogSkill));
+            var items = System.Enum.GetNames(typeof(SogItem));
+            var skills = System.Enum.GetNames(typeof(SogSkill));
 
             for (int i = 0; i < 10; i++)
             {
@@ -127,8 +127,8 @@ namespace SoG_SGreader
 
         private void InitFields()
         {
-            var items = Enum.GetNames(typeof(SogItem));
-            var skills = Enum.GetNames(typeof(SogSkill));
+            var items = System.Enum.GetNames(typeof(SogItem));
+            var skills = System.Enum.GetNames(typeof(SogSkill));
 
             cbHat.DataSource = FilterItems(items, "Hat_");
             cbFacegear.DataSource = FilterItems(items, "Facegear_");
@@ -159,15 +159,15 @@ namespace SoG_SGreader
             cbSelectedItem.DataSource = items;
 
             //fill checkboxLists with all the values from the enums
-            cblstCards.DataSource = Enum.GetNames(typeof(SogEnemy));
-            cblstQuests.DataSource = Enum.GetNames(typeof(SogQuest));
-            cblstEnemiesSeens.DataSource = Enum.GetNames(typeof(SogEnemy));
-            cblstFlags.DataSource = Enum.GetNames(typeof(SogFlag));
-            cblstMaps.DataSource = Enum.GetNames(typeof(SogTreasureMap));
-            cblstTrophies.DataSource = Enum.GetNames(typeof(SogTrophy));
-            cblstItemsSeen.DataSource = Enum.GetNames(typeof(SogItem));
-            cblstItemsCrafted.DataSource = Enum.GetNames(typeof(SogItem));
-            cblstFishCaught.DataSource = Enum.GetNames(typeof(SogFish));
+            cblstCards.DataSource = System.Enum.GetNames(typeof(SogEnemy));
+            cblstQuests.DataSource = System.Enum.GetNames(typeof(SogQuest));
+            cblstEnemiesSeens.DataSource = System.Enum.GetNames(typeof(SogEnemy));
+            cblstFlags.DataSource = System.Enum.GetNames(typeof(SogFlag));
+            cblstMaps.DataSource = System.Enum.GetNames(typeof(SogTreasureMap));
+            cblstTrophies.DataSource = System.Enum.GetNames(typeof(SogTrophy));
+            cblstItemsSeen.DataSource = System.Enum.GetNames(typeof(SogItem));
+            cblstItemsCrafted.DataSource = System.Enum.GetNames(typeof(SogItem));
+            cblstFishCaught.DataSource = System.Enum.GetNames(typeof(SogFish));
         }
 
         private void PopulateFields()
@@ -260,56 +260,56 @@ namespace SoG_SGreader
             // find out if player has the card. mark the checkbox if yes
             for (int i = 0; i < cblstCards.Items.Count; i++)
             {
-                bool playerHasCard = playerObject.HasCard((SogEnemy)Enum.Parse(typeof(SogEnemy), cblstCards.Items[i].ToString()));
+                bool playerHasCard = playerObject.HasCard((SogEnemy)System.Enum.Parse(typeof(SogEnemy), cblstCards.Items[i].ToString()));
                 cblstCards.SetItemChecked(i, playerHasCard);
             }
 
             // find out if player has the Quest. mark the checkbox if yes
             for (int i = 0; i < cblstQuests.Items.Count; i++)
             {
-                bool playerHasQuest = playerObject.HasQuest((SogQuest)Enum.Parse(typeof(SogQuest), cblstQuests.Items[i].ToString()));
+                bool playerHasQuest = playerObject.HasQuest((SogQuest)System.Enum.Parse(typeof(SogQuest), cblstQuests.Items[i].ToString()));
                 cblstQuests.SetItemChecked(i, playerHasQuest);
             }
 
             for (int i = 0; i < cblstEnemiesSeens.Items.Count; i++)
             {
-                bool playerHasMetEnemy = playerObject.HasSeenEnemy((SogEnemy)Enum.Parse(typeof(SogEnemy), cblstEnemiesSeens.Items[i].ToString()));
+                bool playerHasMetEnemy = playerObject.HasSeenEnemy((SogEnemy)System.Enum.Parse(typeof(SogEnemy), cblstEnemiesSeens.Items[i].ToString()));
                 cblstEnemiesSeens.SetItemChecked(i, playerHasMetEnemy);
             }
 
             for (int i = 0; i < cblstFlags.Items.Count; i++)
             {
-                bool playerHasFlag = playerObject.HasFlag((SogFlag)Enum.Parse(typeof(SogFlag), cblstFlags.Items[i].ToString()));
+                bool playerHasFlag = playerObject.HasFlag((SogFlag)System.Enum.Parse(typeof(SogFlag), cblstFlags.Items[i].ToString()));
                 cblstFlags.SetItemChecked(i, playerHasFlag);
             }
 
             for (int i = 0; i < cblstMaps.Items.Count; i++)
             {
-                bool playerHasMap = playerObject.HasMap((SogTreasureMap)Enum.Parse(typeof(SogTreasureMap), cblstMaps.Items[i].ToString()));
+                bool playerHasMap = playerObject.HasMap((SogTreasureMap)System.Enum.Parse(typeof(SogTreasureMap), cblstMaps.Items[i].ToString()));
                 cblstMaps.SetItemChecked(i, playerHasMap);
             }
 
             for (int i = 0; i < cblstTrophies.Items.Count; i++)
             {
-                bool playerHasTrophy = playerObject.HasTrophy((SogTrophy)Enum.Parse(typeof(SogTrophy), cblstTrophies.Items[i].ToString()));
+                bool playerHasTrophy = playerObject.HasTrophy((SogTrophy)System.Enum.Parse(typeof(SogTrophy), cblstTrophies.Items[i].ToString()));
                 cblstTrophies.SetItemChecked(i, playerHasTrophy);
             }
 
             for (int i = 0; i < cblstItemsSeen.Items.Count; i++)
             {
-                bool playerHasSeenItem = playerObject.HasSeenItem((SogItem)Enum.Parse(typeof(SogItem), cblstItemsSeen.Items[i].ToString()));
+                bool playerHasSeenItem = playerObject.HasSeenItem((SogItem)System.Enum.Parse(typeof(SogItem), cblstItemsSeen.Items[i].ToString()));
                 cblstItemsSeen.SetItemChecked(i, playerHasSeenItem);
             }
 
             for (int i = 0; i < cblstItemsCrafted.Items.Count; i++)
             {
-                bool playerHasCraftedItem = playerObject.HasCraftedItem((SogItem)Enum.Parse(typeof(SogItem), cblstItemsCrafted.Items[i].ToString()));
+                bool playerHasCraftedItem = playerObject.HasCraftedItem((SogItem)System.Enum.Parse(typeof(SogItem), cblstItemsCrafted.Items[i].ToString()));
                 cblstItemsCrafted.SetItemChecked(i, playerHasCraftedItem);
             }
 
             for (int i = 0; i < cblstFishCaught.Items.Count; i++)
             {
-                bool playerHasCaughtFish = playerObject.HasCaughtFish((SogItem)Enum.Parse(typeof(SogItem), cblstFishCaught.Items[i].ToString()));
+                bool playerHasCaughtFish = playerObject.HasCaughtFish((SogItem)System.Enum.Parse(typeof(SogItem), cblstFishCaught.Items[i].ToString()));
                 cblstFishCaught.SetItemChecked(i, playerHasCaughtFish);
             }
         }
@@ -317,32 +317,32 @@ namespace SoG_SGreader
         private void GetDataFromFields()
         {
             playerObject.Nickname = txtNickname.Text;
-            playerObject.Equip.Hat = (int)Enum.Parse(typeof(SogItem), cbHat.Text);
-            playerObject.Equip.Facegear = (int)Enum.Parse(typeof(SogItem), cbFacegear.Text);
-            playerObject.Equip.Weapon = (int)Enum.Parse(typeof(SogItem), cbWeapon.Text);
-            playerObject.Equip.Shield = (int)Enum.Parse(typeof(SogItem), cbShield.Text);
-            playerObject.Equip.Armor = (int)Enum.Parse(typeof(SogItem), cbArmor.Text);
-            playerObject.Equip.Shoes = (int)Enum.Parse(typeof(SogItem), cbShoes.Text);
+            playerObject.Equip.Hat = (int)System.Enum.Parse(typeof(SogItem), cbHat.Text);
+            playerObject.Equip.Facegear = (int)System.Enum.Parse(typeof(SogItem), cbFacegear.Text);
+            playerObject.Equip.Weapon = (int)System.Enum.Parse(typeof(SogItem), cbWeapon.Text);
+            playerObject.Equip.Shield = (int)System.Enum.Parse(typeof(SogItem), cbShield.Text);
+            playerObject.Equip.Armor = (int)System.Enum.Parse(typeof(SogItem), cbArmor.Text);
+            playerObject.Equip.Shoes = (int)System.Enum.Parse(typeof(SogItem), cbShoes.Text);
 
-            playerObject.Equip.Accessory1 = (int)Enum.Parse(typeof(SogItem), cbAccessory1.Text);
-            playerObject.Equip.Accessory2 = (int)Enum.Parse(typeof(SogItem), cbAccessory2.Text);
+            playerObject.Equip.Accessory1 = (int)System.Enum.Parse(typeof(SogItem), cbAccessory1.Text);
+            playerObject.Equip.Accessory2 = (int)System.Enum.Parse(typeof(SogItem), cbAccessory2.Text);
 
-            playerObject.Style.Hat = (int)Enum.Parse(typeof(SogItem), cbStyleHat.Text);
-            playerObject.Style.Facegear = (int)Enum.Parse(typeof(SogItem), cbStyleFacegear.Text);
-            playerObject.Style.Weapon = (int)Enum.Parse(typeof(SogItem), cbStyleWeapon.Text);
-            playerObject.Style.Shield = (int)Enum.Parse(typeof(SogItem), cbStyleShield.Text);
+            playerObject.Style.Hat = (int)System.Enum.Parse(typeof(SogItem), cbStyleHat.Text);
+            playerObject.Style.Facegear = (int)System.Enum.Parse(typeof(SogItem), cbStyleFacegear.Text);
+            playerObject.Style.Weapon = (int)System.Enum.Parse(typeof(SogItem), cbStyleWeapon.Text);
+            playerObject.Style.Shield = (int)System.Enum.Parse(typeof(SogItem), cbStyleShield.Text);
 
             /* TODO: Quickslots are not being saved correctly, we need to fix this
             for (int i = 0; i < 10; i++)
             {
                 if (cbQuickslotType[i].Text == nameof(SogItems))
                 {
-                    //playerObject.quickslots[i] = Enum.Parse(typeof(Sog_Items), cbQuickslot[i].Text);
+                    //playerObject.quickslots[i] = System.Enum.Parse(typeof(Sog_Items), cbQuickslot[i].Text);
                     playerObject.Quickslots[i] = playerObject.Quickslots[i];
                 }
                 else if (cbQuickslotType[i].Text == nameof(SogSkills))
                 {
-                    //playerObject.quickslots[i] = Enum.Parse(typeof(Sog_Skills), cbQuickslot[i].Text);
+                    //playerObject.quickslots[i] = System.Enum.Parse(typeof(Sog_Skills), cbQuickslot[i].Text);
                     playerObject.Quickslots[i] = playerObject.Quickslots[i];
                 }
                 else
@@ -359,7 +359,7 @@ namespace SoG_SGreader
             {
                 Item item = new Item
                 {
-                    ItemID = (SogItem)Enum.Parse(typeof(SogItem), lstInventory.Items[i].SubItems[0].Text),
+                    ItemID = (SogItem)System.Enum.Parse(typeof(SogItem), lstInventory.Items[i].SubItems[0].Text),
                     ItemCount = int.Parse(lstInventory.Items[i].SubItems[1].Text),
                     ItemPos = uint.Parse(lstInventory.Items[i].SubItems[2].Text)
                 };
@@ -459,7 +459,7 @@ namespace SoG_SGreader
                     playerObject.Cards.Add(
                         new Card
                         {
-                            CardID = (SogEnemy)Enum.Parse(typeof(SogEnemy), cblstCards.Items[i].ToString())
+                            CardID = (SogEnemy)System.Enum.Parse(typeof(SogEnemy), cblstCards.Items[i].ToString())
                         }
                     );
                 }
@@ -473,7 +473,7 @@ namespace SoG_SGreader
                     playerObject.Quests.Add(
                         new Quest
                         {
-                            QuestID = (SogQuest)Enum.Parse(typeof(SogQuest), cblstQuests.Items[i].ToString())
+                            QuestID = (SogQuest)System.Enum.Parse(typeof(SogQuest), cblstQuests.Items[i].ToString())
                         }
                     );
                 }
@@ -487,7 +487,7 @@ namespace SoG_SGreader
                     playerObject.EnemiesSeen.Add(
                         new Enemy
                         {
-                            EnemyID = (SogEnemy)Enum.Parse(typeof(SogEnemy), cblstEnemiesSeens.Items[i].ToString())
+                            EnemyID = (SogEnemy)System.Enum.Parse(typeof(SogEnemy), cblstEnemiesSeens.Items[i].ToString())
                         }
                     );
                 }
@@ -501,7 +501,7 @@ namespace SoG_SGreader
                     playerObject.Flags.Add(
                         new Flag
                         {
-                            FlagID = (SogFlag)Enum.Parse(typeof(SogFlag), cblstFlags.Items[i].ToString())
+                            FlagID = (SogFlag)System.Enum.Parse(typeof(SogFlag), cblstFlags.Items[i].ToString())
                         }
                     );
                 }
@@ -515,7 +515,7 @@ namespace SoG_SGreader
                     playerObject.TreasureMaps.Add(
                         new TreasureMap
                         {
-                            TreasureMapID = (SogTreasureMap)Enum.Parse(typeof(SogTreasureMap), cblstMaps.Items[i].ToString())
+                            TreasureMapID = (SogTreasureMap)System.Enum.Parse(typeof(SogTreasureMap), cblstMaps.Items[i].ToString())
                         }
                     );
                 }
@@ -529,7 +529,7 @@ namespace SoG_SGreader
                     playerObject.Trophies.Add(
                         new Trophy
                         {
-                            TrophyID = (SogTrophy)Enum.Parse(typeof(SogTrophy), cblstTrophies.Items[i].ToString())
+                            TrophyID = (SogTrophy)System.Enum.Parse(typeof(SogTrophy), cblstTrophies.Items[i].ToString())
                         }
                      );
                 }
@@ -543,7 +543,7 @@ namespace SoG_SGreader
                     playerObject.ItemsSeen.Add(
                         new ItemSeen
                         {
-                            ItemID = (SogItem)Enum.Parse(typeof(SogItem), cblstItemsSeen.Items[i].ToString())
+                            ItemID = (SogItem)System.Enum.Parse(typeof(SogItem), cblstItemsSeen.Items[i].ToString())
                         }
                     );
                 }
@@ -557,7 +557,7 @@ namespace SoG_SGreader
                     playerObject.ItemsCrafted.Add(
                         new ItemCrafted
                         {
-                            ItemID = (SogItem)Enum.Parse(typeof(SogItem), cblstItemsCrafted.Items[i].ToString())
+                            ItemID = (SogItem)System.Enum.Parse(typeof(SogItem), cblstItemsCrafted.Items[i].ToString())
                         }
                      );
                 }
@@ -571,7 +571,7 @@ namespace SoG_SGreader
                     playerObject.FishCaught.Add(
                         new FishCaught
                         {
-                            FishID = (SogItem)Enum.Parse(typeof(SogItem), cblstFishCaught.Items[i].ToString())
+                            FishID = (SogItem)System.Enum.Parse(typeof(SogItem), cblstFishCaught.Items[i].ToString())
                         }
                      );
                 }
@@ -764,7 +764,7 @@ namespace SoG_SGreader
             {
                 var vItem = new ListViewItem(new[] { cbSelectedItem.Text, numItemCount.Value.ToString(), (++maxPos).ToString() });
                 lstInventory.Items.Add(vItem);
-                //Sog_Player.Item iitem = new Sog_Player.Item((Sog_Items)Enum.Parse(typeof(Sog_Items), lstInventory.Items[lstInventory.Items.Count - 1].SubItems[0].Text),
+                //Sog_Player.Item iitem = new Sog_Player.Item((Sog_Items)System.Enum.Parse(typeof(Sog_Items), lstInventory.Items[lstInventory.Items.Count - 1].SubItems[0].Text),
                 //                                                                 Int32.Parse(lstInventory.Items[lstInventory.Items.Count - 1].SubItems[1].Text),
                 //                                                                  UInt32.Parse(lstInventory.Items[lstInventory.Items.Count - 1].SubItems[2].Text));
                 //pPlayer.inventory.Add(iitem);
@@ -791,19 +791,19 @@ namespace SoG_SGreader
 
                     if (((Control)sender) == btnHairColor)
                     {
-                        playerObject.Style.HairColor = (byte)(SogColor)Enum.Parse(typeof(SogColor), sColor);
+                        playerObject.Style.HairColor = (byte)(SogColor)System.Enum.Parse(typeof(SogColor), sColor);
                     }
                     else if (((Control)sender) == btnPonchoColor)
                     {
-                        playerObject.Style.PonchoColor = (byte)(SogColor)Enum.Parse(typeof(SogColor), sColor);
+                        playerObject.Style.PonchoColor = (byte)(SogColor)System.Enum.Parse(typeof(SogColor), sColor);
                     }
                     else if (((Control)sender) == btnShirtColor)
                     {
-                        playerObject.Style.ShirtColor = (byte)(SogColor)Enum.Parse(typeof(SogColor), sColor);
+                        playerObject.Style.ShirtColor = (byte)(SogColor)System.Enum.Parse(typeof(SogColor), sColor);
                     }
                     else if (((Control)sender) == btnPantsColor)
                     {
-                        playerObject.Style.PantsColor = (byte)(SogColor)Enum.Parse(typeof(SogColor), sColor);
+                        playerObject.Style.PantsColor = (byte)(SogColor)System.Enum.Parse(typeof(SogColor), sColor);
                     }
                 }
             }
@@ -947,7 +947,7 @@ namespace SoG_SGreader
         {
             for (int i = 0; i < cblstCards.Items.Count; i++)
             {
-                bool playerHasCard = playerObject.HasCard((SogEnemy)Enum.Parse(typeof(SogEnemy), cblstCards.Items[i].ToString()));
+                bool playerHasCard = playerObject.HasCard((SogEnemy)System.Enum.Parse(typeof(SogEnemy), cblstCards.Items[i].ToString()));
                 cblstCards.SetItemChecked(i, playerHasCard);
             }
         }
@@ -972,7 +972,7 @@ namespace SoG_SGreader
         {
             for (int i = 0; i < cblstQuests.Items.Count; i++)
             {
-                bool playerHasQuest = playerObject.HasQuest((SogQuest)Enum.Parse(typeof(SogQuest), cblstQuests.Items[i].ToString()));
+                bool playerHasQuest = playerObject.HasQuest((SogQuest)System.Enum.Parse(typeof(SogQuest), cblstQuests.Items[i].ToString()));
                 cblstQuests.SetItemChecked(i, playerHasQuest);
             }
         }
@@ -1013,7 +1013,7 @@ namespace SoG_SGreader
         {
             for (int i = 0; i < cblstEnemiesSeens.Items.Count; i++)
             {
-                bool playerHasMetEnemy = playerObject.HasSeenEnemy((SogEnemy)Enum.Parse(typeof(SogEnemy), cblstEnemiesSeens.Items[i].ToString()));
+                bool playerHasMetEnemy = playerObject.HasSeenEnemy((SogEnemy)System.Enum.Parse(typeof(SogEnemy), cblstEnemiesSeens.Items[i].ToString()));
                 cblstEnemiesSeens.SetItemChecked(i, playerHasMetEnemy);
             }
         }
@@ -1051,7 +1051,7 @@ namespace SoG_SGreader
         {
             for (int i = 0; i < cblstFlags.Items.Count; i++)
             {
-                bool playerHasFlag = playerObject.HasFlag((SogFlag)Enum.Parse(typeof(SogFlag), cblstFlags.Items[i].ToString()));
+                bool playerHasFlag = playerObject.HasFlag((SogFlag)System.Enum.Parse(typeof(SogFlag), cblstFlags.Items[i].ToString()));
                 cblstFlags.SetItemChecked(i, playerHasFlag);
             }
         }
@@ -1076,7 +1076,7 @@ namespace SoG_SGreader
         {
             for (int i = 0; i < cblstMaps.Items.Count; i++)
             {
-                bool playerHasMap = playerObject.HasMap((SogTreasureMap)Enum.Parse(typeof(SogTreasureMap), cblstMaps.Items[i].ToString()));
+                bool playerHasMap = playerObject.HasMap((SogTreasureMap)System.Enum.Parse(typeof(SogTreasureMap), cblstMaps.Items[i].ToString()));
                 cblstMaps.SetItemChecked(i, playerHasMap);
             }
         }
@@ -1101,7 +1101,7 @@ namespace SoG_SGreader
         {
             for (int i = 0; i < cblstTrophies.Items.Count; i++)
             {
-                bool playerHasTrophy = playerObject.HasTrophy((SogTrophy)Enum.Parse(typeof(SogTrophy), cblstTrophies.Items[i].ToString()));
+                bool playerHasTrophy = playerObject.HasTrophy((SogTrophy)System.Enum.Parse(typeof(SogTrophy), cblstTrophies.Items[i].ToString()));
                 cblstTrophies.SetItemChecked(i, playerHasTrophy);
             }
         }
@@ -1126,7 +1126,7 @@ namespace SoG_SGreader
         {
             for (int i = 0; i < cblstItemsSeen.Items.Count; i++)
             {
-                bool playerHasSeenItem = playerObject.HasSeenItem((SogItem)Enum.Parse(typeof(SogItem), cblstItemsSeen.Items[i].ToString()));
+                bool playerHasSeenItem = playerObject.HasSeenItem((SogItem)System.Enum.Parse(typeof(SogItem), cblstItemsSeen.Items[i].ToString()));
                 cblstItemsSeen.SetItemChecked(i, playerHasSeenItem);
             }
         }
@@ -1151,7 +1151,7 @@ namespace SoG_SGreader
         {
             for (int i = 0; i < cblstItemsCrafted.Items.Count; i++)
             {
-                bool playerHasCraftedItem = playerObject.HasCraftedItem((SogItem)Enum.Parse(typeof(SogItem), cblstItemsCrafted.Items[i].ToString()));
+                bool playerHasCraftedItem = playerObject.HasCraftedItem((SogItem)System.Enum.Parse(typeof(SogItem), cblstItemsCrafted.Items[i].ToString()));
                 cblstItemsCrafted.SetItemChecked(i, playerHasCraftedItem);
             }
         }
@@ -1176,7 +1176,7 @@ namespace SoG_SGreader
         {
             for (int i = 0; i < cblstFishCaught.Items.Count; i++)
             {
-                bool playerHasCaughtFish = playerObject.HasCaughtFish((SogItem)Enum.Parse(typeof(SogItem), cblstFishCaught.Items[i].ToString()));
+                bool playerHasCaughtFish = playerObject.HasCaughtFish((SogItem)System.Enum.Parse(typeof(SogItem), cblstFishCaught.Items[i].ToString()));
                 cblstFishCaught.SetItemChecked(i, playerHasCaughtFish);
             }
         }
