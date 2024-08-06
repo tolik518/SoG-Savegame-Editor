@@ -215,6 +215,20 @@ namespace SoG_SGreader
                 lstInventory.Items.Add(vItem);
             }
 
+            // KilledEnemies
+            for (int i = 0; i != playerObject.KilledEnemiesCount; i++)
+            {
+                var vKilledEnemy = new ListViewItem(
+                    new[]
+                    {
+                        playerObject.KilledEnemies[i].EnemyID.ToString(),
+                        playerObject.KilledEnemies[i].KillCount.ToString()
+                    }
+                );
+
+                lstEnemiesKilled.Items.Add(vKilledEnemy);
+            }
+
             numGold.Value = playerObject.Cash;
 
             numLevel.Value = playerObject.Level;

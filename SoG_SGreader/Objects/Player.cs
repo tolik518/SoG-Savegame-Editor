@@ -94,7 +94,6 @@ namespace SoG_SGreader
 
         internal void RemoveCard(SogEnemy sogEnemies)
         {
-            // remove card from player, if it exists
             if (HasCard(sogEnemies))
             {
                 Cards.RemoveAll(card => card.CardID == sogEnemies);
