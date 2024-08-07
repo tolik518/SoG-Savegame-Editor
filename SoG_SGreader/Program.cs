@@ -10,7 +10,7 @@ namespace SoG_SGreader
 {
     public static class Program
     {
-        [DllImport("Shcore.dll")]
+        /*[DllImport("Shcore.dll")]
         static extern int SetProcessDpiAwareness(int PROCESS_DPI_AWARENESS);
 
         // According to https://msdn.microsoft.com/en-us/library/windows/desktop/dn280512(v=vs.85).aspx
@@ -19,7 +19,7 @@ namespace SoG_SGreader
             None = 0,
             SystemAware = 1,
             PerMonitorAware = 2
-        }
+        }      */
 
         [DllImport("kernel32.dll", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
@@ -139,7 +139,7 @@ namespace SoG_SGreader
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            SetProcessDpiAwareness((int)DpiAwareness.SystemAware);
+            //SetProcessDpiAwareness((int)DpiAwareness.SystemAware);
             Application.Run(new FrmLoadSaveGame());
         }
     }

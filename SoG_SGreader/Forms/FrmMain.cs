@@ -132,7 +132,7 @@ namespace SoG_SGreader
 
             cbHat.DataSource = FilterItems(items, "Hat_");
             cbFacegear.DataSource = FilterItems(items, "Facegear_");
-            cbWeapon.DataSource = FilterItems(items, "OneHanded_", "TwoHanded_", "Bow_");
+            cbWeapon.DataSource = FilterItems(items, "OneHanded_", "TwoHanded_");
             cbShield.DataSource = FilterItems(items, "Shield_");
             cbArmor.DataSource = FilterItems(items, "Armor_");
             cbShoes.DataSource = FilterItems(items, "Shoes_");
@@ -141,8 +141,12 @@ namespace SoG_SGreader
             cbStyleHat.DataSource = FilterItems(items, "Hat_");
 
             cbStyleFacegear.DataSource = FilterItems(items, "Facegear_");
-            cbStyleWeapon.DataSource = FilterItems(items, "OneHanded_", "TwoHanded_", "Bow_");
+            cbStyleWeapon.DataSource = FilterItems(items, "OneHanded_", "TwoHanded_");
             cbStyleShield.DataSource = FilterItems(items, "Shield_");
+
+            cbPotion1.DataSource = FilterItems(items, "PotionType_");
+            cbPotion2.DataSource = FilterItems(items, "PotionType_");
+            cbPotion3.DataSource = FilterItems(items, "PotionType_");
 
             var quickslotTypes = new[] { "Sog_Items", "Sog_Spells", "Int32" };
             for (int i = 0; i != 10; i++)
@@ -190,6 +194,25 @@ namespace SoG_SGreader
             cbStyleWeapon.Text = ((SogItem)playerObject.Style.Weapon).ToString();
             cbStyleShield.Text = ((SogItem)playerObject.Style.Shield).ToString();
 
+            if (playerObject.PotionsEquipped > 0)
+            {
+                cbPotion1.Text = (playerObject.Potions[0].PotionID).ToString();
+                cbPotion1.Enabled = playerObject.PotionsMax > 0;
+            }
+
+            if (playerObject.PotionsEquipped > 1)
+            {
+                cbPotion2.Text = (playerObject.Potions[1].PotionID).ToString();
+                cbPotion2.Enabled = playerObject.PotionsMax > 1;
+            }
+
+            if (playerObject.PotionsEquipped > 2)
+            {
+                cbPotion3.Text = (playerObject.Potions[2].PotionID).ToString();
+                cbPotion3.Enabled = playerObject.PotionsMax > 2;
+
+            }
+
             for (int i = 0; i < 10; i++)
             {
                 cbQuickslot[i].Text = playerObject.Quickslots[i].ToString();
@@ -229,7 +252,7 @@ namespace SoG_SGreader
                 lstEnemiesKilled.Items.Add(vKilledEnemy);
             }
 
-            numGold.Value = playerObject.Cash;
+            numGold.Value = playerObject.Cash;       
 
             numLevel.Value = playerObject.Level;
             numEXPcurrent.Value = playerObject.ExpCurrent;
@@ -345,6 +368,23 @@ namespace SoG_SGreader
             playerObject.Style.Facegear = (int)System.Enum.Parse(typeof(SogItem), cbStyleFacegear.Text);
             playerObject.Style.Weapon = (int)System.Enum.Parse(typeof(SogItem), cbStyleWeapon.Text);
             playerObject.Style.Shield = (int)System.Enum.Parse(typeof(SogItem), cbStyleShield.Text);
+
+            // set the potion for all potions
+            playerObject.Potions.Clear();
+            if (cbPotion1.Enabled == true)
+            {
+                playerObject.Potions.Add(new Potion { PotionID = (SogItem)System.Enum.Parse(typeof(SogItem), cbPotion1.Text) });
+            }
+
+            if (cbPotion2.Enabled == true)
+            {
+                playerObject.Potions.Add(new Potion { PotionID = (SogItem)System.Enum.Parse(typeof(SogItem), cbPotion2.Text) });
+            }
+
+            if (cbPotion3.Enabled == true)
+            {
+                playerObject.Potions.Add(new Potion { PotionID = (SogItem)System.Enum.Parse(typeof(SogItem), cbPotion3.Text) });
+            }
 
             /* TODO: Quickslots are not being saved correctly, we need to fix this
             for (int i = 0; i < 10; i++)

@@ -347,9 +347,9 @@ namespace SoG_SGreader
                 playerObject.Potions = new List<Potion>(playerObject.PotionsEquipped);
                 for (int i = 0; i != playerObject.PotionsEquipped; i++)
                 {
-                    playerObject.Potions.Add(new Potion
-                    {
-                        PotionID = readBinary.ReadInt32()
+                    playerObject.Potions.Add(new Potion 
+                    { 
+                        PotionID = (SogItem)readBinary.ReadInt32()
                     });
                 }
 

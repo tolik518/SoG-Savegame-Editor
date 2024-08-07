@@ -108,6 +108,10 @@ namespace SoG_SGreader
             this.btnHairColor = new System.Windows.Forms.Button();
             this.lblHair = new System.Windows.Forms.Label();
             this.tabInventory = new System.Windows.Forms.TabPage();
+            this.lstInventory = new System.Windows.Forms.ListView();
+            this.Item = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Count = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Position = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.numGold = new System.Windows.Forms.NumericUpDown();
             this.lblGold = new System.Windows.Forms.Label();
             this.grpItem = new System.Windows.Forms.GroupBox();
@@ -116,10 +120,6 @@ namespace SoG_SGreader
             this.lblItemCount = new System.Windows.Forms.Label();
             this.numItemCount = new System.Windows.Forms.NumericUpDown();
             this.cbSelectedItem = new System.Windows.Forms.ComboBox();
-            this.lstInventory = new System.Windows.Forms.ListView();
-            this.Item = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Count = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Position = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPets = new System.Windows.Forms.TabPage();
             this.lstPets = new System.Windows.Forms.ListView();
             this.Level = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -384,6 +384,17 @@ namespace SoG_SGreader
             this.btnResetEnemiesSeen = new System.Windows.Forms.Button();
             this.btnDeselectAllEnemiesSeen = new System.Windows.Forms.Button();
             this.cblstEnemiesSeens = new System.Windows.Forms.CheckedListBox();
+            this.tabEnemiesKilled = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lstEnemiesKilled = new System.Windows.Forms.ListView();
+            this.Enemy = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.EnemyKillCount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabItemsSeen = new System.Windows.Forms.TabPage();
             this.grpItemsSeen = new System.Windows.Forms.GroupBox();
             this.lblItemsSeenNullWarning = new System.Windows.Forms.Label();
@@ -411,6 +422,15 @@ namespace SoG_SGreader
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
+            this.tabPotions = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.grpPostions = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblPotion1 = new System.Windows.Forms.Label();
+            this.cbPotion1 = new System.Windows.Forms.ComboBox();
+            this.cbPotion3 = new System.Windows.Forms.ComboBox();
+            this.cbPotion2 = new System.Windows.Forms.ComboBox();
             this.msMenu = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -424,17 +444,6 @@ namespace SoG_SGreader
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtConsole = new System.Windows.Forms.TextBox();
             this.Tooltips = new System.Windows.Forms.ToolTip(this.components);
-            this.tabEnemiesKilled = new System.Windows.Forms.TabPage();
-            this.lstEnemiesKilled = new System.Windows.Forms.ListView();
-            this.Enemy = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.EnemyKillCount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.tabControlMain.SuspendLayout();
             this.tabChar.SuspendLayout();
             this.grpPatch.SuspendLayout();
@@ -664,16 +673,18 @@ namespace SoG_SGreader
             this.groupBox2.SuspendLayout();
             this.tabEnemiesSeen.SuspendLayout();
             this.grpEnemiesSeen.SuspendLayout();
+            this.tabEnemiesKilled.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.tabItemsSeen.SuspendLayout();
             this.grpItemsSeen.SuspendLayout();
             this.tabItemsCrafted.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabQuickslots.SuspendLayout();
             this.grpQuickslots.SuspendLayout();
+            this.tabPotions.SuspendLayout();
+            this.grpPostions.SuspendLayout();
             this.msMenu.SuspendLayout();
-            this.tabEnemiesKilled.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlMain
@@ -696,10 +707,12 @@ namespace SoG_SGreader
             this.tabControlMain.Controls.Add(this.tabItemsSeen);
             this.tabControlMain.Controls.Add(this.tabItemsCrafted);
             this.tabControlMain.Controls.Add(this.tabQuickslots);
+            this.tabControlMain.Controls.Add(this.tabPotions);
             this.tabControlMain.Location = new System.Drawing.Point(0, 25);
+            this.tabControlMain.Multiline = true;
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
-            this.tabControlMain.Size = new System.Drawing.Size(567, 433);
+            this.tabControlMain.Size = new System.Drawing.Size(567, 460);
             this.tabControlMain.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControlMain.TabIndex = 0;
             // 
@@ -714,10 +727,10 @@ namespace SoG_SGreader
             this.tabChar.Controls.Add(this.grpSkillpoints);
             this.tabChar.Controls.Add(this.grpLevel);
             this.tabChar.Controls.Add(this.grpColors);
-            this.tabChar.Location = new System.Drawing.Point(4, 22);
+            this.tabChar.Location = new System.Drawing.Point(4, 40);
             this.tabChar.Name = "tabChar";
-            this.tabChar.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabChar.Size = new System.Drawing.Size(559, 407);
+            this.tabChar.Padding = new System.Windows.Forms.Padding(3);
+            this.tabChar.Size = new System.Drawing.Size(559, 416);
             this.tabChar.TabIndex = 3;
             this.tabChar.Text = "Character / Equip";
             this.tabChar.UseVisualStyleBackColor = true;
@@ -787,7 +800,7 @@ namespace SoG_SGreader
             // 
             this.rbFemale.AutoSize = true;
             this.rbFemale.Location = new System.Drawing.Point(108, 130);
-            this.rbFemale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbFemale.Margin = new System.Windows.Forms.Padding(2);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(37, 17);
             this.rbFemale.TabIndex = 2;
@@ -809,7 +822,7 @@ namespace SoG_SGreader
             // 
             this.rbMale.AutoSize = true;
             this.rbMale.Location = new System.Drawing.Point(73, 130);
-            this.rbMale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbMale.Margin = new System.Windows.Forms.Padding(2);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(37, 17);
             this.rbMale.TabIndex = 1;
@@ -912,7 +925,7 @@ namespace SoG_SGreader
             // 
             this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(435, 388);
+            this.label49.Location = new System.Drawing.Point(435, 395);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(116, 13);
             this.label49.TabIndex = 42;
@@ -1480,22 +1493,61 @@ namespace SoG_SGreader
             // 
             // tabInventory
             // 
+            this.tabInventory.Controls.Add(this.lstInventory);
             this.tabInventory.Controls.Add(this.numGold);
             this.tabInventory.Controls.Add(this.lblGold);
             this.tabInventory.Controls.Add(this.grpItem);
-            this.tabInventory.Controls.Add(this.lstInventory);
-            this.tabInventory.Location = new System.Drawing.Point(4, 22);
+            this.tabInventory.Location = new System.Drawing.Point(4, 40);
+            this.tabInventory.Margin = new System.Windows.Forms.Padding(2);
             this.tabInventory.Name = "tabInventory";
-            this.tabInventory.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabInventory.Size = new System.Drawing.Size(559, 407);
+            this.tabInventory.Padding = new System.Windows.Forms.Padding(2);
+            this.tabInventory.Size = new System.Drawing.Size(559, 416);
             this.tabInventory.TabIndex = 2;
             this.tabInventory.Text = "Inventory";
             this.tabInventory.UseVisualStyleBackColor = true;
             // 
+            // lstInventory
+            // 
+            this.lstInventory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lstInventory.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Item,
+            this.Count,
+            this.Position});
+            this.lstInventory.FullRowSelect = true;
+            this.lstInventory.GridLines = true;
+            this.lstInventory.HideSelection = false;
+            this.lstInventory.LabelWrap = false;
+            this.lstInventory.Location = new System.Drawing.Point(2, 4);
+            this.lstInventory.Margin = new System.Windows.Forms.Padding(2);
+            this.lstInventory.MultiSelect = false;
+            this.lstInventory.Name = "lstInventory";
+            this.lstInventory.Size = new System.Drawing.Size(544, 319);
+            this.lstInventory.TabIndex = 42;
+            this.lstInventory.UseCompatibleStateImageBehavior = false;
+            this.lstInventory.View = System.Windows.Forms.View.Details;
+            // 
+            // Item
+            // 
+            this.Item.Text = "Item";
+            this.Item.Width = 356;
+            // 
+            // Count
+            // 
+            this.Count.Text = "Count";
+            this.Count.Width = 65;
+            // 
+            // Position
+            // 
+            this.Position.Text = "Position";
+            this.Position.Width = 70;
+            // 
             // numGold
             // 
             this.numGold.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.numGold.Location = new System.Drawing.Point(450, 370);
+            this.numGold.Location = new System.Drawing.Point(445, 387);
+            this.numGold.Margin = new System.Windows.Forms.Padding(2);
             this.numGold.Maximum = new decimal(new int[] {
             2147483647,
             0,
@@ -1510,7 +1562,7 @@ namespace SoG_SGreader
             // 
             this.lblGold.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGold.AutoSize = true;
-            this.lblGold.Location = new System.Drawing.Point(447, 354);
+            this.lblGold.Location = new System.Drawing.Point(408, 389);
             this.lblGold.Name = "lblGold";
             this.lblGold.Size = new System.Drawing.Size(32, 13);
             this.lblGold.TabIndex = 41;
@@ -1524,7 +1576,7 @@ namespace SoG_SGreader
             this.grpItem.Controls.Add(this.lblItemCount);
             this.grpItem.Controls.Add(this.numItemCount);
             this.grpItem.Controls.Add(this.cbSelectedItem);
-            this.grpItem.Location = new System.Drawing.Point(3, 323);
+            this.grpItem.Location = new System.Drawing.Point(5, 331);
             this.grpItem.Name = "grpItem";
             this.grpItem.Size = new System.Drawing.Size(319, 76);
             this.grpItem.TabIndex = 1;
@@ -1584,51 +1636,14 @@ namespace SoG_SGreader
             this.cbSelectedItem.Size = new System.Drawing.Size(241, 21);
             this.cbSelectedItem.TabIndex = 0;
             // 
-            // lstInventory
-            // 
-            this.lstInventory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lstInventory.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Item,
-            this.Count,
-            this.Position});
-            this.lstInventory.FullRowSelect = true;
-            this.lstInventory.GridLines = true;
-            this.lstInventory.HideSelection = false;
-            this.lstInventory.LabelWrap = false;
-            this.lstInventory.Location = new System.Drawing.Point(6, 6);
-            this.lstInventory.MultiSelect = false;
-            this.lstInventory.Name = "lstInventory";
-            this.lstInventory.Size = new System.Drawing.Size(547, 311);
-            this.lstInventory.TabIndex = 0;
-            this.lstInventory.UseCompatibleStateImageBehavior = false;
-            this.lstInventory.View = System.Windows.Forms.View.Details;
-            this.lstInventory.SelectedIndexChanged += new System.EventHandler(this.LstInventory_SelectedIndexChanged);
-            // 
-            // Item
-            // 
-            this.Item.Text = "Item";
-            this.Item.Width = 356;
-            // 
-            // Count
-            // 
-            this.Count.Text = "Count";
-            this.Count.Width = 65;
-            // 
-            // Position
-            // 
-            this.Position.Text = "Position";
-            this.Position.Width = 70;
-            // 
             // tabPets
             // 
             this.tabPets.Controls.Add(this.lstPets);
             this.tabPets.Controls.Add(this.grpPet);
-            this.tabPets.Location = new System.Drawing.Point(4, 22);
+            this.tabPets.Location = new System.Drawing.Point(4, 40);
             this.tabPets.Name = "tabPets";
-            this.tabPets.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPets.Size = new System.Drawing.Size(559, 407);
+            this.tabPets.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPets.Size = new System.Drawing.Size(559, 416);
             this.tabPets.TabIndex = 8;
             this.tabPets.Text = "Pets";
             this.tabPets.UseVisualStyleBackColor = true;
@@ -1649,10 +1664,10 @@ namespace SoG_SGreader
             this.lstPets.FullRowSelect = true;
             this.lstPets.GridLines = true;
             this.lstPets.HideSelection = false;
-            this.lstPets.Location = new System.Drawing.Point(6, 6);
+            this.lstPets.Location = new System.Drawing.Point(3, 6);
             this.lstPets.MultiSelect = false;
             this.lstPets.Name = "lstPets";
-            this.lstPets.Size = new System.Drawing.Size(385, 393);
+            this.lstPets.Size = new System.Drawing.Size(385, 403);
             this.lstPets.TabIndex = 1;
             this.lstPets.UseCompatibleStateImageBehavior = false;
             this.lstPets.View = System.Windows.Forms.View.Details;
@@ -1715,7 +1730,7 @@ namespace SoG_SGreader
             this.grpPet.Controls.Add(this.numPetHP);
             this.grpPet.Location = new System.Drawing.Point(395, 6);
             this.grpPet.Name = "grpPet";
-            this.grpPet.Size = new System.Drawing.Size(155, 233);
+            this.grpPet.Size = new System.Drawing.Size(155, 236);
             this.grpPet.TabIndex = 0;
             this.grpPet.TabStop = false;
             this.grpPet.Text = "Pet";
@@ -1892,10 +1907,10 @@ namespace SoG_SGreader
             // 
             this.tabSkills.BackColor = System.Drawing.Color.Transparent;
             this.tabSkills.Controls.Add(this.tabControlSkills);
-            this.tabSkills.Location = new System.Drawing.Point(4, 22);
+            this.tabSkills.Location = new System.Drawing.Point(4, 40);
             this.tabSkills.Name = "tabSkills";
-            this.tabSkills.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabSkills.Size = new System.Drawing.Size(559, 407);
+            this.tabSkills.Padding = new System.Windows.Forms.Padding(3);
+            this.tabSkills.Size = new System.Drawing.Size(559, 416);
             this.tabSkills.TabIndex = 7;
             this.tabSkills.Text = "Skills";
             // 
@@ -1915,7 +1930,7 @@ namespace SoG_SGreader
             this.tabControlSkills.Multiline = true;
             this.tabControlSkills.Name = "tabControlSkills";
             this.tabControlSkills.SelectedIndex = 0;
-            this.tabControlSkills.Size = new System.Drawing.Size(553, 401);
+            this.tabControlSkills.Size = new System.Drawing.Size(553, 410);
             this.tabControlSkills.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControlSkills.TabIndex = 32;
             this.tabControlSkills.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.TabControl1_DrawItem);
@@ -1929,8 +1944,8 @@ namespace SoG_SGreader
             this.tabSkillsMelee.Controls.Add(this.groupBox10);
             this.tabSkillsMelee.Location = new System.Drawing.Point(104, 4);
             this.tabSkillsMelee.Name = "tabSkillsMelee";
-            this.tabSkillsMelee.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabSkillsMelee.Size = new System.Drawing.Size(445, 393);
+            this.tabSkillsMelee.Padding = new System.Windows.Forms.Padding(3);
+            this.tabSkillsMelee.Size = new System.Drawing.Size(445, 402);
             this.tabSkillsMelee.TabIndex = 0;
             this.tabSkillsMelee.Text = "Skills: Melee";
             // 
@@ -1938,7 +1953,7 @@ namespace SoG_SGreader
             // 
             this.cbOnlyLegalLevels.AutoSize = true;
             this.cbOnlyLegalLevels.Location = new System.Drawing.Point(6, 377);
-            this.cbOnlyLegalLevels.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbOnlyLegalLevels.Margin = new System.Windows.Forms.Padding(2);
             this.cbOnlyLegalLevels.Name = "cbOnlyLegalLevels";
             this.cbOnlyLegalLevels.Size = new System.Drawing.Size(102, 17);
             this.cbOnlyLegalLevels.TabIndex = 21;
@@ -1969,7 +1984,7 @@ namespace SoG_SGreader
             // numSkillMelee2h4
             // 
             this.numSkillMelee2h4.Location = new System.Drawing.Point(355, 87);
-            this.numSkillMelee2h4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSkillMelee2h4.Margin = new System.Windows.Forms.Padding(2);
             this.numSkillMelee2h4.Maximum = new decimal(new int[] {
             255,
             0,
@@ -1982,7 +1997,7 @@ namespace SoG_SGreader
             // numSkillMelee2h3
             // 
             this.numSkillMelee2h3.Location = new System.Drawing.Point(270, 87);
-            this.numSkillMelee2h3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSkillMelee2h3.Margin = new System.Windows.Forms.Padding(2);
             this.numSkillMelee2h3.Maximum = new decimal(new int[] {
             255,
             0,
@@ -1995,7 +2010,7 @@ namespace SoG_SGreader
             // numSkillMelee2h2
             // 
             this.numSkillMelee2h2.Location = new System.Drawing.Point(191, 87);
-            this.numSkillMelee2h2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSkillMelee2h2.Margin = new System.Windows.Forms.Padding(2);
             this.numSkillMelee2h2.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2008,7 +2023,7 @@ namespace SoG_SGreader
             // numSkillMelee2h1
             // 
             this.numSkillMelee2h1.Location = new System.Drawing.Point(112, 87);
-            this.numSkillMelee2h1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSkillMelee2h1.Margin = new System.Windows.Forms.Padding(2);
             this.numSkillMelee2h1.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2069,7 +2084,7 @@ namespace SoG_SGreader
             // numSkillMelee2h0
             // 
             this.numSkillMelee2h0.Location = new System.Drawing.Point(27, 87);
-            this.numSkillMelee2h0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSkillMelee2h0.Margin = new System.Windows.Forms.Padding(2);
             this.numSkillMelee2h0.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2114,7 +2129,7 @@ namespace SoG_SGreader
             // numSkillMelee1h1
             // 
             this.numSkillMelee1h1.Location = new System.Drawing.Point(112, 90);
-            this.numSkillMelee1h1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSkillMelee1h1.Margin = new System.Windows.Forms.Padding(2);
             this.numSkillMelee1h1.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2127,7 +2142,7 @@ namespace SoG_SGreader
             // numSkillMelee1h0
             // 
             this.numSkillMelee1h0.Location = new System.Drawing.Point(27, 90);
-            this.numSkillMelee1h0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSkillMelee1h0.Margin = new System.Windows.Forms.Padding(2);
             this.numSkillMelee1h0.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2164,7 +2179,7 @@ namespace SoG_SGreader
             // numSkillMelee1h2
             // 
             this.numSkillMelee1h2.Location = new System.Drawing.Point(191, 90);
-            this.numSkillMelee1h2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSkillMelee1h2.Margin = new System.Windows.Forms.Padding(2);
             this.numSkillMelee1h2.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2189,7 +2204,7 @@ namespace SoG_SGreader
             // numSkillMelee1h3
             // 
             this.numSkillMelee1h3.Location = new System.Drawing.Point(270, 90);
-            this.numSkillMelee1h3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSkillMelee1h3.Margin = new System.Windows.Forms.Padding(2);
             this.numSkillMelee1h3.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2214,7 +2229,7 @@ namespace SoG_SGreader
             // numSkillMelee1h4
             // 
             this.numSkillMelee1h4.Location = new System.Drawing.Point(355, 90);
-            this.numSkillMelee1h4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSkillMelee1h4.Margin = new System.Windows.Forms.Padding(2);
             this.numSkillMelee1h4.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2245,8 +2260,8 @@ namespace SoG_SGreader
             this.tabSkillsMagic.Controls.Add(this.groupBox12);
             this.tabSkillsMagic.Location = new System.Drawing.Point(104, 4);
             this.tabSkillsMagic.Name = "tabSkillsMagic";
-            this.tabSkillsMagic.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabSkillsMagic.Size = new System.Drawing.Size(445, 393);
+            this.tabSkillsMagic.Padding = new System.Windows.Forms.Padding(3);
+            this.tabSkillsMagic.Size = new System.Drawing.Size(445, 402);
             this.tabSkillsMagic.TabIndex = 1;
             this.tabSkillsMagic.Text = "Skills: Magic";
             // 
@@ -2268,7 +2283,7 @@ namespace SoG_SGreader
             // numSkillMagicA2
             // 
             this.numSkillMagicA2.Location = new System.Drawing.Point(146, 90);
-            this.numSkillMagicA2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSkillMagicA2.Margin = new System.Windows.Forms.Padding(2);
             this.numSkillMagicA2.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2293,7 +2308,7 @@ namespace SoG_SGreader
             // numSkillMagicA1
             // 
             this.numSkillMagicA1.Location = new System.Drawing.Point(83, 90);
-            this.numSkillMagicA1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSkillMagicA1.Margin = new System.Windows.Forms.Padding(2);
             this.numSkillMagicA1.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2318,7 +2333,7 @@ namespace SoG_SGreader
             // numSkillMagicA0
             // 
             this.numSkillMagicA0.Location = new System.Drawing.Point(19, 90);
-            this.numSkillMagicA0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSkillMagicA0.Margin = new System.Windows.Forms.Padding(2);
             this.numSkillMagicA0.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2358,7 +2373,7 @@ namespace SoG_SGreader
             // numSkillMagicE2
             // 
             this.numSkillMagicE2.Location = new System.Drawing.Point(146, 90);
-            this.numSkillMagicE2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSkillMagicE2.Margin = new System.Windows.Forms.Padding(2);
             this.numSkillMagicE2.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2383,7 +2398,7 @@ namespace SoG_SGreader
             // numSkillMagicE1
             // 
             this.numSkillMagicE1.Location = new System.Drawing.Point(83, 90);
-            this.numSkillMagicE1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSkillMagicE1.Margin = new System.Windows.Forms.Padding(2);
             this.numSkillMagicE1.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2408,7 +2423,7 @@ namespace SoG_SGreader
             // numSkillMagicE0
             // 
             this.numSkillMagicE0.Location = new System.Drawing.Point(19, 90);
-            this.numSkillMagicE0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSkillMagicE0.Margin = new System.Windows.Forms.Padding(2);
             this.numSkillMagicE0.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2448,7 +2463,7 @@ namespace SoG_SGreader
             // numSkillMagicI2
             // 
             this.numSkillMagicI2.Location = new System.Drawing.Point(146, 90);
-            this.numSkillMagicI2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSkillMagicI2.Margin = new System.Windows.Forms.Padding(2);
             this.numSkillMagicI2.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2473,7 +2488,7 @@ namespace SoG_SGreader
             // numSkillMagicI1
             // 
             this.numSkillMagicI1.Location = new System.Drawing.Point(83, 90);
-            this.numSkillMagicI1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSkillMagicI1.Margin = new System.Windows.Forms.Padding(2);
             this.numSkillMagicI1.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2498,7 +2513,7 @@ namespace SoG_SGreader
             // numSkillMagicI0
             // 
             this.numSkillMagicI0.Location = new System.Drawing.Point(19, 90);
-            this.numSkillMagicI0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSkillMagicI0.Margin = new System.Windows.Forms.Padding(2);
             this.numSkillMagicI0.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2538,7 +2553,7 @@ namespace SoG_SGreader
             // numSkillMagicF2
             // 
             this.numSkillMagicF2.Location = new System.Drawing.Point(146, 90);
-            this.numSkillMagicF2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSkillMagicF2.Margin = new System.Windows.Forms.Padding(2);
             this.numSkillMagicF2.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2563,7 +2578,7 @@ namespace SoG_SGreader
             // numSkillMagicF1
             // 
             this.numSkillMagicF1.Location = new System.Drawing.Point(83, 90);
-            this.numSkillMagicF1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSkillMagicF1.Margin = new System.Windows.Forms.Padding(2);
             this.numSkillMagicF1.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2588,7 +2603,7 @@ namespace SoG_SGreader
             // numSkillMagicF0
             // 
             this.numSkillMagicF0.Location = new System.Drawing.Point(19, 90);
-            this.numSkillMagicF0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numSkillMagicF0.Margin = new System.Windows.Forms.Padding(2);
             this.numSkillMagicF0.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2618,8 +2633,8 @@ namespace SoG_SGreader
             this.tabSkillsUtility.Controls.Add(this.groupBox16);
             this.tabSkillsUtility.Location = new System.Drawing.Point(104, 4);
             this.tabSkillsUtility.Name = "tabSkillsUtility";
-            this.tabSkillsUtility.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabSkillsUtility.Size = new System.Drawing.Size(445, 393);
+            this.tabSkillsUtility.Padding = new System.Windows.Forms.Padding(3);
+            this.tabSkillsUtility.Size = new System.Drawing.Size(445, 402);
             this.tabSkillsUtility.TabIndex = 2;
             this.tabSkillsUtility.Text = "Skills: Utility";
             // 
@@ -2641,7 +2656,7 @@ namespace SoG_SGreader
             // numUtilityE0
             // 
             this.numUtilityE0.Location = new System.Drawing.Point(107, 70);
-            this.numUtilityE0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numUtilityE0.Margin = new System.Windows.Forms.Padding(2);
             this.numUtilityE0.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2666,7 +2681,7 @@ namespace SoG_SGreader
             // numUtilityE1
             // 
             this.numUtilityE1.Location = new System.Drawing.Point(192, 70);
-            this.numUtilityE1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numUtilityE1.Margin = new System.Windows.Forms.Padding(2);
             this.numUtilityE1.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2691,7 +2706,7 @@ namespace SoG_SGreader
             // numUtilityE2
             // 
             this.numUtilityE2.Location = new System.Drawing.Point(271, 70);
-            this.numUtilityE2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numUtilityE2.Margin = new System.Windows.Forms.Padding(2);
             this.numUtilityE2.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2731,7 +2746,7 @@ namespace SoG_SGreader
             // numUtilityD0
             // 
             this.numUtilityD0.Location = new System.Drawing.Point(107, 70);
-            this.numUtilityD0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numUtilityD0.Margin = new System.Windows.Forms.Padding(2);
             this.numUtilityD0.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2756,7 +2771,7 @@ namespace SoG_SGreader
             // numUtilityD1
             // 
             this.numUtilityD1.Location = new System.Drawing.Point(192, 70);
-            this.numUtilityD1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numUtilityD1.Margin = new System.Windows.Forms.Padding(2);
             this.numUtilityD1.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2781,7 +2796,7 @@ namespace SoG_SGreader
             // numUtilityD2
             // 
             this.numUtilityD2.Location = new System.Drawing.Point(271, 70);
-            this.numUtilityD2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numUtilityD2.Margin = new System.Windows.Forms.Padding(2);
             this.numUtilityD2.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2821,7 +2836,7 @@ namespace SoG_SGreader
             // numUtilityO0
             // 
             this.numUtilityO0.Location = new System.Drawing.Point(107, 70);
-            this.numUtilityO0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numUtilityO0.Margin = new System.Windows.Forms.Padding(2);
             this.numUtilityO0.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2846,7 +2861,7 @@ namespace SoG_SGreader
             // numUtilityO1
             // 
             this.numUtilityO1.Location = new System.Drawing.Point(192, 70);
-            this.numUtilityO1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numUtilityO1.Margin = new System.Windows.Forms.Padding(2);
             this.numUtilityO1.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2871,7 +2886,7 @@ namespace SoG_SGreader
             // numUtilityO2
             // 
             this.numUtilityO2.Location = new System.Drawing.Point(271, 70);
-            this.numUtilityO2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numUtilityO2.Margin = new System.Windows.Forms.Padding(2);
             this.numUtilityO2.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2899,7 +2914,7 @@ namespace SoG_SGreader
             this.tabTalentsMelee.Controls.Add(this.groupBox3);
             this.tabTalentsMelee.Location = new System.Drawing.Point(104, 4);
             this.tabTalentsMelee.Name = "tabTalentsMelee";
-            this.tabTalentsMelee.Size = new System.Drawing.Size(445, 393);
+            this.tabTalentsMelee.Size = new System.Drawing.Size(445, 402);
             this.tabTalentsMelee.TabIndex = 3;
             this.tabTalentsMelee.Text = "Talents: Melee";
             // 
@@ -2945,7 +2960,7 @@ namespace SoG_SGreader
             // numTalentMelee13
             // 
             this.numTalentMelee13.Location = new System.Drawing.Point(269, 249);
-            this.numTalentMelee13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMelee13.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMelee13.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2958,7 +2973,7 @@ namespace SoG_SGreader
             // numTalentMelee8
             // 
             this.numTalentMelee8.Location = new System.Drawing.Point(269, 159);
-            this.numTalentMelee8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMelee8.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMelee8.Maximum = new decimal(new int[] {
             255,
             0,
@@ -2995,7 +3010,7 @@ namespace SoG_SGreader
             // numTalentMelee14
             // 
             this.numTalentMelee14.Location = new System.Drawing.Point(347, 249);
-            this.numTalentMelee14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMelee14.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMelee14.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3008,7 +3023,7 @@ namespace SoG_SGreader
             // numTalentMelee9
             // 
             this.numTalentMelee9.Location = new System.Drawing.Point(347, 159);
-            this.numTalentMelee9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMelee9.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMelee9.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3045,7 +3060,7 @@ namespace SoG_SGreader
             // numTalentMelee10
             // 
             this.numTalentMelee10.Location = new System.Drawing.Point(19, 249);
-            this.numTalentMelee10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMelee10.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMelee10.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3058,7 +3073,7 @@ namespace SoG_SGreader
             // numTalentMelee5
             // 
             this.numTalentMelee5.Location = new System.Drawing.Point(19, 159);
-            this.numTalentMelee5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMelee5.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMelee5.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3095,7 +3110,7 @@ namespace SoG_SGreader
             // numTalentMelee11
             // 
             this.numTalentMelee11.Location = new System.Drawing.Point(105, 249);
-            this.numTalentMelee11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMelee11.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMelee11.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3108,7 +3123,7 @@ namespace SoG_SGreader
             // numTalentMelee6
             // 
             this.numTalentMelee6.Location = new System.Drawing.Point(105, 159);
-            this.numTalentMelee6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMelee6.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMelee6.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3145,7 +3160,7 @@ namespace SoG_SGreader
             // numTalentMelee12
             // 
             this.numTalentMelee12.Location = new System.Drawing.Point(183, 249);
-            this.numTalentMelee12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMelee12.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMelee12.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3158,7 +3173,7 @@ namespace SoG_SGreader
             // numTalentMelee7
             // 
             this.numTalentMelee7.Location = new System.Drawing.Point(183, 159);
-            this.numTalentMelee7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMelee7.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMelee7.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3195,7 +3210,7 @@ namespace SoG_SGreader
             // numTalentMelee3
             // 
             this.numTalentMelee3.Location = new System.Drawing.Point(269, 69);
-            this.numTalentMelee3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMelee3.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMelee3.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3220,7 +3235,7 @@ namespace SoG_SGreader
             // numTalentMelee4
             // 
             this.numTalentMelee4.Location = new System.Drawing.Point(347, 69);
-            this.numTalentMelee4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMelee4.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMelee4.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3245,7 +3260,7 @@ namespace SoG_SGreader
             // numTalentMelee0
             // 
             this.numTalentMelee0.Location = new System.Drawing.Point(19, 69);
-            this.numTalentMelee0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMelee0.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMelee0.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3270,7 +3285,7 @@ namespace SoG_SGreader
             // numTalentMelee1
             // 
             this.numTalentMelee1.Location = new System.Drawing.Point(105, 69);
-            this.numTalentMelee1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMelee1.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMelee1.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3295,7 +3310,7 @@ namespace SoG_SGreader
             // numTalentMelee2
             // 
             this.numTalentMelee2.Location = new System.Drawing.Point(183, 69);
-            this.numTalentMelee2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMelee2.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMelee2.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3323,7 +3338,7 @@ namespace SoG_SGreader
             this.tabTalentsMagic.Controls.Add(this.groupBox4);
             this.tabTalentsMagic.Location = new System.Drawing.Point(104, 4);
             this.tabTalentsMagic.Name = "tabTalentsMagic";
-            this.tabTalentsMagic.Size = new System.Drawing.Size(445, 393);
+            this.tabTalentsMagic.Size = new System.Drawing.Size(445, 402);
             this.tabTalentsMagic.TabIndex = 4;
             this.tabTalentsMagic.Text = "Talents: Magic";
             // 
@@ -3369,7 +3384,7 @@ namespace SoG_SGreader
             // numTalentMagic13
             // 
             this.numTalentMagic13.Location = new System.Drawing.Point(269, 249);
-            this.numTalentMagic13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMagic13.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMagic13.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3382,7 +3397,7 @@ namespace SoG_SGreader
             // numTalentMagic8
             // 
             this.numTalentMagic8.Location = new System.Drawing.Point(269, 159);
-            this.numTalentMagic8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMagic8.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMagic8.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3419,7 +3434,7 @@ namespace SoG_SGreader
             // numTalentMagic14
             // 
             this.numTalentMagic14.Location = new System.Drawing.Point(347, 249);
-            this.numTalentMagic14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMagic14.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMagic14.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3432,7 +3447,7 @@ namespace SoG_SGreader
             // numTalentMagic9
             // 
             this.numTalentMagic9.Location = new System.Drawing.Point(347, 159);
-            this.numTalentMagic9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMagic9.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMagic9.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3469,7 +3484,7 @@ namespace SoG_SGreader
             // numTalentMagic10
             // 
             this.numTalentMagic10.Location = new System.Drawing.Point(19, 249);
-            this.numTalentMagic10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMagic10.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMagic10.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3482,7 +3497,7 @@ namespace SoG_SGreader
             // numTalentMagic5
             // 
             this.numTalentMagic5.Location = new System.Drawing.Point(19, 159);
-            this.numTalentMagic5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMagic5.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMagic5.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3519,7 +3534,7 @@ namespace SoG_SGreader
             // numTalentMagic11
             // 
             this.numTalentMagic11.Location = new System.Drawing.Point(105, 249);
-            this.numTalentMagic11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMagic11.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMagic11.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3532,7 +3547,7 @@ namespace SoG_SGreader
             // numTalentMagic6
             // 
             this.numTalentMagic6.Location = new System.Drawing.Point(105, 159);
-            this.numTalentMagic6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMagic6.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMagic6.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3569,7 +3584,7 @@ namespace SoG_SGreader
             // numTalentMagic12
             // 
             this.numTalentMagic12.Location = new System.Drawing.Point(183, 249);
-            this.numTalentMagic12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMagic12.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMagic12.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3582,7 +3597,7 @@ namespace SoG_SGreader
             // numTalentMagic7
             // 
             this.numTalentMagic7.Location = new System.Drawing.Point(183, 159);
-            this.numTalentMagic7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMagic7.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMagic7.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3619,7 +3634,7 @@ namespace SoG_SGreader
             // numTalentMagic3
             // 
             this.numTalentMagic3.Location = new System.Drawing.Point(269, 69);
-            this.numTalentMagic3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMagic3.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMagic3.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3644,7 +3659,7 @@ namespace SoG_SGreader
             // numTalentMagic4
             // 
             this.numTalentMagic4.Location = new System.Drawing.Point(347, 69);
-            this.numTalentMagic4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMagic4.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMagic4.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3669,7 +3684,7 @@ namespace SoG_SGreader
             // numTalentMagic0
             // 
             this.numTalentMagic0.Location = new System.Drawing.Point(19, 69);
-            this.numTalentMagic0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMagic0.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMagic0.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3694,7 +3709,7 @@ namespace SoG_SGreader
             // numTalentMagic1
             // 
             this.numTalentMagic1.Location = new System.Drawing.Point(105, 69);
-            this.numTalentMagic1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMagic1.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMagic1.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3719,7 +3734,7 @@ namespace SoG_SGreader
             // numTalentMagic2
             // 
             this.numTalentMagic2.Location = new System.Drawing.Point(183, 69);
-            this.numTalentMagic2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentMagic2.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentMagic2.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3748,7 +3763,7 @@ namespace SoG_SGreader
             this.tabTalentsGeneral.Controls.Add(this.groupBox5);
             this.tabTalentsGeneral.Location = new System.Drawing.Point(104, 4);
             this.tabTalentsGeneral.Name = "tabTalentsGeneral";
-            this.tabTalentsGeneral.Size = new System.Drawing.Size(445, 393);
+            this.tabTalentsGeneral.Size = new System.Drawing.Size(445, 402);
             this.tabTalentsGeneral.TabIndex = 5;
             this.tabTalentsGeneral.Text = "Talents: General";
             // 
@@ -3817,7 +3832,7 @@ namespace SoG_SGreader
             // numTalentGeneral20
             // 
             this.numTalentGeneral20.Location = new System.Drawing.Point(367, 247);
-            this.numTalentGeneral20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentGeneral20.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentGeneral20.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3842,7 +3857,7 @@ namespace SoG_SGreader
             // numTalentGeneral19
             // 
             this.numTalentGeneral19.Location = new System.Drawing.Point(307, 247);
-            this.numTalentGeneral19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentGeneral19.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentGeneral19.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3867,7 +3882,7 @@ namespace SoG_SGreader
             // numTalentGeneral18
             // 
             this.numTalentGeneral18.Location = new System.Drawing.Point(247, 247);
-            this.numTalentGeneral18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentGeneral18.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentGeneral18.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3892,7 +3907,7 @@ namespace SoG_SGreader
             // numTalentGeneral17
             // 
             this.numTalentGeneral17.Location = new System.Drawing.Point(187, 247);
-            this.numTalentGeneral17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentGeneral17.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentGeneral17.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3917,7 +3932,7 @@ namespace SoG_SGreader
             // numTalentGeneral16
             // 
             this.numTalentGeneral16.Location = new System.Drawing.Point(127, 247);
-            this.numTalentGeneral16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentGeneral16.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentGeneral16.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3942,7 +3957,7 @@ namespace SoG_SGreader
             // numTalentGeneral15
             // 
             this.numTalentGeneral15.Location = new System.Drawing.Point(67, 247);
-            this.numTalentGeneral15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentGeneral15.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentGeneral15.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3967,7 +3982,7 @@ namespace SoG_SGreader
             // numTalentGeneral13
             // 
             this.numTalentGeneral13.Location = new System.Drawing.Point(367, 162);
-            this.numTalentGeneral13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentGeneral13.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentGeneral13.Maximum = new decimal(new int[] {
             255,
             0,
@@ -3980,7 +3995,7 @@ namespace SoG_SGreader
             // numTalentGeneral6
             // 
             this.numTalentGeneral6.Location = new System.Drawing.Point(367, 69);
-            this.numTalentGeneral6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentGeneral6.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentGeneral6.Maximum = new decimal(new int[] {
             255,
             0,
@@ -4017,7 +4032,7 @@ namespace SoG_SGreader
             // numTalentGeneral12
             // 
             this.numTalentGeneral12.Location = new System.Drawing.Point(307, 162);
-            this.numTalentGeneral12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentGeneral12.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentGeneral12.Maximum = new decimal(new int[] {
             255,
             0,
@@ -4030,7 +4045,7 @@ namespace SoG_SGreader
             // numTalentGeneral5
             // 
             this.numTalentGeneral5.Location = new System.Drawing.Point(307, 69);
-            this.numTalentGeneral5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentGeneral5.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentGeneral5.Maximum = new decimal(new int[] {
             255,
             0,
@@ -4067,7 +4082,7 @@ namespace SoG_SGreader
             // numTalentGeneral11
             // 
             this.numTalentGeneral11.Location = new System.Drawing.Point(247, 162);
-            this.numTalentGeneral11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentGeneral11.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentGeneral11.Maximum = new decimal(new int[] {
             255,
             0,
@@ -4080,7 +4095,7 @@ namespace SoG_SGreader
             // numTalentGeneral4
             // 
             this.numTalentGeneral4.Location = new System.Drawing.Point(247, 69);
-            this.numTalentGeneral4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentGeneral4.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentGeneral4.Maximum = new decimal(new int[] {
             255,
             0,
@@ -4117,7 +4132,7 @@ namespace SoG_SGreader
             // numTalentGeneral10
             // 
             this.numTalentGeneral10.Location = new System.Drawing.Point(187, 162);
-            this.numTalentGeneral10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentGeneral10.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentGeneral10.Maximum = new decimal(new int[] {
             255,
             0,
@@ -4130,7 +4145,7 @@ namespace SoG_SGreader
             // numTalentGeneral3
             // 
             this.numTalentGeneral3.Location = new System.Drawing.Point(187, 69);
-            this.numTalentGeneral3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentGeneral3.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentGeneral3.Maximum = new decimal(new int[] {
             255,
             0,
@@ -4167,7 +4182,7 @@ namespace SoG_SGreader
             // numTalentGeneral9
             // 
             this.numTalentGeneral9.Location = new System.Drawing.Point(127, 162);
-            this.numTalentGeneral9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentGeneral9.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentGeneral9.Maximum = new decimal(new int[] {
             255,
             0,
@@ -4180,7 +4195,7 @@ namespace SoG_SGreader
             // numTalentGeneral2
             // 
             this.numTalentGeneral2.Location = new System.Drawing.Point(127, 69);
-            this.numTalentGeneral2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentGeneral2.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentGeneral2.Maximum = new decimal(new int[] {
             255,
             0,
@@ -4217,7 +4232,7 @@ namespace SoG_SGreader
             // numTalentGeneral8
             // 
             this.numTalentGeneral8.Location = new System.Drawing.Point(67, 162);
-            this.numTalentGeneral8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentGeneral8.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentGeneral8.Maximum = new decimal(new int[] {
             255,
             0,
@@ -4230,7 +4245,7 @@ namespace SoG_SGreader
             // numTalentGeneral1
             // 
             this.numTalentGeneral1.Location = new System.Drawing.Point(67, 69);
-            this.numTalentGeneral1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentGeneral1.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentGeneral1.Maximum = new decimal(new int[] {
             255,
             0,
@@ -4267,7 +4282,7 @@ namespace SoG_SGreader
             // numTalentGeneral14
             // 
             this.numTalentGeneral14.Location = new System.Drawing.Point(7, 247);
-            this.numTalentGeneral14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentGeneral14.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentGeneral14.Maximum = new decimal(new int[] {
             255,
             0,
@@ -4280,7 +4295,7 @@ namespace SoG_SGreader
             // numTalentGeneral7
             // 
             this.numTalentGeneral7.Location = new System.Drawing.Point(7, 162);
-            this.numTalentGeneral7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentGeneral7.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentGeneral7.Maximum = new decimal(new int[] {
             255,
             0,
@@ -4317,7 +4332,7 @@ namespace SoG_SGreader
             // numTalentGeneral0
             // 
             this.numTalentGeneral0.Location = new System.Drawing.Point(7, 69);
-            this.numTalentGeneral0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numTalentGeneral0.Margin = new System.Windows.Forms.Padding(2);
             this.numTalentGeneral0.Maximum = new decimal(new int[] {
             255,
             0,
@@ -4343,10 +4358,10 @@ namespace SoG_SGreader
             // 
             this.tabCards.Controls.Add(this.grpCards);
             this.tabCards.Controls.Add(this.cblstCards);
-            this.tabCards.Location = new System.Drawing.Point(4, 22);
+            this.tabCards.Location = new System.Drawing.Point(4, 40);
             this.tabCards.Name = "tabCards";
-            this.tabCards.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabCards.Size = new System.Drawing.Size(559, 407);
+            this.tabCards.Padding = new System.Windows.Forms.Padding(3);
+            this.tabCards.Size = new System.Drawing.Size(559, 416);
             this.tabCards.TabIndex = 5;
             this.tabCards.Text = "Cards";
             this.tabCards.UseVisualStyleBackColor = true;
@@ -4361,7 +4376,7 @@ namespace SoG_SGreader
             this.grpCards.Controls.Add(this.btnDeselectAllCards);
             this.grpCards.Location = new System.Drawing.Point(454, 6);
             this.grpCards.Name = "grpCards";
-            this.grpCards.Size = new System.Drawing.Size(97, 389);
+            this.grpCards.Size = new System.Drawing.Size(97, 403);
             this.grpCards.TabIndex = 6;
             this.grpCards.TabStop = false;
             this.grpCards.Text = "Cards";
@@ -4388,7 +4403,7 @@ namespace SoG_SGreader
             // btnResetCards
             // 
             this.btnResetCards.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetCards.Location = new System.Drawing.Point(6, 359);
+            this.btnResetCards.Location = new System.Drawing.Point(6, 372);
             this.btnResetCards.Name = "btnResetCards";
             this.btnResetCards.Size = new System.Drawing.Size(87, 23);
             this.btnResetCards.TabIndex = 5;
@@ -4414,17 +4429,17 @@ namespace SoG_SGreader
             this.cblstCards.FormattingEnabled = true;
             this.cblstCards.Location = new System.Drawing.Point(6, 6);
             this.cblstCards.Name = "cblstCards";
-            this.cblstCards.Size = new System.Drawing.Size(442, 379);
+            this.cblstCards.Size = new System.Drawing.Size(442, 409);
             this.cblstCards.TabIndex = 2;
             // 
             // tabMaps
             // 
             this.tabMaps.Controls.Add(this.grpMaps);
             this.tabMaps.Controls.Add(this.cblstMaps);
-            this.tabMaps.Location = new System.Drawing.Point(4, 22);
+            this.tabMaps.Location = new System.Drawing.Point(4, 40);
             this.tabMaps.Name = "tabMaps";
-            this.tabMaps.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabMaps.Size = new System.Drawing.Size(559, 407);
+            this.tabMaps.Padding = new System.Windows.Forms.Padding(3);
+            this.tabMaps.Size = new System.Drawing.Size(559, 416);
             this.tabMaps.TabIndex = 10;
             this.tabMaps.Text = "Maps";
             this.tabMaps.UseVisualStyleBackColor = true;
@@ -4439,7 +4454,7 @@ namespace SoG_SGreader
             this.grpMaps.Controls.Add(this.btnDeselectAllMaps);
             this.grpMaps.Location = new System.Drawing.Point(454, 6);
             this.grpMaps.Name = "grpMaps";
-            this.grpMaps.Size = new System.Drawing.Size(97, 389);
+            this.grpMaps.Size = new System.Drawing.Size(97, 403);
             this.grpMaps.TabIndex = 8;
             this.grpMaps.TabStop = false;
             this.grpMaps.Text = "Maps";
@@ -4466,7 +4481,7 @@ namespace SoG_SGreader
             // btnResetMaps
             // 
             this.btnResetMaps.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetMaps.Location = new System.Drawing.Point(6, 359);
+            this.btnResetMaps.Location = new System.Drawing.Point(6, 372);
             this.btnResetMaps.Name = "btnResetMaps";
             this.btnResetMaps.Size = new System.Drawing.Size(87, 23);
             this.btnResetMaps.TabIndex = 5;
@@ -4492,17 +4507,17 @@ namespace SoG_SGreader
             this.cblstMaps.FormattingEnabled = true;
             this.cblstMaps.Location = new System.Drawing.Point(6, 6);
             this.cblstMaps.Name = "cblstMaps";
-            this.cblstMaps.Size = new System.Drawing.Size(442, 379);
+            this.cblstMaps.Size = new System.Drawing.Size(442, 409);
             this.cblstMaps.TabIndex = 7;
             // 
             // tabQuests
             // 
             this.tabQuests.Controls.Add(this.grpQuests);
             this.tabQuests.Controls.Add(this.cblstQuests);
-            this.tabQuests.Location = new System.Drawing.Point(4, 22);
+            this.tabQuests.Location = new System.Drawing.Point(4, 40);
             this.tabQuests.Name = "tabQuests";
-            this.tabQuests.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabQuests.Size = new System.Drawing.Size(559, 407);
+            this.tabQuests.Padding = new System.Windows.Forms.Padding(3);
+            this.tabQuests.Size = new System.Drawing.Size(559, 416);
             this.tabQuests.TabIndex = 9;
             this.tabQuests.Text = "Quests";
             this.tabQuests.UseVisualStyleBackColor = true;
@@ -4518,7 +4533,7 @@ namespace SoG_SGreader
             this.grpQuests.Controls.Add(this.btnDeselectAllQuests);
             this.grpQuests.Location = new System.Drawing.Point(454, 6);
             this.grpQuests.Name = "grpQuests";
-            this.grpQuests.Size = new System.Drawing.Size(97, 389);
+            this.grpQuests.Size = new System.Drawing.Size(97, 403);
             this.grpQuests.TabIndex = 8;
             this.grpQuests.TabStop = false;
             this.grpQuests.Text = "Quests";
@@ -4555,7 +4570,7 @@ namespace SoG_SGreader
             // btnResetQuests
             // 
             this.btnResetQuests.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetQuests.Location = new System.Drawing.Point(6, 359);
+            this.btnResetQuests.Location = new System.Drawing.Point(6, 372);
             this.btnResetQuests.Name = "btnResetQuests";
             this.btnResetQuests.Size = new System.Drawing.Size(87, 23);
             this.btnResetQuests.TabIndex = 5;
@@ -4581,7 +4596,7 @@ namespace SoG_SGreader
             this.cblstQuests.FormattingEnabled = true;
             this.cblstQuests.Location = new System.Drawing.Point(6, 6);
             this.cblstQuests.Name = "cblstQuests";
-            this.cblstQuests.Size = new System.Drawing.Size(442, 379);
+            this.cblstQuests.Size = new System.Drawing.Size(442, 484);
             this.cblstQuests.TabIndex = 7;
             // 
             // tabFlags
@@ -4589,10 +4604,10 @@ namespace SoG_SGreader
             this.tabFlags.Controls.Add(this.cblstFlagsChecked);
             this.tabFlags.Controls.Add(this.grpFlags);
             this.tabFlags.Controls.Add(this.cblstFlags);
-            this.tabFlags.Location = new System.Drawing.Point(4, 22);
+            this.tabFlags.Location = new System.Drawing.Point(4, 40);
             this.tabFlags.Name = "tabFlags";
-            this.tabFlags.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabFlags.Size = new System.Drawing.Size(559, 407);
+            this.tabFlags.Padding = new System.Windows.Forms.Padding(3);
+            this.tabFlags.Size = new System.Drawing.Size(559, 416);
             this.tabFlags.TabIndex = 6;
             this.tabFlags.Text = "Flags";
             this.tabFlags.UseVisualStyleBackColor = true;
@@ -4602,10 +4617,10 @@ namespace SoG_SGreader
             this.cblstFlagsChecked.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstFlagsChecked.FormattingEnabled = true;
-            this.cblstFlagsChecked.Location = new System.Drawing.Point(6, 239);
+            this.cblstFlagsChecked.Location = new System.Drawing.Point(6, 301);
             this.cblstFlagsChecked.Name = "cblstFlagsChecked";
             this.cblstFlagsChecked.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.cblstFlagsChecked.Size = new System.Drawing.Size(442, 154);
+            this.cblstFlagsChecked.Size = new System.Drawing.Size(442, 109);
             this.cblstFlagsChecked.TabIndex = 11;
             this.cblstFlagsChecked.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cblstFlagsChecked_ItemCheck);
             // 
@@ -4620,7 +4635,7 @@ namespace SoG_SGreader
             this.grpFlags.Controls.Add(this.btnDeselectAllFlags);
             this.grpFlags.Location = new System.Drawing.Point(454, 6);
             this.grpFlags.Name = "grpFlags";
-            this.grpFlags.Size = new System.Drawing.Size(97, 389);
+            this.grpFlags.Size = new System.Drawing.Size(97, 403);
             this.grpFlags.TabIndex = 10;
             this.grpFlags.TabStop = false;
             this.grpFlags.Text = "Flags";
@@ -4657,7 +4672,7 @@ namespace SoG_SGreader
             // btnResetFlags
             // 
             this.btnResetFlags.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetFlags.Location = new System.Drawing.Point(6, 359);
+            this.btnResetFlags.Location = new System.Drawing.Point(6, 372);
             this.btnResetFlags.Name = "btnResetFlags";
             this.btnResetFlags.Size = new System.Drawing.Size(87, 23);
             this.btnResetFlags.TabIndex = 5;
@@ -4683,7 +4698,7 @@ namespace SoG_SGreader
             this.cblstFlags.FormattingEnabled = true;
             this.cblstFlags.Location = new System.Drawing.Point(6, 6);
             this.cblstFlags.Name = "cblstFlags";
-            this.cblstFlags.Size = new System.Drawing.Size(442, 229);
+            this.cblstFlags.Size = new System.Drawing.Size(442, 289);
             this.cblstFlags.TabIndex = 9;
             this.cblstFlags.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cblstFlags_ItemCheck);
             // 
@@ -4691,9 +4706,9 @@ namespace SoG_SGreader
             // 
             this.tabTrophies.Controls.Add(this.grpTrophies);
             this.tabTrophies.Controls.Add(this.cblstTrophies);
-            this.tabTrophies.Location = new System.Drawing.Point(4, 22);
+            this.tabTrophies.Location = new System.Drawing.Point(4, 40);
             this.tabTrophies.Name = "tabTrophies";
-            this.tabTrophies.Size = new System.Drawing.Size(559, 407);
+            this.tabTrophies.Size = new System.Drawing.Size(559, 416);
             this.tabTrophies.TabIndex = 11;
             this.tabTrophies.Text = "Trophies";
             this.tabTrophies.UseVisualStyleBackColor = true;
@@ -4708,7 +4723,7 @@ namespace SoG_SGreader
             this.grpTrophies.Controls.Add(this.btnDeselectAllTrophies);
             this.grpTrophies.Location = new System.Drawing.Point(454, 6);
             this.grpTrophies.Name = "grpTrophies";
-            this.grpTrophies.Size = new System.Drawing.Size(97, 389);
+            this.grpTrophies.Size = new System.Drawing.Size(97, 403);
             this.grpTrophies.TabIndex = 12;
             this.grpTrophies.TabStop = false;
             this.grpTrophies.Text = "Trophies";
@@ -4735,7 +4750,7 @@ namespace SoG_SGreader
             // btnResetTrophies
             // 
             this.btnResetTrophies.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetTrophies.Location = new System.Drawing.Point(6, 359);
+            this.btnResetTrophies.Location = new System.Drawing.Point(6, 372);
             this.btnResetTrophies.Name = "btnResetTrophies";
             this.btnResetTrophies.Size = new System.Drawing.Size(87, 23);
             this.btnResetTrophies.TabIndex = 5;
@@ -4761,16 +4776,16 @@ namespace SoG_SGreader
             this.cblstTrophies.FormattingEnabled = true;
             this.cblstTrophies.Location = new System.Drawing.Point(6, 6);
             this.cblstTrophies.Name = "cblstTrophies";
-            this.cblstTrophies.Size = new System.Drawing.Size(442, 379);
+            this.cblstTrophies.Size = new System.Drawing.Size(442, 409);
             this.cblstTrophies.TabIndex = 11;
             // 
             // tabFishCaught
             // 
             this.tabFishCaught.Controls.Add(this.groupBox2);
             this.tabFishCaught.Controls.Add(this.cblstFishCaught);
-            this.tabFishCaught.Location = new System.Drawing.Point(4, 22);
+            this.tabFishCaught.Location = new System.Drawing.Point(4, 40);
             this.tabFishCaught.Name = "tabFishCaught";
-            this.tabFishCaught.Size = new System.Drawing.Size(559, 407);
+            this.tabFishCaught.Size = new System.Drawing.Size(559, 416);
             this.tabFishCaught.TabIndex = 14;
             this.tabFishCaught.Text = "Fish Caught";
             this.tabFishCaught.UseVisualStyleBackColor = true;
@@ -4785,7 +4800,7 @@ namespace SoG_SGreader
             this.groupBox2.Controls.Add(this.btnDeselectAllFishCaught);
             this.groupBox2.Location = new System.Drawing.Point(454, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(97, 389);
+            this.groupBox2.Size = new System.Drawing.Size(97, 403);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Fish Caught";
@@ -4812,7 +4827,7 @@ namespace SoG_SGreader
             // btnResetFishCaught
             // 
             this.btnResetFishCaught.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetFishCaught.Location = new System.Drawing.Point(6, 359);
+            this.btnResetFishCaught.Location = new System.Drawing.Point(6, 372);
             this.btnResetFishCaught.Name = "btnResetFishCaught";
             this.btnResetFishCaught.Size = new System.Drawing.Size(87, 23);
             this.btnResetFishCaught.TabIndex = 5;
@@ -4838,17 +4853,17 @@ namespace SoG_SGreader
             this.cblstFishCaught.FormattingEnabled = true;
             this.cblstFishCaught.Location = new System.Drawing.Point(6, 6);
             this.cblstFishCaught.Name = "cblstFishCaught";
-            this.cblstFishCaught.Size = new System.Drawing.Size(442, 379);
+            this.cblstFishCaught.Size = new System.Drawing.Size(442, 484);
             this.cblstFishCaught.TabIndex = 17;
             // 
             // tabEnemiesSeen
             // 
             this.tabEnemiesSeen.Controls.Add(this.grpEnemiesSeen);
             this.tabEnemiesSeen.Controls.Add(this.cblstEnemiesSeens);
-            this.tabEnemiesSeen.Location = new System.Drawing.Point(4, 22);
+            this.tabEnemiesSeen.Location = new System.Drawing.Point(4, 40);
             this.tabEnemiesSeen.Name = "tabEnemiesSeen";
-            this.tabEnemiesSeen.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabEnemiesSeen.Size = new System.Drawing.Size(559, 407);
+            this.tabEnemiesSeen.Padding = new System.Windows.Forms.Padding(3);
+            this.tabEnemiesSeen.Size = new System.Drawing.Size(559, 416);
             this.tabEnemiesSeen.TabIndex = 4;
             this.tabEnemiesSeen.Text = "Enemies seen";
             this.tabEnemiesSeen.UseVisualStyleBackColor = true;
@@ -4863,7 +4878,7 @@ namespace SoG_SGreader
             this.grpEnemiesSeen.Controls.Add(this.btnDeselectAllEnemiesSeen);
             this.grpEnemiesSeen.Location = new System.Drawing.Point(454, 6);
             this.grpEnemiesSeen.Name = "grpEnemiesSeen";
-            this.grpEnemiesSeen.Size = new System.Drawing.Size(97, 389);
+            this.grpEnemiesSeen.Size = new System.Drawing.Size(97, 403);
             this.grpEnemiesSeen.TabIndex = 10;
             this.grpEnemiesSeen.TabStop = false;
             this.grpEnemiesSeen.Text = "Enemies seen";
@@ -4890,7 +4905,7 @@ namespace SoG_SGreader
             // btnResetEnemiesSeen
             // 
             this.btnResetEnemiesSeen.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetEnemiesSeen.Location = new System.Drawing.Point(6, 359);
+            this.btnResetEnemiesSeen.Location = new System.Drawing.Point(6, 372);
             this.btnResetEnemiesSeen.Name = "btnResetEnemiesSeen";
             this.btnResetEnemiesSeen.Size = new System.Drawing.Size(87, 23);
             this.btnResetEnemiesSeen.TabIndex = 5;
@@ -4916,16 +4931,135 @@ namespace SoG_SGreader
             this.cblstEnemiesSeens.FormattingEnabled = true;
             this.cblstEnemiesSeens.Location = new System.Drawing.Point(6, 6);
             this.cblstEnemiesSeens.Name = "cblstEnemiesSeens";
-            this.cblstEnemiesSeens.Size = new System.Drawing.Size(442, 379);
+            this.cblstEnemiesSeens.Size = new System.Drawing.Size(442, 469);
             this.cblstEnemiesSeens.TabIndex = 9;
+            // 
+            // tabEnemiesKilled
+            // 
+            this.tabEnemiesKilled.Controls.Add(this.label3);
+            this.tabEnemiesKilled.Controls.Add(this.groupBox6);
+            this.tabEnemiesKilled.Controls.Add(this.lstEnemiesKilled);
+            this.tabEnemiesKilled.Location = new System.Drawing.Point(4, 40);
+            this.tabEnemiesKilled.Name = "tabEnemiesKilled";
+            this.tabEnemiesKilled.Padding = new System.Windows.Forms.Padding(3);
+            this.tabEnemiesKilled.Size = new System.Drawing.Size(559, 416);
+            this.tabEnemiesKilled.TabIndex = 15;
+            this.tabEnemiesKilled.Text = "*Enemies Killed";
+            this.tabEnemiesKilled.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(331, 390);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "* Not editable yet";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox6.Controls.Add(this.button1);
+            this.groupBox6.Controls.Add(this.button2);
+            this.groupBox6.Controls.Add(this.label2);
+            this.groupBox6.Controls.Add(this.numericUpDown1);
+            this.groupBox6.Controls.Add(this.comboBox1);
+            this.groupBox6.Enabled = false;
+            this.groupBox6.Location = new System.Drawing.Point(6, 338);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(319, 76);
+            this.groupBox6.TabIndex = 2;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Enemy";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(253, 44);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(60, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Remove";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(253, 17);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(60, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Add";
+            this.Tooltips.SetToolTip(this.button2, "Some Items COULD potentially break your game");
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(132, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Count:";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(176, 47);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(71, 20);
+            this.numericUpDown1.TabIndex = 1;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(6, 19);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(241, 21);
+            this.comboBox1.TabIndex = 0;
+            // 
+            // lstEnemiesKilled
+            // 
+            this.lstEnemiesKilled.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lstEnemiesKilled.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Enemy,
+            this.EnemyKillCount});
+            this.lstEnemiesKilled.FullRowSelect = true;
+            this.lstEnemiesKilled.GridLines = true;
+            this.lstEnemiesKilled.HideSelection = false;
+            this.lstEnemiesKilled.LabelEdit = true;
+            this.lstEnemiesKilled.LabelWrap = false;
+            this.lstEnemiesKilled.Location = new System.Drawing.Point(6, 6);
+            this.lstEnemiesKilled.MultiSelect = false;
+            this.lstEnemiesKilled.Name = "lstEnemiesKilled";
+            this.lstEnemiesKilled.Size = new System.Drawing.Size(544, 321);
+            this.lstEnemiesKilled.TabIndex = 1;
+            this.lstEnemiesKilled.UseCompatibleStateImageBehavior = false;
+            this.lstEnemiesKilled.View = System.Windows.Forms.View.Details;
+            // 
+            // Enemy
+            // 
+            this.Enemy.Text = "Enemy";
+            this.Enemy.Width = 340;
+            // 
+            // EnemyKillCount
+            // 
+            this.EnemyKillCount.Text = "Count";
+            this.EnemyKillCount.Width = 65;
             // 
             // tabItemsSeen
             // 
             this.tabItemsSeen.Controls.Add(this.grpItemsSeen);
             this.tabItemsSeen.Controls.Add(this.cblstItemsSeen);
-            this.tabItemsSeen.Location = new System.Drawing.Point(4, 22);
+            this.tabItemsSeen.Location = new System.Drawing.Point(4, 40);
             this.tabItemsSeen.Name = "tabItemsSeen";
-            this.tabItemsSeen.Size = new System.Drawing.Size(559, 407);
+            this.tabItemsSeen.Size = new System.Drawing.Size(559, 416);
             this.tabItemsSeen.TabIndex = 12;
             this.tabItemsSeen.Text = "Items Seen";
             this.tabItemsSeen.UseVisualStyleBackColor = true;
@@ -4940,7 +5074,7 @@ namespace SoG_SGreader
             this.grpItemsSeen.Controls.Add(this.btnDeselectAllItemsSeen);
             this.grpItemsSeen.Location = new System.Drawing.Point(454, 6);
             this.grpItemsSeen.Name = "grpItemsSeen";
-            this.grpItemsSeen.Size = new System.Drawing.Size(97, 389);
+            this.grpItemsSeen.Size = new System.Drawing.Size(97, 399);
             this.grpItemsSeen.TabIndex = 14;
             this.grpItemsSeen.TabStop = false;
             this.grpItemsSeen.Text = "Items Seen";
@@ -4967,7 +5101,7 @@ namespace SoG_SGreader
             // btnResetItemsSeen
             // 
             this.btnResetItemsSeen.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetItemsSeen.Location = new System.Drawing.Point(6, 359);
+            this.btnResetItemsSeen.Location = new System.Drawing.Point(6, 369);
             this.btnResetItemsSeen.Name = "btnResetItemsSeen";
             this.btnResetItemsSeen.Size = new System.Drawing.Size(87, 23);
             this.btnResetItemsSeen.TabIndex = 5;
@@ -4993,16 +5127,16 @@ namespace SoG_SGreader
             this.cblstItemsSeen.FormattingEnabled = true;
             this.cblstItemsSeen.Location = new System.Drawing.Point(6, 6);
             this.cblstItemsSeen.Name = "cblstItemsSeen";
-            this.cblstItemsSeen.Size = new System.Drawing.Size(442, 379);
+            this.cblstItemsSeen.Size = new System.Drawing.Size(442, 349);
             this.cblstItemsSeen.TabIndex = 13;
             // 
             // tabItemsCrafted
             // 
             this.tabItemsCrafted.Controls.Add(this.groupBox1);
             this.tabItemsCrafted.Controls.Add(this.cblstItemsCrafted);
-            this.tabItemsCrafted.Location = new System.Drawing.Point(4, 22);
+            this.tabItemsCrafted.Location = new System.Drawing.Point(4, 40);
             this.tabItemsCrafted.Name = "tabItemsCrafted";
-            this.tabItemsCrafted.Size = new System.Drawing.Size(559, 407);
+            this.tabItemsCrafted.Size = new System.Drawing.Size(559, 416);
             this.tabItemsCrafted.TabIndex = 13;
             this.tabItemsCrafted.Text = "Items Crafted";
             this.tabItemsCrafted.UseVisualStyleBackColor = true;
@@ -5017,7 +5151,7 @@ namespace SoG_SGreader
             this.groupBox1.Controls.Add(this.btnDeselectAllItemsCrafted);
             this.groupBox1.Location = new System.Drawing.Point(454, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(97, 389);
+            this.groupBox1.Size = new System.Drawing.Size(97, 399);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Items Crafted";
@@ -5044,7 +5178,7 @@ namespace SoG_SGreader
             // btnResetItemsCrafted
             // 
             this.btnResetItemsCrafted.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetItemsCrafted.Location = new System.Drawing.Point(6, 359);
+            this.btnResetItemsCrafted.Location = new System.Drawing.Point(6, 369);
             this.btnResetItemsCrafted.Name = "btnResetItemsCrafted";
             this.btnResetItemsCrafted.Size = new System.Drawing.Size(87, 23);
             this.btnResetItemsCrafted.TabIndex = 5;
@@ -5070,17 +5204,17 @@ namespace SoG_SGreader
             this.cblstItemsCrafted.FormattingEnabled = true;
             this.cblstItemsCrafted.Location = new System.Drawing.Point(6, 6);
             this.cblstItemsCrafted.Name = "cblstItemsCrafted";
-            this.cblstItemsCrafted.Size = new System.Drawing.Size(442, 379);
+            this.cblstItemsCrafted.Size = new System.Drawing.Size(442, 349);
             this.cblstItemsCrafted.TabIndex = 15;
             // 
             // tabQuickslots
             // 
             this.tabQuickslots.Controls.Add(this.label57);
             this.tabQuickslots.Controls.Add(this.grpQuickslots);
-            this.tabQuickslots.Location = new System.Drawing.Point(4, 22);
+            this.tabQuickslots.Location = new System.Drawing.Point(4, 40);
             this.tabQuickslots.Name = "tabQuickslots";
-            this.tabQuickslots.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabQuickslots.Size = new System.Drawing.Size(559, 407);
+            this.tabQuickslots.Padding = new System.Windows.Forms.Padding(3);
+            this.tabQuickslots.Size = new System.Drawing.Size(559, 416);
             this.tabQuickslots.TabIndex = 1;
             this.tabQuickslots.Text = "*Quickslots";
             this.tabQuickslots.UseVisualStyleBackColor = true;
@@ -5206,6 +5340,102 @@ namespace SoG_SGreader
             this.label27.TabIndex = 15;
             this.label27.Text = "Quckslot 1 (A):";
             // 
+            // tabPotions
+            // 
+            this.tabPotions.Controls.Add(this.label6);
+            this.tabPotions.Controls.Add(this.grpPostions);
+            this.tabPotions.Location = new System.Drawing.Point(4, 40);
+            this.tabPotions.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPotions.Name = "tabPotions";
+            this.tabPotions.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPotions.Size = new System.Drawing.Size(559, 416);
+            this.tabPotions.TabIndex = 16;
+            this.tabPotions.Text = "*Potions";
+            this.tabPotions.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(8, 115);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(234, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "* Changing Potions will have no beneficial effect";
+            // 
+            // grpPostions
+            // 
+            this.grpPostions.Controls.Add(this.label5);
+            this.grpPostions.Controls.Add(this.label4);
+            this.grpPostions.Controls.Add(this.lblPotion1);
+            this.grpPostions.Controls.Add(this.cbPotion1);
+            this.grpPostions.Controls.Add(this.cbPotion3);
+            this.grpPostions.Controls.Add(this.cbPotion2);
+            this.grpPostions.Location = new System.Drawing.Point(5, 6);
+            this.grpPostions.Margin = new System.Windows.Forms.Padding(2);
+            this.grpPostions.Name = "grpPostions";
+            this.grpPostions.Padding = new System.Windows.Forms.Padding(2);
+            this.grpPostions.Size = new System.Drawing.Size(262, 107);
+            this.grpPostions.TabIndex = 13;
+            this.grpPostions.TabStop = false;
+            this.grpPostions.Text = "Potions";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(4, 75);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Potion 3:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(4, 47);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Potion 2:";
+            // 
+            // lblPotion1
+            // 
+            this.lblPotion1.AutoSize = true;
+            this.lblPotion1.Location = new System.Drawing.Point(4, 19);
+            this.lblPotion1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPotion1.Name = "lblPotion1";
+            this.lblPotion1.Size = new System.Drawing.Size(49, 13);
+            this.lblPotion1.TabIndex = 13;
+            this.lblPotion1.Text = "Potion 1:";
+            // 
+            // cbPotion1
+            // 
+            this.cbPotion1.Enabled = false;
+            this.cbPotion1.FormattingEnabled = true;
+            this.cbPotion1.Location = new System.Drawing.Point(56, 17);
+            this.cbPotion1.Name = "cbPotion1";
+            this.cbPotion1.Size = new System.Drawing.Size(186, 21);
+            this.cbPotion1.TabIndex = 10;
+            // 
+            // cbPotion3
+            // 
+            this.cbPotion3.Enabled = false;
+            this.cbPotion3.FormattingEnabled = true;
+            this.cbPotion3.Location = new System.Drawing.Point(56, 73);
+            this.cbPotion3.Name = "cbPotion3";
+            this.cbPotion3.Size = new System.Drawing.Size(186, 21);
+            this.cbPotion3.TabIndex = 12;
+            // 
+            // cbPotion2
+            // 
+            this.cbPotion2.Enabled = false;
+            this.cbPotion2.FormattingEnabled = true;
+            this.cbPotion2.Location = new System.Drawing.Point(56, 45);
+            this.cbPotion2.Name = "cbPotion2";
+            this.cbPotion2.Size = new System.Drawing.Size(186, 21);
+            this.cbPotion2.TabIndex = 11;
+            // 
             // msMenu
             // 
             this.msMenu.BackColor = System.Drawing.Color.Transparent;
@@ -5237,7 +5467,7 @@ namespace SoG_SGreader
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.openToolStripMenuItem.Text = "Open";
+            this.openToolStripMenuItem.Text = "Open...";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
@@ -5245,7 +5475,7 @@ namespace SoG_SGreader
             this.saveToolStripMenuItem.Enabled = false;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Text = "Save as...";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
             // importToolStripMenuItem
@@ -5305,7 +5535,7 @@ namespace SoG_SGreader
             this.txtConsole.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtConsole.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtConsole.ForeColor = System.Drawing.Color.LimeGreen;
-            this.txtConsole.Location = new System.Drawing.Point(0, 453);
+            this.txtConsole.Location = new System.Drawing.Point(0, 480);
             this.txtConsole.Multiline = true;
             this.txtConsole.Name = "txtConsole";
             this.txtConsole.ReadOnly = true;
@@ -5314,131 +5544,12 @@ namespace SoG_SGreader
             this.txtConsole.TabIndex = 28;
             this.txtConsole.TabStop = false;
             // 
-            // tabEnemiesKilled
-            // 
-            this.tabEnemiesKilled.Controls.Add(this.label3);
-            this.tabEnemiesKilled.Controls.Add(this.groupBox6);
-            this.tabEnemiesKilled.Controls.Add(this.lstEnemiesKilled);
-            this.tabEnemiesKilled.Location = new System.Drawing.Point(4, 22);
-            this.tabEnemiesKilled.Name = "tabEnemiesKilled";
-            this.tabEnemiesKilled.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEnemiesKilled.Size = new System.Drawing.Size(559, 407);
-            this.tabEnemiesKilled.TabIndex = 15;
-            this.tabEnemiesKilled.Text = "*Enemies Killed";
-            this.tabEnemiesKilled.UseVisualStyleBackColor = true;
-            // 
-            // lstEnemiesKilled
-            // 
-            this.lstEnemiesKilled.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lstEnemiesKilled.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Enemy,
-            this.EnemyKillCount});
-            this.lstEnemiesKilled.FullRowSelect = true;
-            this.lstEnemiesKilled.GridLines = true;
-            this.lstEnemiesKilled.HideSelection = false;
-            this.lstEnemiesKilled.LabelEdit = true;
-            this.lstEnemiesKilled.LabelWrap = false;
-            this.lstEnemiesKilled.Location = new System.Drawing.Point(6, 6);
-            this.lstEnemiesKilled.MultiSelect = false;
-            this.lstEnemiesKilled.Name = "lstEnemiesKilled";
-            this.lstEnemiesKilled.Size = new System.Drawing.Size(544, 311);
-            this.lstEnemiesKilled.TabIndex = 1;
-            this.lstEnemiesKilled.UseCompatibleStateImageBehavior = false;
-            this.lstEnemiesKilled.View = System.Windows.Forms.View.Details;
-            // 
-            // Enemy
-            // 
-            this.Enemy.Text = "Enemy";
-            this.Enemy.Width = 340;
-            // 
-            // EnemyKillCount
-            // 
-            this.EnemyKillCount.Text = "Count";
-            this.EnemyKillCount.Width = 65;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox6.Controls.Add(this.button1);
-            this.groupBox6.Controls.Add(this.button2);
-            this.groupBox6.Controls.Add(this.label2);
-            this.groupBox6.Controls.Add(this.numericUpDown1);
-            this.groupBox6.Controls.Add(this.comboBox1);
-            this.groupBox6.Enabled = false;
-            this.groupBox6.Location = new System.Drawing.Point(6, 328);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(319, 76);
-            this.groupBox6.TabIndex = 2;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Enemy";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(253, 44);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Remove";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(253, 17);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Add";
-            this.Tooltips.SetToolTip(this.button2, "Some Items COULD potentially break your game");
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(132, 49);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Count:";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(176, 47);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(71, 20);
-            this.numericUpDown1.TabIndex = 1;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 19);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(241, 21);
-            this.comboBox1.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(331, 390);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "* Not editable yet";
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(567, 585);
+            this.ClientSize = new System.Drawing.Size(567, 612);
             this.Controls.Add(this.txtConsole);
             this.Controls.Add(this.tabControlMain);
             this.Controls.Add(this.msMenu);
@@ -5697,6 +5808,11 @@ namespace SoG_SGreader
             this.tabEnemiesSeen.ResumeLayout(false);
             this.grpEnemiesSeen.ResumeLayout(false);
             this.grpEnemiesSeen.PerformLayout();
+            this.tabEnemiesKilled.ResumeLayout(false);
+            this.tabEnemiesKilled.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.tabItemsSeen.ResumeLayout(false);
             this.grpItemsSeen.ResumeLayout(false);
             this.grpItemsSeen.PerformLayout();
@@ -5707,13 +5823,12 @@ namespace SoG_SGreader
             this.tabQuickslots.PerformLayout();
             this.grpQuickslots.ResumeLayout(false);
             this.grpQuickslots.PerformLayout();
+            this.tabPotions.ResumeLayout(false);
+            this.tabPotions.PerformLayout();
+            this.grpPostions.ResumeLayout(false);
+            this.grpPostions.PerformLayout();
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
-            this.tabEnemiesKilled.ResumeLayout(false);
-            this.tabEnemiesKilled.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5747,16 +5862,12 @@ namespace SoG_SGreader
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox txtConsole;
         private System.Windows.Forms.TabPage tabInventory;
-        private System.Windows.Forms.ListView lstInventory;
         private System.Windows.Forms.GroupBox grpItem;
         private System.Windows.Forms.Label lblItemCount;
         private System.Windows.Forms.NumericUpDown numItemCount;
         private System.Windows.Forms.ComboBox cbSelectedItem;
-        private System.Windows.Forms.ColumnHeader Item;
         private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ColumnHeader Count;
-        private System.Windows.Forms.ColumnHeader Position;
         private System.Windows.Forms.Button btnAddItem;
         private System.Windows.Forms.TabPage tabChar;
         private System.Windows.Forms.Label lblName;
@@ -6124,5 +6235,18 @@ namespace SoG_SGreader
         private NumericUpDown numericUpDown1;
         private ComboBox comboBox1;
         private Label label3;
+        private TabPage tabPotions;
+        private ComboBox cbPotion3;
+        private ComboBox cbPotion2;
+        private ComboBox cbPotion1;
+        private GroupBox grpPostions;
+        private Label label5;
+        private Label label4;
+        private Label lblPotion1;
+        private ListView lstInventory;
+        private ColumnHeader Item;
+        private ColumnHeader Count;
+        private ColumnHeader Position;
+        private Label label6;
     }
 }
