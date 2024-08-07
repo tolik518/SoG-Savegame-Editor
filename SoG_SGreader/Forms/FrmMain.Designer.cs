@@ -4429,7 +4429,7 @@ namespace SoG_SGreader
             this.cblstCards.FormattingEnabled = true;
             this.cblstCards.Location = new System.Drawing.Point(6, 6);
             this.cblstCards.Name = "cblstCards";
-            this.cblstCards.Size = new System.Drawing.Size(442, 409);
+            this.cblstCards.Size = new System.Drawing.Size(442, 394);
             this.cblstCards.TabIndex = 2;
             // 
             // tabMaps
@@ -4507,7 +4507,7 @@ namespace SoG_SGreader
             this.cblstMaps.FormattingEnabled = true;
             this.cblstMaps.Location = new System.Drawing.Point(6, 6);
             this.cblstMaps.Name = "cblstMaps";
-            this.cblstMaps.Size = new System.Drawing.Size(442, 409);
+            this.cblstMaps.Size = new System.Drawing.Size(442, 394);
             this.cblstMaps.TabIndex = 7;
             // 
             // tabQuests
@@ -4596,7 +4596,7 @@ namespace SoG_SGreader
             this.cblstQuests.FormattingEnabled = true;
             this.cblstQuests.Location = new System.Drawing.Point(6, 6);
             this.cblstQuests.Name = "cblstQuests";
-            this.cblstQuests.Size = new System.Drawing.Size(442, 484);
+            this.cblstQuests.Size = new System.Drawing.Size(442, 394);
             this.cblstQuests.TabIndex = 7;
             // 
             // tabFlags
@@ -4776,7 +4776,7 @@ namespace SoG_SGreader
             this.cblstTrophies.FormattingEnabled = true;
             this.cblstTrophies.Location = new System.Drawing.Point(6, 6);
             this.cblstTrophies.Name = "cblstTrophies";
-            this.cblstTrophies.Size = new System.Drawing.Size(442, 409);
+            this.cblstTrophies.Size = new System.Drawing.Size(442, 394);
             this.cblstTrophies.TabIndex = 11;
             // 
             // tabFishCaught
@@ -4853,7 +4853,7 @@ namespace SoG_SGreader
             this.cblstFishCaught.FormattingEnabled = true;
             this.cblstFishCaught.Location = new System.Drawing.Point(6, 6);
             this.cblstFishCaught.Name = "cblstFishCaught";
-            this.cblstFishCaught.Size = new System.Drawing.Size(442, 484);
+            this.cblstFishCaught.Size = new System.Drawing.Size(442, 394);
             this.cblstFishCaught.TabIndex = 17;
             // 
             // tabEnemiesSeen
@@ -4931,7 +4931,7 @@ namespace SoG_SGreader
             this.cblstEnemiesSeens.FormattingEnabled = true;
             this.cblstEnemiesSeens.Location = new System.Drawing.Point(6, 6);
             this.cblstEnemiesSeens.Name = "cblstEnemiesSeens";
-            this.cblstEnemiesSeens.Size = new System.Drawing.Size(442, 469);
+            this.cblstEnemiesSeens.Size = new System.Drawing.Size(442, 394);
             this.cblstEnemiesSeens.TabIndex = 9;
             // 
             // tabEnemiesKilled
@@ -4965,7 +4965,7 @@ namespace SoG_SGreader
             this.groupBox6.Controls.Add(this.numericUpDown1);
             this.groupBox6.Controls.Add(this.comboBox1);
             this.groupBox6.Enabled = false;
-            this.groupBox6.Location = new System.Drawing.Point(6, 338);
+            this.groupBox6.Location = new System.Drawing.Point(6, 335);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(319, 76);
             this.groupBox6.TabIndex = 2;
@@ -5074,7 +5074,7 @@ namespace SoG_SGreader
             this.grpItemsSeen.Controls.Add(this.btnDeselectAllItemsSeen);
             this.grpItemsSeen.Location = new System.Drawing.Point(454, 6);
             this.grpItemsSeen.Name = "grpItemsSeen";
-            this.grpItemsSeen.Size = new System.Drawing.Size(97, 399);
+            this.grpItemsSeen.Size = new System.Drawing.Size(97, 403);
             this.grpItemsSeen.TabIndex = 14;
             this.grpItemsSeen.TabStop = false;
             this.grpItemsSeen.Text = "Items Seen";
@@ -5101,7 +5101,7 @@ namespace SoG_SGreader
             // btnResetItemsSeen
             // 
             this.btnResetItemsSeen.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetItemsSeen.Location = new System.Drawing.Point(6, 369);
+            this.btnResetItemsSeen.Location = new System.Drawing.Point(6, 372);
             this.btnResetItemsSeen.Name = "btnResetItemsSeen";
             this.btnResetItemsSeen.Size = new System.Drawing.Size(87, 23);
             this.btnResetItemsSeen.TabIndex = 5;
@@ -5127,7 +5127,7 @@ namespace SoG_SGreader
             this.cblstItemsSeen.FormattingEnabled = true;
             this.cblstItemsSeen.Location = new System.Drawing.Point(6, 6);
             this.cblstItemsSeen.Name = "cblstItemsSeen";
-            this.cblstItemsSeen.Size = new System.Drawing.Size(442, 349);
+            this.cblstItemsSeen.Size = new System.Drawing.Size(442, 394);
             this.cblstItemsSeen.TabIndex = 13;
             // 
             // tabItemsCrafted
@@ -5151,7 +5151,7 @@ namespace SoG_SGreader
             this.groupBox1.Controls.Add(this.btnDeselectAllItemsCrafted);
             this.groupBox1.Location = new System.Drawing.Point(454, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(97, 399);
+            this.groupBox1.Size = new System.Drawing.Size(97, 403);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Items Crafted";
@@ -5178,7 +5178,7 @@ namespace SoG_SGreader
             // btnResetItemsCrafted
             // 
             this.btnResetItemsCrafted.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetItemsCrafted.Location = new System.Drawing.Point(6, 369);
+            this.btnResetItemsCrafted.Location = new System.Drawing.Point(6, 372);
             this.btnResetItemsCrafted.Name = "btnResetItemsCrafted";
             this.btnResetItemsCrafted.Size = new System.Drawing.Size(87, 23);
             this.btnResetItemsCrafted.TabIndex = 5;
@@ -5204,7 +5204,7 @@ namespace SoG_SGreader
             this.cblstItemsCrafted.FormattingEnabled = true;
             this.cblstItemsCrafted.Location = new System.Drawing.Point(6, 6);
             this.cblstItemsCrafted.Name = "cblstItemsCrafted";
-            this.cblstItemsCrafted.Size = new System.Drawing.Size(442, 349);
+            this.cblstItemsCrafted.Size = new System.Drawing.Size(442, 394);
             this.cblstItemsCrafted.TabIndex = 15;
             // 
             // tabQuickslots
