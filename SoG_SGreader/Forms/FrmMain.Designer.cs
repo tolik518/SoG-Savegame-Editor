@@ -1608,7 +1608,7 @@ namespace SoG_SGreader
             // lblItemCount
             // 
             this.lblItemCount.AutoSize = true;
-            this.lblItemCount.Location = new System.Drawing.Point(132, 49);
+            this.lblItemCount.Location = new System.Drawing.Point(121, 49);
             this.lblItemCount.Name = "lblItemCount";
             this.lblItemCount.Size = new System.Drawing.Size(38, 13);
             this.lblItemCount.TabIndex = 2;
@@ -1616,14 +1616,14 @@ namespace SoG_SGreader
             // 
             // numItemCount
             // 
-            this.numItemCount.Location = new System.Drawing.Point(176, 47);
+            this.numItemCount.Location = new System.Drawing.Point(165, 47);
             this.numItemCount.Maximum = new decimal(new int[] {
             2147483647,
             0,
             0,
             0});
             this.numItemCount.Name = "numItemCount";
-            this.numItemCount.Size = new System.Drawing.Size(71, 20);
+            this.numItemCount.Size = new System.Drawing.Size(82, 20);
             this.numItemCount.TabIndex = 1;
             this.numItemCount.ValueChanged += new System.EventHandler(this.NumItemCount_ValueChanged);
             // 
