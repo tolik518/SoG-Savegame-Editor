@@ -1527,6 +1527,7 @@ namespace SoG_SGreader
             this.lstInventory.TabIndex = 42;
             this.lstInventory.UseCompatibleStateImageBehavior = false;
             this.lstInventory.View = System.Windows.Forms.View.Details;
+            this.lstInventory.SelectedIndexChanged += new System.EventHandler(this.lstInventory_SelectedIndexChanged);
             // 
             // Item
             // 

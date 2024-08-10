@@ -1,5 +1,6 @@
 ﻿using SoG_SGreader.Wrapper;
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -732,8 +733,14 @@ namespace SoG_SGreader
             };
         }
 
-        private void LstInventory_SelectedIndexChanged(object sender, EventArgs e)
+        private void lstInventory_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // extract listviewitem index and text from sender
+            if (lstInventory.FocusedItem != null)
+            {
+                txtConsole.AppendText("\r\n\r\nSelected item " + lstInventory.FocusedItem.Index + ": " + lstInventory.FocusedItem.Text);
+            }
+
             if (lstInventory.FocusedItem == null || lstInventory.FocusedItem.Index == -1)
             {
                 return;
@@ -979,7 +986,8 @@ namespace SoG_SGreader
 
         private async void FrmMain_Load(object sender, EventArgs e)
         {
-            Text = "SoG: Savegame Editor v" + Application.ProductVersion + " by tolik518";
+            String Debug = Debugger.IsAttached ? "[Debug]" : "";
+            Text = "SoG: Savegame Editor v" + Application.ProductVersion + " by tolik518 " + Debug;
 
             ITextBoxWrapper txtConsoleWrapped = new UITextBox(txtConsole);
 
