@@ -1532,17 +1532,17 @@ namespace SoG_SGreader
             // Item
             // 
             this.Item.Text = "Item";
-            this.Item.Width = 356;
+            this.Item.Width = 345;
             // 
             // Count
             // 
             this.Count.Text = "Count";
-            this.Count.Width = 65;
+            this.Count.Width = 105;
             // 
             // Position
             // 
             this.Position.Text = "Position";
-            this.Position.Width = 70;
+            this.Position.Width = 65;
             // 
             // numGold
             // 
