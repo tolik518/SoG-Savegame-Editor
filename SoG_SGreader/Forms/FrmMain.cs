@@ -195,23 +195,25 @@ namespace SoG_SGreader
             cbStyleWeapon.Text = ((SogItem)playerObject.Style.Weapon).ToString();
             cbStyleShield.Text = ((SogItem)playerObject.Style.Shield).ToString();
 
-            if (playerObject.PotionsEquipped > 0)
+            numPotionsEquipped.Value = playerObject.PotionsEquipped;
+            numPotionsMax.Value = playerObject.PotionsMax;
+
+            if (numPotionsEquipped.Value > 0)
             {
                 cbPotion1.Text = (playerObject.Potions[0].PotionID).ToString();
-                cbPotion1.Enabled = playerObject.PotionsMax > 0;
+                cbPotion1.Enabled = true;
             }
 
-            if (playerObject.PotionsEquipped > 1)
+            if (numPotionsEquipped.Value > 1)
             {
                 cbPotion2.Text = (playerObject.Potions[1].PotionID).ToString();
-                cbPotion2.Enabled = playerObject.PotionsMax > 1;
+                cbPotion2.Enabled = true;
             }
 
-            if (playerObject.PotionsEquipped > 2)
+            if (numPotionsEquipped.Value > 2)
             {
                 cbPotion3.Text = (playerObject.Potions[2].PotionID).ToString();
-                cbPotion3.Enabled = playerObject.PotionsMax > 2;
-
+                cbPotion3.Enabled = true;
             }
 
             for (int i = 0; i < 10; i++)
@@ -1291,6 +1293,16 @@ namespace SoG_SGreader
         private void tabControlSkills_SelectedIndexChanged(object sender, EventArgs e)
         {
             tabControlSkills.SelectedTab.Controls.Add(cbOnlyLegalLevels);
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label42_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -425,6 +425,10 @@ namespace SoG_SGreader
             this.tabPotions = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
             this.grpPostions = new System.Windows.Forms.GroupBox();
+            this.numPotionsEquipped = new SoG_SGreader.CustomControls.NumericUpDownWrap();
+            this.label8 = new System.Windows.Forms.Label();
+            this.numPotionsMax = new SoG_SGreader.CustomControls.NumericUpDownWrap();
+            this.label42 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblPotion1 = new System.Windows.Forms.Label();
@@ -684,6 +688,8 @@ namespace SoG_SGreader
             this.grpQuickslots.SuspendLayout();
             this.tabPotions.SuspendLayout();
             this.grpPostions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPotionsEquipped)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPotionsMax)).BeginInit();
             this.msMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -5365,6 +5371,10 @@ namespace SoG_SGreader
             // 
             // grpPostions
             // 
+            this.grpPostions.Controls.Add(this.numPotionsEquipped);
+            this.grpPostions.Controls.Add(this.label8);
+            this.grpPostions.Controls.Add(this.numPotionsMax);
+            this.grpPostions.Controls.Add(this.label42);
             this.grpPostions.Controls.Add(this.label5);
             this.grpPostions.Controls.Add(this.label4);
             this.grpPostions.Controls.Add(this.lblPotion1);
@@ -5375,10 +5385,46 @@ namespace SoG_SGreader
             this.grpPostions.Margin = new System.Windows.Forms.Padding(2);
             this.grpPostions.Name = "grpPostions";
             this.grpPostions.Padding = new System.Windows.Forms.Padding(2);
-            this.grpPostions.Size = new System.Drawing.Size(262, 107);
+            this.grpPostions.Size = new System.Drawing.Size(527, 107);
             this.grpPostions.TabIndex = 13;
             this.grpPostions.TabStop = false;
             this.grpPostions.Text = "Potions";
+            // 
+            // numPotionsEquipped
+            // 
+            this.numPotionsEquipped.Enabled = false;
+            this.numPotionsEquipped.Location = new System.Drawing.Point(446, 19);
+            this.numPotionsEquipped.Name = "numPotionsEquipped";
+            this.numPotionsEquipped.Size = new System.Drawing.Size(66, 20);
+            this.numPotionsEquipped.TabIndex = 18;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(369, 21);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(71, 13);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Potions equip";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // numPotionsMax
+            // 
+            this.numPotionsMax.Enabled = false;
+            this.numPotionsMax.Location = new System.Drawing.Point(446, 45);
+            this.numPotionsMax.Name = "numPotionsMax";
+            this.numPotionsMax.Size = new System.Drawing.Size(66, 20);
+            this.numPotionsMax.TabIndex = 16;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(369, 47);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(67, 13);
+            this.label42.TabIndex = 15;
+            this.label42.Text = "Max. potions";
+            this.label42.Click += new System.EventHandler(this.label42_Click);
             // 
             // label5
             // 
@@ -5828,6 +5874,8 @@ namespace SoG_SGreader
             this.tabPotions.PerformLayout();
             this.grpPostions.ResumeLayout(false);
             this.grpPostions.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPotionsEquipped)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPotionsMax)).EndInit();
             this.msMenu.ResumeLayout(false);
             this.msMenu.PerformLayout();
             this.ResumeLayout(false);
@@ -6249,5 +6297,9 @@ namespace SoG_SGreader
         private ColumnHeader Count;
         private ColumnHeader Position;
         private Label label6;
+        private NumericUpDownWrap numPotionsEquipped;
+        private Label label8;
+        private NumericUpDownWrap numPotionsMax;
+        private Label label42;
     }
 }

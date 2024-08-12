@@ -176,7 +176,7 @@ namespace SoG_SGreader
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmLoadSaveGame";
-            this.Text = "SoG: Savegame Editor v0.8.1 by tolik518";
+            this.Text = "SoG: Savegame Editor v0.8.2 by tolik518";
             this.Load += new System.EventHandler(this.FrmLoadSaveGame_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

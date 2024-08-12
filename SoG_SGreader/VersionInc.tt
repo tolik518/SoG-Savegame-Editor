@@ -10,7 +10,7 @@ using System.Reflection;
 <#+
  public static int Major = 0;
  public static int Minor = 8;
- public static int Patch = 1;
+ public static int Patch = 2;
  public static string Version = Major + "." + Minor + "." + Patch;
 
  public static DateTime ProjectStartedDate = new DateTime(year: 2020, month: 3, day: 12);
