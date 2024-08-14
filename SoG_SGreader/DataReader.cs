@@ -51,10 +51,10 @@ namespace SoG_SGreader
                     switch (quickSlotType)
                     {
                         case 1:
-                            playerObject.Quickslots.Add((SogItem)readBinary.ReadInt32());
+                            playerObject.Quickslots.Add(readBinary.ReadInt32());
                             break;
                         case 2:
-                            playerObject.Quickslots.Add((SogSkill)readBinary.ReadUInt16());
+                            playerObject.Quickslots.Add(readBinary.ReadUInt16());
                             break;
                         default:
                             playerObject.Quickslots.Add(0);
@@ -82,7 +82,7 @@ namespace SoG_SGreader
                 {
                     playerObject.Inventory.Add(new Item
                     {
-                        ItemID = (SogItem)readBinary.ReadInt32(),
+                        ItemID = readBinary.ReadInt32(),
                         ItemCount = readBinary.ReadInt32(),
                         ItemPos = readBinary.ReadUInt32()
                     });
@@ -292,7 +292,7 @@ namespace SoG_SGreader
                 {
                     playerObject.ItemsSeen.Add(new ItemSeen
                     {
-                        ItemID = (SogItem) readBinary.ReadInt32()
+                        ItemID = readBinary.ReadInt32()
                     });
                 }
 
@@ -305,7 +305,7 @@ namespace SoG_SGreader
                 {
                     playerObject.ItemsCrafted.Add(new ItemCrafted
                     {
-                        ItemID = (SogItem) readBinary.ReadInt32()
+                        ItemID = readBinary.ReadInt32()
                     });
                 }
 
@@ -318,7 +318,7 @@ namespace SoG_SGreader
                 {
                     playerObject.FishCaught.Add(new FishCaught
                     {
-                        FishID = (SogItem) readBinary.ReadInt32()
+                        FishID = readBinary.ReadInt32()
                     });
                 }
 
@@ -349,7 +349,7 @@ namespace SoG_SGreader
                 {
                     playerObject.Potions.Add(new Potion 
                     { 
-                        PotionID = (SogItem)readBinary.ReadInt32()
+                        PotionID = readBinary.ReadInt32()
                     });
                 }
 

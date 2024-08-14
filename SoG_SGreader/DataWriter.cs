@@ -211,7 +211,7 @@ namespace SoG_SGreader
 
                 writeBinary.Write(playerObject.PlayTimeTotal); // check for overflow
 
-                writeBinary.Write((byte )playerObject.PhaseShiftStuff);
+                writeBinary.Write((byte)playerObject.PhaseShiftStuff);
 
                 writeBinary.Write((ushort) playerObject.CharacterFlags.Count);
                 for (int i = 0; i != playerObject.CharacterFlags.Count; i++)

@@ -49,7 +49,7 @@ namespace SoG_SGreader
         public ushort UnknownVariable02Count { get; set; }     //something to do with challenges?
         public List<UnknownVariable02> UnknownVariables02;
         public int RobinBowHighscore { get; set; }
-        public ushort TrophiesCount { get; set; }    //trophies?
+        public ushort TrophiesCount { get; set; }
 
         public List<Trophy> Trophies;
         public ushort ItemsSeenCount { get; set; }
@@ -125,17 +125,17 @@ namespace SoG_SGreader
             return Trophies.Any(trophy => trophy.TrophyID == sogTrophy);
         }
 
-        internal bool HasSeenItem(SogItem sogItem)
+        internal bool HasSeenItem(int sogItem)
         {
             return ItemsSeen.Any(item => item.ItemID == sogItem);
         }
 
-        internal bool HasCraftedItem(SogItem sogItem)
+        internal bool HasCraftedItem(int sogItem)
         {
             return ItemsCrafted.Any(item => item.ItemID == sogItem);
         }
 
-        internal bool HasCaughtFish(SogItem sogItem)
+        internal bool HasCaughtFish(int sogItem)
         {
             return FishCaught.Any(fish => fish.FishID == sogItem);
         }

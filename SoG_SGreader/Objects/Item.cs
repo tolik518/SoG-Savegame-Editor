@@ -2,7 +2,7 @@ namespace SoG_SGreader
 {
     public class Item
     {
-        public SogItem ItemID { get; set; }
+        public int ItemID { get; set; }
         public int ItemCount { get; set; }
         public uint ItemPos { get; set; }
         
