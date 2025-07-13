@@ -140,7 +140,8 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Enum\Attribute\SkillMaxLevelAttribute.cs" />
-    <Compile Include="Enum\SogFish.cs" />
+    <Compile Include="Enum\DynamicEnum.cs" />
+    <Compile Include="Enum\GameEnums.cs" />
     <Compile Include="Enum\SogFlag.cs" />
     <Compile Include="Enum\SogTreasureMap.cs" />
     <Compile Include="Enum\SogEnemy.cs" />
@@ -150,7 +151,6 @@
     <Compile Include="GamePatchReader.cs" />
     <Compile Include="ComandLineOptions.cs" />
     <Compile Include="Enum\SogColor.cs" />
-    <Compile Include="Enum\SogItem.cs" />
     <Compile Include="Enum\SogSkill.cs" />
     <Compile Include="Enum\SogPet.cs" />
     <Compile Include="JsonHandler.cs" />

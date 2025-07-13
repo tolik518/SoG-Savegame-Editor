@@ -2,6 +2,6 @@ namespace SoG_SGreader
 {
     public class Potion
     {
-        public SogItem PotionID { get; set; }
+        public int PotionID { get; set; }
     }
 }

@@ -5,6 +5,7 @@ using SoG_SGreader.Wrapper;
 using CommandLine;
 using System.Diagnostics;
 using System.Security.Cryptography;
+using SoG_SGreader.Enum;
 
 namespace SoG_SGreader
 {
@@ -140,6 +141,7 @@ namespace SoG_SGreader
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //SetProcessDpiAwareness((int)DpiAwareness.SystemAware);
+            GameEnums.InitializeEnums();
             Application.Run(new FrmLoadSaveGame());
         }
     }
