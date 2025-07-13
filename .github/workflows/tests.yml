@@ -28,7 +28,7 @@ jobs:
         run: vstest.console.exe /TestAdapterPath:"packages" SoG_SGreader.Test\bin\Release\SoG_SGreader.Test.dll
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: SoG_SGreader
           path: SoG_SGreader\bin
