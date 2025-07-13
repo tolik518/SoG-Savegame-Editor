@@ -1,5 +1,6 @@
 ﻿using SoG_SGreader.Wrapper;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -10,7 +11,7 @@ namespace SoG_SGreader
 {
     public partial class FrmMain : Form
     {
-        public static readonly string SupportedPatch = "1.03a";
+        public static readonly string SupportedPatch = "1.10f";
         public string InstalledGamePatch = "";
         private Player playerObject;
         private readonly ComboBox[] cbQuickslot = new ComboBox[10];
@@ -163,8 +164,34 @@ namespace SoG_SGreader
 
             cbSelectedItem.DataSource = items;
 
+            // create "Cards" and "CardsCount" nd
+            // set dataGridCards Card to readonly and cardcount to editable
+            dataGridCards.AutoGenerateColumns = false;
+            dataGridCards.Columns.Clear();
+            dataGridCards.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "Card",
+                DataPropertyName = "Card",
+                HeaderText = "Card",
+                ReadOnly = true,
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                FillWeight = 70
+            });
+            dataGridCards.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "CardCount",
+                DataPropertyName = "CardCount",
+                HeaderText = "Card Count",
+                ReadOnly = false,
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                FillWeight = 30
+            });
+            dataGridCards.AllowUserToAddRows = false;
+
             //fill checkboxLists with all the values from the enums
-            cblstCards.DataSource = System.Enum.GetNames(typeof(SogEnemy));
+            dataGridCards.DataSource = System.Enum.GetNames(typeof(SogEnemy))
+                .Select(name => new CardViewModel { Card = name, CardCount = 0 })
+                .ToList();
             cblstQuests.DataSource = System.Enum.GetNames(typeof(SogQuest));
             cblstEnemiesSeens.DataSource = System.Enum.GetNames(typeof(SogEnemy));
             cblstFlags.DataSource = System.Enum.GetNames(typeof(SogFlag));
@@ -232,7 +259,7 @@ namespace SoG_SGreader
             {
                 var vItem = new ListViewItem(
                     new[] {
-                        playerObject.Inventory[i].ItemID.ToString(),
+                        playerObject.Inventory[i].GetItemName(),
                         playerObject.Inventory[i].ItemCount.ToString(),
                         playerObject.Inventory[i].ItemPos.ToString()
                     }
@@ -297,11 +324,20 @@ namespace SoG_SGreader
                 skill.Field.Value = playerObject.GetSkillLevel(skill.SkillID);
             }
 
-            // find out if player has the card. mark the checkbox if yes
-            for (int i = 0; i < cblstCards.Items.Count; i++)
+            // add card and cardcount to the newly created dataGridCards
+            foreach (var card in playerObject.Cards)
             {
-                bool playerHasCard = playerObject.HasCard((SogEnemy)System.Enum.Parse(typeof(SogEnemy), cblstCards.Items[i].ToString()));
-                cblstCards.SetItemChecked(i, playerHasCard);
+                var existingCard = dataGridCards.Rows.Cast<DataGridViewRow>()
+                    .FirstOrDefault(
+                        row => row.Cells["Card"].Value.ToString() == card.Key.CardID.ToString()
+                    );
+
+                if (existingCard != null) {
+                    existingCard.Cells["CardCount"].Value = card.Value;
+                }
+                else {
+                    dataGridCards.Rows.Add(card.Key.CardID.ToString(), card.Value);
+                }
             }
 
             // find out if player has the Quest. mark the checkbox if yes
@@ -414,11 +450,29 @@ namespace SoG_SGreader
 
             for (int i = 0; i != lstInventory.Items.Count; i++)
             {
+                // check if the item was a plus item, because then we have to add PlusItemStart to the ItemID
+                SogItem ItemId = (SogItem)System.Enum.Parse(typeof(SogItem), lstInventory.Items[i].SubItems[0].Text);
+                if (SoG_SGreader.Item.IsPlusItem(ItemId))
+                {
+                    ItemId = (SogItem)((int)ItemId + SoG_SGreader.Item.PlusItemStart);
+                }
+
+                // check if the itemId already exists in the inventory and add the count to the existing item
+                if (playerObject.Inventory.Any(item => item.ItemID == ItemId))
+                {
+                    var existingItem = playerObject.Inventory.First(item => item.ItemID == ItemId);
+                    existingItem.ItemCount += int.Parse(lstInventory.Items[i].SubItems[1].Text);
+                    continue;
+                }
+
+                int itemCount = int.Parse(lstInventory.Items[i].SubItems[1].Text);
+                uint itemPos = uint.Parse(lstInventory.Items[i].SubItems[2].Text);
+
                 Item item = new Item
                 {
-                    ItemID = (SogItem)System.Enum.Parse(typeof(SogItem), lstInventory.Items[i].SubItems[0].Text),
-                    ItemCount = int.Parse(lstInventory.Items[i].SubItems[1].Text),
-                    ItemPos = uint.Parse(lstInventory.Items[i].SubItems[2].Text)
+                    ItemID = ItemId,
+                    ItemCount = itemCount,
+                    ItemPos = itemPos
                 };
 
                 playerObject.Inventory.Add(item);
@@ -509,16 +563,18 @@ namespace SoG_SGreader
             playerObject.Style.Sex = rbMale.Checked ? 1 : 0;
 
             playerObject.Cards.Clear();
-            for (int i = 0; i != cblstCards.Items.Count; i++)
+            foreach (DataGridViewRow row in dataGridCards.Rows)
             {
-                if (cblstCards.GetItemChecked(i))
+                if (row.Cells["CardCount"].Value != null && int.TryParse(row.Cells["CardCount"].Value.ToString(), out int cardCount) && cardCount > 0)
                 {
+                    var cardId = (SogEnemy)System.Enum.Parse(typeof(SogEnemy), row.Cells["Card"].Value.ToString());
                     playerObject.Cards.Add(
-                        new Card
-                        {
-                            CardID = (SogEnemy)System.Enum.Parse(typeof(SogEnemy), cblstCards.Items[i].ToString())
-                        }
-                    );
+                        new KeyValuePair<Card, ushort>(
+                            new Card { 
+                                CardID = cardId 
+                            }, 
+                            (ushort)cardCount)
+                        );
                 }
             }
 
@@ -741,8 +797,13 @@ namespace SoG_SGreader
             {
                 return;
             }
+
             cbSelectedItem.Text = lstInventory.Items[lstInventory.FocusedItem.Index].SubItems[0].Text;
             numItemCount.Value = Int32.Parse(lstInventory.Items[lstInventory.FocusedItem.Index].SubItems[1].Text);
+            // tag btnItemPlus if the item is a plus item, use IsPlusItem
+            bool isPlusItem = cbSelectedItem.Text.EndsWith("+");
+            txtConsole.AppendText("\r\n\r\nItem '" + cbSelectedItem.Text.TrimEnd('+') + "' is a plus item: " + isPlusItem);
+            btnItemPlus.Text = isPlusItem ? "+" : " ";
         }
 
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1006,26 +1067,39 @@ namespace SoG_SGreader
 
         private void btnResetCards_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < cblstCards.Items.Count; i++)
+            // do the same for dataGridCards, but take the number of cards from the playerObject into account
+            for (int i = 0; i < dataGridCards.Rows.Count; i++)
             {
-                bool playerHasCard = playerObject.HasCard((SogEnemy)System.Enum.Parse(typeof(SogEnemy), cblstCards.Items[i].ToString()));
-                cblstCards.SetItemChecked(i, playerHasCard);
+                var card = (SogEnemy)System.Enum.Parse(typeof(SogEnemy), dataGridCards.Rows[i].Cells["Card"].Value.ToString());
+                int cardCount = playerObject.GetCardCount(card);
+                dataGridCards.Rows[i].Cells["CardCount"].Value = cardCount;
             }
+
         }
 
         private void btnSelectAllCards_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < cblstCards.Items.Count; i++)
+            for (int i = 0; i < dataGridCards.Rows.Count; i++)
             {
-                cblstCards.SetItemChecked(i, true);
+                var card = (SogEnemy)System.Enum.Parse(typeof(SogEnemy), dataGridCards.Rows[i].Cells["Card"].Value.ToString());
+                int cardCount = playerObject.GetCardCount(card);
+                if (cardCount == 0)
+                {
+                    dataGridCards.Rows[i].Cells["CardCount"].Value = 1;
+                }
+                else
+                {
+                    dataGridCards.Rows[i].Cells["CardCount"].Value = cardCount;
+                }
             }
+
         }
 
         private void btnDeselectAllCards_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < cblstCards.Items.Count; i++)
+            for (int i = 0; i < dataGridCards.Rows.Count; i++)
             {
-                cblstCards.SetItemChecked(i, false);
+                dataGridCards.Rows[i].Cells["CardCount"].Value = 0;
             }
         }
 
@@ -1304,5 +1378,40 @@ namespace SoG_SGreader
         {
 
         }
+
+        private void btnItemPlus_Click(object sender, EventArgs e)
+        {
+            var button = (Button)sender;
+
+            // Toggle state
+            bool isChecked = (button.Tag as bool?) ?? false;
+            isChecked = !isChecked;
+
+            // Update appearance
+            button.Text = isChecked ? "+" : "";
+            button.Tag = isChecked;
+
+            // Update the item in the inventory list
+            if (lstInventory.FocusedItem != null && lstInventory.FocusedItem.Index >= 0)
+            {
+                var item = lstInventory.Items[lstInventory.FocusedItem.Index];
+                string itemName = item.SubItems[0].Text.TrimEnd('+'); // Remove the plus sign for the item name
+                if (isChecked)
+                {
+                    item.SubItems[0].Text = itemName + "+";
+                }
+                else
+                {
+                    item.SubItems[0].Text = itemName;
+                }
+            }
+        }
+    }
+
+    // quick hack, please refactor if you see this :D
+    public class CardViewModel
+    {
+        public string Card { get; set; }
+        public int CardCount { get; set; }
     }
 }

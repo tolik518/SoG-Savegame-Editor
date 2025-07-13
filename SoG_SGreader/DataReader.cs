@@ -18,6 +18,12 @@ namespace SoG_SGreader
 
                 playerObject.MagicByte = readBinary.ReadInt32(); //I dont know yet what the first bytes stand for tbh  
                 
+                // if Magicbyte is smaller than 136, then its an old savegame
+                if (playerObject.MagicByte < 136)
+                {
+                    throw new Exception("This appears to be a an old savegame. Please use the SoG Savegame Editor v0.8.2 for that savegame.");
+                }
+
                 //TODO: Cast to SogItems
                 playerObject.Equip.Hat = readBinary.ReadInt32();
                 playerObject.Equip.Facegear = readBinary.ReadInt32();
@@ -71,12 +77,10 @@ namespace SoG_SGreader
                 txtConsole.AppendText("\r\nGender: " + playerObject.Style.Sex);
 
                 playerObject.NicknameLength = readBinary.ReadByte();
-
                 playerObject.Nickname = new string(readBinary.ReadChars(playerObject.NicknameLength));
                 txtConsole.AppendText("\r\nNickname: " + playerObject.Nickname);
 
                 playerObject.ItemsCount = readBinary.ReadInt32();
-
                 playerObject.Inventory = new List<Item>(playerObject.ItemsCount);
                 for (int i = 0; i != playerObject.ItemsCount; i++)
                 {
@@ -87,15 +91,12 @@ namespace SoG_SGreader
                         ItemPos = readBinary.ReadUInt32()
                     });
                 }
-
                 txtConsole.AppendText("\r\nInventorySize: " + playerObject.ItemsCount);
 
-                playerObject.UnknownVariable0 = readBinary.ReadInt32();   //idk what I am reading here
+                playerObject.PickupNumberPool = readBinary.ReadUInt32();   //idk what I am reading here
 
                 playerObject.MerchantItemsCount = readBinary.ReadInt32();     //itemscount by shady merchant
-
                 playerObject.MerchantItems = new List<MerchantItem>(playerObject.MerchantItemsCount);
-
                 for (int i = 0; i != playerObject.MerchantItemsCount; i++)
                 {
                     playerObject.MerchantItems.Add(new MerchantItem 
@@ -104,18 +105,64 @@ namespace SoG_SGreader
                         ItemCount = readBinary.ReadInt32()
                     });
                 }
-
                 txtConsole.AppendText("\r\nItemCountMerchant: " + playerObject.MerchantItemsCount);
-                
+
+                playerObject.NGPlus = readBinary.ReadByte();
+                txtConsole.AppendText("\r\nNGPlus: " + playerObject.NGPlus);
+
+                playerObject.PinsEquippedCount = readBinary.ReadByte();    
+                playerObject.PinsEquipped = new List<SogPin>(playerObject.PinsEquippedCount);
+                for (int i = 0; i != playerObject.PinsEquippedCount; i++)
+                {
+                    playerObject.PinsEquipped.Add((SogPin)readBinary.ReadInt16());
+                    txtConsole.AppendText("\r\n" + "Pin " + i + ": " + playerObject.PinsEquipped[i].ToString());
+                }
+                txtConsole.AppendText("\r\nPinsEquippedCount: " + playerObject.PinsEquippedCount);
+
+                playerObject.PinsOnShelfCount = readBinary.ReadByte();     
+                playerObject.PinsOnShelf = new List<SogPin>(playerObject.PinsOnShelfCount);
+                for (int i = 0; i != playerObject.PinsOnShelfCount; i++)
+                {
+                    playerObject.PinsOnShelf.Add((SogPin)readBinary.ReadInt16());
+                    txtConsole.AppendText("\r\n" + "Pin " + i + ": " + playerObject.PinsOnShelf[i].ToString());
+                }
+                txtConsole.AppendText("\r\nPinsOnShelfCount: " + playerObject.PinsOnShelfCount);
+
+                playerObject.PinsSeenCount = readBinary.ReadUInt16();
+                playerObject.PinsSeen = new List<SogPin>(playerObject.PinsSeenCount);
+                for (int i = 0; i != playerObject.PinsSeenCount; i++)
+                {
+                    playerObject.PinsSeen.Add((SogPin)readBinary.ReadInt16());
+                    txtConsole.AppendText("\r\n" + "Pin " + i + ": " + playerObject.PinsSeen[i].ToString());
+                }
+                txtConsole.AppendText("\r\nPinsSeenCount: " + playerObject.PinsSeenCount);
+
+                playerObject.PinsLatestCount = readBinary.ReadUInt16();    
+                playerObject.PinsLatest = new List<SogPin>(playerObject.PinsLatestCount);
+                for (int i = 0; i != playerObject.PinsLatestCount; i++)
+                {
+                    playerObject.PinsLatest.Add((SogPin)readBinary.ReadInt16());
+                    txtConsole.AppendText("\r\n" + "Pin " + i + ": " + playerObject.PinsLatest[i].ToString());
+                }
+                txtConsole.AppendText("\r\nPinsLatestCount: " + playerObject.PinsLatestCount);
+                //Pins are done, now we read the cards and treasure maps
+
+
+
                 playerObject.CardsCount = readBinary.ReadInt32();     //How many cards do we need to count        
-                playerObject.Cards = new List<Card>(playerObject.CardsCount);
+                playerObject.Cards = new List<KeyValuePair<Card, ushort>>(playerObject.CardsCount);
 
                 for (int i = 0; i != playerObject.CardsCount; i++)
                 {
-                    playerObject.Cards.Add(new Card
-                    {
-                        CardID = (SogEnemy)readBinary.ReadInt32()
-                    });
+                    playerObject.Cards.Add(
+                        new KeyValuePair<Card, ushort>(
+                            new Card
+                            {
+                                CardID = (SogEnemy)readBinary.ReadInt32()
+                            },
+                            readBinary.ReadUInt16()
+                        )
+                    );
                 }
  
                 txtConsole.AppendText("\r\nCardsCount: " + playerObject.CardsCount);
@@ -161,6 +208,23 @@ namespace SoG_SGreader
 
                 txtConsole.AppendText("\r\nSkillCount: " + playerObject.SkillsCount);
 
+                playerObject.SkillsOverLevelingCount = readBinary.ReadInt32();
+                txtConsole.AppendText("\r\n" + "> SkillsOverLevelingCount Position: " + readBinary.BaseStream.Position.ToString("X"));
+
+                playerObject.SkillsOverLeveling = new List<Skill>(playerObject.SkillsOverLevelingCount);
+                for (int i = 0; i != playerObject.SkillsOverLevelingCount; i++)
+                {
+                    var skillID = (SogSkill)readBinary.ReadInt16();
+                    var skillLevel = readBinary.ReadByte();
+                    playerObject.SkillsOverLeveling.Add(new Skill
+                    {
+                        SkillID = skillID,
+                        SkillLevel = skillLevel
+                    });
+                    txtConsole.AppendText("\r\n" + "Skill " + i + ": " + skillID.ToString() + " Level " + skillLevel);
+                }
+
+                txtConsole.AppendText("\r\nSkillCount: " + playerObject.SkillsOverLevelingCount);
 
                 playerObject.Level = readBinary.ReadInt16();         //Level
                 txtConsole.AppendText("\r\n" + "> Level Position: " + readBinary.BaseStream.Position.ToString("X"));

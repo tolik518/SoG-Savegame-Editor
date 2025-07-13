@@ -34,6 +34,7 @@ namespace SoG_SGreader
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabChar = new System.Windows.Forms.TabPage();
@@ -115,6 +116,7 @@ namespace SoG_SGreader
             this.numGold = new SoG_SGreader.CustomControls.NumericUpDownWrap();
             this.lblGold = new System.Windows.Forms.Label();
             this.grpItem = new System.Windows.Forms.GroupBox();
+            this.btnItemPlus = new System.Windows.Forms.Button();
             this.btnDeleteSelectedItem = new System.Windows.Forms.Button();
             this.btnAddItem = new System.Windows.Forms.Button();
             this.lblItemCount = new System.Windows.Forms.Label();
@@ -333,12 +335,12 @@ namespace SoG_SGreader
             this.numTalentGeneral0 = new SoG_SGreader.CustomControls.NumericUpDownWrap();
             this.pictureBox75 = new SoG_SGreader.CustomControls.PixelBox();
             this.tabCards = new System.Windows.Forms.TabPage();
+            this.dataGridCards = new System.Windows.Forms.DataGridView();
             this.grpCards = new System.Windows.Forms.GroupBox();
             this.lblCardsNullWarning = new System.Windows.Forms.Label();
             this.btnSelectAllCards = new System.Windows.Forms.Button();
             this.btnResetCards = new System.Windows.Forms.Button();
             this.btnDeselectAllCards = new System.Windows.Forms.Button();
-            this.cblstCards = new System.Windows.Forms.CheckedListBox();
             this.tabMaps = new System.Windows.Forms.TabPage();
             this.grpMaps = new System.Windows.Forms.GroupBox();
             this.lblMapsNullWarning = new System.Windows.Forms.Label();
@@ -664,6 +666,7 @@ namespace SoG_SGreader
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox75)).BeginInit();
             this.tabCards.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCards)).BeginInit();
             this.grpCards.SuspendLayout();
             this.tabMaps.SuspendLayout();
             this.grpMaps.SuspendLayout();
@@ -714,11 +717,12 @@ namespace SoG_SGreader
             this.tabControlMain.Controls.Add(this.tabItemsCrafted);
             this.tabControlMain.Controls.Add(this.tabQuickslots);
             this.tabControlMain.Controls.Add(this.tabPotions);
-            this.tabControlMain.Location = new System.Drawing.Point(0, 25);
+            this.tabControlMain.Location = new System.Drawing.Point(0, 38);
+            this.tabControlMain.Margin = new System.Windows.Forms.Padding(4);
             this.tabControlMain.Multiline = true;
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
-            this.tabControlMain.Size = new System.Drawing.Size(567, 460);
+            this.tabControlMain.Size = new System.Drawing.Size(850, 690);
             this.tabControlMain.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControlMain.TabIndex = 0;
             // 
@@ -733,10 +737,11 @@ namespace SoG_SGreader
             this.tabChar.Controls.Add(this.grpSkillpoints);
             this.tabChar.Controls.Add(this.grpLevel);
             this.tabChar.Controls.Add(this.grpColors);
-            this.tabChar.Location = new System.Drawing.Point(4, 40);
+            this.tabChar.Location = new System.Drawing.Point(4, 54);
+            this.tabChar.Margin = new System.Windows.Forms.Padding(4);
             this.tabChar.Name = "tabChar";
-            this.tabChar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabChar.Size = new System.Drawing.Size(559, 416);
+            this.tabChar.Padding = new System.Windows.Forms.Padding(4);
+            this.tabChar.Size = new System.Drawing.Size(842, 632);
             this.tabChar.TabIndex = 3;
             this.tabChar.Text = "Character / Equip";
             this.tabChar.UseVisualStyleBackColor = true;
@@ -746,40 +751,45 @@ namespace SoG_SGreader
             this.grpPatch.BackColor = System.Drawing.Color.Transparent;
             this.grpPatch.Controls.Add(this.lblGamePatch);
             this.grpPatch.Controls.Add(this.label55);
-            this.grpPatch.Location = new System.Drawing.Point(169, 162);
+            this.grpPatch.Location = new System.Drawing.Point(254, 243);
+            this.grpPatch.Margin = new System.Windows.Forms.Padding(4);
             this.grpPatch.Name = "grpPatch";
-            this.grpPatch.Size = new System.Drawing.Size(105, 236);
+            this.grpPatch.Padding = new System.Windows.Forms.Padding(4);
+            this.grpPatch.Size = new System.Drawing.Size(158, 354);
             this.grpPatch.TabIndex = 54;
             this.grpPatch.TabStop = false;
             // 
             // lblGamePatch
             // 
             this.lblGamePatch.AutoSize = true;
-            this.lblGamePatch.Location = new System.Drawing.Point(13, 119);
+            this.lblGamePatch.Location = new System.Drawing.Point(20, 178);
+            this.lblGamePatch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGamePatch.Name = "lblGamePatch";
-            this.lblGamePatch.Size = new System.Drawing.Size(77, 13);
+            this.lblGamePatch.Size = new System.Drawing.Size(114, 20);
             this.lblGamePatch.TabIndex = 1;
             this.lblGamePatch.Text = "[Game 0.000a]";
             // 
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(13, 101);
+            this.label55.Location = new System.Drawing.Point(20, 152);
+            this.label55.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(71, 13);
+            this.label55.Size = new System.Drawing.Size(102, 20);
             this.label55.TabIndex = 0;
             this.label55.Text = "[Patch 1.03a]";
             // 
             // numID
             // 
-            this.numID.Location = new System.Drawing.Point(79, 50);
+            this.numID.Location = new System.Drawing.Point(118, 75);
+            this.numID.Margin = new System.Windows.Forms.Padding(4);
             this.numID.Maximum = new decimal(new int[] {
             -2,
             0,
             0,
             0});
             this.numID.Name = "numID";
-            this.numID.Size = new System.Drawing.Size(75, 20);
+            this.numID.Size = new System.Drawing.Size(112, 26);
             this.numID.TabIndex = 53;
             // 
             // grpGeneral
@@ -795,9 +805,11 @@ namespace SoG_SGreader
             this.grpGeneral.Controls.Add(this.numBirtdayMonth);
             this.grpGeneral.Controls.Add(this.numBirthdayDay);
             this.grpGeneral.Controls.Add(this.txtTimePlayed);
-            this.grpGeneral.Location = new System.Drawing.Point(6, 4);
+            this.grpGeneral.Location = new System.Drawing.Point(9, 6);
+            this.grpGeneral.Margin = new System.Windows.Forms.Padding(4);
             this.grpGeneral.Name = "grpGeneral";
-            this.grpGeneral.Size = new System.Drawing.Size(157, 152);
+            this.grpGeneral.Padding = new System.Windows.Forms.Padding(4);
+            this.grpGeneral.Size = new System.Drawing.Size(236, 228);
             this.grpGeneral.TabIndex = 52;
             this.grpGeneral.TabStop = false;
             this.grpGeneral.Text = "General";
@@ -805,10 +817,9 @@ namespace SoG_SGreader
             // rbFemale
             // 
             this.rbFemale.AutoSize = true;
-            this.rbFemale.Location = new System.Drawing.Point(108, 130);
-            this.rbFemale.Margin = new System.Windows.Forms.Padding(2);
+            this.rbFemale.Location = new System.Drawing.Point(162, 195);
             this.rbFemale.Name = "rbFemale";
-            this.rbFemale.Size = new System.Drawing.Size(37, 17);
+            this.rbFemale.Size = new System.Drawing.Size(50, 24);
             this.rbFemale.TabIndex = 2;
             this.rbFemale.TabStop = true;
             this.rbFemale.Text = "♀";
@@ -817,9 +828,10 @@ namespace SoG_SGreader
             // lblGender
             // 
             this.lblGender.AutoSize = true;
-            this.lblGender.Location = new System.Drawing.Point(5, 129);
+            this.lblGender.Location = new System.Drawing.Point(8, 194);
+            this.lblGender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(45, 13);
+            this.lblGender.Size = new System.Drawing.Size(67, 20);
             this.lblGender.TabIndex = 52;
             this.lblGender.Text = "Gender:";
             this.Tooltips.SetToolTip(this.lblGender, "Day / Month");
@@ -827,10 +839,9 @@ namespace SoG_SGreader
             // rbMale
             // 
             this.rbMale.AutoSize = true;
-            this.rbMale.Location = new System.Drawing.Point(73, 130);
-            this.rbMale.Margin = new System.Windows.Forms.Padding(2);
+            this.rbMale.Location = new System.Drawing.Point(110, 195);
             this.rbMale.Name = "rbMale";
-            this.rbMale.Size = new System.Drawing.Size(37, 17);
+            this.rbMale.Size = new System.Drawing.Size(50, 24);
             this.rbMale.TabIndex = 1;
             this.rbMale.TabStop = true;
             this.rbMale.Text = "♂";
@@ -839,9 +850,10 @@ namespace SoG_SGreader
             // lblTimePlayed
             // 
             this.lblTimePlayed.AutoSize = true;
-            this.lblTimePlayed.Location = new System.Drawing.Point(5, 77);
+            this.lblTimePlayed.Location = new System.Drawing.Point(8, 116);
+            this.lblTimePlayed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTimePlayed.Name = "lblTimePlayed";
-            this.lblTimePlayed.Size = new System.Drawing.Size(67, 13);
+            this.lblTimePlayed.Size = new System.Drawing.Size(97, 20);
             this.lblTimePlayed.TabIndex = 44;
             this.lblTimePlayed.Text = "Time played:";
             this.Tooltips.SetToolTip(this.lblTimePlayed, "D:HH:MM:SS");
@@ -849,49 +861,54 @@ namespace SoG_SGreader
             // lblCollectorId
             // 
             this.lblCollectorId.AutoSize = true;
-            this.lblCollectorId.Location = new System.Drawing.Point(5, 49);
+            this.lblCollectorId.Location = new System.Drawing.Point(8, 74);
+            this.lblCollectorId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCollectorId.Name = "lblCollectorId";
-            this.lblCollectorId.Size = new System.Drawing.Size(65, 13);
+            this.lblCollectorId.Size = new System.Drawing.Size(96, 20);
             this.lblCollectorId.TabIndex = 51;
             this.lblCollectorId.Text = "Collector ID:";
             // 
             // txtNickname
             // 
-            this.txtNickname.Location = new System.Drawing.Point(47, 19);
+            this.txtNickname.Location = new System.Drawing.Point(70, 28);
+            this.txtNickname.Margin = new System.Windows.Forms.Padding(4);
             this.txtNickname.Name = "txtNickname";
-            this.txtNickname.Size = new System.Drawing.Size(101, 20);
+            this.txtNickname.Size = new System.Drawing.Size(150, 26);
             this.txtNickname.TabIndex = 34;
             this.txtNickname.Text = "tolik518";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(5, 23);
+            this.lblName.Location = new System.Drawing.Point(8, 34);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(38, 13);
+            this.lblName.Size = new System.Drawing.Size(55, 20);
             this.lblName.TabIndex = 35;
             this.lblName.Text = "Name:";
             // 
             // lblBirthday
             // 
             this.lblBirthday.AutoSize = true;
-            this.lblBirthday.Location = new System.Drawing.Point(5, 103);
+            this.lblBirthday.Location = new System.Drawing.Point(8, 154);
+            this.lblBirthday.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBirthday.Name = "lblBirthday";
-            this.lblBirthday.Size = new System.Drawing.Size(48, 13);
+            this.lblBirthday.Size = new System.Drawing.Size(71, 20);
             this.lblBirthday.TabIndex = 49;
             this.lblBirthday.Text = "Birthday:";
             this.Tooltips.SetToolTip(this.lblBirthday, "Day / Month");
             // 
             // numBirtdayMonth
             // 
-            this.numBirtdayMonth.Location = new System.Drawing.Point(113, 101);
+            this.numBirtdayMonth.Location = new System.Drawing.Point(170, 152);
+            this.numBirtdayMonth.Margin = new System.Windows.Forms.Padding(4);
             this.numBirtdayMonth.Maximum = new decimal(new int[] {
             12,
             0,
             0,
             0});
             this.numBirtdayMonth.Name = "numBirtdayMonth";
-            this.numBirtdayMonth.Size = new System.Drawing.Size(35, 20);
+            this.numBirtdayMonth.Size = new System.Drawing.Size(52, 26);
             this.numBirtdayMonth.TabIndex = 48;
             this.Tooltips.SetToolTip(this.numBirtdayMonth, "Month\tStarsign\r\n____________________\r\n1-2\tThe Slime\r\n3-4\tThe Rabby\r\n5-6\tThe Bee\r\n" +
         "7-8\tThe Boar\r\n9-10\tThe Bloomo\r\n11-12\tThe Yeti");
@@ -903,14 +920,15 @@ namespace SoG_SGreader
             // 
             // numBirthdayDay
             // 
-            this.numBirthdayDay.Location = new System.Drawing.Point(73, 101);
+            this.numBirthdayDay.Location = new System.Drawing.Point(110, 152);
+            this.numBirthdayDay.Margin = new System.Windows.Forms.Padding(4);
             this.numBirthdayDay.Maximum = new decimal(new int[] {
             31,
             0,
             0,
             0});
             this.numBirthdayDay.Name = "numBirthdayDay";
-            this.numBirthdayDay.Size = new System.Drawing.Size(35, 20);
+            this.numBirthdayDay.Size = new System.Drawing.Size(52, 26);
             this.numBirthdayDay.TabIndex = 46;
             this.numBirthdayDay.Value = new decimal(new int[] {
             31,
@@ -920,10 +938,11 @@ namespace SoG_SGreader
             // 
             // txtTimePlayed
             // 
-            this.txtTimePlayed.Location = new System.Drawing.Point(73, 74);
+            this.txtTimePlayed.Location = new System.Drawing.Point(110, 111);
+            this.txtTimePlayed.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimePlayed.MaxLength = 13;
             this.txtTimePlayed.Name = "txtTimePlayed";
-            this.txtTimePlayed.Size = new System.Drawing.Size(75, 20);
+            this.txtTimePlayed.Size = new System.Drawing.Size(110, 26);
             this.txtTimePlayed.TabIndex = 45;
             this.Tooltips.SetToolTip(this.txtTimePlayed, "D:HH:MM:SS");
             // 
@@ -931,9 +950,10 @@ namespace SoG_SGreader
             // 
             this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(435, 395);
+            this.label49.Location = new System.Drawing.Point(652, 617);
+            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(116, 13);
+            this.label49.Size = new System.Drawing.Size(163, 20);
             this.label49.TabIndex = 42;
             this.label49.Text = "↑ ↑ ↓ ↓ ← → ← → B A";
             // 
@@ -955,9 +975,11 @@ namespace SoG_SGreader
             this.grpEquipped.Controls.Add(this.cbWeapon);
             this.grpEquipped.Controls.Add(this.cbFacegear);
             this.grpEquipped.Controls.Add(this.cbHat);
-            this.grpEquipped.Location = new System.Drawing.Point(280, 4);
+            this.grpEquipped.Location = new System.Drawing.Point(420, 6);
+            this.grpEquipped.Margin = new System.Windows.Forms.Padding(4);
             this.grpEquipped.Name = "grpEquipped";
-            this.grpEquipped.Size = new System.Drawing.Size(271, 245);
+            this.grpEquipped.Padding = new System.Windows.Forms.Padding(4);
+            this.grpEquipped.Size = new System.Drawing.Size(406, 368);
             this.grpEquipped.TabIndex = 40;
             this.grpEquipped.TabStop = false;
             this.grpEquipped.Text = "Equipped Gear";
@@ -965,137 +987,153 @@ namespace SoG_SGreader
             // lblAccessory2
             // 
             this.lblAccessory2.AutoSize = true;
-            this.lblAccessory2.Location = new System.Drawing.Point(7, 217);
+            this.lblAccessory2.Location = new System.Drawing.Point(10, 326);
+            this.lblAccessory2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAccessory2.Name = "lblAccessory2";
-            this.lblAccessory2.Size = new System.Drawing.Size(68, 13);
+            this.lblAccessory2.Size = new System.Drawing.Size(99, 20);
             this.lblAccessory2.TabIndex = 22;
             this.lblAccessory2.Text = "Accessory 2:";
             // 
             // lblAccessory1
             // 
             this.lblAccessory1.AutoSize = true;
-            this.lblAccessory1.Location = new System.Drawing.Point(7, 189);
+            this.lblAccessory1.Location = new System.Drawing.Point(10, 284);
+            this.lblAccessory1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAccessory1.Name = "lblAccessory1";
-            this.lblAccessory1.Size = new System.Drawing.Size(68, 13);
+            this.lblAccessory1.Size = new System.Drawing.Size(99, 20);
             this.lblAccessory1.TabIndex = 21;
             this.lblAccessory1.Text = "Accessory 1:";
             // 
             // lblShoes
             // 
             this.lblShoes.AutoSize = true;
-            this.lblShoes.Location = new System.Drawing.Point(7, 161);
+            this.lblShoes.Location = new System.Drawing.Point(10, 242);
+            this.lblShoes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblShoes.Name = "lblShoes";
-            this.lblShoes.Size = new System.Drawing.Size(40, 13);
+            this.lblShoes.Size = new System.Drawing.Size(59, 20);
             this.lblShoes.TabIndex = 20;
             this.lblShoes.Text = "Shoes:";
             // 
             // lblArmor
             // 
             this.lblArmor.AutoSize = true;
-            this.lblArmor.Location = new System.Drawing.Point(7, 133);
+            this.lblArmor.Location = new System.Drawing.Point(10, 200);
+            this.lblArmor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblArmor.Name = "lblArmor";
-            this.lblArmor.Size = new System.Drawing.Size(37, 13);
+            this.lblArmor.Size = new System.Drawing.Size(56, 20);
             this.lblArmor.TabIndex = 19;
             this.lblArmor.Text = "Armor:";
             // 
             // lblShield
             // 
             this.lblShield.AutoSize = true;
-            this.lblShield.Location = new System.Drawing.Point(7, 105);
+            this.lblShield.Location = new System.Drawing.Point(10, 158);
+            this.lblShield.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblShield.Name = "lblShield";
-            this.lblShield.Size = new System.Drawing.Size(39, 13);
+            this.lblShield.Size = new System.Drawing.Size(57, 20);
             this.lblShield.TabIndex = 18;
             this.lblShield.Text = "Shield:";
             // 
             // lblWeapon
             // 
             this.lblWeapon.AutoSize = true;
-            this.lblWeapon.Location = new System.Drawing.Point(7, 78);
+            this.lblWeapon.Location = new System.Drawing.Point(10, 117);
+            this.lblWeapon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWeapon.Name = "lblWeapon";
-            this.lblWeapon.Size = new System.Drawing.Size(51, 13);
+            this.lblWeapon.Size = new System.Drawing.Size(73, 20);
             this.lblWeapon.TabIndex = 17;
             this.lblWeapon.Text = "Weapon:";
             // 
             // lblFacegear
             // 
             this.lblFacegear.AutoSize = true;
-            this.lblFacegear.Location = new System.Drawing.Point(7, 50);
+            this.lblFacegear.Location = new System.Drawing.Point(10, 75);
+            this.lblFacegear.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFacegear.Name = "lblFacegear";
-            this.lblFacegear.Size = new System.Drawing.Size(55, 13);
+            this.lblFacegear.Size = new System.Drawing.Size(81, 20);
             this.lblFacegear.TabIndex = 16;
             this.lblFacegear.Text = "Facegear:";
             // 
             // lblHat
             // 
             this.lblHat.AutoSize = true;
-            this.lblHat.Location = new System.Drawing.Point(7, 23);
+            this.lblHat.Location = new System.Drawing.Point(10, 34);
+            this.lblHat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHat.Name = "lblHat";
-            this.lblHat.Size = new System.Drawing.Size(27, 13);
+            this.lblHat.Size = new System.Drawing.Size(39, 20);
             this.lblHat.TabIndex = 15;
             this.lblHat.Text = "Hat:";
             // 
             // cbAccessory2
             // 
             this.cbAccessory2.FormattingEnabled = true;
-            this.cbAccessory2.Location = new System.Drawing.Point(79, 213);
+            this.cbAccessory2.Location = new System.Drawing.Point(118, 320);
+            this.cbAccessory2.Margin = new System.Windows.Forms.Padding(4);
             this.cbAccessory2.Name = "cbAccessory2";
-            this.cbAccessory2.Size = new System.Drawing.Size(186, 21);
+            this.cbAccessory2.Size = new System.Drawing.Size(277, 28);
             this.cbAccessory2.TabIndex = 14;
             // 
             // cbAccessory1
             // 
             this.cbAccessory1.FormattingEnabled = true;
-            this.cbAccessory1.Location = new System.Drawing.Point(79, 185);
+            this.cbAccessory1.Location = new System.Drawing.Point(118, 278);
+            this.cbAccessory1.Margin = new System.Windows.Forms.Padding(4);
             this.cbAccessory1.Name = "cbAccessory1";
-            this.cbAccessory1.Size = new System.Drawing.Size(186, 21);
+            this.cbAccessory1.Size = new System.Drawing.Size(277, 28);
             this.cbAccessory1.TabIndex = 13;
             // 
             // cbShoes
             // 
             this.cbShoes.FormattingEnabled = true;
-            this.cbShoes.Location = new System.Drawing.Point(79, 158);
+            this.cbShoes.Location = new System.Drawing.Point(118, 237);
+            this.cbShoes.Margin = new System.Windows.Forms.Padding(4);
             this.cbShoes.Name = "cbShoes";
-            this.cbShoes.Size = new System.Drawing.Size(186, 21);
+            this.cbShoes.Size = new System.Drawing.Size(277, 28);
             this.cbShoes.TabIndex = 12;
             // 
             // cbArmor
             // 
             this.cbArmor.FormattingEnabled = true;
-            this.cbArmor.Location = new System.Drawing.Point(79, 130);
+            this.cbArmor.Location = new System.Drawing.Point(118, 195);
+            this.cbArmor.Margin = new System.Windows.Forms.Padding(4);
             this.cbArmor.Name = "cbArmor";
-            this.cbArmor.Size = new System.Drawing.Size(186, 21);
+            this.cbArmor.Size = new System.Drawing.Size(277, 28);
             this.cbArmor.TabIndex = 11;
             // 
             // cbShield
             // 
             this.cbShield.FormattingEnabled = true;
-            this.cbShield.Location = new System.Drawing.Point(79, 103);
+            this.cbShield.Location = new System.Drawing.Point(118, 154);
+            this.cbShield.Margin = new System.Windows.Forms.Padding(4);
             this.cbShield.Name = "cbShield";
-            this.cbShield.Size = new System.Drawing.Size(186, 21);
+            this.cbShield.Size = new System.Drawing.Size(277, 28);
             this.cbShield.TabIndex = 10;
             // 
             // cbWeapon
             // 
             this.cbWeapon.FormattingEnabled = true;
-            this.cbWeapon.Location = new System.Drawing.Point(79, 75);
+            this.cbWeapon.Location = new System.Drawing.Point(118, 112);
+            this.cbWeapon.Margin = new System.Windows.Forms.Padding(4);
             this.cbWeapon.Name = "cbWeapon";
-            this.cbWeapon.Size = new System.Drawing.Size(186, 21);
+            this.cbWeapon.Size = new System.Drawing.Size(277, 28);
             this.cbWeapon.TabIndex = 9;
             // 
             // cbFacegear
             // 
             this.cbFacegear.FormattingEnabled = true;
-            this.cbFacegear.Location = new System.Drawing.Point(79, 47);
+            this.cbFacegear.Location = new System.Drawing.Point(118, 70);
+            this.cbFacegear.Margin = new System.Windows.Forms.Padding(4);
             this.cbFacegear.Name = "cbFacegear";
-            this.cbFacegear.Size = new System.Drawing.Size(186, 21);
+            this.cbFacegear.Size = new System.Drawing.Size(277, 28);
             this.cbFacegear.TabIndex = 8;
             // 
             // cbHat
             // 
             this.cbHat.FormattingEnabled = true;
-            this.cbHat.Location = new System.Drawing.Point(79, 19);
+            this.cbHat.Location = new System.Drawing.Point(118, 28);
+            this.cbHat.Margin = new System.Windows.Forms.Padding(4);
             this.cbHat.Name = "cbHat";
-            this.cbHat.Size = new System.Drawing.Size(186, 21);
+            this.cbHat.Size = new System.Drawing.Size(277, 28);
             this.cbHat.TabIndex = 7;
             // 
             // grpEquippedStyle
@@ -1108,9 +1146,11 @@ namespace SoG_SGreader
             this.grpEquippedStyle.Controls.Add(this.cbStyleFacegear);
             this.grpEquippedStyle.Controls.Add(this.lblEqHat);
             this.grpEquippedStyle.Controls.Add(this.cbStyleWeapon);
-            this.grpEquippedStyle.Location = new System.Drawing.Point(280, 253);
+            this.grpEquippedStyle.Location = new System.Drawing.Point(420, 380);
+            this.grpEquippedStyle.Margin = new System.Windows.Forms.Padding(4);
             this.grpEquippedStyle.Name = "grpEquippedStyle";
-            this.grpEquippedStyle.Size = new System.Drawing.Size(271, 132);
+            this.grpEquippedStyle.Padding = new System.Windows.Forms.Padding(4);
+            this.grpEquippedStyle.Size = new System.Drawing.Size(406, 198);
             this.grpEquippedStyle.TabIndex = 41;
             this.grpEquippedStyle.TabStop = false;
             this.grpEquippedStyle.Text = "Equipped Style";
@@ -1118,69 +1158,77 @@ namespace SoG_SGreader
             // lblEqShield
             // 
             this.lblEqShield.AutoSize = true;
-            this.lblEqShield.Location = new System.Drawing.Point(7, 105);
+            this.lblEqShield.Location = new System.Drawing.Point(10, 158);
+            this.lblEqShield.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEqShield.Name = "lblEqShield";
-            this.lblEqShield.Size = new System.Drawing.Size(39, 13);
+            this.lblEqShield.Size = new System.Drawing.Size(57, 20);
             this.lblEqShield.TabIndex = 30;
             this.lblEqShield.Text = "Shield:";
             // 
             // cbStyleShield
             // 
             this.cbStyleShield.FormattingEnabled = true;
-            this.cbStyleShield.Location = new System.Drawing.Point(79, 103);
+            this.cbStyleShield.Location = new System.Drawing.Point(118, 154);
+            this.cbStyleShield.Margin = new System.Windows.Forms.Padding(4);
             this.cbStyleShield.Name = "cbStyleShield";
-            this.cbStyleShield.Size = new System.Drawing.Size(186, 21);
+            this.cbStyleShield.Size = new System.Drawing.Size(277, 28);
             this.cbStyleShield.TabIndex = 26;
             // 
             // lblEqWeapon
             // 
             this.lblEqWeapon.AutoSize = true;
-            this.lblEqWeapon.Location = new System.Drawing.Point(7, 78);
+            this.lblEqWeapon.Location = new System.Drawing.Point(10, 117);
+            this.lblEqWeapon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEqWeapon.Name = "lblEqWeapon";
-            this.lblEqWeapon.Size = new System.Drawing.Size(51, 13);
+            this.lblEqWeapon.Size = new System.Drawing.Size(73, 20);
             this.lblEqWeapon.TabIndex = 29;
             this.lblEqWeapon.Text = "Weapon:";
             // 
             // cbStyleHat
             // 
             this.cbStyleHat.FormattingEnabled = true;
-            this.cbStyleHat.Location = new System.Drawing.Point(79, 19);
+            this.cbStyleHat.Location = new System.Drawing.Point(118, 28);
+            this.cbStyleHat.Margin = new System.Windows.Forms.Padding(4);
             this.cbStyleHat.Name = "cbStyleHat";
-            this.cbStyleHat.Size = new System.Drawing.Size(186, 21);
+            this.cbStyleHat.Size = new System.Drawing.Size(277, 28);
             this.cbStyleHat.TabIndex = 23;
             // 
             // lblEqFacegear
             // 
             this.lblEqFacegear.AutoSize = true;
-            this.lblEqFacegear.Location = new System.Drawing.Point(7, 50);
+            this.lblEqFacegear.Location = new System.Drawing.Point(10, 75);
+            this.lblEqFacegear.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEqFacegear.Name = "lblEqFacegear";
-            this.lblEqFacegear.Size = new System.Drawing.Size(55, 13);
+            this.lblEqFacegear.Size = new System.Drawing.Size(81, 20);
             this.lblEqFacegear.TabIndex = 28;
             this.lblEqFacegear.Text = "Facegear:";
             // 
             // cbStyleFacegear
             // 
             this.cbStyleFacegear.FormattingEnabled = true;
-            this.cbStyleFacegear.Location = new System.Drawing.Point(79, 47);
+            this.cbStyleFacegear.Location = new System.Drawing.Point(118, 70);
+            this.cbStyleFacegear.Margin = new System.Windows.Forms.Padding(4);
             this.cbStyleFacegear.Name = "cbStyleFacegear";
-            this.cbStyleFacegear.Size = new System.Drawing.Size(186, 21);
+            this.cbStyleFacegear.Size = new System.Drawing.Size(277, 28);
             this.cbStyleFacegear.TabIndex = 24;
             // 
             // lblEqHat
             // 
             this.lblEqHat.AutoSize = true;
-            this.lblEqHat.Location = new System.Drawing.Point(7, 23);
+            this.lblEqHat.Location = new System.Drawing.Point(10, 34);
+            this.lblEqHat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEqHat.Name = "lblEqHat";
-            this.lblEqHat.Size = new System.Drawing.Size(27, 13);
+            this.lblEqHat.Size = new System.Drawing.Size(39, 20);
             this.lblEqHat.TabIndex = 27;
             this.lblEqHat.Text = "Hat:";
             // 
             // cbStyleWeapon
             // 
             this.cbStyleWeapon.FormattingEnabled = true;
-            this.cbStyleWeapon.Location = new System.Drawing.Point(79, 75);
+            this.cbStyleWeapon.Location = new System.Drawing.Point(118, 112);
+            this.cbStyleWeapon.Margin = new System.Windows.Forms.Padding(4);
             this.cbStyleWeapon.Name = "cbStyleWeapon";
-            this.cbStyleWeapon.Size = new System.Drawing.Size(186, 21);
+            this.cbStyleWeapon.Size = new System.Drawing.Size(277, 28);
             this.cbStyleWeapon.TabIndex = 25;
             // 
             // grpSkillpoints
@@ -1191,73 +1239,81 @@ namespace SoG_SGreader
             this.grpSkillpoints.Controls.Add(this.numSkillGoldPoints);
             this.grpSkillpoints.Controls.Add(this.lblSilverPoints);
             this.grpSkillpoints.Controls.Add(this.lblTalentPoints);
-            this.grpSkillpoints.Location = new System.Drawing.Point(6, 295);
+            this.grpSkillpoints.Location = new System.Drawing.Point(9, 442);
+            this.grpSkillpoints.Margin = new System.Windows.Forms.Padding(4);
             this.grpSkillpoints.Name = "grpSkillpoints";
-            this.grpSkillpoints.Size = new System.Drawing.Size(157, 103);
+            this.grpSkillpoints.Padding = new System.Windows.Forms.Padding(4);
+            this.grpSkillpoints.Size = new System.Drawing.Size(236, 154);
             this.grpSkillpoints.TabIndex = 37;
             this.grpSkillpoints.TabStop = false;
             this.grpSkillpoints.Text = "Skill Points";
             // 
             // numSkillTalentPoints
             // 
-            this.numSkillTalentPoints.Location = new System.Drawing.Point(95, 21);
+            this.numSkillTalentPoints.Location = new System.Drawing.Point(142, 32);
+            this.numSkillTalentPoints.Margin = new System.Windows.Forms.Padding(4);
             this.numSkillTalentPoints.Maximum = new decimal(new int[] {
             32767,
             0,
             0,
             0});
             this.numSkillTalentPoints.Name = "numSkillTalentPoints";
-            this.numSkillTalentPoints.Size = new System.Drawing.Size(51, 20);
+            this.numSkillTalentPoints.Size = new System.Drawing.Size(76, 26);
             this.numSkillTalentPoints.TabIndex = 3;
             // 
             // lblGoldPoints
             // 
             this.lblGoldPoints.AutoSize = true;
-            this.lblGoldPoints.Location = new System.Drawing.Point(5, 76);
+            this.lblGoldPoints.Location = new System.Drawing.Point(8, 114);
+            this.lblGoldPoints.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGoldPoints.Name = "lblGoldPoints";
-            this.lblGoldPoints.Size = new System.Drawing.Size(81, 13);
+            this.lblGoldPoints.Size = new System.Drawing.Size(119, 20);
             this.lblGoldPoints.TabIndex = 2;
             this.lblGoldPoints.Text = "Gold Skill Point:";
             // 
             // numSkillSilverPoints
             // 
-            this.numSkillSilverPoints.Location = new System.Drawing.Point(95, 47);
+            this.numSkillSilverPoints.Location = new System.Drawing.Point(142, 70);
+            this.numSkillSilverPoints.Margin = new System.Windows.Forms.Padding(4);
             this.numSkillSilverPoints.Maximum = new decimal(new int[] {
             32767,
             0,
             0,
             0});
             this.numSkillSilverPoints.Name = "numSkillSilverPoints";
-            this.numSkillSilverPoints.Size = new System.Drawing.Size(51, 20);
+            this.numSkillSilverPoints.Size = new System.Drawing.Size(76, 26);
             this.numSkillSilverPoints.TabIndex = 4;
             // 
             // numSkillGoldPoints
             // 
-            this.numSkillGoldPoints.Location = new System.Drawing.Point(95, 74);
+            this.numSkillGoldPoints.Location = new System.Drawing.Point(142, 111);
+            this.numSkillGoldPoints.Margin = new System.Windows.Forms.Padding(4);
             this.numSkillGoldPoints.Maximum = new decimal(new int[] {
             32767,
             0,
             0,
             0});
             this.numSkillGoldPoints.Name = "numSkillGoldPoints";
-            this.numSkillGoldPoints.Size = new System.Drawing.Size(51, 20);
+            this.numSkillGoldPoints.Size = new System.Drawing.Size(76, 26);
             this.numSkillGoldPoints.TabIndex = 5;
             // 
             // lblSilverPoints
             // 
             this.lblSilverPoints.AutoSize = true;
-            this.lblSilverPoints.Location = new System.Drawing.Point(5, 49);
+            this.lblSilverPoints.Location = new System.Drawing.Point(8, 74);
+            this.lblSilverPoints.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSilverPoints.Name = "lblSilverPoints";
-            this.lblSilverPoints.Size = new System.Drawing.Size(85, 13);
+            this.lblSilverPoints.Size = new System.Drawing.Size(123, 20);
             this.lblSilverPoints.TabIndex = 1;
             this.lblSilverPoints.Text = "Silver Skill Point:";
             // 
             // lblTalentPoints
             // 
             this.lblTalentPoints.AutoSize = true;
-            this.lblTalentPoints.Location = new System.Drawing.Point(5, 23);
+            this.lblTalentPoints.Location = new System.Drawing.Point(8, 34);
+            this.lblTalentPoints.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTalentPoints.Name = "lblTalentPoints";
-            this.lblTalentPoints.Size = new System.Drawing.Size(72, 13);
+            this.lblTalentPoints.Size = new System.Drawing.Size(105, 20);
             this.lblTalentPoints.TabIndex = 0;
             this.lblTalentPoints.Text = "Talent Points:";
             // 
@@ -1271,9 +1327,11 @@ namespace SoG_SGreader
             this.grpLevel.Controls.Add(this.numEXPUnknown0);
             this.grpLevel.Controls.Add(this.numEXPcurrent);
             this.grpLevel.Controls.Add(this.numLevel);
-            this.grpLevel.Location = new System.Drawing.Point(6, 162);
+            this.grpLevel.Location = new System.Drawing.Point(9, 243);
+            this.grpLevel.Margin = new System.Windows.Forms.Padding(4);
             this.grpLevel.Name = "grpLevel";
-            this.grpLevel.Size = new System.Drawing.Size(157, 129);
+            this.grpLevel.Padding = new System.Windows.Forms.Padding(4);
+            this.grpLevel.Size = new System.Drawing.Size(236, 194);
             this.grpLevel.TabIndex = 36;
             this.grpLevel.TabStop = false;
             this.grpLevel.Text = "Level";
@@ -1281,82 +1339,90 @@ namespace SoG_SGreader
             // lblExpUnknown1
             // 
             this.lblExpUnknown1.AutoSize = true;
-            this.lblExpUnknown1.Location = new System.Drawing.Point(5, 101);
+            this.lblExpUnknown1.Location = new System.Drawing.Point(8, 152);
+            this.lblExpUnknown1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblExpUnknown1.Name = "lblExpUnknown1";
             this.lblExpUnknown1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblExpUnknown1.Size = new System.Drawing.Size(89, 13);
+            this.lblExpUnknown1.Size = new System.Drawing.Size(129, 20);
             this.lblExpUnknown1.TabIndex = 7;
             this.lblExpUnknown1.Text = "[EXPUnknown1]:";
             // 
             // lblExpUnknown0
             // 
             this.lblExpUnknown0.AutoSize = true;
-            this.lblExpUnknown0.Location = new System.Drawing.Point(5, 75);
+            this.lblExpUnknown0.Location = new System.Drawing.Point(8, 112);
+            this.lblExpUnknown0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblExpUnknown0.Name = "lblExpUnknown0";
-            this.lblExpUnknown0.Size = new System.Drawing.Size(89, 13);
+            this.lblExpUnknown0.Size = new System.Drawing.Size(129, 20);
             this.lblExpUnknown0.TabIndex = 6;
             this.lblExpUnknown0.Text = "[EXPUnknown0]:";
             // 
             // lblCurrectExp
             // 
             this.lblCurrectExp.AutoSize = true;
-            this.lblCurrectExp.Location = new System.Drawing.Point(5, 48);
+            this.lblCurrectExp.Location = new System.Drawing.Point(8, 72);
+            this.lblCurrectExp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCurrectExp.Name = "lblCurrectExp";
-            this.lblCurrectExp.Size = new System.Drawing.Size(68, 13);
+            this.lblCurrectExp.Size = new System.Drawing.Size(102, 20);
             this.lblCurrectExp.TabIndex = 5;
             this.lblCurrectExp.Text = "Current EXP:";
             // 
             // lblLevel
             // 
             this.lblLevel.AutoSize = true;
-            this.lblLevel.Location = new System.Drawing.Point(5, 21);
+            this.lblLevel.Location = new System.Drawing.Point(8, 32);
+            this.lblLevel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(36, 13);
+            this.lblLevel.Size = new System.Drawing.Size(50, 20);
             this.lblLevel.TabIndex = 4;
             this.lblLevel.Text = "Level:";
             // 
             // numEXPUnknown1
             // 
-            this.numEXPUnknown1.Location = new System.Drawing.Point(96, 99);
+            this.numEXPUnknown1.Location = new System.Drawing.Point(144, 148);
+            this.numEXPUnknown1.Margin = new System.Windows.Forms.Padding(4);
             this.numEXPUnknown1.Maximum = new decimal(new int[] {
             32767,
             0,
             0,
             0});
             this.numEXPUnknown1.Name = "numEXPUnknown1";
-            this.numEXPUnknown1.Size = new System.Drawing.Size(51, 20);
+            this.numEXPUnknown1.Size = new System.Drawing.Size(76, 26);
             this.numEXPUnknown1.TabIndex = 3;
             this.Tooltips.SetToolTip(this.numEXPUnknown1, "idk? probably the exp you need to level up?");
             // 
             // numEXPUnknown0
             // 
-            this.numEXPUnknown0.Location = new System.Drawing.Point(96, 73);
+            this.numEXPUnknown0.Location = new System.Drawing.Point(144, 110);
+            this.numEXPUnknown0.Margin = new System.Windows.Forms.Padding(4);
             this.numEXPUnknown0.Maximum = new decimal(new int[] {
             32767,
             0,
             0,
             0});
             this.numEXPUnknown0.Name = "numEXPUnknown0";
-            this.numEXPUnknown0.Size = new System.Drawing.Size(51, 20);
+            this.numEXPUnknown0.Size = new System.Drawing.Size(76, 26);
             this.numEXPUnknown0.TabIndex = 2;
             this.Tooltips.SetToolTip(this.numEXPUnknown0, "idk");
             // 
             // numEXPcurrent
             // 
-            this.numEXPcurrent.Location = new System.Drawing.Point(96, 46);
+            this.numEXPcurrent.Location = new System.Drawing.Point(144, 69);
+            this.numEXPcurrent.Margin = new System.Windows.Forms.Padding(4);
             this.numEXPcurrent.Maximum = new decimal(new int[] {
             32767,
             0,
             0,
             0});
             this.numEXPcurrent.Name = "numEXPcurrent";
-            this.numEXPcurrent.Size = new System.Drawing.Size(51, 20);
+            this.numEXPcurrent.Size = new System.Drawing.Size(76, 26);
             this.numEXPcurrent.TabIndex = 1;
             this.Tooltips.SetToolTip(this.numEXPcurrent, "Seit it to 9999 to level up after next kill");
             // 
             // numLevel
             // 
-            this.numLevel.Location = new System.Drawing.Point(108, 19);
+            this.numLevel.Location = new System.Drawing.Point(162, 28);
+            this.numLevel.Margin = new System.Windows.Forms.Padding(4);
             this.numLevel.Maximum = new decimal(new int[] {
             32767,
             0,
@@ -1368,7 +1434,7 @@ namespace SoG_SGreader
             0,
             0});
             this.numLevel.Name = "numLevel";
-            this.numLevel.Size = new System.Drawing.Size(39, 20);
+            this.numLevel.Size = new System.Drawing.Size(58, 26);
             this.numLevel.TabIndex = 0;
             this.Tooltips.SetToolTip(this.numLevel, "Changing Level won\'t give you any Skill Points!");
             this.numLevel.Value = new decimal(new int[] {
@@ -1389,9 +1455,11 @@ namespace SoG_SGreader
             this.grpColors.Controls.Add(this.btnSkinColor);
             this.grpColors.Controls.Add(this.btnHairColor);
             this.grpColors.Controls.Add(this.lblHair);
-            this.grpColors.Location = new System.Drawing.Point(169, 4);
+            this.grpColors.Location = new System.Drawing.Point(254, 6);
+            this.grpColors.Margin = new System.Windows.Forms.Padding(4);
             this.grpColors.Name = "grpColors";
-            this.grpColors.Size = new System.Drawing.Size(105, 152);
+            this.grpColors.Padding = new System.Windows.Forms.Padding(4);
+            this.grpColors.Size = new System.Drawing.Size(158, 228);
             this.grpColors.TabIndex = 33;
             this.grpColors.TabStop = false;
             this.grpColors.Text = "Colors";
@@ -1399,45 +1467,50 @@ namespace SoG_SGreader
             // lblPants
             // 
             this.lblPants.AutoSize = true;
-            this.lblPants.Location = new System.Drawing.Point(6, 125);
+            this.lblPants.Location = new System.Drawing.Point(9, 188);
+            this.lblPants.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPants.Name = "lblPants";
-            this.lblPants.Size = new System.Drawing.Size(37, 13);
+            this.lblPants.Size = new System.Drawing.Size(54, 20);
             this.lblPants.TabIndex = 13;
             this.lblPants.Text = "Pants:";
             // 
             // lblShirt
             // 
             this.lblShirt.AutoSize = true;
-            this.lblShirt.Location = new System.Drawing.Point(6, 99);
+            this.lblShirt.Location = new System.Drawing.Point(9, 148);
+            this.lblShirt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblShirt.Name = "lblShirt";
-            this.lblShirt.Size = new System.Drawing.Size(31, 13);
+            this.lblShirt.Size = new System.Drawing.Size(46, 20);
             this.lblShirt.TabIndex = 12;
             this.lblShirt.Text = "Shirt:";
             // 
             // lblPoncho
             // 
             this.lblPoncho.AutoSize = true;
-            this.lblPoncho.Location = new System.Drawing.Point(6, 72);
+            this.lblPoncho.Location = new System.Drawing.Point(9, 108);
+            this.lblPoncho.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPoncho.Name = "lblPoncho";
-            this.lblPoncho.Size = new System.Drawing.Size(47, 13);
+            this.lblPoncho.Size = new System.Drawing.Size(67, 20);
             this.lblPoncho.TabIndex = 11;
             this.lblPoncho.Text = "Poncho:";
             // 
             // lblSkin
             // 
             this.lblSkin.AutoSize = true;
-            this.lblSkin.Location = new System.Drawing.Point(6, 45);
+            this.lblSkin.Location = new System.Drawing.Point(9, 68);
+            this.lblSkin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSkin.Name = "lblSkin";
-            this.lblSkin.Size = new System.Drawing.Size(31, 13);
+            this.lblSkin.Size = new System.Drawing.Size(44, 20);
             this.lblSkin.TabIndex = 10;
             this.lblSkin.Text = "Skin:";
             // 
             // btnPantsColor
             // 
             this.btnPantsColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPantsColor.Location = new System.Drawing.Point(74, 121);
+            this.btnPantsColor.Location = new System.Drawing.Point(111, 182);
+            this.btnPantsColor.Margin = new System.Windows.Forms.Padding(4);
             this.btnPantsColor.Name = "btnPantsColor";
-            this.btnPantsColor.Size = new System.Drawing.Size(20, 21);
+            this.btnPantsColor.Size = new System.Drawing.Size(30, 32);
             this.btnPantsColor.TabIndex = 9;
             this.btnPantsColor.TabStop = false;
             this.btnPantsColor.UseVisualStyleBackColor = false;
@@ -1446,9 +1519,10 @@ namespace SoG_SGreader
             // btnShirtColor
             // 
             this.btnShirtColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShirtColor.Location = new System.Drawing.Point(74, 95);
+            this.btnShirtColor.Location = new System.Drawing.Point(111, 142);
+            this.btnShirtColor.Margin = new System.Windows.Forms.Padding(4);
             this.btnShirtColor.Name = "btnShirtColor";
-            this.btnShirtColor.Size = new System.Drawing.Size(20, 21);
+            this.btnShirtColor.Size = new System.Drawing.Size(30, 32);
             this.btnShirtColor.TabIndex = 8;
             this.btnShirtColor.TabStop = false;
             this.btnShirtColor.UseVisualStyleBackColor = false;
@@ -1457,9 +1531,10 @@ namespace SoG_SGreader
             // btnPonchoColor
             // 
             this.btnPonchoColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPonchoColor.Location = new System.Drawing.Point(74, 68);
+            this.btnPonchoColor.Location = new System.Drawing.Point(111, 102);
+            this.btnPonchoColor.Margin = new System.Windows.Forms.Padding(4);
             this.btnPonchoColor.Name = "btnPonchoColor";
-            this.btnPonchoColor.Size = new System.Drawing.Size(20, 21);
+            this.btnPonchoColor.Size = new System.Drawing.Size(30, 32);
             this.btnPonchoColor.TabIndex = 7;
             this.btnPonchoColor.TabStop = false;
             this.btnPonchoColor.UseVisualStyleBackColor = false;
@@ -1468,9 +1543,10 @@ namespace SoG_SGreader
             // btnSkinColor
             // 
             this.btnSkinColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSkinColor.Location = new System.Drawing.Point(74, 41);
+            this.btnSkinColor.Location = new System.Drawing.Point(111, 62);
+            this.btnSkinColor.Margin = new System.Windows.Forms.Padding(4);
             this.btnSkinColor.Name = "btnSkinColor";
-            this.btnSkinColor.Size = new System.Drawing.Size(20, 21);
+            this.btnSkinColor.Size = new System.Drawing.Size(30, 32);
             this.btnSkinColor.TabIndex = 6;
             this.btnSkinColor.TabStop = false;
             this.Tooltips.SetToolTip(this.btnSkinColor, "Not implemented yet");
@@ -1480,9 +1556,10 @@ namespace SoG_SGreader
             // 
             this.btnHairColor.BackColor = System.Drawing.Color.Transparent;
             this.btnHairColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHairColor.Location = new System.Drawing.Point(74, 15);
+            this.btnHairColor.Location = new System.Drawing.Point(111, 22);
+            this.btnHairColor.Margin = new System.Windows.Forms.Padding(4);
             this.btnHairColor.Name = "btnHairColor";
-            this.btnHairColor.Size = new System.Drawing.Size(20, 21);
+            this.btnHairColor.Size = new System.Drawing.Size(30, 32);
             this.btnHairColor.TabIndex = 5;
             this.btnHairColor.TabStop = false;
             this.btnHairColor.UseVisualStyleBackColor = false;
@@ -1491,9 +1568,10 @@ namespace SoG_SGreader
             // lblHair
             // 
             this.lblHair.AutoSize = true;
-            this.lblHair.Location = new System.Drawing.Point(6, 19);
+            this.lblHair.Location = new System.Drawing.Point(9, 28);
+            this.lblHair.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHair.Name = "lblHair";
-            this.lblHair.Size = new System.Drawing.Size(29, 13);
+            this.lblHair.Size = new System.Drawing.Size(42, 20);
             this.lblHair.TabIndex = 0;
             this.lblHair.Text = "Hair:";
             // 
@@ -1503,20 +1581,16 @@ namespace SoG_SGreader
             this.tabInventory.Controls.Add(this.numGold);
             this.tabInventory.Controls.Add(this.lblGold);
             this.tabInventory.Controls.Add(this.grpItem);
-            this.tabInventory.Location = new System.Drawing.Point(4, 40);
-            this.tabInventory.Margin = new System.Windows.Forms.Padding(2);
+            this.tabInventory.Location = new System.Drawing.Point(4, 54);
             this.tabInventory.Name = "tabInventory";
-            this.tabInventory.Padding = new System.Windows.Forms.Padding(2);
-            this.tabInventory.Size = new System.Drawing.Size(559, 416);
+            this.tabInventory.Padding = new System.Windows.Forms.Padding(3);
+            this.tabInventory.Size = new System.Drawing.Size(842, 632);
             this.tabInventory.TabIndex = 2;
             this.tabInventory.Text = "Inventory";
             this.tabInventory.UseVisualStyleBackColor = true;
             // 
             // lstInventory
             // 
-            this.lstInventory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lstInventory.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Item,
             this.Count,
@@ -1525,11 +1599,10 @@ namespace SoG_SGreader
             this.lstInventory.GridLines = true;
             this.lstInventory.HideSelection = false;
             this.lstInventory.LabelWrap = false;
-            this.lstInventory.Location = new System.Drawing.Point(2, 4);
-            this.lstInventory.Margin = new System.Windows.Forms.Padding(2);
+            this.lstInventory.Location = new System.Drawing.Point(3, 6);
             this.lstInventory.MultiSelect = false;
             this.lstInventory.Name = "lstInventory";
-            this.lstInventory.Size = new System.Drawing.Size(544, 319);
+            this.lstInventory.Size = new System.Drawing.Size(814, 476);
             this.lstInventory.TabIndex = 42;
             this.lstInventory.UseCompatibleStateImageBehavior = false;
             this.lstInventory.View = System.Windows.Forms.View.Details;
@@ -1553,15 +1626,14 @@ namespace SoG_SGreader
             // numGold
             // 
             this.numGold.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.numGold.Location = new System.Drawing.Point(445, 387);
-            this.numGold.Margin = new System.Windows.Forms.Padding(2);
+            this.numGold.Location = new System.Drawing.Point(665, 577);
             this.numGold.Maximum = new decimal(new int[] {
             2147483647,
             0,
             0,
             0});
             this.numGold.Name = "numGold";
-            this.numGold.Size = new System.Drawing.Size(101, 20);
+            this.numGold.Size = new System.Drawing.Size(152, 26);
             this.numGold.TabIndex = 40;
             this.Tooltips.SetToolTip(this.numGold, "Money/Papes/Cheddar/Mulla/Dollar/Coins/Green Faces/Loochies/Bread/Dosh");
             // 
@@ -1569,32 +1641,49 @@ namespace SoG_SGreader
             // 
             this.lblGold.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGold.AutoSize = true;
-            this.lblGold.Location = new System.Drawing.Point(408, 389);
+            this.lblGold.Location = new System.Drawing.Point(611, 579);
+            this.lblGold.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGold.Name = "lblGold";
-            this.lblGold.Size = new System.Drawing.Size(32, 13);
+            this.lblGold.Size = new System.Drawing.Size(47, 20);
             this.lblGold.TabIndex = 41;
             this.lblGold.Text = "Gold:";
             // 
             // grpItem
             // 
             this.grpItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.grpItem.Controls.Add(this.btnItemPlus);
             this.grpItem.Controls.Add(this.btnDeleteSelectedItem);
             this.grpItem.Controls.Add(this.btnAddItem);
             this.grpItem.Controls.Add(this.lblItemCount);
             this.grpItem.Controls.Add(this.numItemCount);
             this.grpItem.Controls.Add(this.cbSelectedItem);
-            this.grpItem.Location = new System.Drawing.Point(5, 331);
+            this.grpItem.Location = new System.Drawing.Point(7, 489);
+            this.grpItem.Margin = new System.Windows.Forms.Padding(4);
             this.grpItem.Name = "grpItem";
-            this.grpItem.Size = new System.Drawing.Size(319, 76);
+            this.grpItem.Padding = new System.Windows.Forms.Padding(4);
+            this.grpItem.Size = new System.Drawing.Size(523, 114);
             this.grpItem.TabIndex = 1;
             this.grpItem.TabStop = false;
             this.grpItem.Text = "Item";
             // 
+            // btnItemPlus
+            // 
+            this.btnItemPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnItemPlus.Location = new System.Drawing.Point(376, 27);
+            this.btnItemPlus.Name = "btnItemPlus";
+            this.btnItemPlus.Size = new System.Drawing.Size(34, 34);
+            this.btnItemPlus.TabIndex = 3;
+            this.btnItemPlus.Tag = false;
+            this.Tooltips.SetToolTip(this.btnItemPlus, "NG+ Item");
+            this.btnItemPlus.UseVisualStyleBackColor = true;
+            this.btnItemPlus.Click += new System.EventHandler(this.btnItemPlus_Click);
+            // 
             // btnDeleteSelectedItem
             // 
-            this.btnDeleteSelectedItem.Location = new System.Drawing.Point(253, 44);
+            this.btnDeleteSelectedItem.Location = new System.Drawing.Point(380, 66);
+            this.btnDeleteSelectedItem.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteSelectedItem.Name = "btnDeleteSelectedItem";
-            this.btnDeleteSelectedItem.Size = new System.Drawing.Size(60, 23);
+            this.btnDeleteSelectedItem.Size = new System.Drawing.Size(125, 34);
             this.btnDeleteSelectedItem.TabIndex = 2;
             this.btnDeleteSelectedItem.Text = "Remove";
             this.btnDeleteSelectedItem.UseVisualStyleBackColor = true;
@@ -1602,9 +1691,10 @@ namespace SoG_SGreader
             // 
             // btnAddItem
             // 
-            this.btnAddItem.Location = new System.Drawing.Point(253, 17);
+            this.btnAddItem.Location = new System.Drawing.Point(418, 27);
+            this.btnAddItem.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(60, 23);
+            this.btnAddItem.Size = new System.Drawing.Size(87, 34);
             this.btnAddItem.TabIndex = 2;
             this.btnAddItem.Text = "Add";
             this.Tooltips.SetToolTip(this.btnAddItem, "Some Items COULD potentially break your game");
@@ -1614,22 +1704,24 @@ namespace SoG_SGreader
             // lblItemCount
             // 
             this.lblItemCount.AutoSize = true;
-            this.lblItemCount.Location = new System.Drawing.Point(121, 49);
+            this.lblItemCount.Location = new System.Drawing.Point(182, 74);
+            this.lblItemCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblItemCount.Name = "lblItemCount";
-            this.lblItemCount.Size = new System.Drawing.Size(38, 13);
+            this.lblItemCount.Size = new System.Drawing.Size(56, 20);
             this.lblItemCount.TabIndex = 2;
             this.lblItemCount.Text = "Count:";
             // 
             // numItemCount
             // 
-            this.numItemCount.Location = new System.Drawing.Point(165, 47);
+            this.numItemCount.Location = new System.Drawing.Point(248, 70);
+            this.numItemCount.Margin = new System.Windows.Forms.Padding(4);
             this.numItemCount.Maximum = new decimal(new int[] {
             2147483647,
             0,
             0,
             0});
             this.numItemCount.Name = "numItemCount";
-            this.numItemCount.Size = new System.Drawing.Size(82, 20);
+            this.numItemCount.Size = new System.Drawing.Size(123, 26);
             this.numItemCount.TabIndex = 1;
             this.numItemCount.ValueChanged += new System.EventHandler(this.NumItemCount_ValueChanged);
             // 
@@ -1638,19 +1730,21 @@ namespace SoG_SGreader
             this.cbSelectedItem.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbSelectedItem.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbSelectedItem.FormattingEnabled = true;
-            this.cbSelectedItem.Location = new System.Drawing.Point(6, 19);
+            this.cbSelectedItem.Location = new System.Drawing.Point(9, 28);
+            this.cbSelectedItem.Margin = new System.Windows.Forms.Padding(4);
             this.cbSelectedItem.Name = "cbSelectedItem";
-            this.cbSelectedItem.Size = new System.Drawing.Size(241, 21);
+            this.cbSelectedItem.Size = new System.Drawing.Size(360, 28);
             this.cbSelectedItem.TabIndex = 0;
             // 
             // tabPets
             // 
             this.tabPets.Controls.Add(this.lstPets);
             this.tabPets.Controls.Add(this.grpPet);
-            this.tabPets.Location = new System.Drawing.Point(4, 40);
+            this.tabPets.Location = new System.Drawing.Point(4, 54);
+            this.tabPets.Margin = new System.Windows.Forms.Padding(4);
             this.tabPets.Name = "tabPets";
-            this.tabPets.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPets.Size = new System.Drawing.Size(559, 416);
+            this.tabPets.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPets.Size = new System.Drawing.Size(842, 632);
             this.tabPets.TabIndex = 8;
             this.tabPets.Text = "Pets";
             this.tabPets.UseVisualStyleBackColor = true;
@@ -1671,10 +1765,11 @@ namespace SoG_SGreader
             this.lstPets.FullRowSelect = true;
             this.lstPets.GridLines = true;
             this.lstPets.HideSelection = false;
-            this.lstPets.Location = new System.Drawing.Point(3, 6);
+            this.lstPets.Location = new System.Drawing.Point(4, 9);
+            this.lstPets.Margin = new System.Windows.Forms.Padding(4);
             this.lstPets.MultiSelect = false;
             this.lstPets.Name = "lstPets";
-            this.lstPets.Size = new System.Drawing.Size(385, 403);
+            this.lstPets.Size = new System.Drawing.Size(576, 627);
             this.lstPets.TabIndex = 1;
             this.lstPets.UseCompatibleStateImageBehavior = false;
             this.lstPets.View = System.Windows.Forms.View.Details;
@@ -1735,9 +1830,11 @@ namespace SoG_SGreader
             this.grpPet.Controls.Add(this.numPetDamage);
             this.grpPet.Controls.Add(this.numPetEnergy);
             this.grpPet.Controls.Add(this.numPetHP);
-            this.grpPet.Location = new System.Drawing.Point(395, 6);
+            this.grpPet.Location = new System.Drawing.Point(592, 9);
+            this.grpPet.Margin = new System.Windows.Forms.Padding(4);
             this.grpPet.Name = "grpPet";
-            this.grpPet.Size = new System.Drawing.Size(155, 236);
+            this.grpPet.Padding = new System.Windows.Forms.Padding(4);
+            this.grpPet.Size = new System.Drawing.Size(232, 379);
             this.grpPet.TabIndex = 0;
             this.grpPet.TabStop = false;
             this.grpPet.Text = "Pet";
@@ -1746,167 +1843,183 @@ namespace SoG_SGreader
             // 
             this.cbPetType.Enabled = false;
             this.cbPetType.FormattingEnabled = true;
-            this.cbPetType.Location = new System.Drawing.Point(54, 47);
+            this.cbPetType.Location = new System.Drawing.Point(81, 70);
+            this.cbPetType.Margin = new System.Windows.Forms.Padding(4);
             this.cbPetType.Name = "cbPetType";
-            this.cbPetType.Size = new System.Drawing.Size(95, 21);
+            this.cbPetType.Size = new System.Drawing.Size(140, 28);
             this.cbPetType.TabIndex = 2;
             // 
             // lblPetType
             // 
             this.lblPetType.AutoSize = true;
-            this.lblPetType.Location = new System.Drawing.Point(9, 50);
+            this.lblPetType.Location = new System.Drawing.Point(14, 75);
+            this.lblPetType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPetType.Name = "lblPetType";
-            this.lblPetType.Size = new System.Drawing.Size(26, 13);
+            this.lblPetType.Size = new System.Drawing.Size(37, 20);
             this.lblPetType.TabIndex = 15;
             this.lblPetType.Text = "Pet:";
             // 
             // numPetLevel
             // 
-            this.numPetLevel.Location = new System.Drawing.Point(102, 74);
+            this.numPetLevel.Location = new System.Drawing.Point(153, 111);
+            this.numPetLevel.Margin = new System.Windows.Forms.Padding(4);
             this.numPetLevel.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numPetLevel.Name = "numPetLevel";
-            this.numPetLevel.Size = new System.Drawing.Size(46, 20);
+            this.numPetLevel.Size = new System.Drawing.Size(69, 26);
             this.numPetLevel.TabIndex = 14;
             this.numPetLevel.ValueChanged += new System.EventHandler(this.NumPetStat_ValueChanged);
             // 
             // lblPetLevel
             // 
             this.lblPetLevel.AutoSize = true;
-            this.lblPetLevel.Location = new System.Drawing.Point(9, 76);
+            this.lblPetLevel.Location = new System.Drawing.Point(14, 114);
+            this.lblPetLevel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPetLevel.Name = "lblPetLevel";
-            this.lblPetLevel.Size = new System.Drawing.Size(51, 13);
+            this.lblPetLevel.Size = new System.Drawing.Size(72, 20);
             this.lblPetLevel.TabIndex = 13;
             this.lblPetLevel.Text = "Pet level:";
             // 
             // lblPetSpeed
             // 
             this.lblPetSpeed.AutoSize = true;
-            this.lblPetSpeed.Location = new System.Drawing.Point(9, 204);
+            this.lblPetSpeed.Location = new System.Drawing.Point(14, 306);
+            this.lblPetSpeed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPetSpeed.Name = "lblPetSpeed";
-            this.lblPetSpeed.Size = new System.Drawing.Size(66, 13);
+            this.lblPetSpeed.Size = new System.Drawing.Size(95, 20);
             this.lblPetSpeed.TabIndex = 12;
             this.lblPetSpeed.Text = "Speed level:";
             // 
             // lblPetCrit
             // 
             this.lblPetCrit.AutoSize = true;
-            this.lblPetCrit.Location = new System.Drawing.Point(9, 179);
+            this.lblPetCrit.Location = new System.Drawing.Point(14, 268);
+            this.lblPetCrit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPetCrit.Name = "lblPetCrit";
-            this.lblPetCrit.Size = new System.Drawing.Size(50, 13);
+            this.lblPetCrit.Size = new System.Drawing.Size(72, 20);
             this.lblPetCrit.TabIndex = 11;
             this.lblPetCrit.Text = "Crit level:";
             // 
             // lblPetDamage
             // 
             this.lblPetDamage.AutoSize = true;
-            this.lblPetDamage.Location = new System.Drawing.Point(9, 153);
+            this.lblPetDamage.Location = new System.Drawing.Point(14, 230);
+            this.lblPetDamage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPetDamage.Name = "lblPetDamage";
-            this.lblPetDamage.Size = new System.Drawing.Size(75, 13);
+            this.lblPetDamage.Size = new System.Drawing.Size(109, 20);
             this.lblPetDamage.TabIndex = 10;
             this.lblPetDamage.Text = "Damage level:";
             // 
             // lblPetEnergy
             // 
             this.lblPetEnergy.AutoSize = true;
-            this.lblPetEnergy.Location = new System.Drawing.Point(9, 127);
+            this.lblPetEnergy.Location = new System.Drawing.Point(14, 190);
+            this.lblPetEnergy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPetEnergy.Name = "lblPetEnergy";
-            this.lblPetEnergy.Size = new System.Drawing.Size(68, 13);
+            this.lblPetEnergy.Size = new System.Drawing.Size(98, 20);
             this.lblPetEnergy.TabIndex = 9;
             this.lblPetEnergy.Text = "Energy level:";
             // 
             // lblPetNickname
             // 
             this.lblPetNickname.AutoSize = true;
-            this.lblPetNickname.Location = new System.Drawing.Point(9, 25);
+            this.lblPetNickname.Location = new System.Drawing.Point(14, 38);
+            this.lblPetNickname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPetNickname.Name = "lblPetNickname";
-            this.lblPetNickname.Size = new System.Drawing.Size(58, 13);
+            this.lblPetNickname.Size = new System.Drawing.Size(83, 20);
             this.lblPetNickname.TabIndex = 2;
             this.lblPetNickname.Text = "Nickname:";
             // 
             // txtPetNickname
             // 
             this.txtPetNickname.Enabled = false;
-            this.txtPetNickname.Location = new System.Drawing.Point(70, 21);
+            this.txtPetNickname.Location = new System.Drawing.Point(105, 32);
+            this.txtPetNickname.Margin = new System.Windows.Forms.Padding(4);
             this.txtPetNickname.Name = "txtPetNickname";
-            this.txtPetNickname.Size = new System.Drawing.Size(79, 20);
+            this.txtPetNickname.Size = new System.Drawing.Size(116, 26);
             this.txtPetNickname.TabIndex = 1;
             this.txtPetNickname.TextChanged += new System.EventHandler(this.TxtPetNickname_TextChanged);
             // 
             // lblPetHealth
             // 
             this.lblPetHealth.AutoSize = true;
-            this.lblPetHealth.Location = new System.Drawing.Point(9, 101);
+            this.lblPetHealth.Location = new System.Drawing.Point(14, 152);
+            this.lblPetHealth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPetHealth.Name = "lblPetHealth";
-            this.lblPetHealth.Size = new System.Drawing.Size(66, 13);
+            this.lblPetHealth.Size = new System.Drawing.Size(95, 20);
             this.lblPetHealth.TabIndex = 8;
             this.lblPetHealth.Text = "Health level:";
             // 
             // numPetSpeed
             // 
-            this.numPetSpeed.Location = new System.Drawing.Point(102, 202);
+            this.numPetSpeed.Location = new System.Drawing.Point(153, 303);
+            this.numPetSpeed.Margin = new System.Windows.Forms.Padding(4);
             this.numPetSpeed.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.numPetSpeed.Name = "numPetSpeed";
-            this.numPetSpeed.Size = new System.Drawing.Size(46, 20);
+            this.numPetSpeed.Size = new System.Drawing.Size(69, 26);
             this.numPetSpeed.TabIndex = 7;
             this.numPetSpeed.ValueChanged += new System.EventHandler(this.NumPetStat_ValueChanged);
             // 
             // numPetCrit
             // 
-            this.numPetCrit.Location = new System.Drawing.Point(102, 177);
+            this.numPetCrit.Location = new System.Drawing.Point(153, 266);
+            this.numPetCrit.Margin = new System.Windows.Forms.Padding(4);
             this.numPetCrit.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.numPetCrit.Name = "numPetCrit";
-            this.numPetCrit.Size = new System.Drawing.Size(46, 20);
+            this.numPetCrit.Size = new System.Drawing.Size(69, 26);
             this.numPetCrit.TabIndex = 6;
             this.numPetCrit.ValueChanged += new System.EventHandler(this.NumPetStat_ValueChanged);
             // 
             // numPetDamage
             // 
-            this.numPetDamage.Location = new System.Drawing.Point(102, 151);
+            this.numPetDamage.Location = new System.Drawing.Point(153, 226);
+            this.numPetDamage.Margin = new System.Windows.Forms.Padding(4);
             this.numPetDamage.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.numPetDamage.Name = "numPetDamage";
-            this.numPetDamage.Size = new System.Drawing.Size(46, 20);
+            this.numPetDamage.Size = new System.Drawing.Size(69, 26);
             this.numPetDamage.TabIndex = 5;
             this.numPetDamage.ValueChanged += new System.EventHandler(this.NumPetStat_ValueChanged);
             // 
             // numPetEnergy
             // 
-            this.numPetEnergy.Location = new System.Drawing.Point(102, 125);
+            this.numPetEnergy.Location = new System.Drawing.Point(153, 188);
+            this.numPetEnergy.Margin = new System.Windows.Forms.Padding(4);
             this.numPetEnergy.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.numPetEnergy.Name = "numPetEnergy";
-            this.numPetEnergy.Size = new System.Drawing.Size(46, 20);
+            this.numPetEnergy.Size = new System.Drawing.Size(69, 26);
             this.numPetEnergy.TabIndex = 4;
             this.numPetEnergy.ValueChanged += new System.EventHandler(this.NumPetStat_ValueChanged);
             // 
             // numPetHP
             // 
-            this.numPetHP.Location = new System.Drawing.Point(102, 99);
+            this.numPetHP.Location = new System.Drawing.Point(153, 148);
+            this.numPetHP.Margin = new System.Windows.Forms.Padding(4);
             this.numPetHP.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.numPetHP.Name = "numPetHP";
-            this.numPetHP.Size = new System.Drawing.Size(46, 20);
+            this.numPetHP.Size = new System.Drawing.Size(69, 26);
             this.numPetHP.TabIndex = 3;
             this.numPetHP.ValueChanged += new System.EventHandler(this.NumPetStat_ValueChanged);
             // 
@@ -1914,10 +2027,11 @@ namespace SoG_SGreader
             // 
             this.tabSkills.BackColor = System.Drawing.Color.Transparent;
             this.tabSkills.Controls.Add(this.tabControlSkills);
-            this.tabSkills.Location = new System.Drawing.Point(4, 40);
+            this.tabSkills.Location = new System.Drawing.Point(4, 54);
+            this.tabSkills.Margin = new System.Windows.Forms.Padding(4);
             this.tabSkills.Name = "tabSkills";
-            this.tabSkills.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSkills.Size = new System.Drawing.Size(559, 416);
+            this.tabSkills.Padding = new System.Windows.Forms.Padding(4);
+            this.tabSkills.Size = new System.Drawing.Size(842, 632);
             this.tabSkills.TabIndex = 7;
             this.tabSkills.Text = "Skills";
             // 
@@ -1933,11 +2047,12 @@ namespace SoG_SGreader
             this.tabControlSkills.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlSkills.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabControlSkills.ItemSize = new System.Drawing.Size(60, 100);
-            this.tabControlSkills.Location = new System.Drawing.Point(3, 3);
+            this.tabControlSkills.Location = new System.Drawing.Point(4, 4);
+            this.tabControlSkills.Margin = new System.Windows.Forms.Padding(4);
             this.tabControlSkills.Multiline = true;
             this.tabControlSkills.Name = "tabControlSkills";
             this.tabControlSkills.SelectedIndex = 0;
-            this.tabControlSkills.Size = new System.Drawing.Size(553, 410);
+            this.tabControlSkills.Size = new System.Drawing.Size(834, 624);
             this.tabControlSkills.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControlSkills.TabIndex = 32;
             this.tabControlSkills.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.TabControl1_DrawItem);
@@ -1950,19 +2065,19 @@ namespace SoG_SGreader
             this.tabSkillsMelee.Controls.Add(this.groupBox11);
             this.tabSkillsMelee.Controls.Add(this.groupBox10);
             this.tabSkillsMelee.Location = new System.Drawing.Point(104, 4);
+            this.tabSkillsMelee.Margin = new System.Windows.Forms.Padding(4);
             this.tabSkillsMelee.Name = "tabSkillsMelee";
-            this.tabSkillsMelee.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSkillsMelee.Size = new System.Drawing.Size(445, 402);
+            this.tabSkillsMelee.Padding = new System.Windows.Forms.Padding(4);
+            this.tabSkillsMelee.Size = new System.Drawing.Size(726, 616);
             this.tabSkillsMelee.TabIndex = 0;
             this.tabSkillsMelee.Text = "Skills: Melee";
             // 
             // cbOnlyLegalLevels
             // 
             this.cbOnlyLegalLevels.AutoSize = true;
-            this.cbOnlyLegalLevels.Location = new System.Drawing.Point(6, 377);
-            this.cbOnlyLegalLevels.Margin = new System.Windows.Forms.Padding(2);
+            this.cbOnlyLegalLevels.Location = new System.Drawing.Point(9, 566);
             this.cbOnlyLegalLevels.Name = "cbOnlyLegalLevels";
-            this.cbOnlyLegalLevels.Size = new System.Drawing.Size(102, 17);
+            this.cbOnlyLegalLevels.Size = new System.Drawing.Size(146, 24);
             this.cbOnlyLegalLevels.TabIndex = 21;
             this.cbOnlyLegalLevels.Text = "Only legal levels";
             this.cbOnlyLegalLevels.UseVisualStyleBackColor = true;
@@ -1981,72 +2096,71 @@ namespace SoG_SGreader
             this.groupBox11.Controls.Add(this.pictureBox10);
             this.groupBox11.Controls.Add(this.numSkillMelee2h0);
             this.groupBox11.Controls.Add(this.pictureBox9);
-            this.groupBox11.Location = new System.Drawing.Point(6, 175);
+            this.groupBox11.Location = new System.Drawing.Point(9, 262);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(425, 163);
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox11.Size = new System.Drawing.Size(638, 244);
             this.groupBox11.TabIndex = 21;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Two Handed";
             // 
             // numSkillMelee2h4
             // 
-            this.numSkillMelee2h4.Location = new System.Drawing.Point(355, 87);
-            this.numSkillMelee2h4.Margin = new System.Windows.Forms.Padding(2);
+            this.numSkillMelee2h4.Location = new System.Drawing.Point(532, 130);
             this.numSkillMelee2h4.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numSkillMelee2h4.Name = "numSkillMelee2h4";
-            this.numSkillMelee2h4.Size = new System.Drawing.Size(46, 20);
+            this.numSkillMelee2h4.Size = new System.Drawing.Size(69, 26);
             this.numSkillMelee2h4.TabIndex = 19;
             // 
             // numSkillMelee2h3
             // 
-            this.numSkillMelee2h3.Location = new System.Drawing.Point(270, 87);
-            this.numSkillMelee2h3.Margin = new System.Windows.Forms.Padding(2);
+            this.numSkillMelee2h3.Location = new System.Drawing.Point(405, 130);
             this.numSkillMelee2h3.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numSkillMelee2h3.Name = "numSkillMelee2h3";
-            this.numSkillMelee2h3.Size = new System.Drawing.Size(46, 20);
+            this.numSkillMelee2h3.Size = new System.Drawing.Size(69, 26);
             this.numSkillMelee2h3.TabIndex = 19;
             // 
             // numSkillMelee2h2
             // 
-            this.numSkillMelee2h2.Location = new System.Drawing.Point(191, 87);
-            this.numSkillMelee2h2.Margin = new System.Windows.Forms.Padding(2);
+            this.numSkillMelee2h2.Location = new System.Drawing.Point(286, 130);
             this.numSkillMelee2h2.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numSkillMelee2h2.Name = "numSkillMelee2h2";
-            this.numSkillMelee2h2.Size = new System.Drawing.Size(46, 20);
+            this.numSkillMelee2h2.Size = new System.Drawing.Size(69, 26);
             this.numSkillMelee2h2.TabIndex = 19;
             // 
             // numSkillMelee2h1
             // 
-            this.numSkillMelee2h1.Location = new System.Drawing.Point(112, 87);
-            this.numSkillMelee2h1.Margin = new System.Windows.Forms.Padding(2);
+            this.numSkillMelee2h1.Location = new System.Drawing.Point(168, 130);
             this.numSkillMelee2h1.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numSkillMelee2h1.Name = "numSkillMelee2h1";
-            this.numSkillMelee2h1.Size = new System.Drawing.Size(46, 20);
+            this.numSkillMelee2h1.Size = new System.Drawing.Size(69, 26);
             this.numSkillMelee2h1.TabIndex = 20;
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::SoG_SGreader.Properties.Resources.icon_berserk;
             this.pictureBox7.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox7.Location = new System.Drawing.Point(355, 35);
+            this.pictureBox7.Location = new System.Drawing.Point(532, 52);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox7.Size = new System.Drawing.Size(69, 70);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 19;
             this.pictureBox7.TabStop = false;
@@ -2056,9 +2170,10 @@ namespace SoG_SGreader
             // 
             this.pictureBox11.Image = global::SoG_SGreader.Properties.Resources.icon_overhead;
             this.pictureBox11.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox11.Location = new System.Drawing.Point(27, 35);
+            this.pictureBox11.Location = new System.Drawing.Point(40, 52);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox11.Size = new System.Drawing.Size(69, 70);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 11;
             this.pictureBox11.TabStop = false;
@@ -2068,9 +2183,10 @@ namespace SoG_SGreader
             // 
             this.pictureBox8.Image = global::SoG_SGreader.Properties.Resources.icon_2hsmash;
             this.pictureBox8.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox8.Location = new System.Drawing.Point(270, 35);
+            this.pictureBox8.Location = new System.Drawing.Point(405, 52);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox8.Size = new System.Drawing.Size(69, 70);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 17;
             this.pictureBox8.TabStop = false;
@@ -2080,9 +2196,10 @@ namespace SoG_SGreader
             // 
             this.pictureBox10.Image = global::SoG_SGreader.Properties.Resources.icon_swirl_clover;
             this.pictureBox10.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox10.Location = new System.Drawing.Point(112, 35);
+            this.pictureBox10.Location = new System.Drawing.Point(168, 52);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox10.Size = new System.Drawing.Size(69, 70);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 13;
             this.pictureBox10.TabStop = false;
@@ -2090,24 +2207,24 @@ namespace SoG_SGreader
             // 
             // numSkillMelee2h0
             // 
-            this.numSkillMelee2h0.Location = new System.Drawing.Point(27, 87);
-            this.numSkillMelee2h0.Margin = new System.Windows.Forms.Padding(2);
+            this.numSkillMelee2h0.Location = new System.Drawing.Point(40, 130);
             this.numSkillMelee2h0.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numSkillMelee2h0.Name = "numSkillMelee2h0";
-            this.numSkillMelee2h0.Size = new System.Drawing.Size(46, 20);
+            this.numSkillMelee2h0.Size = new System.Drawing.Size(69, 26);
             this.numSkillMelee2h0.TabIndex = 10;
             // 
             // pictureBox9
             // 
             this.pictureBox9.Image = global::SoG_SGreader.Properties.Resources.icon_2hthrow;
             this.pictureBox9.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox9.Location = new System.Drawing.Point(191, 35);
+            this.pictureBox9.Location = new System.Drawing.Point(286, 52);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox9.Size = new System.Drawing.Size(69, 70);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 15;
             this.pictureBox9.TabStop = false;
@@ -2126,46 +2243,47 @@ namespace SoG_SGreader
             this.groupBox10.Controls.Add(this.pictureBox5);
             this.groupBox10.Controls.Add(this.numSkillMelee1h4);
             this.groupBox10.Controls.Add(this.pictureBox6);
-            this.groupBox10.Location = new System.Drawing.Point(6, 6);
+            this.groupBox10.Location = new System.Drawing.Point(9, 9);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(425, 163);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox10.Size = new System.Drawing.Size(638, 244);
             this.groupBox10.TabIndex = 20;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "One Handed";
             // 
             // numSkillMelee1h1
             // 
-            this.numSkillMelee1h1.Location = new System.Drawing.Point(112, 90);
-            this.numSkillMelee1h1.Margin = new System.Windows.Forms.Padding(2);
+            this.numSkillMelee1h1.Location = new System.Drawing.Point(168, 135);
             this.numSkillMelee1h1.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numSkillMelee1h1.Name = "numSkillMelee1h1";
-            this.numSkillMelee1h1.Size = new System.Drawing.Size(46, 20);
+            this.numSkillMelee1h1.Size = new System.Drawing.Size(69, 26);
             this.numSkillMelee1h1.TabIndex = 13;
             // 
             // numSkillMelee1h0
             // 
-            this.numSkillMelee1h0.Location = new System.Drawing.Point(27, 90);
-            this.numSkillMelee1h0.Margin = new System.Windows.Forms.Padding(2);
+            this.numSkillMelee1h0.Location = new System.Drawing.Point(40, 135);
             this.numSkillMelee1h0.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numSkillMelee1h0.Name = "numSkillMelee1h0";
-            this.numSkillMelee1h0.Size = new System.Drawing.Size(46, 20);
+            this.numSkillMelee1h0.Size = new System.Drawing.Size(69, 26);
             this.numSkillMelee1h0.TabIndex = 12;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SoG_SGreader.Properties.Resources.icon_stinger_clover;
             this.pictureBox1.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 37);
+            this.pictureBox1.Location = new System.Drawing.Point(40, 56);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox1.Size = new System.Drawing.Size(69, 70);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -2175,9 +2293,10 @@ namespace SoG_SGreader
             // 
             this.pictureBox2.Image = global::SoG_SGreader.Properties.Resources.icon_millionstabs;
             this.pictureBox2.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox2.Location = new System.Drawing.Point(112, 37);
+            this.pictureBox2.Location = new System.Drawing.Point(168, 56);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox2.Size = new System.Drawing.Size(69, 70);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -2185,24 +2304,24 @@ namespace SoG_SGreader
             // 
             // numSkillMelee1h2
             // 
-            this.numSkillMelee1h2.Location = new System.Drawing.Point(191, 90);
-            this.numSkillMelee1h2.Margin = new System.Windows.Forms.Padding(2);
+            this.numSkillMelee1h2.Location = new System.Drawing.Point(286, 135);
             this.numSkillMelee1h2.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numSkillMelee1h2.Name = "numSkillMelee1h2";
-            this.numSkillMelee1h2.Size = new System.Drawing.Size(46, 20);
+            this.numSkillMelee1h2.Size = new System.Drawing.Size(69, 26);
             this.numSkillMelee1h2.TabIndex = 4;
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::SoG_SGreader.Properties.Resources.icon_soulstrike;
             this.pictureBox4.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox4.Location = new System.Drawing.Point(191, 37);
+            this.pictureBox4.Location = new System.Drawing.Point(286, 56);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox4.Size = new System.Drawing.Size(69, 70);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
@@ -2210,24 +2329,24 @@ namespace SoG_SGreader
             // 
             // numSkillMelee1h3
             // 
-            this.numSkillMelee1h3.Location = new System.Drawing.Point(270, 90);
-            this.numSkillMelee1h3.Margin = new System.Windows.Forms.Padding(2);
+            this.numSkillMelee1h3.Location = new System.Drawing.Point(405, 135);
             this.numSkillMelee1h3.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numSkillMelee1h3.Name = "numSkillMelee1h3";
-            this.numSkillMelee1h3.Size = new System.Drawing.Size(46, 20);
+            this.numSkillMelee1h3.Size = new System.Drawing.Size(69, 26);
             this.numSkillMelee1h3.TabIndex = 6;
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::SoG_SGreader.Properties.Resources.icon_shadowclone;
             this.pictureBox5.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox5.Location = new System.Drawing.Point(270, 37);
+            this.pictureBox5.Location = new System.Drawing.Point(405, 56);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox5.Size = new System.Drawing.Size(69, 70);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 7;
             this.pictureBox5.TabStop = false;
@@ -2235,24 +2354,24 @@ namespace SoG_SGreader
             // 
             // numSkillMelee1h4
             // 
-            this.numSkillMelee1h4.Location = new System.Drawing.Point(355, 90);
-            this.numSkillMelee1h4.Margin = new System.Windows.Forms.Padding(2);
+            this.numSkillMelee1h4.Location = new System.Drawing.Point(532, 135);
             this.numSkillMelee1h4.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numSkillMelee1h4.Name = "numSkillMelee1h4";
-            this.numSkillMelee1h4.Size = new System.Drawing.Size(46, 20);
+            this.numSkillMelee1h4.Size = new System.Drawing.Size(69, 26);
             this.numSkillMelee1h4.TabIndex = 8;
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = global::SoG_SGreader.Properties.Resources.icon_dodgingstrike;
             this.pictureBox6.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox6.Location = new System.Drawing.Point(355, 37);
+            this.pictureBox6.Location = new System.Drawing.Point(532, 56);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox6.Size = new System.Drawing.Size(69, 70);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 9;
             this.pictureBox6.TabStop = false;
@@ -2266,9 +2385,10 @@ namespace SoG_SGreader
             this.tabSkillsMagic.Controls.Add(this.groupBox13);
             this.tabSkillsMagic.Controls.Add(this.groupBox12);
             this.tabSkillsMagic.Location = new System.Drawing.Point(104, 4);
+            this.tabSkillsMagic.Margin = new System.Windows.Forms.Padding(4);
             this.tabSkillsMagic.Name = "tabSkillsMagic";
-            this.tabSkillsMagic.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSkillsMagic.Size = new System.Drawing.Size(445, 402);
+            this.tabSkillsMagic.Padding = new System.Windows.Forms.Padding(4);
+            this.tabSkillsMagic.Size = new System.Drawing.Size(726, 616);
             this.tabSkillsMagic.TabIndex = 1;
             this.tabSkillsMagic.Text = "Skills: Magic";
             // 
@@ -2280,33 +2400,35 @@ namespace SoG_SGreader
             this.groupBox15.Controls.Add(this.pictureBox22);
             this.groupBox15.Controls.Add(this.numSkillMagicA0);
             this.groupBox15.Controls.Add(this.pictureBox23);
-            this.groupBox15.Location = new System.Drawing.Point(221, 175);
+            this.groupBox15.Location = new System.Drawing.Point(332, 262);
+            this.groupBox15.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(209, 162);
+            this.groupBox15.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox15.Size = new System.Drawing.Size(314, 243);
             this.groupBox15.TabIndex = 22;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Air Magic";
             // 
             // numSkillMagicA2
             // 
-            this.numSkillMagicA2.Location = new System.Drawing.Point(146, 90);
-            this.numSkillMagicA2.Margin = new System.Windows.Forms.Padding(2);
+            this.numSkillMagicA2.Location = new System.Drawing.Point(219, 135);
             this.numSkillMagicA2.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numSkillMagicA2.Name = "numSkillMagicA2";
-            this.numSkillMagicA2.Size = new System.Drawing.Size(46, 20);
+            this.numSkillMagicA2.Size = new System.Drawing.Size(69, 26);
             this.numSkillMagicA2.TabIndex = 10;
             // 
             // pictureBox21
             // 
             this.pictureBox21.Image = global::SoG_SGreader.Properties.Resources.icon_statictouch;
             this.pictureBox21.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox21.Location = new System.Drawing.Point(146, 37);
+            this.pictureBox21.Location = new System.Drawing.Point(219, 56);
+            this.pictureBox21.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox21.Size = new System.Drawing.Size(69, 70);
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox21.TabIndex = 11;
             this.pictureBox21.TabStop = false;
@@ -2314,24 +2436,24 @@ namespace SoG_SGreader
             // 
             // numSkillMagicA1
             // 
-            this.numSkillMagicA1.Location = new System.Drawing.Point(83, 90);
-            this.numSkillMagicA1.Margin = new System.Windows.Forms.Padding(2);
+            this.numSkillMagicA1.Location = new System.Drawing.Point(124, 135);
             this.numSkillMagicA1.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numSkillMagicA1.Name = "numSkillMagicA1";
-            this.numSkillMagicA1.Size = new System.Drawing.Size(46, 20);
+            this.numSkillMagicA1.Size = new System.Drawing.Size(69, 26);
             this.numSkillMagicA1.TabIndex = 8;
             // 
             // pictureBox22
             // 
             this.pictureBox22.Image = global::SoG_SGreader.Properties.Resources.icon_summoncloud;
             this.pictureBox22.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox22.Location = new System.Drawing.Point(83, 37);
+            this.pictureBox22.Location = new System.Drawing.Point(124, 56);
+            this.pictureBox22.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox22.Size = new System.Drawing.Size(69, 70);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox22.TabIndex = 9;
             this.pictureBox22.TabStop = false;
@@ -2339,24 +2461,24 @@ namespace SoG_SGreader
             // 
             // numSkillMagicA0
             // 
-            this.numSkillMagicA0.Location = new System.Drawing.Point(19, 90);
-            this.numSkillMagicA0.Margin = new System.Windows.Forms.Padding(2);
+            this.numSkillMagicA0.Location = new System.Drawing.Point(28, 135);
             this.numSkillMagicA0.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numSkillMagicA0.Name = "numSkillMagicA0";
-            this.numSkillMagicA0.Size = new System.Drawing.Size(46, 20);
+            this.numSkillMagicA0.Size = new System.Drawing.Size(69, 26);
             this.numSkillMagicA0.TabIndex = 6;
             // 
             // pictureBox23
             // 
             this.pictureBox23.Image = global::SoG_SGreader.Properties.Resources.icon_chainlightning;
             this.pictureBox23.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox23.Location = new System.Drawing.Point(19, 37);
+            this.pictureBox23.Location = new System.Drawing.Point(28, 56);
+            this.pictureBox23.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox23.Size = new System.Drawing.Size(69, 70);
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox23.TabIndex = 7;
             this.pictureBox23.TabStop = false;
@@ -2370,33 +2492,35 @@ namespace SoG_SGreader
             this.groupBox14.Controls.Add(this.pictureBox19);
             this.groupBox14.Controls.Add(this.numSkillMagicE0);
             this.groupBox14.Controls.Add(this.pictureBox20);
-            this.groupBox14.Location = new System.Drawing.Point(6, 175);
+            this.groupBox14.Location = new System.Drawing.Point(9, 262);
+            this.groupBox14.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(209, 162);
+            this.groupBox14.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox14.Size = new System.Drawing.Size(314, 243);
             this.groupBox14.TabIndex = 22;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Earth Magic";
             // 
             // numSkillMagicE2
             // 
-            this.numSkillMagicE2.Location = new System.Drawing.Point(146, 90);
-            this.numSkillMagicE2.Margin = new System.Windows.Forms.Padding(2);
+            this.numSkillMagicE2.Location = new System.Drawing.Point(219, 135);
             this.numSkillMagicE2.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numSkillMagicE2.Name = "numSkillMagicE2";
-            this.numSkillMagicE2.Size = new System.Drawing.Size(46, 20);
+            this.numSkillMagicE2.Size = new System.Drawing.Size(69, 26);
             this.numSkillMagicE2.TabIndex = 10;
             // 
             // pictureBox18
             // 
             this.pictureBox18.Image = global::SoG_SGreader.Properties.Resources.icon_swarm;
             this.pictureBox18.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox18.Location = new System.Drawing.Point(146, 37);
+            this.pictureBox18.Location = new System.Drawing.Point(219, 56);
+            this.pictureBox18.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox18.Size = new System.Drawing.Size(69, 70);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox18.TabIndex = 11;
             this.pictureBox18.TabStop = false;
@@ -2404,24 +2528,24 @@ namespace SoG_SGreader
             // 
             // numSkillMagicE1
             // 
-            this.numSkillMagicE1.Location = new System.Drawing.Point(83, 90);
-            this.numSkillMagicE1.Margin = new System.Windows.Forms.Padding(2);
+            this.numSkillMagicE1.Location = new System.Drawing.Point(124, 135);
             this.numSkillMagicE1.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numSkillMagicE1.Name = "numSkillMagicE1";
-            this.numSkillMagicE1.Size = new System.Drawing.Size(46, 20);
+            this.numSkillMagicE1.Size = new System.Drawing.Size(69, 26);
             this.numSkillMagicE1.TabIndex = 8;
             // 
             // pictureBox19
             // 
             this.pictureBox19.Image = global::SoG_SGreader.Properties.Resources.icon_plantsummon;
             this.pictureBox19.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox19.Location = new System.Drawing.Point(83, 37);
+            this.pictureBox19.Location = new System.Drawing.Point(124, 56);
+            this.pictureBox19.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox19.Size = new System.Drawing.Size(69, 70);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox19.TabIndex = 9;
             this.pictureBox19.TabStop = false;
@@ -2429,24 +2553,24 @@ namespace SoG_SGreader
             // 
             // numSkillMagicE0
             // 
-            this.numSkillMagicE0.Location = new System.Drawing.Point(19, 90);
-            this.numSkillMagicE0.Margin = new System.Windows.Forms.Padding(2);
+            this.numSkillMagicE0.Location = new System.Drawing.Point(28, 135);
             this.numSkillMagicE0.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numSkillMagicE0.Name = "numSkillMagicE0";
-            this.numSkillMagicE0.Size = new System.Drawing.Size(46, 20);
+            this.numSkillMagicE0.Size = new System.Drawing.Size(69, 26);
             this.numSkillMagicE0.TabIndex = 6;
             // 
             // pictureBox20
             // 
             this.pictureBox20.Image = global::SoG_SGreader.Properties.Resources.icon_earthspike;
             this.pictureBox20.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox20.Location = new System.Drawing.Point(19, 37);
+            this.pictureBox20.Location = new System.Drawing.Point(28, 56);
+            this.pictureBox20.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox20.Size = new System.Drawing.Size(69, 70);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox20.TabIndex = 7;
             this.pictureBox20.TabStop = false;
@@ -2460,33 +2584,35 @@ namespace SoG_SGreader
             this.groupBox13.Controls.Add(this.pictureBox16);
             this.groupBox13.Controls.Add(this.numSkillMagicI0);
             this.groupBox13.Controls.Add(this.pictureBox17);
-            this.groupBox13.Location = new System.Drawing.Point(221, 6);
+            this.groupBox13.Location = new System.Drawing.Point(332, 9);
+            this.groupBox13.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(209, 162);
+            this.groupBox13.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox13.Size = new System.Drawing.Size(314, 243);
             this.groupBox13.TabIndex = 22;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Ice Magic";
             // 
             // numSkillMagicI2
             // 
-            this.numSkillMagicI2.Location = new System.Drawing.Point(146, 90);
-            this.numSkillMagicI2.Margin = new System.Windows.Forms.Padding(2);
+            this.numSkillMagicI2.Location = new System.Drawing.Point(219, 135);
             this.numSkillMagicI2.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numSkillMagicI2.Name = "numSkillMagicI2";
-            this.numSkillMagicI2.Size = new System.Drawing.Size(46, 20);
+            this.numSkillMagicI2.Size = new System.Drawing.Size(69, 26);
             this.numSkillMagicI2.TabIndex = 10;
             // 
             // pictureBox15
             // 
             this.pictureBox15.Image = global::SoG_SGreader.Properties.Resources.icon_frosty;
             this.pictureBox15.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox15.Location = new System.Drawing.Point(146, 37);
+            this.pictureBox15.Location = new System.Drawing.Point(219, 56);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox15.Size = new System.Drawing.Size(69, 70);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox15.TabIndex = 11;
             this.pictureBox15.TabStop = false;
@@ -2494,24 +2620,24 @@ namespace SoG_SGreader
             // 
             // numSkillMagicI1
             // 
-            this.numSkillMagicI1.Location = new System.Drawing.Point(83, 90);
-            this.numSkillMagicI1.Margin = new System.Windows.Forms.Padding(2);
+            this.numSkillMagicI1.Location = new System.Drawing.Point(124, 135);
             this.numSkillMagicI1.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numSkillMagicI1.Name = "numSkillMagicI1";
-            this.numSkillMagicI1.Size = new System.Drawing.Size(46, 20);
+            this.numSkillMagicI1.Size = new System.Drawing.Size(69, 26);
             this.numSkillMagicI1.TabIndex = 8;
             // 
             // pictureBox16
             // 
             this.pictureBox16.Image = global::SoG_SGreader.Properties.Resources.icon_frostnova_clover;
             this.pictureBox16.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox16.Location = new System.Drawing.Point(83, 37);
+            this.pictureBox16.Location = new System.Drawing.Point(124, 56);
+            this.pictureBox16.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox16.Size = new System.Drawing.Size(69, 70);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox16.TabIndex = 9;
             this.pictureBox16.TabStop = false;
@@ -2519,24 +2645,24 @@ namespace SoG_SGreader
             // 
             // numSkillMagicI0
             // 
-            this.numSkillMagicI0.Location = new System.Drawing.Point(19, 90);
-            this.numSkillMagicI0.Margin = new System.Windows.Forms.Padding(2);
+            this.numSkillMagicI0.Location = new System.Drawing.Point(28, 135);
             this.numSkillMagicI0.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numSkillMagicI0.Name = "numSkillMagicI0";
-            this.numSkillMagicI0.Size = new System.Drawing.Size(46, 20);
+            this.numSkillMagicI0.Size = new System.Drawing.Size(69, 26);
             this.numSkillMagicI0.TabIndex = 6;
             // 
             // pictureBox17
             // 
             this.pictureBox17.Image = global::SoG_SGreader.Properties.Resources.icon_icespikes;
             this.pictureBox17.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox17.Location = new System.Drawing.Point(19, 37);
+            this.pictureBox17.Location = new System.Drawing.Point(28, 56);
+            this.pictureBox17.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox17.Size = new System.Drawing.Size(69, 70);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox17.TabIndex = 7;
             this.pictureBox17.TabStop = false;
@@ -2550,33 +2676,35 @@ namespace SoG_SGreader
             this.groupBox12.Controls.Add(this.pictureBox13);
             this.groupBox12.Controls.Add(this.numSkillMagicF0);
             this.groupBox12.Controls.Add(this.pictureBox12);
-            this.groupBox12.Location = new System.Drawing.Point(6, 6);
+            this.groupBox12.Location = new System.Drawing.Point(9, 9);
+            this.groupBox12.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(209, 162);
+            this.groupBox12.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox12.Size = new System.Drawing.Size(314, 243);
             this.groupBox12.TabIndex = 21;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Fire Magic";
             // 
             // numSkillMagicF2
             // 
-            this.numSkillMagicF2.Location = new System.Drawing.Point(146, 90);
-            this.numSkillMagicF2.Margin = new System.Windows.Forms.Padding(2);
+            this.numSkillMagicF2.Location = new System.Drawing.Point(219, 135);
             this.numSkillMagicF2.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numSkillMagicF2.Name = "numSkillMagicF2";
-            this.numSkillMagicF2.Size = new System.Drawing.Size(46, 20);
+            this.numSkillMagicF2.Size = new System.Drawing.Size(69, 26);
             this.numSkillMagicF2.TabIndex = 10;
             // 
             // pictureBox14
             // 
             this.pictureBox14.Image = global::SoG_SGreader.Properties.Resources.icon_flamethrower;
             this.pictureBox14.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox14.Location = new System.Drawing.Point(146, 37);
+            this.pictureBox14.Location = new System.Drawing.Point(219, 56);
+            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox14.Size = new System.Drawing.Size(69, 70);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 11;
             this.pictureBox14.TabStop = false;
@@ -2584,24 +2712,24 @@ namespace SoG_SGreader
             // 
             // numSkillMagicF1
             // 
-            this.numSkillMagicF1.Location = new System.Drawing.Point(83, 90);
-            this.numSkillMagicF1.Margin = new System.Windows.Forms.Padding(2);
+            this.numSkillMagicF1.Location = new System.Drawing.Point(124, 135);
             this.numSkillMagicF1.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numSkillMagicF1.Name = "numSkillMagicF1";
-            this.numSkillMagicF1.Size = new System.Drawing.Size(46, 20);
+            this.numSkillMagicF1.Size = new System.Drawing.Size(69, 26);
             this.numSkillMagicF1.TabIndex = 8;
             // 
             // pictureBox13
             // 
             this.pictureBox13.Image = global::SoG_SGreader.Properties.Resources.icon_meteor;
             this.pictureBox13.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox13.Location = new System.Drawing.Point(83, 37);
+            this.pictureBox13.Location = new System.Drawing.Point(124, 56);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox13.Size = new System.Drawing.Size(69, 70);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 9;
             this.pictureBox13.TabStop = false;
@@ -2609,24 +2737,24 @@ namespace SoG_SGreader
             // 
             // numSkillMagicF0
             // 
-            this.numSkillMagicF0.Location = new System.Drawing.Point(19, 90);
-            this.numSkillMagicF0.Margin = new System.Windows.Forms.Padding(2);
+            this.numSkillMagicF0.Location = new System.Drawing.Point(28, 135);
             this.numSkillMagicF0.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numSkillMagicF0.Name = "numSkillMagicF0";
-            this.numSkillMagicF0.Size = new System.Drawing.Size(46, 20);
+            this.numSkillMagicF0.Size = new System.Drawing.Size(69, 26);
             this.numSkillMagicF0.TabIndex = 6;
             // 
             // pictureBox12
             // 
             this.pictureBox12.Image = global::SoG_SGreader.Properties.Resources.icon_fireball;
             this.pictureBox12.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox12.Location = new System.Drawing.Point(19, 37);
+            this.pictureBox12.Location = new System.Drawing.Point(28, 56);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox12.Size = new System.Drawing.Size(69, 70);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 7;
             this.pictureBox12.TabStop = false;
@@ -2639,9 +2767,10 @@ namespace SoG_SGreader
             this.tabSkillsUtility.Controls.Add(this.groupBox17);
             this.tabSkillsUtility.Controls.Add(this.groupBox16);
             this.tabSkillsUtility.Location = new System.Drawing.Point(104, 4);
+            this.tabSkillsUtility.Margin = new System.Windows.Forms.Padding(4);
             this.tabSkillsUtility.Name = "tabSkillsUtility";
-            this.tabSkillsUtility.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSkillsUtility.Size = new System.Drawing.Size(445, 402);
+            this.tabSkillsUtility.Padding = new System.Windows.Forms.Padding(4);
+            this.tabSkillsUtility.Size = new System.Drawing.Size(726, 616);
             this.tabSkillsUtility.TabIndex = 2;
             this.tabSkillsUtility.Text = "Skills: Utility";
             // 
@@ -2653,33 +2782,35 @@ namespace SoG_SGreader
             this.groupBox18.Controls.Add(this.pictureBox31);
             this.groupBox18.Controls.Add(this.numUtilityE2);
             this.groupBox18.Controls.Add(this.pictureBox32);
-            this.groupBox18.Location = new System.Drawing.Point(6, 249);
+            this.groupBox18.Location = new System.Drawing.Point(9, 374);
+            this.groupBox18.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Size = new System.Drawing.Size(425, 120);
+            this.groupBox18.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox18.Size = new System.Drawing.Size(638, 180);
             this.groupBox18.TabIndex = 22;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "Enhancing";
             // 
             // numUtilityE0
             // 
-            this.numUtilityE0.Location = new System.Drawing.Point(107, 70);
-            this.numUtilityE0.Margin = new System.Windows.Forms.Padding(2);
+            this.numUtilityE0.Location = new System.Drawing.Point(160, 105);
             this.numUtilityE0.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numUtilityE0.Name = "numUtilityE0";
-            this.numUtilityE0.Size = new System.Drawing.Size(46, 20);
+            this.numUtilityE0.Size = new System.Drawing.Size(69, 26);
             this.numUtilityE0.TabIndex = 0;
             // 
             // pictureBox30
             // 
             this.pictureBox30.Image = global::SoG_SGreader.Properties.Resources.icon_dmgup;
             this.pictureBox30.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox30.Location = new System.Drawing.Point(107, 19);
+            this.pictureBox30.Location = new System.Drawing.Point(160, 28);
+            this.pictureBox30.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox30.Name = "pictureBox30";
-            this.pictureBox30.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox30.Size = new System.Drawing.Size(69, 70);
             this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox30.TabIndex = 1;
             this.pictureBox30.TabStop = false;
@@ -2687,24 +2818,24 @@ namespace SoG_SGreader
             // 
             // numUtilityE1
             // 
-            this.numUtilityE1.Location = new System.Drawing.Point(192, 70);
-            this.numUtilityE1.Margin = new System.Windows.Forms.Padding(2);
+            this.numUtilityE1.Location = new System.Drawing.Point(288, 105);
             this.numUtilityE1.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numUtilityE1.Name = "numUtilityE1";
-            this.numUtilityE1.Size = new System.Drawing.Size(46, 20);
+            this.numUtilityE1.Size = new System.Drawing.Size(69, 26);
             this.numUtilityE1.TabIndex = 2;
             // 
             // pictureBox31
             // 
             this.pictureBox31.Image = global::SoG_SGreader.Properties.Resources.icon_speedup;
             this.pictureBox31.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox31.Location = new System.Drawing.Point(192, 19);
+            this.pictureBox31.Location = new System.Drawing.Point(288, 28);
+            this.pictureBox31.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox31.Name = "pictureBox31";
-            this.pictureBox31.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox31.Size = new System.Drawing.Size(69, 70);
             this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox31.TabIndex = 3;
             this.pictureBox31.TabStop = false;
@@ -2712,24 +2843,24 @@ namespace SoG_SGreader
             // 
             // numUtilityE2
             // 
-            this.numUtilityE2.Location = new System.Drawing.Point(271, 70);
-            this.numUtilityE2.Margin = new System.Windows.Forms.Padding(2);
+            this.numUtilityE2.Location = new System.Drawing.Point(406, 105);
             this.numUtilityE2.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numUtilityE2.Name = "numUtilityE2";
-            this.numUtilityE2.Size = new System.Drawing.Size(46, 20);
+            this.numUtilityE2.Size = new System.Drawing.Size(69, 26);
             this.numUtilityE2.TabIndex = 4;
             // 
             // pictureBox32
             // 
             this.pictureBox32.Image = global::SoG_SGreader.Properties.Resources.icon_protect_clover;
             this.pictureBox32.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox32.Location = new System.Drawing.Point(271, 19);
+            this.pictureBox32.Location = new System.Drawing.Point(406, 28);
+            this.pictureBox32.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox32.Name = "pictureBox32";
-            this.pictureBox32.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox32.Size = new System.Drawing.Size(69, 70);
             this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox32.TabIndex = 5;
             this.pictureBox32.TabStop = false;
@@ -2743,33 +2874,35 @@ namespace SoG_SGreader
             this.groupBox17.Controls.Add(this.pictureBox28);
             this.groupBox17.Controls.Add(this.numUtilityD2);
             this.groupBox17.Controls.Add(this.pictureBox29);
-            this.groupBox17.Location = new System.Drawing.Point(6, 127);
+            this.groupBox17.Location = new System.Drawing.Point(9, 190);
+            this.groupBox17.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(425, 120);
+            this.groupBox17.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox17.Size = new System.Drawing.Size(638, 180);
             this.groupBox17.TabIndex = 22;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Defensive";
             // 
             // numUtilityD0
             // 
-            this.numUtilityD0.Location = new System.Drawing.Point(107, 70);
-            this.numUtilityD0.Margin = new System.Windows.Forms.Padding(2);
+            this.numUtilityD0.Location = new System.Drawing.Point(160, 105);
             this.numUtilityD0.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numUtilityD0.Name = "numUtilityD0";
-            this.numUtilityD0.Size = new System.Drawing.Size(46, 20);
+            this.numUtilityD0.Size = new System.Drawing.Size(69, 26);
             this.numUtilityD0.TabIndex = 0;
             // 
             // pictureBox27
             // 
             this.pictureBox27.Image = global::SoG_SGreader.Properties.Resources.icon_utility_blink;
             this.pictureBox27.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox27.Location = new System.Drawing.Point(107, 19);
+            this.pictureBox27.Location = new System.Drawing.Point(160, 28);
+            this.pictureBox27.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox27.Name = "pictureBox27";
-            this.pictureBox27.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox27.Size = new System.Drawing.Size(69, 70);
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox27.TabIndex = 1;
             this.pictureBox27.TabStop = false;
@@ -2777,24 +2910,24 @@ namespace SoG_SGreader
             // 
             // numUtilityD1
             // 
-            this.numUtilityD1.Location = new System.Drawing.Point(192, 70);
-            this.numUtilityD1.Margin = new System.Windows.Forms.Padding(2);
+            this.numUtilityD1.Location = new System.Drawing.Point(288, 105);
             this.numUtilityD1.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numUtilityD1.Name = "numUtilityD1";
-            this.numUtilityD1.Size = new System.Drawing.Size(46, 20);
+            this.numUtilityD1.Size = new System.Drawing.Size(69, 26);
             this.numUtilityD1.TabIndex = 2;
             // 
             // pictureBox28
             // 
             this.pictureBox28.Image = global::SoG_SGreader.Properties.Resources.icon_utility_focus;
             this.pictureBox28.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox28.Location = new System.Drawing.Point(192, 19);
+            this.pictureBox28.Location = new System.Drawing.Point(288, 28);
+            this.pictureBox28.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox28.Name = "pictureBox28";
-            this.pictureBox28.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox28.Size = new System.Drawing.Size(69, 70);
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox28.TabIndex = 3;
             this.pictureBox28.TabStop = false;
@@ -2802,24 +2935,24 @@ namespace SoG_SGreader
             // 
             // numUtilityD2
             // 
-            this.numUtilityD2.Location = new System.Drawing.Point(271, 70);
-            this.numUtilityD2.Margin = new System.Windows.Forms.Padding(2);
+            this.numUtilityD2.Location = new System.Drawing.Point(406, 105);
             this.numUtilityD2.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numUtilityD2.Name = "numUtilityD2";
-            this.numUtilityD2.Size = new System.Drawing.Size(46, 20);
+            this.numUtilityD2.Size = new System.Drawing.Size(69, 26);
             this.numUtilityD2.TabIndex = 4;
             // 
             // pictureBox29
             // 
             this.pictureBox29.Image = global::SoG_SGreader.Properties.Resources.icon_utility_barrier;
             this.pictureBox29.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox29.Location = new System.Drawing.Point(271, 19);
+            this.pictureBox29.Location = new System.Drawing.Point(406, 28);
+            this.pictureBox29.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox29.Name = "pictureBox29";
-            this.pictureBox29.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox29.Size = new System.Drawing.Size(69, 70);
             this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox29.TabIndex = 5;
             this.pictureBox29.TabStop = false;
@@ -2833,33 +2966,35 @@ namespace SoG_SGreader
             this.groupBox16.Controls.Add(this.pictureBox25);
             this.groupBox16.Controls.Add(this.numUtilityO2);
             this.groupBox16.Controls.Add(this.pictureBox26);
-            this.groupBox16.Location = new System.Drawing.Point(6, 6);
+            this.groupBox16.Location = new System.Drawing.Point(9, 9);
+            this.groupBox16.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(425, 120);
+            this.groupBox16.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox16.Size = new System.Drawing.Size(638, 180);
             this.groupBox16.TabIndex = 21;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Offensive";
             // 
             // numUtilityO0
             // 
-            this.numUtilityO0.Location = new System.Drawing.Point(107, 70);
-            this.numUtilityO0.Margin = new System.Windows.Forms.Padding(2);
+            this.numUtilityO0.Location = new System.Drawing.Point(160, 105);
             this.numUtilityO0.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numUtilityO0.Name = "numUtilityO0";
-            this.numUtilityO0.Size = new System.Drawing.Size(46, 20);
+            this.numUtilityO0.Size = new System.Drawing.Size(69, 26);
             this.numUtilityO0.TabIndex = 0;
             // 
             // pictureBox24
             // 
             this.pictureBox24.Image = global::SoG_SGreader.Properties.Resources.icon_utility_deathmark;
             this.pictureBox24.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox24.Location = new System.Drawing.Point(107, 19);
+            this.pictureBox24.Location = new System.Drawing.Point(160, 28);
+            this.pictureBox24.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox24.Name = "pictureBox24";
-            this.pictureBox24.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox24.Size = new System.Drawing.Size(69, 70);
             this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox24.TabIndex = 1;
             this.pictureBox24.TabStop = false;
@@ -2867,24 +3002,24 @@ namespace SoG_SGreader
             // 
             // numUtilityO1
             // 
-            this.numUtilityO1.Location = new System.Drawing.Point(192, 70);
-            this.numUtilityO1.Margin = new System.Windows.Forms.Padding(2);
+            this.numUtilityO1.Location = new System.Drawing.Point(288, 105);
             this.numUtilityO1.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numUtilityO1.Name = "numUtilityO1";
-            this.numUtilityO1.Size = new System.Drawing.Size(46, 20);
+            this.numUtilityO1.Size = new System.Drawing.Size(69, 26);
             this.numUtilityO1.TabIndex = 2;
             // 
             // pictureBox25
             // 
             this.pictureBox25.Image = global::SoG_SGreader.Properties.Resources.icon_utility_sleep;
             this.pictureBox25.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox25.Location = new System.Drawing.Point(192, 19);
+            this.pictureBox25.Location = new System.Drawing.Point(288, 28);
+            this.pictureBox25.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox25.Size = new System.Drawing.Size(69, 70);
             this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox25.TabIndex = 3;
             this.pictureBox25.TabStop = false;
@@ -2892,24 +3027,24 @@ namespace SoG_SGreader
             // 
             // numUtilityO2
             // 
-            this.numUtilityO2.Location = new System.Drawing.Point(271, 70);
-            this.numUtilityO2.Margin = new System.Windows.Forms.Padding(2);
+            this.numUtilityO2.Location = new System.Drawing.Point(406, 105);
             this.numUtilityO2.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numUtilityO2.Name = "numUtilityO2";
-            this.numUtilityO2.Size = new System.Drawing.Size(46, 20);
+            this.numUtilityO2.Size = new System.Drawing.Size(69, 26);
             this.numUtilityO2.TabIndex = 4;
             // 
             // pictureBox26
             // 
             this.pictureBox26.Image = global::SoG_SGreader.Properties.Resources.icon_utility_taunt;
             this.pictureBox26.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox26.Location = new System.Drawing.Point(271, 19);
+            this.pictureBox26.Location = new System.Drawing.Point(406, 28);
+            this.pictureBox26.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox26.Size = new System.Drawing.Size(69, 70);
             this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox26.TabIndex = 5;
             this.pictureBox26.TabStop = false;
@@ -2920,8 +3055,9 @@ namespace SoG_SGreader
             this.tabTalentsMelee.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabTalentsMelee.Controls.Add(this.groupBox3);
             this.tabTalentsMelee.Location = new System.Drawing.Point(104, 4);
+            this.tabTalentsMelee.Margin = new System.Windows.Forms.Padding(4);
             this.tabTalentsMelee.Name = "tabTalentsMelee";
-            this.tabTalentsMelee.Size = new System.Drawing.Size(445, 402);
+            this.tabTalentsMelee.Size = new System.Drawing.Size(726, 616);
             this.tabTalentsMelee.TabIndex = 3;
             this.tabTalentsMelee.Text = "Talents: Melee";
             // 
@@ -2957,46 +3093,47 @@ namespace SoG_SGreader
             this.groupBox3.Controls.Add(this.pictureBox34);
             this.groupBox3.Controls.Add(this.numTalentMelee2);
             this.groupBox3.Controls.Add(this.pictureBox35);
-            this.groupBox3.Location = new System.Drawing.Point(6, 6);
+            this.groupBox3.Location = new System.Drawing.Point(9, 9);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(425, 288);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Size = new System.Drawing.Size(638, 432);
             this.groupBox3.TabIndex = 41;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Melee";
             // 
             // numTalentMelee13
             // 
-            this.numTalentMelee13.Location = new System.Drawing.Point(269, 249);
-            this.numTalentMelee13.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMelee13.Location = new System.Drawing.Point(404, 374);
             this.numTalentMelee13.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMelee13.Name = "numTalentMelee13";
-            this.numTalentMelee13.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMelee13.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee13.TabIndex = 67;
             // 
             // numTalentMelee8
             // 
-            this.numTalentMelee8.Location = new System.Drawing.Point(269, 159);
-            this.numTalentMelee8.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMelee8.Location = new System.Drawing.Point(404, 238);
             this.numTalentMelee8.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMelee8.Name = "numTalentMelee8";
-            this.numTalentMelee8.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMelee8.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee8.TabIndex = 57;
             // 
             // pictureBox43
             // 
             this.pictureBox43.Image = global::SoG_SGreader.Properties.Resources.melee_suddenstrike;
             this.pictureBox43.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox43.Location = new System.Drawing.Point(269, 198);
+            this.pictureBox43.Location = new System.Drawing.Point(404, 297);
+            this.pictureBox43.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox43.Name = "pictureBox43";
-            this.pictureBox43.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox43.Size = new System.Drawing.Size(80, 64);
             this.pictureBox43.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox43.TabIndex = 68;
             this.pictureBox43.TabStop = false;
@@ -3006,9 +3143,10 @@ namespace SoG_SGreader
             // 
             this.pictureBox36.Image = global::SoG_SGreader.Properties.Resources.melee_lastbreath;
             this.pictureBox36.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox36.Location = new System.Drawing.Point(269, 109);
+            this.pictureBox36.Location = new System.Drawing.Point(404, 164);
+            this.pictureBox36.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox36.Name = "pictureBox36";
-            this.pictureBox36.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox36.Size = new System.Drawing.Size(80, 64);
             this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox36.TabIndex = 58;
             this.pictureBox36.TabStop = false;
@@ -3016,37 +3154,36 @@ namespace SoG_SGreader
             // 
             // numTalentMelee14
             // 
-            this.numTalentMelee14.Location = new System.Drawing.Point(347, 249);
-            this.numTalentMelee14.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMelee14.Location = new System.Drawing.Point(520, 374);
             this.numTalentMelee14.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMelee14.Name = "numTalentMelee14";
-            this.numTalentMelee14.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMelee14.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee14.TabIndex = 69;
             // 
             // numTalentMelee9
             // 
-            this.numTalentMelee9.Location = new System.Drawing.Point(347, 159);
-            this.numTalentMelee9.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMelee9.Location = new System.Drawing.Point(520, 238);
             this.numTalentMelee9.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMelee9.Name = "numTalentMelee9";
-            this.numTalentMelee9.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMelee9.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee9.TabIndex = 59;
             // 
             // pictureBox44
             // 
             this.pictureBox44.Image = global::SoG_SGreader.Properties.Resources.melee_riposte;
             this.pictureBox44.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox44.Location = new System.Drawing.Point(347, 198);
+            this.pictureBox44.Location = new System.Drawing.Point(520, 297);
+            this.pictureBox44.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox44.Name = "pictureBox44";
-            this.pictureBox44.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox44.Size = new System.Drawing.Size(80, 64);
             this.pictureBox44.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox44.TabIndex = 70;
             this.pictureBox44.TabStop = false;
@@ -3056,9 +3193,10 @@ namespace SoG_SGreader
             // 
             this.pictureBox39.Image = global::SoG_SGreader.Properties.Resources.melee_backhanded;
             this.pictureBox39.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox39.Location = new System.Drawing.Point(347, 109);
+            this.pictureBox39.Location = new System.Drawing.Point(520, 164);
+            this.pictureBox39.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox39.Name = "pictureBox39";
-            this.pictureBox39.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox39.Size = new System.Drawing.Size(80, 64);
             this.pictureBox39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox39.TabIndex = 60;
             this.pictureBox39.TabStop = false;
@@ -3066,37 +3204,36 @@ namespace SoG_SGreader
             // 
             // numTalentMelee10
             // 
-            this.numTalentMelee10.Location = new System.Drawing.Point(19, 249);
-            this.numTalentMelee10.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMelee10.Location = new System.Drawing.Point(28, 374);
             this.numTalentMelee10.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMelee10.Name = "numTalentMelee10";
-            this.numTalentMelee10.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMelee10.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee10.TabIndex = 61;
             // 
             // numTalentMelee5
             // 
-            this.numTalentMelee5.Location = new System.Drawing.Point(19, 159);
-            this.numTalentMelee5.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMelee5.Location = new System.Drawing.Point(28, 238);
             this.numTalentMelee5.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMelee5.Name = "numTalentMelee5";
-            this.numTalentMelee5.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMelee5.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee5.TabIndex = 51;
             // 
             // pictureBox45
             // 
             this.pictureBox45.Image = global::SoG_SGreader.Properties.Resources.melee_insultinjury;
             this.pictureBox45.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox45.Location = new System.Drawing.Point(19, 198);
+            this.pictureBox45.Location = new System.Drawing.Point(28, 297);
+            this.pictureBox45.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox45.Name = "pictureBox45";
-            this.pictureBox45.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox45.Size = new System.Drawing.Size(80, 64);
             this.pictureBox45.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox45.TabIndex = 62;
             this.pictureBox45.TabStop = false;
@@ -3106,9 +3243,10 @@ namespace SoG_SGreader
             // 
             this.pictureBox40.Image = global::SoG_SGreader.Properties.Resources.melee_secondbreath;
             this.pictureBox40.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox40.Location = new System.Drawing.Point(19, 109);
+            this.pictureBox40.Location = new System.Drawing.Point(28, 164);
+            this.pictureBox40.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox40.Name = "pictureBox40";
-            this.pictureBox40.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox40.Size = new System.Drawing.Size(80, 64);
             this.pictureBox40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox40.TabIndex = 52;
             this.pictureBox40.TabStop = false;
@@ -3116,37 +3254,36 @@ namespace SoG_SGreader
             // 
             // numTalentMelee11
             // 
-            this.numTalentMelee11.Location = new System.Drawing.Point(105, 249);
-            this.numTalentMelee11.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMelee11.Location = new System.Drawing.Point(158, 374);
             this.numTalentMelee11.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMelee11.Name = "numTalentMelee11";
-            this.numTalentMelee11.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMelee11.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee11.TabIndex = 63;
             // 
             // numTalentMelee6
             // 
-            this.numTalentMelee6.Location = new System.Drawing.Point(105, 159);
-            this.numTalentMelee6.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMelee6.Location = new System.Drawing.Point(158, 238);
             this.numTalentMelee6.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMelee6.Name = "numTalentMelee6";
-            this.numTalentMelee6.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMelee6.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee6.TabIndex = 53;
             // 
             // pictureBox46
             // 
             this.pictureBox46.Image = global::SoG_SGreader.Properties.Resources.melee_bloodthirst;
             this.pictureBox46.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox46.Location = new System.Drawing.Point(105, 198);
+            this.pictureBox46.Location = new System.Drawing.Point(158, 297);
+            this.pictureBox46.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox46.Name = "pictureBox46";
-            this.pictureBox46.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox46.Size = new System.Drawing.Size(80, 64);
             this.pictureBox46.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox46.TabIndex = 64;
             this.pictureBox46.TabStop = false;
@@ -3156,9 +3293,10 @@ namespace SoG_SGreader
             // 
             this.pictureBox41.Image = global::SoG_SGreader.Properties.Resources.melee_knowledgeispower;
             this.pictureBox41.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox41.Location = new System.Drawing.Point(105, 109);
+            this.pictureBox41.Location = new System.Drawing.Point(158, 164);
+            this.pictureBox41.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox41.Name = "pictureBox41";
-            this.pictureBox41.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox41.Size = new System.Drawing.Size(80, 64);
             this.pictureBox41.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox41.TabIndex = 54;
             this.pictureBox41.TabStop = false;
@@ -3166,37 +3304,36 @@ namespace SoG_SGreader
             // 
             // numTalentMelee12
             // 
-            this.numTalentMelee12.Location = new System.Drawing.Point(183, 249);
-            this.numTalentMelee12.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMelee12.Location = new System.Drawing.Point(274, 374);
             this.numTalentMelee12.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMelee12.Name = "numTalentMelee12";
-            this.numTalentMelee12.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMelee12.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee12.TabIndex = 65;
             // 
             // numTalentMelee7
             // 
-            this.numTalentMelee7.Location = new System.Drawing.Point(183, 159);
-            this.numTalentMelee7.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMelee7.Location = new System.Drawing.Point(274, 238);
             this.numTalentMelee7.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMelee7.Name = "numTalentMelee7";
-            this.numTalentMelee7.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMelee7.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee7.TabIndex = 55;
             // 
             // pictureBox47
             // 
             this.pictureBox47.Image = global::SoG_SGreader.Properties.Resources.melee_combostarter;
             this.pictureBox47.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox47.Location = new System.Drawing.Point(183, 198);
+            this.pictureBox47.Location = new System.Drawing.Point(274, 297);
+            this.pictureBox47.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox47.Name = "pictureBox47";
-            this.pictureBox47.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox47.Size = new System.Drawing.Size(80, 64);
             this.pictureBox47.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox47.TabIndex = 66;
             this.pictureBox47.TabStop = false;
@@ -3206,9 +3343,10 @@ namespace SoG_SGreader
             // 
             this.pictureBox42.Image = global::SoG_SGreader.Properties.Resources.melee_wit;
             this.pictureBox42.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox42.Location = new System.Drawing.Point(183, 109);
+            this.pictureBox42.Location = new System.Drawing.Point(274, 164);
+            this.pictureBox42.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox42.Name = "pictureBox42";
-            this.pictureBox42.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox42.Size = new System.Drawing.Size(80, 64);
             this.pictureBox42.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox42.TabIndex = 56;
             this.pictureBox42.TabStop = false;
@@ -3216,24 +3354,24 @@ namespace SoG_SGreader
             // 
             // numTalentMelee3
             // 
-            this.numTalentMelee3.Location = new System.Drawing.Point(269, 69);
-            this.numTalentMelee3.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMelee3.Location = new System.Drawing.Point(404, 104);
             this.numTalentMelee3.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMelee3.Name = "numTalentMelee3";
-            this.numTalentMelee3.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMelee3.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee3.TabIndex = 47;
             // 
             // pictureBox37
             // 
             this.pictureBox37.Image = global::SoG_SGreader.Properties.Resources.melee_burningweapon;
             this.pictureBox37.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox37.Location = new System.Drawing.Point(269, 18);
+            this.pictureBox37.Location = new System.Drawing.Point(404, 27);
+            this.pictureBox37.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox37.Name = "pictureBox37";
-            this.pictureBox37.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox37.Size = new System.Drawing.Size(80, 64);
             this.pictureBox37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox37.TabIndex = 48;
             this.pictureBox37.TabStop = false;
@@ -3241,24 +3379,24 @@ namespace SoG_SGreader
             // 
             // numTalentMelee4
             // 
-            this.numTalentMelee4.Location = new System.Drawing.Point(347, 69);
-            this.numTalentMelee4.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMelee4.Location = new System.Drawing.Point(520, 104);
             this.numTalentMelee4.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMelee4.Name = "numTalentMelee4";
-            this.numTalentMelee4.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMelee4.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee4.TabIndex = 49;
             // 
             // pictureBox38
             // 
             this.pictureBox38.Image = global::SoG_SGreader.Properties.Resources.melee_chillytouch;
             this.pictureBox38.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox38.Location = new System.Drawing.Point(347, 18);
+            this.pictureBox38.Location = new System.Drawing.Point(520, 27);
+            this.pictureBox38.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox38.Name = "pictureBox38";
-            this.pictureBox38.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox38.Size = new System.Drawing.Size(80, 64);
             this.pictureBox38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox38.TabIndex = 50;
             this.pictureBox38.TabStop = false;
@@ -3266,24 +3404,24 @@ namespace SoG_SGreader
             // 
             // numTalentMelee0
             // 
-            this.numTalentMelee0.Location = new System.Drawing.Point(19, 69);
-            this.numTalentMelee0.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMelee0.Location = new System.Drawing.Point(28, 104);
             this.numTalentMelee0.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMelee0.Name = "numTalentMelee0";
-            this.numTalentMelee0.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMelee0.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee0.TabIndex = 41;
             // 
             // pictureBox33
             // 
             this.pictureBox33.Image = global::SoG_SGreader.Properties.Resources.melee_strength;
             this.pictureBox33.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox33.Location = new System.Drawing.Point(19, 18);
+            this.pictureBox33.Location = new System.Drawing.Point(28, 27);
+            this.pictureBox33.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox33.Name = "pictureBox33";
-            this.pictureBox33.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox33.Size = new System.Drawing.Size(80, 64);
             this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox33.TabIndex = 42;
             this.pictureBox33.TabStop = false;
@@ -3291,24 +3429,24 @@ namespace SoG_SGreader
             // 
             // numTalentMelee1
             // 
-            this.numTalentMelee1.Location = new System.Drawing.Point(105, 69);
-            this.numTalentMelee1.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMelee1.Location = new System.Drawing.Point(158, 104);
             this.numTalentMelee1.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMelee1.Name = "numTalentMelee1";
-            this.numTalentMelee1.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMelee1.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee1.TabIndex = 43;
             // 
             // pictureBox34
             // 
             this.pictureBox34.Image = global::SoG_SGreader.Properties.Resources.melee_fencer;
             this.pictureBox34.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox34.Location = new System.Drawing.Point(105, 18);
+            this.pictureBox34.Location = new System.Drawing.Point(158, 27);
+            this.pictureBox34.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox34.Name = "pictureBox34";
-            this.pictureBox34.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox34.Size = new System.Drawing.Size(80, 64);
             this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox34.TabIndex = 44;
             this.pictureBox34.TabStop = false;
@@ -3316,24 +3454,24 @@ namespace SoG_SGreader
             // 
             // numTalentMelee2
             // 
-            this.numTalentMelee2.Location = new System.Drawing.Point(183, 69);
-            this.numTalentMelee2.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMelee2.Location = new System.Drawing.Point(274, 104);
             this.numTalentMelee2.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMelee2.Name = "numTalentMelee2";
-            this.numTalentMelee2.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMelee2.Size = new System.Drawing.Size(80, 26);
             this.numTalentMelee2.TabIndex = 45;
             // 
             // pictureBox35
             // 
             this.pictureBox35.Image = global::SoG_SGreader.Properties.Resources.melee_brawler;
             this.pictureBox35.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox35.Location = new System.Drawing.Point(183, 18);
+            this.pictureBox35.Location = new System.Drawing.Point(274, 27);
+            this.pictureBox35.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox35.Name = "pictureBox35";
-            this.pictureBox35.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox35.Size = new System.Drawing.Size(80, 64);
             this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox35.TabIndex = 46;
             this.pictureBox35.TabStop = false;
@@ -3344,8 +3482,9 @@ namespace SoG_SGreader
             this.tabTalentsMagic.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabTalentsMagic.Controls.Add(this.groupBox4);
             this.tabTalentsMagic.Location = new System.Drawing.Point(104, 4);
+            this.tabTalentsMagic.Margin = new System.Windows.Forms.Padding(4);
             this.tabTalentsMagic.Name = "tabTalentsMagic";
-            this.tabTalentsMagic.Size = new System.Drawing.Size(445, 402);
+            this.tabTalentsMagic.Size = new System.Drawing.Size(726, 616);
             this.tabTalentsMagic.TabIndex = 4;
             this.tabTalentsMagic.Text = "Talents: Magic";
             // 
@@ -3381,46 +3520,47 @@ namespace SoG_SGreader
             this.groupBox4.Controls.Add(this.pictureBox61);
             this.groupBox4.Controls.Add(this.numTalentMagic2);
             this.groupBox4.Controls.Add(this.pictureBox62);
-            this.groupBox4.Location = new System.Drawing.Point(6, 6);
+            this.groupBox4.Location = new System.Drawing.Point(9, 9);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(425, 288);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Size = new System.Drawing.Size(638, 432);
             this.groupBox4.TabIndex = 42;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Magic";
             // 
             // numTalentMagic13
             // 
-            this.numTalentMagic13.Location = new System.Drawing.Point(269, 249);
-            this.numTalentMagic13.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMagic13.Location = new System.Drawing.Point(404, 374);
             this.numTalentMagic13.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMagic13.Name = "numTalentMagic13";
-            this.numTalentMagic13.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMagic13.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic13.TabIndex = 67;
             // 
             // numTalentMagic8
             // 
-            this.numTalentMagic8.Location = new System.Drawing.Point(269, 159);
-            this.numTalentMagic8.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMagic8.Location = new System.Drawing.Point(404, 238);
             this.numTalentMagic8.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMagic8.Name = "numTalentMagic8";
-            this.numTalentMagic8.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMagic8.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic8.TabIndex = 57;
             // 
             // pictureBox48
             // 
             this.pictureBox48.Image = global::SoG_SGreader.Properties.Resources.magic_manaburn;
             this.pictureBox48.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox48.Location = new System.Drawing.Point(269, 198);
+            this.pictureBox48.Location = new System.Drawing.Point(404, 297);
+            this.pictureBox48.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox48.Name = "pictureBox48";
-            this.pictureBox48.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox48.Size = new System.Drawing.Size(80, 64);
             this.pictureBox48.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox48.TabIndex = 68;
             this.pictureBox48.TabStop = false;
@@ -3430,9 +3570,10 @@ namespace SoG_SGreader
             // 
             this.pictureBox49.Image = global::SoG_SGreader.Properties.Resources.magic_specialist;
             this.pictureBox49.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox49.Location = new System.Drawing.Point(269, 109);
+            this.pictureBox49.Location = new System.Drawing.Point(404, 164);
+            this.pictureBox49.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox49.Name = "pictureBox49";
-            this.pictureBox49.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox49.Size = new System.Drawing.Size(80, 64);
             this.pictureBox49.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox49.TabIndex = 58;
             this.pictureBox49.TabStop = false;
@@ -3440,37 +3581,36 @@ namespace SoG_SGreader
             // 
             // numTalentMagic14
             // 
-            this.numTalentMagic14.Location = new System.Drawing.Point(347, 249);
-            this.numTalentMagic14.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMagic14.Location = new System.Drawing.Point(520, 374);
             this.numTalentMagic14.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMagic14.Name = "numTalentMagic14";
-            this.numTalentMagic14.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMagic14.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic14.TabIndex = 69;
             // 
             // numTalentMagic9
             // 
-            this.numTalentMagic9.Location = new System.Drawing.Point(347, 159);
-            this.numTalentMagic9.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMagic9.Location = new System.Drawing.Point(520, 238);
             this.numTalentMagic9.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMagic9.Name = "numTalentMagic9";
-            this.numTalentMagic9.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMagic9.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic9.TabIndex = 59;
             // 
             // pictureBox50
             // 
             this.pictureBox50.Image = global::SoG_SGreader.Properties.Resources.magic_snapcast;
             this.pictureBox50.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox50.Location = new System.Drawing.Point(347, 198);
+            this.pictureBox50.Location = new System.Drawing.Point(520, 297);
+            this.pictureBox50.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox50.Name = "pictureBox50";
-            this.pictureBox50.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox50.Size = new System.Drawing.Size(80, 64);
             this.pictureBox50.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox50.TabIndex = 70;
             this.pictureBox50.TabStop = false;
@@ -3480,9 +3620,10 @@ namespace SoG_SGreader
             // 
             this.pictureBox51.Image = global::SoG_SGreader.Properties.Resources.magic_lastspark;
             this.pictureBox51.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox51.Location = new System.Drawing.Point(347, 109);
+            this.pictureBox51.Location = new System.Drawing.Point(520, 164);
+            this.pictureBox51.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox51.Name = "pictureBox51";
-            this.pictureBox51.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox51.Size = new System.Drawing.Size(80, 64);
             this.pictureBox51.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox51.TabIndex = 60;
             this.pictureBox51.TabStop = false;
@@ -3490,37 +3631,36 @@ namespace SoG_SGreader
             // 
             // numTalentMagic10
             // 
-            this.numTalentMagic10.Location = new System.Drawing.Point(19, 249);
-            this.numTalentMagic10.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMagic10.Location = new System.Drawing.Point(28, 374);
             this.numTalentMagic10.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMagic10.Name = "numTalentMagic10";
-            this.numTalentMagic10.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMagic10.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic10.TabIndex = 61;
             // 
             // numTalentMagic5
             // 
-            this.numTalentMagic5.Location = new System.Drawing.Point(19, 159);
-            this.numTalentMagic5.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMagic5.Location = new System.Drawing.Point(28, 238);
             this.numTalentMagic5.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMagic5.Name = "numTalentMagic5";
-            this.numTalentMagic5.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMagic5.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic5.TabIndex = 51;
             // 
             // pictureBox52
             // 
             this.pictureBox52.Image = global::SoG_SGreader.Properties.Resources.magic_wandmaster;
             this.pictureBox52.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox52.Location = new System.Drawing.Point(19, 198);
+            this.pictureBox52.Location = new System.Drawing.Point(28, 297);
+            this.pictureBox52.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox52.Name = "pictureBox52";
-            this.pictureBox52.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox52.Size = new System.Drawing.Size(80, 64);
             this.pictureBox52.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox52.TabIndex = 62;
             this.pictureBox52.TabStop = false;
@@ -3530,9 +3670,10 @@ namespace SoG_SGreader
             // 
             this.pictureBox53.Image = global::SoG_SGreader.Properties.Resources.magic_concentration;
             this.pictureBox53.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox53.Location = new System.Drawing.Point(19, 109);
+            this.pictureBox53.Location = new System.Drawing.Point(28, 164);
+            this.pictureBox53.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox53.Name = "pictureBox53";
-            this.pictureBox53.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox53.Size = new System.Drawing.Size(80, 64);
             this.pictureBox53.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox53.TabIndex = 52;
             this.pictureBox53.TabStop = false;
@@ -3540,37 +3681,36 @@ namespace SoG_SGreader
             // 
             // numTalentMagic11
             // 
-            this.numTalentMagic11.Location = new System.Drawing.Point(105, 249);
-            this.numTalentMagic11.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMagic11.Location = new System.Drawing.Point(158, 374);
             this.numTalentMagic11.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMagic11.Name = "numTalentMagic11";
-            this.numTalentMagic11.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMagic11.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic11.TabIndex = 63;
             // 
             // numTalentMagic6
             // 
-            this.numTalentMagic6.Location = new System.Drawing.Point(105, 159);
-            this.numTalentMagic6.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMagic6.Location = new System.Drawing.Point(158, 238);
             this.numTalentMagic6.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMagic6.Name = "numTalentMagic6";
-            this.numTalentMagic6.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMagic6.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic6.TabIndex = 53;
             // 
             // pictureBox54
             // 
             this.pictureBox54.Image = global::SoG_SGreader.Properties.Resources.magic_arcanecollar;
             this.pictureBox54.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox54.Location = new System.Drawing.Point(105, 198);
+            this.pictureBox54.Location = new System.Drawing.Point(158, 297);
+            this.pictureBox54.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox54.Name = "pictureBox54";
-            this.pictureBox54.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox54.Size = new System.Drawing.Size(80, 64);
             this.pictureBox54.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox54.TabIndex = 64;
             this.pictureBox54.TabStop = false;
@@ -3580,9 +3720,10 @@ namespace SoG_SGreader
             // 
             this.pictureBox55.Image = global::SoG_SGreader.Properties.Resources.magic_turtle;
             this.pictureBox55.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox55.Location = new System.Drawing.Point(105, 109);
+            this.pictureBox55.Location = new System.Drawing.Point(158, 164);
+            this.pictureBox55.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox55.Name = "pictureBox55";
-            this.pictureBox55.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox55.Size = new System.Drawing.Size(80, 64);
             this.pictureBox55.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox55.TabIndex = 54;
             this.pictureBox55.TabStop = false;
@@ -3590,37 +3731,36 @@ namespace SoG_SGreader
             // 
             // numTalentMagic12
             // 
-            this.numTalentMagic12.Location = new System.Drawing.Point(183, 249);
-            this.numTalentMagic12.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMagic12.Location = new System.Drawing.Point(274, 374);
             this.numTalentMagic12.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMagic12.Name = "numTalentMagic12";
-            this.numTalentMagic12.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMagic12.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic12.TabIndex = 65;
             // 
             // numTalentMagic7
             // 
-            this.numTalentMagic7.Location = new System.Drawing.Point(183, 159);
-            this.numTalentMagic7.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMagic7.Location = new System.Drawing.Point(274, 238);
             this.numTalentMagic7.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMagic7.Name = "numTalentMagic7";
-            this.numTalentMagic7.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMagic7.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic7.TabIndex = 55;
             // 
             // pictureBox56
             // 
             this.pictureBox56.Image = global::SoG_SGreader.Properties.Resources.magic_cripplingblast;
             this.pictureBox56.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox56.Location = new System.Drawing.Point(183, 198);
+            this.pictureBox56.Location = new System.Drawing.Point(274, 297);
+            this.pictureBox56.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox56.Name = "pictureBox56";
-            this.pictureBox56.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox56.Size = new System.Drawing.Size(80, 64);
             this.pictureBox56.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox56.TabIndex = 66;
             this.pictureBox56.TabStop = false;
@@ -3630,9 +3770,10 @@ namespace SoG_SGreader
             // 
             this.pictureBox57.Image = global::SoG_SGreader.Properties.Resources.magic_soulsiphon;
             this.pictureBox57.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox57.Location = new System.Drawing.Point(183, 109);
+            this.pictureBox57.Location = new System.Drawing.Point(274, 164);
+            this.pictureBox57.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox57.Name = "pictureBox57";
-            this.pictureBox57.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox57.Size = new System.Drawing.Size(80, 64);
             this.pictureBox57.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox57.TabIndex = 56;
             this.pictureBox57.TabStop = false;
@@ -3640,24 +3781,24 @@ namespace SoG_SGreader
             // 
             // numTalentMagic3
             // 
-            this.numTalentMagic3.Location = new System.Drawing.Point(269, 69);
-            this.numTalentMagic3.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMagic3.Location = new System.Drawing.Point(404, 104);
             this.numTalentMagic3.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMagic3.Name = "numTalentMagic3";
-            this.numTalentMagic3.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMagic3.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic3.TabIndex = 47;
             // 
             // pictureBox58
             // 
             this.pictureBox58.Image = global::SoG_SGreader.Properties.Resources.magic_prismatic;
             this.pictureBox58.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox58.Location = new System.Drawing.Point(269, 18);
+            this.pictureBox58.Location = new System.Drawing.Point(404, 27);
+            this.pictureBox58.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox58.Name = "pictureBox58";
-            this.pictureBox58.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox58.Size = new System.Drawing.Size(80, 64);
             this.pictureBox58.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox58.TabIndex = 48;
             this.pictureBox58.TabStop = false;
@@ -3665,24 +3806,24 @@ namespace SoG_SGreader
             // 
             // numTalentMagic4
             // 
-            this.numTalentMagic4.Location = new System.Drawing.Point(347, 69);
-            this.numTalentMagic4.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMagic4.Location = new System.Drawing.Point(520, 104);
             this.numTalentMagic4.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMagic4.Name = "numTalentMagic4";
-            this.numTalentMagic4.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMagic4.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic4.TabIndex = 49;
             // 
             // pictureBox59
             // 
             this.pictureBox59.Image = global::SoG_SGreader.Properties.Resources.magic_battlemage;
             this.pictureBox59.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox59.Location = new System.Drawing.Point(347, 18);
+            this.pictureBox59.Location = new System.Drawing.Point(520, 27);
+            this.pictureBox59.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox59.Name = "pictureBox59";
-            this.pictureBox59.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox59.Size = new System.Drawing.Size(80, 64);
             this.pictureBox59.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox59.TabIndex = 50;
             this.pictureBox59.TabStop = false;
@@ -3690,24 +3831,24 @@ namespace SoG_SGreader
             // 
             // numTalentMagic0
             // 
-            this.numTalentMagic0.Location = new System.Drawing.Point(19, 69);
-            this.numTalentMagic0.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMagic0.Location = new System.Drawing.Point(28, 104);
             this.numTalentMagic0.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMagic0.Name = "numTalentMagic0";
-            this.numTalentMagic0.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMagic0.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic0.TabIndex = 41;
             // 
             // pictureBox60
             // 
             this.pictureBox60.Image = global::SoG_SGreader.Properties.Resources.magic_intelligence;
             this.pictureBox60.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox60.Location = new System.Drawing.Point(19, 18);
+            this.pictureBox60.Location = new System.Drawing.Point(28, 27);
+            this.pictureBox60.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox60.Name = "pictureBox60";
-            this.pictureBox60.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox60.Size = new System.Drawing.Size(80, 64);
             this.pictureBox60.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox60.TabIndex = 42;
             this.pictureBox60.TabStop = false;
@@ -3715,24 +3856,24 @@ namespace SoG_SGreader
             // 
             // numTalentMagic1
             // 
-            this.numTalentMagic1.Location = new System.Drawing.Point(105, 69);
-            this.numTalentMagic1.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMagic1.Location = new System.Drawing.Point(158, 104);
             this.numTalentMagic1.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMagic1.Name = "numTalentMagic1";
-            this.numTalentMagic1.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMagic1.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic1.TabIndex = 43;
             // 
             // pictureBox61
             // 
             this.pictureBox61.Image = global::SoG_SGreader.Properties.Resources.magic_fasttalker;
             this.pictureBox61.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox61.Location = new System.Drawing.Point(105, 18);
+            this.pictureBox61.Location = new System.Drawing.Point(158, 27);
+            this.pictureBox61.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox61.Name = "pictureBox61";
-            this.pictureBox61.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox61.Size = new System.Drawing.Size(80, 64);
             this.pictureBox61.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox61.TabIndex = 44;
             this.pictureBox61.TabStop = false;
@@ -3740,24 +3881,24 @@ namespace SoG_SGreader
             // 
             // numTalentMagic2
             // 
-            this.numTalentMagic2.Location = new System.Drawing.Point(183, 69);
-            this.numTalentMagic2.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentMagic2.Location = new System.Drawing.Point(274, 104);
             this.numTalentMagic2.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentMagic2.Name = "numTalentMagic2";
-            this.numTalentMagic2.Size = new System.Drawing.Size(53, 20);
+            this.numTalentMagic2.Size = new System.Drawing.Size(80, 26);
             this.numTalentMagic2.TabIndex = 45;
             // 
             // pictureBox62
             // 
             this.pictureBox62.Image = global::SoG_SGreader.Properties.Resources.magic_arcanecharge;
             this.pictureBox62.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox62.Location = new System.Drawing.Point(183, 18);
+            this.pictureBox62.Location = new System.Drawing.Point(274, 27);
+            this.pictureBox62.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox62.Name = "pictureBox62";
-            this.pictureBox62.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox62.Size = new System.Drawing.Size(80, 64);
             this.pictureBox62.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox62.TabIndex = 46;
             this.pictureBox62.TabStop = false;
@@ -3769,18 +3910,18 @@ namespace SoG_SGreader
             this.tabTalentsGeneral.Controls.Add(this.label1);
             this.tabTalentsGeneral.Controls.Add(this.groupBox5);
             this.tabTalentsGeneral.Location = new System.Drawing.Point(104, 4);
+            this.tabTalentsGeneral.Margin = new System.Windows.Forms.Padding(4);
             this.tabTalentsGeneral.Name = "tabTalentsGeneral";
-            this.tabTalentsGeneral.Size = new System.Drawing.Size(445, 402);
+            this.tabTalentsGeneral.Size = new System.Drawing.Size(726, 616);
             this.tabTalentsGeneral.TabIndex = 5;
             this.tabTalentsGeneral.Text = "Talents: General";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 297);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(15, 446);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(265, 39);
+            this.label1.Size = new System.Drawing.Size(391, 60);
             this.label1.TabIndex = 44;
             this.label1.Text = "Notes:\r\n- SteadyDefense on level 5, will make your game crash\r\n- FineTaste max le" +
     "vel is 3";
@@ -3829,33 +3970,35 @@ namespace SoG_SGreader
             this.groupBox5.Controls.Add(this.pictureBox68);
             this.groupBox5.Controls.Add(this.numTalentGeneral0);
             this.groupBox5.Controls.Add(this.pictureBox75);
-            this.groupBox5.Location = new System.Drawing.Point(6, 6);
+            this.groupBox5.Location = new System.Drawing.Point(9, 9);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(425, 288);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox5.Size = new System.Drawing.Size(638, 432);
             this.groupBox5.TabIndex = 43;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "General";
             // 
             // numTalentGeneral20
             // 
-            this.numTalentGeneral20.Location = new System.Drawing.Point(367, 247);
-            this.numTalentGeneral20.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentGeneral20.Location = new System.Drawing.Point(550, 370);
             this.numTalentGeneral20.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentGeneral20.Name = "numTalentGeneral20";
-            this.numTalentGeneral20.Size = new System.Drawing.Size(53, 20);
+            this.numTalentGeneral20.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral20.TabIndex = 116;
             // 
             // pictureBox78
             // 
             this.pictureBox78.Image = global::SoG_SGreader.Properties.Resources.general_alchemist;
             this.pictureBox78.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox78.Location = new System.Drawing.Point(367, 198);
+            this.pictureBox78.Location = new System.Drawing.Point(550, 297);
+            this.pictureBox78.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox78.Name = "pictureBox78";
-            this.pictureBox78.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox78.Size = new System.Drawing.Size(80, 64);
             this.pictureBox78.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox78.TabIndex = 117;
             this.pictureBox78.TabStop = false;
@@ -3863,24 +4006,24 @@ namespace SoG_SGreader
             // 
             // numTalentGeneral19
             // 
-            this.numTalentGeneral19.Location = new System.Drawing.Point(307, 247);
-            this.numTalentGeneral19.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentGeneral19.Location = new System.Drawing.Point(460, 370);
             this.numTalentGeneral19.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentGeneral19.Name = "numTalentGeneral19";
-            this.numTalentGeneral19.Size = new System.Drawing.Size(53, 20);
+            this.numTalentGeneral19.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral19.TabIndex = 114;
             // 
             // pictureBox79
             // 
             this.pictureBox79.Image = global::SoG_SGreader.Properties.Resources.general_finetaste;
             this.pictureBox79.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox79.Location = new System.Drawing.Point(307, 198);
+            this.pictureBox79.Location = new System.Drawing.Point(460, 297);
+            this.pictureBox79.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox79.Name = "pictureBox79";
-            this.pictureBox79.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox79.Size = new System.Drawing.Size(80, 64);
             this.pictureBox79.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox79.TabIndex = 115;
             this.pictureBox79.TabStop = false;
@@ -3888,24 +4031,24 @@ namespace SoG_SGreader
             // 
             // numTalentGeneral18
             // 
-            this.numTalentGeneral18.Location = new System.Drawing.Point(247, 247);
-            this.numTalentGeneral18.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentGeneral18.Location = new System.Drawing.Point(370, 370);
             this.numTalentGeneral18.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentGeneral18.Name = "numTalentGeneral18";
-            this.numTalentGeneral18.Size = new System.Drawing.Size(53, 20);
+            this.numTalentGeneral18.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral18.TabIndex = 112;
             // 
             // pictureBox80
             // 
             this.pictureBox80.Image = global::SoG_SGreader.Properties.Resources.general_quickreflex;
             this.pictureBox80.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox80.Location = new System.Drawing.Point(247, 198);
+            this.pictureBox80.Location = new System.Drawing.Point(370, 297);
+            this.pictureBox80.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox80.Name = "pictureBox80";
-            this.pictureBox80.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox80.Size = new System.Drawing.Size(80, 64);
             this.pictureBox80.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox80.TabIndex = 113;
             this.pictureBox80.TabStop = false;
@@ -3913,24 +4056,24 @@ namespace SoG_SGreader
             // 
             // numTalentGeneral17
             // 
-            this.numTalentGeneral17.Location = new System.Drawing.Point(187, 247);
-            this.numTalentGeneral17.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentGeneral17.Location = new System.Drawing.Point(280, 370);
             this.numTalentGeneral17.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentGeneral17.Name = "numTalentGeneral17";
-            this.numTalentGeneral17.Size = new System.Drawing.Size(53, 20);
+            this.numTalentGeneral17.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral17.TabIndex = 110;
             // 
             // pictureBox81
             // 
             this.pictureBox81.Image = global::SoG_SGreader.Properties.Resources.general_efficientcounter;
             this.pictureBox81.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox81.Location = new System.Drawing.Point(187, 198);
+            this.pictureBox81.Location = new System.Drawing.Point(280, 297);
+            this.pictureBox81.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox81.Name = "pictureBox81";
-            this.pictureBox81.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox81.Size = new System.Drawing.Size(80, 64);
             this.pictureBox81.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox81.TabIndex = 111;
             this.pictureBox81.TabStop = false;
@@ -3938,24 +4081,24 @@ namespace SoG_SGreader
             // 
             // numTalentGeneral16
             // 
-            this.numTalentGeneral16.Location = new System.Drawing.Point(127, 247);
-            this.numTalentGeneral16.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentGeneral16.Location = new System.Drawing.Point(190, 370);
             this.numTalentGeneral16.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentGeneral16.Name = "numTalentGeneral16";
-            this.numTalentGeneral16.Size = new System.Drawing.Size(53, 20);
+            this.numTalentGeneral16.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral16.TabIndex = 108;
             // 
             // pictureBox82
             // 
             this.pictureBox82.Image = global::SoG_SGreader.Properties.Resources.general_kineticenergy;
             this.pictureBox82.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox82.Location = new System.Drawing.Point(127, 198);
+            this.pictureBox82.Location = new System.Drawing.Point(190, 297);
+            this.pictureBox82.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox82.Name = "pictureBox82";
-            this.pictureBox82.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox82.Size = new System.Drawing.Size(80, 64);
             this.pictureBox82.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox82.TabIndex = 109;
             this.pictureBox82.TabStop = false;
@@ -3963,24 +4106,24 @@ namespace SoG_SGreader
             // 
             // numTalentGeneral15
             // 
-            this.numTalentGeneral15.Location = new System.Drawing.Point(67, 247);
-            this.numTalentGeneral15.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentGeneral15.Location = new System.Drawing.Point(100, 370);
             this.numTalentGeneral15.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentGeneral15.Name = "numTalentGeneral15";
-            this.numTalentGeneral15.Size = new System.Drawing.Size(53, 20);
+            this.numTalentGeneral15.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral15.TabIndex = 106;
             // 
             // pictureBox83
             // 
             this.pictureBox83.Image = global::SoG_SGreader.Properties.Resources.general_shieldbearer;
             this.pictureBox83.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox83.Location = new System.Drawing.Point(67, 198);
+            this.pictureBox83.Location = new System.Drawing.Point(100, 297);
+            this.pictureBox83.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox83.Name = "pictureBox83";
-            this.pictureBox83.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox83.Size = new System.Drawing.Size(80, 64);
             this.pictureBox83.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox83.TabIndex = 107;
             this.pictureBox83.TabStop = false;
@@ -3988,37 +4131,36 @@ namespace SoG_SGreader
             // 
             // numTalentGeneral13
             // 
-            this.numTalentGeneral13.Location = new System.Drawing.Point(367, 162);
-            this.numTalentGeneral13.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentGeneral13.Location = new System.Drawing.Point(550, 243);
             this.numTalentGeneral13.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentGeneral13.Name = "numTalentGeneral13";
-            this.numTalentGeneral13.Size = new System.Drawing.Size(53, 20);
+            this.numTalentGeneral13.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral13.TabIndex = 102;
             // 
             // numTalentGeneral6
             // 
-            this.numTalentGeneral6.Location = new System.Drawing.Point(367, 69);
-            this.numTalentGeneral6.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentGeneral6.Location = new System.Drawing.Point(550, 104);
             this.numTalentGeneral6.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentGeneral6.Name = "numTalentGeneral6";
-            this.numTalentGeneral6.Size = new System.Drawing.Size(53, 20);
+            this.numTalentGeneral6.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral6.TabIndex = 88;
             // 
             // pictureBox65
             // 
             this.pictureBox65.Image = global::SoG_SGreader.Properties.Resources.general_arrowscavenger;
             this.pictureBox65.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox65.Location = new System.Drawing.Point(367, 113);
+            this.pictureBox65.Location = new System.Drawing.Point(550, 170);
+            this.pictureBox65.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox65.Name = "pictureBox65";
-            this.pictureBox65.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox65.Size = new System.Drawing.Size(80, 64);
             this.pictureBox65.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox65.TabIndex = 103;
             this.pictureBox65.TabStop = false;
@@ -4028,9 +4170,10 @@ namespace SoG_SGreader
             // 
             this.pictureBox72.Image = global::SoG_SGreader.Properties.Resources.general_brutality;
             this.pictureBox72.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox72.Location = new System.Drawing.Point(367, 18);
+            this.pictureBox72.Location = new System.Drawing.Point(550, 27);
+            this.pictureBox72.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox72.Name = "pictureBox72";
-            this.pictureBox72.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox72.Size = new System.Drawing.Size(80, 64);
             this.pictureBox72.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox72.TabIndex = 89;
             this.pictureBox72.TabStop = false;
@@ -4038,37 +4181,36 @@ namespace SoG_SGreader
             // 
             // numTalentGeneral12
             // 
-            this.numTalentGeneral12.Location = new System.Drawing.Point(307, 162);
-            this.numTalentGeneral12.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentGeneral12.Location = new System.Drawing.Point(460, 243);
             this.numTalentGeneral12.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentGeneral12.Name = "numTalentGeneral12";
-            this.numTalentGeneral12.Size = new System.Drawing.Size(53, 20);
+            this.numTalentGeneral12.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral12.TabIndex = 100;
             // 
             // numTalentGeneral5
             // 
-            this.numTalentGeneral5.Location = new System.Drawing.Point(307, 69);
-            this.numTalentGeneral5.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentGeneral5.Location = new System.Drawing.Point(460, 104);
             this.numTalentGeneral5.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentGeneral5.Name = "numTalentGeneral5";
-            this.numTalentGeneral5.Size = new System.Drawing.Size(53, 20);
+            this.numTalentGeneral5.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral5.TabIndex = 84;
             // 
             // pictureBox66
             // 
             this.pictureBox66.Image = global::SoG_SGreader.Properties.Resources.general_quickshot;
             this.pictureBox66.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox66.Location = new System.Drawing.Point(307, 113);
+            this.pictureBox66.Location = new System.Drawing.Point(460, 170);
+            this.pictureBox66.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox66.Name = "pictureBox66";
-            this.pictureBox66.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox66.Size = new System.Drawing.Size(80, 64);
             this.pictureBox66.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox66.TabIndex = 101;
             this.pictureBox66.TabStop = false;
@@ -4078,9 +4220,10 @@ namespace SoG_SGreader
             // 
             this.pictureBox69.Image = global::SoG_SGreader.Properties.Resources.general_surgeon;
             this.pictureBox69.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox69.Location = new System.Drawing.Point(307, 18);
+            this.pictureBox69.Location = new System.Drawing.Point(460, 27);
+            this.pictureBox69.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox69.Name = "pictureBox69";
-            this.pictureBox69.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox69.Size = new System.Drawing.Size(80, 64);
             this.pictureBox69.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox69.TabIndex = 85;
             this.pictureBox69.TabStop = false;
@@ -4088,37 +4231,36 @@ namespace SoG_SGreader
             // 
             // numTalentGeneral11
             // 
-            this.numTalentGeneral11.Location = new System.Drawing.Point(247, 162);
-            this.numTalentGeneral11.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentGeneral11.Location = new System.Drawing.Point(370, 243);
             this.numTalentGeneral11.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentGeneral11.Name = "numTalentGeneral11";
-            this.numTalentGeneral11.Size = new System.Drawing.Size(53, 20);
+            this.numTalentGeneral11.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral11.TabIndex = 98;
             // 
             // numTalentGeneral4
             // 
-            this.numTalentGeneral4.Location = new System.Drawing.Point(247, 69);
-            this.numTalentGeneral4.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentGeneral4.Location = new System.Drawing.Point(370, 104);
             this.numTalentGeneral4.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentGeneral4.Name = "numTalentGeneral4";
-            this.numTalentGeneral4.Size = new System.Drawing.Size(53, 20);
+            this.numTalentGeneral4.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral4.TabIndex = 82;
             // 
             // pictureBox73
             // 
             this.pictureBox73.Image = global::SoG_SGreader.Properties.Resources.general_ladyluck;
             this.pictureBox73.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox73.Location = new System.Drawing.Point(247, 113);
+            this.pictureBox73.Location = new System.Drawing.Point(370, 170);
+            this.pictureBox73.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox73.Name = "pictureBox73";
-            this.pictureBox73.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox73.Size = new System.Drawing.Size(80, 64);
             this.pictureBox73.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox73.TabIndex = 99;
             this.pictureBox73.TabStop = false;
@@ -4128,9 +4270,10 @@ namespace SoG_SGreader
             // 
             this.pictureBox70.Image = global::SoG_SGreader.Properties.Resources.general_metabolism;
             this.pictureBox70.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox70.Location = new System.Drawing.Point(247, 18);
+            this.pictureBox70.Location = new System.Drawing.Point(370, 27);
+            this.pictureBox70.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox70.Name = "pictureBox70";
-            this.pictureBox70.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox70.Size = new System.Drawing.Size(80, 64);
             this.pictureBox70.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox70.TabIndex = 83;
             this.pictureBox70.TabStop = false;
@@ -4138,37 +4281,36 @@ namespace SoG_SGreader
             // 
             // numTalentGeneral10
             // 
-            this.numTalentGeneral10.Location = new System.Drawing.Point(187, 162);
-            this.numTalentGeneral10.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentGeneral10.Location = new System.Drawing.Point(280, 243);
             this.numTalentGeneral10.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentGeneral10.Name = "numTalentGeneral10";
-            this.numTalentGeneral10.Size = new System.Drawing.Size(53, 20);
+            this.numTalentGeneral10.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral10.TabIndex = 96;
             // 
             // numTalentGeneral3
             // 
-            this.numTalentGeneral3.Location = new System.Drawing.Point(187, 69);
-            this.numTalentGeneral3.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentGeneral3.Location = new System.Drawing.Point(280, 104);
             this.numTalentGeneral3.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentGeneral3.Name = "numTalentGeneral3";
-            this.numTalentGeneral3.Size = new System.Drawing.Size(53, 20);
+            this.numTalentGeneral3.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral3.TabIndex = 80;
             // 
             // pictureBox74
             // 
             this.pictureBox74.Image = global::SoG_SGreader.Properties.Resources.general_unknown;
             this.pictureBox74.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox74.Location = new System.Drawing.Point(187, 113);
+            this.pictureBox74.Location = new System.Drawing.Point(280, 170);
+            this.pictureBox74.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox74.Name = "pictureBox74";
-            this.pictureBox74.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox74.Size = new System.Drawing.Size(80, 64);
             this.pictureBox74.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox74.TabIndex = 97;
             this.pictureBox74.TabStop = false;
@@ -4178,9 +4320,10 @@ namespace SoG_SGreader
             // 
             this.pictureBox71.Image = global::SoG_SGreader.Properties.Resources.general_endurance;
             this.pictureBox71.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox71.Location = new System.Drawing.Point(187, 18);
+            this.pictureBox71.Location = new System.Drawing.Point(280, 27);
+            this.pictureBox71.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox71.Name = "pictureBox71";
-            this.pictureBox71.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox71.Size = new System.Drawing.Size(80, 64);
             this.pictureBox71.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox71.TabIndex = 81;
             this.pictureBox71.TabStop = false;
@@ -4188,37 +4331,36 @@ namespace SoG_SGreader
             // 
             // numTalentGeneral9
             // 
-            this.numTalentGeneral9.Location = new System.Drawing.Point(127, 162);
-            this.numTalentGeneral9.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentGeneral9.Location = new System.Drawing.Point(190, 243);
             this.numTalentGeneral9.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentGeneral9.Name = "numTalentGeneral9";
-            this.numTalentGeneral9.Size = new System.Drawing.Size(53, 20);
+            this.numTalentGeneral9.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral9.TabIndex = 94;
             // 
             // numTalentGeneral2
             // 
-            this.numTalentGeneral2.Location = new System.Drawing.Point(127, 69);
-            this.numTalentGeneral2.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentGeneral2.Location = new System.Drawing.Point(190, 104);
             this.numTalentGeneral2.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentGeneral2.Name = "numTalentGeneral2";
-            this.numTalentGeneral2.Size = new System.Drawing.Size(53, 20);
+            this.numTalentGeneral2.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral2.TabIndex = 78;
             // 
             // pictureBox76
             // 
             this.pictureBox76.Image = global::SoG_SGreader.Properties.Resources.general_laststand;
             this.pictureBox76.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox76.Location = new System.Drawing.Point(127, 113);
+            this.pictureBox76.Location = new System.Drawing.Point(190, 170);
+            this.pictureBox76.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox76.Name = "pictureBox76";
-            this.pictureBox76.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox76.Size = new System.Drawing.Size(80, 64);
             this.pictureBox76.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox76.TabIndex = 95;
             this.pictureBox76.TabStop = false;
@@ -4228,9 +4370,10 @@ namespace SoG_SGreader
             // 
             this.pictureBox64.Image = global::SoG_SGreader.Properties.Resources.general_healthinsurance;
             this.pictureBox64.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox64.Location = new System.Drawing.Point(127, 18);
+            this.pictureBox64.Location = new System.Drawing.Point(190, 27);
+            this.pictureBox64.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox64.Name = "pictureBox64";
-            this.pictureBox64.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox64.Size = new System.Drawing.Size(80, 64);
             this.pictureBox64.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox64.TabIndex = 79;
             this.pictureBox64.TabStop = false;
@@ -4238,37 +4381,36 @@ namespace SoG_SGreader
             // 
             // numTalentGeneral8
             // 
-            this.numTalentGeneral8.Location = new System.Drawing.Point(67, 162);
-            this.numTalentGeneral8.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentGeneral8.Location = new System.Drawing.Point(100, 243);
             this.numTalentGeneral8.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentGeneral8.Name = "numTalentGeneral8";
-            this.numTalentGeneral8.Size = new System.Drawing.Size(53, 20);
+            this.numTalentGeneral8.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral8.TabIndex = 92;
             // 
             // numTalentGeneral1
             // 
-            this.numTalentGeneral1.Location = new System.Drawing.Point(67, 69);
-            this.numTalentGeneral1.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentGeneral1.Location = new System.Drawing.Point(100, 104);
             this.numTalentGeneral1.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentGeneral1.Name = "numTalentGeneral1";
-            this.numTalentGeneral1.Size = new System.Drawing.Size(53, 20);
+            this.numTalentGeneral1.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral1.TabIndex = 76;
             // 
             // pictureBox77
             // 
             this.pictureBox77.Image = global::SoG_SGreader.Properties.Resources.general_gotyoucovered;
             this.pictureBox77.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox77.Location = new System.Drawing.Point(67, 113);
+            this.pictureBox77.Location = new System.Drawing.Point(100, 170);
+            this.pictureBox77.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox77.Name = "pictureBox77";
-            this.pictureBox77.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox77.Size = new System.Drawing.Size(80, 64);
             this.pictureBox77.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox77.TabIndex = 93;
             this.pictureBox77.TabStop = false;
@@ -4278,9 +4420,10 @@ namespace SoG_SGreader
             // 
             this.pictureBox63.Image = global::SoG_SGreader.Properties.Resources.general_tenacious;
             this.pictureBox63.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox63.Location = new System.Drawing.Point(67, 18);
+            this.pictureBox63.Location = new System.Drawing.Point(100, 27);
+            this.pictureBox63.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox63.Name = "pictureBox63";
-            this.pictureBox63.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox63.Size = new System.Drawing.Size(80, 64);
             this.pictureBox63.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox63.TabIndex = 77;
             this.pictureBox63.TabStop = false;
@@ -4288,37 +4431,36 @@ namespace SoG_SGreader
             // 
             // numTalentGeneral14
             // 
-            this.numTalentGeneral14.Location = new System.Drawing.Point(7, 247);
-            this.numTalentGeneral14.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentGeneral14.Location = new System.Drawing.Point(10, 370);
             this.numTalentGeneral14.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentGeneral14.Name = "numTalentGeneral14";
-            this.numTalentGeneral14.Size = new System.Drawing.Size(53, 20);
+            this.numTalentGeneral14.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral14.TabIndex = 72;
             // 
             // numTalentGeneral7
             // 
-            this.numTalentGeneral7.Location = new System.Drawing.Point(7, 162);
-            this.numTalentGeneral7.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentGeneral7.Location = new System.Drawing.Point(10, 243);
             this.numTalentGeneral7.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentGeneral7.Name = "numTalentGeneral7";
-            this.numTalentGeneral7.Size = new System.Drawing.Size(53, 20);
+            this.numTalentGeneral7.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral7.TabIndex = 71;
             // 
             // pictureBox67
             // 
             this.pictureBox67.Image = global::SoG_SGreader.Properties.Resources.general_multitask;
             this.pictureBox67.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox67.Location = new System.Drawing.Point(7, 198);
+            this.pictureBox67.Location = new System.Drawing.Point(10, 297);
+            this.pictureBox67.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox67.Name = "pictureBox67";
-            this.pictureBox67.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox67.Size = new System.Drawing.Size(80, 64);
             this.pictureBox67.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox67.TabIndex = 62;
             this.pictureBox67.TabStop = false;
@@ -4328,9 +4470,10 @@ namespace SoG_SGreader
             // 
             this.pictureBox68.Image = global::SoG_SGreader.Properties.Resources.general_utilityflow;
             this.pictureBox68.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox68.Location = new System.Drawing.Point(7, 113);
+            this.pictureBox68.Location = new System.Drawing.Point(10, 170);
+            this.pictureBox68.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox68.Name = "pictureBox68";
-            this.pictureBox68.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox68.Size = new System.Drawing.Size(80, 64);
             this.pictureBox68.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox68.TabIndex = 52;
             this.pictureBox68.TabStop = false;
@@ -4338,24 +4481,24 @@ namespace SoG_SGreader
             // 
             // numTalentGeneral0
             // 
-            this.numTalentGeneral0.Location = new System.Drawing.Point(7, 69);
-            this.numTalentGeneral0.Margin = new System.Windows.Forms.Padding(2);
+            this.numTalentGeneral0.Location = new System.Drawing.Point(10, 104);
             this.numTalentGeneral0.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.numTalentGeneral0.Name = "numTalentGeneral0";
-            this.numTalentGeneral0.Size = new System.Drawing.Size(53, 20);
+            this.numTalentGeneral0.Size = new System.Drawing.Size(80, 26);
             this.numTalentGeneral0.TabIndex = 41;
             // 
             // pictureBox75
             // 
             this.pictureBox75.Image = global::SoG_SGreader.Properties.Resources.general_adaptable;
             this.pictureBox75.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
-            this.pictureBox75.Location = new System.Drawing.Point(7, 18);
+            this.pictureBox75.Location = new System.Drawing.Point(10, 27);
+            this.pictureBox75.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox75.Name = "pictureBox75";
-            this.pictureBox75.Size = new System.Drawing.Size(53, 43);
+            this.pictureBox75.Size = new System.Drawing.Size(80, 64);
             this.pictureBox75.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox75.TabIndex = 42;
             this.pictureBox75.TabStop = false;
@@ -4363,15 +4506,34 @@ namespace SoG_SGreader
             // 
             // tabCards
             // 
+            this.tabCards.Controls.Add(this.dataGridCards);
             this.tabCards.Controls.Add(this.grpCards);
-            this.tabCards.Controls.Add(this.cblstCards);
-            this.tabCards.Location = new System.Drawing.Point(4, 40);
+            this.tabCards.Location = new System.Drawing.Point(4, 54);
+            this.tabCards.Margin = new System.Windows.Forms.Padding(4);
             this.tabCards.Name = "tabCards";
-            this.tabCards.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCards.Size = new System.Drawing.Size(559, 416);
+            this.tabCards.Padding = new System.Windows.Forms.Padding(4);
+            this.tabCards.Size = new System.Drawing.Size(842, 632);
             this.tabCards.TabIndex = 5;
             this.tabCards.Text = "Cards";
             this.tabCards.UseVisualStyleBackColor = true;
+            // 
+            // dataGridCards
+            // 
+            this.dataGridCards.AllowUserToAddRows = false;
+            this.dataGridCards.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dataGridCards.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridCards.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridCards.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dataGridCards.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCards.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dataGridCards.Location = new System.Drawing.Point(9, 9);
+            this.dataGridCards.Name = "dataGridCards";
+            this.dataGridCards.RowHeadersVisible = false;
+            this.dataGridCards.RowHeadersWidth = 62;
+            this.dataGridCards.RowTemplate.Height = 28;
+            this.dataGridCards.Size = new System.Drawing.Size(664, 613);
+            this.dataGridCards.TabIndex = 8;
             // 
             // grpCards
             // 
@@ -4381,9 +4543,11 @@ namespace SoG_SGreader
             this.grpCards.Controls.Add(this.btnSelectAllCards);
             this.grpCards.Controls.Add(this.btnResetCards);
             this.grpCards.Controls.Add(this.btnDeselectAllCards);
-            this.grpCards.Location = new System.Drawing.Point(454, 6);
+            this.grpCards.Location = new System.Drawing.Point(681, 9);
+            this.grpCards.Margin = new System.Windows.Forms.Padding(4);
             this.grpCards.Name = "grpCards";
-            this.grpCards.Size = new System.Drawing.Size(97, 403);
+            this.grpCards.Padding = new System.Windows.Forms.Padding(4);
+            this.grpCards.Size = new System.Drawing.Size(146, 629);
             this.grpCards.TabIndex = 6;
             this.grpCards.TabStop = false;
             this.grpCards.Text = "Cards";
@@ -4391,17 +4555,19 @@ namespace SoG_SGreader
             // lblCardsNullWarning
             // 
             this.lblCardsNullWarning.AutoSize = true;
-            this.lblCardsNullWarning.Location = new System.Drawing.Point(6, 76);
+            this.lblCardsNullWarning.Location = new System.Drawing.Point(9, 114);
+            this.lblCardsNullWarning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCardsNullWarning.Name = "lblCardsNullWarning";
-            this.lblCardsNullWarning.Size = new System.Drawing.Size(72, 52);
+            this.lblCardsNullWarning.Size = new System.Drawing.Size(106, 80);
             this.lblCardsNullWarning.TabIndex = 7;
             this.lblCardsNullWarning.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllCards
             // 
-            this.btnSelectAllCards.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllCards.Location = new System.Drawing.Point(9, 28);
+            this.btnSelectAllCards.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelectAllCards.Name = "btnSelectAllCards";
-            this.btnSelectAllCards.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllCards.Size = new System.Drawing.Size(130, 34);
             this.btnSelectAllCards.TabIndex = 3;
             this.btnSelectAllCards.Text = "Select all";
             this.btnSelectAllCards.UseVisualStyleBackColor = true;
@@ -4410,9 +4576,10 @@ namespace SoG_SGreader
             // btnResetCards
             // 
             this.btnResetCards.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetCards.Location = new System.Drawing.Point(6, 372);
+            this.btnResetCards.Location = new System.Drawing.Point(9, 583);
+            this.btnResetCards.Margin = new System.Windows.Forms.Padding(4);
             this.btnResetCards.Name = "btnResetCards";
-            this.btnResetCards.Size = new System.Drawing.Size(87, 23);
+            this.btnResetCards.Size = new System.Drawing.Size(130, 34);
             this.btnResetCards.TabIndex = 5;
             this.btnResetCards.Text = "Reset";
             this.btnResetCards.UseVisualStyleBackColor = true;
@@ -4420,33 +4587,24 @@ namespace SoG_SGreader
             // 
             // btnDeselectAllCards
             // 
-            this.btnDeselectAllCards.Location = new System.Drawing.Point(6, 49);
+            this.btnDeselectAllCards.Location = new System.Drawing.Point(9, 74);
+            this.btnDeselectAllCards.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeselectAllCards.Name = "btnDeselectAllCards";
-            this.btnDeselectAllCards.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllCards.Size = new System.Drawing.Size(130, 34);
             this.btnDeselectAllCards.TabIndex = 4;
             this.btnDeselectAllCards.Text = "Deselect all";
             this.btnDeselectAllCards.UseVisualStyleBackColor = true;
             this.btnDeselectAllCards.Click += new System.EventHandler(this.btnDeselectAllCards_Click);
             // 
-            // cblstCards
-            // 
-            this.cblstCards.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cblstCards.FormattingEnabled = true;
-            this.cblstCards.Location = new System.Drawing.Point(6, 6);
-            this.cblstCards.Name = "cblstCards";
-            this.cblstCards.Size = new System.Drawing.Size(442, 394);
-            this.cblstCards.TabIndex = 2;
-            // 
             // tabMaps
             // 
             this.tabMaps.Controls.Add(this.grpMaps);
             this.tabMaps.Controls.Add(this.cblstMaps);
-            this.tabMaps.Location = new System.Drawing.Point(4, 40);
+            this.tabMaps.Location = new System.Drawing.Point(4, 54);
+            this.tabMaps.Margin = new System.Windows.Forms.Padding(4);
             this.tabMaps.Name = "tabMaps";
-            this.tabMaps.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMaps.Size = new System.Drawing.Size(559, 416);
+            this.tabMaps.Padding = new System.Windows.Forms.Padding(4);
+            this.tabMaps.Size = new System.Drawing.Size(842, 632);
             this.tabMaps.TabIndex = 10;
             this.tabMaps.Text = "Maps";
             this.tabMaps.UseVisualStyleBackColor = true;
@@ -4459,9 +4617,11 @@ namespace SoG_SGreader
             this.grpMaps.Controls.Add(this.btnSelectAllMaps);
             this.grpMaps.Controls.Add(this.btnResetMaps);
             this.grpMaps.Controls.Add(this.btnDeselectAllMaps);
-            this.grpMaps.Location = new System.Drawing.Point(454, 6);
+            this.grpMaps.Location = new System.Drawing.Point(681, 9);
+            this.grpMaps.Margin = new System.Windows.Forms.Padding(4);
             this.grpMaps.Name = "grpMaps";
-            this.grpMaps.Size = new System.Drawing.Size(97, 403);
+            this.grpMaps.Padding = new System.Windows.Forms.Padding(4);
+            this.grpMaps.Size = new System.Drawing.Size(146, 604);
             this.grpMaps.TabIndex = 8;
             this.grpMaps.TabStop = false;
             this.grpMaps.Text = "Maps";
@@ -4469,17 +4629,19 @@ namespace SoG_SGreader
             // lblMapsNullWarning
             // 
             this.lblMapsNullWarning.AutoSize = true;
-            this.lblMapsNullWarning.Location = new System.Drawing.Point(6, 76);
+            this.lblMapsNullWarning.Location = new System.Drawing.Point(9, 114);
+            this.lblMapsNullWarning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMapsNullWarning.Name = "lblMapsNullWarning";
-            this.lblMapsNullWarning.Size = new System.Drawing.Size(72, 52);
+            this.lblMapsNullWarning.Size = new System.Drawing.Size(106, 80);
             this.lblMapsNullWarning.TabIndex = 8;
             this.lblMapsNullWarning.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllMaps
             // 
-            this.btnSelectAllMaps.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllMaps.Location = new System.Drawing.Point(9, 28);
+            this.btnSelectAllMaps.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelectAllMaps.Name = "btnSelectAllMaps";
-            this.btnSelectAllMaps.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllMaps.Size = new System.Drawing.Size(130, 34);
             this.btnSelectAllMaps.TabIndex = 3;
             this.btnSelectAllMaps.Text = "Select all";
             this.btnSelectAllMaps.UseVisualStyleBackColor = true;
@@ -4488,9 +4650,10 @@ namespace SoG_SGreader
             // btnResetMaps
             // 
             this.btnResetMaps.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetMaps.Location = new System.Drawing.Point(6, 372);
+            this.btnResetMaps.Location = new System.Drawing.Point(9, 558);
+            this.btnResetMaps.Margin = new System.Windows.Forms.Padding(4);
             this.btnResetMaps.Name = "btnResetMaps";
-            this.btnResetMaps.Size = new System.Drawing.Size(87, 23);
+            this.btnResetMaps.Size = new System.Drawing.Size(130, 34);
             this.btnResetMaps.TabIndex = 5;
             this.btnResetMaps.Text = "Reset";
             this.btnResetMaps.UseVisualStyleBackColor = true;
@@ -4498,9 +4661,10 @@ namespace SoG_SGreader
             // 
             // btnDeselectAllMaps
             // 
-            this.btnDeselectAllMaps.Location = new System.Drawing.Point(6, 49);
+            this.btnDeselectAllMaps.Location = new System.Drawing.Point(9, 74);
+            this.btnDeselectAllMaps.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeselectAllMaps.Name = "btnDeselectAllMaps";
-            this.btnDeselectAllMaps.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllMaps.Size = new System.Drawing.Size(130, 34);
             this.btnDeselectAllMaps.TabIndex = 4;
             this.btnDeselectAllMaps.Text = "Deselect all";
             this.btnDeselectAllMaps.UseVisualStyleBackColor = true;
@@ -4512,19 +4676,21 @@ namespace SoG_SGreader
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstMaps.FormattingEnabled = true;
-            this.cblstMaps.Location = new System.Drawing.Point(6, 6);
+            this.cblstMaps.Location = new System.Drawing.Point(9, 9);
+            this.cblstMaps.Margin = new System.Windows.Forms.Padding(4);
             this.cblstMaps.Name = "cblstMaps";
-            this.cblstMaps.Size = new System.Drawing.Size(442, 394);
+            this.cblstMaps.Size = new System.Drawing.Size(661, 579);
             this.cblstMaps.TabIndex = 7;
             // 
             // tabQuests
             // 
             this.tabQuests.Controls.Add(this.grpQuests);
             this.tabQuests.Controls.Add(this.cblstQuests);
-            this.tabQuests.Location = new System.Drawing.Point(4, 40);
+            this.tabQuests.Location = new System.Drawing.Point(4, 54);
+            this.tabQuests.Margin = new System.Windows.Forms.Padding(4);
             this.tabQuests.Name = "tabQuests";
-            this.tabQuests.Padding = new System.Windows.Forms.Padding(3);
-            this.tabQuests.Size = new System.Drawing.Size(559, 416);
+            this.tabQuests.Padding = new System.Windows.Forms.Padding(4);
+            this.tabQuests.Size = new System.Drawing.Size(842, 632);
             this.tabQuests.TabIndex = 9;
             this.tabQuests.Text = "Quests";
             this.tabQuests.UseVisualStyleBackColor = true;
@@ -4538,9 +4704,11 @@ namespace SoG_SGreader
             this.grpQuests.Controls.Add(this.btnSelectAllQuests);
             this.grpQuests.Controls.Add(this.btnResetQuests);
             this.grpQuests.Controls.Add(this.btnDeselectAllQuests);
-            this.grpQuests.Location = new System.Drawing.Point(454, 6);
+            this.grpQuests.Location = new System.Drawing.Point(681, 9);
+            this.grpQuests.Margin = new System.Windows.Forms.Padding(4);
             this.grpQuests.Name = "grpQuests";
-            this.grpQuests.Size = new System.Drawing.Size(97, 403);
+            this.grpQuests.Padding = new System.Windows.Forms.Padding(4);
+            this.grpQuests.Size = new System.Drawing.Size(146, 604);
             this.grpQuests.TabIndex = 8;
             this.grpQuests.TabStop = false;
             this.grpQuests.Text = "Quests";
@@ -4548,9 +4716,10 @@ namespace SoG_SGreader
             // lblQuestsChaningNoEffect
             // 
             this.lblQuestsChaningNoEffect.AutoSize = true;
-            this.lblQuestsChaningNoEffect.Location = new System.Drawing.Point(6, 191);
+            this.lblQuestsChaningNoEffect.Location = new System.Drawing.Point(9, 286);
+            this.lblQuestsChaningNoEffect.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQuestsChaningNoEffect.Name = "lblQuestsChaningNoEffect";
-            this.lblQuestsChaningNoEffect.Size = new System.Drawing.Size(88, 104);
+            this.lblQuestsChaningNoEffect.Size = new System.Drawing.Size(132, 160);
             this.lblQuestsChaningNoEffect.TabIndex = 10;
             this.lblQuestsChaningNoEffect.Text = "Changing Quests\r\nmay have no \r\neffect on your\r\ngame since\r\nthese are addi-\r\ntiona" +
     "lly saved\r\nin the World \r\nfiles.";
@@ -4558,17 +4727,19 @@ namespace SoG_SGreader
             // lblQuestsNullWarning
             // 
             this.lblQuestsNullWarning.AutoSize = true;
-            this.lblQuestsNullWarning.Location = new System.Drawing.Point(6, 76);
+            this.lblQuestsNullWarning.Location = new System.Drawing.Point(9, 114);
+            this.lblQuestsNullWarning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQuestsNullWarning.Name = "lblQuestsNullWarning";
-            this.lblQuestsNullWarning.Size = new System.Drawing.Size(72, 52);
+            this.lblQuestsNullWarning.Size = new System.Drawing.Size(106, 80);
             this.lblQuestsNullWarning.TabIndex = 8;
             this.lblQuestsNullWarning.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllQuests
             // 
-            this.btnSelectAllQuests.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllQuests.Location = new System.Drawing.Point(9, 28);
+            this.btnSelectAllQuests.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelectAllQuests.Name = "btnSelectAllQuests";
-            this.btnSelectAllQuests.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllQuests.Size = new System.Drawing.Size(130, 34);
             this.btnSelectAllQuests.TabIndex = 3;
             this.btnSelectAllQuests.Text = "Select all";
             this.btnSelectAllQuests.UseVisualStyleBackColor = true;
@@ -4577,9 +4748,10 @@ namespace SoG_SGreader
             // btnResetQuests
             // 
             this.btnResetQuests.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetQuests.Location = new System.Drawing.Point(6, 372);
+            this.btnResetQuests.Location = new System.Drawing.Point(9, 558);
+            this.btnResetQuests.Margin = new System.Windows.Forms.Padding(4);
             this.btnResetQuests.Name = "btnResetQuests";
-            this.btnResetQuests.Size = new System.Drawing.Size(87, 23);
+            this.btnResetQuests.Size = new System.Drawing.Size(130, 34);
             this.btnResetQuests.TabIndex = 5;
             this.btnResetQuests.Text = "Reset";
             this.btnResetQuests.UseVisualStyleBackColor = true;
@@ -4587,9 +4759,10 @@ namespace SoG_SGreader
             // 
             // btnDeselectAllQuests
             // 
-            this.btnDeselectAllQuests.Location = new System.Drawing.Point(6, 49);
+            this.btnDeselectAllQuests.Location = new System.Drawing.Point(9, 74);
+            this.btnDeselectAllQuests.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeselectAllQuests.Name = "btnDeselectAllQuests";
-            this.btnDeselectAllQuests.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllQuests.Size = new System.Drawing.Size(130, 34);
             this.btnDeselectAllQuests.TabIndex = 4;
             this.btnDeselectAllQuests.Text = "Deselect all";
             this.btnDeselectAllQuests.UseVisualStyleBackColor = true;
@@ -4601,9 +4774,10 @@ namespace SoG_SGreader
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstQuests.FormattingEnabled = true;
-            this.cblstQuests.Location = new System.Drawing.Point(6, 6);
+            this.cblstQuests.Location = new System.Drawing.Point(9, 9);
+            this.cblstQuests.Margin = new System.Windows.Forms.Padding(4);
             this.cblstQuests.Name = "cblstQuests";
-            this.cblstQuests.Size = new System.Drawing.Size(442, 394);
+            this.cblstQuests.Size = new System.Drawing.Size(661, 579);
             this.cblstQuests.TabIndex = 7;
             // 
             // tabFlags
@@ -4611,10 +4785,11 @@ namespace SoG_SGreader
             this.tabFlags.Controls.Add(this.cblstFlagsChecked);
             this.tabFlags.Controls.Add(this.grpFlags);
             this.tabFlags.Controls.Add(this.cblstFlags);
-            this.tabFlags.Location = new System.Drawing.Point(4, 40);
+            this.tabFlags.Location = new System.Drawing.Point(4, 54);
+            this.tabFlags.Margin = new System.Windows.Forms.Padding(4);
             this.tabFlags.Name = "tabFlags";
-            this.tabFlags.Padding = new System.Windows.Forms.Padding(3);
-            this.tabFlags.Size = new System.Drawing.Size(559, 416);
+            this.tabFlags.Padding = new System.Windows.Forms.Padding(4);
+            this.tabFlags.Size = new System.Drawing.Size(842, 632);
             this.tabFlags.TabIndex = 6;
             this.tabFlags.Text = "Flags";
             this.tabFlags.UseVisualStyleBackColor = true;
@@ -4624,10 +4799,11 @@ namespace SoG_SGreader
             this.cblstFlagsChecked.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstFlagsChecked.FormattingEnabled = true;
-            this.cblstFlagsChecked.Location = new System.Drawing.Point(6, 301);
+            this.cblstFlagsChecked.Location = new System.Drawing.Point(9, 452);
+            this.cblstFlagsChecked.Margin = new System.Windows.Forms.Padding(4);
             this.cblstFlagsChecked.Name = "cblstFlagsChecked";
             this.cblstFlagsChecked.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.cblstFlagsChecked.Size = new System.Drawing.Size(442, 109);
+            this.cblstFlagsChecked.Size = new System.Drawing.Size(661, 142);
             this.cblstFlagsChecked.TabIndex = 11;
             this.cblstFlagsChecked.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cblstFlagsChecked_ItemCheck);
             // 
@@ -4640,9 +4816,11 @@ namespace SoG_SGreader
             this.grpFlags.Controls.Add(this.btnSelectAllFlags);
             this.grpFlags.Controls.Add(this.btnResetFlags);
             this.grpFlags.Controls.Add(this.btnDeselectAllFlags);
-            this.grpFlags.Location = new System.Drawing.Point(454, 6);
+            this.grpFlags.Location = new System.Drawing.Point(681, 9);
+            this.grpFlags.Margin = new System.Windows.Forms.Padding(4);
             this.grpFlags.Name = "grpFlags";
-            this.grpFlags.Size = new System.Drawing.Size(97, 403);
+            this.grpFlags.Padding = new System.Windows.Forms.Padding(4);
+            this.grpFlags.Size = new System.Drawing.Size(146, 604);
             this.grpFlags.TabIndex = 10;
             this.grpFlags.TabStop = false;
             this.grpFlags.Text = "Flags";
@@ -4650,9 +4828,10 @@ namespace SoG_SGreader
             // lblFlagsChaningNoEffect
             // 
             this.lblFlagsChaningNoEffect.AutoSize = true;
-            this.lblFlagsChaningNoEffect.Location = new System.Drawing.Point(6, 191);
+            this.lblFlagsChaningNoEffect.Location = new System.Drawing.Point(9, 286);
+            this.lblFlagsChaningNoEffect.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFlagsChaningNoEffect.Name = "lblFlagsChaningNoEffect";
-            this.lblFlagsChaningNoEffect.Size = new System.Drawing.Size(80, 104);
+            this.lblFlagsChaningNoEffect.Size = new System.Drawing.Size(120, 160);
             this.lblFlagsChaningNoEffect.TabIndex = 9;
             this.lblFlagsChaningNoEffect.Text = "Changing Flags\r\nmay have no \r\neffect on your\r\ngame since\r\nthese are addi-\r\ntional" +
     "ly saved\r\nin the World \r\nfiles.";
@@ -4660,17 +4839,19 @@ namespace SoG_SGreader
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(6, 76);
+            this.label41.Location = new System.Drawing.Point(9, 114);
+            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(72, 52);
+            this.label41.Size = new System.Drawing.Size(106, 80);
             this.label41.TabIndex = 8;
             this.label41.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllFlags
             // 
-            this.btnSelectAllFlags.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllFlags.Location = new System.Drawing.Point(9, 28);
+            this.btnSelectAllFlags.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelectAllFlags.Name = "btnSelectAllFlags";
-            this.btnSelectAllFlags.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllFlags.Size = new System.Drawing.Size(130, 34);
             this.btnSelectAllFlags.TabIndex = 3;
             this.btnSelectAllFlags.Text = "Select all";
             this.btnSelectAllFlags.UseVisualStyleBackColor = true;
@@ -4679,9 +4860,10 @@ namespace SoG_SGreader
             // btnResetFlags
             // 
             this.btnResetFlags.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetFlags.Location = new System.Drawing.Point(6, 372);
+            this.btnResetFlags.Location = new System.Drawing.Point(9, 558);
+            this.btnResetFlags.Margin = new System.Windows.Forms.Padding(4);
             this.btnResetFlags.Name = "btnResetFlags";
-            this.btnResetFlags.Size = new System.Drawing.Size(87, 23);
+            this.btnResetFlags.Size = new System.Drawing.Size(130, 34);
             this.btnResetFlags.TabIndex = 5;
             this.btnResetFlags.Text = "Reset";
             this.btnResetFlags.UseVisualStyleBackColor = true;
@@ -4689,9 +4871,10 @@ namespace SoG_SGreader
             // 
             // btnDeselectAllFlags
             // 
-            this.btnDeselectAllFlags.Location = new System.Drawing.Point(6, 49);
+            this.btnDeselectAllFlags.Location = new System.Drawing.Point(9, 74);
+            this.btnDeselectAllFlags.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeselectAllFlags.Name = "btnDeselectAllFlags";
-            this.btnDeselectAllFlags.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllFlags.Size = new System.Drawing.Size(130, 34);
             this.btnDeselectAllFlags.TabIndex = 4;
             this.btnDeselectAllFlags.Text = "Deselect all";
             this.btnDeselectAllFlags.UseVisualStyleBackColor = true;
@@ -4703,9 +4886,10 @@ namespace SoG_SGreader
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstFlags.FormattingEnabled = true;
-            this.cblstFlags.Location = new System.Drawing.Point(6, 6);
+            this.cblstFlags.Location = new System.Drawing.Point(9, 9);
+            this.cblstFlags.Margin = new System.Windows.Forms.Padding(4);
             this.cblstFlags.Name = "cblstFlags";
-            this.cblstFlags.Size = new System.Drawing.Size(442, 289);
+            this.cblstFlags.Size = new System.Drawing.Size(661, 418);
             this.cblstFlags.TabIndex = 9;
             this.cblstFlags.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.cblstFlags_ItemCheck);
             // 
@@ -4713,9 +4897,10 @@ namespace SoG_SGreader
             // 
             this.tabTrophies.Controls.Add(this.grpTrophies);
             this.tabTrophies.Controls.Add(this.cblstTrophies);
-            this.tabTrophies.Location = new System.Drawing.Point(4, 40);
+            this.tabTrophies.Location = new System.Drawing.Point(4, 54);
+            this.tabTrophies.Margin = new System.Windows.Forms.Padding(4);
             this.tabTrophies.Name = "tabTrophies";
-            this.tabTrophies.Size = new System.Drawing.Size(559, 416);
+            this.tabTrophies.Size = new System.Drawing.Size(842, 632);
             this.tabTrophies.TabIndex = 11;
             this.tabTrophies.Text = "Trophies";
             this.tabTrophies.UseVisualStyleBackColor = true;
@@ -4728,9 +4913,11 @@ namespace SoG_SGreader
             this.grpTrophies.Controls.Add(this.btnSelectAllTrophies);
             this.grpTrophies.Controls.Add(this.btnResetTrophies);
             this.grpTrophies.Controls.Add(this.btnDeselectAllTrophies);
-            this.grpTrophies.Location = new System.Drawing.Point(454, 6);
+            this.grpTrophies.Location = new System.Drawing.Point(681, 9);
+            this.grpTrophies.Margin = new System.Windows.Forms.Padding(4);
             this.grpTrophies.Name = "grpTrophies";
-            this.grpTrophies.Size = new System.Drawing.Size(97, 403);
+            this.grpTrophies.Padding = new System.Windows.Forms.Padding(4);
+            this.grpTrophies.Size = new System.Drawing.Size(146, 604);
             this.grpTrophies.TabIndex = 12;
             this.grpTrophies.TabStop = false;
             this.grpTrophies.Text = "Trophies";
@@ -4738,17 +4925,19 @@ namespace SoG_SGreader
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(6, 76);
+            this.label59.Location = new System.Drawing.Point(9, 114);
+            this.label59.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(72, 52);
+            this.label59.Size = new System.Drawing.Size(106, 80);
             this.label59.TabIndex = 8;
             this.label59.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllTrophies
             // 
-            this.btnSelectAllTrophies.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllTrophies.Location = new System.Drawing.Point(9, 28);
+            this.btnSelectAllTrophies.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelectAllTrophies.Name = "btnSelectAllTrophies";
-            this.btnSelectAllTrophies.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllTrophies.Size = new System.Drawing.Size(130, 34);
             this.btnSelectAllTrophies.TabIndex = 3;
             this.btnSelectAllTrophies.Text = "Select all";
             this.btnSelectAllTrophies.UseVisualStyleBackColor = true;
@@ -4757,9 +4946,10 @@ namespace SoG_SGreader
             // btnResetTrophies
             // 
             this.btnResetTrophies.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetTrophies.Location = new System.Drawing.Point(6, 372);
+            this.btnResetTrophies.Location = new System.Drawing.Point(9, 558);
+            this.btnResetTrophies.Margin = new System.Windows.Forms.Padding(4);
             this.btnResetTrophies.Name = "btnResetTrophies";
-            this.btnResetTrophies.Size = new System.Drawing.Size(87, 23);
+            this.btnResetTrophies.Size = new System.Drawing.Size(130, 34);
             this.btnResetTrophies.TabIndex = 5;
             this.btnResetTrophies.Text = "Reset";
             this.btnResetTrophies.UseVisualStyleBackColor = true;
@@ -4767,9 +4957,10 @@ namespace SoG_SGreader
             // 
             // btnDeselectAllTrophies
             // 
-            this.btnDeselectAllTrophies.Location = new System.Drawing.Point(6, 49);
+            this.btnDeselectAllTrophies.Location = new System.Drawing.Point(9, 74);
+            this.btnDeselectAllTrophies.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeselectAllTrophies.Name = "btnDeselectAllTrophies";
-            this.btnDeselectAllTrophies.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllTrophies.Size = new System.Drawing.Size(130, 34);
             this.btnDeselectAllTrophies.TabIndex = 4;
             this.btnDeselectAllTrophies.Text = "Deselect all";
             this.btnDeselectAllTrophies.UseVisualStyleBackColor = true;
@@ -4781,18 +4972,20 @@ namespace SoG_SGreader
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstTrophies.FormattingEnabled = true;
-            this.cblstTrophies.Location = new System.Drawing.Point(6, 6);
+            this.cblstTrophies.Location = new System.Drawing.Point(9, 9);
+            this.cblstTrophies.Margin = new System.Windows.Forms.Padding(4);
             this.cblstTrophies.Name = "cblstTrophies";
-            this.cblstTrophies.Size = new System.Drawing.Size(442, 394);
+            this.cblstTrophies.Size = new System.Drawing.Size(661, 579);
             this.cblstTrophies.TabIndex = 11;
             // 
             // tabFishCaught
             // 
             this.tabFishCaught.Controls.Add(this.groupBox2);
             this.tabFishCaught.Controls.Add(this.cblstFishCaught);
-            this.tabFishCaught.Location = new System.Drawing.Point(4, 40);
+            this.tabFishCaught.Location = new System.Drawing.Point(4, 54);
+            this.tabFishCaught.Margin = new System.Windows.Forms.Padding(4);
             this.tabFishCaught.Name = "tabFishCaught";
-            this.tabFishCaught.Size = new System.Drawing.Size(559, 416);
+            this.tabFishCaught.Size = new System.Drawing.Size(842, 632);
             this.tabFishCaught.TabIndex = 14;
             this.tabFishCaught.Text = "Fish Caught";
             this.tabFishCaught.UseVisualStyleBackColor = true;
@@ -4805,9 +4998,11 @@ namespace SoG_SGreader
             this.groupBox2.Controls.Add(this.btnSelectAllFishCaught);
             this.groupBox2.Controls.Add(this.btnResetFishCaught);
             this.groupBox2.Controls.Add(this.btnDeselectAllFishCaught);
-            this.groupBox2.Location = new System.Drawing.Point(454, 6);
+            this.groupBox2.Location = new System.Drawing.Point(681, 9);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(97, 403);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(146, 604);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Fish Caught";
@@ -4815,17 +5010,19 @@ namespace SoG_SGreader
             // lblFishNullWarning
             // 
             this.lblFishNullWarning.AutoSize = true;
-            this.lblFishNullWarning.Location = new System.Drawing.Point(6, 76);
+            this.lblFishNullWarning.Location = new System.Drawing.Point(9, 114);
+            this.lblFishNullWarning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFishNullWarning.Name = "lblFishNullWarning";
-            this.lblFishNullWarning.Size = new System.Drawing.Size(72, 52);
+            this.lblFishNullWarning.Size = new System.Drawing.Size(106, 80);
             this.lblFishNullWarning.TabIndex = 8;
             this.lblFishNullWarning.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllFishCaught
             // 
-            this.btnSelectAllFishCaught.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllFishCaught.Location = new System.Drawing.Point(9, 28);
+            this.btnSelectAllFishCaught.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelectAllFishCaught.Name = "btnSelectAllFishCaught";
-            this.btnSelectAllFishCaught.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllFishCaught.Size = new System.Drawing.Size(130, 34);
             this.btnSelectAllFishCaught.TabIndex = 3;
             this.btnSelectAllFishCaught.Text = "Select all";
             this.btnSelectAllFishCaught.UseVisualStyleBackColor = true;
@@ -4834,9 +5031,10 @@ namespace SoG_SGreader
             // btnResetFishCaught
             // 
             this.btnResetFishCaught.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetFishCaught.Location = new System.Drawing.Point(6, 372);
+            this.btnResetFishCaught.Location = new System.Drawing.Point(9, 558);
+            this.btnResetFishCaught.Margin = new System.Windows.Forms.Padding(4);
             this.btnResetFishCaught.Name = "btnResetFishCaught";
-            this.btnResetFishCaught.Size = new System.Drawing.Size(87, 23);
+            this.btnResetFishCaught.Size = new System.Drawing.Size(130, 34);
             this.btnResetFishCaught.TabIndex = 5;
             this.btnResetFishCaught.Text = "Reset";
             this.btnResetFishCaught.UseVisualStyleBackColor = true;
@@ -4844,9 +5042,10 @@ namespace SoG_SGreader
             // 
             // btnDeselectAllFishCaught
             // 
-            this.btnDeselectAllFishCaught.Location = new System.Drawing.Point(6, 49);
+            this.btnDeselectAllFishCaught.Location = new System.Drawing.Point(9, 74);
+            this.btnDeselectAllFishCaught.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeselectAllFishCaught.Name = "btnDeselectAllFishCaught";
-            this.btnDeselectAllFishCaught.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllFishCaught.Size = new System.Drawing.Size(130, 34);
             this.btnDeselectAllFishCaught.TabIndex = 4;
             this.btnDeselectAllFishCaught.Text = "Deselect all";
             this.btnDeselectAllFishCaught.UseVisualStyleBackColor = true;
@@ -4858,19 +5057,21 @@ namespace SoG_SGreader
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstFishCaught.FormattingEnabled = true;
-            this.cblstFishCaught.Location = new System.Drawing.Point(6, 6);
+            this.cblstFishCaught.Location = new System.Drawing.Point(9, 9);
+            this.cblstFishCaught.Margin = new System.Windows.Forms.Padding(4);
             this.cblstFishCaught.Name = "cblstFishCaught";
-            this.cblstFishCaught.Size = new System.Drawing.Size(442, 394);
+            this.cblstFishCaught.Size = new System.Drawing.Size(661, 579);
             this.cblstFishCaught.TabIndex = 17;
             // 
             // tabEnemiesSeen
             // 
             this.tabEnemiesSeen.Controls.Add(this.grpEnemiesSeen);
             this.tabEnemiesSeen.Controls.Add(this.cblstEnemiesSeens);
-            this.tabEnemiesSeen.Location = new System.Drawing.Point(4, 40);
+            this.tabEnemiesSeen.Location = new System.Drawing.Point(4, 54);
+            this.tabEnemiesSeen.Margin = new System.Windows.Forms.Padding(4);
             this.tabEnemiesSeen.Name = "tabEnemiesSeen";
-            this.tabEnemiesSeen.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEnemiesSeen.Size = new System.Drawing.Size(559, 416);
+            this.tabEnemiesSeen.Padding = new System.Windows.Forms.Padding(4);
+            this.tabEnemiesSeen.Size = new System.Drawing.Size(842, 632);
             this.tabEnemiesSeen.TabIndex = 4;
             this.tabEnemiesSeen.Text = "Enemies seen";
             this.tabEnemiesSeen.UseVisualStyleBackColor = true;
@@ -4883,9 +5084,11 @@ namespace SoG_SGreader
             this.grpEnemiesSeen.Controls.Add(this.btnSelectAllEnemiesSeen);
             this.grpEnemiesSeen.Controls.Add(this.btnResetEnemiesSeen);
             this.grpEnemiesSeen.Controls.Add(this.btnDeselectAllEnemiesSeen);
-            this.grpEnemiesSeen.Location = new System.Drawing.Point(454, 6);
+            this.grpEnemiesSeen.Location = new System.Drawing.Point(681, 9);
+            this.grpEnemiesSeen.Margin = new System.Windows.Forms.Padding(4);
             this.grpEnemiesSeen.Name = "grpEnemiesSeen";
-            this.grpEnemiesSeen.Size = new System.Drawing.Size(97, 403);
+            this.grpEnemiesSeen.Padding = new System.Windows.Forms.Padding(4);
+            this.grpEnemiesSeen.Size = new System.Drawing.Size(146, 604);
             this.grpEnemiesSeen.TabIndex = 10;
             this.grpEnemiesSeen.TabStop = false;
             this.grpEnemiesSeen.Text = "Enemies seen";
@@ -4893,17 +5096,19 @@ namespace SoG_SGreader
             // lblEnemiesSeenNullWarning
             // 
             this.lblEnemiesSeenNullWarning.AutoSize = true;
-            this.lblEnemiesSeenNullWarning.Location = new System.Drawing.Point(6, 76);
+            this.lblEnemiesSeenNullWarning.Location = new System.Drawing.Point(9, 114);
+            this.lblEnemiesSeenNullWarning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEnemiesSeenNullWarning.Name = "lblEnemiesSeenNullWarning";
-            this.lblEnemiesSeenNullWarning.Size = new System.Drawing.Size(72, 52);
+            this.lblEnemiesSeenNullWarning.Size = new System.Drawing.Size(106, 80);
             this.lblEnemiesSeenNullWarning.TabIndex = 8;
             this.lblEnemiesSeenNullWarning.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllEnemiesSeen
             // 
-            this.btnSelectAllEnemiesSeen.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllEnemiesSeen.Location = new System.Drawing.Point(9, 28);
+            this.btnSelectAllEnemiesSeen.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelectAllEnemiesSeen.Name = "btnSelectAllEnemiesSeen";
-            this.btnSelectAllEnemiesSeen.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllEnemiesSeen.Size = new System.Drawing.Size(130, 34);
             this.btnSelectAllEnemiesSeen.TabIndex = 3;
             this.btnSelectAllEnemiesSeen.Text = "Select all";
             this.btnSelectAllEnemiesSeen.UseVisualStyleBackColor = true;
@@ -4912,9 +5117,10 @@ namespace SoG_SGreader
             // btnResetEnemiesSeen
             // 
             this.btnResetEnemiesSeen.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetEnemiesSeen.Location = new System.Drawing.Point(6, 372);
+            this.btnResetEnemiesSeen.Location = new System.Drawing.Point(9, 558);
+            this.btnResetEnemiesSeen.Margin = new System.Windows.Forms.Padding(4);
             this.btnResetEnemiesSeen.Name = "btnResetEnemiesSeen";
-            this.btnResetEnemiesSeen.Size = new System.Drawing.Size(87, 23);
+            this.btnResetEnemiesSeen.Size = new System.Drawing.Size(130, 34);
             this.btnResetEnemiesSeen.TabIndex = 5;
             this.btnResetEnemiesSeen.Text = "Reset";
             this.btnResetEnemiesSeen.UseVisualStyleBackColor = true;
@@ -4922,9 +5128,10 @@ namespace SoG_SGreader
             // 
             // btnDeselectAllEnemiesSeen
             // 
-            this.btnDeselectAllEnemiesSeen.Location = new System.Drawing.Point(6, 49);
+            this.btnDeselectAllEnemiesSeen.Location = new System.Drawing.Point(9, 74);
+            this.btnDeselectAllEnemiesSeen.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeselectAllEnemiesSeen.Name = "btnDeselectAllEnemiesSeen";
-            this.btnDeselectAllEnemiesSeen.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllEnemiesSeen.Size = new System.Drawing.Size(130, 34);
             this.btnDeselectAllEnemiesSeen.TabIndex = 4;
             this.btnDeselectAllEnemiesSeen.Text = "Deselect all";
             this.btnDeselectAllEnemiesSeen.UseVisualStyleBackColor = true;
@@ -4936,9 +5143,10 @@ namespace SoG_SGreader
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstEnemiesSeens.FormattingEnabled = true;
-            this.cblstEnemiesSeens.Location = new System.Drawing.Point(6, 6);
+            this.cblstEnemiesSeens.Location = new System.Drawing.Point(9, 9);
+            this.cblstEnemiesSeens.Margin = new System.Windows.Forms.Padding(4);
             this.cblstEnemiesSeens.Name = "cblstEnemiesSeens";
-            this.cblstEnemiesSeens.Size = new System.Drawing.Size(442, 394);
+            this.cblstEnemiesSeens.Size = new System.Drawing.Size(661, 579);
             this.cblstEnemiesSeens.TabIndex = 9;
             // 
             // tabEnemiesKilled
@@ -4946,10 +5154,11 @@ namespace SoG_SGreader
             this.tabEnemiesKilled.Controls.Add(this.label3);
             this.tabEnemiesKilled.Controls.Add(this.groupBox6);
             this.tabEnemiesKilled.Controls.Add(this.lstEnemiesKilled);
-            this.tabEnemiesKilled.Location = new System.Drawing.Point(4, 40);
+            this.tabEnemiesKilled.Location = new System.Drawing.Point(4, 54);
+            this.tabEnemiesKilled.Margin = new System.Windows.Forms.Padding(4);
             this.tabEnemiesKilled.Name = "tabEnemiesKilled";
-            this.tabEnemiesKilled.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEnemiesKilled.Size = new System.Drawing.Size(559, 416);
+            this.tabEnemiesKilled.Padding = new System.Windows.Forms.Padding(4);
+            this.tabEnemiesKilled.Size = new System.Drawing.Size(842, 632);
             this.tabEnemiesKilled.TabIndex = 15;
             this.tabEnemiesKilled.Text = "*Enemies Killed";
             this.tabEnemiesKilled.UseVisualStyleBackColor = true;
@@ -4957,9 +5166,10 @@ namespace SoG_SGreader
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(331, 390);
+            this.label3.Location = new System.Drawing.Point(496, 585);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 13);
+            this.label3.Size = new System.Drawing.Size(129, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "* Not editable yet";
             // 
@@ -4972,27 +5182,31 @@ namespace SoG_SGreader
             this.groupBox6.Controls.Add(this.numericUpDown1);
             this.groupBox6.Controls.Add(this.comboBox1);
             this.groupBox6.Enabled = false;
-            this.groupBox6.Location = new System.Drawing.Point(6, 335);
+            this.groupBox6.Location = new System.Drawing.Point(9, 502);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(319, 76);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox6.Size = new System.Drawing.Size(478, 114);
             this.groupBox6.TabIndex = 2;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Enemy";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(253, 44);
+            this.button1.Location = new System.Drawing.Point(380, 66);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 23);
+            this.button1.Size = new System.Drawing.Size(90, 34);
             this.button1.TabIndex = 2;
             this.button1.Text = "Remove";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(253, 17);
+            this.button2.Location = new System.Drawing.Point(380, 26);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 23);
+            this.button2.Size = new System.Drawing.Size(90, 34);
             this.button2.TabIndex = 2;
             this.button2.Text = "Add";
             this.Tooltips.SetToolTip(this.button2, "Some Items COULD potentially break your game");
@@ -5001,22 +5215,24 @@ namespace SoG_SGreader
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(132, 49);
+            this.label2.Location = new System.Drawing.Point(198, 74);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(56, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Count:";
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(176, 47);
+            this.numericUpDown1.Location = new System.Drawing.Point(264, 70);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(71, 20);
+            this.numericUpDown1.Size = new System.Drawing.Size(106, 26);
             this.numericUpDown1.TabIndex = 1;
             // 
             // comboBox1
@@ -5024,9 +5240,10 @@ namespace SoG_SGreader
             this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 19);
+            this.comboBox1.Location = new System.Drawing.Point(9, 28);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(241, 21);
+            this.comboBox1.Size = new System.Drawing.Size(360, 28);
             this.comboBox1.TabIndex = 0;
             // 
             // lstEnemiesKilled
@@ -5042,10 +5259,11 @@ namespace SoG_SGreader
             this.lstEnemiesKilled.HideSelection = false;
             this.lstEnemiesKilled.LabelEdit = true;
             this.lstEnemiesKilled.LabelWrap = false;
-            this.lstEnemiesKilled.Location = new System.Drawing.Point(6, 6);
+            this.lstEnemiesKilled.Location = new System.Drawing.Point(9, 9);
+            this.lstEnemiesKilled.Margin = new System.Windows.Forms.Padding(4);
             this.lstEnemiesKilled.MultiSelect = false;
             this.lstEnemiesKilled.Name = "lstEnemiesKilled";
-            this.lstEnemiesKilled.Size = new System.Drawing.Size(544, 321);
+            this.lstEnemiesKilled.Size = new System.Drawing.Size(814, 480);
             this.lstEnemiesKilled.TabIndex = 1;
             this.lstEnemiesKilled.UseCompatibleStateImageBehavior = false;
             this.lstEnemiesKilled.View = System.Windows.Forms.View.Details;
@@ -5064,9 +5282,10 @@ namespace SoG_SGreader
             // 
             this.tabItemsSeen.Controls.Add(this.grpItemsSeen);
             this.tabItemsSeen.Controls.Add(this.cblstItemsSeen);
-            this.tabItemsSeen.Location = new System.Drawing.Point(4, 40);
+            this.tabItemsSeen.Location = new System.Drawing.Point(4, 54);
+            this.tabItemsSeen.Margin = new System.Windows.Forms.Padding(4);
             this.tabItemsSeen.Name = "tabItemsSeen";
-            this.tabItemsSeen.Size = new System.Drawing.Size(559, 416);
+            this.tabItemsSeen.Size = new System.Drawing.Size(842, 632);
             this.tabItemsSeen.TabIndex = 12;
             this.tabItemsSeen.Text = "Items Seen";
             this.tabItemsSeen.UseVisualStyleBackColor = true;
@@ -5079,9 +5298,11 @@ namespace SoG_SGreader
             this.grpItemsSeen.Controls.Add(this.btnSelectAllItemsSeen);
             this.grpItemsSeen.Controls.Add(this.btnResetItemsSeen);
             this.grpItemsSeen.Controls.Add(this.btnDeselectAllItemsSeen);
-            this.grpItemsSeen.Location = new System.Drawing.Point(454, 6);
+            this.grpItemsSeen.Location = new System.Drawing.Point(681, 9);
+            this.grpItemsSeen.Margin = new System.Windows.Forms.Padding(4);
             this.grpItemsSeen.Name = "grpItemsSeen";
-            this.grpItemsSeen.Size = new System.Drawing.Size(97, 403);
+            this.grpItemsSeen.Padding = new System.Windows.Forms.Padding(4);
+            this.grpItemsSeen.Size = new System.Drawing.Size(146, 604);
             this.grpItemsSeen.TabIndex = 14;
             this.grpItemsSeen.TabStop = false;
             this.grpItemsSeen.Text = "Items Seen";
@@ -5089,17 +5310,19 @@ namespace SoG_SGreader
             // lblItemsSeenNullWarning
             // 
             this.lblItemsSeenNullWarning.AutoSize = true;
-            this.lblItemsSeenNullWarning.Location = new System.Drawing.Point(6, 76);
+            this.lblItemsSeenNullWarning.Location = new System.Drawing.Point(9, 114);
+            this.lblItemsSeenNullWarning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblItemsSeenNullWarning.Name = "lblItemsSeenNullWarning";
-            this.lblItemsSeenNullWarning.Size = new System.Drawing.Size(72, 52);
+            this.lblItemsSeenNullWarning.Size = new System.Drawing.Size(106, 80);
             this.lblItemsSeenNullWarning.TabIndex = 8;
             this.lblItemsSeenNullWarning.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllItemsSeen
             // 
-            this.btnSelectAllItemsSeen.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllItemsSeen.Location = new System.Drawing.Point(9, 28);
+            this.btnSelectAllItemsSeen.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelectAllItemsSeen.Name = "btnSelectAllItemsSeen";
-            this.btnSelectAllItemsSeen.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllItemsSeen.Size = new System.Drawing.Size(130, 34);
             this.btnSelectAllItemsSeen.TabIndex = 3;
             this.btnSelectAllItemsSeen.Text = "Select all";
             this.btnSelectAllItemsSeen.UseVisualStyleBackColor = true;
@@ -5108,9 +5331,10 @@ namespace SoG_SGreader
             // btnResetItemsSeen
             // 
             this.btnResetItemsSeen.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetItemsSeen.Location = new System.Drawing.Point(6, 372);
+            this.btnResetItemsSeen.Location = new System.Drawing.Point(9, 558);
+            this.btnResetItemsSeen.Margin = new System.Windows.Forms.Padding(4);
             this.btnResetItemsSeen.Name = "btnResetItemsSeen";
-            this.btnResetItemsSeen.Size = new System.Drawing.Size(87, 23);
+            this.btnResetItemsSeen.Size = new System.Drawing.Size(130, 34);
             this.btnResetItemsSeen.TabIndex = 5;
             this.btnResetItemsSeen.Text = "Reset";
             this.btnResetItemsSeen.UseVisualStyleBackColor = true;
@@ -5118,9 +5342,10 @@ namespace SoG_SGreader
             // 
             // btnDeselectAllItemsSeen
             // 
-            this.btnDeselectAllItemsSeen.Location = new System.Drawing.Point(6, 49);
+            this.btnDeselectAllItemsSeen.Location = new System.Drawing.Point(9, 74);
+            this.btnDeselectAllItemsSeen.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeselectAllItemsSeen.Name = "btnDeselectAllItemsSeen";
-            this.btnDeselectAllItemsSeen.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllItemsSeen.Size = new System.Drawing.Size(130, 34);
             this.btnDeselectAllItemsSeen.TabIndex = 4;
             this.btnDeselectAllItemsSeen.Text = "Deselect all";
             this.btnDeselectAllItemsSeen.UseVisualStyleBackColor = true;
@@ -5132,18 +5357,20 @@ namespace SoG_SGreader
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstItemsSeen.FormattingEnabled = true;
-            this.cblstItemsSeen.Location = new System.Drawing.Point(6, 6);
+            this.cblstItemsSeen.Location = new System.Drawing.Point(9, 9);
+            this.cblstItemsSeen.Margin = new System.Windows.Forms.Padding(4);
             this.cblstItemsSeen.Name = "cblstItemsSeen";
-            this.cblstItemsSeen.Size = new System.Drawing.Size(442, 394);
+            this.cblstItemsSeen.Size = new System.Drawing.Size(661, 579);
             this.cblstItemsSeen.TabIndex = 13;
             // 
             // tabItemsCrafted
             // 
             this.tabItemsCrafted.Controls.Add(this.groupBox1);
             this.tabItemsCrafted.Controls.Add(this.cblstItemsCrafted);
-            this.tabItemsCrafted.Location = new System.Drawing.Point(4, 40);
+            this.tabItemsCrafted.Location = new System.Drawing.Point(4, 54);
+            this.tabItemsCrafted.Margin = new System.Windows.Forms.Padding(4);
             this.tabItemsCrafted.Name = "tabItemsCrafted";
-            this.tabItemsCrafted.Size = new System.Drawing.Size(559, 416);
+            this.tabItemsCrafted.Size = new System.Drawing.Size(842, 632);
             this.tabItemsCrafted.TabIndex = 13;
             this.tabItemsCrafted.Text = "Items Crafted";
             this.tabItemsCrafted.UseVisualStyleBackColor = true;
@@ -5156,9 +5383,11 @@ namespace SoG_SGreader
             this.groupBox1.Controls.Add(this.btnSelectAllItemsCrafted);
             this.groupBox1.Controls.Add(this.btnResetItemsCrafted);
             this.groupBox1.Controls.Add(this.btnDeselectAllItemsCrafted);
-            this.groupBox1.Location = new System.Drawing.Point(454, 6);
+            this.groupBox1.Location = new System.Drawing.Point(681, 9);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(97, 403);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(146, 604);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Items Crafted";
@@ -5166,17 +5395,19 @@ namespace SoG_SGreader
             // lblItemsCraftedNullWarning
             // 
             this.lblItemsCraftedNullWarning.AutoSize = true;
-            this.lblItemsCraftedNullWarning.Location = new System.Drawing.Point(6, 76);
+            this.lblItemsCraftedNullWarning.Location = new System.Drawing.Point(9, 114);
+            this.lblItemsCraftedNullWarning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblItemsCraftedNullWarning.Name = "lblItemsCraftedNullWarning";
-            this.lblItemsCraftedNullWarning.Size = new System.Drawing.Size(72, 52);
+            this.lblItemsCraftedNullWarning.Size = new System.Drawing.Size(106, 80);
             this.lblItemsCraftedNullWarning.TabIndex = 8;
             this.lblItemsCraftedNullWarning.Text = "Selecting the \r\n\'null\'-Value \r\ncould lead \r\nto issues";
             // 
             // btnSelectAllItemsCrafted
             // 
-            this.btnSelectAllItemsCrafted.Location = new System.Drawing.Point(6, 19);
+            this.btnSelectAllItemsCrafted.Location = new System.Drawing.Point(9, 28);
+            this.btnSelectAllItemsCrafted.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelectAllItemsCrafted.Name = "btnSelectAllItemsCrafted";
-            this.btnSelectAllItemsCrafted.Size = new System.Drawing.Size(87, 23);
+            this.btnSelectAllItemsCrafted.Size = new System.Drawing.Size(130, 34);
             this.btnSelectAllItemsCrafted.TabIndex = 3;
             this.btnSelectAllItemsCrafted.Text = "Select all";
             this.btnSelectAllItemsCrafted.UseVisualStyleBackColor = true;
@@ -5185,9 +5416,10 @@ namespace SoG_SGreader
             // btnResetItemsCrafted
             // 
             this.btnResetItemsCrafted.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnResetItemsCrafted.Location = new System.Drawing.Point(6, 372);
+            this.btnResetItemsCrafted.Location = new System.Drawing.Point(9, 558);
+            this.btnResetItemsCrafted.Margin = new System.Windows.Forms.Padding(4);
             this.btnResetItemsCrafted.Name = "btnResetItemsCrafted";
-            this.btnResetItemsCrafted.Size = new System.Drawing.Size(87, 23);
+            this.btnResetItemsCrafted.Size = new System.Drawing.Size(130, 34);
             this.btnResetItemsCrafted.TabIndex = 5;
             this.btnResetItemsCrafted.Text = "Reset";
             this.btnResetItemsCrafted.UseVisualStyleBackColor = true;
@@ -5195,9 +5427,10 @@ namespace SoG_SGreader
             // 
             // btnDeselectAllItemsCrafted
             // 
-            this.btnDeselectAllItemsCrafted.Location = new System.Drawing.Point(6, 49);
+            this.btnDeselectAllItemsCrafted.Location = new System.Drawing.Point(9, 74);
+            this.btnDeselectAllItemsCrafted.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeselectAllItemsCrafted.Name = "btnDeselectAllItemsCrafted";
-            this.btnDeselectAllItemsCrafted.Size = new System.Drawing.Size(87, 23);
+            this.btnDeselectAllItemsCrafted.Size = new System.Drawing.Size(130, 34);
             this.btnDeselectAllItemsCrafted.TabIndex = 4;
             this.btnDeselectAllItemsCrafted.Text = "Deselect all";
             this.btnDeselectAllItemsCrafted.UseVisualStyleBackColor = true;
@@ -5209,19 +5442,21 @@ namespace SoG_SGreader
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cblstItemsCrafted.FormattingEnabled = true;
-            this.cblstItemsCrafted.Location = new System.Drawing.Point(6, 6);
+            this.cblstItemsCrafted.Location = new System.Drawing.Point(9, 9);
+            this.cblstItemsCrafted.Margin = new System.Windows.Forms.Padding(4);
             this.cblstItemsCrafted.Name = "cblstItemsCrafted";
-            this.cblstItemsCrafted.Size = new System.Drawing.Size(442, 394);
+            this.cblstItemsCrafted.Size = new System.Drawing.Size(661, 579);
             this.cblstItemsCrafted.TabIndex = 15;
             // 
             // tabQuickslots
             // 
             this.tabQuickslots.Controls.Add(this.label57);
             this.tabQuickslots.Controls.Add(this.grpQuickslots);
-            this.tabQuickslots.Location = new System.Drawing.Point(4, 40);
+            this.tabQuickslots.Location = new System.Drawing.Point(4, 54);
+            this.tabQuickslots.Margin = new System.Windows.Forms.Padding(4);
             this.tabQuickslots.Name = "tabQuickslots";
-            this.tabQuickslots.Padding = new System.Windows.Forms.Padding(3);
-            this.tabQuickslots.Size = new System.Drawing.Size(559, 416);
+            this.tabQuickslots.Padding = new System.Windows.Forms.Padding(4);
+            this.tabQuickslots.Size = new System.Drawing.Size(842, 632);
             this.tabQuickslots.TabIndex = 1;
             this.tabQuickslots.Text = "*Quickslots";
             this.tabQuickslots.UseVisualStyleBackColor = true;
@@ -5231,9 +5466,10 @@ namespace SoG_SGreader
             this.label57.AutoSize = true;
             this.label57.BackColor = System.Drawing.Color.Transparent;
             this.label57.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label57.Location = new System.Drawing.Point(6, 311);
+            this.label57.Location = new System.Drawing.Point(9, 466);
+            this.label57.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(389, 13);
+            this.label57.Size = new System.Drawing.Size(578, 20);
             this.label57.TabIndex = 32;
             this.label57.Text = "* = support for this function was removed due to the risk of losing your save gam" +
     "e";
@@ -5250,9 +5486,11 @@ namespace SoG_SGreader
             this.grpQuickslots.Controls.Add(this.label25);
             this.grpQuickslots.Controls.Add(this.label26);
             this.grpQuickslots.Controls.Add(this.label27);
-            this.grpQuickslots.Location = new System.Drawing.Point(6, 6);
+            this.grpQuickslots.Location = new System.Drawing.Point(9, 9);
+            this.grpQuickslots.Margin = new System.Windows.Forms.Padding(4);
             this.grpQuickslots.Name = "grpQuickslots";
-            this.grpQuickslots.Size = new System.Drawing.Size(488, 301);
+            this.grpQuickslots.Padding = new System.Windows.Forms.Padding(4);
+            this.grpQuickslots.Size = new System.Drawing.Size(732, 452);
             this.grpQuickslots.TabIndex = 29;
             this.grpQuickslots.TabStop = false;
             this.grpQuickslots.Text = "Quckslots";
@@ -5260,90 +5498,100 @@ namespace SoG_SGreader
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(12, 23);
+            this.label22.Location = new System.Drawing.Point(18, 34);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(77, 13);
+            this.label22.Size = new System.Drawing.Size(113, 20);
             this.label22.TabIndex = 26;
             this.label22.Text = "Quckslot 0 (C):";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(12, 272);
+            this.label21.Location = new System.Drawing.Point(18, 408);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(78, 13);
+            this.label21.Size = new System.Drawing.Size(114, 20);
             this.label21.TabIndex = 24;
             this.label21.Text = "Quckslot 9 (R):";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(12, 244);
+            this.label18.Location = new System.Drawing.Point(18, 366);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(77, 13);
+            this.label18.Size = new System.Drawing.Size(113, 20);
             this.label18.TabIndex = 22;
             this.label18.Text = "Quckslot 8 (E):";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(12, 217);
+            this.label19.Location = new System.Drawing.Point(18, 326);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(81, 13);
+            this.label19.Size = new System.Drawing.Size(117, 20);
             this.label19.TabIndex = 21;
             this.label19.Text = "Quckslot 7 (W):";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(12, 189);
+            this.label20.Location = new System.Drawing.Point(18, 284);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(78, 13);
+            this.label20.Size = new System.Drawing.Size(114, 20);
             this.label20.TabIndex = 20;
             this.label20.Text = "Quckslot 6 (Q):";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(12, 161);
+            this.label23.Location = new System.Drawing.Point(18, 242);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(76, 13);
+            this.label23.Size = new System.Drawing.Size(112, 20);
             this.label23.TabIndex = 19;
             this.label23.Text = "Quckslot 5 (F):";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(12, 133);
+            this.label24.Location = new System.Drawing.Point(18, 200);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(77, 13);
+            this.label24.Size = new System.Drawing.Size(113, 20);
             this.label24.TabIndex = 18;
             this.label24.Text = "Quckslot 4 (V):";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(12, 105);
+            this.label25.Location = new System.Drawing.Point(18, 158);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(78, 13);
+            this.label25.Size = new System.Drawing.Size(114, 20);
             this.label25.TabIndex = 17;
             this.label25.Text = "Quckslot 3 (D):";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(12, 78);
+            this.label26.Location = new System.Drawing.Point(18, 117);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(77, 13);
+            this.label26.Size = new System.Drawing.Size(113, 20);
             this.label26.TabIndex = 16;
             this.label26.Text = "Quckslot 2 (S):";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(12, 50);
+            this.label27.Location = new System.Drawing.Point(18, 75);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(77, 13);
+            this.label27.Size = new System.Drawing.Size(113, 20);
             this.label27.TabIndex = 15;
             this.label27.Text = "Quckslot 1 (A):";
             // 
@@ -5351,11 +5599,10 @@ namespace SoG_SGreader
             // 
             this.tabPotions.Controls.Add(this.label6);
             this.tabPotions.Controls.Add(this.grpPostions);
-            this.tabPotions.Location = new System.Drawing.Point(4, 40);
-            this.tabPotions.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPotions.Location = new System.Drawing.Point(4, 54);
             this.tabPotions.Name = "tabPotions";
-            this.tabPotions.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPotions.Size = new System.Drawing.Size(559, 416);
+            this.tabPotions.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPotions.Size = new System.Drawing.Size(842, 632);
             this.tabPotions.TabIndex = 16;
             this.tabPotions.Text = "*Potions";
             this.tabPotions.UseVisualStyleBackColor = true;
@@ -5363,9 +5610,10 @@ namespace SoG_SGreader
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 115);
+            this.label6.Location = new System.Drawing.Point(12, 172);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(234, 13);
+            this.label6.Size = new System.Drawing.Size(344, 20);
             this.label6.TabIndex = 14;
             this.label6.Text = "* Changing Potions will have no beneficial effect";
             // 
@@ -5381,11 +5629,9 @@ namespace SoG_SGreader
             this.grpPostions.Controls.Add(this.cbPotion1);
             this.grpPostions.Controls.Add(this.cbPotion3);
             this.grpPostions.Controls.Add(this.cbPotion2);
-            this.grpPostions.Location = new System.Drawing.Point(5, 6);
-            this.grpPostions.Margin = new System.Windows.Forms.Padding(2);
+            this.grpPostions.Location = new System.Drawing.Point(8, 9);
             this.grpPostions.Name = "grpPostions";
-            this.grpPostions.Padding = new System.Windows.Forms.Padding(2);
-            this.grpPostions.Size = new System.Drawing.Size(527, 107);
+            this.grpPostions.Size = new System.Drawing.Size(790, 160);
             this.grpPostions.TabIndex = 13;
             this.grpPostions.TabStop = false;
             this.grpPostions.Text = "Potions";
@@ -5393,17 +5639,19 @@ namespace SoG_SGreader
             // numPotionsEquipped
             // 
             this.numPotionsEquipped.Enabled = false;
-            this.numPotionsEquipped.Location = new System.Drawing.Point(446, 19);
+            this.numPotionsEquipped.Location = new System.Drawing.Point(669, 28);
+            this.numPotionsEquipped.Margin = new System.Windows.Forms.Padding(4);
             this.numPotionsEquipped.Name = "numPotionsEquipped";
-            this.numPotionsEquipped.Size = new System.Drawing.Size(66, 20);
+            this.numPotionsEquipped.Size = new System.Drawing.Size(99, 26);
             this.numPotionsEquipped.TabIndex = 18;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(369, 21);
+            this.label8.Location = new System.Drawing.Point(554, 32);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 13);
+            this.label8.Size = new System.Drawing.Size(105, 20);
             this.label8.TabIndex = 17;
             this.label8.Text = "Potions equip";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -5411,17 +5659,19 @@ namespace SoG_SGreader
             // numPotionsMax
             // 
             this.numPotionsMax.Enabled = false;
-            this.numPotionsMax.Location = new System.Drawing.Point(446, 45);
+            this.numPotionsMax.Location = new System.Drawing.Point(669, 68);
+            this.numPotionsMax.Margin = new System.Windows.Forms.Padding(4);
             this.numPotionsMax.Name = "numPotionsMax";
-            this.numPotionsMax.Size = new System.Drawing.Size(66, 20);
+            this.numPotionsMax.Size = new System.Drawing.Size(99, 26);
             this.numPotionsMax.TabIndex = 16;
             // 
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(369, 47);
+            this.label42.Location = new System.Drawing.Point(554, 70);
+            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(67, 13);
+            this.label42.Size = new System.Drawing.Size(98, 20);
             this.label42.TabIndex = 15;
             this.label42.Text = "Max. potions";
             this.label42.Click += new System.EventHandler(this.label42_Click);
@@ -5429,30 +5679,27 @@ namespace SoG_SGreader
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(4, 75);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(6, 112);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.Size = new System.Drawing.Size(71, 20);
             this.label5.TabIndex = 15;
             this.label5.Text = "Potion 3:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 47);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(6, 70);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.Size = new System.Drawing.Size(71, 20);
             this.label4.TabIndex = 14;
             this.label4.Text = "Potion 2:";
             // 
             // lblPotion1
             // 
             this.lblPotion1.AutoSize = true;
-            this.lblPotion1.Location = new System.Drawing.Point(4, 19);
-            this.lblPotion1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPotion1.Location = new System.Drawing.Point(6, 28);
             this.lblPotion1.Name = "lblPotion1";
-            this.lblPotion1.Size = new System.Drawing.Size(49, 13);
+            this.lblPotion1.Size = new System.Drawing.Size(71, 20);
             this.lblPotion1.TabIndex = 13;
             this.lblPotion1.Text = "Potion 1:";
             // 
@@ -5460,40 +5707,44 @@ namespace SoG_SGreader
             // 
             this.cbPotion1.Enabled = false;
             this.cbPotion1.FormattingEnabled = true;
-            this.cbPotion1.Location = new System.Drawing.Point(56, 17);
+            this.cbPotion1.Location = new System.Drawing.Point(84, 26);
+            this.cbPotion1.Margin = new System.Windows.Forms.Padding(4);
             this.cbPotion1.Name = "cbPotion1";
-            this.cbPotion1.Size = new System.Drawing.Size(186, 21);
+            this.cbPotion1.Size = new System.Drawing.Size(277, 28);
             this.cbPotion1.TabIndex = 10;
             // 
             // cbPotion3
             // 
             this.cbPotion3.Enabled = false;
             this.cbPotion3.FormattingEnabled = true;
-            this.cbPotion3.Location = new System.Drawing.Point(56, 73);
+            this.cbPotion3.Location = new System.Drawing.Point(84, 110);
+            this.cbPotion3.Margin = new System.Windows.Forms.Padding(4);
             this.cbPotion3.Name = "cbPotion3";
-            this.cbPotion3.Size = new System.Drawing.Size(186, 21);
+            this.cbPotion3.Size = new System.Drawing.Size(277, 28);
             this.cbPotion3.TabIndex = 12;
             // 
             // cbPotion2
             // 
             this.cbPotion2.Enabled = false;
             this.cbPotion2.FormattingEnabled = true;
-            this.cbPotion2.Location = new System.Drawing.Point(56, 45);
+            this.cbPotion2.Location = new System.Drawing.Point(84, 68);
+            this.cbPotion2.Margin = new System.Windows.Forms.Padding(4);
             this.cbPotion2.Name = "cbPotion2";
-            this.cbPotion2.Size = new System.Drawing.Size(186, 21);
+            this.cbPotion2.Size = new System.Drawing.Size(277, 28);
             this.cbPotion2.TabIndex = 11;
             // 
             // msMenu
             // 
             this.msMenu.BackColor = System.Drawing.Color.Transparent;
+            this.msMenu.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.msMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.msMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.msMenu.Location = new System.Drawing.Point(0, 0);
             this.msMenu.Name = "msMenu";
-            this.msMenu.Padding = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.msMenu.Size = new System.Drawing.Size(567, 24);
+            this.msMenu.Padding = new System.Windows.Forms.Padding(3, 3, 0, 3);
+            this.msMenu.Size = new System.Drawing.Size(850, 35);
             this.msMenu.TabIndex = 1;
             this.msMenu.Text = "msMenu";
             // 
@@ -5507,13 +5758,13 @@ namespace SoG_SGreader
             this.openSavegameFolderToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(329, 34);
             this.openToolStripMenuItem.Text = "Open...";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
@@ -5521,7 +5772,7 @@ namespace SoG_SGreader
             // 
             this.saveToolStripMenuItem.Enabled = false;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(329, 34);
             this.saveToolStripMenuItem.Text = "Save as...";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
@@ -5529,7 +5780,7 @@ namespace SoG_SGreader
             // 
             this.importToolStripMenuItem.Enabled = false;
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(329, 34);
             this.importToolStripMenuItem.Text = "Import";
             // 
             // exportAsToolStripMenuItem
@@ -5537,27 +5788,27 @@ namespace SoG_SGreader
             this.exportAsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.jSONToolStripMenuItem});
             this.exportAsToolStripMenuItem.Name = "exportAsToolStripMenuItem";
-            this.exportAsToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.exportAsToolStripMenuItem.Size = new System.Drawing.Size(329, 34);
             this.exportAsToolStripMenuItem.Text = "Export as...";
             // 
             // jSONToolStripMenuItem
             // 
             this.jSONToolStripMenuItem.Name = "jSONToolStripMenuItem";
-            this.jSONToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
+            this.jSONToolStripMenuItem.Size = new System.Drawing.Size(157, 34);
             this.jSONToolStripMenuItem.Text = "JSON";
             this.jSONToolStripMenuItem.Click += new System.EventHandler(this.JSONToolStripMenuItem_Click);
             // 
             // openSavegameFolderToolStripMenuItem
             // 
             this.openSavegameFolderToolStripMenuItem.Name = "openSavegameFolderToolStripMenuItem";
-            this.openSavegameFolderToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.openSavegameFolderToolStripMenuItem.Size = new System.Drawing.Size(329, 34);
             this.openSavegameFolderToolStripMenuItem.Text = "Open Savegame Location...";
             this.openSavegameFolderToolStripMenuItem.Click += new System.EventHandler(this.openSavegameFolderToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(329, 34);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -5566,13 +5817,13 @@ namespace SoG_SGreader
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(164, 34);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
@@ -5582,26 +5833,28 @@ namespace SoG_SGreader
             this.txtConsole.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtConsole.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtConsole.ForeColor = System.Drawing.Color.LimeGreen;
-            this.txtConsole.Location = new System.Drawing.Point(0, 480);
+            this.txtConsole.Location = new System.Drawing.Point(0, 721);
+            this.txtConsole.Margin = new System.Windows.Forms.Padding(4);
             this.txtConsole.Multiline = true;
             this.txtConsole.Name = "txtConsole";
             this.txtConsole.ReadOnly = true;
             this.txtConsole.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtConsole.Size = new System.Drawing.Size(567, 132);
+            this.txtConsole.Size = new System.Drawing.Size(850, 197);
             this.txtConsole.TabIndex = 28;
             this.txtConsole.TabStop = false;
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(567, 612);
+            this.ClientSize = new System.Drawing.Size(850, 918);
             this.Controls.Add(this.txtConsole);
             this.Controls.Add(this.tabControlMain);
             this.Controls.Add(this.msMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMenu;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMain";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "SoG: Savegame Editor v16.9.30803.129 by tolik518";
@@ -5835,6 +6088,7 @@ namespace SoG_SGreader
             ((System.ComponentModel.ISupportInitialize)(this.numTalentGeneral0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox75)).EndInit();
             this.tabCards.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCards)).EndInit();
             this.grpCards.ResumeLayout(false);
             this.grpCards.PerformLayout();
             this.tabMaps.ResumeLayout(false);
@@ -6041,7 +6295,6 @@ namespace SoG_SGreader
         private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.RadioButton rbMale;
         private Label lblGamePatch;
-        private CheckedListBox cblstCards;
         private Button btnResetCards;
         private Button btnDeselectAllCards;
         private Button btnSelectAllCards;
@@ -6301,5 +6554,7 @@ namespace SoG_SGreader
         private Label label8;
         private NumericUpDownWrap numPotionsMax;
         private Label label42;
+        private DataGridView dataGridCards;
+        private Button btnItemPlus;
     }
 }

@@ -19,17 +19,30 @@ namespace SoG_SGreader
         public Style Style = new Style();
         public int ItemsCount { get; set; }
         public List<Item> Inventory;
-        public int UnknownVariable0 { get; set; }
+        public uint PickupNumberPool { get; set; }
         public int MerchantItemsCount { get; set; }
         public List<MerchantItem> MerchantItems;
+
+        public byte NGPlus { get; set; }
+        public byte PinsEquippedCount { get; set; }
+        public List<SogPin> PinsEquipped;
+        public byte PinsOnShelfCount { get; set; }
+        public List<SogPin> PinsOnShelf;
+        public ushort PinsSeenCount { get; set; }
+        public List<SogPin> PinsSeen;
+        public ushort PinsLatestCount { get; set; }
+        public List<SogPin> PinsLatest;
+
         public int CardsCount { get; set; }
-        public List<Card> Cards;
+        public List<KeyValuePair<Card, ushort>> Cards;
         public int TreasureMapsCount { get; set; }
         public List<TreasureMap> TreasureMaps;
         public int TreasureFoundCount { get; set; }
         public List<TreasureFound> TreasureFound;
         public int SkillsCount { get; set; }
         public List<Skill> Skills;
+        public int SkillsOverLevelingCount { get; set; }
+        public List<Skill> SkillsOverLeveling;
         public short Level { get; set; }
         public int ExpCurrent { get; set; }
         public int ExpUnknown0 { get; set; }
@@ -49,7 +62,7 @@ namespace SoG_SGreader
         public ushort UnknownVariable02Count { get; set; }     //something to do with challenges?
         public List<UnknownVariable02> UnknownVariables02;
         public int RobinBowHighscore { get; set; }
-        public ushort TrophiesCount { get; set; }    //trophies?
+        public ushort TrophiesCount { get; set; }
 
         public List<Trophy> Trophies;
         public ushort ItemsSeenCount { get; set; }
@@ -66,7 +79,7 @@ namespace SoG_SGreader
         public int BirthdayMonth { get; set; }
         public int BirthdayDay { get; set; }
         public uint UniquePlayerId { get; set; }
-        public int LastAutosave { get; set; } // saving mechanism related
+        public int LastAutosave { get; set; }
         public int SaveUnknown { get; set; } // saving mechanism related
         public int PlayTimeTotal { get; set; } // saved in frames
         public byte PhaseShiftStuff { get; set; } //??
@@ -89,15 +102,17 @@ namespace SoG_SGreader
 
         internal bool HasCard(SogEnemy sogEnemies)
         {
-            return Cards.Any(card => card.CardID == sogEnemies);
+            return Cards.Any(pair => pair.Key.CardID == sogEnemies);
+        }
+
+        internal ushort GetCardCount(SogEnemy sogEnemies)
+        {
+            return Cards.FirstOrDefault(pair => pair.Key.CardID == sogEnemies).Value;
         }
 
         internal void RemoveCard(SogEnemy sogEnemies)
         {
-            if (HasCard(sogEnemies))
-            {
-                Cards.RemoveAll(card => card.CardID == sogEnemies);
-            }
+            Cards.RemoveAll(pair => pair.Key.CardID == sogEnemies);
         }
 
         internal bool HasQuest(SogQuest sogQuests)

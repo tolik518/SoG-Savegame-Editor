@@ -73,8 +73,7 @@ namespace SoG_SGreader
                     writeBinary.Write((int) playerObject.Inventory[i].ItemPos);
                 }
 
-                // Inventory.DisplayItem.PickupNumberPool???
-                writeBinary.Write(playerObject.UnknownVariable0);
+                writeBinary.Write(playerObject.PickupNumberPool);
 
                 writeBinary.Write((int) playerObject.MerchantItems.Count);
                 for (var i = 0; i != playerObject.MerchantItems.Count; i++)
@@ -83,10 +82,38 @@ namespace SoG_SGreader
                     writeBinary.Write(playerObject.MerchantItems[i].ItemCount);
                 }
 
-                writeBinary.Write((int) playerObject.Cards.Count);
+                writeBinary.Write((byte)playerObject.NGPlus);
+
+                // write PinsEquipped, PinsOnShelf, PinsSeen, PinsLatest
+                writeBinary.Write((byte) playerObject.PinsEquipped.Count);
+                for (var i = 0; i != playerObject.PinsEquipped.Count; i++)
+                {
+                    writeBinary.Write((ushort)playerObject.PinsEquipped[i]);
+                }
+
+                writeBinary.Write((byte) playerObject.PinsOnShelf.Count);
+                for (var i = 0; i != playerObject.PinsOnShelf.Count; i++)
+                {
+                    writeBinary.Write((ushort)playerObject.PinsOnShelf[i]);
+                }
+
+                writeBinary.Write((ushort) playerObject.PinsSeen.Count);
+                for (var i = 0; i != playerObject.PinsSeen.Count; i++)
+                {
+                    writeBinary.Write((ushort)playerObject.PinsSeen[i]);
+                }
+
+                writeBinary.Write((ushort) playerObject.PinsLatest.Count);
+                for (var i = 0; i != playerObject.PinsLatest.Count; i++)
+                {
+                    writeBinary.Write((ushort)playerObject.PinsLatest[i]);
+                }
+
+                writeBinary.Write((int)playerObject.Cards.Count);
                 for (var i = 0; i != playerObject.Cards.Count; i++)
                 {
-                    writeBinary.Write((int) playerObject.Cards[i].CardID);
+                    writeBinary.Write((int)playerObject.Cards[i].Key.CardID);
+                    writeBinary.Write((ushort)playerObject.Cards[i].Value);
                 }
 
                 writeBinary.Write((int) playerObject.TreasureMaps.Count);
@@ -106,6 +133,13 @@ namespace SoG_SGreader
                 {
                     writeBinary.Write((ushort) playerObject.Skills[i].SkillID);
                     writeBinary.Write(playerObject.Skills[i].SkillLevel);
+                }
+
+                writeBinary.Write((int) playerObject.SkillsOverLeveling.Count);
+                for (var i = 0; i != playerObject.SkillsOverLeveling.Count; i++)
+                {
+                    writeBinary.Write((ushort)playerObject.SkillsOverLeveling[i].SkillID);
+                    writeBinary.Write(playerObject.SkillsOverLeveling[i].SkillLevel);
                 }
 
                 writeBinary.Write(playerObject.Level);

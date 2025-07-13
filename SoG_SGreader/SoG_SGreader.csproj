@@ -142,6 +142,7 @@
     <Compile Include="Enum\Attribute\SkillMaxLevelAttribute.cs" />
     <Compile Include="Enum\SogFish.cs" />
     <Compile Include="Enum\SogFlag.cs" />
+    <Compile Include="Enum\SogPin.cs" />
     <Compile Include="Enum\SogTreasureMap.cs" />
     <Compile Include="Enum\SogEnemy.cs" />
     <Compile Include="Enum\SogQuest.cs" />
