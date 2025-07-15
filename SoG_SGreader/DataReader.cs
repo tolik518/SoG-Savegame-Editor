@@ -25,21 +25,21 @@ namespace SoG_SGreader
                 }
 
                 //TODO: Cast to SogItems
-                playerObject.Equip.Hat = readBinary.ReadInt32();
-                playerObject.Equip.Facegear = readBinary.ReadInt32();
+                playerObject.Equip.Hat = (SogItem)readBinary.ReadInt32();
+                playerObject.Equip.Facegear = (SogItem)readBinary.ReadInt32();
                 playerObject.Style.Bodytype = readBinary.ReadChar(); //seems like always B ?    
                 txtConsole.AppendText("\r\nBodytype: " + playerObject.Style.Bodytype);
                 playerObject.Style.Hair = readBinary.ReadInt32();
-                playerObject.Equip.Weapon = readBinary.ReadInt32();
-                playerObject.Equip.Shield = readBinary.ReadInt32();
-                playerObject.Equip.Armor = readBinary.ReadInt32();
-                playerObject.Equip.Shoes = readBinary.ReadInt32();
-                playerObject.Equip.Accessory1 = readBinary.ReadInt32();
-                playerObject.Equip.Accessory2 = readBinary.ReadInt32();
-                playerObject.Style.Hat = readBinary.ReadInt32();
-                playerObject.Style.Facegear = readBinary.ReadInt32();
-                playerObject.Style.Weapon = readBinary.ReadInt32();
-                playerObject.Style.Shield = readBinary.ReadInt32();
+                playerObject.Equip.Weapon = (SogItem)readBinary.ReadInt32();
+                playerObject.Equip.Shield = (SogItem)readBinary.ReadInt32();
+                playerObject.Equip.Armor = (SogItem)readBinary.ReadInt32();
+                playerObject.Equip.Shoes = (SogItem)readBinary.ReadInt32();
+                playerObject.Equip.Accessory1 = (SogItem)readBinary.ReadInt32();
+                playerObject.Equip.Accessory2 = (SogItem)readBinary.ReadInt32();
+                playerObject.Style.Hat = (SogItem)readBinary.ReadInt32();
+                playerObject.Style.Facegear = (SogItem)readBinary.ReadInt32();
+                playerObject.Style.Weapon = (SogItem)readBinary.ReadInt32();
+                playerObject.Style.Shield = (SogItem)readBinary.ReadInt32();
                 
                 playerObject.Style.HatHidden = readBinary.ReadBoolean();     //[Sog_PlayerProperty(16)]
                 playerObject.Style.FacegearHidden = readBinary.ReadBoolean();
@@ -86,9 +86,9 @@ namespace SoG_SGreader
                 {
                     playerObject.Inventory.Add(new Item
                     {
-                        ItemID = (SogItem)readBinary.ReadInt32(),
-                        ItemCount = readBinary.ReadInt32(),
-                        ItemPos = readBinary.ReadUInt32()
+                        ID = (SogItem)readBinary.ReadInt32(),
+                        Count = readBinary.ReadInt32(),
+                        Position = readBinary.ReadUInt32()
                     });
                 }
                 txtConsole.AppendText("\r\nInventorySize: " + playerObject.ItemsCount);

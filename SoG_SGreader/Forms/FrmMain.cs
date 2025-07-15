@@ -59,7 +59,6 @@ namespace SoG_SGreader
         {
             playerObject = new Player();
             lstPets.Items.Clear();
-            lstInventory.Items.Clear();
 
             txtConsole.AppendText(OpenedSaveGamePath);
 
@@ -162,12 +161,11 @@ namespace SoG_SGreader
                 cbQuickslotType[i].DataSource = quickslotTypes;
             }
 
-            cbSelectedItem.DataSource = items;
+            cbAddItem.DataSource = items;
 
-            // create "Cards" and "CardsCount" nd
-            // set dataGridCards Card to readonly and cardcount to editable
             dataGridCards.AutoGenerateColumns = false;
             dataGridCards.Columns.Clear();
+            dataGridCards.DataSource = null;
             dataGridCards.Columns.Add(new DataGridViewTextBoxColumn
             {
                 Name = "Card",
@@ -175,7 +173,8 @@ namespace SoG_SGreader
                 HeaderText = "Card",
                 ReadOnly = true,
                 AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
-                FillWeight = 70
+                FillWeight = 70,
+                DefaultCellStyle = new DataGridViewCellStyle { BackColor = Color.LightGray }
             });
             dataGridCards.Columns.Add(new DataGridViewTextBoxColumn
             {
@@ -187,6 +186,69 @@ namespace SoG_SGreader
                 FillWeight = 30
             });
             dataGridCards.AllowUserToAddRows = false;
+
+            dataGridInventory.AutoGenerateColumns = false;
+            dataGridInventory.Columns.Clear();
+            dataGridInventory.DataSource = null;
+            dataGridInventory.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "ItemID",
+                DataPropertyName = "ItemID",
+                HeaderText = "ID",
+                ReadOnly = true,
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                FillWeight = 15,
+                DefaultCellStyle = new DataGridViewCellStyle { BackColor = Color.LightGray }
+            });
+            dataGridInventory.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "ItemName",
+                DataPropertyName = "ItemName",
+                HeaderText = "Name",
+                ReadOnly = true,
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                FillWeight = 55,
+                DefaultCellStyle = new DataGridViewCellStyle { BackColor = Color.LightGray }
+            });
+            dataGridInventory.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "ItemCount",
+                DataPropertyName = "ItemCount",
+                HeaderText = "Count",
+                ReadOnly = false,
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                FillWeight = 15,
+                DefaultCellStyle = new DataGridViewCellStyle
+                {
+                    Alignment = DataGridViewContentAlignment.MiddleRight,
+                    Format = "N0",
+                    NullValue = "0",
+                }
+            });
+            dataGridInventory.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "ItemPlusses",
+                DataPropertyName = "ItemPlusses",
+                HeaderText = "Plusses",
+                ReadOnly = true,
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                FillWeight = 15,
+                DefaultCellStyle = new DataGridViewCellStyle { BackColor = Color.LightGray },
+                Visible = false
+
+            });
+            dataGridInventory.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                Name = "ItemPos",
+                DataPropertyName = "ItemPos",
+                HeaderText = "Position",
+                ReadOnly = true,
+                AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill,
+                FillWeight = 0.00001f,
+                DefaultCellStyle = new DataGridViewCellStyle { BackColor = Color.LightGray },
+                Visible = false
+            });
+            dataGridInventory.AllowUserToAddRows = false;
 
             //fill checkboxLists with all the values from the enums
             dataGridCards.DataSource = System.Enum.GetNames(typeof(SogEnemy))
@@ -207,20 +269,20 @@ namespace SoG_SGreader
 
             txtNickname.Text = playerObject.Nickname;
 
-            cbHat.Text = ((SogItem)playerObject.Equip.Hat).ToString();
-            cbFacegear.Text = ((SogItem)playerObject.Equip.Facegear).ToString();
-            cbWeapon.Text = ((SogItem)playerObject.Equip.Weapon).ToString();
-            cbShield.Text = ((SogItem)playerObject.Equip.Shield).ToString();
-            cbArmor.Text = ((SogItem)playerObject.Equip.Armor).ToString();
-            cbShoes.Text = ((SogItem)playerObject.Equip.Shoes).ToString();
+            cbHat.Text = Item.GetNameById(playerObject.Equip.Hat);
+            cbFacegear.Text = Item.GetNameById(playerObject.Equip.Facegear);
+            cbWeapon.Text = Item.GetNameById(playerObject.Equip.Weapon);
+            cbShield.Text = Item.GetNameById(playerObject.Equip.Shield);
+            cbArmor.Text = Item.GetNameById(playerObject.Equip.Armor);
+            cbShoes.Text = Item.GetNameById(playerObject.Equip.Shoes);
 
-            cbAccessory1.Text = ((SogItem)playerObject.Equip.Accessory1).ToString();
-            cbAccessory2.Text = ((SogItem)playerObject.Equip.Accessory2).ToString();
+            cbAccessory1.Text = Item.GetNameById(playerObject.Equip.Accessory1);
+            cbAccessory2.Text = Item.GetNameById(playerObject.Equip.Accessory2);
 
-            cbStyleHat.Text = ((SogItem)playerObject.Style.Hat).ToString();
-            cbStyleFacegear.Text = ((SogItem)playerObject.Style.Facegear).ToString();
-            cbStyleWeapon.Text = ((SogItem)playerObject.Style.Weapon).ToString();
-            cbStyleShield.Text = ((SogItem)playerObject.Style.Shield).ToString();
+            cbStyleHat.Text = Item.GetNameById(playerObject.Style.Hat);
+            cbStyleFacegear.Text = Item.GetNameById(playerObject.Style.Facegear);
+            cbStyleWeapon.Text = Item.GetNameById(playerObject.Style.Weapon);
+            cbStyleShield.Text = Item.GetNameById(playerObject.Style.Shield);
 
             numPotionsEquipped.Value = playerObject.PotionsEquipped;
             numPotionsMax.Value = playerObject.PotionsMax;
@@ -255,18 +317,18 @@ namespace SoG_SGreader
             btnShirtColor.BackColor = ColorTranslator.FromHtml("#" + ((SogColor)playerObject.Style.ShirtColor).ToString().TrimStart('_'));
             btnPantsColor.BackColor = ColorTranslator.FromHtml("#" + ((SogColor)playerObject.Style.PantsColor).ToString().TrimStart('_'));
 
-            for (int i = 0; i != playerObject.ItemsCount; i++)
+            // add items to dataGridInventory as a datasource
+            dataGridInventory.Rows.Clear();
+            foreach (var item in playerObject.Inventory)
             {
-                var vItem = new ListViewItem(
-                    new[] {
-                        playerObject.Inventory[i].GetItemName(),
-                        playerObject.Inventory[i].ItemCount.ToString(),
-                        playerObject.Inventory[i].ItemPos.ToString()
-                    }
+                dataGridInventory.Rows.Add(
+                    (int) item.ID,
+                    item.GetItemName(),
+                    item.Count,
+                    item.Plusses,
+                    item.Position
                 );
-
-                lstInventory.Items.Add(vItem);
-            }
+            }            
 
             // KilledEnemies
             for (int i = 0; i != playerObject.KilledEnemiesCount; i++)
@@ -393,20 +455,6 @@ namespace SoG_SGreader
         private void GetDataFromFields()
         {
             playerObject.Nickname = txtNickname.Text;
-            playerObject.Equip.Hat = (int)System.Enum.Parse(typeof(SogItem), cbHat.Text);
-            playerObject.Equip.Facegear = (int)System.Enum.Parse(typeof(SogItem), cbFacegear.Text);
-            playerObject.Equip.Weapon = (int)System.Enum.Parse(typeof(SogItem), cbWeapon.Text);
-            playerObject.Equip.Shield = (int)System.Enum.Parse(typeof(SogItem), cbShield.Text);
-            playerObject.Equip.Armor = (int)System.Enum.Parse(typeof(SogItem), cbArmor.Text);
-            playerObject.Equip.Shoes = (int)System.Enum.Parse(typeof(SogItem), cbShoes.Text);
-
-            playerObject.Equip.Accessory1 = (int)System.Enum.Parse(typeof(SogItem), cbAccessory1.Text);
-            playerObject.Equip.Accessory2 = (int)System.Enum.Parse(typeof(SogItem), cbAccessory2.Text);
-
-            playerObject.Style.Hat = (int)System.Enum.Parse(typeof(SogItem), cbStyleHat.Text);
-            playerObject.Style.Facegear = (int)System.Enum.Parse(typeof(SogItem), cbStyleFacegear.Text);
-            playerObject.Style.Weapon = (int)System.Enum.Parse(typeof(SogItem), cbStyleWeapon.Text);
-            playerObject.Style.Shield = (int)System.Enum.Parse(typeof(SogItem), cbStyleShield.Text);
 
             // set the potion for all potions
             playerObject.Potions.Clear();
@@ -445,38 +493,43 @@ namespace SoG_SGreader
             }
             }*/
 
-            playerObject.ItemsCount = lstInventory.Items.Count;
+            // get the data from dataGridInventory
             playerObject.Inventory.Clear();
-
-            for (int i = 0; i != lstInventory.Items.Count; i++)
+            int itemsCount = 0;
+            foreach (DataGridViewRow row in dataGridInventory.Rows)
             {
-                // check if the item was a plus item, because then we have to add PlusItemStart to the ItemID
-                SogItem ItemId = (SogItem)System.Enum.Parse(typeof(SogItem), lstInventory.Items[i].SubItems[0].Text);
-                if (SoG_SGreader.Item.IsPlusItem(ItemId))
+                if (
+                    row.Cells["ItemCount"].Value == null ||
+                    row.Cells["ItemPos"].Value == null)
                 {
-                    ItemId = (SogItem)((int)ItemId + SoG_SGreader.Item.PlusItemStart);
-                }
-
-                // check if the itemId already exists in the inventory and add the count to the existing item
-                if (playerObject.Inventory.Any(item => item.ItemID == ItemId))
-                {
-                    var existingItem = playerObject.Inventory.First(item => item.ItemID == ItemId);
-                    existingItem.ItemCount += int.Parse(lstInventory.Items[i].SubItems[1].Text);
                     continue;
                 }
+                itemsCount++;
 
-                int itemCount = int.Parse(lstInventory.Items[i].SubItems[1].Text);
-                uint itemPos = uint.Parse(lstInventory.Items[i].SubItems[2].Text);
+                SogItem itemId = (SogItem) int.Parse(row.Cells["ItemID"].Value.ToString());
+
+                int itemCount = 0;
+                if (int.TryParse(row.Cells["ItemCount"].Value.ToString().Replace(".", ""), out int count))
+                {
+                    itemCount = count;
+                }
+                else
+                {
+                    itemCount = int.MaxValue - 1;
+                }
+
+                uint itemPos = uint.Parse(row.Cells["ItemPos"].Value.ToString());
 
                 Item item = new Item
                 {
-                    ItemID = ItemId,
-                    ItemCount = itemCount,
-                    ItemPos = itemPos
+                    ID = itemId,
+                    Count = itemCount,
+                    Position = itemPos
                 };
 
                 playerObject.Inventory.Add(item);
             }
+            playerObject.ItemsCount = itemsCount;
 
             playerObject.Level = (Int16)numLevel.Value;
             playerObject.Cash = (int)numGold.Value;
@@ -573,8 +626,9 @@ namespace SoG_SGreader
                             new Card { 
                                 CardID = cardId 
                             }, 
-                            (ushort)cardCount)
-                        );
+                            (ushort)cardCount
+                        )
+                    );
                 }
             }
 
@@ -791,21 +845,6 @@ namespace SoG_SGreader
             };
         }
 
-        private void lstInventory_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (lstInventory.FocusedItem == null || lstInventory.FocusedItem.Index == -1)
-            {
-                return;
-            }
-
-            cbSelectedItem.Text = lstInventory.Items[lstInventory.FocusedItem.Index].SubItems[0].Text;
-            numItemCount.Value = Int32.Parse(lstInventory.Items[lstInventory.FocusedItem.Index].SubItems[1].Text);
-            // tag btnItemPlus if the item is a plus item, use IsPlusItem
-            bool isPlusItem = cbSelectedItem.Text.EndsWith("+");
-            txtConsole.AppendText("\r\n\r\nItem '" + cbSelectedItem.Text.TrimEnd('+') + "' is a plus item: " + isPlusItem);
-            btnItemPlus.Text = isPlusItem ? "+" : " ";
-        }
-
         private void SaveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string sFilename;
@@ -823,7 +862,7 @@ namespace SoG_SGreader
                 sFilename = saveFileDialog1.FileName;
                 if (!File.Exists(sFilename))
                 {
-                    FileStream fileStream = File.Create(sFilename); //there should be a better way to do this lol
+                    FileStream fileStream = File.Create(sFilename); 
                     fileStream.Close();
                 }
 
@@ -858,43 +897,6 @@ namespace SoG_SGreader
             frmAbout.ShowDialog();
         }
 
-        private void NumItemCount_ValueChanged(object sender, EventArgs e)
-        {
-            if (lstInventory.FocusedItem != null)
-            {
-                lstInventory.Items[lstInventory.FocusedItem.Index].SubItems[1].Text = numItemCount.Value.ToString();
-            }
-        }
-
-        private void BtnAddItem_Click(object sender, EventArgs e)
-        {
-            string sSelectedItem = cbSelectedItem.Text;
-            uint maxPos = 0;
-            for (int i = 0; i != lstInventory.Items.Count; i++)
-            {
-                if (UInt32.Parse(lstInventory.Items[i].SubItems[2].Text) > maxPos)
-                {
-                    maxPos = UInt32.Parse(lstInventory.Items[i].SubItems[2].Text);
-                }
-            }
-
-            if (lstInventory.FindItemWithText(cbSelectedItem.Text) == null) //look if the item already exists; 
-            {
-                var vItem = new ListViewItem(new[] { cbSelectedItem.Text, numItemCount.Value.ToString(), (++maxPos).ToString() });
-                lstInventory.Items.Add(vItem);
-                //Sog_Player.Item iitem = new Sog_Player.Item((Sog_Items)System.Enum.Parse(typeof(Sog_Items), lstInventory.Items[lstInventory.Items.Count - 1].SubItems[0].Text),
-                //                                                                 Int32.Parse(lstInventory.Items[lstInventory.Items.Count - 1].SubItems[1].Text),
-                //                                                                  UInt32.Parse(lstInventory.Items[lstInventory.Items.Count - 1].SubItems[2].Text));
-                //pPlayer.inventory.Add(iitem);
-                //pPlayer.InventorySize++;
-            }
-            lstInventory.EnsureVisible(lstInventory.FindItemWithText(cbSelectedItem.Text).Index);
-            lstInventory.Items[lstInventory.FindItemWithText(cbSelectedItem.Text).Index].Selected = true;
-            lstInventory.Select();
-
-            cbSelectedItem.Text = sSelectedItem;
-        }
-
         private void ClothingColor_Click(object sender, EventArgs e)
         {
             using (var form = new FrmColorSelect())
@@ -904,22 +906,24 @@ namespace SoG_SGreader
 
                 if (!string.IsNullOrEmpty(sColor))
                 {
-                    ((Control)sender).BackColor = ColorTranslator.FromHtml(sColor);
+                    Control currentSender = (Control)sender;
+
+                    currentSender.BackColor = ColorTranslator.FromHtml(sColor);
                     sColor = "_" + form.Color.TrimStart('#');
 
-                    if (((Control)sender) == btnHairColor)
+                    if (currentSender == btnHairColor)
                     {
                         playerObject.Style.HairColor = (byte)(SogColor)System.Enum.Parse(typeof(SogColor), sColor);
                     }
-                    else if (((Control)sender) == btnPonchoColor)
+                    else if (currentSender == btnPonchoColor)
                     {
                         playerObject.Style.PonchoColor = (byte)(SogColor)System.Enum.Parse(typeof(SogColor), sColor);
                     }
-                    else if (((Control)sender) == btnShirtColor)
+                    else if (currentSender == btnShirtColor)
                     {
                         playerObject.Style.ShirtColor = (byte)(SogColor)System.Enum.Parse(typeof(SogColor), sColor);
                     }
-                    else if (((Control)sender) == btnPantsColor)
+                    else if (currentSender == btnPantsColor)
                     {
                         playerObject.Style.PantsColor = (byte)(SogColor)System.Enum.Parse(typeof(SogColor), sColor);
                     }
@@ -952,39 +956,34 @@ namespace SoG_SGreader
             cbPetType.Text = ((SogPet)playerObject.Pets[index].Type1).ToString();
         }
 
-        private void BtnDeleteSelectedItem_Click(object sender, EventArgs e)
-        {
-            int i = lstInventory.FocusedItem.Index;
-            lstInventory.Items.RemoveAt(i);
-        }
-
         private void NumPetStat_ValueChanged(object sender, EventArgs e)
         {
             if (lstPets.FocusedItem != null)
             {
+                var currentSender = (Control)sender;
                 lstPets.Items[lstPets.FocusedItem.Index].SubItems[2].Text = numPetHP.Value.ToString();
 
-                if ((Control)sender == numPetHP)
+                if (currentSender == numPetHP)
                 {
                     lstPets.Items[lstPets.FocusedItem.Index].SubItems[2].Text = numPetHP.Value.ToString();
                 }
-                else if ((Control)sender == numPetEnergy)
+                else if (currentSender == numPetEnergy)
                 {
                     lstPets.Items[lstPets.FocusedItem.Index].SubItems[3].Text = numPetEnergy.Value.ToString();
                 }
-                else if ((Control)sender == numPetDamage)
+                else if (currentSender == numPetDamage)
                 {
                     lstPets.Items[lstPets.FocusedItem.Index].SubItems[4].Text = numPetDamage.Value.ToString();
                 }
-                else if ((Control)sender == numPetCrit)
+                else if (currentSender == numPetCrit)
                 {
                     lstPets.Items[lstPets.FocusedItem.Index].SubItems[5].Text = numPetCrit.Value.ToString();
                 }
-                else if ((Control)sender == numPetSpeed)
+                else if (currentSender == numPetSpeed)
                 {
                     lstPets.Items[lstPets.FocusedItem.Index].SubItems[6].Text = numPetSpeed.Value.ToString();
                 }
-                else if ((Control)sender == numPetLevel)
+                else if (currentSender == numPetLevel)
                 {
                     lstPets.Items[lstPets.FocusedItem.Index].SubItems[0].Text = numPetLevel.Value.ToString();
                 }
@@ -1158,12 +1157,12 @@ namespace SoG_SGreader
             // dont crash OpenedSaveGamePath is null, just open the default folder
             if (string.IsNullOrEmpty(OpenedSaveGamePath))
             {
-                System.Diagnostics.Process.Start(Directory.GetCurrentDirectory());
+                Process.Start(Directory.GetCurrentDirectory());
                 return;
             }
 
             string folderPath = Directory.GetParent(OpenedSaveGamePath).FullName;
-            System.Diagnostics.Process.Start(folderPath);
+            Process.Start(folderPath);
         }
 
         private void btnSelectAllFlags_Click(object sender, EventArgs e)
@@ -1379,32 +1378,58 @@ namespace SoG_SGreader
 
         }
 
-        private void btnItemPlus_Click(object sender, EventArgs e)
+        private void btnAddItem_Click(object sender, EventArgs e)
         {
-            var button = (Button)sender;
-
-            // Toggle state
-            bool isChecked = (button.Tag as bool?) ?? false;
-            isChecked = !isChecked;
-
-            // Update appearance
-            button.Text = isChecked ? "+" : "";
-            button.Tag = isChecked;
-
-            // Update the item in the inventory list
-            if (lstInventory.FocusedItem != null && lstInventory.FocusedItem.Index >= 0)
+            uint maxPos = 0;
+            // get the highest position in the inventory dataGrid
+            foreach (DataGridViewRow row in dataGridInventory.Rows)
             {
-                var item = lstInventory.Items[lstInventory.FocusedItem.Index];
-                string itemName = item.SubItems[0].Text.TrimEnd('+'); // Remove the plus sign for the item name
-                if (isChecked)
+                if (row.Cells["ItemPos"].Value != null && uint.TryParse(row.Cells["ItemPos"].Value.ToString(), out uint pos))
                 {
-                    item.SubItems[0].Text = itemName + "+";
+                    if (pos > maxPos)
+                    {
+                        maxPos = pos;
+                    }
                 }
-                else
+            }                 
+
+            int plusses = (int)numPlusses.Value;
+
+            SogItem itemIdWithoutPlusses = Item.GetItemByName(cbAddItem.Text);
+            SogItem itemId = itemIdWithoutPlusses + (plusses * Item.PlusItemStart);
+
+            // check if itemId exists in the dataGridInventory ID column, if it exists, dont touch and dont update it, just return
+            foreach (DataGridViewRow row in dataGridInventory.Rows)
+            {
+                if (row.Cells["ItemID"].Value != null && int.TryParse(row.Cells["ItemID"].Value.ToString(), out int existingItemId))
                 {
-                    item.SubItems[0].Text = itemName;
+                    if (existingItemId == (int)itemId)
+                    {
+                        txtConsole.AppendText("\r\n" +itemId + " already exists in the inventory");
+                        return;
+                    }
                 }
             }
+
+            var item = new Item
+            {
+                ID = itemId,
+                Count = 1,
+                Position = maxPos + 1 // add 1 to the highest position
+            };
+
+            dataGridInventory.Rows.Add(
+                (int)item.ID,
+                item.GetItemName(),
+                item.Count,
+                item.Plusses,
+                item.Position 
+            );
+        }
+
+        private void btnSkinColor_Click(object sender, EventArgs e)
+        {
+            txtConsole.AppendText(Text + "\r\nSkin color changing is not supported yet. Please open an issue on Github if you want this feature, because I was too lazy to implement it yet.");
         }
     }
 

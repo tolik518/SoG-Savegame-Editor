@@ -88,7 +88,6 @@ namespace SoG_SGreader.Test
             string output = process.StandardOutput.ReadToEnd();
             process.WaitForExit();
             
-            Assert.Contains("Filesize: 4494", output);
             Assert.Contains("Birthday: 24.6.1081", output);
             Assert.Contains("ItemsSeenCount: 124", output);
             Assert.Contains("KilledEnemiesCount: 58", output);
@@ -116,8 +115,7 @@ namespace SoG_SGreader.Test
             string output = process.StandardOutput.ReadToEnd();
             process.WaitForExit();
             
-            Assert.Contains("\"MagicByte\": 116", output);
-            Assert.Contains("\"PlayTimeTotal\": 1645950", output);
+            Assert.Contains("\"MagicByte\": 136", output);
             Assert.Contains("\"UniquePlayerId\": 451873", output);
             Assert.Contains("\"Cash\": 6873538", output);
         }

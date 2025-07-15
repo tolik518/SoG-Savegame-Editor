@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Drawing;
+using System.IO;
 
 namespace SoG_SGreader
 {
@@ -19,20 +20,20 @@ namespace SoG_SGreader
                 Style style = playerObject.Style;
 
                 writeBinary.Write(playerObject.MagicByte);
-                writeBinary.Write(equip.Hat);
-                writeBinary.Write(equip.Facegear);
+                writeBinary.Write((int)equip.Hat);
+                writeBinary.Write((int)equip.Facegear);
                 writeBinary.Write(style.Bodytype);
                 writeBinary.Write(style.Hair);
-                writeBinary.Write(equip.Weapon);
-                writeBinary.Write(equip.Shield);
-                writeBinary.Write(equip.Armor);
-                writeBinary.Write(equip.Shoes);
-                writeBinary.Write(equip.Accessory1);
-                writeBinary.Write(equip.Accessory2);
-                writeBinary.Write(style.Hat);
-                writeBinary.Write(style.Facegear);
-                writeBinary.Write(style.Weapon);
-                writeBinary.Write(style.Shield);
+                writeBinary.Write((int)equip.Weapon);
+                writeBinary.Write((int)equip.Shield);
+                writeBinary.Write((int)equip.Armor);
+                writeBinary.Write((int)equip.Shoes);
+                writeBinary.Write((int)equip.Accessory1);
+                writeBinary.Write((int)equip.Accessory2);
+                writeBinary.Write((int)style.Hat);
+                writeBinary.Write((int)style.Facegear);
+                writeBinary.Write((int)style.Weapon);
+                writeBinary.Write((int)style.Shield);
                 writeBinary.Write(style.HatHidden);
                 writeBinary.Write(style.FacegearHidden);
                 writeBinary.Write(playerObject.LastTwoHander);
@@ -68,9 +69,9 @@ namespace SoG_SGreader
                 writeBinary.Write((int) playerObject.ItemsCount);
                 for (var i = 0; i != playerObject.ItemsCount; i++)
                 {
-                    writeBinary.Write((int) playerObject.Inventory[i].ItemID);
-                    writeBinary.Write(playerObject.Inventory[i].ItemCount);
-                    writeBinary.Write((int) playerObject.Inventory[i].ItemPos);
+                    writeBinary.Write((int) playerObject.Inventory[i].ID);
+                    writeBinary.Write(playerObject.Inventory[i].Count);
+                    writeBinary.Write((int) playerObject.Inventory[i].Position);
                 }
 
                 writeBinary.Write(playerObject.PickupNumberPool);

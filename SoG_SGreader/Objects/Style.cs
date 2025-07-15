@@ -4,10 +4,10 @@ namespace SoG_SGreader
     {
         public char Bodytype { get; set; }
         public int Hair { get; set; }
-        public int Hat { get; set; }
-        public int Facegear { get; set; }
-        public int Weapon { get; set; }
-        public int Shield { get; set; }
+        public SogItem Hat { get; set; }
+        public SogItem Facegear { get; set; }
+        public SogItem Weapon { get; set; }
+        public SogItem Shield { get; set; }
         public bool HatHidden { get; set; }
         public bool FacegearHidden { get; set; }
         public int HairColor { get; set; }

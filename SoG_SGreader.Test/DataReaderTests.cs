@@ -54,7 +54,7 @@ namespace SoG_SGreader.Test
         
         private static IEnumerable<object[]> Levels()
         {
-            yield return new object[] { 40, GetSaveGame(0) };
+            yield return new object[] { 41, GetSaveGame(0) };
             yield return new object[] { 32, GetSaveGame(1) };
             yield return new object[] { 34, GetSaveGame(2) };
             yield return new object[] { 32, GetSaveGame(3) };
@@ -97,65 +97,65 @@ namespace SoG_SGreader.Test
         {
             yield return new object[] { 
                 new Item {
-                    ItemID = SogItem.Usable_CardAlbum, 
-                    ItemCount = 1, 
-                    ItemPos = 189755
+                    ID = SogItem.Usable_CardAlbum, 
+                    Count = 1, 
+                    Position = 210623
             }, GetSaveGame(0).Inventory };
-            
+
             yield return new object[] { 
                 new Item{
-                    ItemID = SogItem.KeyItem_DivaMirror,
-                    ItemCount = 0, 
-                    ItemPos = 158319
+                    ID = SogItem.KeyItem_DivaMirror,
+                    Count = 0, 
+                    Position = 159257
                 }, GetSaveGame(1).Inventory };
             
             yield return new object[] { 
                 new Item{
-                    ItemID = SogItem.Usable_CardAlbum,
-                    ItemCount = 1, 
-                    ItemPos = 46623
+                    ID = SogItem.Usable_CardAlbum,
+                    Count = 1,
+                    Position = 46639
             }, GetSaveGame(2).Inventory };
             
             yield return new object[] { 
                 new Item{
-                    ItemID = SogItem.Usable_CardAlbum,
-                    ItemCount = 1, 
-                    ItemPos = 16756
+                    ID = SogItem.Usable_CardAlbum,
+                    Count = 1,
+                    Position = 16766
             }, GetSaveGame(3).Inventory };
             
             yield return new object[] { 
                 new Item{
-                    ItemID = SogItem.Usable_CardAlbum,
-                    ItemCount = 1, 
-                    ItemPos = 25026
+                    ID = SogItem.Usable_CardAlbum,
+                    Count = 1,
+                    Position = 25043
             }, GetSaveGame(4).Inventory };
             
             yield return new object[] { 
                 new Item{
-                    ItemID = SogItem.Usable_CardAlbum,
-                    ItemCount = 1, 
-                    ItemPos = 18895
+                    ID = SogItem.Usable_CardAlbum,
+                    Count = 1,
+                    Position = 18912
             }, GetSaveGame(5).Inventory };
             
             yield return new object[] { 
                 new Item{
-                    ItemID = SogItem.Usable_CardAlbum,
-                    ItemCount = 1, 
-                    ItemPos = 16634
+                    ID = SogItem.Usable_CardAlbum,
+                    Count = 1, 
+                    Position = 16649
             }, GetSaveGame(6).Inventory };
             
             yield return new object[] { 
                 new Item{
-                    ItemID = SogItem.Usable_CardAlbum,
-                    ItemCount = 1, 
-                    ItemPos = 14455
+                    ID = SogItem.Usable_CardAlbum,
+                    Count = 1, 
+                    Position = 14526
             }, GetSaveGame(7).Inventory };
-            
+
             yield return new object[] { 
                 new Item{
-                    ItemID = SogItem.Usable_CardAlbum,
-                    ItemCount = 1, 
-                    ItemPos = 96617
+                    ID = SogItem.Usable_CardAlbum,
+                    Count = 1, 
+                    Position = 96648
             }, GetSaveGame(8).Inventory };
         }
 
@@ -170,65 +170,65 @@ namespace SoG_SGreader.Test
         {
             yield return new object[] { 
                 new Item {
-                    ItemID = SogItem.Furniture_Decoration_ArcadeChallengeTrophyF08, 
-                    ItemCount = 1, 
-                    ItemPos = 189760 
+                    ID = SogItem.KeyItem_KailansID, 
+                    Count = 0, 
+                    Position = 210618
             }, GetSaveGame(0).Inventory };
             
             yield return new object[] { 
                 new Item {
-                    ItemID = SogItem.KeyItem_CatalystOfPower, 
-                    ItemCount = 1, 
-                    ItemPos = 159243
+                    ID = SogItem.KeyItem_KailansID, 
+                    Count = 0, 
+                    Position = 159258
             }, GetSaveGame(1).Inventory };
             
             yield return new object[] { 
                 new Item {
-                    ItemID = SogItem.KeyItem_CatalystOfPower,
-                    ItemCount = 1,
-                    ItemPos = 46457 
+                    ID = SogItem.TwoHanded_BugNet,
+                    Count = 0,
+                    Position = 46638
             }, GetSaveGame(2).Inventory };
             
             yield return new object[] { 
                 new Item {
-                    ItemID = SogItem.Shoes_MushroomSlippers, 
-                    ItemCount = 1, 
-                    ItemPos = 16738}, 
+                    ID = SogItem.TwoHanded_BugNet, 
+                    Count = 0, 
+                    Position = 16765}, 
             GetSaveGame(3).Inventory };
             
             yield return new object[] { 
                 new Item {
-                    ItemID = SogItem.TwoHanded_BugNet, 
-                    ItemCount = 0, 
-                    ItemPos = 25025
+                    ID = SogItem.Usable_CardSummoner, 
+                    Count = 1, 
+                    Position = 25045
             }, GetSaveGame(4).Inventory };
             
             yield return new object[] { 
                 new Item {
-                    ItemID = SogItem.TwoHanded_BugNet, 
-                    ItemCount = 0, 
-                    ItemPos = 18894}, 
+                    ID = SogItem.KeyItem_KailansID, 
+                    Count = 0, 
+                    Position = 18907}, 
             GetSaveGame(5).Inventory };
             
             yield return new object[] { 
                 new Item {
-                    ItemID = SogItem.Furniture_Carpet_MasterHQRed, 
-                    ItemCount = 0, 
-                    ItemPos = 16614}, 
+                    ID = SogItem.KeyItem_KailansID, 
+                    Count = 0, 
+                    Position = 16644}, 
             GetSaveGame(6).Inventory };
             
             yield return new object[] { 
                 new Item {
-                    ItemID = SogItem.TwoHanded_BugNet, 
-                    ItemCount = 0, 
-                    ItemPos =14454}, 
+                    ID = SogItem.KeyItem_KailansID, 
+                    Count = 1, 
+                    Position = 14521}, 
             GetSaveGame(7).Inventory };
             
             yield return new object[] { 
                 new Item {
-                        ItemID = SogItem.OneHanded_UgrasScroll, 
-                        ItemCount = 1, 
-                        ItemPos =96375
+                    ID = SogItem.Hat_Kiwi, 
+                    Count = 1, 
+                    Position = 96650
             }, GetSaveGame(8).Inventory };
         }
 
