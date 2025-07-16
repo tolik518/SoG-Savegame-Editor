@@ -1,8 +1,10 @@
-﻿using System;
+using System;
+using System.IO;
+using SoG_SGreader.Serialization;
 
 namespace SoG_SGreader
 {
-    public class Item
+    public class Item : IBinarySerializable
     {
         public SogItem ID { get; set; }
         public int Count { get; set; }
@@ -89,6 +91,20 @@ namespace SoG_SGreader
         public string GetItemName(bool withoutPlusses = false)
         {
             return GetNameById(ID, withoutPlusses);
+        }
+
+        public void Serialize(BinaryWriter writer)
+        {
+            writer.Write((int)ID);
+            writer.Write(Count);
+            writer.Write(Position);
+        }
+
+        public void Deserialize(BinaryReader reader)
+        {
+            ID = (SogItem)reader.ReadInt32();
+            Count = reader.ReadInt32();
+            Position = reader.ReadUInt32();
         }
     }
 }
