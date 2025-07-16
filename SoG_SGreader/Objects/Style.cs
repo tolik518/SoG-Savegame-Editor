@@ -17,12 +17,12 @@ namespace SoG_SGreader
         public SogItem Accessory2 { get; set; }
         public bool HatHidden { get; set; }
         public bool FacegearHidden { get; set; }
-        public int HairColor { get; set; }
-        public int SkinColor { get; set; }
-        public int PonchoColor { get; set; }
-        public int ShirtColor { get; set; }
-        public int PantsColor { get; set; }
-        public int Sex { get; set; }
+        public byte HairColor { get; set; }
+        public byte SkinColor { get; set; }
+        public byte PonchoColor { get; set; }
+        public byte ShirtColor { get; set; }
+        public byte PantsColor { get; set; }
+        public byte Sex { get; set; }
 
         public void Serialize(BinaryWriter writer)
         {
@@ -52,12 +52,12 @@ namespace SoG_SGreader
             Shield = (SogItem)reader.ReadInt32();
             HatHidden = reader.ReadBoolean();
             FacegearHidden = reader.ReadBoolean();
-            HairColor = reader.ReadInt32();
-            SkinColor = reader.ReadInt32();
-            PonchoColor = reader.ReadInt32();
-            ShirtColor = reader.ReadInt32();
-            PantsColor = reader.ReadInt32();
-            Sex = reader.ReadInt32();
+            HairColor = reader.ReadByte();
+            SkinColor = reader.ReadByte();
+            PonchoColor = reader.ReadByte();
+            ShirtColor = reader.ReadByte();
+            PantsColor = reader.ReadByte();
+            Sex = reader.ReadByte();
         }
     }
 }

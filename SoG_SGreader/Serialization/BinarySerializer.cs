@@ -20,16 +20,7 @@ namespace SoG_SGreader.Serialization
         /// <returns>Deserialized Player object</returns>
         public static Player DeserializePlayer(string fileName, ITextBoxWrapper textConsole)
         {
-            var player = new Player();
-            
-            using (var fileStream = new FileStream(fileName, FileMode.Open))
-            using (var reader = new BinaryReader(fileStream))
-            {
-                textConsole.AppendText("\r\nFilesize: " + new FileInfo(fileName).Length);
-                player.Deserialize(reader);
-            }
-            
-            return player;
+            return SoG_SGreader.DataReader.ReadFromFile(fileName, textConsole);
         }
 
         /// <summary>
