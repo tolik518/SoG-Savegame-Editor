@@ -1,10 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Xunit;
 using Moq;
 using SoG_SGreader.Wrapper;
+using Newtonsoft.Json;
 
 namespace SoG_SGreader.Test
 {
@@ -14,11 +15,7 @@ namespace SoG_SGreader.Test
 
         private static Player GetSaveGame(int saveGameNumber)
         {
-            var fakeTextBox = new FakeTextBox();
-            
             string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName;
-
-            // Exception for GitHub Actions Test Runner
             if (Environment.GetEnvironmentVariable("GITHUB_WORKSPACE") != null) {
                 projectDirectory = Environment.GetEnvironmentVariable("GITHUB_WORKSPACE");
             }
@@ -26,10 +23,9 @@ namespace SoG_SGreader.Test
             {
                 projectDirectory = Path.Combine(projectDirectory, "SoG_SGreader");
             }
-
-            string filePath = Path.Combine(projectDirectory, "SoG_SGreader.Test", "SaveGames", saveGameNumber + ".cha");
-
-            return DataReader.ReadFromFile(filePath, fakeTextBox);
+            string filePath = Path.Combine(projectDirectory, "SoG_SGreader.Test", "SaveGames", saveGameNumber + ".json");
+            string json = File.ReadAllText(filePath);
+            return JsonConvert.DeserializeObject<Player>(json);
         }
 
         private static IEnumerable<object[]> Nicknames()

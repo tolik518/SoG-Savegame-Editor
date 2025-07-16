@@ -1,10 +1,12 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using SoG_SGreader.Wrapper;
 using CommandLine;
 using System.Diagnostics;
 using System.Security.Cryptography;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace SoG_SGreader
 {
@@ -86,11 +88,16 @@ namespace SoG_SGreader
                 Console.WriteLine("Invalid savegame path.");
                 return;
             }
-            
-            CommandLineTextBox commandLineTextBox = new CommandLineTextBox();
             try
             {
-                DataReader.ReadFromFile(savegamePath, commandLineTextBox);
+                // Deserialize Player from JSON
+                string json = File.ReadAllText(savegamePath);
+                Player playerObject = JsonConvert.DeserializeObject<Player>(json);
+                // Output summary (implement as needed)
+                Console.WriteLine($"Nickname: {playerObject.Nickname}");
+                Console.WriteLine($"Level: {playerObject.Level}");
+                Console.WriteLine($"Birthday: {playerObject.BirthdayDay}.{playerObject.BirthdayMonth}.1081");
+                // Add more summary fields as needed
             }
             catch (Exception e)
             {
@@ -113,13 +120,12 @@ namespace SoG_SGreader
                 Console.WriteLine("Invalid savegame path.");
                 return;
             }
-
-            FakeTextBox fakeTextBox = new FakeTextBox();
             try
             {
-                Player playerObject = DataReader.ReadFromFile(savegamePath, fakeTextBox);
-                string json = JsonHandler.GetJson(playerObject);
-                Console.WriteLine(json);
+                string json = File.ReadAllText(savegamePath);
+                Player playerObject = JsonConvert.DeserializeObject<Player>(json);
+                string outputJson = JsonHandler.GetJson(playerObject);
+                Console.WriteLine(outputJson);
             }
             catch (Exception e)
             {
