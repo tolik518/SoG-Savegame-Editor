@@ -11,6 +11,10 @@ namespace SoG_SGreader
         public SogItem Facegear { get; set; }
         public SogItem Weapon { get; set; }
         public SogItem Shield { get; set; }
+        public SogItem Armor { get; set; }
+        public SogItem Shoes { get; set; }
+        public SogItem Accessory1 { get; set; }
+        public SogItem Accessory2 { get; set; }
         public bool HatHidden { get; set; }
         public bool FacegearHidden { get; set; }
         public int HairColor { get; set; }
@@ -24,6 +28,12 @@ namespace SoG_SGreader
         {
             writer.Write(Bodytype);
             writer.Write(Hair);
+            writer.Write((int)Weapon);
+            writer.Write((int)Shield);
+            writer.Write((int)Armor);
+            writer.Write((int)Shoes);
+            writer.Write((int)Accessory1);
+            writer.Write((int)Accessory2);
             writer.Write((int)Hat);
             writer.Write((int)Facegear);
             writer.Write((int)Weapon);
@@ -42,6 +52,12 @@ namespace SoG_SGreader
         {
             Bodytype = reader.ReadChar();
             Hair = reader.ReadInt32();
+            Weapon = (SogItem)reader.ReadInt32();
+            Shield = (SogItem)reader.ReadInt32();
+            Armor = (SogItem)reader.ReadInt32();
+            Shoes = (SogItem)reader.ReadInt32();
+            Accessory1 = (SogItem)reader.ReadInt32();
+            Accessory2 = (SogItem)reader.ReadInt32();
             Hat = (SogItem)reader.ReadInt32();
             Facegear = (SogItem)reader.ReadInt32();
             Weapon = (SogItem)reader.ReadInt32();

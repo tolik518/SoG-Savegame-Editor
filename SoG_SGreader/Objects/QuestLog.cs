@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +8,7 @@ namespace SoG_SGreader
 {
     internal class QuestLog
     {
-        public SogQuest Id;
-        public byte ObjectiveGroup;
+        public SogQuest Id { get; set; }
+        public byte ObjectiveGroup { get; set; }
     }
 }

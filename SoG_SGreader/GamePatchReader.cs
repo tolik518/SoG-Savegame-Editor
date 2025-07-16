@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.IO;
 using System.Reflection;
@@ -29,7 +29,7 @@ namespace SoG_SGreader
 
             txtConsole.AppendText("\r\nGame patch-version wont be read.");
             return "?.???a";
-            return await Task.Run(() => GetLatestGamePatch(exeFile, txtConsole)); // Run the heavy reflection code on a background thread
+            // return await Task.Run(() => GetLatestGamePatch(exeFile, txtConsole)); // Run the heavy reflection code on a background thread
         }
 
         private static string GetGameDataPath(ITextBoxWrapper txtConsole)

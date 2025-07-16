@@ -23,7 +23,6 @@ namespace SoG_SGreader
                 Plusses = value;
             }
         }
-        private bool isPlusItem;
         public const int PlusItemStart = 1000000;
         
         public override bool Equals(object obj)
