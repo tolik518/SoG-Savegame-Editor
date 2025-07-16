@@ -1,10 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using SoG_SGreader.Serialization;
+using System.IO;
 
 namespace SoG_SGreader
 {
-    public class Player
+    public class Player : IBinarySerializable
     {
         public int MagicByte { get; set; }
         public int LastTwoHander { get; set; }
@@ -153,6 +155,20 @@ namespace SoG_SGreader
         internal bool HasCaughtFish(SogItem sogItem)
         {
             return FishCaught.Any(fish => fish.FishID == sogItem);
+        }
+
+        public void Serialize(BinaryWriter writer)
+        {
+            // TODO: Implement serialization logic matching the original DataWriter/DataReader order
+            // For now, throw to indicate not implemented
+            throw new NotImplementedException();
+        }
+
+        public void Deserialize(BinaryReader reader)
+        {
+            // TODO: Implement deserialization logic matching the original DataReader order
+            // For now, throw to indicate not implemented
+            throw new NotImplementedException();
         }
     }
 }
