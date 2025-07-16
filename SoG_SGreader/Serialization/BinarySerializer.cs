@@ -30,11 +30,8 @@ namespace SoG_SGreader.Serialization
         /// <param name="fileName">Path to the binary file</param>
         public static void SerializePlayer(Player player, string fileName)
         {
-            using (var fileStream = new FileStream(fileName, FileMode.Create))
-            using (var writer = new BinaryWriter(fileStream))
-            {
-                player.Serialize(writer);
-            }
+            var dataWriter = new SoG_SGreader.DataWriter(player);
+            dataWriter.WriteToFile(fileName);
         }
 
         /// <summary>

@@ -1,4 +1,4 @@
-﻿using SoG_SGreader.Wrapper;
+using SoG_SGreader.Wrapper;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -613,7 +613,7 @@ namespace SoG_SGreader
             playerObject.BirthdayDay = (int)numBirthdayDay.Value;
             playerObject.BirthdayMonth = (int)numBirtdayMonth.Value;
 
-            playerObject.Style.Sex = rbMale.Checked ? 1 : 0;
+            playerObject.Style.Sex = (byte)(rbMale.Checked ? 1 : 0);
 
             playerObject.Cards.Clear();
             foreach (DataGridViewRow row in dataGridCards.Rows)
