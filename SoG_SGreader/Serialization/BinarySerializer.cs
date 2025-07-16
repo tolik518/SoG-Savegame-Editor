@@ -20,7 +20,13 @@ namespace SoG_SGreader.Serialization
         /// <returns>Deserialized Player object</returns>
         public static Player DeserializePlayer(string fileName, ITextBoxWrapper textConsole)
         {
-            return SoG_SGreader.DataReader.ReadFromFile(fileName, textConsole);
+            using (FileStream fileStream = new FileStream(fileName, FileMode.Open))
+            using (BinaryReader reader = new BinaryReader(fileStream))
+            {
+                var player = new Player();
+                player.Deserialize(reader);
+                return player;
+            }
         }
 
         /// <summary>
@@ -30,8 +36,11 @@ namespace SoG_SGreader.Serialization
         /// <param name="fileName">Path to the binary file</param>
         public static void SerializePlayer(Player player, string fileName)
         {
-            var dataWriter = new SoG_SGreader.DataWriter(player);
-            dataWriter.WriteToFile(fileName);
+            using (FileStream fileStream = new FileStream(fileName, FileMode.Create))
+            using (BinaryWriter writer = new BinaryWriter(fileStream))
+            {
+                player.Serialize(writer);
+            }
         }
 
         /// <summary>
