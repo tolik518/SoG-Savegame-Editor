@@ -1,8 +1,12 @@
-﻿using System.Drawing;
+using System.Drawing;
 using System.IO;
 
 namespace SoG_SGreader
 {
+    /// <summary>
+    /// DEPRECATED: Use SaveGameSerializer.SaveToBinary() instead
+    /// </summary>
+    [Obsolete("Use SaveGameSerializer.SaveToBinary() instead. This class will be removed in a future version.")]
     public class DataWriter
     {
         private readonly Player playerObject;

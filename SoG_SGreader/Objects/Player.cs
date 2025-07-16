@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -6,89 +6,239 @@ namespace SoG_SGreader
 {
     public class Player
     {
+        [BinaryOrder(1)]
         public int MagicByte { get; set; }
+        
+        [BinaryOrder(2)]
+        public Equip Equip { get; set; } = new Equip();
+        
+        [BinaryOrder(3)]
+        public Style Style { get; set; } = new Style();
+        
+        [BinaryOrder(4)]
         public int LastTwoHander { get; set; }
+        
+        [BinaryOrder(5)]
         public int LastOneHander { get; set; }
+        
+        [BinaryOrder(6)]
         public int LastBow { get; set; }
         
-        public List<object> Quickslots = new List<object>();
-        public int NicknameLength { get; set; }
+        [BinaryOrder(7)]
+        public List<object> Quickslots { get; set; } = new List<object>();
+        
+        [BinaryOrder(8)]
+        public byte NicknameLength { get; set; }
+        
+        [BinaryOrder(9)]
         public string Nickname { get; set; }
         
-        public Equip Equip = new Equip();
-        public Style Style = new Style();
+        [BinaryOrder(10)]
         public int ItemsCount { get; set; }
-        public List<Item> Inventory;
+        
+        [BinaryOrder(11)]
+        public List<Item> Inventory { get; set; }
+        
+        [BinaryOrder(12)]
         public uint PickupNumberPool { get; set; }
+        
+        [BinaryOrder(13)]
         public int MerchantItemsCount { get; set; }
-        public List<MerchantItem> MerchantItems;
+        
+        [BinaryOrder(14)]
+        public List<MerchantItem> MerchantItems { get; set; }
 
+        [BinaryOrder(15)]
         public byte NGPlus { get; set; }
+        
+        [BinaryOrder(16)]
         public byte PinsEquippedCount { get; set; }
-        public List<SogPin> PinsEquipped;
+        
+        [BinaryOrder(17)]
+        public List<SogPin> PinsEquipped { get; set; }
+        
+        [BinaryOrder(18)]
         public byte PinsOnShelfCount { get; set; }
-        public List<SogPin> PinsOnShelf;
+        
+        [BinaryOrder(19)]
+        public List<SogPin> PinsOnShelf { get; set; }
+        
+        [BinaryOrder(20)]
         public ushort PinsSeenCount { get; set; }
-        public List<SogPin> PinsSeen;
+        
+        [BinaryOrder(21)]
+        public List<SogPin> PinsSeen { get; set; }
+        
+        [BinaryOrder(22)]
         public ushort PinsLatestCount { get; set; }
-        public List<SogPin> PinsLatest;
+        
+        [BinaryOrder(23)]
+        public List<SogPin> PinsLatest { get; set; }
 
+        [BinaryOrder(24)]
         public int CardsCount { get; set; }
-        public List<KeyValuePair<Card, ushort>> Cards;
+        
+        [BinaryOrder(25)]
+        public List<KeyValuePair<Card, ushort>> Cards { get; set; }
+        
+        [BinaryOrder(26)]
         public int TreasureMapsCount { get; set; }
-        public List<TreasureMap> TreasureMaps;
+        
+        [BinaryOrder(27)]
+        public List<TreasureMap> TreasureMaps { get; set; }
+        
+        [BinaryOrder(28)]
         public int TreasureFoundCount { get; set; }
-        public List<TreasureFound> TreasureFound;
+        
+        [BinaryOrder(29)]
+        public List<TreasureFound> TreasureFound { get; set; }
+        
+        [BinaryOrder(30)]
         public int SkillsCount { get; set; }
-        public List<Skill> Skills;
+        
+        [BinaryOrder(31)]
+        public List<Skill> Skills { get; set; }
+        
+        [BinaryOrder(32)]
         public int SkillsOverLevelingCount { get; set; }
-        public List<Skill> SkillsOverLeveling;
+        
+        [BinaryOrder(33)]
+        public List<Skill> SkillsOverLeveling { get; set; }
+        
+        [BinaryOrder(34)]
         public short Level { get; set; }
+        
+        [BinaryOrder(35)]
         public int ExpCurrent { get; set; }
+        
+        [BinaryOrder(36)]
         public int ExpUnknown0 { get; set; }
+        
+        [BinaryOrder(37)]
         public int ExpUnknown1 { get; set; }
+        
+        [BinaryOrder(38)]
         public short SkillTalentPoints { get; set; }
+        
+        [BinaryOrder(39)]
         public short SkillSilverPoints { get; set; }
+        
+        [BinaryOrder(40)]
         public short SkillGoldPoints { get; set; }
+        
+        [BinaryOrder(41)]
         public int Cash { get; set; }
+        
+        [BinaryOrder(42)]
         public byte PetsCount { get; set; }
-        public List<Pet> Pets;
+        
+        [BinaryOrder(43)]
+        public List<Pet> Pets { get; set; }
+        
+        [BinaryOrder(44)]
         public int PetsSelected { get; set; }
+        
+        [BinaryOrder(45)]
         public byte PetHidden { get; set; }
+        
+        [BinaryOrder(46)]
         public ushort QuestsCount { get; set; }
-        public List<Quest> Quests;
+        
+        [BinaryOrder(47)]
+        public List<Quest> Quests { get; set; }
+        
+        [BinaryOrder(48)]
         public ushort EnemiesSeenCount { get; set; }
-        public List<Enemy> EnemiesSeen;
+        
+        [BinaryOrder(49)]
+        public List<Enemy> EnemiesSeen { get; set; }
+        
+        [BinaryOrder(50)]
         public ushort UnknownVariable02Count { get; set; }     //something to do with challenges?
-        public List<UnknownVariable02> UnknownVariables02;
+        
+        [BinaryOrder(51)]
+        public List<UnknownVariable02> UnknownVariables02 { get; set; }
+        
+        [BinaryOrder(52)]
         public int RobinBowHighscore { get; set; }
+        
+        [BinaryOrder(53)]
         public ushort TrophiesCount { get; set; }
 
-        public List<Trophy> Trophies;
+        [BinaryOrder(54)]
+        public List<Trophy> Trophies { get; set; }
+        
+        [BinaryOrder(55)]
         public ushort ItemsSeenCount { get; set; }
-        public List<ItemSeen> ItemsSeen;
+        
+        [BinaryOrder(56)]
+        public List<ItemSeen> ItemsSeen { get; set; }
+        
+        [BinaryOrder(57)]
         public ushort ItemsCraftedCount { get; set; }
-        public List<ItemCrafted> ItemsCrafted;
+        
+        [BinaryOrder(58)]
+        public List<ItemCrafted> ItemsCrafted { get; set; }
+        
+        [BinaryOrder(59)]
         public ushort FishiesCaughtCount { get; set; }
-        public List<FishCaught> FishCaught;
+        
+        [BinaryOrder(60)]
+        public List<FishCaught> FishCaught { get; set; }
+        
+        [BinaryOrder(61)]
         public ushort KilledEnemiesCount { get; set; }
-        public List<KilledEnemy> KilledEnemies;
+        
+        [BinaryOrder(62)]
+        public List<KilledEnemy> KilledEnemies { get; set; }
+        
+        [BinaryOrder(63)]
         public byte PotionsMax { get; set; }
+        
+        [BinaryOrder(64)]
         public byte PotionsEquipped { get; set; }
-        public List<Potion> Potions;
+        
+        [BinaryOrder(65)]
+        public List<Potion> Potions { get; set; }
+        
+        [BinaryOrder(66)]
         public int BirthdayMonth { get; set; }
+        
+        [BinaryOrder(67)]
         public int BirthdayDay { get; set; }
+        
+        [BinaryOrder(68)]
         public uint UniquePlayerId { get; set; }
+        
+        [BinaryOrder(69)]
         public int LastAutosave { get; set; }
+        
+        [BinaryOrder(70)]
         public int SaveUnknown { get; set; } // saving mechanism related
+        
+        [BinaryOrder(71)]
         public int PlayTimeTotal { get; set; } // saved in frames
+        
+        [BinaryOrder(72)]
         public byte PhaseShiftStuff { get; set; } //??
+        
+        [BinaryOrder(73)]
         public short CharacterFlagCount { get; set; }
-        public List<CharacterFlags> CharacterFlags;
+        
+        [BinaryOrder(74)]
+        public List<CharacterFlags> CharacterFlags { get; set; }
+        
+        [BinaryOrder(75)]
         public short FlagsCount { get; set; }
-        public List<Flag> Flags;
+        
+        [BinaryOrder(76)]
+        public List<Flag> Flags { get; set; }
+        
+        [BinaryOrder(77)]
         public byte HouseStylesCount { get; set; }
-        public List<HouseStyle> HouseStyles;
+        
+        [BinaryOrder(78)]
+        public List<HouseStyle> HouseStyles { get; set; }
         
         internal byte GetSkillLevel(SogSkill skillId)
         {

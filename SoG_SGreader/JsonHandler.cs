@@ -5,6 +5,9 @@ using Newtonsoft.Json.Converters;
 
 namespace SoG_SGreader
 {
+    /// <summary>
+    /// Legacy JsonHandler - now uses the unified SaveGameSerializer
+    /// </summary>
     public static class JsonHandler
     {
         private static bool IsDirectory(string jsonFilePath)
@@ -19,13 +22,11 @@ namespace SoG_SGreader
             }
         }
         
+        /// <summary>
+        /// Saves player data to JSON format using the unified serializer
+        /// </summary>
         public static string SaveGameToJson(Player player, string jsonFilePath)
         {
-            JsonSerializer serializer = new JsonSerializer();
-            serializer.NullValueHandling = NullValueHandling.Include;
-            serializer.Formatting = Formatting.Indented;
-            serializer.Converters.Add(new StringEnumConverter());
-            
             string jsonPath = jsonFilePath;
             
             if (IsDirectory(jsonFilePath))
@@ -41,33 +42,32 @@ namespace SoG_SGreader
                 throw new Exception("File already exists");
             }
             
-            using (StreamWriter sw = new StreamWriter(jsonPath))
-            using (JsonWriter writer = new JsonTextWriter(sw))
-            {
-                serializer.Serialize(writer, player);
-            }
-
+            SaveGameSerializer.SaveToJson(player, jsonPath);
             return jsonPath;
         }
         
+        /// <summary>
+        /// Gets JSON string representation of player data
+        /// </summary>
         public static string GetJson(Player player)
         {
-            JsonSerializer serializer = new JsonSerializer();
-            serializer.NullValueHandling = NullValueHandling.Include;
-            serializer.Formatting = Formatting.Indented;
-            serializer.Converters.Add(new StringEnumConverter()); // TODO: make this optional
             try
             {
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.NullValueHandling = NullValueHandling.Include;
+                serializer.Formatting = Formatting.Indented;
+                serializer.Converters.Add(new StringEnumConverter());
+                
                 StringWriter sw = new StringWriter();
                 using (JsonWriter writer = new JsonTextWriter(sw))
                 {
                     serializer.Serialize(writer, player);
                 }
                 return sw.ToString();
-
             }
             catch (Exception e)
             {
+                JsonSerializer serializer = new JsonSerializer();
                 StringWriter sw = new StringWriter();
                 using (JsonWriter writer = new JsonTextWriter(sw))
                 {
@@ -75,6 +75,14 @@ namespace SoG_SGreader
                 }
                 return sw.ToString();
             }
+        }
+        
+        /// <summary>
+        /// Loads player data from JSON format using the unified serializer
+        /// </summary>
+        public static Player LoadGameFromJson(string jsonFilePath)
+        {
+            return SaveGameSerializer.LoadFromJson(jsonFilePath);
         }
     }
 }

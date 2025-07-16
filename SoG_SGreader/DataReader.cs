@@ -1,9 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
 namespace SoG_SGreader
 {
+    /// <summary>
+    /// DEPRECATED: Use SaveGameSerializer.LoadFromBinary() instead
+    /// </summary>
+    [Obsolete("Use SaveGameSerializer.LoadFromBinary() instead. This class will be removed in a future version.")]
     public static class DataReader
     {
         public static Player ReadFromFile(string fileName, ITextBoxWrapper txtConsole)
