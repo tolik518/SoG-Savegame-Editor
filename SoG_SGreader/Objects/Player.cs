@@ -170,10 +170,6 @@ namespace SoG_SGreader
             writer.Write(Style.Hair);
             writer.Write((int)Style.Weapon);
             writer.Write((int)Style.Shield);
-            writer.Write((int)Style.Armor);
-            writer.Write((int)Style.Shoes);
-            writer.Write((int)Style.Accessory1);
-            writer.Write((int)Style.Accessory2);
             writer.Write((int)Style.Hat);
             writer.Write((int)Style.Facegear);
             writer.Write((int)Style.Weapon);
@@ -324,10 +320,6 @@ namespace SoG_SGreader
             Style.Hair = reader.ReadInt32();
             Style.Weapon = (SogItem)reader.ReadInt32();
             Style.Shield = (SogItem)reader.ReadInt32();
-            Style.Armor = (SogItem)reader.ReadInt32();
-            Style.Shoes = (SogItem)reader.ReadInt32();
-            Style.Accessory1 = (SogItem)reader.ReadInt32();
-            Style.Accessory2 = (SogItem)reader.ReadInt32();
             Style.Hat = (SogItem)reader.ReadInt32();
             Style.Facegear = (SogItem)reader.ReadInt32();
             Style.Weapon = (SogItem)reader.ReadInt32();
