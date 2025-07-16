@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -29,7 +29,7 @@ namespace SoG_SGreader
                 string savegame = Path.Combine(sFilePath, i + ".cha");
                 if (File.Exists(savegame))
                 {
-                    PlayerPreview player = DataReader.GetPlayerPreview(savegame);
+                    PlayerPreview player = SaveGameSerializer.GetPlayerPreview(savegame);
                     string[] item = new string[] { i.ToString(), player.GetSex(), player.Nickname };
                     lstvSaveGames.Items.Add(new ListViewItem(item, 0));
                 }

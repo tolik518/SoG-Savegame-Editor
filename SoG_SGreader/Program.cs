@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using SoG_SGreader.Wrapper;
@@ -90,7 +90,7 @@ namespace SoG_SGreader
             CommandLineTextBox commandLineTextBox = new CommandLineTextBox();
             try
             {
-                DataReader.ReadFromFile(savegamePath, commandLineTextBox);
+                SaveGameSerializer.Deserialize(savegamePath, commandLineTextBox);
             }
             catch (Exception e)
             {
@@ -117,7 +117,7 @@ namespace SoG_SGreader
             FakeTextBox fakeTextBox = new FakeTextBox();
             try
             {
-                Player playerObject = DataReader.ReadFromFile(savegamePath, fakeTextBox);
+                Player playerObject = SaveGameSerializer.Deserialize(savegamePath, fakeTextBox);
                 string json = JsonHandler.GetJson(playerObject);
                 Console.WriteLine(json);
             }

@@ -1,14 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Xunit;
 using Moq;
 using SoG_SGreader.Wrapper;
+using SoG_SGreader;
 
 namespace SoG_SGreader.Test
 {
-    public class DataReaderTests
+    public class SaveGameSerializerTests
     {
         private static List<Player> players = new List<Player>();
 
@@ -29,7 +30,7 @@ namespace SoG_SGreader.Test
 
             string filePath = Path.Combine(projectDirectory, "SoG_SGreader.Test", "SaveGames", saveGameNumber + ".cha");
 
-            return DataReader.ReadFromFile(filePath, fakeTextBox);
+            return SaveGameSerializer.Deserialize(filePath, fakeTextBox);
         }
 
         private static IEnumerable<object[]> Nicknames()

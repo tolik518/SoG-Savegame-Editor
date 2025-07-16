@@ -1,4 +1,4 @@
-﻿using SoG_SGreader.Wrapper;
+using SoG_SGreader.Wrapper;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -64,7 +64,7 @@ namespace SoG_SGreader
 
             // TODO: This is a workaround to get the textbox into the wrapper (for easier testing)
             var txtConsoleWrapped = new UITextBox(txtConsole);
-            playerObject = DataReader.ReadFromFile(OpenedSaveGamePath, txtConsoleWrapped);
+            playerObject = SaveGameSerializer.Deserialize(OpenedSaveGamePath, txtConsoleWrapped);
 
             saveToolStripMenuItem.Enabled = true;
 
@@ -867,8 +867,7 @@ namespace SoG_SGreader
                 }
 
                 GetDataFromFields();
-                DataWriter dataWriter = new DataWriter(playerObject);
-                dataWriter.WriteToFile(sFilename);
+                SaveGameSerializer.Serialize(playerObject, sFilename);
 
                 txtConsole.AppendText("\r\n\r\nFile was saved successfully under: ");
                 txtConsole.AppendText("\r\n" + sFilename);
