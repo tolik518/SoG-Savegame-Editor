@@ -16,19 +16,19 @@ jobs:
         uses: NuGet/setup-nuget@v1.2.0
 
       - name: Restore NuGet packages
-        run: nuget restore SoG_SGreader.sln
+        run: nuget restore SoG_Savegame_Editor.sln
 
       - name: Build with MSBuild
-        run: msbuild /p:Configuration=Release /m /p:BuildInParallel=true /p:BuildIncrementally=true SoG_SGreader.sln
+        run: msbuild /p:Configuration=Release /m /p:BuildInParallel=true /p:BuildIncrementally=true SoG_Savegame_Editor.sln
 
       - name: Setup VSTest Console
         uses: darenm/Setup-VSTest@v1.2
 
       - name: Test
-        run: vstest.console.exe /TestAdapterPath:"packages" SoG_SGreader.Test\bin\Release\SoG_SGreader.Test.dll
+        run: vstest.console.exe /TestAdapterPath:"packages" SoG_Savegame_Editor.Test\bin\Release\SoG_Savegame_Editor.Test.dll
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: SoG_SGreader
-          path: SoG_SGreader\bin
+          name: SoG_Savegame_Editor
+          path: SoG_Savegame_Editor\bin
