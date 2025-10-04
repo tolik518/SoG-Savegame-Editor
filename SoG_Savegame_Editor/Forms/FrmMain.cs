@@ -1440,55 +1440,96 @@ namespace SoG_Savegame_Editor
                 return;
             }
 
+            var result = ShowAddPinDialog(out SogPin pin, out string target);
+            if (!result)
+            {
+                return;
+            }
+
+            try
+            {
+                AddPinToPlayer(pin, target);
+                PostAddPinUpdate(pin, target);
+            }
+            catch (Exception ex)
+            {
+                txtConsole.AppendText("\r\nError while adding pin: " + ex.Message);
+                MessageBox.Show("Failed to add pin. See console for details.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private bool ShowAddPinDialog(out SogPin selectedPin, out string targetList)
+        {
+            selectedPin = default;
+            targetList = null;
+
             using (var frm = new FrmAddPin())
             {
                 var dr = frm.ShowDialog(this);
                 if (dr != DialogResult.OK)
                 {
-                    return;
+                    return false;
                 }
 
-                var pin = frm.SelectedPin;
-                var target = frm.TargetList;
-
-                try
-                {
-                    switch (target)
-                    {
-                        case "PinsSeen":
-                            if (playerObject.PinsSeen == null) playerObject.PinsSeen = new List<SogPin>();
-                            if (!playerObject.PinsSeen.Contains(pin)) playerObject.PinsSeen.Add(pin);
-                            playerObject.PinsSeenCount = (ushort)playerObject.PinsSeen.Count;
-                            break;
-                        case "PinsOnShelf":
-                            if (playerObject.PinsOnShelf == null) playerObject.PinsOnShelf = new List<SogPin>();
-                            if (!playerObject.PinsOnShelf.Contains(pin)) playerObject.PinsOnShelf.Add(pin);
-                            playerObject.PinsOnShelfCount = (byte)playerObject.PinsOnShelf.Count;
-                            break;
-                        case "PinsEquipped":
-                            if (playerObject.PinsEquipped == null) playerObject.PinsEquipped = new List<SogPin>();
-                            if (!playerObject.PinsEquipped.Contains(pin)) playerObject.PinsEquipped.Add(pin);
-                            playerObject.PinsEquippedCount = (byte)playerObject.PinsEquipped.Count;
-                            break;
-                        case "PinsLatest":
-                            if (playerObject.PinsLatest == null) playerObject.PinsLatest = new List<SogPin>();
-                            if (!playerObject.PinsLatest.Contains(pin)) playerObject.PinsLatest.Add(pin);
-                            playerObject.PinsLatestCount = (ushort)playerObject.PinsLatest.Count;
-                            break;
-                        default:
-                            MessageBox.Show("Unknown target list.", "Add Pin", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                    }
-
-                    txtConsole.AppendText($"\r\nAdded pin {pin} to {target}.");
-                    saveToolStripMenuItem.Enabled = true;
-                }
-                catch (Exception ex)
-                {
-                    txtConsole.AppendText("\r\nError while adding pin: " + ex.Message);
-                    MessageBox.Show("Failed to add pin. See console for details.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                selectedPin = frm.SelectedPin;
+                targetList = frm.TargetList;
+                return true;
             }
+        }
+
+        private void AddPinToPlayer(SogPin pin, string target)
+        {
+            // Use delegate accessors to reduce repeated code and make the method concise.
+            Func<List<SogPin>> getList;
+            Action<int> setCount;
+
+            switch (target)
+            {
+                case "PinsSeen":
+                    getList = () =>
+                    {
+                        if (playerObject.PinsSeen == null) playerObject.PinsSeen = new List<SogPin>();
+                        return playerObject.PinsSeen;
+                    };
+                    setCount = cnt => playerObject.PinsSeenCount = (ushort)cnt;
+                    break;
+                case "PinsOnShelf":
+                    getList = () =>
+                    {
+                        if (playerObject.PinsOnShelf == null) playerObject.PinsOnShelf = new List<SogPin>();
+                        return playerObject.PinsOnShelf;
+                    };
+                    setCount = cnt => playerObject.PinsOnShelfCount = (byte)cnt;
+                    break;
+                case "PinsEquipped":
+                    getList = () =>
+                    {
+                        if (playerObject.PinsEquipped == null) playerObject.PinsEquipped = new List<SogPin>();
+                        return playerObject.PinsEquipped;
+                    };
+                    setCount = cnt => playerObject.PinsEquippedCount = (byte)cnt;
+                    break;
+                case "PinsLatest":
+                    getList = () =>
+                    {
+                        if (playerObject.PinsLatest == null) playerObject.PinsLatest = new List<SogPin>();
+                        return playerObject.PinsLatest;
+                    };
+                    setCount = cnt => playerObject.PinsLatestCount = (ushort)cnt;
+                    break;
+                default:
+                    throw new InvalidOperationException("Unknown target list.");
+            }
+
+            var list = getList();
+            if (!list.Contains(pin)) list.Add(pin);
+            setCount(list.Count);
+        }
+
+        private void PostAddPinUpdate(SogPin pin, string target)
+        {
+            txtConsole.AppendText($"\r\nAdded pin {pin} to {target}.");
+            saveToolStripMenuItem.Enabled = true;
         }
     }
 
