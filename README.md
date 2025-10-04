@@ -3,8 +3,8 @@
 </p>
 <h1 align="center">SoG Savegame Editor</h1>
 <p align="center"> 
-  <img src="https://img.shields.io/github/v/tag/tolik518/SoG_Savegame_Editor?label=latest%20version&style=flat-square">    
-  <img src="https://img.shields.io/github/downloads/tolik518/SoG_Savegame_Editor/total?style=flat-square"> 
+  <img src="https://img.shields.io/github/v/tag/tolik518/SoG-Savegame-Editor?label=latest%20version&style=flat-square">    
+  <img src="https://img.shields.io/github/downloads/tolik518/SoG-Savegame-Editor/total?style=flat-square"> 
 </p> 
 <p align="center"> 
 SoG Savegame Editor is a tool for editing <a href="https://store.steampowered.com/app/269770/Secrets_of_Grindea/">Secrets of Grindea</a> character savegames.
@@ -12,10 +12,10 @@ You can edit your nickname, skill points, gold, equipment, inventory, your pets 
 </p> 
 
 ## Download
-Head over to the releases if you are just here for the [download link](https://github.com/tolik518/SoG_Savegame_Editor/releases), then press on `Assets`   
+Head over to the releases if you are just here for the [download link](https://github.com/tolik518/SoG-Savegame-Editor/releases), then press on `Assets`   
 on the latest version and download the `SoG_Savegame_Editor.zip` file. 
 
-Or just [press here](https://github.com/tolik518/SoG_Savegame_Editor/releases/latest/download/SoG_Savegame_Editor.zip) to download the latest version.
+Or just [press here](https://github.com/tolik518/SoG-Savegame-Editor/releases/download/v0.9.0/SoG_SGeditor_v0.9.0.zip) to download the latest version.
 
 **Hint**: *You just want to just change your **name** and **gender** and are afraid of being tempted to cheat? Then it's better to use the stripped-down [Character Editor](https://github.com/tolik518/sog-character-editor)*
 
