@@ -5487,6 +5487,7 @@ namespace SoG_Savegame_Editor
             this.importToolStripMenuItem,
             this.exportAsToolStripMenuItem,
             this.openSavegameFolderToolStripMenuItem,
+            this.addPinToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -5535,6 +5536,14 @@ namespace SoG_Savegame_Editor
             this.openSavegameFolderToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.openSavegameFolderToolStripMenuItem.Text = "Open Savegame Location...";
             this.openSavegameFolderToolStripMenuItem.Click += new System.EventHandler(this.openSavegameFolderToolStripMenuItem_Click);
+            // 
+            // addPinToolStripMenuItem
+            // 
+            this.addPinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addPinToolStripMenuItem.Name = "addPinToolStripMenuItem";
+            this.addPinToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.addPinToolStripMenuItem.Text = "Add Pin...";
+            this.addPinToolStripMenuItem.Click += new System.EventHandler(this.AddPinToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -5909,6 +5918,7 @@ namespace SoG_Savegame_Editor
         private System.Windows.Forms.ComboBox cbAddItem;
         private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem addPinToolStripMenuItem;
         private System.Windows.Forms.Button btnAddItem;
         private System.Windows.Forms.TabPage tabChar;
         private System.Windows.Forms.Label lblName;

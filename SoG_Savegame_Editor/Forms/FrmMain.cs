@@ -1431,6 +1431,65 @@ namespace SoG_Savegame_Editor
         {
             txtConsole.AppendText(Text + "\r\nSkin color changing is not supported yet. Please open an issue on Github if you want this feature, because I was too lazy to implement it yet.");
         }
+
+        private void AddPinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (playerObject == null)
+            {
+                MessageBox.Show("No savegame loaded.", "Add Pin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            using (var frm = new FrmAddPin())
+            {
+                var dr = frm.ShowDialog(this);
+                if (dr != DialogResult.OK)
+                {
+                    return;
+                }
+
+                var pin = frm.SelectedPin;
+                var target = frm.TargetList;
+
+                try
+                {
+                    switch (target)
+                    {
+                        case "PinsSeen":
+                            if (playerObject.PinsSeen == null) playerObject.PinsSeen = new List<SogPin>();
+                            if (!playerObject.PinsSeen.Contains(pin)) playerObject.PinsSeen.Add(pin);
+                            playerObject.PinsSeenCount = (ushort)playerObject.PinsSeen.Count;
+                            break;
+                        case "PinsOnShelf":
+                            if (playerObject.PinsOnShelf == null) playerObject.PinsOnShelf = new List<SogPin>();
+                            if (!playerObject.PinsOnShelf.Contains(pin)) playerObject.PinsOnShelf.Add(pin);
+                            playerObject.PinsOnShelfCount = (byte)playerObject.PinsOnShelf.Count;
+                            break;
+                        case "PinsEquipped":
+                            if (playerObject.PinsEquipped == null) playerObject.PinsEquipped = new List<SogPin>();
+                            if (!playerObject.PinsEquipped.Contains(pin)) playerObject.PinsEquipped.Add(pin);
+                            playerObject.PinsEquippedCount = (byte)playerObject.PinsEquipped.Count;
+                            break;
+                        case "PinsLatest":
+                            if (playerObject.PinsLatest == null) playerObject.PinsLatest = new List<SogPin>();
+                            if (!playerObject.PinsLatest.Contains(pin)) playerObject.PinsLatest.Add(pin);
+                            playerObject.PinsLatestCount = (ushort)playerObject.PinsLatest.Count;
+                            break;
+                        default:
+                            MessageBox.Show("Unknown target list.", "Add Pin", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                    }
+
+                    txtConsole.AppendText($"\r\nAdded pin {pin} to {target}.");
+                    saveToolStripMenuItem.Enabled = true;
+                }
+                catch (Exception ex)
+                {
+                    txtConsole.AppendText("\r\nError while adding pin: " + ex.Message);
+                    MessageBox.Show("Failed to add pin. See console for details.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 
     // quick hack, please refactor if you see this :D
