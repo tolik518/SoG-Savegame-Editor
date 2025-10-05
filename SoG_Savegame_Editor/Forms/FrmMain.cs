@@ -262,6 +262,10 @@ namespace SoG_Savegame_Editor
             cblstItemsSeen.DataSource = System.Enum.GetNames(typeof(SogItem));
             cblstItemsCrafted.DataSource = System.Enum.GetNames(typeof(SogItem));
             cblstFishCaught.DataSource = System.Enum.GetNames(typeof(SogFish));
+            cblstPinsSeen.DataSource = System.Enum.GetNames(typeof(SogPin));
+            cblstPinsOnShelf.DataSource = System.Enum.GetNames(typeof(SogPin));
+            cblstPinsEquipped.DataSource = System.Enum.GetNames(typeof(SogPin));
+            cblstPinsLatest.DataSource = System.Enum.GetNames(typeof(SogPin));
         }
 
         private void PopulateFields()
@@ -449,6 +453,30 @@ namespace SoG_Savegame_Editor
             {
                 bool playerHasCaughtFish = playerObject.HasCaughtFish((SogItem)System.Enum.Parse(typeof(SogItem), cblstFishCaught.Items[i].ToString()));
                 cblstFishCaught.SetItemChecked(i, playerHasCaughtFish);
+            }
+
+            for (int i = 0; i < cblstPinsSeen.Items.Count; i++)
+            {
+                bool playerHasPin = playerObject.PinsSeen?.Contains((SogPin)System.Enum.Parse(typeof(SogPin), cblstPinsSeen.Items[i].ToString())) ?? false;
+                cblstPinsSeen.SetItemChecked(i, playerHasPin);
+            }
+
+            for (int i = 0; i < cblstPinsOnShelf.Items.Count; i++)
+            {
+                bool playerHasPin = playerObject.PinsOnShelf?.Contains((SogPin)System.Enum.Parse(typeof(SogPin), cblstPinsOnShelf.Items[i].ToString())) ?? false;
+                cblstPinsOnShelf.SetItemChecked(i, playerHasPin);
+            }
+
+            for (int i = 0; i < cblstPinsEquipped.Items.Count; i++)
+            {
+                bool playerHasPin = playerObject.PinsEquipped?.Contains((SogPin)System.Enum.Parse(typeof(SogPin), cblstPinsEquipped.Items[i].ToString())) ?? false;
+                cblstPinsEquipped.SetItemChecked(i, playerHasPin);
+            }
+
+            for (int i = 0; i < cblstPinsLatest.Items.Count; i++)
+            {
+                bool playerHasPin = playerObject.PinsLatest?.Contains((SogPin)System.Enum.Parse(typeof(SogPin), cblstPinsLatest.Items[i].ToString())) ?? false;
+                cblstPinsLatest.SetItemChecked(i, playerHasPin);
             }
         }
 
@@ -743,6 +771,50 @@ namespace SoG_Savegame_Editor
                      );
                 }
             }
+
+            playerObject.PinsSeen?.Clear();
+            playerObject.PinsSeen = new List<SogPin>();
+            for (int i = 0; i != cblstPinsSeen.Items.Count; i++)
+            {
+                if (cblstPinsSeen.GetItemChecked(i))
+                {
+                    playerObject.PinsSeen.Add((SogPin)System.Enum.Parse(typeof(SogPin), cblstPinsSeen.Items[i].ToString()));
+                }
+            }
+            playerObject.PinsSeenCount = (ushort)playerObject.PinsSeen.Count;
+
+            playerObject.PinsOnShelf?.Clear();
+            playerObject.PinsOnShelf = new List<SogPin>();
+            for (int i = 0; i != cblstPinsOnShelf.Items.Count; i++)
+            {
+                if (cblstPinsOnShelf.GetItemChecked(i))
+                {
+                    playerObject.PinsOnShelf.Add((SogPin)System.Enum.Parse(typeof(SogPin), cblstPinsOnShelf.Items[i].ToString()));
+                }
+            }
+            playerObject.PinsOnShelfCount = (byte)playerObject.PinsOnShelf.Count;
+
+            playerObject.PinsEquipped?.Clear();
+            playerObject.PinsEquipped = new List<SogPin>();
+            for (int i = 0; i != cblstPinsEquipped.Items.Count; i++)
+            {
+                if (cblstPinsEquipped.GetItemChecked(i))
+                {
+                    playerObject.PinsEquipped.Add((SogPin)System.Enum.Parse(typeof(SogPin), cblstPinsEquipped.Items[i].ToString()));
+                }
+            }
+            playerObject.PinsEquippedCount = (byte)playerObject.PinsEquipped.Count;
+
+            playerObject.PinsLatest?.Clear();
+            playerObject.PinsLatest = new List<SogPin>();
+            for (int i = 0; i != cblstPinsLatest.Items.Count; i++)
+            {
+                if (cblstPinsLatest.GetItemChecked(i))
+                {
+                    playerObject.PinsLatest.Add((SogPin)System.Enum.Parse(typeof(SogPin), cblstPinsLatest.Items[i].ToString()));
+                }
+            }
+            playerObject.PinsLatestCount = (ushort)playerObject.PinsLatest.Count;
         }
 
         private (NumericUpDown Field, SogSkill SkillID)[] getSkillMappings()

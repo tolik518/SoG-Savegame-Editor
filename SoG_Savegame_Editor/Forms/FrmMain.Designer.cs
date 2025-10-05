@@ -38,6 +38,15 @@ namespace SoG_Savegame_Editor
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.tabControlMain = new System.Windows.Forms.TabControl();
+            this.tabPins = new System.Windows.Forms.TabPage();
+            this.cblstPinsSeen = new System.Windows.Forms.CheckedListBox();
+            this.cblstPinsOnShelf = new System.Windows.Forms.CheckedListBox();
+            this.cblstPinsEquipped = new System.Windows.Forms.CheckedListBox();
+            this.cblstPinsLatest = new System.Windows.Forms.CheckedListBox();
+            this.lblPinsSeen = new System.Windows.Forms.Label();
+            this.lblPinsOnShelf = new System.Windows.Forms.Label();
+            this.lblPinsEquipped = new System.Windows.Forms.Label();
+            this.lblPinsLatest = new System.Windows.Forms.Label();
             this.tabChar = new System.Windows.Forms.TabPage();
             this.grpPatch = new System.Windows.Forms.GroupBox();
             this.lblGamePatch = new System.Windows.Forms.Label();
@@ -700,6 +709,84 @@ namespace SoG_Savegame_Editor
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlMain.Controls.Add(this.tabChar);
+            this.tabControlMain.Controls.Add(this.tabPins);
+            // tabPins
+            // 
+            this.tabPins.Controls.Add(this.lblPinsSeen);
+            this.tabPins.Controls.Add(this.lblPinsOnShelf);
+            this.tabPins.Controls.Add(this.lblPinsEquipped);
+            this.tabPins.Controls.Add(this.lblPinsLatest);
+            this.tabPins.Controls.Add(this.cblstPinsSeen);
+            this.tabPins.Controls.Add(this.cblstPinsOnShelf);
+            this.tabPins.Controls.Add(this.cblstPinsEquipped);
+            this.tabPins.Controls.Add(this.cblstPinsLatest);
+            this.tabPins.Location = new System.Drawing.Point(4, 40);
+            this.tabPins.Name = "tabPins";
+            this.tabPins.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPins.Size = new System.Drawing.Size(559, 416);
+            this.tabPins.TabIndex = 20;
+            this.tabPins.Text = "Pins";
+            this.tabPins.UseVisualStyleBackColor = true;
+
+            // lblPinsSeen
+            this.lblPinsSeen.AutoSize = true;
+            this.lblPinsSeen.Location = new System.Drawing.Point(10, 10);
+            this.lblPinsSeen.Name = "lblPinsSeen";
+            this.lblPinsSeen.Size = new System.Drawing.Size(60, 13);
+            this.lblPinsSeen.TabIndex = 4;
+            this.lblPinsSeen.Text = "Pins Seen:";
+
+            // lblPinsOnShelf
+            this.lblPinsOnShelf.AutoSize = true;
+            this.lblPinsOnShelf.Location = new System.Drawing.Point(150, 10);
+            this.lblPinsOnShelf.Name = "lblPinsOnShelf";
+            this.lblPinsOnShelf.Size = new System.Drawing.Size(75, 13);
+            this.lblPinsOnShelf.TabIndex = 5;
+            this.lblPinsOnShelf.Text = "Pins On Shelf:";
+
+            // lblPinsEquipped
+            this.lblPinsEquipped.AutoSize = true;
+            this.lblPinsEquipped.Location = new System.Drawing.Point(290, 10);
+            this.lblPinsEquipped.Name = "lblPinsEquipped";
+            this.lblPinsEquipped.Size = new System.Drawing.Size(82, 13);
+            this.lblPinsEquipped.TabIndex = 6;
+            this.lblPinsEquipped.Text = "Pins Equipped:";
+
+            // lblPinsLatest
+            this.lblPinsLatest.AutoSize = true;
+            this.lblPinsLatest.Location = new System.Drawing.Point(430, 10);
+            this.lblPinsLatest.Name = "lblPinsLatest";
+            this.lblPinsLatest.Size = new System.Drawing.Size(65, 13);
+            this.lblPinsLatest.TabIndex = 7;
+            this.lblPinsLatest.Text = "Pins Latest:";
+
+            // cblstPinsSeen
+            this.cblstPinsSeen.FormattingEnabled = true;
+            this.cblstPinsSeen.Location = new System.Drawing.Point(10, 30);
+            this.cblstPinsSeen.Name = "cblstPinsSeen";
+            this.cblstPinsSeen.Size = new System.Drawing.Size(130, 364);
+            this.cblstPinsSeen.TabIndex = 0;
+
+            // cblstPinsOnShelf
+            this.cblstPinsOnShelf.FormattingEnabled = true;
+            this.cblstPinsOnShelf.Location = new System.Drawing.Point(150, 30);
+            this.cblstPinsOnShelf.Name = "cblstPinsOnShelf";
+            this.cblstPinsOnShelf.Size = new System.Drawing.Size(130, 364);
+            this.cblstPinsOnShelf.TabIndex = 1;
+
+            // cblstPinsEquipped
+            this.cblstPinsEquipped.FormattingEnabled = true;
+            this.cblstPinsEquipped.Location = new System.Drawing.Point(290, 30);
+            this.cblstPinsEquipped.Name = "cblstPinsEquipped";
+            this.cblstPinsEquipped.Size = new System.Drawing.Size(130, 364);
+            this.cblstPinsEquipped.TabIndex = 2;
+
+            // cblstPinsLatest
+            this.cblstPinsLatest.FormattingEnabled = true;
+            this.cblstPinsLatest.Location = new System.Drawing.Point(430, 30);
+            this.cblstPinsLatest.Name = "cblstPinsLatest";
+            this.cblstPinsLatest.Size = new System.Drawing.Size(120, 364);
+            this.cblstPinsLatest.TabIndex = 3;
             this.tabControlMain.Controls.Add(this.tabInventory);
             this.tabControlMain.Controls.Add(this.tabPets);
             this.tabControlMain.Controls.Add(this.tabSkills);
@@ -5879,6 +5966,15 @@ namespace SoG_Savegame_Editor
         #endregion
 
         private System.Windows.Forms.TabControl tabControlMain;
+    private System.Windows.Forms.TabPage tabPins;
+    private System.Windows.Forms.CheckedListBox cblstPinsSeen;
+    private System.Windows.Forms.CheckedListBox cblstPinsOnShelf;
+    private System.Windows.Forms.CheckedListBox cblstPinsEquipped;
+    private System.Windows.Forms.CheckedListBox cblstPinsLatest;
+    private System.Windows.Forms.Label lblPinsSeen;
+    private System.Windows.Forms.Label lblPinsOnShelf;
+    private System.Windows.Forms.Label lblPinsEquipped;
+    private System.Windows.Forms.Label lblPinsLatest;
         private System.Windows.Forms.TabPage tabQuickslots;
         private System.Windows.Forms.MenuStrip msMenu;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
